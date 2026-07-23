@@ -4,8 +4,8 @@ This section contains practical guidance for preparing for incidents, protecting
 
 ## Manual Files
 
-- [Word Edition](./Incident_Response_BCDR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx)
-- [PDF Edition](./Incident_Response_BCDR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf)
+- [Word Edition](./Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx)
+- [PDF Edition](./Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.pdf)
 
 ## Topics Covered
 

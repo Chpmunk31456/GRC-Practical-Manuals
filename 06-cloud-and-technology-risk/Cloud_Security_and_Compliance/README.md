@@ -1,10 +1,11 @@
-# Cloud and Technology Risk
+# Cloud Security and Compliance
 
-This section contains practical guidance for identifying, assessing, managing, and reducing risks associated with cloud services, modern technology environments, and digital operations.
+This manual provides practical guidance for identifying, assessing, managing, and reducing risks associated with cloud services, modern technology environments, and digital operations.
 
-## Included Manual
+## Manual Files
 
-- [Cloud Security and Compliance](./Cloud_Security_and_Compliance/)
+- [Word Edition](./Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx)
+- [PDF Edition](./Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf)
 
 ## Topics Covered
 
@@ -71,4 +72,6 @@ Use this material as a practical learning and planning resource. It does not gua
 
 Organizations should adapt the guidance to their actual cloud services, technology environment, business requirements, threat profile, and risk tolerance.
 
-[Return to the Main Repository](../README.md)
+[Return to Cloud and Technology Risk](../README.md)
+
+[Return to the Main Repository](../../README.md)

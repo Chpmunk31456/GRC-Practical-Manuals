@@ -104,6 +104,12 @@ Contributors should review:
 - Accessibility
 - Cultural clarity
 
+Machine-assisted translations require human review by a proficient speaker before they are presented as reviewed editions. Translation proposals should identify the language, locale, reviewer, and source edition.
+
+## Accessibility
+
+Review [ACCESSIBILITY.md](./ACCESSIBILITY.md) before changing document structure or producing new Word or PDF editions. Correct the source document before regenerating derivative formats.
+
 ## Pull Requests
 
 When submitting a pull request:

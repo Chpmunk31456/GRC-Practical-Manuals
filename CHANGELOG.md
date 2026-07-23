@@ -12,6 +12,21 @@ This project uses version numbers such as:
 
 ## [Unreleased]
 
+### Changed
+
+- Rebuilt the root README as a concise, clickable catalog.
+- Corrected the duplicated cloud and technology risk directory.
+- Added section indexes for management systems, assurance and audit, cloud and technology risk, and third-party risk.
+
+### Corrected
+
+- Corrected broken incident-response Word and PDF download links.
+- Corrected cloud manual navigation and download links.
+
+### Added
+
+- Added an accessibility statement and document-review workflow.
+
 Planned or in-progress improvements may include:
 
 - Additional GRC manuals

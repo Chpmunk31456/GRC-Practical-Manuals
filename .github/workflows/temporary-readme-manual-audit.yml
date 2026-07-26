@@ -1,0 +1,84 @@
+name: Temporary README and manual audit
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    if: github.head_ref == 'audit-grc-practical-manuals'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Audit repository
+        shell: python
+        run: |
+          import os, re
+          from pathlib import Path
+          root = Path('.')
+          readmes = sorted(p for p in root.rglob('README*.md') if '.git' not in p.parts)
+          link_re = re.compile(r'(?<!!)\[[^\]]*\]\(([^)]+)\)')
+          malformed = []
+          broken = []
+          checked = 0
+          externals = anchors = emails = 0
+          for p in readmes:
+              text = p.read_text(encoding='utf-8', errors='replace')
+              if '] (' in text:
+                  malformed.append(str(p))
+              for target in link_re.findall(text):
+                  target = target.strip().split()[0].strip('<>')
+                  if target.startswith(('http://','https://')):
+                      externals += 1; continue
+                  if target.startswith('mailto:'):
+                      emails += 1; continue
+                  if target.startswith('#'):
+                      anchors += 1; continue
+                  clean = target.split('#',1)[0].split('?',1)[0]
+                  if not clean:
+                      continue
+                  checked += 1
+                  resolved = (p.parent / clean).resolve()
+                  if not resolved.exists():
+                      broken.append((str(p), target))
+          files = [p for p in root.rglob('*') if p.is_file() and '.git' not in p.parts and '.github/workflows/temporary-readme-manual-audit.yml' not in str(p)]
+          def lang(path):
+              s = str(path).lower()
+              if '/es-419/' in s or 'espanol' in s or 'spanish' in s or '_es-' in s: return 'Spanish'
+              if '/pt-br/' in s or 'portugues' in s or 'portuguese' in s or '_pt-' in s: return 'Portuguese'
+              if '/en/' in s or 'english' in s or '_en_' in s: return 'English'
+              return None
+          inv = {k:{'.md':0,'.pdf':0,'.docx':0} for k in ['English','Spanish','Portuguese']}
+          for f in files:
+              l = lang(f)
+              if l and f.suffix.lower() in inv[l]: inv[l][f.suffix.lower()] += 1
+          result = 'PASS' if not broken and not malformed else 'FAIL'
+          lines = ['# README and Associated-Manual Audit','',f'**Overall result:** {result}','','## Summary','',
+                   f'- README files audited: {len(readmes)}',f'- Repository-local links checked: {checked}',
+                   f'- Broken repository-local targets: {len(broken)}',f'- README files with malformed `] (` links: {len(malformed)}',
+                   f'- External links identified but not network-tested: {externals}',f'- Internal anchors identified: {anchors}',
+                   f'- Email links identified: {emails}',f'- Repository files inventoried: {len(files)}','', '## Language Inventory','']
+          for l in ['English','Spanish','Portuguese']:
+              d=inv[l]; lines.append(f'- {l}-identified files: {sum(d.values())} (Markdown {d[".md"]}, PDF {d[".pdf"]}, DOCX {d[".docx"]})')
+          lines += ['', '## README Files Audited',''] + [f'- `{p}`' for p in readmes]
+          lines += ['', '## Broken Repository-Local Targets','']
+          lines += ['No broken repository-local targets were found.'] if not broken else [f'- `{p}` → `{t}`' for p,t in broken]
+          lines += ['', '## Malformed Markdown Links','']
+          lines += ['No malformed `] (` link patterns were found.'] if not malformed else [f'- `{p}`' for p in malformed]
+          lines += ['', '## Limits','', '- External websites were not tested.', '- This mechanical audit does not certify technical accuracy, translation quality, or document rendering.', '- Markdown-only manuals are not defects unless a README promises PDF or DOCX editions.']
+          Path('project').mkdir(exist_ok=True)
+          Path('project/README_ASSOCIATED_MANUAL_AUDIT.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+      - name: Commit audit report and remove workflow
+        run: |
+          rm .github/workflows/temporary-readme-manual-audit.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add README and associated-manual audit report"
+          git push origin HEAD:${{ github.head_ref }}

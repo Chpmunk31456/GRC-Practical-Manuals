@@ -1,1509 +1,794 @@
-> **Estado de revisión:** Borrador de traducción asistida por máquina. Requiere revisión humana de terminología, significado, enlaces, formato y vigencia técnica antes de marcarse como edición final.
+# NIST Cybersecurity Framework 2.0
 
-**CYBERSECURITY, PRIVACY &amp; COMPLIANCE SERIES**
+## GRC práctico, implementación, evidencia y herramientas de código abierto
 
-**NIST CYBERSECURITY FRAMEWORK 2.0**
-
-**Practical GRC, Implementation, Evidence, and Open-Source Tools**
-
-*Un manual de trabajo para directivos, analistas juniores, estudiantes, cambiadores de carrera y equipos de ciberseguridad*
+*Manual de trabajo para gerentes, analistas junior, estudiantes, personas en transición profesional y equipos de ciberseguridad*
 
 **Alberto (Al) Leiva**
 
-Primera edición • Julio 2026
+Primera edición • Julio de 2026
 
-**Inside:** All 106 CSF Resultados básicos • Perfiles • Tiros • GRC • cadena de suministro • evidencia • pruebas de control • herramientas de código abierto • laboratorios • preparación de carrera
-Silencio.
+| **Contenido:** Los 106 resultados del Núcleo del CSF • Perfiles • Tiers • GRC • cadena de suministro • evidencia • pruebas de controles • herramientas de código abierto • laboratorios • preparación profesional |
+|---|
 
-# Publication and Use Notice
+# Aviso de publicación y uso
 
 Autor: Alberto (Al) Leiva
 
-Edición: Primera edición, Julio 2026
+Edición: Primera edición, julio de 2026
 
-Propósito: Educación gratuita y práctica para directivos, analistas juniores, estudiantes, cambiadores de carrera, profesionales del riesgo y profesionales de la ciberseguridad.
+Propósito: Ofrecer educación gratuita y práctica para gerentes, analistas junior, estudiantes, personas en transición profesional, profesionales de riesgos y especialistas en ciberseguridad.
 
-## Educational notice
+## Aviso educativo
 
-Este manual proporciona información educativa general. No crea certificación, cumplimiento legal, opinión de auditoría o garantía de seguridad. Las organizaciones deben adaptar el NIST CSF a su misión, riesgos, obligaciones, apetito de riesgo, recursos, tecnologías y partes interesadas. Utilice fuentes oficiales actuales y asesoramiento jurídico, de riesgo, privacidad, seguridad, auditoría y técnico para decisiones reales.
+Este manual proporciona información educativa general. No constituye una certificación, cumplimiento legal, una opinión de auditoría ni una garantía de seguridad. Cada organización debe adaptar el NIST CSF a su misión, riesgos, obligaciones, apetito de riesgo, recursos, tecnologías y partes interesadas. Para tomar decisiones reales, utilice fuentes oficiales vigentes y asesoramiento cualificado en materia legal, de riesgos, privacidad, seguridad física, auditoría y tecnología.
 
 ## Uso ético y autorizado
 
-Utilice herramientas técnicas únicamente en sistemas, aplicaciones, redes, cuentas de nube y datos que posee o está específicamente autorizado por escrito para evaluar. Use datos ficticios, sintéticos o aprobados en el entrenamiento. La capacidad técnica no crea permiso.
+Utilice herramientas técnicas únicamente en sistemas, aplicaciones, redes, cuentas en la nube y datos que le pertenezcan o para los cuales tenga autorización específica por escrito. En actividades de formación, utilice datos ficticios, sintéticos o aprobados. La capacidad técnica no constituye autorización.
 
 # Prefacio
 
-*Una introducción acogedora a la gestión práctica del riesgo de ciberseguridad*.
+*Una introducción accesible a la gestión práctica del riesgo de ciberseguridad.*
 
-El trabajo de ciberseguridad puede parecer una colección de productos, alertas, políticas y tareas técnicas. El Marco de Ciberseguridad NIST proporciona a esas actividades un lenguaje compartido. Ayuda a los líderes a explicar lo que importan los resultados, ayuda a los administradores a establecer prioridades y ayuda a los profesionales a conectar el trabajo diario con el riesgo organizativo.
+El trabajo de ciberseguridad puede parecer una colección de productos, alertas, políticas y tareas técnicas. El NIST Cybersecurity Framework ofrece un lenguaje común para conectar esas actividades. Ayuda a los líderes a explicar qué resultados son importantes, a los gerentes a establecer prioridades y a los profesionales a relacionar el trabajo diario con el riesgo organizacional.
 
-CSF 2.0 es deliberadamente flexible. No le dice a cada organización que compre la misma herramienta, implemente el mismo control, o llegue al mismo Tier. Describe los resultados. Un hospital, fabricante, escuela, banco, startup, agencia gubernamental y sin ánimo de lucro puede utilizar el mismo núcleo al tiempo que elige diferentes prioridades e implementaciones.
+El CSF 2.0 es deliberadamente flexible. No exige que todas las organizaciones compren la misma herramienta, implementen el mismo control o alcancen el mismo Tier. Describe resultados. Un hospital, una empresa manufacturera, una escuela, un banco, una startup, una agencia gubernamental o una organización sin fines de lucro pueden utilizar el mismo Núcleo y, al mismo tiempo, elegir prioridades e implementaciones diferentes.
 
-Este manual sigue un enfoque basado en la metodología. Una hoja de cálculo marco es útil sólo cuando el alcance es preciso. Un panel verde es útil sólo cuando la evidencia es confiable. Un resultado del escáner es útil sólo cuando alguien valida, prioriza, corrige y lo reprueba. Los administradores siguen siendo responsables de las decisiones; los analistas toman esas decisiones mejor reuniendo hechos completos y comunicando claramente.
+Este manual adopta un enfoque centrado primero en la metodología. Una hoja de cálculo de un marco solo es útil cuando el alcance es preciso. Un tablero en verde solo es útil cuando la evidencia es confiable. El resultado de un escáner solo es útil cuando alguien lo valida, prioriza, corrige y vuelve a probar. Los gerentes siguen siendo responsables de las decisiones; los analistas mejoran esas decisiones al reunir hechos completos y comunicarlos con claridad.
 
-Cómo utilizar este manual
+# Cómo utilizar este manual
 
-Los administradores deben comenzar con los Capítulos 1–3, 10–17, y las plantillas del Capítulo 22.
+Los gerentes deberían comenzar por los capítulos 1–3 y 10–17, además de las plantillas del capítulo 22.
 
-Los analistas juniores deben estudiar los seis capítulos de Función, método de verificación, herramientas, laboratorio y preparación de entrevistas.
+Los analistas junior deberían estudiar los seis capítulos dedicados a las Funciones, el método de verificación, las herramientas, el laboratorio y la preparación para entrevistas.
 
-Los equipos técnicos deben mapear las conclusiones a activos, riesgos, resultados CSF, implementación, propietarios, evidencia y acción correctiva.
+Los equipos técnicos deberían relacionar los hallazgos con activos, riesgos, resultados del CSF, implementación, responsables, evidencia y acciones correctivas.
 
-Legal, privacy, safety, operational technology, and business teams should review decisions that affect their responsibilities.
+Los equipos legales, de privacidad, seguridad física, tecnología operacional y negocio deberían revisar las decisiones que afecten sus responsabilidades.
 
-Contenido de la palabra:** La guía del capítulo que figura a continuación contiene números de página específicos de edición después de la presentación final. El documento también contiene un campo nativo de Word TOC. Después de editar, haz clic con el botón derecho y selecciona Update Field, luego actualiza la tabla completa.
-Silencio.
+| **Tabla de contenido real de Word:** La guía de capítulos incluye números de página específicos de la edición una vez finalizada la representación. El documento también contiene un campo nativo de tabla de contenido de Word. Después de editar, haga clic con el botón derecho sobre el campo, seleccione **Actualizar campo** y luego **Actualizar toda la tabla**. |
+|---|
 
-# Tabla de contenidos
+# 1. Fundamentos del NIST CSF 2.0
 
-[Notificación de publicación y uso [2](#publication-and-use-notice)](#publication-and-use-notice)
+*Qué es el marco, qué cambió y qué no afirma.*
 
-[Notificación educativa [2](#educational-notice)](#educational-notice)
+<img src="media/image1.png" style="width:6.15in;height:3.39605in" alt="GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND y RECOVER funcionan como un sistema conectado." />
 
-[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)
+Figura 1. Las seis Funciones del NIST CSF 2.0
 
-[Prefacio [3] (#preface)](#preface)
+## 1.1 Qué es el CSF 2.0
 
-[Cómo utilizar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
+NIST publicó el CSF 2.0 el 26 de febrero de 2024. Está diseñado para organizaciones de cualquier tamaño, sector y nivel de sofisticación técnica. Sus resultados son neutrales respecto del país, el sector y la tecnología. Una organización puede adoptarlo voluntariamente o porque una política, un contrato, un regulador, un cliente o una norma interna así lo requieran.
 
-[Tabla de contenidos [4](#table-of-contents)](#table-of-contents)
+## 1.2 Qué cambió respecto del CSF 1.1
 
-[1. NIST CSF 2.0 Foundations [9](#nist-csf-2.0-foundations)](#nist-csf-2.0-foundations)
-
-[1.1 Lo que CSF 2.0 es [9](#what-csf-2.0-is)](#what-csf-2.0-is)
-
-[1.2 Lo que cambió de CSF 1.1 [9](#what-changed-from-csf-1.1)](#what-changed-from-csf-1.1)
-
-[1.3 Lo que CSF 2.0 no es [9](#what-csf-2.0-is-not)](#what-csf-2.0-is-not)
-
-[2. Recursos básicos, perfiles, niveles y recursos de apoyo [11](#core-profiles-tiers-and-supporting-resources)](#core-profiles-tiers-and-supporting-resources)
-
-[3. Practical Implementation Roadmap [12](#practical-implementation-roadmap)](#practical-implementation-roadmap)
-
-[4. Función GOVERN [13](#govern-function)](#govern-function)
-
-[Contexto organizador (GV.OC) [13](#organizational-context-gv.oc)](#organizational-context-gv.oc)
-
-[Estrategia de Gestión de Riesgos (GV.RM) [13](#risk-management-strategy-gv.rm)](#risk-management-strategy-gv.rm)
-
-[Roles, responsabilidades y autoridades (GV.RR) [14](#roles-responsibilities-and-authorities-gv.rr)](#roles-responsibilities-and-authorities-gv.rr)
-
-[Policía (GV.PO) [14](#policy-gv.po)](#policy-gv.po)
-
-[Oversight (GV.OV) [14](#oversight-gv.ov)](#oversight-gv.ov)
-
-[Cybersecurity Supply Chain Risk Management (GV.SC) [15](#cybersecurity-supply-chain-risk-management-gv.sc)](#cybersecurity-supply-chain-risk-management-gv.sc)
-
-[5. Función IDENTIFY [16](#identify-function)](#identify-function)
-
-[Asset Management (ID.AM) [16](#asset-management-id.am)](#asset-management-id.am)
-
-[Evaluación de Riesgos (ID.RA) [16](#risk-assessment-id.ra)](#risk-assessment-id.ra)
-
-[Mejoramiento (ID.IM) [17](#improvement-id.im)](#improvement-id.im)
-
-[6. Función del PROTECTO [18](#protect-function)](#protect-function)
-
-[Gestión de identidad, autenticación y control de acceso (PR.AA) [18](#identity-management-authentication-and-access-control-pr.aa)](#identity-management-authentication-and-access-control-pr.aa)
-
-[Conciencia y capacitación (PR.AT) [18](#awareness-and-training-pr.at)](#awareness-and-training-pr.at)
-
-[Seguridad de datos (PR.DS) [18](#data-security-pr.ds)](#data-security-pr.ds)
-
-[Platform Security (PR.PS) [19](#platform-security-pr.ps)](#platform-security-pr.ps)
-
-[Resiliencia de la infraestructura de tecnología (PR.IR) [19](#technology-infrastructure-resilience-pr.ir)](#technology-infrastructure-resilience-pr.ir)
-
-[7. Función DETECT [21](#detect-function)](#detect-function)
-
-[Vigilancia continua (DE.CM) [21](#continuous-monitoring-de.cm)](#continuous-monitoring-de.cm)
-
-[Análisis de eventos adversos (DE.AE) [21](#adverse-event-analysis-de.ae)](#adverse-event-analysis-de.ae)
-
-[8. Función de RESPOND [23](#respond-function)](#respond-function)
-
-[Administración de incidentes (RS.MA) [23](#incident-management-rs.ma)](#incident-management-rs.ma)
-
-[Análisis de incidentes (RS.AN) [23](#incident-analysis-rs.an)](#incident-analysis-rs.an)
-
-[Incident Response Reporting and Communication (RS.CO) [24](#incident-response-reporting-and-communication-rs.co)](#incident-response-reporting-and-communication-rs.co)
-
-[Mitigación de incidentes (RS.MI) [24](#incident-mitigation-rs.mi)](#incident-mitigation-rs.mi)
-
-[9. Función RECOVER [25](#recover-function)](#recover-function)
-
-[Incident Recovery Plan Execution (RC.RP) [25](#incident-recovery-plan-execution-rc.rp)](#incident-recovery-plan-execution-rc.rp)
-
-[Incident Recovery Communication (RC.CO) [25](#incident-recovery-communication-rc.co)](#incident-recovery-communication-rc.co)
-
-[10. Perfiles de organización [26](#organizational-profiles)](#organizational-profiles)
-
-[10.1 Declaración del alcance del perfil [26](#profile-scope-statement)](#profile-scope-statement)
-
-[10.2 Estado de resultados [26](#outcome-status)](#outcome-status)
-
-[10.3 Priorización de la computación [27](#gap-prioritization)](#gap-prioritization)
-
-[11. CSF Tiers [28](#csf-tiers)](#csf-tiers)
-
-[12. Riesgo empresarial, competencia de riesgo y comunicación [29](#enterprise-risk-risk-appetite-and-communication)](#enterprise-risk-risk-appetite-and-communication)
-
-[12.1 Declaración de riesgo ejecutivo [29](#executive-risk-statement)](#executive-risk-statement)
-
-[12.2 Cuestiones a nivel de la Junta [29](#board-level-questions)](#board-level-questions)
-
-[13. Riesgo de cadena de suministro de ciberseguridad [30](#cybersecurity-supply-chain-risk)](#cybersecurity-supply-chain-risk)
-
-[14. Metrics, Evidence, and Reporting [31](#metrics-evidence-and-reporting)](#metrics-evidence-and-reporting)
-
-[14.1 Calidad de la prueba [31](#evidence-quality)](#evidence-quality)
-
-[15. Verificación de Cumplimiento y Pruebas de Control [32](#compliance-verification-and-control-testing)](#compliance-verification-and-control-testing)
-
-[15.1 Pruebas prácticas de verificación [32](#practical-verification-tests)](#practical-verification-tests)
-
-[15.2 Conclusión [33](#conclusion-language)](#conclusion-language)
-
-[16. Herramientas de código abierto para CSF Work [34](#open-source-tools-for-csf-work)](#open-source-tools-for-csf-work)
-
-[16.1 Lista de verificación de validación de herramientas [34](#tool-validation-checklist)](#tool-validation-checklist)
-
-[16.2 CISO Assistant [35](#ciso-assistant)](#ciso-assistant)
-
-[Inicio rápido [35](#quick-start)](#quick-start)
-
-[Evidencia y limitación [35](#evidence-and-limitation)](#evidence-and-limitation)
-
-[16.3 Wazuh [35](#wazuh)](#wazuh)
-
-[Inicio rápido [35](#quick-start-1)](#quick-start-1)
-
-[Evidencia y limitación [35](#evidence-and-limitation-1)](#evidence-and-limitation-1)
-
-[16.4 osquery [35](#osquery)](#osquery)
-
-[Inicio rápido [35](#quick-start-2)](#quick-start-2)
-
-[Evidencia y limitación [36](#evidence-and-limitation-2)](#evidence-and-limitation-2)
-
-[16.5 OpenSCAP [36](#openscap)](#openscap)
-
-[Inicio rápido [36](#quick-start-3)](#quick-start-3)
-
-[Evidencia y limitación [36](#evidence-and-limitation-3)](#evidence-and-limitation-3)
-
-[16.6 Greenbone Community Edition [36](#greenbone-community-edition)](#greenbone-community-edition)
-
-[Inicio rápido [36](#quick-start-4)](#quick-start-4)
-
-[Evidencia y limitación [36](#evidence-and-limitation-4)](#evidence-and-limitation-4)
-
-[16.7 Trivy [36](#trivy)](#trivy)
-
-[Inicio rápido [36](#quick-start-5)](#quick-start-5)
-
-[Evidencia y limitación [37](#evidence-and-limitation-5)](#evidence-and-limitation-5)
-
-[16.8 OWASP ZAP [37](#owasp-zap)](#owasp-zap)
-
-[Inicio rápido [37](#quick-start-6)](#quick-start-6)
-
-[Evidencia y limitación [37](#evidence-and-limitation-6)](#evidence-and-limitation-6)
-
-[16.9 Keycloak [37](#keycloak)](#keycloak)
-
-[Inicio rápido [37](#quick-start-7)](#quick-start-7)
-
-[Evidencia y limitación [37](#evidence-and-limitation-7)](#evidence-and-limitation-7)
-
-[16.10 DefectoDojo [37](#defectdojo)](#defectdojo)
-
-[Inicio rápido [37](#quick-start-8)](#quick-start-8)
-
-[Evidencia y limitación [37](#evidence-and-limitation-8)](#evidence-and-limitation-8)
-
-[16.11 Velociraptor [38](#velociraptor)](#velociraptor)
-
-[Inicio rápido [38](#quick-start-9)](#quick-start-9)
-
-[Evidencia y limitación [38](#evidence-and-limitation-9)](#evidence-and-limitation-9)
-
-[16.12 Agente de política abierta [38](#open-policy-agent)](#open-policy-agent)
-
-[Inicio rápido [38](#quick-start-10)](#quick-start-10)
-
-[Evidencia y limitación [38](#evidence-and-limitation-10)](#evidence-and-limitation-10)
-
-[16.13 OpenSearch [38](#opensearch)](#opensearch)
-
-[Inicio rápido [38](#quick-start-11)](#quick-start-11)
-
-[Evidencia y limitación [38](#evidence-and-limitation-11)](#evidence-and-limitation-11)
-
-[16.14 Herramientas oficiales NIST [38](#official-nist-tools)](#official-nist-tools)
-
-[17. Manual de juegos CSF [40](#managers-csf-playbook)](#managers-csf-playbook)
-
-[17.1 Preguntas mensuales [40](#monthly-questions)](#monthly-questions)
-
-[17.2 Dashboard [40](#dashboard)](#dashboard)
-
-[17.3 Errores comunes [40](#common-mistakes)](#common-mistakes)
-
-[18. From Beginner to Junior Analyst [41](#from-beginner-to-junior-analyst)](#from-beginner-to-junior-analyst)
-
-[18.1 Funciones a nivel de entrada [41](#entry-level-roles)](#entry-level-roles)
-
-[18.2 Trabajar un analista junior puede realizar [41](#work-a-junior-analyst-may-perform)](#work-a-junior-analyst-may-perform)
-
-[18.3 Prueba de cartera [42](#portfolio-proof)](#portfolio-proof)
-
-[19. Laboratorio de Ficción y Cartera [43](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
-
-[Proyecto 1 — Ámbito y contexto [43](#project-1-scope-and-context)](#project-1-scope-and-context)
-
-[Proyecto 2 — Activo y mapa de datos [43](#project-2-asset-and-data-map)](#project-2-asset-and-data-map)
-
-[Proyecto 3 — Riesgo [43](#project-3-risk)](#project-3-risk)
-
-[Proyecto 4 — Perfiles [43](#project-4-profiles)](#project-4-profiles)
-
-[Proyecto 5 — Controles y pruebas [43](#project-5-controls-and-tests)](#project-5-controls-and-tests)
-
-[Proyecto 6 — Incident [43](#project-6-incident)](#project-6-incident)
-
-[Proyecto 7 — Herramientas [43](#project-7-tools)](#project-7-tools)
-
-[Proyecto 8 — Informe ejecutivo [43](#project-8-executive-report)](#project-8-executive-report)
-
-[20. Plan de aprendizaje de 30 días [44] (#thirty-day-learning-plan)](#thirty-day-learning-plan)
-
-[20.1 hábito diario [44](#daily-habit)](#daily-habit)
-
-[21. Preparación de entrevistas [45](#interview-preparation)](#interview-preparation)
-
-[¿Qué es NIST CSF 2.0? [45](#what-is-nist-csf-2.0)](#what-is-nist-csf-2.0)
-
-[¿Cuáles son las seis Funciones? [45](#what-are-the-six-functions)](#what-are-the-six-functions)
-
-[¿Por qué fue agregado Govern? [45](#why-was-govern-added)](#why-was-govern-added)
-
-[¿Qué es un perfil actual? [45](#what-is-a-current-profile)](#what-is-a-current-profile)
-
-[¿Qué es un perfil de destino? [45](#what-is-a-target-profile)](#what-is-a-target-profile)
-
-[¿Qué son los Tiers? [45](#what-are-tiers)](#what-are-tiers)
-
-[¿CSF certifica el cumplimiento? [45](#does-csf-certify-compliance)](#does-csf-certify-compliance)
-
-[¿Cómo verifica un resultado? [45](#how-do-you-verify-an-outcome)](#how-do-you-verify-an-outcome)
-
-[¿Cómo deben utilizarse las herramientas? [45](#how-should-tools-be-used)](#how-should-tools-be-used)
-
-[¿Cómo priorizas las brechas? [46](#how-do-you-prioritize-gaps)](#how-do-you-prioritize-gaps)
-
-[22. Plantillas y listas de verificación [47](#templates-and-checklists)](#templates-and-checklists)
-
-[22.1 Perfil [47](#profile-record)](#profile-record)
-
-[22.2 Registro de riesgos [47](#risk-register)](#risk-register)
-
-[22.3 Ficha de prueba de control [47](#control-test-sheet)](#control-test-sheet)
-
-[22.4 Examen de los proveedores [47](#supplier-review)](#supplier-review)
-
-[22.5 Lista de comprobación de la preparación del administrador [48](#manager-readiness-checklist)](#manager-readiness-checklist)
-
-[23. Índice de Glosario y Asunto [49](#glossary-and-subject-index)](#glossary-and-subject-index)
-
-[23.1 Índice de asunto [49](#subject-index)](#subject-index)
-
-[24. Referencias oficiales y estudio ulterior [50](#official-references-and-further-study)](#official-references-and-further-study)
-
-# 1. NIST CSF 2.0 Foundations
-
-*Qué marco es, qué cambió, y lo que no reclama.*
-
-■img src="media/image1.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Govern, Identificar, Proteger, Detectar, Responder y Recuperar el trabajo como un sistema conectado." /
-
-Figura 1. Las seis funciones NIST CSF 2.0
-
-## 1.1 What CSF 2.0 is
-
-NIST publicó CSF 2.0 el 26 de febrero de 2024. Está diseñado para organizaciones de todo tamaño, sector y nivel de sofisticación técnica. Sus resultados son nacionales, sectoriales y tecnológicamente neutros. Las organizaciones pueden adoptarlo voluntariamente o porque una política, contrato, regulador, cliente o estándar interno lo solicite.
-
-## 1.2 Qué cambió desde CSF 1.1
-
-- GOVERN se convirtió en una sexta función, colocando liderazgo, política, riesgo empresarial y responsabilidad en el centro.
-
+- **GOVERN** se convirtió en la sexta Función, colocando el liderazgo, la política, el riesgo empresarial y la rendición de cuentas en el centro del marco.
 - La ciberseguridad de la cadena de suministro recibió mayor énfasis.
+- El lenguaje se amplió más allá de la infraestructura crítica para que el marco sirva claramente a todo tipo de organizaciones.
+- Los Perfiles, los Tiers, los Ejemplos de Implementación, las Referencias Informativas y las Guías de Inicio Rápido forman ahora una cartera más amplia de recursos del CSF.
+- Algunas numeraciones de Subcategorías contienen espacios intencionales porque ciertos contenidos del CSF 1.1 se trasladaron dentro del CSF 2.0.
 
-- El lenguaje se amplió más allá de la infraestructura crítica, por lo que el marco sirve claramente a todas las organizaciones.
+## 1.3 Qué no es el CSF 2.0
+
+- No es, por sí mismo, una ley.
+- No es un catálogo único de controles ni una lista obligatoria de tecnologías.
+- No proporciona una puntuación universal de aprobado o reprobado.
+- NIST no certifica organizaciones, productos, consultores ni evaluadores con respecto al CSF.
+- Un Tier alto no es automáticamente el objetivo adecuado para todos los alcances.
+- Relacionar una práctica con un resultado del CSF no demuestra que ese resultado se haya alcanzado.
 
-- Perfiles, Tiers, Ejemplos de Implementación, Referencias Informáticas y Guías de Inicio Rápido forman una cartera CSF más grande.
-
-- Algunos números de Subcategoría contienen lagunas intencionales porque el contenido CSF 1.1 se movió dentro de CSF 2.0.
-
-## 1.3 What CSF 2.0 is not
-
-- No es una ley por sí misma.
-
-- No es un único catálogo de control o una lista de tecnología obligatoria.
-
-- No proporciona una puntuación universal.
-
-- NIST no certifica organizaciones, productos, consultores o asesores contra el CSF.
-
-- Un Tier alto no es automáticamente el objetivo adecuado para cada alcance.
-
-- Una asignación a un resultado CSF no prueba que el resultado se alcance.
-
-# 2. Core, Profiles, Tiers, and Supporting Resources
-
-*Las piezas de CSF 2.0 y cómo encajan juntos.*
-
-■img src="media/image2.png" style="width:6.15in;height:2.6593in" alt="Las fusiones contienen Categorías, que contienen Subcategorías específicas centradas en el resultado." /
-
-Figura 2. CSF Categoría básica
-
-Silencio **Componente** Silencio**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TENIDO ANTERIOR Una jerarquía de seis Funciones, 22 Categorías y 106 Subcategorías ANTERI Describir los resultados deseados de ciberseguridad
-tención Perfil organizacional Silencio Resultados actuales y/o Objetivo para un ámbito definido tención Compare postura, priori deficiencias, plan work TEN
-TEN Community Profile TENIDO Una base de referencia de resultados compartida para un sector, tecnología, amenaza o caso de uso TENIDO Utilizar como entrada a un perfil de destino organizativo TEN
-Silencio Tiers ← Contexto para el rigor de la gobernanza y las prácticas de gestión de riesgos
-tención Aplicación Ejemplos tención Medidas nocionales que pueden ayudar a lograr resultados ← Generar ideas; adaptar y validar Silencio
-TENCIÓN Referencias informativas TENIDA Mappings to standards, guidance, regulations, and other sources TENS Select more detailed practices and controls TEN
-Guías de inicio rápido ← Guía de acción corta sobre los usos CSF específicos
-
-Silencio **Números que importan:** CSF 2.0 contiene 6 Funciones, 22 Categorías y 106 Subcategorías. Las Subcategorías describen los resultados, los productos no requeridos o las implementaciones idénticas. Silencio
-Silencio.
-
-3. hoja de ruta de aplicación práctica
-
-*Una forma repetible de pasar del lenguaje marco a mejoras financiadas*.
-
-- Nombra un patrocinador ejecutivo y dueño del programa.
-
-- Definir el alcance del perfil: empresa, unidad de negocio, producto, servicio, sistema, región o ecosistema de proveedores.
-
-- Reunir la misión, los interesados directos, legales, contractuales, riesgos, activos, amenazas, incidentes, auditoría, fuerza de trabajo e información de proveedores.
-
-- Seleccione los resultados CSF aplicables y cree un perfil actual utilizando pruebas fiables.
-
-- Definir un perfil objetivo basado en el riesgo, considerando los perfiles y obligaciones de la comunidad.
-
-- Analizar las deficiencias, dependencias, costos, viabilidad y reducción del riesgo.
-
-- Crear un plan de acción aprobado con propietarios, recursos, hitos, medidas y protección provisional.
-
-- Implementar controles y procedimientos operativos.
-
-- Diseño de pruebas y eficacia operativa con poblaciones completas y muestras representativas.
-
-- Reportar riesgos, decisiones, excepciones, progreso y limitaciones.
-
-- Actualizar Perfiles después de cambios materiales, incidentes, ejercicios, revisiones o cambios de riesgo.
-
-Silencio **Empieza pequeña sin perder integridad:** Una pequeña organización puede comenzar con un servicio crítico o un proceso de alto riesgo. Mantener el alcance honesto, registrar exclusiones, y expandirse deliberadamente. Silencio
-Silencio.
-
-4. Función de gobierno
-
-*Un completo desglose de idiomas de cada categoría y subcategoría GOVERN*.
-
-Silencio **Propósito de la reflexión** Establecer dirección, expectativas, rendición de cuentas, política, supervisión y gestión del riesgo de cadena de suministro. Silencio
-Silencio...
-
-## Organizational Context (GV.OC)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio GV.OC-01 TENIDO Conectar las decisiones de ciberseguridad a la misión de la organización. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de misiones y registros de los interesados, registro de obligaciones, mapa de dependencia
-Silencio GV.OC-02 ANTE Identifique a los interesados y considere sus expectativas de seguridad cibernética. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de misiones y registros de los interesados, registro de obligaciones, mapa de dependencia
-tención GV.OC-03 ANTE Identifique y gestione las obligaciones legales, regulatorias, contractuales, de privacidad y de liberación civil. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de misiones y registros de los interesados, registro de obligaciones, mapa de dependencia
-Silencio GV.OC-04 ANTE Entender y comunicar los servicios críticos que otros esperan de la organización. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de misiones y registros de los interesados, registro de obligaciones, mapa de dependencia
-Silencio GV.OC-05 ANTE Entender y comunicar los resultados externos, capacidades y servicios que la organización depende. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de misiones y registros de los interesados, registro de obligaciones, mapa de dependencia
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Risk Management Strategy (GV.RM)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención GV.RM-01 Silencio Acorde on cibersecurity risk-management objectives with relevant stakeholders. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-Silencio GV.RM-02 ANTE Establece, comunica y mantiene declaraciones de riesgo de apetito y tolerancia. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-tención GV.RM-03 ANTE Integrar el riesgo de ciberseguridad en los procesos de gestión de riesgos institucionales. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-Silencio GV.RM-04 ANTE Define y comunica opciones aceptables de respuesta al riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-Silencio GV.RM-05 ANTE Crear rutas de comunicación para los riesgos cibernéticos, incluyendo los riesgos de proveedor y terceros. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-tención GV.RM-06 ANTE Utiliza un método consistente para calcular, documentar, categorizar y priorizar los riesgos cibernéticos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-Silencio GV.RM-07 Silencio Incluye oportunidades beneficiosas y riesgo positivo en discusiones de ciberseguridad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible.  permanente riesgo apetito, método, registro de riesgo de empresa, vías de presentación de informes
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Roles, Responsibilities, and Authorities (GV.RR)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio GV.RR-01 Silencio Liderazgo acepta la rendición de cuentas por el riesgo de ciberseguridad y apoya una cultura ética y mejorada. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención RACI, descripciones de funciones, presupuesto, registros de la fuerza de trabajo
-Silencio GV.RR-02 ANTE Establezca, comunique, entienda y haga cumplir funciones, responsabilidades y autoridad cibernéticas. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención RACI, descripciones de funciones, presupuesto, registros de la fuerza de trabajo
-Silencio GV.RR-03 TENIDO Asignar personas, dinero, tecnología y tiempo en línea con la estrategia y la política de riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención RACI, descripciones de funciones, presupuesto, registros de la fuerza de trabajo
-tención GV.RR-04 ← Incluye responsabilidades de ciberseguridad en prácticas de recursos humanos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención RACI, descripciones de funciones, presupuesto, registros de la fuerza de trabajo
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Policy (GV.PO)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio GV.PO-01 ANTE Establecer, comunicar y hacer cumplir la política de ciberseguridad basada en contexto, estrategia y prioridades. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención política aprobada, reconocimientos, historial de revisión, registros de cumplimiento
-tención GV.PO-02 TENIDO Revisión y actualización de la política cuando los requisitos, amenazas, tecnología o el cambio de misión. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención política aprobada, reconocimientos, historial de revisión, registros de cumplimiento
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Monitoring (GV.OV)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención GV.OV-01 Silencio Revisión de los resultados de la estrategia y utilizarlos para ajustar la dirección. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Silencio, minutos de reunión, decisiones, cambios de estrategia
-Silencio GV.OV-02 ANTE Ajustar la estrategia de riesgo cuando los requisitos o riesgos no están completamente cubiertos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Silencio, minutos de reunión, decisiones, cambios de estrategia
-Silencio GV.OV-03 Silencio Evaluar el rendimiento de la ciberseguridad y determinar los cambios necesarios. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Silencio, minutos de reunión, decisiones, cambios de estrategia
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Cybersecurity Supply Chain Risk Management (GV.SC)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio GV.SC-01 ANTE Establecer un programa de riesgo acordado de cadena de suministro, estrategia, objetivos, políticas y procesos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-02 Silencio Coordinar funciones de ciberseguridad para proveedores, clientes, socios y propietarios internos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-tención GV.SC-03 ANTE Integrar el riesgo de cadena de suministro en el trabajo de ciberseguridad, ERM, evaluación y mejora. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-04 ANTE Conoce a los proveedores y priorizalos por la crítica. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-05 ANTE Put priord cibersecurity requirements into contracts and agreements. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-06 ANTE Perform planeamiento y diligencia debida antes de comenzar relaciones de terceros. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-07 Silencio Record, evaluar, responder y supervisar los riesgos de proveedor, producto, servicio y terceros. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-08 ANTE Include relevant third parties in incident planning, response, and recovery. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-09 Silencio Monitor seguridad de cadena de suministro en todo el ciclo de vida del producto y servicio tecnológico. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-Silencio GV.SC-10 Silencio Planifique actividades de seguridad para el fin de un acuerdo de asociación o servicio. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de proveedores, envío, diligencia debida, contratos, monitoreo, prueba de salida 
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-5. Función IDENTIFY
-
-*Un desglose completo de todas las categorías y subcategorías IDENTIFY*.
-
-Silencio **Propósito de la reflexión** Comprender activos, dependencias, amenazas, vulnerabilidades, riesgos y necesidades de mejora. Silencio
-Silencio.
-
-## Asset Management (ID.AM)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio ID.AM-01 ANTE Mantener un inventario de hardware gestionado. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-Silencio ID.AM-02 ANTE Mantener un inventario de software, servicios y sistemas gestionados. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-Silencio ID.AM-03 ANTE Mantener los diagramas actuales de comunicación de red autorizada y flujos de datos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-Silencio ID.AM-04 ANTE Mantener un inventario de servicios proporcionados por proveedores. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-Silencio ID.AM-05 ANTE Priorizar activos mediante clasificación, crítica, recursos e impacto de la misión. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-tención ID.AM-07 ANTE Inventory designe tipos de datos y sus metadatos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-Silencio ID.AM-08 Silencio Manage systems, hardware, software, servicios y datos a lo largo de sus ciclos de vida. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventarios de activos y datos, propietarios, diagramas, registros de ciclo de vida
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Risk Assessment (ID.RA)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-La inmortalidad-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La inmortalidad
-Silencio ID.RA-01 ANTE Identificar, validar y registrar vulnerabilidades de activos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-02 Silencio Recibir inteligencia de amenazas cibernéticas de fuentes adecuadas de intercambio. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-03 ANTE Identificar y registrar amenazas internas y externas. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-04 ANTE Estimar la probabilidad y el impacto de las amenazas explotando vulnerabilidades. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-05 ANTE Utilizar amenazas, vulnerabilidades, probabilidad e impacto para entender el riesgo y prioridades inherentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-06 Silencio Elige, prioriza, plan, rastrea y comunica respuestas de riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-07 Silencio Evaluar, registrar, aprobar y seguir el efecto de riesgo de cambios y excepciones. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-tención ID.RA-08 ANTE Establecer un proceso para recibir, analizar y responder a las revelaciones de vulnerabilidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-09 ANTE Assess hardware y software autenticidad e integridad antes de la adquisición y uso. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-Silencio ID.RA-10 ANTE Evaluar proveedores críticos antes de la adquisición. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Registros de amenazas y vulnerabilidad, análisis de riesgos, tratamiento y excepciones
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Improvement (ID.IM)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención ID.IM-01 ANTE Identifique las mejoras de las evaluaciones. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. evaluación, ejercicio, lecciones, acciones correctivas, planes actualizados
-Silencio ID.IM-02 ANTE Identifique las mejoras de las pruebas y ejercicios, incluyendo ejercicios coordinados de terceros. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. evaluación, ejercicio, lecciones, acciones correctivas, planes actualizados
-Silencio ID.IM-03 ANTE Identifique las mejoras durante los procesos operativos, procedimientos y actividades. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. evaluación, ejercicio, lecciones, acciones correctivas, planes actualizados
-Silencio ID.IM-04 ANTE Establezca, comunique, mantenga y mejore los planes de ciberseguridad operacional y de respuesta a incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. evaluación, ejercicio, lecciones, acciones correctivas, planes actualizados
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-6. Función del PROTECTO
-
-*Un desglose completo de todas las categorías y subcategorías PROTECT*.
-
-Silencio **Propósito de la reflexión** Use salvaguardias que reduzcan la probabilidad y el impacto de los eventos de ciberseguridad.
-Silencio...
-
-## Identity Management, Authentication, and Access Control (PR.AA)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio PR.AA-01 Silencio Gestionar identidades y credenciales para personas autorizadas, servicios y hardware. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-Silencio PR.AA-02 TENIDO Las identidades de prueba y las vinculan a las credenciales de acuerdo con el riesgo de interacción. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-Silencio PR.AA-03 Silencio Authenticate usuarios, servicios y hardware. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-tención PR.AA-04 TENIDO Protege, transmite y verifica las afirmaciones de identidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-Silencio PR.AA-05 ANTE Definir, hacer cumplir y revisar los permisos utilizando menos privilegio y separación de funciones. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-Silencio PR.AA-06 TENIDO Gestionar, monitorear y hacer cumplir el acceso físico según el riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de identidad permanente, matriz de acceso, configuración de MFA, comentarios, tickets de eliminación
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Awareness and Training (PR.AT)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio PR.AT-01 Silencio Dar al personal los conocimientos y habilidades para realizar el trabajo ordinario con el riesgo cibernético en mente. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de planes de estudios basados en roles, lista, finalización, ejercicios, seguimiento
-Silencio PR.AT-02 Silencio Dar a la gente en funciones especializadas los conocimientos y habilidades de ciberseguridad que estos roles requieren. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención de planes de estudios basados en roles, lista, finalización, ejercicios, seguimiento
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Data Security (PR.DS)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio PR.DS-01 Silencio Protege los datos en reposo para la confidencialidad, integridad y disponibilidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. clasificación, configuración de cifrado, registros DLP, pruebas de copia de seguridad y restauración
-Silencio PR.DS-02 Silencio Protege los datos en tránsito para la confidencialidad, integridad y disponibilidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. clasificación, configuración de cifrado, registros DLP, pruebas de copia de seguridad y restauración
-Silencio PR.DS-10 Silencio Protege los datos en uso para la confidencialidad, integridad y disponibilidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. clasificación, configuración de cifrado, registros DLP, pruebas de copia de seguridad y restauración
-Silencio PR.DS-11 ANTE Crear, proteger, mantener y probar copias de seguridad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. clasificación, configuración de cifrado, registros DLP, pruebas de copia de seguridad y restauración
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Platform Security (PR.PS)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención PR.PS-01 ANTE Establezca y aplique prácticas de gestión de configuración. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Bases de referencia, parches y registros de EOL, registros, percepciones, pruebas de SDLC seguras
-TENIDO PR.PS-02 ANTE Mantener, reemplazar y eliminar el software según el riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Bases de referencia, parches y registros de EOL, registros, percepciones, pruebas de SDLC seguras
-Silencio PR.PS-03 Silencio Mantener, reemplazar y eliminar hardware de acuerdo con el riesgo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención Baselines, parches y registros de EOL, registros, persecuciones, pruebas de SDLC seguras
-Silencio PR.PS-04 ANTE Genera registros y hazlos disponibles para el monitoreo continuo. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tención Baselines, parches y registros de EOL, registros, persecuciones, pruebas de SDLC seguras
-Silencio PR.PS-05 Silencio Prevent installation and execution of unauthorized software. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Bases de referencia, parches y registros de EOL, registros, percepciones, pruebas de SDLC seguras
-Silencio PR.PS-06 ANTE Integrar y supervisar prácticas seguras de desarrollo de software durante todo el ciclo de vida. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. Bases de referencia, parches y registros de EOL, registros, percepciones, pruebas de SDLC seguras
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Technology Infrastructure Resilience (PR.IR)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio PR.IR-01 Silencio Protege las redes y entornos de acceso y uso lógico no autorizados. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. arquitectura, segmentación, controles ambientales, resistencia y pruebas de capacidad
-Silencio PR.IR-02 Silencio Protege los activos tecnológicos de las amenazas ambientales. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. arquitectura, segmentación, controles ambientales, resistencia y pruebas de capacidad
-tención PR.IR-03 Silencio Aplicar mecanismos que satisfagan las necesidades de resiliencia durante las condiciones normales y adversas. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. arquitectura, segmentación, controles ambientales, resistencia y pruebas de capacidad
-Silencio PR.IR-04 TEN Mantener suficiente capacidad de recursos para apoyar la disponibilidad. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. arquitectura, segmentación, controles ambientales, resistencia y pruebas de capacidad
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-7. Función de DETECT
-
-*Un desglose completo de todas las categorías y subcategorías DETECT*.
-
-Silencio **Propósito de la reflexión** Monitorear y analizar eventos para encontrar ataques potenciales y compromisos. Silencio
-Silencio...
-
-## Continuous Monitoring (DE.CM)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-La inmortalidad---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-tención DE.CM-01 Silencio Monitor de redes y servicios de red para eventos potencialmente adversos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores
-tención DE.CM-02 TENIDO Supervisar el entorno físico para eventos potencialmente adversos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores
-tención DE.CM-03 Silencio Monitor actividad de personal y uso tecnológico para eventos potencialmente adversos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores
-Silencio DE.CM-06 Silencio Monitor external service-provider activities and services for adverse events. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores
-Silencio DE.CM-09 Silencio Monitor hardware, software, entornos de tiempo de ejecución y datos para eventos adversos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Adverse Event Analysis (DE.AE)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna--
-Silencio DE.AE-02 ANTE Analyze eventos potencialmente adversos para entender la actividad relacionada. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-tención DE.AE-03 Silencio Correlate information from multiple sources. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-tención DE.AE-04 ANTE Estimar el alcance y el impacto de los eventos adversos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-Silencio DE.AE-06 Silencio Proporcionar información de eventos adversos a personas y herramientas autorizadas. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-Silencio DE.AE-07 ANTE Utiliza inteligencia de amenazas y contexto en el análisis de eventos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-Silencio DE.AE-08 Silencio Declarar incidentes cuando los eventos cumplen criterios definidos. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. reglas de correlación, alertas enriquecidas, análisis de impactos, registro de declaraciones
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-8. Función de RESPOND
-
-*Un completo desglose de idiomas de cada categoría y subcategoría RESPOND*.
-
-Silencio **Propósito de la reflexión** Administrar, analizar, comunicar, contener y erradicar incidentes declarados. Silencio
-Silencio.
-
-## Incident Management (RS.MA)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio RS.MA-01 Silencio Ejecute el plan de respuesta con terceros relevantes después de que se declare un incidente. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de incidentes, entradas, triaje, prioridad, escalada, decisión de recuperación
-Silencio RS.MA-02 TENIDO Triage y validar informes de incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de incidentes, entradas, triaje, prioridad, escalada, decisión de recuperación
-Silencio RS.MA-03 ANTE Categorizar y priorizar incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de incidentes, entradas, triaje, prioridad, escalada, decisión de recuperación
-Silencio RS.MA-04 Silencio Escalar o elevar incidentes cuando sea necesario. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de incidentes, entradas, triaje, prioridad, escalada, decisión de recuperación
-Silencio RS.MA-05 ANTE Aplicar criterios para iniciar la recuperación. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de incidentes, entradas, triaje, prioridad, escalada, decisión de recuperación
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Incident Analysis (RS.AN)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida--
-tención RS.AN-03 TENIDO Determinar qué ocurrió e identificar la causa raíz. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tiempo, notas forenses, registros de pruebas, hashes, análisis de causas profundas
-Silencio RS.AN-06 ANTERI Record investigative actions and preserve record integrity and provenance. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tiempo, notas forenses, registros de pruebas, hashes, análisis de causas profundas
-Silencio RS.AN-07 Silencio Recopilar datos de incidentes y metadatos preservando la integridad y la procedencia. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tiempo, notas forenses, registros de pruebas, hashes, análisis de causas profundas
-tención RS.AN-08 ANTE Estimación y valida la magnitud del incidente. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. tiempo, notas forenses, registros de pruebas, hashes, análisis de causas profundas
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Incident Response Reporting and Communication (RS.CO)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-Silencio RS.CO-02 ANTE Notify required internal and external stakeholders. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. matriz de notificación, mensajes, aprobaciones, registros de entrega
-Silencio RS.CO-03 Silencio Comparte información con los interesados designados. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. matriz de notificación, mensajes, aprobaciones, registros de entrega
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Incident Mitigation (RS.MI)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-Silencio RS.MI-01 Silencio Contiene incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. medidas de contención y erradicación, validación, decisión de riesgo residual
-tención RS.MI-02 Silencio Erradicar incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. medidas de contención y erradicación, validación, decisión de riesgo residual
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-9. Función RECIBIDA
-
-*Un desglose completo de todas las categorías y subcategorías RECOVER*.
-
-Silencio **Propósito de la reflexión** Restaurar activos y operaciones y comunicar el progreso de recuperación.
-Silencio...
-
-## Incident Recovery Plan Execution (RC.RP)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio RC.RP-01 Silencio Ejecuta las actividades de recuperación cuando el proceso del incidente inicia la recuperación. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-Silencio RC.RP-02 ANTE Select, scope, prioritize, and perform recovery actions. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-Silencio RC.RP-03 Silencio Verificar la integridad de respaldo y restauración antes de la restauración. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-Silencio RC.RP-04 ANTE Utiliza las necesidades de la misión y el riesgo cibernético para establecer las condiciones de funcionamiento posteriores al incidente. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-Silencio RC.RP-05 Silencio Verificar los activos restaurados, restaurar el servicio y confirmar el estado operativo normal. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-Silencio RC.RP-06 Silencio Declare recuperación completa utilizando criterios y terminar documentación de incidentes. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. plan de recuperación, restaurar registros, cheques de integridad, validación de servicios, cierre
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
-
-## Incident Recovery Communication (RC.CO)
-
-Silencio **Responde** Silencio **Plain meaning** Silencio **Manager or analista verification** Silencio **Excelente evidencia**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna...
-Silencio RC.CO-03 Silencio Comuníquese el progreso de recuperación y la capacidad restaurada a los interesados designados. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. actualizaciones de las partes interesadas, mensajes públicos aprobados, prueba de entrega
-Silencio RC.CO-04 Silencio Edición de actualizaciones de recuperación pública a través de métodos aprobados y mensajería. tención Confirme la propiedad, alcance, implementación, revisión, excepciones, acción correctiva y operación repetible. actualizaciones de las partes interesadas, mensajes públicos aprobados, prueba de entrega
-
-*Importante: Los resultados de CSF no son una lista de verificación de las tecnologías requeridas. Seleccione métodos y controles de aplicación de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el perfil de objetivos abarcado*.
+# 2. Núcleo, Perfiles, Tiers y recursos de apoyo
+
+*Los componentes del CSF 2.0 y cómo se relacionan entre sí.*
+
+<img src="media/image2.png" style="width:6.15in;height:2.6593in" alt="Las Funciones contienen Categorías, y las Categorías contienen Subcategorías específicas centradas en resultados." />
+
+Figura 2. Jerarquía del Núcleo del CSF
+
+| **Componente** | **Propósito** | **Uso práctico** |
+|---|---|---|
+| Núcleo | Jerarquía de seis Funciones, 22 Categorías y 106 Subcategorías | Describir los resultados de ciberseguridad deseados |
+| Perfil Organizacional | Resultados actuales y/o objetivo para un alcance definido | Comparar la postura, priorizar brechas y planificar el trabajo |
+| Perfil Comunitario | Línea de base compartida de resultados para un sector, tecnología, amenaza o caso de uso | Utilizarla como insumo para el Perfil Objetivo de una organización |
+| Tiers | Contexto sobre el rigor de las prácticas de gobernanza y gestión de riesgos | Caracterizar las condiciones del Perfil Actual y del Perfil Objetivo |
+| Ejemplos de Implementación | Acciones orientativas que pueden ayudar a alcanzar resultados | Generar ideas, adaptarlas y validarlas |
+| Referencias Informativas | Correspondencias con normas, guías, regulaciones y otras fuentes | Seleccionar prácticas y controles más detallados |
+| Guías de Inicio Rápido | Orientación breve y práctica sobre usos específicos del CSF | Iniciar trabajos sobre Perfiles, Tiers, ERM, cadena de suministro y pequeñas empresas |
+
+| **Cifras importantes:** El CSF 2.0 contiene 6 Funciones, 22 Categorías y 106 Subcategorías. Las Subcategorías describen resultados; no exigen productos específicos ni implementaciones idénticas. |
+|---|
+
+# 3. Hoja de ruta práctica de implementación
+
+*Una forma repetible de pasar del lenguaje del marco a mejoras financiadas.*
+
+- Designe un patrocinador ejecutivo y un responsable del programa.
+- Defina el alcance del Perfil: empresa, unidad de negocio, producto, servicio, sistema, región o ecosistema de proveedores.
+- Reúna información sobre la misión, las partes interesadas, las obligaciones legales y contractuales, los riesgos, activos, amenazas, incidentes, auditorías, personal y proveedores.
+- Seleccione los resultados del CSF aplicables y cree un Perfil Actual utilizando evidencia confiable.
+- Defina un Perfil Objetivo basado en el riesgo, teniendo en cuenta los Perfiles Comunitarios y las obligaciones aplicables.
+- Analice brechas, dependencias, costos, viabilidad y reducción del riesgo.
+- Cree un plan de acción aprobado con responsables, recursos, hitos, métricas y medidas de protección provisionales.
+- Implemente controles y procedimientos operativos.
+- Pruebe la eficacia del diseño y la eficacia operativa utilizando poblaciones completas y muestras representativas.
+- Informe sobre riesgos, decisiones, excepciones, avances y limitaciones.
+- Actualice los Perfiles después de cambios importantes, incidentes, ejercicios, revisiones o variaciones del riesgo.
+
+| **Comience con un alcance pequeño sin perder integridad:** Una organización pequeña puede empezar por un servicio crítico o un proceso de alto riesgo. Mantenga un alcance transparente, documente las exclusiones y amplíelo de forma deliberada. |
+|---|
+
+# 4. Función GOBERNAR
+
+*Desglose completo y en lenguaje claro de cada Categoría y Subcategoría de GOBERNAR.*
+
+| **Propósito de la Función:** Establecer dirección, expectativas, rendición de cuentas, políticas, supervisión y gestión del riesgo de la cadena de suministro. |
+|---|
+
+## Contexto organizacional (GV.OC)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.OC-01 | Vincular las decisiones de ciberseguridad con la misión de la organización. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de misión y partes interesadas, registro de obligaciones, mapa de dependencias |
+| GV.OC-02 | Identificar a las partes interesadas y considerar sus expectativas de ciberseguridad. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de misión y partes interesadas, registro de obligaciones, mapa de dependencias |
+| GV.OC-03 | Identificar y gestionar obligaciones legales, regulatorias, contractuales, de privacidad y libertades civiles. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de misión y partes interesadas, registro de obligaciones, mapa de dependencias |
+| GV.OC-04 | Comprender y comunicar los servicios críticos que otras partes esperan de la organización. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de misión y partes interesadas, registro de obligaciones, mapa de dependencias |
+| GV.OC-05 | Comprender y comunicar los resultados, capacidades y servicios externos de los que depende la organización. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de misión y partes interesadas, registro de obligaciones, mapa de dependencias |
+
+> **Importante:** Los resultados del CSF no son una lista de tecnologías obligatorias. Seleccione métodos de implementación y controles de acuerdo con el riesgo, la misión, las obligaciones, los recursos y el Perfil Objetivo definido.
+
+## Estrategia de gestión de riesgos (GV.RM)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.RM-01 | Acordar objetivos de gestión del riesgo de ciberseguridad con las partes interesadas pertinentes. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-02 | Establecer, comunicar y mantener declaraciones de apetito y tolerancia al riesgo. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-03 | Integrar el riesgo de ciberseguridad en los procesos de gestión de riesgos empresariales. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-04 | Definir y comunicar opciones aceptables de respuesta al riesgo. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-05 | Establecer canales de comunicación para riesgos cibernéticos, incluidos los de proveedores y terceros. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-06 | Usar un método coherente para calcular, documentar, categorizar y priorizar riesgos cibernéticos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+| GV.RM-07 | Incluir oportunidades beneficiosas y riesgo positivo en las conversaciones de ciberseguridad. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
+
+## Roles, responsabilidades y autoridades (GV.RR)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.RR-01 | La dirección acepta la responsabilidad por el riesgo de ciberseguridad y promueve una cultura ética y de mejora continua. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz RACI, descripciones de puesto, presupuesto, registros de personal |
+| GV.RR-02 | Establecer, comunicar, comprender y hacer cumplir roles, responsabilidades y autoridad en ciberseguridad. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz RACI, descripciones de puesto, presupuesto, registros de personal |
+| GV.RR-03 | Asignar personas, presupuesto, tecnología y tiempo de acuerdo con la estrategia y las políticas de riesgo. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz RACI, descripciones de puesto, presupuesto, registros de personal |
+| GV.RR-04 | Incorporar responsabilidades de ciberseguridad en las prácticas de recursos humanos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz RACI, descripciones de puesto, presupuesto, registros de personal |
+
+## Política (GV.PO)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.PO-01 | Establecer, comunicar y hacer cumplir la política de ciberseguridad según el contexto, la estrategia y las prioridades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | política aprobada, acuses de recibo, historial de revisión, registros de cumplimiento |
+| GV.PO-02 | Revisar y actualizar la política cuando cambien los requisitos, las amenazas, la tecnología o la misión. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | política aprobada, acuses de recibo, historial de revisión, registros de cumplimiento |
+
+## Supervisión (GV.OV)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.OV-01 | Revisar los resultados de la estrategia y usarlos para ajustar la dirección. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | tablero, actas, decisiones, cambios de estrategia |
+| GV.OV-02 | Ajustar la estrategia de riesgo cuando los requisitos o riesgos no estén plenamente cubiertos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | tablero, actas, decisiones, cambios de estrategia |
+| GV.OV-03 | Evaluar el desempeño de ciberseguridad y determinar los cambios necesarios. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | tablero, actas, decisiones, cambios de estrategia |
+
+## Gestión del riesgo de ciberseguridad en la cadena de suministro (GV.SC)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| GV.SC-01 | Establecer un programa, estrategia, objetivos, políticas y procesos acordados para el riesgo de la cadena de suministro. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-02 | Coordinar los roles de ciberseguridad de proveedores, clientes, socios y responsables internos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-03 | Integrar el riesgo de la cadena de suministro en la ciberseguridad, ERM, evaluaciones y mejora. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-04 | Conocer a los proveedores y priorizarlos según su criticidad. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-05 | Incluir requisitos de ciberseguridad priorizados en contratos y acuerdos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-06 | Realizar planificación y debida diligencia antes de iniciar relaciones con terceros. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-07 | Registrar, evaluar, responder y monitorear riesgos de proveedores, productos, servicios y terceros. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-08 | Incluir a terceros pertinentes en la planificación, respuesta y recuperación de incidentes. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-09 | Monitorear la seguridad de la cadena de suministro durante el ciclo de vida de productos y servicios tecnológicos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+| GV.SC-10 | Planificar actividades de seguridad para el cierre de una asociación o acuerdo de servicio. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de proveedores, clasificación, debida diligencia, contratos, monitoreo, evidencia de salida |
+
+# 5. Función IDENTIFICAR
+
+*Desglose completo y en lenguaje claro de cada Categoría y Subcategoría de IDENTIFICAR.*
+
+| **Propósito de la Función:** Comprender activos, dependencias, amenazas, vulnerabilidades, riesgos y necesidades de mejora. |
+|---|
+
+## Gestión de activos (ID.AM)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| ID.AM-01 | Mantener un inventario del hardware administrado. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-02 | Mantener un inventario del software, los servicios y los sistemas administrados. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-03 | Mantener diagramas actualizados de comunicaciones de red y flujos de datos autorizados. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-04 | Mantener un inventario de los servicios proporcionados por proveedores. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-05 | Priorizar activos según clasificación, criticidad, recursos e impacto en la misión. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-07 | Inventariar tipos de datos designados y sus metadatos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+| ID.AM-08 | Gestionar sistemas, hardware, software, servicios y datos durante todo su ciclo de vida. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventarios de activos y datos, responsables, diagramas, registros del ciclo de vida |
+
+## Evaluación de riesgos (ID.RA)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| ID.RA-01 | Identificar, validar y registrar vulnerabilidades de los activos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-02 | Recibir inteligencia de amenazas cibernéticas de fuentes de intercambio apropiadas. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-03 | Identificar y registrar amenazas internas y externas. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-04 | Estimar la probabilidad y el impacto de que las amenazas exploten vulnerabilidades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-05 | Usar amenazas, vulnerabilidades, probabilidad e impacto para comprender el riesgo inherente y las prioridades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-06 | Seleccionar, priorizar, planificar, dar seguimiento y comunicar respuestas al riesgo. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-07 | Evaluar, registrar, aprobar y dar seguimiento al efecto de cambios y excepciones sobre el riesgo. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-08 | Establecer un proceso para recibir, analizar y responder a divulgaciones de vulnerabilidades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-09 | Evaluar la autenticidad e integridad del hardware y software antes de su adquisición y uso. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+| ID.RA-10 | Evaluar a proveedores críticos antes de la adquisición. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | registros de amenazas y vulnerabilidades, análisis de riesgo, tratamiento y excepciones |
+
+## Mejora (ID.IM)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| ID.IM-01 | Identificar mejoras a partir de evaluaciones. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
+| ID.IM-02 | Identificar mejoras a partir de pruebas y ejercicios, incluidos ejercicios coordinados con terceros. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
+| ID.IM-03 | Identificar mejoras durante la operación de procesos, procedimientos y actividades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
+| ID.IM-04 | Establecer, comunicar, mantener y mejorar planes de respuesta a incidentes y de ciberseguridad operativa. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
+
+> **Estado:** Traducción humana revisada para integración. Conserva los identificadores oficiales del NIST CSF 2.0. Este archivo sustituye únicamente el contenido textual de los capítulos 6–9; la edición completa todavía requiere integración, regeneración de DOCX/PDF y revisión visual.
+
+# 6. Función PROTEGER
+
+*Desglose completo, en lenguaje claro, de cada Categoría y Subcategoría de PROTEGER.*
+
+| **Propósito de la Función:** Aplicar salvaguardas que reduzcan la probabilidad y el impacto de los eventos de ciberseguridad. |
+|---|
+
+## Gestión de identidades, autenticación y control de acceso (PR.AA)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| PR.AA-01 | Gestionar las identidades y credenciales de personas, servicios y equipos autorizados. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+| PR.AA-02 | Verificar identidades y vincularlas con credenciales de acuerdo con el riesgo de la interacción. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+| PR.AA-03 | Autenticar usuarios, servicios y equipos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+| PR.AA-04 | Proteger, transmitir y verificar las declaraciones de identidad. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+| PR.AA-05 | Definir, aplicar y revisar permisos mediante privilegio mínimo y separación de funciones. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+| PR.AA-06 | Gestionar, monitorear y aplicar el acceso físico conforme al riesgo. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de identidades, matriz de acceso, configuración de MFA, revisiones, tickets de baja |
+
+## Concientización y capacitación (PR.AT)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| PR.AT-01 | Proporcionar al personal los conocimientos y habilidades necesarios para realizar su trabajo habitual considerando el riesgo cibernético. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de capacitación por rol, listas de asistencia, finalización, ejercicios, seguimiento |
+| PR.AT-02 | Proporcionar a las personas en funciones especializadas los conocimientos y habilidades de ciberseguridad que esas funciones requieren. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de capacitación por rol, listas de asistencia, finalización, ejercicios, seguimiento |
+
+## Seguridad de los datos (PR.DS)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| PR.DS-01 | Proteger los datos en reposo respecto de confidencialidad, integridad y disponibilidad. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | clasificación, configuración de cifrado, registros DLP, pruebas de respaldo y restauración |
+| PR.DS-02 | Proteger los datos en tránsito respecto de confidencialidad, integridad y disponibilidad. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | clasificación, configuración de cifrado, registros DLP, pruebas de respaldo y restauración |
+| PR.DS-10 | Proteger los datos en uso respecto de confidencialidad, integridad y disponibilidad. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | clasificación, configuración de cifrado, registros DLP, pruebas de respaldo y restauración |
+| PR.DS-11 | Crear, proteger, mantener y probar los respaldos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | clasificación, configuración de cifrado, registros DLP, pruebas de respaldo y restauración |
+
+## Seguridad de plataformas (PR.PS)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| PR.PS-01 | Establecer y aplicar prácticas de gestión de configuraciones. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+| PR.PS-02 | Mantener, reemplazar y retirar software conforme al riesgo. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+| PR.PS-03 | Mantener, reemplazar y retirar hardware conforme al riesgo. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+| PR.PS-04 | Generar registros y ponerlos a disposición del monitoreo continuo. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+| PR.PS-05 | Impedir la instalación y ejecución de software no autorizado. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+| PR.PS-06 | Integrar y monitorear prácticas de desarrollo seguro de software durante todo el ciclo de vida. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | líneas base, registros de parches y fin de vida, logs, listas de permitidos, evidencia de SDLC seguro |
+
+## Resiliencia de la infraestructura tecnológica (PR.IR)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| PR.IR-01 | Proteger redes y entornos contra el acceso y uso lógico no autorizado. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | arquitectura, segmentación, controles ambientales, pruebas de resiliencia y capacidad |
+| PR.IR-02 | Proteger los activos tecnológicos contra amenazas ambientales. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | arquitectura, segmentación, controles ambientales, pruebas de resiliencia y capacidad |
+| PR.IR-03 | Implementar mecanismos que satisfagan las necesidades de resiliencia durante condiciones normales y adversas. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | arquitectura, segmentación, controles ambientales, pruebas de resiliencia y capacidad |
+| PR.IR-04 | Mantener capacidad suficiente de recursos para respaldar la disponibilidad. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | arquitectura, segmentación, controles ambientales, pruebas de resiliencia y capacidad |
+
+# 7. Función DETECTAR
+
+*Desglose completo, en lenguaje claro, de cada Categoría y Subcategoría de DETECTAR.*
+
+| **Propósito de la Función:** Monitorear y analizar eventos para identificar posibles ataques y compromisos. |
+|---|
+
+## Monitoreo continuo (DE.CM)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| DE.CM-01 | Monitorear redes y servicios de red para detectar eventos potencialmente adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores |
+| DE.CM-02 | Monitorear el entorno físico para detectar eventos potencialmente adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores |
+| DE.CM-03 | Monitorear la actividad del personal y el uso de tecnología para detectar eventos potencialmente adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores |
+| DE.CM-06 | Monitorear las actividades y servicios de proveedores externos para detectar eventos adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores |
+| DE.CM-09 | Monitorear hardware, software, entornos de ejecución y datos para detectar eventos adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | inventario de cobertura, telemetría, alertas, registros de revisión, monitoreo de proveedores |
+
+## Análisis de eventos adversos (DE.AE)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| DE.AE-02 | Analizar eventos potencialmente adversos para comprender la actividad relacionada. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+| DE.AE-03 | Correlacionar información de múltiples fuentes. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+| DE.AE-04 | Estimar el alcance y el impacto de los eventos adversos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+| DE.AE-06 | Proporcionar información sobre eventos adversos a personas y herramientas autorizadas. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+| DE.AE-07 | Utilizar inteligencia de amenazas y contexto en el análisis de eventos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+| DE.AE-08 | Declarar incidentes cuando los eventos cumplan los criterios definidos. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | reglas de correlación, alertas enriquecidas, análisis de impacto, registro de declaración |
+
+# 8. Función RESPONDER
+
+*Desglose completo, en lenguaje claro, de cada Categoría y Subcategoría de RESPONDER.*
+
+| **Propósito de la Función:** Gestionar, analizar, comunicar, contener y erradicar los incidentes declarados. |
+|---|
+
+## Gestión de incidentes (RS.MA)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RS.MA-01 | Ejecutar el plan de respuesta con las terceras partes pertinentes después de declarar un incidente. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de incidentes, tickets, triaje, prioridad, escalamiento, decisión de recuperación |
+| RS.MA-02 | Realizar el triaje y validar los reportes de incidentes. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de incidentes, tickets, triaje, prioridad, escalamiento, decisión de recuperación |
+| RS.MA-03 | Clasificar y priorizar los incidentes. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de incidentes, tickets, triaje, prioridad, escalamiento, decisión de recuperación |
+| RS.MA-04 | Escalar o elevar los incidentes cuando sea necesario. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de incidentes, tickets, triaje, prioridad, escalamiento, decisión de recuperación |
+| RS.MA-05 | Aplicar criterios para iniciar la recuperación. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de incidentes, tickets, triaje, prioridad, escalamiento, decisión de recuperación |
+
+## Análisis de incidentes (RS.AN)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RS.AN-03 | Determinar qué ocurrió e identificar la causa raíz. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | línea de tiempo, notas forenses, registro de evidencia, hashes, análisis de causa raíz |
+| RS.AN-06 | Registrar las acciones de investigación y preservar la integridad y procedencia de los registros. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | línea de tiempo, notas forenses, registro de evidencia, hashes, análisis de causa raíz |
+| RS.AN-07 | Recopilar datos y metadatos del incidente preservando su integridad y procedencia. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | línea de tiempo, notas forenses, registro de evidencia, hashes, análisis de causa raíz |
+| RS.AN-08 | Estimar y validar la magnitud del incidente. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | línea de tiempo, notas forenses, registro de evidencia, hashes, análisis de causa raíz |
+
+## Reporte y comunicación de la respuesta a incidentes (RS.CO)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RS.CO-02 | Notificar a las partes interesadas internas y externas requeridas. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz de notificación, mensajes, aprobaciones, registros de entrega |
+| RS.CO-03 | Compartir información con las partes interesadas designadas. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | matriz de notificación, mensajes, aprobaciones, registros de entrega |
+
+## Mitigación de incidentes (RS.MI)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RS.MI-01 | Contener los incidentes. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | acciones de contención y erradicación, validación, decisión sobre riesgo residual |
+| RS.MI-02 | Erradicar los incidentes. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | acciones de contención y erradicación, validación, decisión sobre riesgo residual |
+
+# 9. Función RECUPERAR
+
+*Desglose completo, en lenguaje claro, de cada Categoría y Subcategoría de RECUPERAR.*
+
+| **Propósito de la Función:** Restaurar activos y operaciones, y comunicar el avance de la recuperación. |
+|---|
+
+## Ejecución del plan de recuperación de incidentes (RC.RP)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RC.RP-01 | Ejecutar las actividades de recuperación cuando el proceso de incidentes inicia la recuperación. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+| RC.RP-02 | Seleccionar, delimitar, priorizar y ejecutar las acciones de recuperación. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+| RC.RP-03 | Verificar la integridad de los respaldos y activos de restauración antes de restaurar. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+| RC.RP-04 | Utilizar las necesidades de la misión y el riesgo cibernético para establecer las condiciones operativas posteriores al incidente. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+| RC.RP-05 | Verificar los activos restaurados, restablecer el servicio y confirmar el estado operativo normal. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+| RC.RP-06 | Declarar concluida la recuperación usando criterios definidos y completar la documentación del incidente. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | plan de recuperación, registros de restauración, verificaciones de integridad, validación del servicio, cierre |
+
+## Comunicación de la recuperación de incidentes (RC.CO)
+
+| **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
+|---|---|---|---|
+| RC.CO-03 | Comunicar el avance de la recuperación y las capacidades restauradas a las partes interesadas designadas. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | actualizaciones a partes interesadas, mensajes públicos aprobados, evidencia de entrega |
+| RC.CO-04 | Emitir actualizaciones públicas sobre la recuperación mediante métodos y mensajes aprobados. | Confirmar propietario, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | actualizaciones a partes interesadas, mensajes públicos aprobados, evidencia de entrega |
+
+> **Nota de aplicación:** Los resultados del CSF no constituyen una lista de tecnologías obligatorias. Los métodos de implementación y los controles deben seleccionarse según el riesgo, la misión, las obligaciones, los recursos y el Perfil Objetivo definido para el alcance.
 
 # 10. Perfiles organizacionales
 
-*Cómo describir la postura actual, establecer un objetivo y construir un plan de acción priorizado*.
+*Cómo describir la postura actual, establecer un objetivo y crear un plan de acción priorizado.*
 
-■img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="A Target Profile es útil cuando sus brechas se convierten en acción de propiedad, financiada y basada en el riesgo."
+<img src="media/image3_es.png" style="width:6.15in;height:3.39605in" alt="Un Perfil Objetivo es útil cuando sus brechas se convierten en acciones basadas en riesgo, con responsables y financiamiento definidos." />
 
-Gráfico 3 Perfil actual del plan de acción
+**Figura 3. Del Perfil Actual al plan de acción**
 
-## 10.1 Declaración de alcance del perfil
+### 10.1 Declaración del alcance del Perfil
 
-- Con fines empresariales o de misión
+- Propósito empresarial o de misión.
+- Sistemas, servicios, datos, instalaciones, personas, proveedores y ubicaciones incluidos.
+- Periodo evaluado y fecha de la evidencia.
+- Partes interesadas y autoridad para tomar decisiones.
+- Obligaciones legales, contractuales y de política, además de los Perfiles Comunitarios utilizados como referencia.
+- Supuestos, exclusiones, dependencias y limitaciones.
 
-- Sistemas, servicios, datos, instalaciones, personas, proveedores y lugares incluidos
+### 10.2 Estado de los resultados
 
-- Período de tiempo y fecha de prueba
+| **Estado** | **Significado** | **Soporte requerido** |
+|---|---|---|
+| Logrado | El resultado, dentro del alcance definido, está implementado y funciona según lo previsto. | Responsable, población completa, diseño, evidencia operativa, prueba y conclusión. |
+| Parcialmente logrado | Falta parte del alcance o la operación es incompleta o inconsistente. | Brecha exacta, riesgo afectado, acción provisional, responsable y fecha. |
+| No logrado | El resultado aplica, pero no está funcionando. | Decisión de riesgo, tratamiento, recursos y cronograma. |
+| No aplicable | El resultado no aplica al alcance definido. | Justificación documentada y aprobación. |
+| No evaluado | La evidencia es insuficiente para emitir una conclusión. | Solicitud de evidencia, responsable y fecha límite. |
 
-- Los interesados y la autoridad de decisión
+### 10.3 Priorización de brechas
 
-- Entradas legales, contractuales, de política y de perfil comunitario
+Priorice las brechas considerando el impacto sobre la misión, la probabilidad de amenaza, la criticidad de los activos, las obligaciones legales y contractuales, la exposición, las dependencias, la seguridad física, la privacidad, los controles actuales, el tiempo estimado para explotación, el esfuerzo de remediación y los recursos disponibles. No clasifique las brechas únicamente por la severidad indicada por una herramienta de escaneo.
 
-- Sumas, exclusiones, dependencias y limitaciones
+# 11. Niveles del CSF
 
-## 10.2 Outcome status
+*Cómo utilizar Parcial, Informado por el Riesgo, Repetible y Adaptativo sin convertirlos en una puntuación.*
 
-**Status** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------
-Silencio Conseguido El resultado abarcado se implementa y opera como el propietario previsto, la población completa, el diseño, pruebas operativas, pruebas y conclusión Silencio
-TENIDO Parcialmente logrado TENIDO Alguna extensión o operación está desaparecida o inconsistente ANTEExact gap, affected risk, interim action, owner and date TEN
-Silencio no alcanzado El resultado es aplicable pero no operando Silencioso decisión, tratamiento, recursos, cronograma
-Silencio No aplicable El resultado no se aplica a este ámbito definido tención Solución documentada y aprobación
-Silencio No evaluado Silencio La evidencia no es suficiente para una conclusión
+<img src="media/image4_es.png" style="width:6.15in;height:3.35755in" alt="Los Niveles del CSF ofrecen contexto sobre el rigor de la gobernanza y de las prácticas de gestión del riesgo." />
 
-## 10.3 Gap prioritization
+**Figura 4. Niveles del CSF**
 
-Priorizar las lagunas que utilizan el impacto de la misión, la probabilidad de amenaza, la crítica de activos, las obligaciones jurídicas y contractuales, la exposición, las dependencias, la seguridad, la privacidad, los controles actuales, el tiempo para explotar, el esfuerzo de rehabilitación y los recursos disponibles. No clasificar las brechas sólo por la etiqueta de gravedad del escáner.
+| **Nivel** | **Significado práctico** | **Evidencia útil** |
+|---|---|---|
+| Nivel 1 — Parcial | Las prácticas son principalmente informales, irregulares y no siempre están guiadas por objetivos o amenazas. | Decisiones caso por caso y ausencia de procesos organizacionales consistentes. |
+| Nivel 2 — Informado por el Riesgo | La dirección aprueba prácticas de riesgo, pero estas no están establecidas de manera consistente en toda la organización. | Prácticas aprobadas, implementación local y conocimiento parcial de riesgos y proveedores. |
+| Nivel 3 — Repetible | Las políticas y prácticas repetibles están definidas, implementadas, revisadas y actualizadas en toda la organización. | Políticas aprobadas, ejecución consistente, funciones competentes, intercambio periódico de información y acciones sobre proveedores. |
+| Nivel 4 — Adaptativo | La gestión del riesgo forma parte de la cultura y se adapta mediante lecciones aprendidas, información predictiva y conocimiento casi en tiempo real. | Decisiones integradas con ERM, controles adaptativos, mejora continua y respuesta oportuna al riesgo de proveedores. |
 
-# 11. CSF Tiros
+- Seleccione el Nivel para un alcance de Perfil definido, no como una etiqueta general de toda la empresa.
+- Utilice el riesgo, la misión, las obligaciones, el costo y el beneficio para definir el Nivel Objetivo.
+- No promedie los números de los Niveles para crear una puntuación engañosa.
+- Documente la evidencia y las diferencias entre Funciones.
+- Reevalúe cuando cambien de forma material el riesgo, la misión, los proveedores o la tecnología.
 
-*Uso parcial, riesgo informado, repetible y adaptable sin convertirlos en una partitura.*
+# 12. Riesgo empresarial, apetito de riesgo y comunicación
 
-"Tiers proveen un contexto para la gobernanza y el rigor de la gestión del riesgo." /
+*Cómo conectar la ciberseguridad con las decisiones ejecutivas y del órgano de gobierno.*
 
-Gráfico 4 Tiros
+| **Concepto** | **Significado práctico** | **Ejemplo** |
+|---|---|---|
+| Apetito de riesgo | Cantidad y tipo general de riesgo que la organización está dispuesta a asumir o conservar. | Apetito muy bajo frente a la interrupción de servicios de emergencia. |
+| Tolerancia al riesgo | Variación específica aceptable alrededor de un objetivo. | Máximo de cuatro horas de interrupción para un servicio crítico definido. |
+| Riesgo inherente | Riesgo antes de considerar los controles. | Servicio expuesto a Internet con datos valiosos y amenazas activas. |
+| Riesgo residual | Riesgo que permanece después de aplicar controles. | Riesgo restante de interrupción o brecha después de MFA, segmentación, monitoreo y recuperación. |
+| Respuesta al riesgo | Aceptar, evitar, mitigar, transferir o compartir el riesgo, o aprovechar una oportunidad. | Retirar software sin soporte, reducir la exposición y asegurar una parte del riesgo residual. |
+| Riesgo positivo | Oportunidad que puede mejorar el logro de objetivos. | Automatización segura que reduce errores y mejora la velocidad de detección. |
 
-Silencio **Tier** Silencio **Plain meaning**
-La vida------------------------------------------ La vida-------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna...
-tención Tier 1 - Prácticas parciales de duración son en gran medida ad hoc, irregulares e incoherentes por objetivos o amenazas. Ejemplos de decisiones caso por caso y procesos desaparecidos en toda la organización
-tención Tier 2 — Riesgo informado tención Gestión aprueba prácticas de riesgo, pero no se establecen de forma sistemática en toda la organización. Silencio Prácticas aprobadas, aplicación local, riesgo parcial y sensibilización de los proveedores
-tención Tier 3 — Las políticas repetibles y las prácticas repetibles se definen, implementan, revisan y actualizan en toda la organización. Silencio Política aprobada, ejecución coherente, funciones calificadas, intercambio regular de información y acción de proveedores
-tención Tier 4 — Adaptive tención La gestión del riesgo es parte de la cultura y se adapta a través de lecciones, información predictiva y conciencia casi real. ← Decisiones integradas de la GRI, controles adaptativos, mejora continua y acción oportuna de riesgo de proveedor
+## 12.1 Declaración ejecutiva de riesgo
 
-- Escoge Tiers para un perfil definido, no como una etiqueta de empresa vaga.
+> **Modelo:** Debido a que [amenaza] podría explotar [vulnerabilidad] y afectar [activo u objetivo], la organización podría experimentar [impacto empresarial]. Los controles existentes [resumen] dejan [exposición residual]. La dirección debería [respuesta] antes de [fecha], bajo la responsabilidad de [función], y monitorear [medida].
 
-- Utilice el riesgo, la misión, las obligaciones, el costo y el beneficio para elegir el nivel de destino.
-
-- No promedio números Tier en una puntuación engañosa.
-
-- Documentar pruebas y diferencias entre Funciones.
-
-- Evaluar cuando el riesgo, la misión, los proveedores o la tecnología cambia materialmente.
-
-# 12. Riesgo empresarial, riesgo competitivo y comunicación
-
-*Connecting cybersecurity with executive and board decisions.*
-
-Silencio **Concepto**
-Silencio.
-El apetito por el riesgo permanente La cantidad amplia y el tipo de riesgo que la organización está dispuesta a perseguir o retener a las personas sometidas Muy bajo apetito por la interrupción de los servicios de emergencia
-tención de la tolerancia al riesgo Silencio Variación aceptable específica alrededor de los objetivos Silencio No más de cuatro horas de superación para un servicio crítico definido
-Silencio Riesgo hereditario tención Riesgo antes de considerar controles Silencio Servicio de cara a Internet con datos valiosos y amenazas activas
-TENIDO Riesgo residual TENIDO Riesgo restante después de los controles ANTE Mantener el riesgo de fuga o violación después de la MFA, segmentación, monitoreo y recuperación
-Silencio Respuesta al riesgo   Aceptar, evitar, mitigar, transferir/compartir, o aprovechar la oportunidad ← Retire software no compatible, reducir la exposición, asegurar una porción residual
-tención Riesgo positivo ← Opportunity que puede mejorar los objetivos tención Automatización segura que reduce el error y mejora la velocidad de detección
-
-## 12.1 Declaración de riesgo ejecutivo
-
-tención **Pattern:** Debido a que \[threat\] podría explotar \[vulnerabilidad\] afectando \[asset o objetivo\], la organización puede experimentar \[ Impacto del negocio\]. Controles existentes \[summary\] dejar \[exposición residual\]. Administración debe \[response\] de \[date\], propiedad de \[role\], y monitor \[measure\]. Silencio
-Silencio.
-
-## 12.2 Cuestiones a nivel de la Junta
+## 12.2 Preguntas para el órgano de gobierno
 
 - ¿Qué objetivos de misión y servicios críticos enfrentan el mayor riesgo cibernético?
+- ¿Qué riesgos exceden el apetito o la tolerancia aprobados?
+- ¿Qué decisiones requieren financiamiento o aceptación explícita del riesgo?
+- ¿Qué tan confiable es la evidencia que respalda el estado reportado?
+- ¿Dónde existen concentraciones de proveedores o puntos únicos de falla?
+- ¿Qué enseñaron los incidentes, ejercicios, auditorías y casi incidentes?
+- ¿Se han demostrado las capacidades de recuperación para los servicios más importantes?
 
-- ¿Qué riesgo supera el apetito o la tolerancia?
+# 13. Riesgo de ciberseguridad en la cadena de suministro
 
-- ¿Qué decisiones requieren financiación o aceptación de riesgos?
+*Cómo gestionar proveedores, productos, servicios y dependencias durante todo el ciclo de vida.*
 
-- ¿Cuán confiable es la evidencia detrás del estado reportado?
+<img src="media/image5_es.png" style="width:6.15in;height:3.21373in" alt="Planificar, seleccionar, contratar, monitorear y finalizar relaciones con responsabilidades de seguridad claramente definidas." />
 
-- ¿Dónde están las concentraciones de proveedores y puntos de fracaso?
+**Figura 5. Ciclo de vida de la ciberseguridad en la cadena de suministro**
 
-- ¿Qué nos enseñaron incidentes, ejercicios, auditorías y faltas cercanas?
+1. Mantenga un inventario de proveedores, subcontratistas, productos, servicios, flujos de datos, accesos, ubicaciones y dependencias.
+2. Clasifique las relaciones según criticidad, sensibilidad, acceso, posibilidad de sustitución, concentración, seguridad física e impacto operativo.
+3. Realice diligencia debida proporcional antes de la compra o renovación.
+4. Incluya en los acuerdos obligaciones medibles sobre ciberseguridad, incidentes, notificación, evidencia, subcontratistas, resiliencia, devolución y destrucción de datos.
+5. Monitoree cambios, hallazgos, incidentes, salud financiera, desempeño del servicio y dependencias materiales de cuartas partes.
+6. Incluya a terceros críticos en ejercicios, respuesta, recuperación y comunicación.
+7. Al finalizar la relación, elimine accesos, recupere activos, devuelva o destruya datos, transfiera conocimiento, conserve los registros requeridos y valide la finalización.
 
-- ¿Se han probado las capacidades de recuperación para los servicios más importantes?
+> **Advertencia contractual:** Un cuestionario o una cláusula contractual no demuestran por sí solos que los controles del proveedor funcionen. Combine los derechos contractuales con evidencia basada en riesgo, monitoreo, información de incidentes y seguimiento de acciones correctivas.
 
-13. Riesgo de cadena de suministro de ciberseguridad
+# 14. Métricas, evidencia e informes
 
-* Gestionar proveedores, productos, servicios y dependencias en todo el ciclo de vida*.
+*Medidas que respaldan decisiones en lugar de producir paneles meramente decorativos.*
 
-יimg src="media/image5.png" style="width:6.15in;height:3.21373in" alt="Plan, select, contract, monitor, y salida con responsabilidades de seguridad definidas".
+| **Tipo de medida** | **Pregunta que responde** | **Ejemplo** |
+|---|---|---|
+| Medida de implementación | ¿Se implementó la salvaguarda? | Porcentaje de cuentas privilegiadas dentro del alcance que utilizan MFA resistente al phishing. |
+| Medida operativa | ¿Funciona de manera consistente? | Porcentaje de cuentas de personal desvinculado deshabilitadas dentro del plazo aprobado. |
+| Indicador de riesgo | ¿Está aumentando la exposición? | Vulnerabilidades críticas vencidas en activos expuestos a Internet. |
+| Medida de resultado | ¿Está ocurriendo el resultado deseado? | Reducción de eventos de acceso no autorizado para el servicio evaluado. |
+| Medida de resiliencia | ¿Puede la organización continuar y recuperarse? | Porcentaje de restauraciones de servicios críticos que cumplen los objetivos de recuperación. |
+| Medida de calidad de evidencia | ¿Puede confiarse en el estado reportado? | Porcentaje de conclusiones respaldadas por poblaciones completas y pruebas independientes. |
 
-Gráfico 5 Ciclo de vida de ciberseguridad en cadena de suministro
+<img src="media/image6_es.png" style="width:6.15in;height:2.73265in" alt="Una correspondencia es confiable cuando los controles y la evidencia operativa se someten a pruebas." />
 
-1. Proveedores de inventario, subcontratistas, productos, servicios, flujos de datos, acceso, ubicaciones y dependencias.
-
-2. Relaciones más estrechas por crítica, sensibilidad, acceso, sustitución, concentración, seguridad e impacto operacional.
-
-3. Realizar diligencia debida proporcional antes de la compra o renovación.
-
-4. Colocar funciones de ciberseguridad, incidentes, notificación, pruebas, subcontratistas, resiliencia, retorno y destrucción mensurables en los acuerdos.
-
-5. Supervisar los cambios, las conclusiones, los incidentes, la salud financiera, el rendimiento de los servicios y las dependencias materiales de cuartas partes.
-
-6. Incluir a terceros críticos en ejercicios, respuesta, recuperación y comunicación.
-
-7. Al salir, eliminar el acceso, recuperar activos, devolver o destruir datos, transferir conocimientos, conservar los registros necesarios y validar la terminación.
-
-Silencio **Advertencia de contrato:** Un cuestionario o cláusula contractual no prueba que los controles de un proveedor funcionan. Combinar los derechos contractuales con pruebas basadas en el riesgo, monitoreo, información de incidentes y seguimiento de la acción correctiva.
-Silencio.
-
-# 14. Métricas, pruebas y informes
-
-*Medidas que apoyan decisiones en lugar de producir paneles decorativos.*
-
-Silencio ** Tipo de medida** Silencio **Respuesta**
-Silencio------------------------------------------------------------------------------------------------------------------------------
-tención de la aplicación permanente ¿Se ha desplegado la salvaguardia? tención Porcentaje de cuentas privilegiadas in-scope utilizando MFA resistente al phishing
-Ø Medida de funcionamiento ¿Está funcionando consistentemente? tención Porcentaje de cuentas terminadas discapacitadas dentro del tiempo aprobado
-Silencioso indicador de riesgo ¿La exposición aumenta? tención vulnerabilidades críticas anteriores fecha límite basado en el riesgo en los activos de Internet
-Silencioso ¿Está ocurriendo el resultado deseado? Reducción de los eventos de acceso no autorizado para el servicio ampliado
-¿Puede la organización continuar y recuperarse? tención Porcentaje de restauraciones de servicios críticos que cumplen los objetivos de recuperación TEN
-Silencio Medida de calidad de prueba Silencio ¿Se puede confiar en el estado? tención Porcentaje de conclusiones de resultados apoyadas por poblaciones completas y pruebas independientes
-
-"El mapeo se vuelve fiable cuando se prueban controles y pruebas de funcionamiento".
-
-Figure 6. Outcome-to-evidence chain
+**Figura 6. Cadena del resultado a la evidencia**
 
 ## 14.1 Calidad de la evidencia
 
-Silencio** Cualidad**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN Weak Silencio Declaración verbal, captura de pantalla sin fecha, exportación parcial, resumen sin soporte TENENCIA Solicite fuente, fecha, alcance, población, propietario, revisor, e identidad del sistema
-TEN UTILIZADO TENIDO Informe del sistema Fechado ligado al alcance y el período correctos ANTE Confirme configuración, integridad, acceso, interpretación y excepciones
-tención Strong Silencio Datos del sistema más revisión independiente, decisiones, acción correctiva, y retest ¦
+| **Calidad** | **Ejemplo** | **Respuesta del analista** |
+|---|---|---|
+| Débil | Declaración verbal, captura sin fecha, exportación parcial o resumen sin respaldo. | Solicitar fuente, fecha, alcance, población, responsable, revisor e identidad del sistema. |
+| Útil | Informe fechado del sistema vinculado al alcance y periodo correctos. | Confirmar configuración, integridad, acceso, interpretación y excepciones. |
+| Sólida | Datos del sistema más revisión independiente, decisiones, acción correctiva y repetición de la prueba. | Rastrear toda la cadena de evidencia y declarar las limitaciones. |
 
-# 15. Verificación de Cumplimiento y Pruebas de Control
+# 15. Verificación de cumplimiento y pruebas de controles
 
-*Cómo determinar si se logra un resultado CSF con alcance.*
+*Cómo determinar si un resultado del CSF, dentro de un alcance definido, realmente se ha logrado.*
 
-Silencio **Distinción importante:** La alineación CSF no es automáticamente el cumplimiento legal, la certificación o una opinión de auditoría. Pruebe las obligaciones y controles reales que se aplican a la organización, luego utilice los resultados de CSF para organizar y comunicar resultados. Silencio
-Silencio.
+> **Distinción importante:** La alineación con el CSF no equivale automáticamente a cumplimiento legal, certificación u opinión de auditoría. Pruebe las obligaciones y los controles que realmente aplican a la organización y utilice los resultados del CSF para organizar y comunicar las conclusiones.
 
-1. Definir el desenlace CSF, riesgo, control, propietario, sistemas, ubicaciones, población, período, frecuencia y pruebas esperadas.
+1. Defina el resultado del CSF, riesgo, control, responsable, sistemas, ubicaciones, población, periodo, frecuencia y evidencia esperada.
+2. Evalúe el diseño del control: si se ejecutara como está descrito, ¿lograría razonablemente el resultado previsto?
+3. Obtenga la población completa y pruebe su integridad y exactitud contra una fuente independiente.
+4. Seleccione una muestra basada en riesgo que cubra fechas, sistemas, responsables, ubicaciones, elementos inusuales y fallas relevantes.
+5. Inspeccione la evidencia y, cuando sea posible, vuelva a ejecutar o confirme de forma independiente el resultado del control.
+6. Registre las excepciones con criterios, hechos, duración, activos afectados, causa, probabilidad, impacto y salvaguardas existentes.
+7. Asigne acción correctiva, protección provisional, responsable, recursos, fecha límite y escalamiento.
+8. Repita la prueba sobre la población afectada y redacte una conclusión clara con sus limitaciones.
 
-2. Evaluar el diseño de control: ¿el control, si se realiza como se describe, alcanzaría razonablemente el resultado previsto?
+## 15.1 Pruebas prácticas de verificación
 
-3. Obtener la población completa y probar su integridad y exactitud contra una fuente independiente.
+| **Área de control** | **Población y muestra** | **Procedimiento de prueba** | **Evidencia** |
+|---|---|---|---|
+| Inventario de activos | Todos los activos dentro del alcance; incluir en la muestra activos críticos, nuevos, en nube, remotos, gestionados por proveedores y retirados. | Conciliar el inventario con fuentes de identidad, red, nube, compras, vulnerabilidades y endpoints. | Exportaciones, conciliación, propiedad, brechas, corrección y nueva prueba. |
+| Ciclo de vida del acceso | Todas las altas, cambios, bajas, cuentas de servicio y cuentas privilegiadas. | Comparar aprobaciones y necesidad de función con tiempos de aprovisionamiento, revisión, modificación y eliminación. | Poblaciones de RR. HH. e IAM, aprobaciones, revisiones, tickets, registros y excepciones. |
+| Gestión de vulnerabilidades | Todos los activos y hallazgos; incluir críticos, altos, antiguos, aceptados y cerrados. | Validar cobertura y credenciales; confirmar hallazgo, plazo, corrección, excepción y nuevo escaneo. | Inventario, configuración de escaneo, informe, tickets, aprobaciones y reescaneo. |
+| Registro y detección | Todas las fuentes de registro requeridas, alertas, revisiones e incidentes. | Probar cobertura de fuentes, hora, regla, generación de alerta, revisión, escalamiento y retención. | Lista de fuentes, configuración, alerta, ticket, revisión y cierre. |
+| Copias de seguridad y recuperación | Todos los trabajos de copia y pruebas requeridas; incluir éxitos, fallas y servicios críticos. | Revisar protección, respuesta a fallas, restauración, integridad, objetivos de recuperación y lecciones aprendidas. | Trabajos, alertas, resultados de restauración, ejercicios, correcciones y nueva prueba. |
+| Supervisión de proveedores | Todos los proveedores; incluir críticos, nuevos, modificados, involucrados en incidentes y relaciones finalizadas. | Probar clasificación, diligencia debida, contrato, monitoreo, obligaciones de incidentes, acción correctiva y salida. | Inventario, evaluación, acuerdo, hallazgos, monitoreo y evidencia de eliminación de acceso. |
+| Respuesta a incidentes | Población completa conciliada con alertas, mesa de ayuda, privacidad, asuntos legales y operaciones. | Probar declaración, clasificación, análisis, evidencia, notificación, contención, erradicación, recuperación y lecciones aprendidas. | Cronología, tickets, registro de evidencia, mensajes, recuperación y mejora. |
+| Desarrollo seguro | Todos los repositorios, versiones, dependencias, excepciones y hallazgos dentro del alcance. | Probar requisitos, revisión, análisis, secretos, dependencias, aprobación, despliegue, corrección y nueva prueba. | Registros del pipeline, revisión, escaneo, ticket, versión y validación. |
 
-4. Elija una muestra basada en el riesgo que cubra las fechas, sistemas, propietarios, ubicaciones, artículos inusuales y fallos pertinentes.
+## 15.2 Lenguaje de conclusión
 
-5. Inspeccione pruebas y, cuando sea práctico, reperforme o confirme independientemente el resultado de control.
+> **Ejemplo:** Para el servicio y periodo de revisión definidos, el control estuvo adecuadamente diseñado y operó según lo previsto en 37 de 40 eventos incluidos en la muestra. Tres bajas de acceso se ejecutaron fuera de la tolerancia aprobada. La dirección asignó una acción correctiva, incorporó escalamiento automatizado y la nueva prueba confirmó la eliminación oportuna en la población completa posterior. La conclusión no cubre los sistemas excluidos del alcance declarado.
 
-6. Record exceptions with exact criteria, facts, duration, affected assets, cause, likelihood, impact, and existing protection.
+# 16. Herramientas de código abierto para trabajar con el CSF
 
-7. Assign corrective action, interim protection, owner, resources, due date, and escalation.
+*Enlaces oficiales, inicios rápidos seguros, apoyo posible al CSF, evidencia y limitaciones.*
 
-8. Reprueba la corrección en toda la población afectada y escribe una conclusión clara con limitaciones.
+<img src="media/image7_es-419.png" style="width:6.15in;height:3.39605in" alt="La autorización, la validación, la acción correctiva y la repetición de pruebas convierten los resultados técnicos en evidencia útil." />
 
-## 15.1 Pruebas de verificación práctica
+Figura 7. Del resultado de una herramienta a evidencia útil
 
-Silencio ** Área de control** Silencioso**Populación y muestra**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna--
-Ø Inventario de activos de activos in-scope; muestra crítica, nueva, nube, remota, administrada por proveedores, y artículos retirados TENENCIA Reconcile inventario con identidad, red, nube, adquisiciones, vulnerabilidad y fuentes de punto final ANTERI Exportaciones, reconciliación, propiedad, lagunas, corrección y retest ANTERIED
-Acceder a la vida útil Todos los afiliados, mudanzas, levadores, servicio y cuentas privilegiadas TEN Comparar aprobaciones y necesidades de función con los tiempos de provisión, revisión, cambio y eliminación TEN las poblaciones RRH/IAM, aprobaciones, comentarios, entradas, registros, excepciones
-TEN Vulnerability management TEN Todos los activos y hallazgos; muestra crítica, alta, envejecida, aceptada y artículos cerrados TEN Validate cobertura y credenciales, confirman hallazgos, plazos, corrección, excepción, y recan ANTERIOR Inventory, scan setup, report, tickets, aprobaciones, rescan ANTE
-tención Registro y detección Silencio Todas las fuentes de registro, alertas, comentarios e incidentes requeridos Silencio Prueba fuente cobertura, tiempo, regla, generación de alertas, revisión, escalada y retención Silencio Fuente lista, configuración, alerta, ticket, revisión y cierre
-← Respaldo y recuperación Silencio Todos los trabajos de copia de seguridad y pruebas requeridas; éxito de la muestra, fracaso y servicios críticos Silencio Inspeccionar protección, respuesta a fallos, restauración, integridad, objetivos de recuperación, y lecciones TENIDO Empleos, alertas, restaurar la salida, ejercicio, corrección, retest
-Silencioso Supervisión del proveedor Silencio Todos los proveedores; muestra crítica, nueva, cambiada, involucrada en incidentes y relaciones de salida Titulación de pruebas, diligencia debida, contrato, vigilancia, derechos de incidencia, acción correctiva y salida del Inventario, evaluación, acuerdo, hallazgos, monitoreo, prueba de eliminación
-Silencio Respuesta del incidente Silencio Población total del evento y del incidente reconciliada para alertar, ayudar-desk, privacidad, legal y fuentes de operaciones Declaración de prueba, triage, analysis, evidence, notification, containment, eradication, recovery, and lessons ← Timeline, tickets, log de pruebas, mensajes, recuperación y mejora
-Silencio Desarrollo seguro Silencio Todos los repositorios, liberaciones, dependencias, excepciones, y hallazgos ¦ Requisitos de examen, revisión, escaneo, secretos, dependencias, aprobación, implementación, corrección, y retestigos de los diarios de Pipeline, revisión, escaneo, ticket, liberación y validación
+| **Herramienta** | **Propósito** | **Posible apoyo al CSF** |
+|---|---|---|
+| CISO Assistant | GRC, Perfiles, riesgos, controles y evidencia | GV, ID y presentación de informes |
+| Wazuh | SIEM, monitoreo de endpoints e integridad | DE.CM, DE.AE y RS.MA |
+| osquery | Inventario de endpoints y evidencia basada en consultas | ID.AM, PR.PS y PR.AA |
+| OpenSCAP | Evaluación de configuración de Linux | PR.PS e ID.IM |
+| Greenbone Community Edition | Evaluación de vulnerabilidades | ID.RA e ID.IM |
+| Trivy | Análisis de código, imágenes, dependencias, secretos y configuración | ID.RA y PR.PS |
+| OWASP ZAP | Evaluación autorizada de aplicaciones web | ID.RA e ID.IM |
+| Keycloak | Identidad, roles, autenticación y MFA | PR.AA |
+| DefectDojo | Recepción de hallazgos y seguimiento de remediación | ID.RA, ID.IM y GV.OV |
+| Velociraptor | Visibilidad de endpoints y respuesta a incidentes | DE.CM y RS.AN |
+| Open Policy Agent | Política como código | GV.PO, PR.AA y PR.PS |
+| OpenSearch | Búsqueda, analítica, tableros y monitoreo de seguridad | DE.CM, DE.AE y GV.OV |
 
-## 15.2 Conclusion language
+## 16.1 Lista de verificación para validar herramientas
 
-Silencio **Ejemplo:** Para el período de servicio y examen definidos, el control fue diseñado y operado adecuadamente para 37 de 40 eventos de muestra. Tres absorciones tardías de acceso superaron la tolerancia aprobada. La administración asignó medidas correctivas, añadió una escalada automatizada y reprueba la eliminación oportuna confirmada para la población total posterior. La conclusión no abarca los sistemas excluidos del ámbito declarado.
-Silencio...
-
-Herramientas de código abierto para CSF Work
-
-*Acoplamientos oficiales, inicios rápidos seguros, soporte CSF, evidencia y limitaciones.*
-
-■img src="media/image7.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Autorización, validación, acción correctiva, y retesting convierten la producción técnica en evidencia útil."
-
-Figure 7. From tool output to evidence
-
-Silencio **Herramienta**
-Silencio------------------------------------------------------
-TEN CISO Assistant TENIDO GRC, Perfiles, riesgos, controles, evidencia TENIDO GV, ID, reportando TENIDO
-tención Wazuh TENIDO SIEM, control de puntos finales, integridad ANTE DE.CM, DE.AE, RS.MA
-Silencioso oscurecimiento Silencio Inventario de endpoints y pruebas de consulta
-TEN OpenSCAP TENIDO Evaluación de la configuración de Linux ANTE PR.PS, ID.IM ANTE
-← Greenbone Community Edition Silencioso Vulnerability assessment ← ID.RA, ID.IM
-tención Trivy Silencio Código, imagen, dependencia, secreto y configuración de exploración TENIDO ID.RA, PR.PS ANTE
-Silencio OWASP ZAP ← Evaluación autorizada de la aplicación web
-TENIDO Keycloak TENIDO Identidad, roles, autenticación y MFA TENIDO PR.AA ANTE
-← DefectDojo tóxico Encontrar el seguimiento de la ingesta y la remediación
-Silencio Velociraptor Silencio Visibilidad y respuesta a incidentes en Endpoint
-← Política Abierta Agente Silencioso Política como código Silencioso GV.PO, PR.AA, PR.PS
-TEN OpenSearch TENIDO Buscar, análisis, tableros de instrumentos y monitoreo de seguridad TENIDO DE.CM, DE.AE, GV.OV ANTE
-
-## 16.1 Lista de verificación de validación de herramientas
-
-- Aprobar propósito, propietario, alcance, datos, sistemas, alojamiento, acceso de apoyo y retención.
-
+- Aprobar el propósito, propietario, alcance, datos, sistemas, alojamiento, acceso de soporte y retención.
 - Verificar la fuente oficial, versión, dependencias, integridad, método de actualización y configuración segura.
-
-- Prueba una condición conocida que la herramienta debe detectar o bloquear.
-
-- Prueba una condición permitida conocida para identificar fallos innecesarios.
-
-- Compare la cobertura de herramientas con un activo independiente, agente, repositorio o población de identidad.
-
-- Administración de restricciones, protección de credenciales e informes, cambios de registro y recuperación de herramientas de prueba.
-
-- Definir la validación humana, escalada, excepción, corrección y retest.
-
-- Revalidate después de actualizaciones de materiales, cambios de integración, cambios de configuración o fallos.
-
-## 16.2 CISO Assistant
-
-GRC, Perfiles, riesgos, controles, evidencia. Posible apoyo CSF: GV, ID, reportaje.
-
-**Documentación oficial:** Abra la guía oficial de asistentes CISO(https://intuitem.gitbook.io/ciso-assistant)
-
-### Quick start
-
-Cree una organización ficticia, seleccione cinco resultados CSF, asigne propietarios, adjunte pruebas sanitarias, registre una brecha y construya un plan de acción.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.3 Wazuh
-
-SIEM, control de puntos finales, integridad. Posible apoyo CSF: DE.CM, DE.AE, RS.MA.
-
-**Documentación oficial:** Abra la guía oficial Wazuh realizada/u título](https://documentation.wazuh.com/current/quickstart.html)
-
-### Quick start
-
-Conectar un punto final autorizado de laboratorio, crear un evento inofensivo, revisar la alerta, documentar la decisión y retener el evento y el ticket.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.4 osquery
-
-Inventario de endpoint y pruebas de consulta. Posible apoyo CSF: ID.AM, PR.PS, PR.AA.
-
-**Documentación oficial:** [Seguido]Abre la guía oficial del osquery realizada/u contacto](https://osquery.readthedocs.io/en/stable/)
-
-### Quick start
-
-Query users, software, servicios, cifrado o procesos en un endpoint de laboratorio; registro de consultas, host, tiempo, salida y revisión.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.5 OpenSCAP
-
-Evaluación de configuración de Linux. Posible soporte CSF: PR.PS, ID.IM.
-
-**Documentación oficial:** [Seguido]Abre la guía oficial OpenSCAP efectuada/u contacto](https://www.open-scap.org/getting-started/)
-
-### Quick start
-
-Evaluar un laboratorio Linux autorizado contra un perfil adecuado, corregir un ajuste aprobado, y comparar el antes y después de los informes.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.6 Greenbone Community Edition
-
-Evaluación de vulnerabilidades. Posible soporte CSF: ID.RA, ID.IM.
-
-**Documentación oficial:** [Seguridad]Abre la guía oficial Greenbone Community Edition realizada/u contacto](https://greenbone.github.io/docs/latest/)
-
-### Quick start
-
-Escanear sólo un objetivo de laboratorio aprobado, validar un hallazgo, corregirlo, cambiar y documentar el alcance y las limitaciones.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.7 Trivy
-
-Código, imagen, dependencia, secreto y análisis de configuración. Posible soporte CSF: ID.RA, PR.PS.
-
-**Documentación oficial:** Abra la guía oficial Trivy realizada/u título](https://trivy.dev/latest/)
-
-### Quick start
-
-Escríbete una imagen de laboratorio o un repositorio de pruebas, protege el informe, valida un resultado, corrigelo y vuelve a escanear.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.8 OWASP ZAP
-
-Evaluación autorizada de la aplicación web. Posible soporte CSF: ID.RA, ID.IM.
-
-**Documentación oficial:** Abra la guía oficial OWASP ZAP efectuada / u fiel](https://www.zaproxy.org/getting-started/)
-
-### Quick start
-
-Proxy una aplicación de entrenamiento local, empezar con análisis pasivos, validar un hallazgo, y conservar el alcance y los resultados aprobados.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.9 Keycloak
-
-Identidad, roles, autenticación y MFA. Posible apoyo CSF: PR.AA.
-
-**Documentación oficial:** [ obedeció]Abre la guía oficial de Keycloak realizada/u contacto](https://www.keycloak.org/guides)
-
-### Quick start
-
-Crear un reino de laboratorio, usuarios, roles y MFA; probar menos privilegios, acceso fallido y eliminación; exportar evidencia de configuración sanitaria.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.10 DefectoDojo
-
-Encontrar captación y seguimiento de remediación. Posible apoyo CSF: ID.RA, ID.IM, GV.OV.
-
-**Documentación oficial:** [Seguido]Abre el defecto oficialDojo guía seleccionada/u contacto](https://docs.defectdojo.com/)
-
-### Quick start
-
-Importar un informe de laboratorio, validar y asignar un hallazgo, registrar corrección, retestarlo y cerrarlo con prueba.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-Velociraptor
-
-Visibilidad del punto final y respuesta a incidentes. Posible soporte CSF: DE.CM, RS.AN.
-
-**Documentación oficial:** [Seguridad]Abre la guía oficial Velociraptor realizada/u contacto](https://docs.velociraptor.app/)
-
-### Quick start
-
-Utilice un cliente de laboratorio aislado, recoger un artefacto aprobado inofensivo, y propósito de registro, alcance, colección, revisión y preservación.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.12 Open Policy Agent
-
-Política como código. Posible apoyo CSF: GV.PO, PR.AA, PR.PS.
-
-**Documentación oficial:** [Seguridad]Abre la guía oficial de Agentes de Políticas Abiertas efectuada/u contacto](https://www.openpolicyagent.org/docs)
-
-### Quick start
-
-Escribir una regla de laboratorio que requiera un propietario, clasificación y entorno aprobado; probar los insumos permitidos y negados.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.13 OpenSearch
-
-Búsqueda, análisis, paneles y monitoreo de seguridad. Posible apoyo CSF: DE.CM, DE.AE, GV.OV.
-
-**Documentación oficial:** [Seguridad]Abre la guía oficial OpenSearch efectuada/u contacto](https://opensearch.org/docs/latest/getting-started/)
-
-### Quick start
-
-Cargar eventos de seguridad sintéticos, construir una búsqueda y panel de control, documentar la cobertura de datos, acceso, retención, revisión y limitaciones.
-
-## Evidencia y limitación
-
-Retener autorización, alcance, población objetivo, versión de herramientas y contenidos, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. La herramienta admite trabajo seleccionado; no puede certificar la alineación CSF, determinar el alcance completo o reemplazar el juicio humano calificado.
-
-## 16.14 Official NIST tools
-
-**CSF 2.0 Herramienta de referencia:** [ fieltro]Explore y exporte el CSF certificado Core/u título](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters)
-
-** Perfiles organizacionales:** [ ] Guía de perfil y plantillas seleccionadas/u fiel](https://www.nist.gov/cyberframework/profiles)
-
-# 17. Libro de juegos CSF del administrador
-
-*Las preguntas, las rutinas de gobernanza, los tableros de control y los administradores de decisiones deben controlar.*
+- Probar una condición conocida que la herramienta deba detectar o bloquear.
+- Probar una condición permitida conocida para identificar fallas innecesarias.
+- Comparar la cobertura con una población independiente de activos, agentes, repositorios o identidades.
+- Restringir la administración, proteger credenciales e informes, registrar cambios y probar el respaldo o la recuperación de la herramienta.
+- Definir validación humana, escalamiento, excepciones, corrección y repetición de pruebas.
+- Revalidar después de actualizaciones importantes, cambios de integración o configuración, o fallas.
+
+## 16.2–16.13 Guía común para las herramientas
+
+Para CISO Assistant, Wazuh, osquery, OpenSCAP, Greenbone Community Edition, Trivy, OWASP ZAP, Keycloak, DefectDojo, Velociraptor, Open Policy Agent y OpenSearch:
+
+1. Usar únicamente sistemas propios o expresamente autorizados por escrito.
+2. Registrar versión, configuración, alcance, población objetivo, fecha, operador y revisor.
+3. Conservar resultados sin procesar, decisiones, excepciones, acciones correctivas y repetición de pruebas.
+4. Validar al menos una condición conocida y una condición permitida.
+5. No presentar el resultado de una herramienta como certificación, cumplimiento legal, cobertura completa o conclusión de auditoría.
+
+### Inicios rápidos revisados
+
+- **CISO Assistant:** crear una organización ficticia, seleccionar cinco resultados del CSF, asignar responsables, adjuntar evidencia depurada, registrar una brecha y crear un plan de acción.
+- **Wazuh:** conectar un endpoint autorizado de laboratorio, generar un evento inocuo, revisar la alerta y conservar el evento y el ticket.
+- **osquery:** consultar usuarios, software, servicios, cifrado o procesos en un endpoint de laboratorio y registrar consulta, host, hora, salida y revisión.
+- **OpenSCAP:** evaluar un Linux autorizado contra un perfil adecuado, corregir una configuración aprobada y comparar informes antes y después.
+- **Greenbone Community Edition:** analizar únicamente un objetivo autorizado, validar un hallazgo, corregirlo, volver a analizar y documentar limitaciones.
+- **Trivy:** analizar una imagen fijada o repositorio de prueba, proteger el informe, validar un resultado, corregirlo y repetir el análisis.
+- **OWASP ZAP:** usar una aplicación local de entrenamiento, comenzar con análisis pasivo y conservar alcance y resultados aprobados.
+- **Keycloak:** crear un realm de laboratorio, usuarios, roles y MFA; probar privilegio mínimo, acceso fallido y eliminación.
+- **DefectDojo:** importar un informe de laboratorio, validar y asignar un hallazgo, registrar la corrección, repetir la prueba y cerrar con evidencia.
+- **Velociraptor:** usar un cliente aislado, recopilar un artefacto inocuo autorizado y registrar propósito, alcance, revisión y preservación.
+- **Open Policy Agent:** escribir una regla de laboratorio que exija propietario, clasificación y ambiente aprobado; probar entradas permitidas y denegadas.
+- **OpenSearch:** cargar eventos sintéticos, crear una búsqueda y un tablero, y documentar cobertura, acceso, retención y limitaciones.
+
+## 16.14 Herramientas oficiales de NIST
+
+- **Herramienta de referencia del CSF 2.0:** explorar y exportar el Núcleo oficial.
+- **Perfiles Organizacionales:** usar la orientación y las plantillas oficiales de NIST.
+
+# 17. Guía práctica del CSF para gerentes
 
 ## 17.1 Preguntas mensuales
 
-- ¿Qué cambió en misión, sistemas, datos, amenazas, obligaciones, proveedores o apetito de riesgo?
+- ¿Qué cambió en la misión, sistemas, datos, amenazas, obligaciones, proveedores o apetito de riesgo?
+- ¿Qué riesgos superan la tolerancia y quién tiene autoridad para decidir?
+- ¿Las conclusiones del Perfil actual están respaldadas por evidencia confiable?
+- ¿Qué planes de acción están atrasados, bloqueados, subfinanciados o dependen de terceros?
+- ¿Los proveedores críticos están monitoreados e incluidos en respuesta y recuperación?
+- ¿Las fallas, incidentes, ejercicios, pruebas y cuasi incidentes generaron mejoras?
+- ¿Los servicios críticos pueden recuperarse dentro de los objetivos aprobados?
+- ¿Qué limitaciones debe comprender la dirección antes de confiar en el tablero?
 
-- ¿Qué riesgos exceden la tolerancia y quién tiene autoridad para decidir?
+## 17.2 Tablero
 
-- ¿Son las conclusiones del perfil actual apoyadas por pruebas fiables?
-
-- ¿Qué planes de acción son tardíos, bloqueados, insuficientes o dependientes de otros?
-
-- ¿Los proveedores críticos son supervisados e incluidos en el trabajo de recuperación y incidentes?
-
-- ¿Las fallas de control, incidentes, ejercicios, pruebas y faltas cercanas han mejorado?
-
-- ¿Pueden recuperarse los servicios críticos dentro de los objetivos aprobados?
-
-- ¿Qué limitaciones debe entender el liderazgo antes de confiar en el tablero?
-
-## 17.2 Dashboard
-
-**Area** Silencio ** Cuestión de gestión**
-...--------------------------------------------------
-← Gobernanza permanente ¿La estrategia, la política, las funciones, los recursos y la supervisión están alineados al riesgo? Verde / Amarillo / Rojo
-TEN TERRITOR TEN ANTE ¿Es el alcance actual y está aprobado el perfil de destino? Verde / Amarillo / Rojo
-Silencio ¿Qué riesgos residuales exceden la tolerancia? Verde / Amarillo / Rojo
-← Activos Silencio ¿Son conocidos activos críticos, datos, flujos y proveedores? Verde / Amarillo / Rojo
-tención permanente ¿Operan las salvaguardias de identidad, datos, plataforma, capacitación y resiliencia? Verde / Amarillo / Rojo
-Silencioso Detección ¿El monitoreo está completo, revisado y conectado a criterios de incidentes? Verde / Amarillo / Rojo
-Silencio Respuesta Silencio ¿Los incidentes son triaged, analizados, comunicados, contenidos y erradicados? Verde / Amarillo / Rojo
-¿Se han demostrado la integridad de la restauración y los objetivos de servicio crítico? Verde / Amarillo / Rojo
-Ø Mejoramiento Silencio ¿Se han corregido los resultados y se han vuelto a comprobar de forma independiente? Verde / Amarillo / Rojo
+| **Área** | **Pregunta de gestión** | **Estado** |
+|---|---|---|
+| Gobernanza | ¿Estrategia, política, roles, recursos y supervisión están alineados con el riesgo? | Verde / Amarillo / Rojo |
+| Perfil | ¿El alcance está actualizado y el Perfil objetivo está aprobado? | Verde / Amarillo / Rojo |
+| Riesgo | ¿Qué riesgos residuales superan la tolerancia? | Verde / Amarillo / Rojo |
+| Activos | ¿Se conocen activos, datos, flujos y proveedores críticos? | Verde / Amarillo / Rojo |
+| Protección | ¿Funcionan los controles de identidad, datos, plataforma, formación y resiliencia? | Verde / Amarillo / Rojo |
+| Detección | ¿El monitoreo es completo, revisado y conectado con criterios de incidente? | Verde / Amarillo / Rojo |
+| Respuesta | ¿Los incidentes se clasifican, analizan, comunican, contienen y erradican? | Verde / Amarillo / Rojo |
+| Recuperación | ¿Se ha demostrado la integridad de la restauración y los objetivos de servicio? | Verde / Amarillo / Rojo |
+| Mejora | ¿Los hallazgos fueron corregidos y sometidos a nuevas pruebas independientes? | Verde / Amarillo / Rojo |
 
 ## 17.3 Errores comunes
 
-- Tratar a CSF como una lista de verificación de TI en lugar de trabajo de riesgo empresarial.
-
-- Comenzar con herramientas en lugar de misión, alcance, riesgo y resultados.
-
-- Marcar los resultados obtenidos únicamente del texto de política.
-
-- Usando una sola partitura que esconde debilidades críticas y diferencias de alcance.
-
-- Llamar niveles de madurez sin entender el contexto previsto de NIST.
-
-- Copiar un perfil de destino sin adaptarlo al riesgo organizativo.
-
-- Ignorar proveedores, servicios en la nube, OT, datos, personas, instalaciones y dependencias.
-
-- Cierra los resultados sin volver a probar.
-
-- Describir la alineación CSF como cumplimiento legal o certificación NIST.
-
-# 18. From Beginner to Junior Analyst
-
-*Un camino seguro y honesto hacia GRC, riesgo, cumplimiento y análisis de ciberseguridad.*
-
-■img src="media/image8.png" estilo="Ancho:6.15in; Altura:3.20335in" alt="Aprender, mapa, test, reportar y aplicar con evidencia de cartera honesta." /
-
-Figura 8. Vía de analista junior
-
-## 18.1 Funciones de nivel de entrada
-
-Junior GRC Analista
-
-Análisis del riesgo de ciberseguridad
-
-Compliance Analyst
-
-Analista de Controles de Seguridad
-
-Third-Party Risk Analyst
-
-Análisis de la seguridad
-
-Cybersecurity Program Analyst
-
-Junior Security Analyst
-
-Analista de Auditoría
-
-## 18.2 Trabajar un analista junior puede actuar
-
-- Mantener inventarios de activos, datos, sistema, riesgo, obligación, proveedor y evidencia.
-
-- Reunir y organizar pruebas para los resultados de CSF.
-
-- Revisar el acceso, la vulnerabilidad, la capacitación, la tala, la copia de seguridad, el proveedor y las muestras de incidentes.
-
-- Document Profile status, gaps, limitations, owners, and action plans.
-
-- Seguimiento de acciones correctivas, excepciones, aceptaciones de riesgo y pruebas.
-
-- Preparar paneles y materiales de reunión sin ocultar incertidumbre.
-
-- Ejercicios de apoyo, plazos de incidentes, lecciones aprendidas y actualizaciones del plan.
-
-- Proteger información confidencial y seguir límites de autorización.
-
-## 18.3 Portafolio proof
-
-Silencio **Skill** Silencio**
-Silencio...
-TENCIÓN FORMULADA CON EL TERRITORIO DE SUPERVISIÓN
-← Cartografía básica Silencio Aplicabilidad y matriz de pruebas
-← Gestión de activos Silencioso Sistema, datos, proveedor e inventario de flujo
-← Riesgo Silencioso registro de riesgo con apetito, tolerancia, respuesta y decisión residual
-tención Perfiles ← Perfiles actuales y de objetivos con brechas priorizadas
-← Testing ← Acceso, vulnerabilidad, copia de seguridad, registro y hojas de prueba de proveedores
-Respuesta del incidente Silencio Sintético timeline, evidence log, communication, and lessons
-Silencio Manejo de comunicación Silencio Una página dashboard y declaración de riesgo ejecutivo
-
-19. Laboratorio Ficcional y Portfolio
-
-*Un entorno de práctica completo utilizando información sintética y sistemas de laboratorio autorizados*.
-
-Harbor Light Services es una organización ficticia que proporciona un portal de clientes, centro de llamadas, colaboración en la nube, integración de pagos, fuerza de trabajo remota y análisis anfitriones por proveedores. Cada persona, cuenta, dirección, activo, evento, registro de clientes y proveedor es inventado.
-
-## Project 1 — Scope and context
-
-Definir misión, partes interesadas, obligaciones, servicios críticos, dependencias, exclusiones y propietarios.
-
-## Project 2 — Asset and data map
-
-Construir inventarios y un diagrama de flujo de datos autorizado.
-
-Proyecto 3 - Riesgo
-
-Cree una amenaza, vulnerabilidad, probabilidad, impacto, tratamiento y registro de riesgo residual.
-
-## Project 4 — Profiles
-
-Cree perfiles de objetivos actuales y basados en riesgos.
-
-## Project 5 — Controles y pruebas
-
-Diseñar y ejecutar pruebas ficticias para el acceso, vulnerabilidades, registros, respaldos y proveedores.
-
-## Project 6 — Incident
-
-Analizar eventos sintéticos, declarar un incidente, preservar evidencia, contener, erradicar, restaurar y aprender.
-
-## Project 7 — Tools
-
-Utilice tres herramientas Capítulo 16 en un laboratorio aislado y autorización de registro, versión, alcance, hallazgos, corrección y retest.
-
-Proyecto 8 - Informe ejecutivo
-
-Prepare un dashboard, declaraciones de alto riesgo, plan de acción, decisiones y limitaciones.
-
-*Portfolio ethics:** Label todos trabajan como entrenamiento ficticio. Nunca publique información de empleador, cliente, paciente, cliente, empleado, proveedor, arquitectura, vulnerabilidad, credenciales o incidentes sin autorización explícita. Silencio
-Silencio.
-
-20. Plan de aprendizaje de 30 días
-
-*Un mes realista de lectura, práctica, trabajo de cartera y preparación de entrevistas*.
-
-Silencio **Week** Silencio**
-Silencio--------------------------------------------
-tención Semana 1 Silencio CSF propósito, Core, six Funciones, contexto, y activos peru Scope memo, mapa de los interesados, inventario de activos y datos
-TEN Week 2 TENIDO Riesgo, Perfiles, Tiers, Gobernanza y cadena de suministro TENIDO Registro de riesgos, Perfiles actuales y de objetivos, Tiering de proveedores
-tención semana 3 ← Salvaguardias, monitoreo, respuesta, recuperación, evidencia y pruebas TENENCIA Cinco pruebas de control, archivo de incidentes, evidencia de recuperación
-Silencio Semana 4 Silencio Herramientas, reportajes, portafolio y entrevistas ← Portafolio Sanitizado, dashboard, respuestas practicadas
-
-## 20.1 hábitos diarios
-
-Lea una sección oficial NIST o grupo de resultados.
-
-Explíquelo en lenguaje claro sin cambiar su significado.
-
-Crear un elemento de evidencia ficticia.
-
-Prueba su integridad, alcance, fecha, propiedad y fiabilidad.
-
-Escribe una conclusión, acción correctiva o lección.
-
-21. Preparación de entrevistas
-
-*Respuestas rápidas y precisas para analistas y administradores junior*.
-
-## ¿Qué es NIST CSF 2.0?
-
-Un marco flexible centrado en los resultados que ayuda a las organizaciones a comprender, evaluar, priorizar y comunicar el riesgo de ciberseguridad utilizando el núcleo, los perfiles, los niveles y los recursos de apoyo.
-
-## ¿Cuáles son las seis Funciones?
-
-Govern, Identificar, Proteger, Detectar, Responder y Recover.
-
-## ¿Por qué fue agregado Govern?
-
-Hace explícita la rendición de cuentas, la política, la estrategia de riesgo, la integración de los riesgos institucionales, la supervisión y el riesgo de cadena de suministro.
-
-## ¿Qué es un perfil actual?
-
-A description of Core outcomes a defined scope is currently achieving or attempting to achieve, including how or to what extent.
-
-## ¿Qué es un perfil objetivo?
-
-Los resultados básicos prioritarios que la organización selecciona para un estado futuro definido basado en la misión, el riesgo, las obligaciones, los interesados y los recursos.
-
-## ¿Qué son los Tiers?
-
-Context for the rigor of cibersecurity risk governance and management practices: Partial, Risk Informed, Repible, and Adaptive.
-
-## ¿CSF certifica el cumplimiento?
-
-No. La alineación CSF no crea el cumplimiento legal ni la certificación NIST. Las obligaciones aplicables y los controles aplicados deben evaluarse por separado.
-
-## ¿Cómo verificas un resultado?
-
-Definir el alcance y los criterios, evaluar el diseño de control, obtener una población completa, muestra por riesgo, inspeccionar y repercutir, registrar excepciones, corregir, retest y declarar una conclusión apoyada.
-
-## ¿Cómo deben usarse las herramientas?
-
-Sólo con autorización y como una fuente de evidencia. Validar la cobertura y los resultados, proteger los productos, corregir las brechas confirmadas y volver a probar.
-
-## ¿Cómo priorizas las brechas?
-
-Utilizar los efectos de la misión, la amenaza, la probabilidad, la crítica de activos y proveedores, las obligaciones, la exposición, las dependencias, los controles existentes, el costo, la viabilidad y el apetito de riesgo.
-
-Silencio **Respuesta de Manager de 60 segundos:** Uso CSF 2.0 para conectar la ciberseguridad con el riesgo de negocio. Definimos el alcance y las partes interesadas, seleccionamos los resultados aplicables, construimos perfiles de objetivos actuales y basados en riesgos, priorizamos las lagunas en el apetito y las obligaciones, los planes de acción de los fondos, las pruebas de funcionamiento, incluyen a los proveedores y informamos claramente sobre las decisiones y limitaciones. Las herramientas apoyan el trabajo, pero las personas siguen siendo responsables de su alcance, juicio, corrección y riesgo residual.
-Respuesta
+- Tratar el CSF como lista de verificación de TI y no como trabajo de riesgo empresarial.
+- Comenzar con herramientas antes que con misión, alcance, riesgo y resultados.
+- Marcar resultados como logrados únicamente por existir una política.
+- Usar una sola puntuación que oculte debilidades críticas y diferencias de alcance.
+- Describir los Niveles como madurez sin considerar el contexto previsto por NIST.
+- Copiar un Perfil objetivo sin adaptarlo al riesgo de la organización.
+- Ignorar proveedores, nube, OT, datos, personas, instalaciones y dependencias.
+- Cerrar hallazgos sin repetir las pruebas.
+- Presentar la alineación con el CSF como cumplimiento legal o certificación de NIST.
+
+# 18. De principiante a analista junior
+
+<img src="media/image8_es-419.png" style="width:6.15in;height:3.20335in" alt="Aprender, mapear, probar, informar y postularse con evidencia honesta de portafolio." />
+
+Figura 8. Ruta hacia el puesto de analista junior
+
+## 18.1 Puestos de nivel inicial
+
+Analista junior de GRC; analista de riesgo de ciberseguridad; analista de cumplimiento; analista de controles de seguridad; analista de riesgo de terceros; analista de aseguramiento de seguridad; analista de programas de ciberseguridad; analista junior de seguridad; analista de preparación para auditorías.
+
+## 18.2 Trabajo que puede realizar un analista junior
+
+- Mantener inventarios de activos, datos, sistemas, riesgos, obligaciones, proveedores y evidencia.
+- Recopilar y organizar evidencia para resultados del CSF con alcance definido.
+- Revisar muestras de acceso, vulnerabilidades, formación, registros, respaldos, proveedores e incidentes.
+- Documentar estado del Perfil, brechas, limitaciones, responsables y planes de acción.
+- Dar seguimiento a acciones correctivas, excepciones, aceptaciones de riesgo y nuevas pruebas.
+- Preparar tableros claros sin ocultar incertidumbre.
+- Apoyar ejercicios, cronologías de incidentes, lecciones aprendidas y actualizaciones de planes.
+- Proteger información confidencial y respetar los límites de autorización.
+
+## 18.3 Evidencia de portafolio
+
+| **Competencia** | **Elemento ficticio de portafolio** |
+|---|---|
+| Alcance | Declaración de alcance y supuestos del Perfil |
+| Mapeo del Núcleo | Matriz de aplicabilidad y evidencia de todos los resultados |
+| Gestión de activos | Inventario de sistemas, datos, proveedores y flujos |
+| Riesgo | Registro con apetito, tolerancia, respuesta y decisión residual |
+| Perfiles | Perfiles actual y objetivo con brechas priorizadas |
+| Pruebas | Hojas de prueba de acceso, vulnerabilidades, respaldos, registros y proveedores |
+| Respuesta a incidentes | Cronología sintética, registro de evidencia, comunicaciones y lecciones |
+| Comunicación ejecutiva | Tablero de una página y declaración ejecutiva de riesgo |
+
+# 19. Laboratorio ficticio y portafolio
+
+Harbor Light Services es una organización ficticia. Toda persona, cuenta, dirección, activo, evento, registro de cliente y proveedor es inventado.
+
+- **Proyecto 1 — Alcance y contexto:** misión, partes interesadas, obligaciones, servicios críticos, dependencias, exclusiones y responsables.
+- **Proyecto 2 — Mapa de activos y datos:** inventarios y diagrama autorizado de flujo de datos.
+- **Proyecto 3 — Riesgo:** registro de amenazas, vulnerabilidades, probabilidad, impacto, tratamiento y riesgo residual.
+- **Proyecto 4 — Perfiles:** Perfil actual basado en evidencia y Perfil objetivo basado en riesgo.
+- **Proyecto 5 — Controles y pruebas:** pruebas ficticias de acceso, vulnerabilidades, registros, respaldos y proveedores.
+- **Proyecto 6 — Incidente:** analizar eventos sintéticos, declarar incidente, preservar evidencia, contener, erradicar, restaurar y aprender.
+- **Proyecto 7 — Herramientas:** usar tres herramientas del Capítulo 16 en laboratorio aislado y registrar autorización, versión, alcance, corrección y repetición de pruebas.
+- **Proyecto 8 — Informe ejecutivo:** tablero, riesgos principales, plan de acción, decisiones y limitaciones.
+
+> **Ética del portafolio:** identificar todo como entrenamiento ficticio. Nunca publicar información real de empleadores, clientes, pacientes, empleados, proveedores, arquitecturas, vulnerabilidades, credenciales o incidentes sin autorización expresa.
+
+# 20. Plan de aprendizaje de treinta días
+
+| **Semana** | **Enfoque** | **Producto requerido** |
+|---|---|---|
+| 1 | Propósito del CSF, Núcleo, seis Funciones, contexto y activos | Memo de alcance, mapa de partes interesadas e inventario de activos y datos |
+| 2 | Riesgo, Perfiles, Niveles, gobernanza y cadena de suministro | Registro de riesgos, Perfiles actual y objetivo, clasificación de proveedores |
+| 3 | Salvaguardas, monitoreo, respuesta, recuperación, evidencia y pruebas | Cinco pruebas de control, archivo de incidente y evidencia de recuperación |
+| 4 | Herramientas, informes, portafolio y entrevistas | Portafolio depurado, tablero y respuestas practicadas |
+
+## 20.1 Hábito diario
+
+Leer una sección oficial de NIST o un grupo de resultados; explicarlo en lenguaje sencillo sin alterar el significado; crear una evidencia ficticia; comprobar integridad, alcance, fecha, propiedad y confiabilidad; escribir una conclusión, acción correctiva o lección.
+
+# 21. Preparación para entrevistas
+
+- **¿Qué es NIST CSF 2.0?** Un marco flexible y orientado a resultados para comprender, evaluar, priorizar y comunicar el riesgo de ciberseguridad mediante el Núcleo, los Perfiles, los Niveles y recursos de apoyo.
+- **¿Cuáles son las seis Funciones?** Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.
+- **¿Por qué se añadió Gobernar?** Para hacer explícitas la responsabilidad de liderazgo, política, estrategia de riesgo, integración con ERM, supervisión y riesgo de cadena de suministro.
+- **¿Qué es un Perfil actual?** Una descripción de los resultados que un alcance definido logra o intenta lograr actualmente, incluyendo cómo y en qué medida.
+- **¿Qué es un Perfil objetivo?** Los resultados priorizados seleccionados para un estado futuro según misión, riesgo, obligaciones, partes interesadas y recursos.
+- **¿Qué son los Niveles?** Contexto para el rigor de gobernanza y gestión del riesgo: Parcial, Informado por el riesgo, Repetible y Adaptativo.
+- **¿El CSF certifica cumplimiento?** No. La alineación no crea cumplimiento legal ni certificación de NIST.
+- **¿Cómo se verifica un resultado?** Definir alcance y criterios, evaluar diseño, obtener población completa, muestrear por riesgo, inspeccionar y repetir, registrar excepciones, corregir, volver a probar y concluir con evidencia.
+- **¿Cómo deben utilizarse las herramientas?** Solo con autorización y como una fuente de evidencia; validar cobertura y resultados, proteger salidas, corregir brechas y repetir pruebas.
+- **¿Cómo priorizar brechas?** Según impacto en la misión, amenaza, probabilidad, criticidad, obligaciones, exposición, dependencias, controles existentes, costo, viabilidad y apetito de riesgo.
+
+> **Respuesta de 60 segundos para gerentes:** Uso el CSF 2.0 para conectar la ciberseguridad con el riesgo empresarial. Definimos alcance y partes interesadas, seleccionamos resultados aplicables, construimos Perfiles actual y objetivo, priorizamos brechas, financiamos planes, probamos evidencia operativa, incluimos proveedores y comunicamos decisiones y limitaciones. Las herramientas apoyan el trabajo, pero las personas siguen siendo responsables del alcance, juicio, corrección y riesgo residual.
 
 # 22. Plantillas y listas de verificación
 
-* Estructuras útiles para un sistema de organización aprobado*.
-
-## 22.1 Profile record
-
-- Alcance, propósito, propietario, patrocinador, partes interesadas, fecha y gatillo de revisión
-
-- Función, categoría y identificador de subcategoría
-
-- Aplicabilidad y racionalidad
-
-- Situación actual, aplicación, propietario, evidencia, prueba, excepción y limitación
-
-- Situación y prioridad de los objetivos
-
-- Gap, risk, action, interim protection, owner, resources, date, dependency and retest
-
-- Contexto actual y de destino donde útil
-
-- Historial de aprobación y versión
-
-## 22.2 Risk register
-
-- Objetivo, activo, servicio, datos, proveedor y propietario
-
-- Amenaza, vulnerabilidad, escenario y resultados CSF afectados
-
-- Controles y pruebas existentes
-
-- probabilidad, impacto, riesgo inherente y método
-
-- Respuesta, acción, propietario, recursos, fecha y dependencia
-
-- Riesgo residual, comparación de apetito/tolerancia y autoridad de aceptación
-
-- Indicador, gatillo de revisión, expiración de excepción y retest
-
-## 22.3 Ficha de control
-
-- Resultado, riesgo, control, propietario, frecuencia, sistemas, ubicaciones y periodo
-
-- Criterios de diseño y pruebas esperadas
-
-- Comprobación completa de población
-
-- Método de muestra y elementos seleccionados
-
-- Procedimiento, evidencia inspeccionada, reperformance y resultado
-
-- Excepciones, causa, impacto, acción, propietario, fecha y protección provisional
-
-- Retest, conclusión, limitaciones, revisor y aprobación
-
-## 22.4 Revisión del proveedor
-
-- Servicio, propietario, crítica, acceso, datos, ubicaciones, subcontratistas, dependencias y alternativas
-
-- debida diligencia, autenticidad, desarrollo seguro, vulnerabilidades, resiliencia, historial de incidentes y preocupaciones financieras o operacionales
-
-- Requisitos contractuales, derechos de prueba, notificación, recuperación, retorno/destrucción y salida
-
-- Vigilancia, hallazgos, excepciones, acciones correctivas, ejercicios, incidentes, cambios, renovación y terminación
-
-## 22.5 Lista de comprobación de la preparación del administrador
-
-- Patrocinador, funciones, recursos, políticas y estrategia de riesgo aprobada
-
-- Alcance, partes interesadas, obligaciones, servicios críticos, dependencias y proveedores actuales
-
-- Activo, datos, sistema, servicio, identidad, vulnerabilidad y poblaciones de riesgo reconciliadas
-
-- Perfiles actuales y de objetivos apoyados y aprobados
-
-- Plan de acción basado en el riesgo financiado y seguido
-
-- Pruebas de seguridad, vigilancia, incidentes y recuperación
-
-- Controles de ciclo de vida del proveedor
-
-- Métricas relacionadas con el riesgo y los resultados
-
-- Excepciones, aceptaciones, limitaciones y pruebas visibles para los encargados de adoptar decisiones
-
-# 23. Índice de Glosario y Asunto
-
-*Definiciones en inglés y una guía para temas importantes*.
-
-Categorías. Un grupo de resultados relacionados con la ciberseguridad dentro de una función.
-
-** Perfil comunitario.** A published baseline of CSF outcomes for shared sector, technology, threat, or use-case needs.
-
-Tranquila. La jerarquía de Funciones, Categorías y Subcategorías que describe los resultados de la ciberseguridad.
-
-**Perfil actual.** Los resultados de un alcance definido están alcanzando o tratando de alcanzar, incluyendo cómo o hasta qué punto.
-
-** Riesgo de seguridad.** The possible effect of uncertainty on information and technology and the related organizational objectives.
-
-*Función* El nivel de resultados CSF más alto: Govern, Identificar, Proteger, Detectar, Responder o Recuperar.
-
-** Ejemplo de implementación.** Una ilustración nocional y orientada a la acción de una posible manera de apoyar un resultado básico.
-
-**Referencia informativa** Una asignación entre un resultado básico y otra norma, directriz, regulación o fuente.
-
-** Perfil organizacional.** Un mecanismo para describir la postura de ciberseguridad actual y/o dirigida utilizando los resultados básicos.
-
-** Riesgo residual.** El riesgo que queda después de que se examinen los controles y las respuestas.
-
-#Aguanta el apetito # La amplia cantidad y tipo de riesgo que una organización está dispuesta a perseguir o retener.
-
-Tolerancia de la tinta** Variación aceptable en torno a objetivos específicos o desempeño.
-
-Subcategoría. Un resultado específico de ciberseguridad dentro de una categoría.
-
-**Perfil de Sargento.** Los resultados seleccionados y priorizados tienen por objeto alcanzar un alcance definido.
-
-Más. Context for the rigor of cibersecurity risk governance and risk-management practices.
-
-## 23.1 Subject index
-
-**Tema** Silencioso**
-Silencio------------------------------------------------------------
-Silencioso control de acceso Silencio 6, 15–16, 22 Silenciosos Silenciosos 14, 17 Silencio
-Silencio Inventario de Activos Silencioso 5, 15, 22 Silencio Herramientas de código abierto
-tención de la auditoría TENIDO 14–15, 22 TENIDO Perfiles de organización TENIDO 2–3, 10 TENIDO
-Silencio Silencio Silencio Silencio , 18 Silencio Silencio
-TENIDO ANTERIOR ANTERIOR 2, 4-9 ANTE ANTERIOR ANTERITORIO ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTE ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTERIOR ANTE 2, 4 ANTE 9
-Silencioso Detección Silencioso 7 Silencioso apetito Silencio 4, 12
-TENIDO Evidencia TENIDO 14–16 TENIDO Evaluación del riesgo TENIDO 5, 12, 22
-Silencio Govern Silencio 4, 12–13, 17 Silencioso cadena de suministro
-Silencio Identificar Apocalipsis 5 Silencioso Tiers Silencioso 2, 11
-Silencio Respuesta del incidente Silencio 8, 15, 19 Silencio
-Silencioso analista junior Silencio 18–21 Silencio Gestión de la Vulnerabilidad
-
-# 24. Referencias oficiales y estudio ulterior
-
-*Características actuales NIST publicaciones, herramientas y documentación de proyectos utilizados para la verificación.*
-
-[Seguido] (https://doi.org/10.6028/NIST.CSWP.29)
-
-[ ]](https://www.nist.gov/cyberframework)
-
-[ ]](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters)
-
-[ ]](https://www.nist.gov/cyberframework/faqs)
-
-[Seguido](https://www.nist.gov/cyberframework/profiles)
-
-[ ]](https://www.nist.gov/cyberframework/informative-references)
-
-[ indicau]CSF 2.0 Guía de Recursos y Resúmenes — SP 1299 made/u fiel](https://doi.org/10.6028/NIST.SP.1299)
-
-[Seguido] [Informes de organización Guía de inicio rápido — SP 1301](https://doi.org/10.6028/NIST.SP.1301)
-
-Guía de inicio rápido de los niveles: SP 1302 obtenidos/u fiel](https://doi.org/10.6028/NIST.SP.1302)
-
-[Seguido]u Guía de inicio rápido de la gestión del riesgo institucional — SP 1303 operacionales/u contactos](https://doi.org/10.6028/NIST.SP.1303)
-
-[Seguido] Guía de inicio rápido de pequeñas empresas — SP 1300 made/u fiel] (https://doi.org/10.6028/NIST.SP.1300)
-
-[ ]](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final SP 800-53 Rev. 5
-
-[se]u fielNIST SP 800-61 Rev. 3 — Respuesta del incidente realizada/u contacto](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
-
-[ indicau]NIST SP 800-218 — Secure Software Development Framework made/u fiel](https://csrc.nist.gov/pubs/sp/800/218/final)
-
-[Seguido](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center)
-
-Silencio **Recordaje final:** El núcleo CSF es estable, mientras que los ejemplos de implementación en línea, Referencias informativas, orientación, cartografías, amenazas, tecnologías y obligaciones pueden cambiar. Verify current official NIST sources and organization-specific requirements before acting.
-Silencio.
+## 22.1 Registro de Perfil
+
+Alcance, propósito, responsable, patrocinador, partes interesadas, fecha, activador de revisión; identificador de Función, Categoría y Subcategoría; aplicabilidad; estado actual; implementación; evidencia; prueba; excepción; limitación; estado objetivo; prioridad; brecha; riesgo; acción; protección provisional; recursos; fecha; dependencia; repetición de prueba; contexto de Nivel; aprobación e historial de versiones.
+
+## 22.2 Registro de riesgos
+
+Objetivo, activo, servicio, datos, proveedor y responsable; amenaza, vulnerabilidad, escenario y resultados afectados; controles y evidencia; probabilidad, impacto y riesgo inherente; respuesta, acción, recursos y fecha; riesgo residual, comparación con apetito/tolerancia y autoridad de aceptación; indicador, activador de revisión, vencimiento de excepción y repetición de prueba.
+
+## 22.3 Hoja de prueba de control
+
+Resultado, riesgo, control, responsable, frecuencia, sistemas, ubicaciones y periodo; criterios de diseño; evidencia esperada; población completa; comprobación de integridad; método de muestra; procedimiento; evidencia inspeccionada; repetición; excepciones; causa; impacto; acción; protección provisional; nueva prueba; conclusión; limitaciones; revisor y aprobación.
+
+## 22.4 Revisión de proveedores
+
+Servicio, responsable, criticidad, acceso, datos, ubicaciones, subcontratistas, dependencias y alternativas; debida diligencia, autenticidad, desarrollo seguro, vulnerabilidades, resiliencia, historial de incidentes y situación financiera/operativa; requisitos contractuales, derechos de evidencia, notificación, recuperación, devolución/destrucción y salida; monitoreo, hallazgos, excepciones, acciones, ejercicios, incidentes, cambios, renovación y terminación.
+
+## 22.5 Lista de preparación para gerentes
+
+Patrocinador, roles, recursos, política y estrategia aprobados; alcance, partes interesadas, obligaciones, servicios críticos, dependencias y proveedores actualizados; poblaciones reconciliadas; Perfiles respaldados y aprobados; plan financiado; evidencia probada; controles de proveedores operando; métricas vinculadas a riesgo; excepciones, aceptaciones, limitaciones y nuevas pruebas visibles.
+
+# 23. Glosario e índice temático
+
+**Categoría:** grupo de resultados relacionados dentro de una Función.  
+**Perfil de la comunidad:** línea base publicada para necesidades compartidas de un sector, tecnología, amenaza o caso de uso.  
+**Núcleo:** jerarquía de Funciones, Categorías y Subcategorías.  
+**Perfil actual:** resultados que un alcance logra o intenta lograr actualmente.  
+**Riesgo de ciberseguridad:** posible efecto de la incertidumbre sobre información, tecnología y objetivos organizacionales.  
+**Función:** nivel más alto del CSF.  
+**Ejemplo de implementación:** ilustración orientada a acciones de una posible forma de apoyar un resultado.  
+**Referencia informativa:** mapeo entre un resultado y otra norma, guía, regulación o fuente.  
+**Perfil Organizacional:** mecanismo para describir la postura actual y/o objetivo.  
+**Riesgo residual:** riesgo que permanece después de considerar controles y respuestas.  
+**Apetito de riesgo:** cantidad y tipo amplio de riesgo que una organización está dispuesta a perseguir o retener.  
+**Tolerancia al riesgo:** variación aceptable respecto de objetivos específicos.  
+**Subcategoría:** resultado específico dentro de una Categoría.  
+**Perfil objetivo:** resultados seleccionados y priorizados que un alcance pretende alcanzar.  
+**Nivel:** contexto del rigor de gobernanza y gestión del riesgo.
+
+## 23.1 Índice temático
+
+| **Tema** | **Capítulos** | **Tema** | **Capítulos** |
+|---|---:|---|---:|
+| Control de acceso | 6, 15–16, 22 | Métricas | 14, 17 |
+| Inventario de activos | 5, 15, 22 | Herramientas de código abierto | 16 |
+| Preparación para auditoría | 14–15, 22 | Perfiles Organizacionales | 2–3, 10 |
+| Cumplimiento | 1, 15 | Proteger | 6 |
+| Núcleo | 2, 4–9 | Recuperar | 9 |
+| Detectar | 7 | Apetito de riesgo | 4, 12 |
+| Evidencia | 14–16 | Evaluación de riesgos | 5, 12, 22 |
+| Gobernar | 4, 12–13, 17 | Cadena de suministro | 4, 13, 15, 22 |
+| Identificar | 5 | Niveles | 2, 11 |
+| Respuesta a incidentes | 8, 15, 19 | Verificación | 14–16 |
+| Analista junior | 18–21 | Gestión de vulnerabilidades | 5, 15–16 |
+
+# 24. Referencias oficiales y estudio adicional
+
+- NIST Cybersecurity Framework 2.0 — CSWP 29
+- Sitio oficial del NIST Cybersecurity Framework
+- Herramienta de referencia del CSF 2.0
+- Preguntas frecuentes del CSF 2.0
+- Perfiles del CSF 2.0
+- Referencias informativas del CSF 2.0
+- SP 1299 — Guía de recursos y visión general
+- SP 1301 — Guía rápida de Perfiles Organizacionales
+- SP 1302 — Guía rápida de Niveles
+- SP 1303 — Guía rápida de gestión de riesgos empresariales
+- SP 1300 — Guía rápida para pequeñas empresas
+- NIST SP 800-53 Rev. 5
+- NIST SP 800-61 Rev. 3 — Respuesta a incidentes
+- NIST SP 800-218 — Secure Software Development Framework
+- NIST NICE Workforce Framework
+
+> **Recordatorio final:** el Núcleo del CSF es estable, pero los ejemplos de implementación, referencias informativas, guías, mapeos, amenazas, tecnologías y obligaciones pueden cambiar. Verificar siempre las fuentes oficiales vigentes de NIST y los requisitos específicos de la organización antes de actuar.

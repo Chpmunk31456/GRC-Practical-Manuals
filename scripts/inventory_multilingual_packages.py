@@ -32,11 +32,14 @@ LANG_PATTERNS = {
 }
 
 
-def language_for(path: Path) -> str:
-    text = path.as_posix().lower()
+def language_for(path: Path, manual_dir: Path) -> str:
+    """Classify language from explicit path markers; root-level binaries are legacy English editions."""
+    text = path.relative_to(manual_dir).as_posix().lower()
     for language, pattern in LANG_PATTERNS.items():
         if pattern.search(text):
             return language
+    if path.parent == manual_dir and path.suffix.lower() in {".docx", ".pdf"}:
+        return "English"
     return "Unclassified"
 
 
@@ -55,7 +58,7 @@ def main() -> int:
 
         inventory: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
         for path in files:
-            language = language_for(path)
+            language = language_for(path, manual_dir)
             inventory[language][path.suffix.lower().lstrip(".")].append(path.relative_to(ROOT).as_posix())
 
         missing = []
@@ -85,6 +88,7 @@ def main() -> int:
 
     for record in records:
         inv = record["inventory"]
+
         def status(language: str) -> str:
             formats = inv.get(language, {})
             present = [fmt.upper() for fmt in ("docx", "pdf") if formats.get(fmt)]
@@ -102,7 +106,8 @@ def main() -> int:
         "",
         "## Scope",
         "",
-        "This report inventories files only. It does not certify translation quality, visual layout, accessibility, factual currency, or publication readiness.",
+        "This report inventories files only. Root-level DOCX/PDF pairs are treated as legacy English editions. "
+        "The report does not certify translation quality, visual layout, accessibility, factual currency, or publication readiness.",
         "",
     ])
 

@@ -1,0 +1,55 @@
+name: Launch NIST CSF reviewed integration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Integrate reviewed NIST CSF source blocks
+        run: python scripts/integrate_nist_csf_reviewed_rewrites.py
+
+      - name: Validate integrated Markdown
+        shell: bash
+        run: |
+          set -euo pipefail
+          ES='01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'
+          PT='01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+          test -s "$ES"
+          test -s "$PT"
+          for n in $(seq 1 24); do
+            grep -q "^# ${n}\." "$ES"
+            grep -q "^# ${n}\." "$PT"
+          done
+          ! grep -Eq 'Tiros|Función del PROTECTO|COMPLIANÇA|Conteúdo verdadeiro da palavra' "$ES" "$PT"
+
+      - name: Commit integrated manuals
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            '01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+          if git diff --cached --quiet; then
+            echo 'No integration changes to commit.'
+          else
+            git commit -m 'Integrate reviewed NIST CSF Spanish and Portuguese sources'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi

@@ -1,0 +1,48 @@
+name: Package multilingual QA corpus
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - '.github/workflows/package-multilingual-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-qa-corpus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+
+      - name: Collect multilingual review files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p qa-corpus
+          while IFS= read -r -d '' file; do
+            mkdir -p "qa-corpus/$(dirname "$file")"
+            cp "$file" "qa-corpus/$file"
+          done < <(find . -type f \
+            \( -path '*/Espanol/*.md' -o -path '*/Espanol/*.docx' -o -path '*/Espanol/*.pdf' \
+               -o -path '*/Portugues_BR/*.md' -o -path '*/Portugues_BR/*.docx' -o -path '*/Portugues_BR/*.pdf' \) \
+            -print0)
+          cp MULTILINGUAL_BUILD_VERIFICATION.md qa-corpus/
+          cp MULTILINGUAL_PACKAGE_INVENTORY.md qa-corpus/
+          cp MULTILINGUAL_PACKAGE_INVENTORY.json qa-corpus/
+          find qa-corpus -type f -print0 | sort -z | xargs -0 sha256sum > qa-corpus/SHA256SUMS.txt
+          echo "Packaged files: $(find qa-corpus -type f | wc -l)"
+
+      - name: Upload multilingual QA corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: multilingual-grc-qa-corpus
+          path: qa-corpus
+          if-no-files-found: error
+          retention-days: 30

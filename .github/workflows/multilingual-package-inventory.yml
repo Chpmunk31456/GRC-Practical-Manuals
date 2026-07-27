@@ -4,17 +4,10 @@ on:
   push:
     branches:
       - production/multilingual-grc-editions
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: multilingual-grc-production
-  cancel-in-progress: false
 
 jobs:
   produce-and-verify:
@@ -106,7 +99,6 @@ jobs:
           EOF
 
       - name: Commit generated packages and reports
-        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
         run: |
           set -euo pipefail

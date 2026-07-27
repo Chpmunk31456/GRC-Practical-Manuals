@@ -48,10 +48,10 @@ def clean_block(text: str, *, first_block: bool) -> str:
 
     if not first_block:
         lines = cleaned.splitlines()
+        # Remove only staging metadata. Preserve singular chapter headings such
+        # as "## Capítulo 10" because they are normalized below.
         while lines and (
             lines[0].startswith("# NIST CSF 2.0")
-            or lines[0].startswith("## Capítulo")
-            or lines[0].startswith("## Capitulo")
             or lines[0].startswith("## Capítulos")
             or lines[0].startswith("**Estado:")
             or lines[0].startswith("**Status:")
@@ -63,12 +63,6 @@ def clean_block(text: str, *, first_block: bool) -> str:
             lines.pop(0)
         cleaned = "\n".join(lines).strip()
 
-    # Normalize reviewed staging headings such as:
-    #   ## Capítulo 10. ...
-    #   # Capítulo 11. ...
-    #   # Capitulo 12. ...
-    # into final manual headings such as:
-    #   # 10. ...
     cleaned = re.sub(
         r"^#{1,2}\s+(?:Capítulo|Capitulo)\s+(\d+)\.\s+",
         r"# \1. ",
@@ -85,9 +79,9 @@ def validate_combined(language: str, text: str) -> None:
     duplicates = sorted(number for number in headings if chapter_numbers.count(number) > 1)
 
     if missing:
-        raise ValueError(f"{language}: missing chapter headings: {missing}")
+        raise ValueError(f"{language}: missing chapter headings: {missing}; detected={chapter_numbers}")
     if duplicates:
-        raise ValueError(f"{language}: duplicate chapter headings: {duplicates}")
+        raise ValueError(f"{language}: duplicate chapter headings: {duplicates}; detected={chapter_numbers}")
 
     if language == "es-419":
         forbidden = ["Tiros", "Policía (GV.PO)", "Función del PROTECTO", "Silencio"]

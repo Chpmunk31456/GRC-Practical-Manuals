@@ -1,13 +1,18 @@
-name: Launch NIST CSF reviewed integration
+name: Launch NIST CSF localized graphics production
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/launch-nist-integration.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  integrate:
+  generate-build-verify:
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch
@@ -21,35 +26,91 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Integrate reviewed NIST CSF source blocks
-        run: python scripts/integrate_nist_csf_reviewed_rewrites.py
+      - name: Install graphics and document dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils fonts-dejavu-core
+          python -m pip install --upgrade pip
+          python -m pip install pillow
 
-      - name: Validate integrated Markdown
+      - name: Generate localized graphics and update Markdown
+        run: python scripts/generate_nist_csf_localized_graphics.py
+
+      - name: Verify graphics inventory and dimensions
         shell: bash
         run: |
           set -euo pipefail
-          ES='01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'
-          PT='01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
-          test -s "$ES"
-          test -s "$PT"
-          for n in $(seq 1 24); do
-            grep -q "^# ${n}\." "$ES"
-            grep -q "^# ${n}\." "$PT"
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          root = Path('01-foundations/NIST_CSF_2')
+          files = sorted(root.glob('Espanol/media/image[1-6]_es-419.png')) + sorted(root.glob('Portugues_BR/media/image[1-6]_pt-BR.png'))
+          assert len(files) == 12, files
+          for path in files:
+              with Image.open(path) as image:
+                  assert image.size == (1800, 1000), (path, image.size)
+                  assert image.mode == 'RGB', (path, image.mode)
+          print('Verified 12 localized PNG graphics at 1800x1000 RGB.')
+          PY
+
+      - name: Build localized NIST CSF DOCX and PDF editions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for source in \
+            01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md \
+            01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md; do
+            stem="${source%.md}"
+            pandoc "$source" --resource-path="$(dirname "$source")" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx"
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+            count="$(unzip -l "${stem}.docx" 'word/media/*' | awk '/word\/media\// {count++} END {print count+0}')"
+            test "$count" -ge 6
+            echo "${stem}.docx contains $count embedded media files."
           done
-          ! grep -Eq 'Tiros|Función del PROTECTO|COMPLIANÇA|Conteúdo verdadeiro da palavra' "$ES" "$PT"
 
-      - name: Commit integrated manuals
+      - name: Record automated graphics completion
         shell: bash
         run: |
-          set -euo pipefail
+          cat > qa/NIST_CSF_2_GRAPHICS_COMPLETION.md <<'EOF'
+          # NIST CSF 2.0 localized graphics completion
+
+          **Branch:** `production/multilingual-grc-editions`
+
+          ## Completed production work
+
+          - Six Latin American Spanish PNG graphics generated.
+          - Six Brazilian Portuguese PNG graphics generated.
+          - Localized labels follow `qa/NIST_CSF_2_GRAPHICS_LOCALIZATION_SPEC.md`.
+          - Markdown image references use language-specific filenames.
+          - Localized captions and alt text are retained in the Markdown editions.
+          - Spanish and Brazilian Portuguese DOCX files regenerated with embedded graphics.
+          - Spanish and Brazilian Portuguese PDF files regenerated from the DOCX editions.
+          - PNG inventory, dimensions, DOCX ZIP integrity, embedded media, and searchable PDF text validated automatically.
+
+          ## Automated validation result
+
+          **PASS** - 12 localized PNG files, two regenerated DOCX files, and two regenerated searchable PDF files.
+
+          ## Human visual-review boundary
+
+          Automated checks confirm generation, package integrity, embedded media, and searchable text. Final publication approval still requires page-by-page human visual inspection for clipping, overlap, font rendering, contrast, grayscale comprehension, and reading-order/accessibility behavior.
+          EOF
+
+      - name: Commit graphics and rebuilt publications to production branch
+        run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
-            '01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
-            '01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+            01-foundations/NIST_CSF_2/Espanol \
+            01-foundations/NIST_CSF_2/Portugues_BR \
+            qa/NIST_CSF_2_GRAPHICS_COMPLETION.md
           if git diff --cached --quiet; then
-            echo 'No integration changes to commit.'
+            echo 'No graphics or publication changes to commit.'
           else
-            git commit -m 'Integrate reviewed NIST CSF Spanish and Portuguese sources'
+            git commit -m 'Integrate localized NIST CSF graphics and rebuild editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi

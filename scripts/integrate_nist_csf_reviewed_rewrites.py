@@ -1,0 +1,88 @@
+#!/usr/bin/env python3
+"""Integrate reviewed NIST CSF 2.0 rewrite blocks into complete target manuals.
+
+This script performs deterministic source integration only. It does not mark the
+resulting editions publication-ready and does not modify DOCX or PDF packages.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+
+EDIT_NOTE_PATTERNS = (
+    r"\n---\n\n\*\*Estado editorial:\*\*.*\Z",
+    r"\n---\n\n\*\*Status editorial:\*\*.*\Z",
+)
+
+JOBS = {
+    "es-419": {
+        "blocks": [
+            "qa/rewrite/NIST_CSF_2_ES_OPENING_CH1_CH3_REVIEWED.md",
+            "qa/rewrite/NIST_CSF_2_ES_BLOCK_02_GOVERN_IDENTIFY.md",
+            "qa/rewrite/NIST_CSF_2_ES_BLOCK_03_PROTECT_DETECT_RESPOND_RECOVER.md",
+            "qa/rewrite/NIST_CSF_2_ES_CH10_15_REVIEWED.md",
+            "qa/rewrite/NIST_CSF_2_ES_CH16_24_REVIEWED.md",
+        ],
+        "target": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+    },
+    "pt-BR": {
+        "blocks": [
+            "qa/rewrite/NIST_CSF_2_PTBR_OPENING_CH1_CH3_REVIEWED.md",
+            "qa/rewrite/NIST_CSF_2_PTBR_BLOCK_02_GOVERN_IDENTIFY.md",
+            "qa/rewrite/NIST_CSF_2_PTBR_BLOCK_03_PROTEGER_DETECTAR_RESPONDER_RECUPERAR.md",
+            "qa/rewrite/NIST_CSF_2_PTBR_CH10_15_REVIEWED.md",
+            "qa/rewrite/NIST_CSF_2_PTBR_CH16_24_REVIEWED.md",
+        ],
+        "target": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+    },
+}
+
+
+def clean_block(text: str) -> str:
+    cleaned = text.replace("\r\n", "\n").strip()
+    for pattern in EDIT_NOTE_PATTERNS:
+        cleaned = re.sub(pattern, "", cleaned, flags=re.DOTALL)
+    return cleaned.strip()
+
+
+def validate_combined(language: str, text: str) -> None:
+    required_chapters = [f"# {number}." for number in range(1, 25)]
+    missing = [heading for heading in required_chapters if heading not in text]
+    if missing:
+        raise ValueError(f"{language}: missing chapter headings: {missing}")
+
+    if language == "es-419":
+        forbidden = ["Tiros", "Policía (GV.PO)", "Función del PROTECTO", "Silencio"]
+    else:
+        forbidden = ["COMPLIANÇA", "Função do Governo", "Conteúdo verdadeiro da palavra"]
+
+    found = [term for term in forbidden if term in text]
+    if found:
+        raise ValueError(f"{language}: known defective terms remain: {found}")
+
+    if len(text) < 20_000:
+        raise ValueError(f"{language}: integrated manual is unexpectedly short ({len(text)} chars)")
+
+
+def main() -> None:
+    for language, job in JOBS.items():
+        block_paths = [ROOT / item for item in job["blocks"]]
+        missing_files = [str(path.relative_to(ROOT)) for path in block_paths if not path.is_file()]
+        if missing_files:
+            raise FileNotFoundError(f"{language}: missing reviewed blocks: {missing_files}")
+
+        combined = "\n\n".join(clean_block(path.read_text(encoding="utf-8")) for path in block_paths)
+        combined = combined.rstrip() + "\n"
+        validate_combined(language, combined)
+
+        target = ROOT / job["target"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(combined, encoding="utf-8", newline="\n")
+        print(f"Integrated {language}: {target.relative_to(ROOT)} ({len(combined)} chars)")
+
+
+if __name__ == "__main__":
+    main()

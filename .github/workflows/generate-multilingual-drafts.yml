@@ -8,6 +8,7 @@ on:
       - 'scripts/build_multilingual_drafts.py'
       - 'production/GENERATE_MULTILINGUAL_DRAFTS.trigger'
       - '**/English_Source_*.md'
+      - '.github/workflows/generate-multilingual-drafts.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,7 +17,7 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - name: Check out production branch
         uses: actions/checkout@v4
@@ -24,58 +25,134 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Set up Python
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.11'
+
+      - name: Initialize diagnostic log
+        run: |
+          mkdir -p production
+          {
+            echo '# Multilingual Draft Workflow Diagnostic'
+            echo
+            echo "Started: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo
+          } > production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
       - name: Install translation and document tools
+        id: install_tools
+        shell: bash
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install argostranslate
-          sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice poppler-utils
+          set -o pipefail
+          {
+            echo '## Install tools'
+            python -m pip install --upgrade pip
+            python -m pip install 'argostranslate==1.9.6'
+            sudo apt-get update
+            sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+            echo
+            echo '- Result: PASS'
+          } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
       - name: Install English to Spanish and Portuguese models
+        id: install_models
+        shell: bash
         run: |
-          python - <<'PY'
+          set -o pipefail
+          {
+            echo
+            echo '## Install translation models'
+            python - <<'PY'
+          import time
           import argostranslate.package
-          argostranslate.package.update_package_index()
+
+          for attempt in range(1, 4):
+              try:
+                  argostranslate.package.update_package_index()
+                  break
+              except Exception:
+                  if attempt == 3:
+                      raise
+                  time.sleep(10 * attempt)
+
           available = argostranslate.package.get_available_packages()
           for target in ('es', 'pt'):
               matches = [p for p in available if p.from_code == 'en' and p.to_code == target]
               if not matches:
                   raise SystemExit(f'No Argos model found for en->{target}')
-              path = matches[0].download()
-              argostranslate.package.install_from_path(path)
+              package_path = matches[0].download()
+              argostranslate.package.install_from_path(package_path)
+              print(f'Installed en->{target}: {matches[0].package_version}')
           PY
+            echo
+            echo '- Result: PASS'
+          } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
       - name: Generate multilingual Markdown drafts
-        run: python scripts/build_multilingual_drafts.py
-
-      - name: Build DOCX and PDF drafts
+        id: generate_markdown
         shell: bash
         run: |
-          set -euo pipefail
-          find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0 |
-          while IFS= read -r -d '' source; do
-            stem="${source%.md}"
-            pandoc "$source" --toc -o "${stem}.docx"
-            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
-            test -s "${stem}.docx"
-            test -s "${stem}.pdf"
-            unzip -t "${stem}.docx" >/dev/null
-            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
-          done
+          set -o pipefail
+          {
+            echo
+            echo '## Generate translated Markdown'
+            python scripts/build_multilingual_drafts.py
+            echo
+            echo '- Result: PASS'
+          } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
-      - name: Commit generated drafts
+      - name: Build DOCX and PDF drafts
+        id: build_documents
+        shell: bash
+        run: |
+          set -o pipefail
+          {
+            echo
+            echo '## Build DOCX and PDF'
+            count=0
+            while IFS= read -r -d '' source; do
+              stem="${source%.md}"
+              pandoc "$source" --toc -o "${stem}.docx"
+              libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
+              test -s "${stem}.docx"
+              test -s "${stem}.pdf"
+              unzip -t "${stem}.docx" >/dev/null
+              pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+              count=$((count + 1))
+              echo "Built: ${stem}.docx and ${stem}.pdf"
+            done < <(find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0)
+            echo
+            echo "- Packages built: $count"
+            test "$count" -ge 21
+            echo '- Result: PASS'
+          } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
+
+      - name: Record workflow conclusion
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo
+            echo '## Workflow conclusion'
+            echo
+            echo "- Install tools: ${{ steps.install_tools.outcome }}"
+            echo "- Install models: ${{ steps.install_models.outcome }}"
+            echo "- Generate Markdown: ${{ steps.generate_markdown.outcome }}"
+            echo "- Build documents: ${{ steps.build_documents.outcome }}"
+            echo "- Completed: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          } >> production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
+
+      - name: Commit generated drafts or diagnostic report
+        if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add '*/**/Espanol/*' '*/**/Portugues_BR/*'
+          git add production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
+          git add '*/**/Espanol/*' '*/**/Portugues_BR/*' || true
           if git diff --cached --quiet; then
-            echo 'No multilingual draft changes to commit.'
+            echo 'No multilingual draft or diagnostic changes to commit.'
           else
-            git commit -m 'Generate Spanish and Portuguese GRC draft editions'
+            git commit -m 'Generate multilingual drafts and record workflow diagnostics'
             git push origin HEAD:production/multilingual-grc-editions
           fi

@@ -232,7 +232,6 @@ Figura 2. Hierarquia do Núcleo do CSF
 | ID.IM-03 | Identificar melhorias durante a execução de processos, procedimentos e atividades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
 | ID.IM-04 | Estabelecer, comunicar, manter e aprimorar planos de resposta a incidentes e de cibersegurança operacional. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
 
-> **Status:** Tradução humana revisada para integração. Mantém os identificadores oficiais do NIST CSF 2.0. Este arquivo substitui somente o conteúdo textual dos capítulos 6–9; a edição completa ainda requer integração, nova geração de DOCX/PDF e revisão visual.
 
 # 6. Função PROTEGER
 
@@ -391,7 +390,7 @@ Figura 2. Hierarquia do Núcleo do CSF
 
 **Figura 3. Do Perfil Atual ao plano de ação**
 
-### 10.1 Declaração de escopo do Perfil
+## 10.1 Declaração de escopo do Perfil
 
 - Objetivo empresarial ou de missão.
 - Sistemas, serviços, dados, instalações, pessoas, fornecedores e localidades incluídos.
@@ -400,7 +399,7 @@ Figura 2. Hierarquia do Núcleo do CSF
 - Obrigações legais, contratuais e de política, além dos Perfis da Comunidade utilizados como referência.
 - Premissas, exclusões, dependências e limitações.
 
-### 10.2 Status dos resultados
+## 10.2 Status dos resultados
 
 | **Status** | **Significado** | **Suporte necessário** |
 |---|---|---|
@@ -410,7 +409,7 @@ Figura 2. Hierarquia do Núcleo do CSF
 | Não aplicável | O resultado não se aplica ao escopo definido. | Justificativa documentada e aprovação. |
 | Não avaliado | A evidência é insuficiente para uma conclusão. | Solicitação de evidência, responsável e prazo. |
 
-### 10.3 Priorização de lacunas
+## 10.3 Priorização de lacunas
 
 Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, criticidade dos ativos, obrigações legais e contratuais, exposição, dependências, segurança física, privacidade, controles atuais, tempo estimado para exploração, esforço de correção e recursos disponíveis. Não classifique lacunas apenas pela severidade indicada por uma ferramenta de varredura.
 

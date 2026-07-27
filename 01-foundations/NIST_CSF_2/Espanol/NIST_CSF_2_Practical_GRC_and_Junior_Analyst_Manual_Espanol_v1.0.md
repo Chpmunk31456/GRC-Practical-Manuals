@@ -232,7 +232,6 @@ Figura 2. Jerarquía del Núcleo del CSF
 | ID.IM-03 | Identificar mejoras durante la operación de procesos, procedimientos y actividades. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
 | ID.IM-04 | Establecer, comunicar, mantener y mejorar planes de respuesta a incidentes y de ciberseguridad operativa. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | evaluaciones, ejercicios, lecciones aprendidas, acciones correctivas, planes actualizados |
 
-> **Estado:** Traducción humana revisada para integración. Conserva los identificadores oficiales del NIST CSF 2.0. Este archivo sustituye únicamente el contenido textual de los capítulos 6–9; la edición completa todavía requiere integración, regeneración de DOCX/PDF y revisión visual.
 
 # 6. Función PROTEGER
 
@@ -391,7 +390,7 @@ Figura 2. Jerarquía del Núcleo del CSF
 
 **Figura 3. Del Perfil Actual al plan de acción**
 
-### 10.1 Declaración del alcance del Perfil
+## 10.1 Declaración del alcance del Perfil
 
 - Propósito empresarial o de misión.
 - Sistemas, servicios, datos, instalaciones, personas, proveedores y ubicaciones incluidos.
@@ -400,7 +399,7 @@ Figura 2. Jerarquía del Núcleo del CSF
 - Obligaciones legales, contractuales y de política, además de los Perfiles Comunitarios utilizados como referencia.
 - Supuestos, exclusiones, dependencias y limitaciones.
 
-### 10.2 Estado de los resultados
+## 10.2 Estado de los resultados
 
 | **Estado** | **Significado** | **Soporte requerido** |
 |---|---|---|
@@ -410,7 +409,7 @@ Figura 2. Jerarquía del Núcleo del CSF
 | No aplicable | El resultado no aplica al alcance definido. | Justificación documentada y aprobación. |
 | No evaluado | La evidencia es insuficiente para emitir una conclusión. | Solicitud de evidencia, responsable y fecha límite. |
 
-### 10.3 Priorización de brechas
+## 10.3 Priorización de brechas
 
 Priorice las brechas considerando el impacto sobre la misión, la probabilidad de amenaza, la criticidad de los activos, las obligaciones legales y contractuales, la exposición, las dependencias, la seguridad física, la privacidad, los controles actuales, el tiempo estimado para explotación, el esfuerzo de remediación y los recursos disponibles. No clasifique las brechas únicamente por la severidad indicada por una herramienta de escaneo.
 

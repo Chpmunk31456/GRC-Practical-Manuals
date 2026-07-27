@@ -54,3 +54,5 @@ jobs:
             git commit -m 'Build multilingual DOCX and PDF editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi
+
+# Follow-up commit intentionally triggers the first production build.

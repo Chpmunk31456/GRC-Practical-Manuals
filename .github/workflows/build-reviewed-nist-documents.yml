@@ -20,10 +20,10 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Install document tools
+      - name: Install document and figure tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip python3-pil fonts-dejavu-core
 
       - name: Apply publication QA corrections
         shell: bash
@@ -53,7 +53,140 @@ jobs:
               path.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
           PY
 
-      - name: Verify reviewed Markdown sources
+      - name: Generate localized NIST CSF figures
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          import textwrap
+
+          ROOT = Path('01-foundations/NIST_CSF_2')
+          FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          BOLD = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          COLORS = ['#18354d', '#347fbd', '#1d8992', '#dda524', '#31865e', '#a83d43', '#653c91']
+          NAVY = '#17354d'
+          WHITE = '#ffffff'
+          BG = '#ffffff'
+
+          def font(size, bold=False):
+              return ImageFont.truetype(BOLD if bold else FONT, size)
+
+          def centered(draw, box, text, fnt, fill=WHITE, max_width=None, spacing=5):
+              x1, y1, x2, y2 = box
+              width = max_width or (x2-x1-24)
+              words = text.split()
+              lines, line = [], ''
+              for word in words:
+                  trial = (line + ' ' + word).strip()
+                  if draw.textbbox((0,0), trial, font=fnt)[2] <= width:
+                      line = trial
+                  else:
+                      if line: lines.append(line)
+                      line = word
+              if line: lines.append(line)
+              total = sum(draw.textbbox((0,0), ln, font=fnt)[3] for ln in lines) + spacing*(len(lines)-1)
+              y = y1 + ((y2-y1)-total)/2
+              for ln in lines:
+                  bb = draw.textbbox((0,0), ln, font=fnt)
+                  draw.text(((x1+x2-(bb[2]-bb[0]))/2, y), ln, font=fnt, fill=fill)
+                  y += (bb[3]-bb[1]) + spacing
+
+          def rounded(draw, box, color, radius=16):
+              draw.rounded_rectangle(box, radius=radius, fill=color)
+
+          def arrow(draw, start, end, color='#667788', width=3):
+              draw.line([start, end], fill=color, width=width)
+              x, y = end
+              draw.polygon([(x,y),(x-12,y-7),(x-12,y+7)], fill=color)
+
+          def save(img, outdir, n):
+              outdir.mkdir(parents=True, exist_ok=True)
+              img.save(outdir / f'image{n}.png', optimize=True)
+
+          def flow_figure(outdir, n, items, footer, subtitles=None, rows=1, arrows=True):
+              W, H = 1230, 680
+              img = Image.new('RGB', (W,H), BG)
+              d = ImageDraw.Draw(img)
+              margin, gap = 58, 24
+              cols = (len(items)+rows-1)//rows
+              boxw = (W-2*margin-gap*(cols-1))//cols
+              boxh = 145 if rows == 1 else 125
+              starty = 160 if rows == 1 else 100
+              for i, item in enumerate(items):
+                  r, c = divmod(i, cols)
+                  x1 = margin+c*(boxw+gap); y1=starty+r*(boxh+55)
+                  x2=x1+boxw; y2=y1+boxh
+                  rounded(d,(x1,y1,x2,y2),COLORS[i%len(COLORS)])
+                  title = item
+                  sub = subtitles[i] if subtitles else ''
+                  centered(d,(x1+8,y1+15,x2-8,y1+72),title,font(28,True))
+                  if sub:
+                      centered(d,(x1+12,y1+70,x2-12,y2-12),sub,font(19))
+                  if arrows and i < len(items)-1 and (i+1)%cols != 0:
+                      arrow(d,(x2+3,(y1+y2)//2),(x2+gap-4,(y1+y2)//2))
+              centered(d,(40,H-125,W-40,H-35),footer,font(27,True),fill=NAVY)
+              save(img,outdir,n)
+
+          def figure3(outdir, lang):
+              es = lang == 'es'
+              W,H=1230,680; img=Image.new('RGB',(W,H),BG); d=ImageDraw.Draw(img)
+              labels = ([('PERFIL ACTUAL','Lo logrado ahora'),('BRECHA + PRIORIDAD','Riesgo, costo, dependencia'),('PERFIL OBJETIVO','Lo que se necesita después'),('PLAN DE ACCIÓN','Responsable, recursos, fecha')]
+                        if es else [('PERFIL ATUAL','O que foi alcançado'),('LACUNA + PRIORIDADE','Risco, custo, dependência'),('PERFIL-ALVO','O que é necessário depois'),('PLANO DE AÇÃO','Responsável, recursos, data')])
+              boxes=[(55,150,315,290),(390,150,650,290),(725,150,985,290),(390,390,650,530)]
+              for i,(title,sub) in enumerate(labels):
+                  rounded(d,boxes[i],COLORS[[1,3,4,2][i]])
+                  centered(d,(boxes[i][0]+8,boxes[i][1]+18,boxes[i][2]-8,boxes[i][1]+80),title,font(26,True))
+                  centered(d,(boxes[i][0]+8,boxes[i][1]+75,boxes[i][2]-8,boxes[i][3]-12),sub,font(18))
+              arrow(d,(315,220),(385,220)); arrow(d,(650,220),(720,220)); arrow(d,(855,292),(635,385))
+              footer = ('Los Perfiles convierten los resultados del CSF en una hoja de ruta de mejora basada en riesgos' if es else 'Os Perfis transformam os resultados do CSF em um roteiro de melhoria baseado em riscos')
+              centered(d,(35,565,W-35,650),footer,font(25,True),fill=NAVY)
+              save(img,outdir,3)
+
+          def figure4(outdir, lang):
+              es=lang=='es'; W,H=1230,680; img=Image.new('RGB',(W,H),BG); d=ImageDraw.Draw(img)
+              labels = [('TIER 1','Parcial'),('TIER 2','Informado por el Riesgo' if es else 'Informado pelo Risco'),('TIER 3','Repetible' if es else 'Repetível'),('TIER 4','Adaptativo' if es else 'Adaptativo')]
+              heights=[170,250,330,410]; xs=[85,345,605,865]
+              for i,(title,sub) in enumerate(labels):
+                  y2=510; y1=y2-heights[i]
+                  rounded(d,(xs[i],y1,xs[i]+210,y2),COLORS[[5,3,1,4][i]])
+                  centered(d,(xs[i]+8,y1+25,xs[i]+202,y1+95),title,font(27,True))
+                  centered(d,(xs[i]+8,y1+95,xs[i]+202,y2-20),sub,font(18))
+              footer = ('Los Tiers describen rigor y contexto; no son puntuaciones de madurez ni una carrera universal hacia Tier 4' if es else 'Os Tiers descrevem rigor e contexto; não são pontuações de maturidade nem uma corrida universal ao Tier 4')
+              centered(d,(25,565,W-25,650),footer,font(23,True),fill=NAVY)
+              save(img,outdir,4)
+
+          translations = {
+            'es': {
+              1: ([ 'GOBERNAR','IDENTIFICAR','PROTEGER','DETECTAR','RESPONDER','RECUPERAR'],
+                  ['Dirección + supervisión','Comprender el riesgo','Aplicar salvaguardas','Detectar eventos','Controlar el impacto','Restaurar operaciones'],
+                  'Las Funciones trabajan juntas de forma continua; su orden no determina su importancia',2),
+              2: (['FUNCIÓN','CATEGORÍA','SUBCATEGORÍA'],['Grupo de resultados de mayor nivel','Grupo de resultados relacionados','Resultado específico de ciberseguridad'],'Los resultados del Núcleo describen qué debe lograrse, no un producto obligatorio ni un único método de implementación',1),
+              5: (['PLANIFICAR','SELECCIONAR','CONTRATAR','MONITOREAR','FINALIZAR'],['Necesidad + criticidad','Debida diligencia','Requisitos','Riesgo + incidentes','Devolución + eliminación'],'La ciberseguridad de la cadena de suministro continúa durante todo el ciclo de vida de la relación y la tecnología',1),
+              6: (['RESULTADO','CONTROL','EVIDENCIA','PROBAR','CONCLUIR'],['Resultado del CSF','Diseño + responsable','Población completa','Inspeccionar + repetir','Brecha + acción'],'Una correspondencia con el marco solo es defendible cuando se prueban la implementación y la evidencia operativa',1),
+              7: (['AUTORIZAR','RECOPILAR','VALIDAR','CORREGIR','VOLVER A PROBAR'],['Alcance escrito','Resultado versionado','Revisión humana','Responsable + fecha','Prueba de cierre'],'Un informe de herramienta es un insumo, no una prueba de que se alcanzó un resultado del CSF',1),
+              8: (['APRENDER','MAPEAR','PROBAR','INFORMAR','APLICAR'],['Núcleo + riesgo','Activos + resultados','Controles + evidencia','Brechas + acciones','Función junior'],'Un portafolio sólido demuestra alcance honesto, evidencia confiable, redacción clara y práctica segura',1),
+            },
+            'pt': {
+              1: (['GOVERNAR','IDENTIFICAR','PROTEGER','DETECTAR','RESPONDER','RECUPERAR'],['Direção + supervisão','Compreender o risco','Aplicar salvaguardas','Detectar eventos','Controlar o impacto','Restaurar operações'],'As Funções trabalham juntas continuamente; sua ordem não determina sua importância',2),
+              2: (['FUNÇÃO','CATEGORIA','SUBCATEGORIA'],['Grupo de resultados de nível mais alto','Grupo de resultados relacionados','Resultado específico de cibersegurança'],'Os resultados do Núcleo descrevem o que deve ser alcançado, não um produto obrigatório nem um único método de implementação',1),
+              5: (['PLANEJAR','SELECIONAR','CONTRATAR','MONITORAR','ENCERRAR'],['Necessidade + criticidade','Devida diligência','Requisitos','Risco + incidentes','Devolução + remoção'],'A cibersegurança da cadeia de suprimentos continua durante todo o ciclo de vida do relacionamento e da tecnologia',1),
+              6: (['RESULTADO','CONTROLE','EVIDÊNCIA','TESTAR','CONCLUIR'],['Resultado do CSF','Desenho + responsável','População completa','Inspecionar + repetir','Lacuna + ação'],'Um mapeamento ao framework só é defensável quando a implementação e as evidências operacionais são testadas',1),
+              7: (['AUTORIZAR','COLETAR','VALIDAR','CORRIGIR','TESTAR NOVAMENTE'],['Escopo por escrito','Resultado versionado','Revisão humana','Responsável + data','Prova de encerramento'],'Um relatório de ferramenta é um insumo, não uma prova de que um resultado do CSF foi alcançado',1),
+              8: (['APRENDER','MAPEAR','TESTAR','RELATAR','APLICAR'],['Núcleo + risco','Ativos + resultados','Controles + evidências','Lacunas + ações','Função júnior'],'Um portfólio sólido demonstra escopo honesto, evidências confiáveis, redação clara e prática segura',1),
+            }
+          }
+
+          for lang, folder in [('es', ROOT/'Espanol'/'media'), ('pt', ROOT/'Portugues_BR'/'media')]:
+              for n in (1,2,5,6,7,8):
+                  items, subs, footer, rows = translations[lang][n]
+                  flow_figure(folder,n,items,footer,subs,rows=rows)
+              figure3(folder,lang)
+              figure4(folder,lang)
+          PY
+
+      - name: Verify reviewed Markdown sources and figures
         shell: bash
         run: |
           set -euo pipefail
@@ -73,6 +206,11 @@ jobs:
           grep -q '^## 10\.3 ' "$PT"
           ! grep -q '^### 10\.[123] ' "$ES"
           ! grep -q '^### 10\.[123] ' "$PT"
+          for dir in '01-foundations/NIST_CSF_2/Espanol/media' '01-foundations/NIST_CSF_2/Portugues_BR/media'; do
+            for n in 1 2 3 4 5 6 7 8; do
+              test -s "$dir/image$n.png"
+            done
+          done
 
       - name: Build reviewed NIST DOCX and PDF files
         shell: bash
@@ -87,10 +225,12 @@ jobs:
             test -s "${stem}.docx"
             test -s "${stem}.pdf"
             unzip -t "${stem}.docx" >/dev/null
+            test "$(unzip -l "${stem}.docx" | grep -c 'word/media/image')" -ge 8
             pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+            test "$(pdfimages -list "${stem}.pdf" | awk 'NR>2 {count++} END {print count+0}')" -ge 8
           done
 
-      - name: Commit corrected sources and reviewed NIST binaries
+      - name: Commit corrected sources, localized figures, and reviewed binaries
         shell: bash
         run: |
           set -euo pipefail
@@ -98,14 +238,16 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
             '01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            '01-foundations/NIST_CSF_2/Espanol/media/'*.png \
             '01-foundations/NIST_CSF_2/Espanol/'*.docx \
             '01-foundations/NIST_CSF_2/Espanol/'*.pdf \
             '01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md' \
+            '01-foundations/NIST_CSF_2/Portugues_BR/media/'*.png \
             '01-foundations/NIST_CSF_2/Portugues_BR/'*.docx \
             '01-foundations/NIST_CSF_2/Portugues_BR/'*.pdf
           if git diff --cached --quiet; then
-            echo 'No corrected NIST source or binary changes to commit.'
+            echo 'No corrected NIST source, figure, or binary changes to commit.'
           else
-            git commit -m 'Finalize reviewed NIST CSF localized editions'
+            git commit -m 'Embed localized figures in reviewed NIST CSF editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi

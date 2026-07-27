@@ -25,6 +25,34 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc libreoffice poppler-utils unzip
 
+      - name: Apply publication QA corrections
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          files = [
+              Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'),
+              Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'),
+          ]
+
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              lines = []
+              for line in text.splitlines():
+                  if line.startswith('> **Estado:** Traducción humana revisada para integración.'):
+                      continue
+                  if line.startswith('> **Status:** Tradução humana revisada para integração.'):
+                      continue
+                  for section in ('10.1', '10.2', '10.3'):
+                      if line.startswith(f'### {section} '):
+                          line = '##' + line[3:]
+                          break
+                  lines.append(line)
+              path.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
+          PY
+
       - name: Verify reviewed Markdown sources
         shell: bash
         run: |
@@ -35,8 +63,16 @@ jobs:
           test -s "$PT"
           grep -q '^# 24\.' "$ES"
           grep -q '^# 24\.' "$PT"
-          ! grep -q 'Función del PROTECTO\|Tiros\|Silencio' "$ES"
-          ! grep -q 'COMPLIANÇA\|Conteúdo verdadeiro da palavra' "$PT"
+          ! grep -q 'Función del PROTECTO\|Tiros\|Silencio\|Traducción humana revisada para integración' "$ES"
+          ! grep -q 'COMPLIANÇA\|Conteúdo verdadeiro da palavra\|Tradução humana revisada para integração' "$PT"
+          grep -q '^## 10\.1 ' "$ES"
+          grep -q '^## 10\.2 ' "$ES"
+          grep -q '^## 10\.3 ' "$ES"
+          grep -q '^## 10\.1 ' "$PT"
+          grep -q '^## 10\.2 ' "$PT"
+          grep -q '^## 10\.3 ' "$PT"
+          ! grep -q '^### 10\.[123] ' "$ES"
+          ! grep -q '^### 10\.[123] ' "$PT"
 
       - name: Build reviewed NIST DOCX and PDF files
         shell: bash
@@ -54,20 +90,22 @@ jobs:
             pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
           done
 
-      - name: Commit reviewed NIST binaries
+      - name: Commit corrected sources and reviewed NIST binaries
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
+            '01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
             '01-foundations/NIST_CSF_2/Espanol/'*.docx \
             '01-foundations/NIST_CSF_2/Espanol/'*.pdf \
+            '01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md' \
             '01-foundations/NIST_CSF_2/Portugues_BR/'*.docx \
             '01-foundations/NIST_CSF_2/Portugues_BR/'*.pdf
           if git diff --cached --quiet; then
-            echo 'No reviewed NIST binary changes to commit.'
+            echo 'No corrected NIST source or binary changes to commit.'
           else
-            git commit -m 'Build reviewed NIST CSF DOCX and PDF editions'
+            git commit -m 'Finalize reviewed NIST CSF localized editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi

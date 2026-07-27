@@ -124,3 +124,5 @@ jobs:
             git commit -m 'Integrate localized NIST CSF graphics and rebuild editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi
+
+# Controlled trigger: localized graphics production run.

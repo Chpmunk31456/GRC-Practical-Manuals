@@ -1,0 +1,38 @@
+name: Multilingual GRC package inventory
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run multilingual package inventory
+        run: python scripts/inventory_multilingual_packages.py
+
+      - name: Upload inventory reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multilingual-package-inventory
+          path: |
+            MULTILINGUAL_PACKAGE_INVENTORY.md
+            MULTILINGUAL_PACKAGE_INVENTORY.json
+          if-no-files-found: error

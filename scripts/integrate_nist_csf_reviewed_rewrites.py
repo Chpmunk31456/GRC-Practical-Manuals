@@ -17,10 +17,6 @@ EDIT_NOTE_PATTERNS = (
     r"\n---\n\n\*\*Status editorial:\*\*.*\Z",
 )
 
-STAGING_HEADER_PATTERNS = (
-    r"\A# NIST CSF 2\.0[^\n]*\n(?:\n|## (?:Capítulos?|Capitulo|Capítulo)[^\n]*\n|\*\*[^\n]*\*\*\s*\n|\*[^\n]*\*\s*\n)*",
-)
-
 JOBS = {
     "es-419": {
         "blocks": [
@@ -50,7 +46,6 @@ def clean_block(text: str, *, first_block: bool) -> str:
     for pattern in EDIT_NOTE_PATTERNS:
         cleaned = re.sub(pattern, "", cleaned, flags=re.DOTALL)
 
-    # Remove internal staging titles from every block except the opening block.
     if not first_block:
         lines = cleaned.splitlines()
         while lines and (
@@ -68,9 +63,14 @@ def clean_block(text: str, *, first_block: bool) -> str:
             lines.pop(0)
         cleaned = "\n".join(lines).strip()
 
-    # Normalize reviewed Chapter 10–15 staging headings to final chapter headings.
+    # Normalize reviewed staging headings such as:
+    #   ## Capítulo 10. ...
+    #   # Capítulo 11. ...
+    #   # Capitulo 12. ...
+    # into final manual headings such as:
+    #   # 10. ...
     cleaned = re.sub(
-        r"^##\s+(?:Capítulo|Capitulo)\s+(\d+)\.\s+",
+        r"^#{1,2}\s+(?:Capítulo|Capitulo)\s+(\d+)\.\s+",
         r"# \1. ",
         cleaned,
         flags=re.MULTILINE,
@@ -79,11 +79,15 @@ def clean_block(text: str, *, first_block: bool) -> str:
 
 
 def validate_combined(language: str, text: str) -> None:
-    headings = {int(n) for n in re.findall(r"^#\s+(\d+)\.", text, flags=re.MULTILINE)}
+    chapter_numbers = [int(n) for n in re.findall(r"^#\s+(\d+)\.", text, flags=re.MULTILINE)]
+    headings = set(chapter_numbers)
     missing = [number for number in range(1, 25) if number not in headings]
-    duplicates = sorted(number for number in headings if list(re.findall(rf"^#\s+{number}\.", text, flags=re.MULTILINE)).count(f"# {number}.") > 1)
+    duplicates = sorted(number for number in headings if chapter_numbers.count(number) > 1)
+
     if missing:
         raise ValueError(f"{language}: missing chapter headings: {missing}")
+    if duplicates:
+        raise ValueError(f"{language}: duplicate chapter headings: {duplicates}")
 
     if language == "es-419":
         forbidden = ["Tiros", "Policía (GV.PO)", "Función del PROTECTO", "Silencio"]

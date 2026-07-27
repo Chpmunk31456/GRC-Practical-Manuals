@@ -1,0 +1,81 @@
+name: Generate multilingual GRC drafts
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - 'scripts/build_multilingual_drafts.py'
+      - 'production/GENERATE_MULTILINGUAL_DRAFTS.trigger'
+      - '**/English_Source_*.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install translation and document tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install argostranslate
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils
+
+      - name: Install English to Spanish and Portuguese models
+        run: |
+          python - <<'PY'
+          import argostranslate.package
+          argostranslate.package.update_package_index()
+          available = argostranslate.package.get_available_packages()
+          for target in ('es', 'pt'):
+              matches = [p for p in available if p.from_code == 'en' and p.to_code == target]
+              if not matches:
+                  raise SystemExit(f'No Argos model found for en->{target}')
+              path = matches[0].download()
+              argostranslate.package.install_from_path(path)
+          PY
+
+      - name: Generate multilingual Markdown drafts
+        run: python scripts/build_multilingual_drafts.py
+
+      - name: Build DOCX and PDF drafts
+        shell: bash
+        run: |
+          set -euo pipefail
+          find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0 |
+          while IFS= read -r -d '' source; do
+            stem="${source%.md}"
+            pandoc "$source" --toc -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+          done
+
+      - name: Commit generated drafts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '*/**/Espanol/*' '*/**/Portugues_BR/*'
+          if git diff --cached --quiet; then
+            echo 'No multilingual draft changes to commit.'
+          else
+            git commit -m 'Generate Spanish and Portuguese GRC draft editions'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi

@@ -1,3 +1,2 @@
-Trigger generation of Spanish and Brazilian Portuguese machine-assisted draft editions from the extracted English Markdown sources.
-
-Restarted after workflow verification on July 27, 2026.
+Trigger multilingual generation after diagnostic workflow repair.
+Run requested: 2026-07-27T03:49:30Z

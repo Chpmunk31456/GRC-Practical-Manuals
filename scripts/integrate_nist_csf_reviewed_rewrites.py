@@ -17,6 +17,10 @@ EDIT_NOTE_PATTERNS = (
     r"\n---\n\n\*\*Status editorial:\*\*.*\Z",
 )
 
+STAGING_HEADER_PATTERNS = (
+    r"\A# NIST CSF 2\.0[^\n]*\n(?:\n|## (?:Capítulos?|Capitulo|Capítulo)[^\n]*\n|\*\*[^\n]*\*\*\s*\n|\*[^\n]*\*\s*\n)*",
+)
+
 JOBS = {
     "es-419": {
         "blocks": [
@@ -41,16 +45,43 @@ JOBS = {
 }
 
 
-def clean_block(text: str) -> str:
+def clean_block(text: str, *, first_block: bool) -> str:
     cleaned = text.replace("\r\n", "\n").strip()
     for pattern in EDIT_NOTE_PATTERNS:
         cleaned = re.sub(pattern, "", cleaned, flags=re.DOTALL)
+
+    # Remove internal staging titles from every block except the opening block.
+    if not first_block:
+        lines = cleaned.splitlines()
+        while lines and (
+            lines[0].startswith("# NIST CSF 2.0")
+            or lines[0].startswith("## Capítulo")
+            or lines[0].startswith("## Capitulo")
+            or lines[0].startswith("## Capítulos")
+            or lines[0].startswith("**Estado:")
+            or lines[0].startswith("**Status:")
+            or lines[0].startswith("**Idioma:")
+            or lines[0].startswith("**Regla editorial:")
+            or lines[0].startswith("**Regra editorial:")
+            or not lines[0].strip()
+        ):
+            lines.pop(0)
+        cleaned = "\n".join(lines).strip()
+
+    # Normalize reviewed Chapter 10–15 staging headings to final chapter headings.
+    cleaned = re.sub(
+        r"^##\s+(?:Capítulo|Capitulo)\s+(\d+)\.\s+",
+        r"# \1. ",
+        cleaned,
+        flags=re.MULTILINE,
+    )
     return cleaned.strip()
 
 
 def validate_combined(language: str, text: str) -> None:
-    required_chapters = [f"# {number}." for number in range(1, 25)]
-    missing = [heading for heading in required_chapters if heading not in text]
+    headings = {int(n) for n in re.findall(r"^#\s+(\d+)\.", text, flags=re.MULTILINE)}
+    missing = [number for number in range(1, 25) if number not in headings]
+    duplicates = sorted(number for number in headings if list(re.findall(rf"^#\s+{number}\.", text, flags=re.MULTILINE)).count(f"# {number}.") > 1)
     if missing:
         raise ValueError(f"{language}: missing chapter headings: {missing}")
 
@@ -74,8 +105,11 @@ def main() -> None:
         if missing_files:
             raise FileNotFoundError(f"{language}: missing reviewed blocks: {missing_files}")
 
-        combined = "\n\n".join(clean_block(path.read_text(encoding="utf-8")) for path in block_paths)
-        combined = combined.rstrip() + "\n"
+        cleaned_blocks = [
+            clean_block(path.read_text(encoding="utf-8"), first_block=(index == 0))
+            for index, path in enumerate(block_paths)
+        ]
+        combined = "\n\n".join(cleaned_blocks).rstrip() + "\n"
         validate_combined(language, combined)
 
         target = ROOT / job["target"]

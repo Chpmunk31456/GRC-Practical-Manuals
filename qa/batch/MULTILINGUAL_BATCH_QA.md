@@ -6,7 +6,7 @@ Requires review: **11**
 
 | Status | Language | File | English leakage | Known defects | Empty alt text | Malformed tables | Malformed images | Missing images |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| REVIEW | Espanol | `01-foundations\CIS_Controls_v8.1\Espanol\CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 1 | 0 |
+| REVIEW | Espanol | `01-foundations\CIS_Controls_v8.1\Espanol\CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 1 |
 | REVIEW | Portugues_BR | `01-foundations\CIS_Controls_v8.1\Portugues_BR\CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 10 |
 | PASS | Espanol | `01-foundations\NIST_CSF_2\Espanol\NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 0 |
 | PASS | Portugues_BR | `01-foundations\NIST_CSF_2\Portugues_BR\NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -16,7 +16,7 @@ Requires review: **11**
 | REVIEW | Portugues_BR | `02-management-systems\ISO_IEC_27001_27002\Portugues_BR\ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 9 |
 | PASS | Espanol | `03-assurance-and-audit\SOC2_Audit_Readiness_Bilingual_v1.0\Espanol\Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 0 |
 | PASS | Portugues_BR | `03-assurance-and-audit\SOC2_Audit_Readiness_Bilingual_v1.0\Portugues_BR\Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 0 |
-| REVIEW | Espanol | `04-regulatory-compliance\GDPR\Espanol\GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 1 | 0 |
+| REVIEW | Espanol | `04-regulatory-compliance\GDPR\Espanol\GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 1 |
 | REVIEW | Portugues_BR | `04-regulatory-compliance\GDPR\Portugues_BR\GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 5 |
 | PASS | Espanol | `04-regulatory-compliance\HIPAA\Espanol\HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 0 |
 | REVIEW | Portugues_BR | `04-regulatory-compliance\HIPAA\Portugues_BR\HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md` | 0 | 0 | 0 | 0 | 0 | 7 |

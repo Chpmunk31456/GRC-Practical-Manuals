@@ -32,9 +32,11 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
-      "malformed_image_tag_count": 1,
-      "missing_image_sources": [],
-      "characters": 161239,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image3.png"
+      ],
+      "characters": 161238,
       "lines": 1161
     },
     {
@@ -398,9 +400,11 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
-      "malformed_image_tag_count": 1,
-      "missing_image_sources": [],
-      "characters": 94421,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image5.png"
+      ],
+      "characters": 94424,
       "lines": 1404
     },
     {

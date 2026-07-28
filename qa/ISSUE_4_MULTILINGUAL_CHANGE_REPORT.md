@@ -23,6 +23,7 @@ The Spanish and Brazilian Portuguese editions remain machine-assisted drafts. Th
 - NIST integration validation: all 24 chapters are present once in each localized edition and forbidden terminology is absent.
 - NIST package validation: both rebuilt DOCX files are valid ZIP/XML packages with eight embedded localized graphics each; both rebuilt PDFs contain searchable text.
 - Affected-package rebuild: all 18 localized editions changed by the Issue #4 Markdown corrections were rebuilt locally; DOCX ZIP integrity and searchable PDF content were checked.
+- Focused image-tag follow-up: repaired the two unambiguous malformed tags in the Spanish CIS Controls and GDPR editions, rebuilt only those two editions, and confirmed that malformed image-tag counts are now zero. Their unresolved targets (`media/image3.png` and `media/image5.png`) remain explicitly reported as missing; no replacement files or paths were invented.
 
 Automated checks do not constitute human language, legal, technical, accessibility, visual, factual, or publication approval.
 
@@ -33,6 +34,6 @@ Automated checks do not constitute human language, legal, technical, accessibili
 - **Technical/factual review:** version references, tooling examples, commands, mappings, control interpretations, and operational recommendations require subject-matter validation.
 - **Accessibility review:** reading order, heading semantics, table header associations, link purpose, captions, alt-text quality, and color/contrast require human assistive-technology review.
 - **Visual publication review:** rebuilt DOCX/PDF files require page-by-page inspection for wrapping, clipping, glyphs, tables, figures, headers, footers, and page breaks.
-- **Legacy non-NIST image sources:** 11 localized Markdown files still contain malformed or unresolved image references inherited from their machine-generated drafts. The automated report identifies each path. Those files remain review-gated; this PR does not invent localized artwork or claim the missing source figures are synchronized.
+- **Legacy non-NIST image sources:** 11 localized Markdown files still contain unresolved image references inherited from their machine-generated drafts. The two unambiguous malformed tags were corrected, but their missing targets and the other unresolved references remain listed in the automated report. Those files remain review-gated; this PR does not invent localized artwork or claim the missing source figures are synchronized.
 
 These items are publication gates, not evidence that any edition is final.

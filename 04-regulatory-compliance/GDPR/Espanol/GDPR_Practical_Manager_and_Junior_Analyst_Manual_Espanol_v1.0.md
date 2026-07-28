@@ -791,7 +791,7 @@ Retención permanente ¿Están operando y revisando trabajos de supresión? Verd
 
 *Un camino seguro y honesto de aprender la ley a demostrar la capacidad de entrada*.
 
-<img src="media/image5.png" style="width:6.15in;height:3.34699in" alt="Aprendizaje, práctica, cartera, explicación y aplicación forman un camino de carrera".
+<img src="media/image5.png" style="width:6.15in;height:3.34699in" alt="Aprendizaje, práctica, cartera, explicación y aplicación forman un camino de carrera." />
 
 Figura 5. Vía de análisis de privacidad junior
 

@@ -6,12 +6,14 @@
   "scope": "Inventory and provenance audit only; no image or manual changes.",
   "classification_note": "Classification flags are evidence properties and may overlap. Primary classification is mutually exclusive. A duplicate count denotes localized references that share the same family/source asset, not duplicate image files.",
   "summary": {
-    "total_unresolved_references": 82,
+    "total_inventory_records": 82,
+    "total_unresolved_references": 81,
+    "total_restored_localized_references": 1,
     "totals_by_manual": {
       "CIS Controls v8.1": 11,
       "NIST RMF / SP 800-53": 10,
       "ISO/IEC 27001/27002": 9,
-      "GDPR": 6,
+      "GDPR": 5,
       "HIPAA": 7,
       "PCI DSS v4.0.1": 9,
       "Incident Response / BCDR": 10,
@@ -20,10 +22,11 @@
     },
     "totals_by_language": {
       "Latin American Spanish": 2,
-      "Brazilian Portuguese": 80
+      "Brazilian Portuguese": 79
     },
     "totals_by_primary_classification": {
-      "requires_localization": 82
+      "requires_localization": 81,
+      "restored_localized": 1
     },
     "classification_flag_totals": {
       "duplicate_reference_records": 4,
@@ -1322,10 +1325,10 @@
         "sha256": "872971742621eef8cb67d8024ab2094426984720ccf6ddd78c7c476df30d707e",
         "size_bytes": 66310
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image1.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1341,8 +1344,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 9 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/GDPR/Portugues_BR/media/image1.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "be1628f0ed88a22ba974a63d9045861d70da257f999e3a917d434230f71b729c",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1628,
+        "height": 857
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-033",

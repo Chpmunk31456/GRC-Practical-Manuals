@@ -136,7 +136,7 @@ Contenido de la palabra:** Este documento contiene un campo de mesa de contenido
 
 [22.14 Agente de política abierta [33](#open-policy-agent)](#open-policy-agent)
 
-[23. Libro de reproducción ISMS [35](#managers-isms-playbook)](#managers-isms-playbook)
+[23. Manual del SGSI para gerentes [35](#managers-isms-playbook)](#managers-isms-playbook)
 
 [24. Guía de la carrera de analista junior [36](#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
@@ -624,7 +624,7 @@ Select auditors who are competent and sufficiently objective; auditors should no
 
 Utilice las normas, requisitos de organización, decisiones de riesgo, SoA, políticas y obligaciones aplicables como criterios.
 
-Record evidence and findings clearly enough that another competent person can understand the basis.
+Registre la evidencia y los hallazgos con suficiente claridad para que otra persona competente pueda comprender el fundamento.
 
 Report results to relevant management and track corrections and corrective actions through effectiveness review.
 
@@ -831,7 +831,7 @@ Inicio rápido seguro: Escribir una pequeña regla de laboratorio, probar los in
 
 Pruebas: alcance aprobado, configuración, versión, cobertura, resultados, revisión, excepción, remediación y retest. Protege credenciales, registros, informes y copias de seguridad.
 
-# 23. Libro de juegos ISMS de Manager
+# 23. Manual del SGSI para gerentes
 
 *Las preguntas, el tablero, la propiedad y los administradores de decisiones deben controlar.*
 

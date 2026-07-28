@@ -25,7 +25,7 @@ Este manual educacional independente não é uma publicação ISO, consultoria j
 
 ISO desenvolve padrões, mas não certifica as organizações. A certificação é opcional e é realizada por organismos de certificação. Verifique o status de acreditação, escopo, locais, versão e certificado antes de confiar em uma reivindicação de certificação.
 
-# # Uso ético e autorizado
+## Uso ético e autorizado
 
 Use ferramentas técnicas apenas em sistemas, aplicativos, redes, contas em nuvem, repositórios e dados que você possui ou estão especificamente autorizados por escrito para avaliar. Use dados sintéticos e sistemas isolados em laboratórios.
 
@@ -136,7 +136,7 @@ Sumário
 
 [22.14 Agente de política aberta [33](#open-policy-agent)](#open-policy-agent)
 
-[23. Playbook ISMS do gestor [35](#managers-isms-playbook)](#managers-isms-playbook)
+[23. Manual do SGSI para gerentes [35](#managers-isms-playbook)](#managers-isms-playbook)
 
 [24. Guia de carreira do analista júnior [36](#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
@@ -282,7 +282,7 @@ Exclusão de exemplo A tecnologia ou o cenário descrito estão ausentes do âmb
 
 * Como manter informações documentadas úteis sem criar burocracia.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.29079in" alt="Evidence must support design, operation, exceptions, correction, and retest." />
+<img src="media/image4.png" style="width:6.15in;height:3.29079in" alt="A evidência deve sustentar o desenho, a operação, as exceções, a correção e o reteste." />
 
 Figura 4. Cadeia de exigência à evidência
 
@@ -396,7 +396,7 @@ Defina o que monitorar e medir, como e quando fazê-lo, quem o avalia e como os 
 9.2.2 Manter um programa de auditoria com frequência, métodos, responsabilidades, planejamento, relatórios, escopo, critérios, auditores objetivos, resultados retidos e ação corretiva oportuna. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 □ 9.3.1 □ Top management revê o ISMS em intervalos planejados para adequação, adequação e eficácia contínuas. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 Leia os insumos necessários, tais como ações anteriores, mudanças de contexto, necessidades interessadas, desempenho, feedback, risco, tratamento e oportunidades de melhoria. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-□ 9.3.3 □ Record management-review decisions about improvement and needed ISMS changes. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
+□ 9.3.3 □ Registre as decisões da análise crítica pela direção sobre melhorias e mudanças necessárias no SGSI. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 
 Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. Este manual parafraseia conceitos para a educação e não substitui o padrão.
 
@@ -831,7 +831,7 @@ Início rápido seguro: Escreva uma pequena regra de laboratório, teste de entr
 
 Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# 23. Playbook do gerente ISMS
+# 23. Manual do SGSI para gerentes
 
 *Perguntas, painel, propriedade e decisões os gerentes devem controlar.*
 

@@ -214,6 +214,6 @@ La decisión de preparación debe basarse en evidencia. Como proyecto seguro, el
 
 ## Referencias oficiales
 
-- [AICPA SOC for Service Organizations overview](https://www.aicpa-cima.com/resources/download/soc-for-service-organizations-engagements-overview)
-- [AICPA SOC 2 resources](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)
-- [AICPA SOC 2 reporting guide](https://www.aicpa-cima.com/cpe-learning/publication/soc-2-reporting-on-an-examination-of-controls-at-a-service-organization-relevant-to-security-availability-processing-integrity-confidentiality-or-privacy)
+- [Descripción general de AICPA sobre SOC para organizaciones de servicios](https://www.aicpa-cima.com/resources/download/soc-for-service-organizations-engagements-overview)
+- [Recursos de AICPA sobre SOC 2](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)
+- [Guía de AICPA sobre informes SOC 2](https://www.aicpa-cima.com/cpe-learning/publication/soc-2-reporting-on-an-examination-of-controls-at-a-service-organization-relevant-to-security-availability-processing-integrity-confidentiality-or-privacy)

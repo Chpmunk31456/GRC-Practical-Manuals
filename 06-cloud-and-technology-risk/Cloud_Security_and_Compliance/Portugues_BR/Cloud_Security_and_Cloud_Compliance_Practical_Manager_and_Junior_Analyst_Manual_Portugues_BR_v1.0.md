@@ -22,7 +22,7 @@ Este manual é neutro e usa linguagem simples. Não é aconselhamento jurídico,
 Nota de informação actual:** Verificado 14 de Julho de 2026. O CSA Cloud Controls Matrix v4.1 é o mais recente lançamento do CCM/CAIQ, lançado em janeiro de 2026, com 207 objetivos de controle em 17 domínios. Recursos CISA SCuBA atuais, orientação de nuvem NIST, CIS Benchmarks, e práticas neutras do provedor são incorporadas.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # Como usar este manual
+## Como usar este manual
 
 - Gerentes: comece com Capítulos 1–5, 17–25 e 27.
 
@@ -196,7 +196,7 @@ Este documento contém uma tabela de conteúdo nativa do Word e um guia de capí
 
 [26.18 DefectDojo [37](#defectdojo)](#defectdojo)
 
-[27. Playbook de segurança em nuvem do gerente [38](#managers-cloud-security-playbook)](#managers-cloud-security-playbook)
+[27. Manual de segurança em nuvem para gerentes [38](#managers-cloud-security-playbook)](#managers-cloud-security-playbook)
 
 [27.1 Ritmo operacional [38](#operating-rhythm)](#operating-rhythm)
 
@@ -1050,7 +1050,7 @@ Início rápido seguro: Importar resultados de laboratório seguros, validar dup
 
 Manter: autoridade, conta/região/escopo, papel/permissões, ferramenta/versão, política/periodização, dados de origem, data, população, resultado, validação do analista, limitação, descoberta, ação e reteste. Remova credenciais temporárias e proteja a saída.
 
-# 27. Jogo de Segurança Cloud do Gerente
+# 27. Manual de segurança em nuvem para gerentes
 
 *Gerentes mantêm a velocidade da nuvem alinhada com a propriedade, guardiões, evidências, resiliência e decisões de risco.*
 

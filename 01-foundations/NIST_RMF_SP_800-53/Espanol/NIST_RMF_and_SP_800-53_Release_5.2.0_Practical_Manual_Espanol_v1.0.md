@@ -1188,7 +1188,7 @@ Inicio rápido seguro: Escribir una pequeña política de laboratorio para una r
 
 Retain: authority, scope, source/release, version, configuración/query, population, date, raw result, analista validation, limitation, control mapping, finding, correction, and retest. Proteger el sistema y la información de vulnerabilidad.
 
-# 27. Libro de juegos RMF de Manager
+# 27. Manual del RMF para gerentes
 
 *Managers keep RMF focused on mission risk, reliable evidence, timely decisions, and correction.*
 

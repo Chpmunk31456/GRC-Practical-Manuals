@@ -22,7 +22,7 @@ Este manual usa linguagem simples e produtos de trabalho realistas. Não é um c
 Nota de informação actual:** As orientações oficiais foram verificadas em 14 de julho de 2026. A fundação de resposta a incidentes é NIST SP 800-61 Rev. 3, finalizada em 3 de abril de 2025. O conteúdo de continuidade também usa NIST SP 800-34 Rev. 1 Atualização 1 e ISO 22301:2019 com Emenda 1:2024.
 □--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # Como usar este manual
+## Como usar este manual
 
 - Gerentes: comece com Capítulos 1–5, 7, 9–13, 19–25 e 27.
 
@@ -200,7 +200,7 @@ Este documento contém um índice nativo do Word. O guia do capítulo na página
 
 [26.18 OpenSearch [38](#opensearch)](#opensearch)
 
-[27. Playbook de resiliência do gestor [39](#managers-resilience-playbook)](#managers-resilience-playbook)
+[27. Manual de resiliência para gerentes [39](#managers-resilience-playbook)](#managers-resilience-playbook)
 
 [27.1 Questões executivas [39](#executive-questions)](#executive-questions)
 
@@ -1155,7 +1155,7 @@ Início rápido e seguro: Ingera registros sintéticos, normalize o tempo e os c
 
 Provas: autoridade escrita e âmbito, identidade da fonte, data/hora/zona de tempo, ferramenta e versão, configuração/consulta, hashes quando apropriado, resultado bruto, validação do analista, limitação, ação e revisão. Restrinja o acesso e preserve uma cópia de origem inalterada quando necessário.
 
-# 27. Jogo de Resiliência do Gerente
+# 27. Manual de resiliência para gerentes
 
 * Os gestores criam resiliência, definindo autoridade, preparando financiamento, desafiando evidências e removendo bloqueadores.*
 
@@ -1170,7 +1170,7 @@ Os fornecedores são contatos críticos, deveres, dependências e alternativas e
 As pessoas são turnos, transferências, descanso, segurança e tensão psicológica gerenciados? Os respondedores exaustos tomam decisões críticas
 □ Melhoria □ São ações severas financiadas, possuídas, medidas e retestadas? □ O mesmo gap aparece em exercícios/incidentes posteriores
 
-# # 27.1 Perguntas executivas
+## 27.1 Perguntas executivas
 
 - Qual é o actual impacto nos negócios e na segurança?
 
@@ -1433,7 +1433,7 @@ Recuperação 11, 21–22
 
 - [<u>NIST SP 800-34 Rev. 1 Actualização 1 — Planeamento de Contingências</u>](https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final)
 
-- [<u>CISA Cybersecurity Incident and Vulnerability Response Playbooks</u>](https://www.cisa.gov/news-events/news/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks)
+- [<u>Manuais de resposta a incidentes e vulnerabilidades de segurança cibernética da CISA</u>](https://www.cisa.gov/news-events/news/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks)
 
 - [<u> Guia CISA StopRansomware</u>](https://www.cisa.gov/stopransomware/ransomware-guide)
 

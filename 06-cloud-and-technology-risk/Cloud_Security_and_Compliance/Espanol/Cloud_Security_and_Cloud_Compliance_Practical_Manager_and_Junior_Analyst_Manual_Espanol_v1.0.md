@@ -148,15 +148,15 @@ Este documento contiene una tabla de contenido de Word nativa y una guía de cap
 
 [22.1 Cómo utilizar CCM y CAIQ [29](#how-to-use-ccm-and-caiq)](#how-to-use-ccm-and-caiq)
 
-[23. Cloud Assurance and Provider Evidence [30](#cloud-assurance-and-provider-evidence)](#cloud-assurance-and-provider-evidence)
+[23. Aseguramiento de la nube y evidencia del proveedor [30](#cloud-assurance-and-provider-evidence)](#cloud-assurance-and-provider-evidence)
 
-[24. Assessment, Evidence Testing, and Metrics [31](#assessment-evidence-testing-and-metrics)](#assessment-evidence-testing-and-metrics)
+[24. Evaluación, pruebas de evidencia y métricas [31](#assessment-evidence-testing-and-metrics)](#assessment-evidence-testing-and-metrics)
 
 [24.1 Método de prueba [31](#test-method)](#test-method)
 
-[25. AI Services and Emerging Cloud Risk [32](#ai-services-and-emerging-cloud-risk)](#ai-services-and-emerging-cloud-risk)
+[25. Servicios de IA y riesgos emergentes de la nube [32](#ai-services-and-emerging-cloud-risk)](#ai-services-and-emerging-cloud-risk)
 
-[25.1 Evaluación de la nube de AI [32](#ai-cloud-assessment)](#ai-cloud-assessment)
+[25.1 Evaluación de la nube de IA [32](#ai-cloud-assessment)](#ai-cloud-assessment)
 
 [26. Herramientas de código abierto [33](#open-source-tools)](#open-source-tools)
 
@@ -196,9 +196,9 @@ Este documento contiene una tabla de contenido de Word nativa y una guía de cap
 
 [26.18 DefectDojo [37](#defectdojo)](#defectdojo)
 
-[27. Libro de Juego de Seguridad en la Nube [38](#managers-cloud-security-playbook)](#managers-cloud-security-playbook)
+[27. Manual de seguridad en la nube para gerentes [38](#managers-cloud-security-playbook)](#managers-cloud-security-playbook)
 
-[27.1 ritmo operativo [38](#operating-rhythm)](#operating-rhythm)
+[27.1 Ritmo operativo [38](#operating-rhythm)](#operating-rhythm)
 
 [28. Guía de la carrera de analista junior [39] (#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
@@ -391,7 +391,7 @@ tención Auditoría interna / evaluador
 
 Altura:3.39605in" alt="Hierarquía, identidad, redes, registros centralizados, políticas y separación de carga de trabajo crean correderas consistentes." / Propiedad
 
-Figure 2. Landing-zone foundation
+Figura 2. Base de la zona de aterrizaje
 
 ## 5.1 Principios de arquitectura
 
@@ -806,7 +806,7 @@ TEN UEM — Universal Endpoint Management | Gestión y protección de endpoints 
 
 - No reclamar el nivel de CSA STAR o la certificación a menos que la entrada exacta del registro y el alcance lo apoyen.
 
-# 23. Nube Assurance and Provider Evidence
+# 23. Aseguramiento de la nube y evidencia del proveedor
 
 *La garantía de la compañía reduce la incertidumbre sólo cuando el alcance y la responsabilidad del cliente coinciden con el uso real.*
 
@@ -824,7 +824,7 @@ tención Contrato / SLA Silencioso Seguridad, privacidad, aviso, evidencia, disp
 TEN **Escalera de vídeo:** Un cuestionario es útil para el descubrimiento. Aumenta la confianza mediante documentos pertinentes, seguridad independiente, pruebas técnicas, observación, poblaciones completas y remediación verificada. |
 |. |
 
-# 24. Assessment, Evidence Testing, and Metrics
+# 24. Evaluación, pruebas de evidencia y métricas
 
 *La evaluación de voz se une a criterios exactos, poblaciones API completas, evidencia confiable, juicio humano y retesting.*
 
@@ -857,11 +857,11 @@ Silencioso ** Métrico**
 | Buscar edad | Días abiertos por severidad, explotabilidad, exposición, propietario y excepción
 ← Recuperación de la vida útil Representante prueba reunión completo RTO y RPO
 
-# 25. AI Services and Emerging Cloud Risk
+# 25. Servicios de IA y riesgos emergentes de la nube
 
 *Los servicios de Cloud AI añaden un modelo, datos, agente, plugin, cadena de proveedores y un riesgo de cambios rápido.*
 
-## 25.1 Evaluación de la nube de AI
+## 25.1 Evaluación de la nube de IA
 
 - Caso de uso aprobado, efecto de decisión, usuarios, usos prohibidos, supervisión humana y tratamiento de fallos esperados.
 
@@ -1050,7 +1050,7 @@ Inicio rápido seguro: Importar resultados de laboratorio seguros, validar dupli
 
 Retain: authority, account/region/scope, role/permissions, tool/version, policy/query, source data, date, population, result, analista validation, limitation, finding, action, and retest. Eliminar las credenciales temporales y proteger la salida.
 
-# 27. El libro de seguridad de Cloud Manager
+# 27. Manual de seguridad en la nube para gerentes
 
 *Los administradores mantienen la velocidad de la nube alineada con la propiedad, los obstáculos, la evidencia, la resiliencia y las decisiones de riesgo.*
 
@@ -1065,7 +1065,7 @@ Identidad permanente ¿Son los permisos de administración y carga de trabajo me
 ← Monitorización | ¿Las exposiciones y alertas crean investigación y corrección? | Dibujo verde con población incompleta
 ¿Puede el servicio completo cumplir los escenarios probados de RTO/RPO y falta de proveedores? ← Respaldo existe pero restaurado no probado
 
-## 27.1 ritmo operativo
+## 27.1 Ritmo operativo
 
 - Semanal: graves exposiciones, recursos públicos, cambios de privilegios, lagunas de registro, vulnerabilidades críticas, incidentes y anomalías de costos con impacto en la seguridad.
 

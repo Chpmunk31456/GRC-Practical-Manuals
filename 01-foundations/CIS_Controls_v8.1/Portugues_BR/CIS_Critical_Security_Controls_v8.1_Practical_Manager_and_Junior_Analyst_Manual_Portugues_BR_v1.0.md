@@ -144,7 +144,7 @@ Sumário
 
 [24.16 Velociraptor [40](#velociraptor)](#velociraptor)
 
-[25. CIS do gestor controla playbook [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
+[25. Manual dos Controles CIS para gerentes [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
 
 [26. Guia de carreira do analista júnior [42](#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
@@ -178,7 +178,7 @@ Sumário
 
 [30.1 Papel de medição de salvaguarda [48](#safeguard-measurement-workpaper)](#safeguard-measurement-workpaper)
 
-[30.2 Registo de pesquisa e reteste [48](#finding-and-retest-record)](#finding-and-retest-record)
+[30.2 Registro de achados e retestes [48](#finding-and-retest-record)](#finding-and-retest-record)
 
 [30,3 Glossário [48](#glossary)](#glossary)
 
@@ -875,7 +875,7 @@ Início rápido seguro: Implantar apenas em um laboratório autorizado isolado, 
 
 Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
 
-# 25. CIS do gerente controla playbook
+# 25. Manual dos Controles CIS para gerentes
 
 *Perguntas, painel, propriedade e decisões os gerentes devem controlar.*
 
@@ -1083,7 +1083,7 @@ Métrico e interpretação
 Excepções e limitações
 Acção, proprietário, data e novo teste
 
-# # 30.2 Encontrar e reteste recorde
+## 30.2 Registro de achados e retestes
 
 * Campo** * Entrada**
 --------------------------------------------------------------------------------------------------------------------------------------

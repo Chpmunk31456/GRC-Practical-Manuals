@@ -36,7 +36,7 @@
       "missing_image_sources": [
         "media/image3.png"
       ],
-      "characters": 161238,
+      "characters": 161284,
       "lines": 1161
     },
     {
@@ -90,7 +90,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 144837,
+      "characters": 144853,
       "lines": 1161
     },
     {
@@ -210,7 +210,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 100028,
+      "characters": 100026,
       "lines": 1477
     },
     {
@@ -265,7 +265,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 88698,
+      "characters": 88706,
       "lines": 1477
     },
     {
@@ -293,7 +293,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 95608,
+      "characters": 95636,
       "lines": 1110
     },
     {
@@ -344,7 +344,7 @@
         "media/image8.png",
         "media/image9.png"
       ],
-      "characters": 92166,
+      "characters": 92207,
       "lines": 1110
     },
     {
@@ -358,7 +358,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 11905,
+      "characters": 11947,
       "lines": 220
     },
     {
@@ -404,7 +404,7 @@
       "missing_image_sources": [
         "media/image5.png"
       ],
-      "characters": 94424,
+      "characters": 94567,
       "lines": 1404
     },
     {
@@ -440,7 +440,7 @@
         "media/image4.png",
         "media/image5.png"
       ],
-      "characters": 90229,
+      "characters": 90264,
       "lines": 1404
     },
     {
@@ -470,7 +470,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 95844,
+      "characters": 95975,
       "lines": 1539
     },
     {
@@ -511,7 +511,7 @@
         "media/image6.png",
         "media/image7.png"
       ],
-      "characters": 94041,
+      "characters": 94130,
       "lines": 1539
     },
     {
@@ -542,7 +542,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 92283,
+      "characters": 92287,
       "lines": 1197
     },
     {
@@ -592,7 +592,7 @@
         "media/image8.png",
         "media/image9.png"
       ],
-      "characters": 89790,
+      "characters": 89808,
       "lines": 1197
     },
     {
@@ -632,7 +632,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 83262,
+      "characters": 83302,
       "lines": 1458
     },
     {
@@ -683,7 +683,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 81690,
+      "characters": 81715,
       "lines": 1458
     },
     {
@@ -725,7 +725,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 83615,
+      "characters": 83688,
       "lines": 1342
     },
     {
@@ -778,7 +778,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 80728,
+      "characters": 80736,
       "lines": 1342
     },
     {
@@ -812,7 +812,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 80587,
+      "characters": 80674,
       "lines": 1300
     },
     {
@@ -860,7 +860,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 79579,
+      "characters": 79583,
       "lines": 1300
     }
   ]

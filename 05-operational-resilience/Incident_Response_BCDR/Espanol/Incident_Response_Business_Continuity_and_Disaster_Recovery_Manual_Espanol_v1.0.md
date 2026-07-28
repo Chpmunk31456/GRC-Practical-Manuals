@@ -104,7 +104,7 @@ Este documento contiene una tabla de contenidos de Word nativa. La guía del cap
 
 [13.1 Reglas de funcionamiento [21](#operating-rules)](#operating-rules)
 
-[14. Digital Evidence and Forensic Readiness [22](#digital-evidence-and-forensic-readiness)](#digital-evidence-and-forensic-readiness)
+[14. Evidencia digital y preparación forense [22](#digital-evidence-and-forensic-readiness)](#digital-evidence-and-forensic-readiness)
 
 [14.1 Evidencia [22](#evidence-record)](#evidence-record)
 
@@ -158,7 +158,7 @@ Este documento contiene una tabla de contenidos de Word nativa. La guía del cap
 
 [24.1 Pruebas posteriores a la acción [32](#after-action-evidence)](#after-action-evidence)
 
-[25. Compliance Mapping, Evidence Testing, and Metrics [33](#compliance-mapping-evidence-testing-and-metrics)](#compliance-mapping-evidence-testing-and-metrics)
+[25. Mapeo de cumplimiento, pruebas de evidencia y métricas [33](#compliance-mapping-evidence-testing-and-metrics)](#compliance-mapping-evidence-testing-and-metrics)
 
 [25.1 Prueba de prueba [33](#evidence-test)](#evidence-test)
 
@@ -200,7 +200,7 @@ Este documento contiene una tabla de contenidos de Word nativa. La guía del cap
 
 [26.18 OpenSearch [38](#opensearch)](#opensearch)
 
-[27. Libro de Resiliencia del Administrador [39](#managers-resilience-playbook)](#managers-resilience-playbook)
+[27. Manual de resiliencia para gerentes [39](#managers-resilience-playbook)](#managers-resilience-playbook)
 
 [27.1 Cuestiones ejecutivas [39](#executive-questions)](#executive-questions)
 
@@ -412,7 +412,7 @@ Respuesta
 
 - Entrenamiento de roles, mesa de mesa y ejercicios técnicos, pruebas de call-tree y mejoras rastreadas.
 
-## 5.2 Playbook design
+## 5.2 Diseño del manual de respuesta
 
 |** |
 |-------------------------------- |
@@ -656,9 +656,9 @@ Silencioso Regulador / autoridad | Datos obligatorios, tiempo, alcance, impacto,
 
 ■img src="media/image6.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Identidad documental, preservación, integridad, custodia, análisis y límites." /
 
-Figure 6. Evidence integrity and custody
+Figura 6. Integridad y custodia de la evidencia
 
-## 14.1 Evidence record
+## 14.1 Registro de evidencia
 
 - ID, descripción, sistema fuente/dispositivo/cuenta, colector, autoridad, zona hora/hora/hora, ubicación y razón.
 
@@ -1155,7 +1155,7 @@ Inicio rápido seguro: Ingerir troncos sintéticos, normalizar el tiempo y los c
 
 Evidencia: autoridad escrita y alcance, identidad de origen, zona de fecha/hora/hora, herramienta y versión, configuración/query, hashes where appropriate, raw result, analista validation, limitation, action, and review. Restrict access and preserve an unaltered source copy when required.
 
-# 27. Libro de Resiliencia de Manager
+# 27. Manual de resiliencia para gerentes
 
 *Los administradores crean resiliencia estableciendo autoridad, preparando financiación, desafiando pruebas y eliminando bloqueadores.*
 
@@ -1344,7 +1344,7 @@ La estrategia de continuidad y el trabajo en torno a la vida \ \ \ \ \ \ \ \ \ \
 "Vuelva/reconciliación"
 Test/result/improvementar la vida
 
-## 30.3 Evidence and chain-of-custody record
+## 30.3 Registro de evidencia y cadena de custodia
 
 |** |
 |... |

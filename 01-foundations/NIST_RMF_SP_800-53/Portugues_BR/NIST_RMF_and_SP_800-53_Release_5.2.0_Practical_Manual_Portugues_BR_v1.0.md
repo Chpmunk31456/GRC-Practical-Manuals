@@ -22,7 +22,7 @@ Este manual usa linguagem simples, documentos de trabalho realistas e laboratór
 Nota de informação actual:** Verificada em 14 de Julho de 2026: SP 800-37 Rev. 2 continua a ser a RMF final atual; SP 800-53 e SP 800-53A estão na Release 5.2.0 (2025 de Agosto); SP 800-53B linhas de base foram relançadas sem alterações basais; SP 800-18 Rev. 2 foi finalizada em 30 de Junho de 2026.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # Como usar este manual
+## Como usar este manual
 
 - Gerentes: comece com Capítulos 1–4, 7–13, 17–18 e 27.
 
@@ -208,7 +208,7 @@ Este documento contém um índice nativo do Word e um guia de capítulo permanen
 
 [26.18 Agente de política aberta [40](#open-policy-agent)](#open-policy-agent)
 
-[27. Playbook RMF do gestor [41](#managers-rmf-playbook)](#managers-rmf-playbook)
+[27. Manual do RMF para gerentes [41](#managers-rmf-playbook)](#managers-rmf-playbook)
 
 [27.1 Ritmo do gestor [41](#manager-rhythm)](#manager-rhythm)
 
@@ -1188,7 +1188,7 @@ Início rápido seguro: Escreva uma política de laboratório pequena para uma r
 
 Reter: autoridade, escopo, fonte/lançamento, versão, configuração/consulta, população, data, resultado bruto, validação do analista, limitação, mapeamento de controle, achado, correção e reteste. Proteger as informações do sistema e da vulnerabilidade.
 
-# 27. RMF Playbook do gerente
+# 27. Manual do RMF para gerentes
 
 * Os gerentes mantêm RMF focado em risco de missão, evidências confiáveis, decisões oportunas e correção.*
 

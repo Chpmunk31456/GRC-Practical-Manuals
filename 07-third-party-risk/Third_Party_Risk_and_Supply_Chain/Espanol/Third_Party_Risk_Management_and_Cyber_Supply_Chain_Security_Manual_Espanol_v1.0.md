@@ -72,7 +72,7 @@ Esta es una tabla de contenidos de Word nativa. En Microsoft Word, haga clic en 
 
 [6.2 Fuentes de investigación [12](#research-sources)](#research-sources)
 
-[7. Evidence Review and Trust [14](#evidence-review-and-trust)](#evidence-review-and-trust)
+[7. Revisión de evidencia y confianza [14](#evidence-review-and-trust)](#evidence-review-and-trust)
 
 [8. Determinación de riesgos y tratamiento [15](#risk-scoring-and-treatment)](#risk-scoring-and-treatment)
 
@@ -126,7 +126,7 @@ Esta es una tabla de contenidos de Word nativa. En Microsoft Word, haga clic en 
 
 [22. Compliance and Framework Mappings [30](#compliance-and-framework-mappings)](#compliance-and-framework-mappings)
 
-[23. Testing and Metrics Evidence [31](#evidence-testing-and-metrics)](#evidence-testing-and-metrics)
+[23. Pruebas de evidencia y métricas [31](#evidence-testing-and-metrics)](#evidence-testing-and-metrics)
 
 [23.1 Método de prueba [31](#test-method)](#test-method)
 
@@ -164,7 +164,7 @@ Esta es una tabla de contenidos de Word nativa. En Microsoft Word, haga clic en 
 
 [24.16 Agente de política abierta [36](#open-policy-agent)](#open-policy-agent)
 
-[25. Libro TPRM de Manager [37](#managers-tprm-playbook)](#managers-tprm-playbook)
+[25. Manual de TPRM para gerentes [37](#managers-tprm-playbook)](#managers-tprm-playbook)
 
 [25.1 Ritmo operativo del administrador [37](#manager-operating-rhythm)](#manager-operating-rhythm)
 
@@ -706,7 +706,7 @@ tención, retención legal, confidencialidad, vulnerabilidad/incidente, apoyo
 
 - Estimar tiempo de migración e interrupción del negocio de pruebas observadas, no reclamaciones de ventas.
 
-- Document who confirms return/deletion and how exceptions such as legal hold or backup retention are controlled.
+- Documente quién confirma la devolución o eliminación y cómo se controlan las excepciones, como la retención legal o la conservación de copias de seguridad.
 
 20. NIST CSF 2.0 Resultados del proveedor
 
@@ -770,7 +770,7 @@ TEN CIS Controls v8.1 Ø Control 15 inventario de proveedores de servicios, pol�
 
 ■img src="media/image9.png" style="width:6.15in;height:3.39605in" alt="Cada conclusión debe ser trazable de criterios exactos a través de la prueba." /
 
-Figure 9. Evidence-testing chain
+Figura 9. Cadena de pruebas de evidencia
 
 ## 23.1 Método de prueba
 
@@ -782,7 +782,7 @@ Elija pruebas de población completa o una muestra defensible; selección de reg
 
 Inspeccione, observe, inquire, y reperformance según corresponda. La investigación por sí sola suele ser débil.
 
-Record evidence source, date, owner, version, reviewer, and protected location.
+Registre la fuente de la evidencia, la fecha, el propietario, la versión, el revisor y la ubicación protegida.
 
 Describir excepciones con precisión y evaluar controles de frecuencia, gravedad, patrón, impacto, causa y compensación.
 
@@ -955,11 +955,11 @@ Inicio rápido seguro: Escribir una pequeña política de laboratorio para un at
 
 Pruebas para retener: aprobación y alcance, herramienta/versión, configuración o comando, fecha, población objetivo, resultado bruto, validación analista, limitación, hallazgo, acción y retest. Acceso limitado porque los resultados pueden exponer arquitectura sensible o debilidades.
 
-# 25. Libro de reproducción de TPRM de Manager
+# 25. Manual de TPRM para gerentes
 
 *Los administradores hacen que el programa sea real estableciendo prioridades, resolviendo conflictos, financiando tratamiento y desafiando pruebas*.
 
-****Dashboard area** | **Pregunta principal**
+**Área del panel** | **Pregunta principal**
 La vida... la vida... la vida... la vida... la vida...
 ¿Conocemos a todos los proveedores activos, propietarios, servicios, ruta de datos y dependencia? | Servicio crítico desconocido o propietario huérfano
 ¿Se han completado las decisiones de alto riesgo antes del compromiso? tención Compra, acceso o transferencia de datos revisión pasada

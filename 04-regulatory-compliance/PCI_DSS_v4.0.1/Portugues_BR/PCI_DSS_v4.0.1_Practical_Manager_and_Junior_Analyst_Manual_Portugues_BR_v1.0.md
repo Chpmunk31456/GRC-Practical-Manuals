@@ -23,11 +23,11 @@ Edição: Primeira Edição, Julho 2026
 
 Objetivo: Educação gratuita e prática para gestores, estudantes, profissionais de mudança de carreira, analistas júnior, comerciantes, provedores de serviços e profissionais de segurança cibernética.
 
-# # Aviso educacional e legal
+## Aviso educacional e legal
 
 Este manual fornece educação geral. Não é aconselhamento legal, uma publicação do PCI Security Standards Council, um relatório sobre conformidade, um atestado de conformidade, um questionário de auto-avaliação ou uma garantia de conformidade ou segurança. Apenas a norma oficial e os documentos de validação aplicáveis regem uma avaliação. Marcas de pagamento, adquirentes, clientes, reguladores, contratos e leis podem impor requisitos adicionais.
 
-# # Uso ético e autorizado
+## Uso ético e autorizado
 
 Use ferramentas técnicas apenas em sistemas, redes, aplicativos, contas em nuvem, páginas de pagamento e dados que você possui ou estão especificamente autorizados por escrito para avaliar. Use dados sintéticos da conta em laboratórios. Nunca use PAN real, dados de autenticação sensíveis, informações do cliente, credenciais ou sistemas de pagamento de produção em uma demonstração pública ou portfólio.
 
@@ -206,7 +206,7 @@ Sumário
 
 [Evidência e limitação [37](#evidence-and-limitation-13)](#evidence-and-limitation-13)
 
-[20. Playbook PCI DSS do gestor [38](#managers-pci-dss-playbook)](#managers-pci-dss-playbook)
+[20. Manual do PCI DSS para gerentes [38](#managers-pci-dss-playbook)](#managers-pci-dss-playbook)
 
 [20,1 Perguntas mensais [38](#monthly-questions)](#monthly-questions)
 
@@ -916,7 +916,7 @@ Crie uma política de laboratório que negue a implantação sem proprietário, 
 
 Manter autorização, finalidade, população alvo completa, versões, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. Proteja resultados contendo PAN, credenciais, arquitetura, identidades ou vulnerabilidades. Nunca coloque dados reais de conta em uma ferramenta não aprovada.
 
-# 20. PCI DSS Playbook do gerente
+# 20. Manual do PCI DSS para gerentes
 
 *Perguntas, painéis, propriedade e decisões os gerentes devem controlar.*
 
@@ -1176,7 +1176,7 @@ A registar-se 15, 18-19
 
 * Fontes atuais do PCI SSC e documentação oficial da ferramenta usada para verificação.*
 
-[<u>PCI SSC Document Library</u>](https://www.pcisecuritystandards.org/document_library/)
+[<u>Biblioteca de documentos do PCI SSC</u>](https://www.pcisecuritystandards.org/document_library/)
 
 [<u>PCI DSS v4.x Resource Hub</u>](https://blog.pcisecuritystandards.org/pci-dss-v4-0-resource-hub)
 

@@ -206,11 +206,11 @@ Contenido de la palabra:** La guía del capítulo a continuación contendrá nú
 
 [Evidencia y limitación [37](#evidence-and-limitation-13)](#evidence-and-limitation-13)
 
-[20. Manual de juegos PCI DSS [38](#managers-pci-dss-playbook)](#managers-pci-dss-playbook)
+[20. Manual de PCI DSS para gerentes [38](#managers-pci-dss-playbook)](#managers-pci-dss-playbook)
 
 [20.1 Preguntas mensuales [38](#monthly-questions)](#monthly-questions)
 
-[20.2 Dashboard [38](#dashboard)](#dashboard)
+[20.2 Panel [38](#dashboard)](#dashboard)
 
 [21. From Beginner to Junior PCI Analyst [39](#from-beginner-to-junior-pci-analyst)](#from-beginner-to-junior-pci-analyst)
 
@@ -916,7 +916,7 @@ Cree una política de laboratorio que niegue el despliegue sin un propietario, c
 
 Retener autorización, propósito, población objetivo completa, versiones, configuración, resultado bruto, revisor, decisión, acción correctiva, excepción y retest. Proteger resultados que contengan PAN, credenciales, arquitectura, identidades o vulnerabilidades. Nunca coloque datos de cuenta real en una herramienta no aprobada.
 
-# 20. Libro de juegos PCI DSS de Manager
+# 20. Manual de PCI DSS para gerentes
 
 *Las preguntas, los paneles, la propiedad y los administradores de decisiones deben controlarse*.
 
@@ -938,7 +938,7 @@ Retener autorización, propósito, población objetivo completa, versiones, conf
 
 ¿Qué limitaciones o excepciones no resueltas deben ser el liderazgo y la entidad aceptante sabe?
 
-## 20.2 Dashboard
+## 20.2 Panel
 
 **Area** | ** Cuestión del personal**
 |... |
@@ -965,7 +965,7 @@ Figura 9. Vía de analista Junior PCI
 
 ** Analista de Controles de Seguridad**
 
-**PCI Evidence Coordinator**
+**Coordinador de evidencias de PCI**
 
 * Análisis del riesgo de las tres partes*
 

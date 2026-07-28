@@ -7,6 +7,7 @@ files are explicitly labeled as machine-assisted drafts pending human language r
 """
 from __future__ import annotations
 
+import argparse
 import re
 from pathlib import Path
 
@@ -38,9 +39,16 @@ LANGUAGES = {
 PROTECTED_PATTERNS = [
     re.compile(r"https?://[^\s)>]+"),
     re.compile(r"`[^`]+`"),
+    re.compile(r"\]\([^)]+\)"),
     re.compile(r"\b(?:GV|ID|PR|DE|RS|RC)\.[A-Z]{2}(?:-\d+)?\b"),
     re.compile(r"\b(?:NIST|CSF|RMF|CIS|ISO|IEC|SOC|GDPR|HIPAA|PCI DSS|OWASP|API|RACI|GRC)\b"),
 ]
+
+DEFAULT_MAX_CHARS = 800
+
+
+def log(message: str) -> None:
+    print(message, flush=True)
 
 
 def protect(text: str) -> tuple[str, dict[str, str]]:
@@ -59,27 +67,52 @@ def protect(text: str) -> tuple[str, dict[str, str]]:
 
 
 def restore(text: str, mapping: dict[str, str]) -> str:
-    for token, value in mapping.items():
+    # Reverse insertion order so nested protections (for example, a URL inside
+    # a Markdown link destination) are fully restored.
+    for token, value in reversed(mapping.items()):
         text = text.replace(token, value)
     return text
 
 
-def translate_fragment(text: str, target: str) -> str:
-    if not text.strip():
-        return text
-    protected, mapping = protect(text)
-    translated = argostranslate.translate.translate(protected, "en", target)
-    return restore(translated, mapping)
+def bounded_chunks(text: str, max_chars: int) -> list[str]:
+    """Split prose at whitespace where possible while preserving exact separators."""
+    if max_chars < 100:
+        raise ValueError("--max-chars must be at least 100")
+    if len(text) <= max_chars:
+        return [text]
+
+    chunks: list[str] = []
+    remaining = text
+    while len(remaining) > max_chars:
+        split_at = remaining.rfind(" ", 0, max_chars + 1)
+        if split_at <= 0:
+            split_at = remaining.rfind("\t", 0, max_chars + 1)
+        if split_at <= 0:
+            split_at = max_chars
+        else:
+            split_at += 1
+        chunks.append(remaining[:split_at])
+        remaining = remaining[split_at:]
+    if remaining:
+        chunks.append(remaining)
+    return chunks
 
 
-def translate_markdown(source: str, target: str, notice: str) -> str:
+def translate_markdown(
+    source: str,
+    target: str,
+    notice: str,
+    *,
+    source_name: str,
+    max_chars: int,
+) -> str:
     lines = source.splitlines()
     output: list[str] = [notice, ""]
     in_fence = False
 
-    for line in lines:
+    for line_number, line in enumerate(lines, start=1):
         stripped = line.strip()
-        if stripped.startswith("```"):
+        if stripped.startswith(("```", "~~~")):
             in_fence = not in_fence
             output.append(line)
             continue
@@ -87,18 +120,24 @@ def translate_markdown(source: str, target: str, notice: str) -> str:
             output.append(line)
             continue
 
-        # Preserve Markdown link destinations while translating link labels and surrounding text.
-        link_targets: dict[str, str] = {}
-        def replace_target(match: re.Match[str]) -> str:
-            token = f"ZXLINK{len(link_targets)}XZ"
-            link_targets[token] = match.group(1)
-            return f"]({token})"
-        prepared = re.sub(r"\]\(([^)]+)\)", replace_target, line)
-
-        translated = translate_fragment(prepared, target)
-        for token, value in link_targets.items():
-            translated = translated.replace(token, value)
-        output.append(translated)
+        protected, mapping = protect(line)
+        chunks = bounded_chunks(protected, max_chars)
+        chunk_count = len(chunks)
+        translated_chunks: list[str] = []
+        for chunk_number, chunk in enumerate(chunks, start=1):
+            log(
+                f"[translate] source={source_name} target={target} "
+                f"line={line_number}/{len(lines)} chunk={chunk_number}/{chunk_count}"
+            )
+            try:
+                translated = argostranslate.translate.translate(chunk, "en", target)
+            except Exception as exc:
+                raise RuntimeError(
+                    f"Translation failed: source={source_name} target={target} "
+                    f"line={line_number} chunk={chunk_number}/{chunk_count}: {exc}"
+                ) from exc
+            translated_chunks.append(restore(translated, mapping))
+        output.append("".join(translated_chunks))
 
     return "\n".join(output).rstrip() + "\n"
 
@@ -110,20 +149,77 @@ def output_name(source: Path, suffix: str) -> str:
     return f"{stem}_{suffix}.md"
 
 
-def main() -> int:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--force", action="store_true", help="Overwrite completed localized output files.")
+    parser.add_argument("--target", choices=sorted(LANGUAGES), action="append", help="Limit target language.")
+    parser.add_argument("--source", action="append", help="Limit sources by repository-relative path or filename.")
+    parser.add_argument("--source-limit", type=int, help="Process at most this many matched source files.")
+    parser.add_argument("--max-chars", type=int, default=DEFAULT_MAX_CHARS, help="Maximum translation chunk size.")
+    parser.add_argument(
+        "--destination-root",
+        type=Path,
+        help="Write outputs below this directory instead of beside sources (for smoke tests).",
+    )
+    return parser.parse_args(argv)
+
+
+def source_matches(source: Path, filters: list[str] | None) -> bool:
+    if not filters:
+        return True
+    relative = source.relative_to(ROOT).as_posix()
+    return any(item == source.name or item == relative for item in filters)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
     sources = sorted(ROOT.glob("[0-9][0-9]-*/**/English_Source_*.md"))
+    sources = [source for source in sources if source_matches(source, args.source)]
+    if args.source_limit is not None:
+        if args.source_limit < 1:
+            raise SystemExit("--source-limit must be at least 1")
+        sources = sources[: args.source_limit]
     if not sources:
         raise SystemExit("No extracted English source Markdown files found.")
 
+    targets = args.target or list(LANGUAGES)
+    generated = 0
+    skipped = 0
     for source in sources:
         original = source.read_text(encoding="utf-8-sig", errors="strict")
-        for target, cfg in LANGUAGES.items():
-            folder = source.parent / cfg["folder"]
+        relative_source = source.relative_to(ROOT)
+        for target in targets:
+            cfg = LANGUAGES[target]
+            if args.destination_root:
+                folder = args.destination_root / relative_source.parent / cfg["folder"]
+            else:
+                folder = source.parent / cfg["folder"]
             folder.mkdir(parents=True, exist_ok=True)
             destination = folder / output_name(source, cfg["suffix"])
-            translated = translate_markdown(original, target, cfg["notice"])
-            destination.write_text(translated, encoding="utf-8")
-            print(f"Generated {destination.relative_to(ROOT)}")
+            display_destination = (
+                str(destination.relative_to(ROOT))
+                if destination.is_relative_to(ROOT)
+                else str(destination)
+            )
+            if destination.is_file() and destination.stat().st_size > 0 and not args.force:
+                log(f"[skip] completed output exists: {display_destination}")
+                skipped += 1
+                continue
+
+            log(f"[start] source={relative_source} target={target} output={display_destination}")
+            translated = translate_markdown(
+                original,
+                target,
+                cfg["notice"],
+                source_name=relative_source.as_posix(),
+                max_chars=args.max_chars,
+            )
+            temporary = destination.with_suffix(destination.suffix + ".tmp")
+            temporary.write_text(translated, encoding="utf-8")
+            temporary.replace(destination)
+            log(f"[complete] output={display_destination} chars={len(translated)}")
+            generated += 1
+    log(f"[summary] generated={generated} skipped={skipped} sources={len(sources)} targets={len(targets)}")
     return 0
 
 

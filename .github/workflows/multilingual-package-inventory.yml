@@ -60,6 +60,7 @@ jobs:
           PY
 
       - name: Generate Spanish and Brazilian Portuguese Markdown drafts
+        timeout-minutes: 45
         run: python scripts/build_multilingual_drafts.py
 
       - name: Build DOCX and searchable PDF editions

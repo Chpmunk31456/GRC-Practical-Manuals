@@ -89,8 +89,23 @@ jobs:
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
+      - name: Validate one bounded translation
+        timeout-minutes: 10
+        shell: bash
+        run: |
+          set -euo pipefail
+          smoke_dir="${RUNNER_TEMP}/multilingual-smoke"
+          python scripts/build_multilingual_drafts.py \
+            --source-limit 1 \
+            --target es \
+            --max-chars 400 \
+            --destination-root "$smoke_dir"
+          test "$(find "$smoke_dir" -type f -name '*.md' | wc -l)" -eq 1
+          grep -q 'Estado de revisión' "$(find "$smoke_dir" -type f -name '*.md' -print -quit)"
+
       - name: Generate multilingual Markdown drafts
         id: generate_markdown
+        timeout-minutes: 45
         shell: bash
         run: |
           set -o pipefail

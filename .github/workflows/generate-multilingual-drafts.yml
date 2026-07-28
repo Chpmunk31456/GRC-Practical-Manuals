@@ -135,7 +135,7 @@ jobs:
             count=0
             while IFS= read -r -d '' source; do
               stem="${source%.md}"
-              pandoc "$source" --toc -o "${stem}.docx"
+              pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
               libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
               test -s "${stem}.docx"
               test -s "${stem}.pdf"
@@ -147,6 +147,7 @@ jobs:
             echo
             echo "- Packages built: $count"
             test "$count" -ge 21
+            python scripts/validate_nist_embedded_graphics.py
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 

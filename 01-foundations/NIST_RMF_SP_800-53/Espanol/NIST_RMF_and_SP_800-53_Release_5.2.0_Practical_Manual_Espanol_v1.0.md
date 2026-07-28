@@ -6,8 +6,8 @@
 
 Manual de Gestor Práctica y Analista Junior
 
-TEN **Lo que este manual hace:** Explica los siete pasos RMF, las 20 familias de control SP 800-53, bases de referencia, configuración, implementación, evaluación, autorización, monitoreo, OSCAL, herramientas de código abierto, decisiones de gestión y trabajo analista de trabajo. Silencio
-Silencio.
+TEN **Lo que este manual hace:** Explica los siete pasos RMF, las 20 familias de control SP 800-53, bases de referencia, configuración, implementación, evaluación, autorización, monitoreo, OSCAL, herramientas de código abierto, decisiones de gestión y trabajo analista de trabajo. |
+|. |
 
 **Alberto (Al) Leiva**
 
@@ -19,8 +19,8 @@ El Marco de Gestión de Riesgos es una forma disciplinada de conectar las necesi
 
 Este manual utiliza lenguaje claro, documentos de trabajo realistas y laboratorios seguros. Se explican términos federales, pero las organizaciones no federales pueden adaptar los conceptos. Los requisitos y la autoridad varían por ley, agencia, contrato, sector, sistema y riesgo. Utilizar fuentes oficiales actuales y seguridad calificada, privacidad, ingeniería, legal, adquisición, auditoría y autorizar a profesionales para decisiones reales.
 
-Silencio ** Nota de información actual:** Verified July 14, 2026: SP 800-37 Rev. 2 remains the current final RMF; SP 800-53 and SP 800-53A are at Release 5.2.0 (August 2025); SP 800-53B baselines were reissued without baseline changes; SP 800-18 Rev. 2 was finalized June 30, 2026.
-Silencio.
+| ** Nota de información actual:** Verified July 14, 2026: SP 800-37 Rev. 2 remains the current final RMF; SP 800-53 and SP 800-53A are at Release 5.2.0 (August 2025); SP 800-53B baselines were reissued without baseline changes; SP 800-18 Rev. 2 was finalized June 30, 2026. |
+|. |
 
 ## Cómo usar este manual
 
@@ -262,38 +262,38 @@ Este documento contiene una tabla de contenidos de Word nativa y una guía de ca
 
 Guía del Capítulo
 
-Silencio **Capítulo**
-Silencio----------------------------------------------------------------------------------------------------------
-TENIDO 1 TENIDO RMF y SP 800-53 Fundamentos TENIDO 5 TENIDO
-Silencio 2 Silencio actual NIST Publication Suite
-TENIDO 3 TENIDO Gobernanza, Roles y Decisiones de Riesgo
-Silencio 4 Silencio Sistema Life Cycle, Scope y Autorization Boundary Silencio 8 Silencio
-Silencio 5 Silencio Prepárate en el nivel de organización
-Silencio 6 Silencio Prepárate en el nivel del sistema
-Silencio 7 Silencio Categorizar el Sistema Silencioso 11
-Silencio 8 Silencio Select Controls Silencio 12 Silencio
-Silencio 9 Silencio Aplicar Controles
-TENIDO 10 TERRITORIO Assess Controls TENIDO 14
-Silencio 11 Silencio Autorizar el Sistema o Controles Comunes
-Silencio 12 Silencioso Monitor
-Silencio 13 Silenciosos Bases de control y Tailoring
-TEN 14 Silencio Controles comunes, híbridos y sistémicos TEN 19 TEN
-Silencio 15 Silencio Escribir Fuertes Declaraciones de Implementación
-Silencio 16 Silencioso Evaluación Planificación y pruebas
-Silencio 17 Silencioso paquete de autorización y POA consigoM Silencio 22 Silencio
-Silencio 18 Silencio Estrategia de Vigilancia Continua
-Silencio 19 Silencioso OSCAL y Automatización
-TEN 20 TENIDO Control Familias: Acceso, Conciencia, Auditoría y Evaluación TENIDO 25
-TEN 21 TENIDO Control Familias: Configuración, Contingencia, Identidad, Incidentidad y Mantenimiento TENIDO 27 TEN
-TEN 22 TENIDO Control Familias: Medios de comunicación, Física, Planificación, Programa y Personal
-TEN 23 TENIDO Control Familias: Privacidad, Riesgo, Adquisición, Comunicaciones, Integridad y Cadena de Suministros
-Silencio 24 Silencio Privacidad Riesgo y Seguridad–Privacidad Colaboración
-TEN 25 TENIDOS Actualizaciones de software, Confiabilidad de parche y liberación 5.2.0 TEN 34 TEN
-Silencio 26 Silencio Herramientas y recursos oficiales de Open-Source
-Silencio 27 Silencioso Gerente de juegos RMF
-Silencio 28 Silencio Junior Analyst Guía de Carreras
-Silencio 29 Silencio Fictional Laboratory, Treinta Días Plan, y Preparación de Entrevistas
-TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 46 TENIDO
+| **Capítulo** |
+|---------------------------------------------------------------------------------------------------------- |
+| 1 | RMF y SP 800-53 Fundamentos | 5 |
+| 2 | actual NIST Publication Suite
+| 3 | Gobernanza, Rols y Decisiones de Riesgo
+| 4 | Sistema Life Cycle, Scope y Autorization Boundary | 8 |
+| 5 | Prepárate en el nivel de organización
+| 6 | Prepárate en el nivel del sistema
+| 7 | Categorizar el Sistema Silencioso 11
+| 8 | Select Controls | 12 |
+| 9 | Aplicar Controles
+| 10 TERRITORIO Assess Controls | 14
+| 11 | Autorizar el Sistema o Controles Comunes
+| 12 Silencioso Monitor |
+| 13 Silenciosos Bases de control y Tailoring |
+TEN 14 | Controles comunes, híbridos y sistémicos TEN 19 |
+| 15 | Escribir Fuertes Declaraciones de Implementación
+| 16 Silencioso Evaluación Planificación y pruebas |
+| 17 Silencioso paquete de autorización y POA consigoM | 22 |
+| 18 | Estrategia de Vigilancia Continua
+| 19 Silencioso OSCAL y Automatización |
+TEN 20 | Control Familias: Acceso, Conciencia, Auditoría y Evaluación | 25
+TEN 21 | Control Familias: Configuración, Contingencia, Identidad, Incidentidad y Mantenimiento | 27 |
+TEN 22 | Control Familias: Medios de comunicación, Física, Planificación, Programa y Personal
+TEN 23 | Control Familias: Privacidad, Riesgo, Adquisición, Comunicaciones, Integridad y Cadena de Suministros
+| 24 | Privacidad Riesgo y Seguridad–Privacidad Colaboración
+TEN 25 TENIDOS Actualizaciones de software, Confiabilidad de parche y liberación 5.2.0 TEN 34 |
+| 26 | Herramientas y recursos oficiales de Open-Source
+| 27 Silencioso Gerente de juegos RMF |
+| 28 | Junior Analyst Guía de Carreras
+| 29 | Fictional Laboratory, Treinta Días Plan, y Preparación de Entrevistas
+| 30 TENIDOS Plantillas, Glosario, Índice y Referencias | 46 |
 
 # 1. RMF and SP 800-53 Foundations
 
@@ -303,35 +303,35 @@ TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 46 TENIDO
 
 Figura 1. Siete pasos RMF
 
-**Item** Silencio **Purpose**
-Silencio.......
-Silencio RMF Silencio Proceso para la gestión de riesgos de organización y sistema
-Silencio SP 800-53 Silencio Catálogo flexible de seguridad y control de privacidad Silencio Una lista de verificación universal o línea de referencia
-← SP 800-53B TEN FOF Federal de bajos, moderados, altos y de privacidad, además de la orientación a medida Silencio Un control a medida final establecido
-Silencio SP 800-53A Silencio Método de evaluación y procedimientos
-Silencio Autorización Silencio La decisión de riesgo del funcionario superior basado en un paquete de pruebas Silencio Declaración de que ningún riesgo sigue siendo
-← Monitorización continua TENIDO Sensibilización de controles, cambios y riesgo TENIDO Un tablero sin acción de decisión TENIDO
+**Item** | **Purpose**
+|....... |
+| RMF | Proceso para la gestión de riesgos de organización y sistema
+| SP 800-53 | Catálogo flexible de seguridad y control de privacidad | Una lista de verificación universal o línea de referencia
+← SP 800-53B TEN FOF Federal de bajos, moderados, altos y de privacidad, además de la orientación a medida | Un control a medida final establecido
+| SP 800-53A | Método de evaluación y procedimientos
+| Autorización | La decisión de riesgo del funcionario superior basado en un paquete de pruebas | Declaración de que ningún riesgo sigue siendo
+← Monitorización continua | Sensibilización de controles, cambios y riesgo | Un tablero sin acción de decisión |
 
-Silencio **Core idea:** Los controles reducen el riesgo sólo cuando están correctamente seleccionados, implementados, operados, evaluados, corregidos y supervisados en el contexto del sistema real. Silencio
-Silencio.
+| **Core idea:** Los controles reducen el riesgo sólo cuando están correctamente seleccionados, implementados, operados, evaluados, corregidos y supervisados en el contexto del sistema real. |
+|. |
 
 # 2. Actual NIST Publication Suite
 
 *Utilice la fuente oficial actual y entienda cómo cada publicación apoya el conjunto.*
 
-Silencio **Publicación/recurso**
-Silencio...
-tención SP 800-37 Rev. 2 Silencio Siete pasos RMF tareas, roles, preparación de la organización/sistema y gestión del riesgo del ciclo de vida
-Silencio SP 800-53 Release 5.2.0 Silencio Actual catálogo de seguridad y control de privacidad, incluyendo 2025 actualización de software y cambios de parche ←
-Silencio SP 800-53A Release 5.2.0 Silencio Procedimientos de evaluación actuales correspondientes a la versión 5.2.0
-tención SP 800-53B Release 5.2.0 TEN Federal low/moderate/high and privacy baselines; 2025 reissue made no baseline changes TEN
-Silencio SP 800-18 Rev. 2 Silencio junio 2026 seguridad del sistema, privacidad y elementos del plan C-SCRM; énfasis legible por máquina ←
+| **Publicación/recurso** |
+|... |
+tención SP 800-37 Rev. 2 | Siete pasos RMF tareas, roles, preparación de la organización/sistema y gestión del riesgo del ciclo de vida
+| SP 800-53 Release 5.2.0 | Actual catálogo de seguridad y control de privacidad, incluyendo 2025 actualización de software y cambios de parche ←
+| SP 800-53A Release 5.2.0 | Procedimientos de evaluación actuales correspondientes a la versión 5.2.0
+tención SP 800-53B Release 5.2.0 TEN Federal low/moderate/high and privacy baselines; 2025 reissue made no baseline changes |
+| SP 800-18 Rev. 2 | junio 2026 seguridad del sistema, privacidad y elementos del plan C-SCRM; énfasis legible por máquina ←
 tención SP 800-30 Rev. 1
-tención SP 800-39 Silencio Gestión de riesgos a nivel de toda la Organización en tres niveles
-TEN CPRT Ø Navegador y descargas para controles actuales, bases de referencia, procedimientos y referencias TEN
-rígida OSCAL Silencio Modelos legibles para catálogos, perfiles, componentes, SSPs, evaluaciones y POA plagaMs
+tención SP 800-39 | Gestión de riesgos a nivel de toda la Organización en tres niveles
+TEN CPRT Ø Navegador y descargas para controles actuales, bases de referencia, procedimientos y referencias |
+rígida OSCAL | Modelos legibles para catálogos, perfiles, componentes, SSPs, evaluaciones y POA plagaMs
 
-* Control de la versión* Grabar la publicación, publicación, formato, fecha de recuperación, versión perfil/baseline y configuración local. Nunca mezclar texto, procedimientos y bases de control de diferentes versiones sin análisis. Silencio
+* Control de la versión* Grabar la publicación, publicación, formato, fecha de recuperación, versión perfil/baseline y configuración local. Nunca mezclar texto, procedimientos y bases de control de diferentes versiones sin análisis. |
 Respuesta
 
 # 3. Gobernanza, Funciones y Decisiones de Riesgo
@@ -342,19 +342,19 @@ Respuesta
 
 Gráfico 2 Tres niveles de gestión de riesgos
 
-Silencio **Role** Silencioso**
-Silencio...
-Silencio Jefe de agencia / organización tención Responsabilidad en toda la Organización y gobernanza del riesgo
+| **Rol** Silencioso** |
+|... |
+| Jefe de agencia / organización tención Responsabilidad en toda la Organización y gobernanza del riesgo |
 Silencioso ejecutivo (función)
-Silencio Autorización oficial Silencio Acepta el sistema/common-control de riesgo o impone la autorización de condiciones/denas
-tención Autorización oficial designada representante designado Silencio Coordina las actividades como delegadas; no hereda autoridad de riesgo no agranada
+| Autorización oficial | Acepta el sistema/common-control de riesgo o impone la autorización de condiciones/denas
+tención Autorización oficial designada representante designado | Coordina las actividades como delegadas; no hereda autoridad de riesgo no agranada
 Propietario del sistema Silencioso Misión del sistema, recursos, planes, controles, paquete y operación
-Silencio Propietario de información / administrador Silencio Requisitos de información, impacto, uso, compartir y protección
-TEN Seguridad / oficiales de privacidad Silencio Requisitos del programa, asesoramiento, supervisión y coordinación
-Silencioso Proveedor de control Silencio Implementa y documenta controles comunes, híbridos o específicos del sistema
-Silencioso asesor de control Silencio Planes y realiza una evaluación objetiva; reporta resultados y límites
-TEN System administrador / ingeniero Silencio Builds, configura, opera, monitorea y corrige las capacidades del sistema TEN
-TEN Enterprise architect / mission owner ¦ Aligns systems, processes, dependencies, and organization architecture TEN
+| Propietario de información / administrador | Requisitos de información, impacto, uso, compartir y protección
+TEN Seguridad / oficiales de privacidad | Requisitos del programa, asesoramiento, supervisión y coordinación
+Silencioso Proveedor de control | Implementa y documenta controles comunes, híbridos o específicos del sistema
+Silencioso asesor de control | Planes y realiza una evaluación objetiva; reporta resultados y límites
+TEN System administrador / ingeniero | Builds, configura, opera, monitorea y corrige las capacidades del sistema |
+TEN Enterprise architect / mission owner ¦ Aligns systems, processes, dependencies, and organization architecture |
 
 # 4. Ciclo de vida del sistema, alcance y autorización
 
@@ -374,14 +374,14 @@ TEN Enterprise architect / mission owner ¦ Aligns systems, processes, dependenc
 
 - ¿Qué cambios requieren recategorización, reelección, reevaluación o revisión de autorización?
 
-Silencio **Edificio literario**
-Silencio...
-Silencio descripción del sistema ¦ Propósito, usuarios, medio ambiente, estado de funcionamiento, tecnologías, dependencias
+| **Edificio literario** |
+|... |
+| descripción del sistema ¦ Propósito, usuarios, medio ambiente, estado de funcionamiento, tecnologías, dependencias |
 ← Arquitectura diagrama tención Componentes, zonas, interfaces, límites de confianza, caminos de gestión
-Silencio Flujo de datos ANTERI Tipos de información, fuentes, destinos, procesamiento, almacenamiento, compartir, eliminación
-← Inventario Silencio Hardware, software, firmware, recursos virtuales / cercanos, propietarios, versiones
+| Flujo de datos ANTERI Tipos de información, fuentes, destinos, procesamiento, almacenamiento, compartir, eliminación |
+← Inventario | Hardware, software, firmware, recursos virtuales / cercanos, propietarios, versiones
 ← Acuerdo de interconexión tención Sistemas, datos, controles, responsabilidades, monitoreo, incidentes y rescisión
-TENIDO Asignación de control TENIDO Común, híbrido, específico del sistema, heredado, proveedor, responsabilidades del cliente
+| Asignación de control | Común, híbrido, específico del sistema, heredado, proveedor, responsabilidades del cliente
 
 5. Prepararse a nivel de organización
 
@@ -401,8 +401,8 @@ TENIDO Asignación de control TENIDO Común, híbrido, específico del sistema, 
 
 - Crear repositorios, automatización, plantillas, estándares de evidencia, revisión de calidad, métricas y procesos de mejora.
 
-tención **Principio de eficiencia** Los controles comunes reutilizables, los parámetros aprobados, las pruebas estándar y el contenido legible por máquina reducen el trabajo repetido del sistema solo cuando la propiedad y las pruebas operativas actuales son fiables. Silencio
-Silencio.
+tención **Principio de eficiencia** Los controles comunes reutilizables, los parámetros aprobados, las pruebas estándar y el contenido legible por máquina reducen el trabajo repetido del sistema solo cuando la propiedad y las pruebas operativas actuales son fiables. |
+|. |
 
 # 6. Prepárate en el nivel del sistema
 
@@ -442,7 +442,7 @@ Gráfico 3
 
 - Revisita cuando la misión, los datos, la arquitectura, el medio ambiente, los usuarios, los proveedores o las amenazas cambian materialmente.
 
-Silencio **Advertencia de la categórica:** Una categoría de alto impacto no significa que los controles sean débiles, y una categoría de bajo impacto no significa que el sistema sea seguro. Expresa daño potencial si se pierden los objetivos de seguridad.
+| **Advertencia de la categórica:** Una categoría de alto impacto no significa que los controles sean débiles, y una categoría de bajo impacto no significa que el sistema sea seguro. Expresa daño potencial si se pierden los objetivos de seguridad. |
 Respuesta
 
 # 8. Seleccione Controles
@@ -465,8 +465,8 @@ Respuesta
 
 - Documentar el conjunto, la racionalidad, las dependencias, los controles comunes y el riesgo residual.
 
-* La selección de control no es la aplicación** Seleccionar AC-2 no crea gestión de cuentas. El sistema debe definir y operar a las personas, procesos, tecnología, pruebas y monitoreo necesarios para cada requisito seleccionado. Silencio
-Silencio.
+* La selección de control no es la aplicación** Seleccionar AC-2 no crea gestión de cuentas. El sistema debe definir y operar a las personas, procesos, tecnología, pruebas y monitoreo necesarios para cada requisito seleccionado. |
+|. |
 
 # 9. Controles de aplicación
 
@@ -508,8 +508,8 @@ Silencio.
 
 - Publicar un informe de evaluación que apoye la decisión del funcionario autorizado sin ocultar incertidumbre.
 
-La evaluación no es un escaneo** Los resultados automatizados pueden probar condiciones importantes a escala, pero la evaluación también requiere criterios, alcance, población, diseño, contexto operativo, revisión humana, limitaciones y análisis de riesgos. Silencio
-Silencio.
+La evaluación no es un escaneo** Los resultados automatizados pueden probar condiciones importantes a escala, pero la evaluación también requiere criterios, alcance, población, diseño, contexto operativo, revisión humana, limitaciones y análisis de riesgos. |
+|. |
 
 # 11. Autorizar el sistema o los controles comunes
 
@@ -533,16 +533,16 @@ Figure 7. Authorization risk decision
 
 - Descripción del sistema, categorización, límite, arquitectura, dependencias, herencia de control común y acuerdos.
 
-Silencio **Posible decision**
-Silencio.
-tención Autorización para operar/utilizar Silencio aceptado para el alcance definido, las condiciones y el tiempo
-TEN Autorización de control común TENIDO Decisión de riesgo para los controles heredados por múltiples sistemas
-TEN Autorización con condiciones TEN Operación permitida sólo con límites, acciones, hitos, o monitoreo TENIDO
+| **Posible decision** |
+|. |
+tención Autorización para operar/utilizar | aceptado para el alcance definido, las condiciones y el tiempo
+TEN Autorización de control común | Decisión de riesgo para los controles heredados por múltiples sistemas
+TEN Autorización con condiciones TEN Operación permitida sólo con límites, acciones, hitos, o monitoreo |
 No se acepta el riesgo de muerte permanente; el funcionamiento/uso no está autorizado bajo condiciones declaradas
-TENIDO Aproximación de autorización continua TENENCIA Las pruebas actuales frecuentes son compatibles con decisiones de riesgo continuas bajo criterios aprobados
+| Aproximación de autorización continua TENENCIA Las pruebas actuales frecuentes son compatibles con decisiones de riesgo continuas bajo criterios aprobados |
 
-**No hay certificación:** La autorización no significa que el sistema sea libre de riesgos o compatible para siempre. Es una aceptación documentada del riesgo residual actual por un funcionario con autoridad. Silencio
-Silencio.
+**No hay certificación:** La autorización no significa que el sistema sea libre de riesgos o compatible para siempre. Es una aceptación documentada del riesgo residual actual por un funcionario con autoridad. |
+|. |
 
 # 12. Monitor continuo
 
@@ -562,8 +562,8 @@ Silencio.
 
 - Debilidades correctas, pruebas y determinar si un cambio significativo o un mayor riesgo requiere la reautorización o cambios de términos.
 
-*Monitor para las decisiones* Recopilar sólo evidencia que tenga un propietario, propósito, regla de calidad, umbral, cadencia de revisión, escalada y respuesta. Más paneles no mejoran automáticamente la gestión del riesgo. Silencio
-Silencio.
+*Monitor para las decisiones* Recopilar sólo evidencia que tenga un propietario, propósito, regla de calidad, umbral, cadencia de revisión, escalada y respuesta. Más paneles no mejoran automáticamente la gestión del riesgo. |
+|. |
 
 # 13. Bases de control y adaptación
 
@@ -573,11 +573,11 @@ Silencio.
 
 Figura 4. Adaptación de control
 
-Silencio **Baseline**
-Silencio--------------------------------
-Silencio Bajo Silencio Inicio de controles de seguridad para sistemas federales de bajo impacto
+| **Baseline** |
+|-------------------------------- |
+| Bajo | Inicio de controles de seguridad para sistemas federales de bajo impacto
 Ø Moderate tención Inicio de controles de seguridad para sistemas federales de efecto moderado
-TEN High Silencio Inicio de controles de seguridad para sistemas federales de alto impacto
+TEN High | Inicio de controles de seguridad para sistemas federales de alto impacto
 Controles de privacidad aplicados basados en el riesgo de procesamiento y privacidad, no el nivel de impacto del sistema solo
 
 ## 13.1 Tailoring record
@@ -600,13 +600,13 @@ Controles de privacidad aplicados basados en el riesgo de procesamiento y privac
 
 *La asignación de control explica quién proporciona cada control y qué parte debe implementar el sistema*.
 
-Silencio **Tipo**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------
+| **Tipo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------- |
 TEN Common tención Aplicada una vez para sistemas múltiples; heredados bajo el alcance definido tención Control de personal de la empresa o control de instalaciones físicas
-Silencio específico para un sistema para una sola solución
-TEN Híbrido Silencio Parte común y parte sistema específico Ø Servicio de identidad de empresa más diseño de papel de aplicación
-Silencio Inhered Silencio System se basa en un proveedor de control autorizado
-Silencio Servicio externo Silencio Proveedor y responsabilidades de los clientes se definen por servicio y acuerdo Silencio SaaS logging, cliente SSO, infraestructura de proveedores
+| específico para un sistema para una sola solución |
+TEN Híbrido | Parte común y parte sistema específico Ø Servicio de identidad de empresa más diseño de papel de aplicación
+| Inhered | System se basa en un proveedor de control autorizado
+| Servicio externo | Proveedor y responsabilidades de los clientes se definen por servicio y acuerdo | SaaS logging, cliente SSO, infraestructura de proveedores
 
 ## 14.1 Controles de herencia
 
@@ -628,10 +628,10 @@ Silencio Servicio externo Silencio Proveedor y responsabilidades de los clientes
 
 Figura 5. Anatomía de control
 
-**Declaración débil** Silencio**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN La organización utiliza el MFA. TEN Identidad equipo requiere el MFA resistente al phishing para funciones de administrador nombradas a través del servicio de identidad aprobado; inscripción, excepciones y revisión trimestral de cobertura se registran en sistemas específicos. Silencio
-Los registros son revisados. Silencio Operaciones de seguridad revisiones definió eventos de alto riesgo continuamente a través del SIEM y realiza un examen diario documentado de los logotipos administrativos fallidos; casos y excepciones se mantienen durante el período aprobado.
+**Declaración débil** |**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN La organización utiliza el MFA. TEN Identidad equipo requiere el MFA resistente al phishing para funciones de administrador nombradas a través del servicio de identidad aprobado; inscripción, excepciones y revisión trimestral de cobertura se registran en sistemas específicos. |
+Los registros son revisados. | Operaciones de seguridad revisiones definió eventos de alto riesgo continuamente a través del SIEM y realiza un examen diario documentado de los logotipos administrativos fallidos; casos y excepciones se mantienen durante el período aprobado.
 Los respaldos están realizados. TEN Operaciones crea copias de seguridad diarias encriptadas de las bases de datos Tier 1 listadas, mantiene una copia aislada, monitorea fallos y realiza pruebas trimestrales de restauración contra RTO de cuatro horas y RPO de 30 minutos.
 
 ## 15.1 Lista de comprobación de estados
@@ -658,15 +658,15 @@ Los respaldos están realizados. TEN Operaciones crea copias de seguridad diaria
 
 Gráfico 6 Estructura del procedimiento de evaluación
 
-Silencio **Element** Silencio**
-Silencio...
-Silencio Objetivo de evaluación Silencio Qué determinación el procedimiento está diseñado para apoyar
-TENIDO Método TENIDO Examinar, entrevistar o probar
+| **Element** |**
+|... |
+| Objetivo de evaluación | Qué determinación el procedimiento está diseñado para apoyar
+| Método | Examinar, entrevistar o probar
 TENCIÓN FORMULADA , mecanismo, actividad, individuo o evidencia examinada
 ← Depth tención Nivel de rigor/detalles: básica, enfocada o integral tención
 TENCIÓN TENIDA Pantalones o alcances: básica, enfocada o completa
 TENER Evidencia TENIDA Información fiable en apoyo de la determinación
-Silencioso Result Silencio Satisfecho u otro que satisfecho, con excepciones y limitaciones
+Silencioso Result | Satisfecho u otro que satisfecho, con excepciones y limitaciones
 
 ## 16.1 Población y muestreo
 
@@ -751,16 +751,16 @@ Altura:3.39605in" alt="Monitoring cierra el bucle del cambio y la evidencia para
 
 Gráfico 8 Supervisión y respuesta continuas
 
-Silencio **Field** Silencio **Example decision content**
-Silencio.
-TENIDO Control/riesgo ¿Qué requisito y riesgo se dirigen las pruebas
+| **Field** | **Example decision content**
+|. |
+| Control/riesgo ¿Qué requisito y riesgo se dirigen las pruebas |
 Ø Indicador Silencioso Configuración, cobertura, evento, hallazgo, desempeño, excepción o cambio
-Fuente/propietario Silencio Sistema autorizado y responsable de los datos
-← Frecuencia/trigger Silencio Daily, mensual, anual, lanzamiento, incidente, cambio de proveedor, cambio significativo tención
-TEN Quality ANTE Completeness, accuracy, timeliness, integrity, access, time synchronization TEN
-TENISTERIO TENIDO Condición que requiere revisión, escalada, corrección, reevaluación o autorización acción TENIDO
-tención Audience Silencio Aplicador, propietario del sistema, funcionario de seguridad/privacy, ejecutivo de riesgo, autorizando la detención
-← Retención Silencio Historia requerida, protección de pruebas y actualización de paquetes
+Fuente/propietario | Sistema autorizado y responsable de los datos
+← Frecuencia/trigger | Daily, mensual, anual, lanzamiento, incidente, cambio de proveedor, cambio significativo tención
+TEN Quality ANTE Completeness, accuracy, timeliness, integrity, access, time synchronization |
+TENISTERIO | Condición que requiere revisión, escalada, corrección, reevaluación o autorización acción |
+tención Audience | Aplicador, propietario del sistema, funcionario de seguridad/privacy, ejecutivo de riesgo, autorizando la detención
+← Retención | Historia requerida, protección de pruebas y actualización de paquetes
 
 # 19. OSCAL and Automation
 
@@ -771,12 +771,12 @@ tención Audience Silencio Aplicador, propietario del sistema, funcionario de se
 Figura 9. Flujo de modelo OSCAL
 
 Silencioso ** Modelo OSCAL**
-Silencio.
-Silencio Catálogo Silencio Controles estructurados, mejoras, parámetros y contenido de soporte Silencio
-TEN Perfil TENIDO Selecciona, modifica y organiza controles de catálogos TEN
-tención Componente Definición Silencio Describe las capacidades de implementación de control reutilizables
+|. |
+| Catálogo | Controles estructurados, mejoras, parámetros y contenido de soporte |
+TEN Perfil | Selecciona, modifica y organiza controles de catálogos |
+tención Componente Definición | Describe las capacidades de implementación de control reutilizables
 Plan de Seguridad del Sistema Silencioso Describir el sistema y controlar la implementación
-Silencioso Plan de Evaluación Silencio Define el alcance de la evaluación, temas, tareas, métodos y horarios
+Silencioso Plan de Evaluación | Define el alcance de la evaluación, temas, tareas, métodos y horarios
 Silenciosos resultados de evaluación
 tención Plan de Acción y Hitos Silenciosos Temas riesgos, hallazgos, acciones, hitos y estatus
 
@@ -802,33 +802,33 @@ tención Plan de Acción y Hitos Silenciosos Temas riesgos, hallazgos, acciones,
 
 Limite el acceso de sistema e información a usuarios autorizados, procesos, dispositivos y acciones permitidas.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. inventario, roles, aprobaciones, MFA, reglas de acceso, revisiones, revocaciones, registros TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. inventario, roles, aprobaciones, MFA, reglas de acceso, revisiones, revocaciones, registros | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## AT — Awareness and Training
 
 Fomentar la conciencia general y el conocimiento específico de las responsabilidades de seguridad y privacidad.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención de la población, el plan de estudios, la asignación de roles, la terminación, ejercicios, excepciones, evaluación TENIDO evidencia al control exacto; validar la población, la fecha, configuración, operación, excepciones y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención de la población, el plan de estudios, la asignación de roles, la terminación, ejercicios, excepciones, evaluación | evidencia al control exacto; validar la población, la fecha, configuración, operación, excepciones y retest.
 
 ## AU — Audit and Accountability
 
 Crear, proteger, revisar, conservar y utilizar registros que apoyen la detección, investigación y rendición de cuentas.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silencio Lista de eventos, fuentes de registro, sincronización de tiempo, campos, retención, acceso, revisión, alertas TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna-- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. | Lista de eventos, fuentes de registro, sincronización de tiempo, campos, retención, acceso, revisión, alertas | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## CA — Assessment, Authorization, and Monitoring
 
 Evaluar los controles, gestionar los hallazgos, autorizar el riesgo y supervisar la seguridad y la postura de privacidad.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. ← Planes de evaluación/reportaciones, autorizaciones, POA plagaM, estrategia de monitoreo, resultados TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna-- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. ← Planes de evaluación/reportaciones, autorizaciones, POA plagaM, estrategia de monitoreo, resultados | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 # 21. Familias de control: configuración, contingencia, identidad, incidentes y mantenimiento
 
@@ -838,40 +838,40 @@ tención Definir el alcance, propietario, requisitos, procedimientos, tecnologí
 
 Establecer bases de referencia controladas y gestionar la configuración y el cambio seguros.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN Baselines, inventarios, aprobaciones, pruebas de cambio, escaneos, desviaciones, revisiones TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN Baselines, inventarios, aprobaciones, pruebas de cambio, escaneos, desviaciones, revisiones | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## CP — Contingency Planning
 
 Preparar, probar y mantener las capacidades de recuperación y continuidad.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN BIA, planes, copias de seguridad, procesamiento alternativo, ejercicios, restauraciones, evidencia RTO/RPO TENIDO para el control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN BIA, planes, copias de seguridad, procesamiento alternativo, ejercicios, restauraciones, evidencia RTO/RPO | para el control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 IA - Identificación y autenticación
 
 Únicamente identificar y autenticar personas, dispositivos y procesos con una fuerza adecuada al riesgo.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. prueba de identidad, autenticadores, MFA, federación, identidades de servicio, registros de ciclo de vida TENIDO evidencia al control exacto; valida la población, fecha, configuración, operación, excepciones y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. prueba de identidad, autenticadores, MFA, federación, identidades de servicio, registros de ciclo de vida | evidencia al control exacto; valida la población, fecha, configuración, operación, excepciones y retest.
 
 ## IR — Respuesta de incidentes
 
 Prepárate para, detecta, analiza, contiene, recupera, reporta y mejora después de incidentes.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Plan, roles, libros de juego, casos, evidencia, notificación, ejercicios, lecciones TENIDO Pruebas coinciden con el control exacto; validan la población, fecha, configuración, operación, excepciones y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Plan, roles, libros de juego, casos, evidencia, notificación, ejercicios, lecciones | Pruebas coinciden con el control exacto; validan la población, fecha, configuración, operación, excepciones y retest.
 
 ## MA — Maintenance
 
 Mantenimiento, herramientas, personal, acceso y actividad remota del sistema de control.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Calendario de mantenimiento, aprobaciones, herramientas, sanitización, sesiones remotas, logs tención Pruebas coinciden con el control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 # 22. Familias de control: Medios, Física, Planificación, Programa y Personal
@@ -882,41 +882,41 @@ tención Definir el alcance, propietario, requisitos, procedimientos, tecnologí
 
 Proteger, controlar, transportar, sanitar y disponer de medios digitales y no digitales.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silencioso inventario de medios, acceso, marcación, transporte, encriptación, sanitización, eliminación TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silencioso inventario de medios, acceso, marcación, transporte, encriptación, sanitización, eliminación | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 PE - Protección física y ambiental
 
 Protege instalaciones, equipos, servicios públicos y personas de amenazas físicas y ambientales.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna--
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silenciosas, visitantes, cámaras, alarmas, potencia, fuego, temperatura, instalaciones críticas TENENCIA Pruebas coinciden con el control exacto; validar la población, fecha, configuración, operación, excepciones y retest. TEN
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida eterna-- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silenciosas, visitantes, cámaras, alarmas, potencia, fuego, temperatura, instalaciones críticas TENENCIA Pruebas coinciden con el control exacto; validar la población, fecha, configuración, operación, excepciones y retest. |
 
 ## PL — Planning
 
 Planes de seguridad y privacidad del sistema de documentos, reglas de comportamiento, arquitectura y controles previstos.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silencio Planes de sistema, límites, flujos de datos, reglas, aprobaciones, versiones, revisión TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. | Planes de sistema, límites, flujos de datos, reglas, aprobaciones, versiones, revisión | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## PM — Gestión de programas
 
 Operar programas de seguridad y privacidad de la información en toda la organización y gobernanza compartida.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Planes de programas, líderes, recursos, estrategia de riesgo, métricas, inventarios de empresas TENA evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## PS — Seguridad del Personal
 
 Gestionar el control del personal, los acuerdos, las transferencias, la terminación, las sanciones y el riesgo.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención de pruebas, acuerdos, cambios de roles, terminación de acceso, personal de terceros TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest. TEN
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención de pruebas, acuerdos, cambios de roles, terminación de acceso, personal de terceros | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest. |
 
 # 23. Familias de control: Privacidad, Riesgo, Adquisición, Comunicaciones, Integridad y Cadena de Suministro
 
@@ -926,49 +926,49 @@ tención Definir el alcance, propietario, requisitos, procedimientos, tecnologí
 
 Administrar los propósitos de procesamiento, autoridad, minimización, consentimiento, aviso, acceso, corrección y responsabilidad de privacidad.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención Inventario de datos, finalidad/autoridad, avisos, consentimiento, minimización, derechos, evaluaciones TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. tención Inventario de datos, finalidad/autoridad, avisos, consentimiento, minimización, derechos, evaluaciones | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest.
 
 ## RA — Risk Assessment
 
 Identificar amenazas, vulnerabilidades, probabilidad, impactos, problemas de privacidad y respuestas de riesgo.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Silencio Evaluaciones de riesgo, resultados de vulnerabilidad, fuentes de amenaza, impacto, tratamiento, actualizaciones TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest. TEN
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. | Evaluaciones de riesgo, resultados de vulnerabilidad, fuentes de amenaza, impacto, tratamiento, actualizaciones | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones y retest. |
 
 ## SA — Adquisición de sistemas y servicios
 
 Construir seguridad y privacidad en la adquisición, desarrollo, ingeniería, oferta y servicios externos.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Ø Requisitos, contratos, SDLC, arquitectura, desarrolladores, pruebas, SBOM, evidencia de proveedores TENA evidencia para el control exacto; validar la población, fecha, configuración, operación, excepciones y retest.
 
 ## SC — Protección de sistemas y comunicaciones
 
 Protege límites, comunicaciones, arquitectura, criptografía, aislamiento y recursos compartidos.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Ø Diagramas, segmentación, reglas de cortafuegos, encriptación, claves, protocolos, pruebas de límites TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Ø Diagramas, segmentación, reglas de cortafuegos, encriptación, claves, protocolos, pruebas de límites | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## SI — System and Information Integrity
 
 Encontrar y corregir defectos, código malicioso, fallas de integridad, actualizaciones inseguras y comportamiento anómalo.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Ø vulnerabilidades, parches, validación de la integridad, defensas de malware, alertas, correcciones TENIDO Pruebas del control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. Ø vulnerabilidades, parches, validación de la integridad, defensas de malware, alertas, correcciones | Pruebas del control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 ## SR — Supply Chain Risk Management
 
 Gestionar riesgos de productos, servicios, proveedores, desarrolladores, integradores y cadena de suministro.
 
-Silencio **Implementation focus** Silencio **Posibles pruebas** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN C-SCRM plan, inventario de proveedores, crítica, contratos, procedencia, monitoreo, salida TENIDO evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
+| **Implementation focus** | **Posibles pruebas** Silencioso**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención Definir el alcance, propietario, requisitos, procedimientos, tecnología, responsabilidades, excepciones y monitoreo. TEN C-SCRM plan, inventario de proveedores, crítica, contratos, procedencia, monitoreo, salida | evidencia al control exacto; validar la población, fecha, configuración, operación, excepciones, y retest.
 
 # 24. Riesgo de privacidad y seguridad – Colaboración de privacidad
 
@@ -986,8 +986,8 @@ tención Definir el alcance, propietario, requisitos, procedimientos, tecnologí
 
 - La selección y la adaptación de la base de datos de privacidad dependen del procesamiento, propósito, autoridad, personas, datos, contexto y riesgo de privacidad, no sólo de impacto FIPS.
 
-Silencio **Pregunta**
-Silencio...
+| **Pregunta** |
+|... |
 ¿Por qué se procesan los datos? ← Propósito, autoridad, sistema/ plan de privatización
 ¿Qué datos y personas? inventario de datos, tipos de información, flujo de datos
 ¿Qué problemas podrían crear el procesamiento? Evaluación del riesgo de privacidad / PIA como aplicable
@@ -998,14 +998,14 @@ TEN ¿Cómo se procesa limitado y explicado? Minimización, aviso, consentimient
 
 *Release 5.2.0 fortalece la actualización de software, parche, integridad y cobertura de desarrollo resiliente.*
 
-Silencio **Release 5.2.0 cambio**
-Silencio.
-TEN SA-15(13) — proceso de desarrollo, estándares y mejora de herramientas TENENCIA Añade atención a las prácticas de desarrollo de software resistente relacionadas con actualizaciones y parches TEN
+| **Release 5.2.0 cambio** |
+|. |
+TEN SA-15(13) — proceso de desarrollo, estándares y mejora de herramientas TENENCIA Añade atención a las prácticas de desarrollo de software resistente relacionadas con actualizaciones y parches |
 TEN SA-24 — Diseño para la Resiliencia Cibernética TENER Nuevo control enfatizando el diseño del sistema/software que puede soportar, recuperar, adaptar y continuar en condiciones adversas
-TEN SI-02(07) — mejora de la remediación de fallas TENIDO Añade requisitos centrados en actualizaciones de software/firmware confiables y seguras
-Silencio SI-07(12) — revisión del mejoramiento de la verificación de la integridad
-Silencio Discusión / actualizaciones relacionadas con el control Silencio Clarifies adquisición, diseño, documentación, gestión de actualizaciones, integridad, monitoreo, incidentes y relaciones de evaluación
-Silencio SP 800-53A 5.2.0 Silencio Añade los procedimientos correspondientes para los nuevos controles/enhancementos
+TEN SI-02(07) — mejora de la remediación de fallas | Añade requisitos centrados en actualizaciones de software/firmware confiables y seguras
+| SI-07(12) — revisión del mejoramiento de la verificación de la integridad |
+| Discusión / actualizaciones relacionadas con el control | Clarifies adquisición, diseño, documentación, gestión de actualizaciones, integridad, monitoreo, incidentes y relaciones de evaluación
+| SP 800-53A 5.2.0 | Añade los procedimientos correspondientes para los nuevos controles/enhancementos
 tención SP 800-53B 5.2.0 Ø Reissued for consistency; NIST indica que las selecciones de base no cambiaron
 
 ## 25.1 Enfoque de evidencia
@@ -1020,28 +1020,28 @@ tención SP 800-53B 5.2.0 Ø Reissued for consistency; NIST indica que las selec
 
 *Los recursos oficiales y los instrumentos de código abierto pueden apoyar la autorización, las pruebas, la evaluación y la vigilancia continua.*
 
-Silencio **Recurso/herramienta**
-Silencio...
+| **Recurso/herramienta** |
+|... |
 tención NIST CPRT tención Controles oficiales actuales, bases de referencia, procedimientos y descargas
 Ø Contenido oficial de control NIST OSCAL
 Cumplimiento permanente Trestle Silencioso OSCAL Autorización, transformación y gobernanza
-Silencio Lula Silencio Evaluar las pruebas de control como código
-TENIDO CISO Asistente TENIDO Riesgo, controles, pruebas, evaluaciones y hallazgos
-Silencio Heimdall Silencio Vista y normalizar los resultados de la evaluación de la seguridad
-Silencio OpenControl Silencio documentación de cumplimiento como texto estructurado
-Silencioso OSCAL CLI Silencio Validar y transformar el contenido OSCAL
-TEN Wazuh TENRI Endpoint monitoring, file integrity, log analysis, and alerts TEN
-TEN OpenSCAP TENIDO Configuración y evaluación de la vulnerabilidad
+| Lula | Evaluar las pruebas de control como código
+| CISO Asistente | Riesgo, controles, pruebas, evaluaciones y hallazgos
+| Heimdall | Vista y normalizar los resultados de la evaluación de la seguridad
+| OpenControl | documentación de cumplimiento como texto estructurado
+Silencioso OSCAL CLI | Validar y transformar el contenido OSCAL
+TEN Wazuh TENRI Endpoint monitoring, file integrity, log analysis, and alerts |
+TEN OpenSCAP | Configuración y evaluación de la vulnerabilidad
 TEN Osquery TEN TEN Endpoint inventario y consultas de configuración
-Silencio Nmap Silencio Autorizado activo y descubrimiento de servicios
-Silencio Greenbone Community Edition Silencio Evaluación de vulnerabilidad autorizada
+| Nmap | Autorizado activo y descubrimiento de servicios
+| Greenbone Community Edition | Evaluación de vulnerabilidad autorizada
 Repositorio, imagen, dependencia, secreto y cheques de IaC
-Silencio OWASP ZAP 
+| OWASP ZAP  |
 ← Keycloak ← Identidad, roles, MFA, sesiones y eventos de auditoría
 ← DefectDojo tóxico Encontrar una agregación, asignación, remediación y retestigo
-TEN Open Policy Agent TENIDO Decisiones de política como código
+TEN Open Policy Agent | Decisiones de política como código
 
-**Autorización y límites:** Utilice herramientas técnicas sólo en sistemas, redes, repositorios, datos y cuentas que posee o tiene permiso escrito para probar. Una herramienta puede apoyar pruebas; no puede elegir tolerancia al riesgo, aprobar la adaptación, aceptar el riesgo o emitir autorización. Silencio
+**Autorización y límites:** Utilice herramientas técnicas sólo en sistemas, redes, repositorios, datos y cuentas que posee o tiene permiso escrito para probar. Una herramienta puede apoyar pruebas; no puede elegir tolerancia al riesgo, aprobar la adaptación, aceptar el riesgo o emitir autorización. |
 Respuesta
 
 ## 26.1 NIST CPRT
@@ -1192,15 +1192,15 @@ Retain: authority, scope, source/release, version, configuración/query, populat
 
 *Managers keep RMF focused on mission risk, reliable evidence, timely decisions, and correction.*
 
-**Area** Silencio **Pregunta principal**
-Silencio.
-¿Sabemos qué hay dentro, heredado, conectado y proporcionado externamente? Silencio Nube desconocida, proveedor, o camino de administración
-Silencio Categorization Silencio ¿El impacto refleja todo tipo de información, dependencia, privacidad, seguridad y efecto de misión? Silencio Categoría copiado de otro sistema
-tención Selección Silencio ¿Están justificadas las bases de referencia, la adaptación, los parámetros, las adiciones y las asignaciones? Silencio Conjunto de control tratado como lista de verificación sin cola
-¿Pueden los propietarios explicar quién / qué / dónde / cuándo y mostrar pruebas de funcionamiento? Silencio Lenguaje de política copiado como implementación
+**Area** | **Pregunta principal**
+|. |
+¿Sabemos qué hay dentro, heredado, conectado y proporcionado externamente? | Nube desconocida, proveedor, o camino de administración
+| Categorization | ¿El impacto refleja todo tipo de información, dependencia, privacidad, seguridad y efecto de misión? | Categoría copiado de otro sistema
+tención Selección | ¿Están justificadas las bases de referencia, la adaptación, los parámetros, las adiciones y las asignaciones? | Conjunto de control tratado como lista de verificación sin cola
+¿Pueden los propietarios explicar quién / qué / dónde / cuándo y mostrar pruebas de funcionamiento? | Lenguaje de política copiado como implementación
 ¿Son creíbles el alcance, la población, los métodos, la independencia, las limitaciones y las pruebas? tención Escáner es igual a la evaluación
-Silencio Autorización Silencio ¿El funcionario de la decisión entiende el riesgo residual y las condiciones? Silencio Paquete oculta incertidumbre grave/abierto
-← Monitorización Silencio ¿Los cambios e indicadores conducen a la respuesta y actualizaciones de paquetes? Silencio Dashboard sin acción responsable
+| Autorización | ¿El funcionario de la decisión entiende el riesgo residual y las condiciones? | Paquete oculta incertidumbre grave/abierto
+← Monitorización | ¿Los cambios e indicadores conducen a la respuesta y actualizaciones de paquetes? | Dashboard sin acción responsable
 ¿Se financian acciones severas y atrasadas y se prueban de forma independiente? Extensiones repetidas sin decisión de riesgo
 
 ## 27.1 Gestor ritmo
@@ -1284,17 +1284,17 @@ Respuesta
 
 ## 29.2 Plan de 30 días
 
-**Días** Silencio**
-Silencio------------------------------
-TENIDO 1–4 TENIDO RMF, suite de publicaciones, roles, tres niveles TENIDO Concept map y RACI ANTE
-TEN 5–7 TENIDO Boundary, información, flujo de datos, categorización TENIDO Descripción del sistema y categoría memo ANTE
-TEN 8–11 TENIDO Baselines, ajuste, parámetros, asignación TENIDO Control representativo ajustado TENIDO
-Silencio 12–15 Silencioso Aplicación y estudio de la familia
-TEN 16–19 TENIDO SP 800-53A methods, populations, sampling TENIDO Assessment plan and five workpapers TEN
+**Días** |**
+|------------------------------ |
+| 1–4 | RMF, suite de publicaciones, roles, tres niveles | Concept map y RACI ANTE
+TEN 5–7 | Boundary, información, flujo de datos, categorización | Descripción del sistema y categoría memo ANTE
+TEN 8–11 | Baselines, ajuste, parámetros, asignación | Control representativo ajustado |
+| 12–15 Silencioso Aplicación y estudio de la familia |
+TEN 16–19 | SP 800-53A methods, populations, sampling | Assessment plan and five workpapers |
 tención 20–22 Silencioso Findings, risk, POA plagaM, retest Dos registros de hallazgo a cierre
-Silencio 23–25 Silencio Autorización y vigilancia Silencio Estrategia ejecutiva breve y de vigilancia
+| 23–25 | Autorización y vigilancia | Estrategia ejecutiva breve y de vigilancia
 Ø 26–27 Silencioso OSCAL y herramientas aprobadas
-TEN 28–30 TENIDO Portfolio y entrevista TENIDO Portafolio Sanitizado y cinco historias de STAR
+TEN 28–30 | Portfolio y entrevista | Portafolio Sanitizado y cinco historias de STAR
 
 ## 29.3 ¿Qué es RMF?
 
@@ -1342,8 +1342,8 @@ Revisión 5, Comunicado 5.2.0, emitido en agosto de 2025.
 
 ## 30.1 Registro de sistemas y límites
 
-Silencio**
-Silencio...
+|** |
+|... |
 "Sistema/propietario/misión"
 "La autorización de la autoridad en la vida"
 "La información sobre los tipos de información y el flujo de datos son insostenibles"
@@ -1351,32 +1351,32 @@ Silencio...
 Los servicios externos/los proveedores de la vida siguen adelante.
 Controles/herencia comunes en la vida
 "Dependencias/localizaciones"
-TENIDO Categoría/racional TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \ \    \ \ \                                                                                                                                                                                            
+| Categoría/racional | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \ \    \ \ \                                                                                                                                                                                            
 "La etapa/cambios del ciclo de vida en la vida"
 "Aprobaciones/versión en la vida"
 
 ## 30.2 Documento de trabajo sobre la aplicación del control
 
-Silencio**
-Silencio...
-, control/enhancement/release TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \                                                                                                                                                                                                
-TENIDO Parameter/requirement
+|** |
+|... |
+, control/enhancement/release | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \                                                                                                                                                                                                
+| Parameter/requirement |
 "Asignación/providente en la vida"
 "La vida escoge/población"
 ¿Quién?
 ¿Cómo?
-Silencio cuando / gatillo/frecuencia Silencio \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \                                                                                                                                                                                                         
-TENIDO Evidencia/fuente/retención
+| cuando / gatillo/frecuencia | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \                                                                                                                                                                                                         
+| Evidencia/fuente/retención |
 "Excepción/failure/review"
 "Prisionista/aprobada/actualizada"
 
 ## 30.3 Assessment and finding record
 
-Silencio**
-Silencio.
-TENIDO Objetivo/método/objeto TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \                                                                                                                                                                                                       
-TENIDO DEPTH/coverage/period TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \   \                                                                                                                                                                                              
-TENIDO POBREZA/Sample/reliability
+|** |
+|. |
+| Objetivo/método/objeto | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \                                                                                                                                                                                                       
+| DEPTH/coverage/period | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \   \                                                                                                                                                                                              
+| POBREZA/Sample/reliability |
 Los pasos/herramientas/versión incurrieron en la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 Evidencia/resultar la situación actual
 Excepción / población afectada
@@ -1387,60 +1387,60 @@ Excepción / población afectada
 
 ## 30.4 Registro de autorización y seguimiento
 
-Silencio**
-Silencio...
-TENIDO Paquete/versión/fecha TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \                                                                                                                                                                                  
+|** |
+|... |
+| Paquete/versión/fecha | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \                                                                                                                                                                                  
 Silencioso resumen del riesgo confidencialidad \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \ \ \    \ \                                                                                                                                                                                            
 "La decisión/oficial/termina" "Permiso"
 Las condiciones de vida/expiración siguen adelante.
-TENIDO POA CENTRO M / graves riesgos TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \ \                                                                                                                                                                                            
+| POA CENTRO M / graves riesgos | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \ \                                                                                                                                                                                            
 "Indicadores/fuentes/frecuencias"
 TENIENDO EL ESPECTO/EScalation TEN \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \ \ \                                                                                                                                                                                             
 Los disparadores de cambio significativos de la vida
-TENIENDO PRESENTACIÓN DE INFORMES/Envases TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \  \                                                                                                                                                                                 
+TENIENDO PRESENTACIÓN DE INFORMES/Envases | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \  \                                                                                                                                                                                 
 Reautorización/cerramiento en la vida
 
 ## 30.5 Glosario
 
-Silencio**
-Silencio...
-TEN Autorización TENIDO Aceptación oficial del riesgo residual definido para un sistema o controles comunes. Silencio
-tención Autorización límite Silencio Conjunto de elementos del sistema incluidos en la decisión de riesgo. Silencio
-Silencio Baseline Silencio Inicio de control set.
-Silencio Control común Silencio Control implementado para múltiples sistemas.
-← Mejora del control Silencio Requisitos adicionales o más fuertes asociados con un control de base.
+|** |
+|... |
+TEN Autorización | Aceptación oficial del riesgo residual definido para un sistema o controles comunes. |
+tención Autorización límite | Conjunto de elementos del sistema incluidos en la decisión de riesgo. |
+| Baseline | Inicio de control set.
+| Control común | Control implementado para múltiples sistemas.
+← Mejora del control | Requisitos adicionales o más fuertes asociados con un control de base.
 tención de la herencia de control Silencioso en un control aplicable implementado por otro proveedor.
-Parámetro de control Silencio Valor asignado a la Organización dentro de un control.
-TENIDO CPRT ANTE NIST Cybersecurity and Privacy Reference Tool.
-El impacto del sistema de alta agua tención tiene precedencia sobre otros objetivos de información/seguridad aplicables, sujetos al análisis aprobado. Silencio
-Silencioso OSCAL Silencio Controles de Seguridad Abierto Evaluación Idioma.
-← POA plagaM Silencio Plan de acción y hitos para debilidades, con acciones correctivas. Silencio
-TENIDO Riesgo residual TENIDO El riesgo permanece después de controles y tratamiento. Silencio
-TENIDO RMF TENIDO Marco de Gestión de Riesgos.
-← Clasificación de seguridad Silencio Potential-impact determination for confidentiality, integrity, and availability.
+Parámetro de control | Valor asignado a la Organización dentro de un control.
+| CPRT ANTE NIST Cybersecurity and Privacy Reference Tool. |
+El impacto del sistema de alta agua tención tiene precedencia sobre otros objetivos de información/seguridad aplicables, sujetos al análisis aprobado. |
+Silencioso OSCAL | Controles de Seguridad Abierto Evaluación Idioma.
+← POA plagaM | Plan de acción y hitos para debilidades, con acciones correctivas. |
+| Riesgo residual | El riesgo permanece después de controles y tratamiento. |
+| RMF | Marco de Gestión de Riesgos.
+← Clasificación de seguridad | Potential-impact determination for confidentiality, integrity, and availability.
 tención Plan de Seguridad del Sistema Silencioso Descripción del sistema y la implementación del control.
-TEN Tailoring Silencio Ajuste basado en el riesgo y especificación de un conjunto de control inicial.
+TEN Tailoring | Ajuste basado en el riesgo y especificación de un conjunto de control inicial.
 
 ## 30.6 Subject index
 
 Subjeto**
-Silencio...
-TENIDO ANTERIOR ANTERIOR 10, 16-17
+|... |
+| ANTERIOR ANTERIOR 10, 16-17 |
 Silencioso Autorización
-tención Bases de referencia/tailoring Silencio 13 Silencio
+tención Bases de referencia/tailoring | 13 |
 Silencioso
-Silencio Controles comunes
+| Controles comunes |
 Silenciosas familias de control
 Silencioso para la aplicación
 Silencioso analista junior
 Silencioso Silencioso
 Silencioso de vigilancia
 Silencioso OSCAL
-TENIDO ANTERIOR ANTERIOR 17, 30
-confidencialidad Silencio 24 Silencio
+| ANTERIOR ANTERIOR 17, 30 |
+confidencialidad | 24 |
 Silencioso Liberación 5.2.0
 Papeles en la vida cotidiana
-Silencioso Selección Silencio 8 Silencio
+Silencioso Selección | 8 |
 Silencioso límite del sistema
 Ø Herramientas para prevenir la muerte
 
@@ -1472,5 +1472,5 @@ Silencioso límite del sistema
 
 - [ ]] [ cursos de introducción de XNIST RMF](https://csrc.nist.gov/projects/risk-management/rmf-courses)
 
-tención **Recordaje final:** Comunicados NIST, bases de referencia, parámetros, superposiciones, sistemas, amenazas, leyes, contratos, herramientas y cambio de riesgo organizativo. Confirme la fuente oficial actual, la autoridad local y los requisitos aplicables antes de la implementación, evaluación o autorización. Silencio
-Silencio.
+tención **Recordaje final:** Comunicados NIST, bases de referencia, parámetros, superposiciones, sistemas, amenazas, leyes, contratos, herramientas y cambio de riesgo organizativo. Confirme la fuente oficial actual, la autoridad local y los requisitos aplicables antes de la implementación, evaluación o autorización. |
+|. |

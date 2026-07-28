@@ -442,7 +442,7 @@ Aviso de gravação: ** Não é uma questão catastrófica. Relate cenários gra
 
 *Contratos convertem requisitos selecionados em responsabilidades executórias.*
 
-Área de Clause** Perguntas para o acordo**
+Área de Cláusula** Perguntas para o acordo**
 -------------------------------------------------------------------
 □ Programa de segurança Que framework, controles, políticas, testes, treinamento e evidência de garantia são necessários? □
 Utilização dos dados Que dados podem ser usados, onde, para que finalidade, por quanto tempo, e para treinamento de modelo? □

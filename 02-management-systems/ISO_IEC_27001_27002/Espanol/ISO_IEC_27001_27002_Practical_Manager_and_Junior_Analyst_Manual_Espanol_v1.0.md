@@ -12,8 +12,8 @@
 
 Primera edición • Julio 2026
 
-Silencio **Inside:** Cláusulas 4–10 • todos los 93 controles del Anexo A • riesgo • Declaración de aplicabilidad • auditoría • certificación • evidencia • herramientas • laboratorios • preparación de la carrera
-Silencio.
+| **Inside:** Cláusulas 4–10 • todos los 93 controles del Anexo A • riesgo • Declaración de aplicabilidad • auditoría • certificación • evidencia • herramientas • laboratorios • preparación de la carrera |
+|. |
 
 # Publication and Use Notice
 
@@ -50,7 +50,7 @@ Los auditores internos deben centrarse en criterios objetivos, independencia, po
 Las organizaciones que solicitan la certificación deben confirmar las normas, enmiendas, alcance de certificación y expectativas de acreditación con los profesionales competentes.
 
 Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo y una guía de capítulo verificada. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego actualice la tabla completa.
-Silencio.
+|. |
 
 # Tabla de contenidos
 
@@ -188,12 +188,12 @@ Silencio.
 
 Gráfico 1 Ciclo de mejora continua de los ISMS
 
-Silencio ** Documentos** Silencio**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna...
-Silencio ISO/IEC 27001:2022 Silencio Requisitos de ISMS normativos, incluyendo el Anexo Un control de referencia ANTE LAS ORGANIZACIONES pueden ser certificados
-Silencio ISO/IEC 27001:2022/Amd 1:2024 Silencio Cambios climáticos que afectan el contexto y la consideración de los interlocutores interesados Silencio Aplicado con el estándar base  permanente
-Silencio ISO/IEC 27002:2022 Silencio Orientación para la aplicación de los controles de seguridad de la información
-Silencio ISO/IEC 27005:2022 Silencioso Guía para la gestión del riesgo de seguridad de la información TENIDO Orientación de apoyo, no el estándar de certificación 27001
+| ** Documentos** |**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna... |
+| ISO/IEC 27001:2022 | Requisitos de ISMS normativos, incluyendo el Anexo Un control de referencia ANTE LAS ORGANIZACIONES pueden ser certificados
+| ISO/IEC 27001:2022/Amd 1:2024 | Cambios climáticos que afectan el contexto y la consideración de los interlocutores interesados | Aplicado con el estándar base  permanente
+| ISO/IEC 27002:2022 | Orientación para la aplicación de los controles de seguridad de la información
+| ISO/IEC 27005:2022 Silencioso Guía para la gestión del riesgo de seguridad de la información | Orientación de apoyo, no el estándar de certificación 27001
 
 - Las cláusulas 4-10 contienen requisitos que una organización debe abordar para su conformidad.
 
@@ -222,12 +222,12 @@ Silencio ISO/IEC 27005:2022 Silencioso Guía para la gestión del riesgo de segu
 - Mantenga el alcance alineado con los inventarios de activos, procesos, red, nube, proveedor y flujo de datos.
 
 Silencioso ** Prueba de la encuesta**
-Silencio.
-¿Qué entidades jurídicas, sitios, servicios, procesos y tecnología están incluidas? Silencio Declaración y mapas aprobados del alcance
-TENIDO INTERCAMBIO TENIDO ¿Qué conecta el alcance con otros equipos, sistemas, proveedores y ubicaciones? flujos de datos, arquitectura, contratos, matriz de responsabilidad
-¿Podría ocultarse información importante o riesgo fuera del límite establecido? Silencio Reconocimiento de inventarios y descubrimientos
-Silencio ¿Qué desencadena una revisión de alcance? Silencio Cambio de registros, adquisiciones y puertas de producto Silencio
-¿Podrían los efectos climáticos o las expectativas de los interesados afectar a la disponibilidad, proveedores, instalaciones, personas o obligaciones? Silencio Análisis de contexto, decisión, acciones cuando sea relevante
+|. |
+¿Qué entidades jurídicas, sitios, servicios, procesos y tecnología están incluidas? | Declaración y mapas aprobados del alcance
+| INTERCAMBIO | ¿Qué conecta el alcance con otros equipos, sistemas, proveedores y ubicaciones? flujos de datos, arquitectura, contratos, matriz de responsabilidad
+¿Podría ocultarse información importante o riesgo fuera del límite establecido? | Reconocimiento de inventarios y descubrimientos
+| ¿Qué desencadena una revisión de alcance? | Cambio de registros, adquisiciones y puertas de producto |
+¿Podrían los efectos climáticos o las expectativas de los interesados afectar a la disponibilidad, proveedores, instalaciones, personas o obligaciones? | Análisis de contexto, decisión, acciones cuando sea relevante
 
 # 3. Evaluación de riesgos y tratamiento de riesgos
 
@@ -239,17 +239,17 @@ Gráfico 2 Corriente de trabajo sobre el riesgo de seguridad de la información
 
 Definir los criterios de riesgo antes de anotar: método de identificación de riesgos, escalas de probabilidad y consecuencias, reglas de cálculo, umbrales de aceptación, tratamiento requerido, escalada, frecuencia de revisión y autoridad propietaria de riesgos. Aplicar el método lo suficientemente consistente para producir resultados válidos y comparables.
 
-Silencio **Field** Silencio**
-Silencio...
+| **Field** |**
+|... |
 TEN ASO o objetivo ANTERI Portal del cliente y disponibilidad requerida contractualmente
-Silencio Amenaza evento Silencio Credencial robo seguido de acceso administrativo no autorizado
+| Amenaza evento | Credencial robo seguido de acceso administrativo no autorizado
 TEN Vulnerability or condition ← Inscripción débil y no MFA resistente al phishing
 ← Consecuencias
-tención Controles existentes TEN MFA, acceso condicional, registro, verificación de apoyo TENIDO
+tención Controles existentes TEN MFA, acceso condicional, registro, verificación de apoyo |
 tención Riesgo hereditario o actual tención Puntaje usando criterios de probabilidad y consecuencia aprobados
-Silencio tóxico Modificar el riesgo mediante una autenticación más fuerte y la recuperación monitoreada
-Silencio Propietario y fecha Silencio Nombrado responsable del riesgo y fecha de destino
-← Riesgo Residual Silencio Reassess after treatment; obtain explicit owner approval TEN
+| tóxico Modificar el riesgo mediante una autenticación más fuerte y la recuperación monitoreada |
+| Propietario y fecha | Nombrado responsable del riesgo y fecha de destino
+← Riesgo Residual | Reassess after treatment; obtain explicit owner approval |
 
 # 4. Declaración de aplicabilidad
 
@@ -271,11 +271,11 @@ Figure 3. Statement of Applicability workflow
 
 - Controlar el SoA como información documentada y actualizarla después de cambios de riesgo, alcance, legal, proveedor, tecnología o control.
 
-Silencio **Control** Silencioso ** Aplicable**
-Silencio.
-Silencio Ejemplo 8.15 logging Silencio Sí Silencio Necesitado para la detección, la investigación y las obligaciones TEN Aplicado con acciones abiertas TEN Operaciones de Seguridad / inventario de fuentes y registros de revisión
-← Ejemplo 7.9 activos fuera de locales Silencio Sí Silencio Personal remoto y de viaje utilizan dispositivos de empresa ← Operaciones de TI aplicadas / inventario y prueba de encriptación
-Por ejemplo, control de la organización Silencio Sí Silencio El riesgo específico de seguridad de productos requiere versiones firmadas Silencio Implementado parcialmente Silencio Ingeniería / archivos de tuberías
+| **Control** Silencioso ** Aplicable** |
+|. |
+| Ejemplo 8.15 logging | Sí | Necesitado para la detección, la investigación y las obligaciones TEN Aplicado con acciones abiertas TEN Operaciones de Seguridad / inventario de fuentes y registros de revisión
+← Ejemplo 7.9 activos fuera de locales | Sí | Personal remoto y de viaje utilizan dispositivos de empresa ← Operaciones de TI aplicadas / inventario y prueba de encriptación
+Por ejemplo, control de la organización | Sí | El riesgo específico de seguridad de productos requiere versiones firmadas | Implementado parcialmente | Ingeniería / archivos de tuberías
 Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente del alcance controlado TEN No aplicable ANTES Ámbito de estudio y evidencia de arquitectura
 
 # 5. Documentación y evidencia
@@ -286,32 +286,32 @@ Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente 
 
 Figure 4. Requirement-to-evidence chain
 
-Silencio **Documento o registro** Silencio **Purpose** Silencio ** Controles de control**
+| **Documento o registro** | **Purpose** | ** Controles de control**
 La vida... la vida... la vida... la vida... la vida...
-tención ISMS scope Silencio Define los límites e interfaces Silencio Aprobado, actual, coherente con la realidad Silencio
-Silencioso Silencio Establece dirección y compromisos
-tención método de riesgo y registro Silencio Muestra evaluación y decisiones repetibles ← Criterios aplicados consistentemente; los propietarios aprueban el riesgo residual
-Plan de tratamiento de riesgo TENIDO Pistas acciones, propietarios, recursos y fechas TENIDO SONAL a riesgos y SoA TENIDO
-tención Declaración de aplicabilidad Silencio Explica selección de control y estatus Silencio Todos los controles del Anexo A abordados; justificaciones apoyadas
+tención ISMS scope | Define los límites e interfaces | Aprobado, actual, coherente con la realidad |
+Silencioso | Establece dirección y compromisos
+tención método de riesgo y registro | Muestra evaluación y decisiones repetibles ← Criterios aplicados consistentemente; los propietarios aprueban el riesgo residual
+Plan de tratamiento de riesgo | Pistas acciones, propietarios, recursos y fechas | SONAL a riesgos y SoA |
+tención Declaración de aplicabilidad | Explica selección de control y estatus | Todos los controles del Anexo A abordados; justificaciones apoyadas
 TENCIÓN Objetivos y métricas TENENCIA Mostrar resultados planificados y evaluación
-← Competencia y registros de conciencia Silencio Apoyo a la capacidad y la comprensión
-Silencio Pruebas operativas Silencio Shows controles realmente operados Silencio Completa, auténtica, protegida, retenida
+← Competencia y registros de conciencia | Apoyo a la capacidad y la comprensión
+| Pruebas operativas | Shows controles realmente operados | Completa, auténtica, protegida, retenida
 tención auditiva y registros de revisión tención apoya la supervisión y las decisiones
-Silencio Correctiva-action records Silencio Shows root cause and effective correction TEN Cause addressed, recurrence considered, effectiveness verified TEN
+| Correctiva-action records | Shows root cause and effective correction TEN Cause addressed, recurrence considered, effectiveness verified |
 
 Cláusula 4 - Contexto de la organización
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Contexto de la organización
-Silencio.
+| ** Objetivo de uso:** Contexto de la organización |
+|. |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 tención 4.1 tención Entender las cuestiones internas y externas que pueden afectar al ISMS; considerar explícitamente si el cambio climático es relevante. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 tención 4.2 tención Identificar a las partes interesadas pertinentes, sus requisitos, y si incluyen expectativas relacionadas con el clima. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 4.3 Silencio Definir y mantener el alcance de ISMS, incluyendo límites, interfaces, dependencias, ubicaciones, tecnología y exclusiones. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 4.4 Silencio Establecer, operar, mantener y mejorar continuamente el ISMS y sus procesos necesarios. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 4.3 | Definir y mantener el alcance de ISMS, incluyendo límites, interfaces, dependencias, ubicaciones, tecnología y exclusiones. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 4.4 | Establecer, operar, mantener y mejorar continuamente el ISMS y sus procesos necesarios. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
 
@@ -323,13 +323,13 @@ Respuesta
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
 **Propósito de uso:** Liderazgo
-Silencio
+| |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 5.1 Silencio La administración superior demuestra compromiso, integra el ISMS en procesos empresariales, suministra recursos y apoya la mejora. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 5.2 TENIDO Establecer, comunicar y mantener una política de seguridad de la información apropiada para la organización. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 5.3 TENIDO Asignar y comunicar responsabilidades de seguridad de la información y autoridad de presentación de informes. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención 5.1 | La administración superior demuestra compromiso, integra el ISMS en procesos empresariales, suministra recursos y apoya la mejora. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 5.2 | Establecer, comunicar y mantener una política de seguridad de la información apropiada para la organización. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 5.3 | Asignar y comunicar responsabilidades de seguridad de la información y autoridad de presentación de informes. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
 
@@ -337,15 +337,15 @@ Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exa
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Planificación domiciliaria
-Silencio...
+| ** Objetivo de uso:** Planificación domiciliaria |
+|... |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 6.1.1 Silencio Determinar los riesgos y oportunidades a nivel de ISMS, planificar acciones, integrarlos en los procesos de ISMS y evaluar la eficacia. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 6.1.2 Silencio Definir y aplicar criterios de riesgo de seguridad de la información y métodos de evaluación consistentes; identificar a los propietarios y analizar y evaluar riesgos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 6.1.3 TENIDO Elija opciones y controles de tratamiento de riesgos, comparelos con el Anexo A, producir la Declaración de aplicabilidad y plan de tratamiento, y obtener la aprobación del propietario de riesgos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-Silencio 6.2 Silencio Establecer objetivos de seguridad mensurables con propietarios, recursos, fechas y métodos de evaluación. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención 6.1.1 | Determinar los riesgos y oportunidades a nivel de ISMS, planificar acciones, integrarlos en los procesos de ISMS y evaluar la eficacia. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 6.1.2 | Definir y aplicar criterios de riesgo de seguridad de la información y métodos de evaluación consistentes; identificar a los propietarios y analizar y evaluar riesgos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 6.1.3 | Elija opciones y controles de tratamiento de riesgos, comparelos con el Anexo A, producir la Declaración de aplicabilidad y plan de tratamiento, y obtener la aprobación del propietario de riesgos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| 6.2 | Establecer objetivos de seguridad mensurables con propietarios, recursos, fechas y métodos de evaluación. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 tención 6.3 Silencioso Plan ISMS cambia para que se tengan en cuenta sus propósitos, consecuencias, recursos, responsabilidades e integridad del sistema. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
@@ -354,16 +354,16 @@ Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exa
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Apoyo a la prevención
-Silencio...
+| ** Objetivo de uso:** Apoyo a la prevención |
+|... |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 7.1 Silencio Proporcionar gente, financiación, tecnología y otros recursos necesarios por el ISMS. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 7.2 Silencio Definir las necesidades de competencia, cerrar las brechas, evaluar los resultados y mantener evidencia. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 7.3 Silencio Asegurar que las personas entiendan la política, su contribución y las consecuencias de la no conformidad. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 7.4 TENIDO Planear qué, cuándo, con quién, y cómo la organización se comunica interna y externamente. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-Silencio 7.5 Silencio Crear, aprobar, identificar, proteger, distribuir, retener y controlar la información documentada necesaria. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención 7.1 | Proporcionar gente, financiación, tecnología y otros recursos necesarios por el ISMS. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 7.2 | Definir las necesidades de competencia, cerrar las brechas, evaluar los resultados y mantener evidencia. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 7.3 | Asegurar que las personas entiendan la política, su contribución y las consecuencias de la no conformidad. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 7.4 | Planear qué, cuándo, con quién, y cómo la organización se comunica interna y externamente. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| 7.5 | Crear, aprobar, identificar, proteger, distribuir, retener y controlar la información documentada necesaria. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
 
@@ -371,13 +371,13 @@ Cláusula 8 - Operación
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Operación confidencialidad
-Silencio...
+| ** Objetivo de uso:** Operación confidencialidad |
+|... |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna...
-TEN 8.1 TENIDO Plan y control ISMS procesos, criterios, cambios, trabajo subcontratado y evidencia de una operación adecuada. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 8.2 TENIDO Realizar evaluaciones de riesgos de seguridad de la información a intervalos previstos y cuando se producen cambios significativos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna... |
+TEN 8.1 | Plan y control ISMS procesos, criterios, cambios, trabajo subcontratado y evidencia de una operación adecuada. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 8.2 | Realizar evaluaciones de riesgos de seguridad de la información a intervalos previstos y cuando se producen cambios significativos. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 TEN 8.3 TENCIÓN Aplicar el plan de tratamiento de riesgos y mantener evidencia de resultados. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
@@ -386,17 +386,17 @@ Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exa
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Evaluación de la actuación profesional
-Silencio...
+| ** Objetivo de uso:** Evaluación de la actuación profesional |
+|... |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-La vida--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 9.1 Silencio Defina qué monitorear y medir, cómo y cuándo hacerlo, quién lo evalúa y cómo se mantienen y analizan los resultados. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 9.2.1 Silencio Realizar auditorías internas a intervalos previstos para evaluar la conformidad con los requisitos de organización y ISO/IEC 27001 y la aplicación efectiva. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+tención 9.1 | Defina qué monitorear y medir, cómo y cuándo hacerlo, quién lo evalúa y cómo se mantienen y analizan los resultados. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 9.2.1 | Realizar auditorías internas a intervalos previstos para evaluar la conformidad con los requisitos de organización y ISO/IEC 27001 y la aplicación efectiva. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 TEN 9.2.2 TUR Mantener un programa de auditoría con frecuencia, métodos, responsabilidades, planificación, presentación de informes, alcance, criterios, auditores objetivos, resultados retenidos y medidas correctivas oportunas. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-TEN 9.3.1 TENIDO La gestión revisa el ISMS a intervalos previstos para la idoneidad, adecuación y eficacia continuas. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+TEN 9.3.1 | La gestión revisa el ISMS a intervalos previstos para la idoneidad, adecuación y eficacia continuas. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 tención 9.3.2 tención Revisión requiere insumos como acciones anteriores, cambios de contexto, necesidades de las partes interesadas, rendimiento, retroalimentación, riesgo, tratamiento y oportunidades de mejora. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
-tención 9.3.3 Silencio Reseña de decisiones de gestión de registros sobre mejoras y cambios necesarios del ISMS. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
+tención 9.3.3 | Reseña de decisiones de gestión de registros sobre mejoras y cambios necesarios del ISMS. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
 Utilice el texto oficial licenciado ISO/IEC 27001 para requisitos normativos exactos. Este manual parafrasea conceptos para la educación y no reemplaza el estándar.
 
@@ -408,11 +408,11 @@ Cláusula 10 - Mejora
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 
-Silencio ** Objetivo de uso:** Mejora de la vida
-Silencio.
+| ** Objetivo de uso:** Mejora de la vida |
+|. |
 
-Silencio **Clause** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Cláusula** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 TEN 10.1 TENCIÓN Continuamente mejorar la idoneidad, la adecuación y la eficacia del ISMS. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 TEN 10.2 TENCIÓN Reaccionar a noconformidades, corregirlas, analizar causas, prevenir la recurrencia, verificar la eficacia y retener evidencia. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento, excepciones, corrección y registros retenidos. ← Políticas, registros, planes, registros, actas, minutos, resultados, aprobaciones y pruebas de seguimiento.
 
@@ -426,48 +426,48 @@ Gráfico 6 Temas de control del anexo A
 
 * Resúmenes originales de los controles de referencia, el enfoque de verificación y los ejemplos de pruebas*.
 
-Silencio **Control** Silencio ** Significado práctico** Silencio ** Enfoque de la verificación**
+| **Control** | ** Significado práctico** | ** Enfoque de la verificación**
 La inmortalidad---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La inmortalidad--
-tención 5.1 Silencio Mantener políticas aprobadas de seguridad de la información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 5.2 Silencio Definir las funciones y responsabilidades de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.3 TENIENDO deberes conflictivos separados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.4 TENIDO Exigir a los administradores que cumplan las responsabilidades de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.5 Silencio Mantener contacto adecuado con las autoridades. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.6 Silencio Participar en grupos de seguridad relevantes y foros profesionales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.7 Silencio Recoge y usa inteligencia de amenazas. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.8 TENIDO Construir la seguridad en la gestión de proyectos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.9 Silencio Información sobre inventarios y activos asociados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.10 Silencio Definir reglas aceptables de uso y manejo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 5.11 Silencio Recuperar los activos organizativos cuando las funciones terminan o cambian. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.12 Silencio Clasificación de la información según necesidad y riesgo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.13 Silencio Información de la etiqueta consistente con la clasificación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.14 Silencio Proteger las transferencias de información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.15 Silencio Establecer reglas de control de acceso. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 5.16 ← Administrar las identidades a lo largo de su ciclo de vida. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.17 Silencio Proteger información de autenticación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.18 Silencio Aprobar, revisar, modificar y eliminar los derechos de acceso. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.19 Silencio Manage security risk in provider relations. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.20 Silencio Incluye requisitos de seguridad en los acuerdos de proveedores. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.21 Silencio Manage ICT supply-chain security risk. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.22 Silenciosos Monitor, revisión y control de cambios de servicio de proveedores. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.23 Silencio Govern adquisición, uso, gestión y salida de servicios en la nube. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.24 Silencio Preparar y planificar para la gestión de incidentes de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.25 Silencio Evaluar los acontecimientos y decidir si son incidentes. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.26 Silencio Responder a incidentes de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.27 Silencio Aprende de incidentes y mejora los controles. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.28 TENIDO Identificar, recolectar, adquirir y preservar evidencia. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.29 Silencio Proteger la información durante la interrupción. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.30 Silencio Preparar las TIC para apoyar la continuidad de las operaciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.31 TENIDO Identificar y cumplir con los requisitos legales, regulatorios y contractuales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.32 Silencio Protege los derechos de propiedad intelectual. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 5.33 Silencio Protege los registros durante su ciclo de vida. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.34 Silencio Protege la privacidad y la información personal identificable. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.35 Silencio Organizar exámenes independientes de la seguridad de la información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.36 Silencio Comprobar el cumplimiento de las políticas, reglas y estándares de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 5.37 Silencio Mantener procedimientos operativos documentados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
+tención 5.1 | Mantener políticas aprobadas de seguridad de la información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 5.2 | Definir las funciones y responsabilidades de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.3 TENIENDO deberes conflictivos separados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.4 | Exigir a los administradores que cumplan las responsabilidades de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.5 | Mantener contacto adecuado con las autoridades. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.6 | Participar en grupos de seguridad relevantes y foros profesionales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.7 | Recoge y usa inteligencia de amenazas. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.8 | Construir la seguridad en la gestión de proyectos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.9 | Información sobre inventarios y activos asociados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.10 | Definir reglas aceptables de uso y manejo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 5.11 | Recuperar los activos organizativos cuando las funciones terminan o cambian. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.12 | Clasificación de la información según necesidad y riesgo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.13 | Información de la etiqueta consistente con la clasificación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.14 | Proteger las transferencias de información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.15 | Establecer reglas de control de acceso. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 5.16 ← Administrar las identidades a lo largo de su ciclo de vida. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.17 | Proteger información de autenticación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.18 | Aprobar, revisar, modificar y eliminar los derechos de acceso. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.19 | Manage security risk in provider relations. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.20 | Incluye requisitos de seguridad en los acuerdos de proveedores. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.21 | Manage ICT supply-chain security risk. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.22 Silenciosos Monitor, revisión y control de cambios de servicio de proveedores. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.23 | Govern adquisición, uso, gestión y salida de servicios en la nube. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.24 | Preparar y planificar para la gestión de incidentes de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.25 | Evaluar los acontecimientos y decidir si son incidentes. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.26 | Responder a incidentes de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.27 | Aprende de incidentes y mejora los controles. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.28 | Identificar, recolectar, adquirir y preservar evidencia. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.29 | Proteger la información durante la interrupción. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.30 | Preparar las TIC para apoyar la continuidad de las operaciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.31 | Identificar y cumplir con los requisitos legales, regulatorios y contractuales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.32 | Protege los derechos de propiedad intelectual. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 5.33 | Protege los registros durante su ciclo de vida. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.34 | Protege la privacidad y la información personal identificable. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.35 | Organizar exámenes independientes de la seguridad de la información. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.36 | Comprobar el cumplimiento de las políticas, reglas y estándares de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 5.37 | Mantener procedimientos operativos documentados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
 
-* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. Silencio
-Silencio.
+* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. |
+|. |
 
 יimg src="media/image7.png" style="width:6.15in;height:3.29657in" alt="Prepare, evalúe, responda, preserve evidencia y aprenda de incidentes." /
 
@@ -477,87 +477,87 @@ Figure 7. Security-incident management
 
 * Resúmenes originales de los controles de referencia, el enfoque de verificación y los ejemplos de pruebas*.
 
-Silencio **Control** Silencio ** Significado práctico** Silencio ** Enfoque de la verificación**
+| **Control** | ** Significado práctico** | ** Enfoque de la verificación**
 La inmortalidad----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 6.1 TENCIÓN A los candidatos y personal de la pantalla según la ley, el papel y el riesgo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 6.2 Silencio Incluye responsabilidades de seguridad en términos de empleo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 6.3 Silencio Proporcionar conciencia, educación y formación continua basada en el papel. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 6.4 Silencio Opera un proceso disciplinario justo y comunicado. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 6.5 TENIDO Administrar las obligaciones de seguridad después de la terminación o cambio de roles. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 6.6 TENIDO Utilizar acuerdos adecuados de confidencialidad o no divulgación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 6.7 Silencio Proteger la información durante el trabajo a distancia. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 6.8 Silencio Hacer que la información de los eventos de seguridad sea fácil y oportuna. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
+TEN 6.1 TENCIÓN A los candidatos y personal de la pantalla según la ley, el papel y el riesgo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 6.2 | Incluye responsabilidades de seguridad en términos de empleo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 6.3 | Proporcionar conciencia, educación y formación continua basada en el papel. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 6.4 | Opera un proceso disciplinario justo y comunicado. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 6.5 | Administrar las obligaciones de seguridad después de la terminación o cambio de roles. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 6.6 | Utilizar acuerdos adecuados de confidencialidad o no divulgación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 6.7 | Proteger la información durante el trabajo a distancia. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 6.8 | Hacer que la información de los eventos de seguridad sea fácil y oportuna. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
 
-* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. Silencio
-Silencio.
+* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. |
+|. |
 
 15. Anexo A 7 Controles físicos
 
 * Resúmenes originales de los controles de referencia, el enfoque de verificación y los ejemplos de pruebas*.
 
-Silencio **Control** Silencio ** Significado práctico** Silencio ** Enfoque de la verificación**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 7.1 TENCIÓN Definir y proteger los perímetros de seguridad física. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 7.2 TENIDO Control de entrada física. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.3 Silencio Oficinas seguras, habitaciones e instalaciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 7.4 Silenciosos Supervisar locales para el acceso físico no autorizado. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.5 Silencio Proteger contra amenazas físicas y ambientales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 7.6 Silencio Aplicar reglas de trabajo para áreas seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.7 Silencio Usar prácticas claras y de pantalla clara. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 7.8 TENIDO Sitio y proteger el equipo adecuadamente. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 7.9 Silencio Proteger los activos utilizados fuera de los locales de organización. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.10 Silencio Manage storage media throughout its life cycle. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.11 Silencio Proteger las utilidades de apoyo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.12 Silencio Protege el cableado de energía y datos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.13 Silencio Mantener el equipo de forma segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 7.14 Silencio Desechar o reutilizar equipo de forma segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
+| **Control** | ** Significado práctico** | ** Enfoque de la verificación**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 7.1 TENCIÓN Definir y proteger los perímetros de seguridad física. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 7.2 | Control de entrada física. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.3 | Oficinas seguras, habitaciones e instalaciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 7.4 Silenciosos Supervisar locales para el acceso físico no autorizado. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.5 | Proteger contra amenazas físicas y ambientales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 7.6 | Aplicar reglas de trabajo para áreas seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.7 | Usar prácticas claras y de pantalla clara. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 7.8 | Sitio y proteger el equipo adecuadamente. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 7.9 | Proteger los activos utilizados fuera de los locales de organización. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.10 | Manage storage media throughout its life cycle. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.11 | Proteger las utilidades de apoyo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.12 | Protege el cableado de energía y datos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.13 | Mantener el equipo de forma segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 7.14 | Desechar o reutilizar equipo de forma segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
 
-* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. Silencio
-Silencio.
+* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. |
+|. |
 
 16. Anexo A 8 Controles tecnológicos
 
 * Resúmenes originales de los controles de referencia, el enfoque de verificación y los ejemplos de pruebas*.
 
-Silencio **Control** Silencio ** Significado práctico** Silencio ** Enfoque de la verificación**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 8.1 TENCIÓN Dispositivos de extremo de usuario seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.2 Silencio Control derechos de acceso privilegiados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.3 Silencio Restringir el acceso a la información según la política. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.4 Silencio Controlar el acceso a código fuente y herramientas de desarrollo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.5 Silencio Utilice autenticación segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.6 Silencio Manage capacity. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.7 Silencio Proteger contra el malware. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 8.8 Silencio Manage technical vulnerabilities. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.9 Silencio Manage configuraciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.10 Silencio Eliminar información de forma segura cuando ya no es necesario. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.11 Silencio Mask datos confidenciales cuando corresponda. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.12 Silencio Prevenga fuga de datos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.13 Silencio Mantener y probar copias de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.14 Silencio Proporcionar redundancia cuando la disponibilidad lo requiere. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.15 Silencio Generar, proteger, retener y revisar registros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 8.16 Silencio Monitor sistemas y redes para comportamientos anormales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.17 Silencio Sincronizar relojes. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.18 Silencio Control potentes utilidades del sistema. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 8.19 Silencio Control software instalación en sistemas operativos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.20 Silencio Redes seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.21 Silencio Servicios de red seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.22 Silencio Segregate redes donde sea necesario. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-tención 8.23 Silencio Control de acceso a sitios web externos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 8.24 TENIDO Utilizar y gestionar criptografía apropiadamente. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.25 Silencio Opera un ciclo seguro de vida para el desarrollo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.26 Silencio Definir los requisitos de seguridad de la aplicación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.27 Silencio Aplicar principios de arquitectura e ingeniería seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 8.28 TENIDO Utilizar prácticas de codificación seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 8.29 TENIDO Realizar pruebas de seguridad en el desarrollo y la aceptación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.30 Silencio Control outsourced development. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 8.31 Ø Medios de desarrollo, ensayo y producción separados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.32 Silencio Manage changes securely. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-Silencio 8.33 Silencio Proteger la información de prueba. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
-TEN 8.34 TENIDO Proteger los sistemas operativos durante las pruebas de auditoría. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. Silencio Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. Silencio
+| **Control** | ** Significado práctico** | ** Enfoque de la verificación**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 8.1 TENCIÓN Dispositivos de extremo de usuario seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.2 | Control derechos de acceso privilegiados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.3 | Restringir el acceso a la información según la política. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.4 | Controlar el acceso a código fuente y herramientas de desarrollo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.5 | Utilice autenticación segura. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.6 | Manage capacity. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.7 | Proteger contra el malware. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 8.8 | Manage technical vulnerabilities. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.9 | Manage configuraciones. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.10 | Eliminar información de forma segura cuando ya no es necesario. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.11 | Mask datos confidenciales cuando corresponda. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.12 | Prevenga fuga de datos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.13 | Mantener y probar copias de seguridad. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.14 | Proporcionar redundancia cuando la disponibilidad lo requiere. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.15 | Generar, proteger, retener y revisar registros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 8.16 | Monitor sistemas y redes para comportamientos anormales. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.17 | Sincronizar relojes. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.18 | Control potentes utilidades del sistema. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 8.19 | Control software instalación en sistemas operativos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.20 | Redes seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.21 | Servicios de red seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.22 | Segregate redes donde sea necesario. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+tención 8.23 | Control de acceso a sitios web externos. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 8.24 | Utilizar y gestionar criptografía apropiadamente. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.25 | Opera un ciclo seguro de vida para el desarrollo. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.26 | Definir los requisitos de seguridad de la aplicación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.27 | Aplicar principios de arquitectura e ingeniería seguros. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 8.28 | Utilizar prácticas de codificación seguras. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 8.29 | Realizar pruebas de seguridad en el desarrollo y la aceptación. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.30 | Control outsourced development. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 8.31 Ø Medios de desarrollo, ensayo y producción separados. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.32 | Manage changes securely. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+| 8.33 | Proteger la información de prueba. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
+TEN 8.34 | Proteger los sistemas operativos durante las pruebas de auditoría. TEN Confirmar riesgo o obligación, diseño, propietario, implementación, operación, excepciones y medición. | Procedimiento, configuración, registro, registro, ticket, revisión, test o observación. |
 
-* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. Silencio
-Silencio.
+* Regla de la sesión* El anexo A es un conjunto de referencia utilizado para comprobar que no se pasaron por alto los controles necesarios. La organización puede necesitar otros controles. Toda inclusión o exclusión debe justificarse mediante tratamiento de riesgo y registrarse en la Declaración de aplicabilidad. |
+|. |
 
 # 17. Controles de implementación con ISO/IEC 27002
 
@@ -579,22 +579,22 @@ Silencio.
 
 8. Actualizar riesgos, plan de tratamiento, SoA, procedimientos y evidencia cuando el control cambia.
 
-**Distinción importante:** ISO/IEC 27002 proporciona orientación. La organización sigue siendo responsable de seleccionar y diseñar controles que traten sus riesgos y cumplan los requisitos aplicables. Silencio
-Silencio.
+**Distinción importante:** ISO/IEC 27002 proporciona orientación. La organización sigue siendo responsable de seleccionar y diseñar controles que traten sus riesgos y cumplan los requisitos aplicables. |
+|. |
 
 # 18. Pruebas de medición y control
 
 *Cómo verificar si el ISMS y sus controles funcionan.*
 
-Silencio **Area** Silencio **Populación y muestra** Silencio**
+| **Area** | **Populación y muestra** |**
 La vida eterna---------------------------------------------------------------------- La vida--
 Todos los riesgos actuales; muestra artículos altos, cambiados, aceptados y atrasados ← Reperform scoring, trazo tratamiento, confirma la aprobación del propietario y revisión ANTERI Método, registro, aprobaciones, tratamiento y riesgo residual
-TENIDO TENIDO Toda la fuerza de trabajo, privilegio, servicio e identidades de terceros Necesidades, aprobación, MFA, revisión, cambio, inactividad y rescisión del examen ANTERI Población, exportaciones, entradas, ajustes y registros TENIDO
+| | Toda la fuerza de trabajo, privilegio, servicio e identidades de terceros Necesidades, aprobación, MFA, revisión, cambio, inactividad y rescisión del examen ANTERI Población, exportaciones, entradas, ajustes y registros |
 TEN Vulnerabilities TEN Todos los activos y hallazgos TENCIÓN Validar cobertura, priorización, excepciones, plazos, corrección y rescan ANTERIED Inventory, escaneos, tickets, aprobaciones y retests ANTE
-Silencio Proveedores Silencio Población completa de proveedores; muestre servicios críticos y cambiados Silencio Testear la diligencia debida, acuerdo, responsabilidad, monitoreo, incidente y salida ¦
-Silencio Incidents Silencio Todos los eventos e incidentes denunciados Silencio Evaluación de pruebas, respuesta, evidencia, comunicaciones, recuperación y aprendizaje Silencio Casos, cronología, decisiones, registros de pruebas y lecciones
-Silencio Continuidad Silencio Procesos críticos y apoyo TIC TENIDO Trace negocio necesita para el diseño de recuperación y ejercicios TEN BIA, planes, registros de pruebas, lagunas y retests TEN
-TENCIÓN FORMULARIOS TENIDO Todos los objetivos y medidas del ISMS ANTERI Consultar definición, calidad de los datos, tendencia, objetivo, análisis, decisión y acción TENIDO definiciones métricas, datos fuente, tableros de datos, minutos y acciones
+| Proveedores | Población completa de proveedores; muestre servicios críticos y cambiados | Testear la diligencia debida, acuerdo, responsabilidad, monitoreo, incidente y salida ¦
+| Incidents | Todos los eventos e incidentes denunciados | Evaluación de pruebas, respuesta, evidencia, comunicaciones, recuperación y aprendizaje | Casos, cronología, decisiones, registros de pruebas y lecciones
+| Continuidad | Procesos críticos y apoyo TIC | Trace negocio necesita para el diseño de recuperación y ejercicios TEN BIA, planes, registros de pruebas, lagunas y retests |
+TENCIÓN FORMULARIOS | Todos los objetivos y medidas del ISMS ANTERI Consultar definición, calidad de los datos, tendencia, objetivo, análisis, decisión y acción | definiciones métricas, datos fuente, tableros de datos, minutos y acciones
 
 - Definir criterios exactos, alcance, período, población, control, propietario, evidencia y resultados esperados.
 
@@ -628,24 +628,24 @@ Record evidence and findings clearly enough that another competent person can un
 
 Report results to relevant management and track corrections and corrective actions through effectiveness review.
 
-Silencio **Tipo de encuentro** Silencio ** Medios de comunicación**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencioso Conformidad Silencio La evidencia es compatible con los criterios
+| **Tipo de encuentro** | ** Medios de comunicación**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Silencioso Conformidad | La evidencia es compatible con los criterios
 TEN Oportunidad para la mejora TENENCIA Una sugerencia de mejora útil que no es una noconformidad oculta TENEvaluar voluntariamente y dejar constancia de la decisión
-← Noconformidad Silencio Uno o más requisitos no se cumplen ← Correct, analice la causa, actúe para prevenir la recurrencia y verificar la eficacia
+← Noconformidad | Uno o más requisitos no se cumplen ← Correct, analice la causa, actúe para prevenir la recurrencia y verificar la eficacia
 Limitación de la auditoría permanente, pruebas, tiempo, independencia o acceso restringidos la conclusión TEN Disclose claramente y resuelva cuando sea posible
 
 # 20. Management Review and Corrective Action
 
 * Decisiones de liderazgo que mantienen el ISMS adecuado y efectivo.*
 
-Silencio **Management-review input **Questions**
-Silencio.
-Silencio Anterior acciones Silencio ¿Se completaron y efectivas decisiones previas?
-Silencio Context y partes interesadas Silencio ¿Qué cambio, incluyendo la relevancia climática y las necesidades de los interesados?
+| **Management-review input **Questions** |
+|. |
+| Anterior acciones | ¿Se completaron y efectivas decisiones previas?
+| Context y partes interesadas | ¿Qué cambio, incluyendo la relevancia climática y las necesidades de los interesados?
 Ø Rendimiento permanente ¿Qué muestran las métricas, los objetivos, los incidentes, los resultados de auditoría y las noconformidades?
 ← Comentarios de las partes interesadas ¿Qué informan los clientes, reguladores, trabajadores, proveedores y propietarios?
-TENIDO Riesgo y tratamiento TENIDO ¿Son los niveles de riesgo, aceptación, tratamiento, recursos y SoA todavía apropiados?
+| Riesgo y tratamiento | ¿Son los niveles de riesgo, aceptación, tratamiento, recursos y SoA todavía apropiados?
 Las oportunidades de mejora de la vida útil ¿Qué cambios deben aprobar el liderazgo?
 
 - Contener o corregir el problema inmediato.
@@ -684,40 +684,40 @@ Las actividades de vigilancia y recertificación evalúan la conformidad continu
 
 Un certificado tiene alcance y plazo. No prueba que cada producto es seguro, que no puede ocurrir ningún incidente, o que cada sistema en la empresa está incluido.
 
-Silencio ** área de preparación**
-Silencio...
-TENCIÓN ANTERIVISIÓN Clear, supportable, reflected in real operations and certificate intent TEN
+| ** área de preparación** |
+|... |
+TENCIÓN ANTERIVISIÓN Clear, supportable, reflected in real operations and certificate intent |
 tención de riesgo Ø Método utilizado consistentemente; registro completo; los propietarios aceptan el riesgo residual
-TEN SoA TENIDO Todos los controles del Anexo A abordados; selecciones, exclusiones y estatus apoyados
-Silencio Controles Silencio Aplicado, operado lo suficiente como para producir pruebas fiables, y medido TEN
-TEN Auditoría interna Programa de duración y auditoría completa completa con pruebas objetivas y seguimiento TEN
+TEN SoA | Todos los controles del Anexo A abordados; selecciones, exclusiones y estatus apoyados
+| Controles | Aplicado, operado lo suficiente como para producir pruebas fiables, y medido |
+TEN Auditoría interna Programa de duración y auditoría completa completa con pruebas objetivas y seguimiento |
 TENCIÓN TENCIÓN TERRITORIO Respuestas requeridas consideradas y decisiones grabadas
-Silencio Acción correctiva tención Noconformidades corregidas; causa y eficacia abordadas
+| Acción correctiva tención Noconformidades corregidas; causa y eficacia abordadas |
 TEN-ENDENCIA FORMULADA Climática y requisitos de parte interesada considerados y probados
 
 22. Herramientas de código abierto
 
 * Enlaces oficiales, inicios rápidos seguros, pruebas y limitaciones.*
 
-Silencio **Herramienta**
-Silencio------------------------------------------------------------------------------------
-tención CISO Assistant Silencio intuitem.github.io Silencio ISMS, riesgos, controles, evidencia
+| **Herramienta** |
+|------------------------------------------------------------------------------------ |
+tención CISO Assistant | intuitem.github.io | ISMS, riesgos, controles, evidencia
 tención SimpleRisk Community Silencioso www.simplerisk.com
-TENIDO Wazuh TENIDO wazuh.com ANTE SIEM, control de punta, FIM TENIDO
-Silencioso osquery Silencio www.osquery.io Silencio Inventario y consultas
-Silencio OpenSCAP Silencioso www.open-scap.org Evaluación de la configuración de Linux
-Silencio Greenbone Community Edition tención greenbone.github.io ← Gestión de la Vulnerabilidad
-Silencio Nmap Silencio nmap.org Silencio Activo y descubrimiento de servicios
-Silencio Trivy Silencio trivy.dev Silencio Código, imagen, dependencia, secreto y la configuración escaneado
-Silencio OWASP ZAP Silencio www.zaproxy.org 
-Silencio Keycloak Silencio www.keycloak.org TEN Identidad, MFA, roles y logs ANTE
-← DefectDojo Silencio www.defectdojo.org Silencio Encontrar admisión y remediación
-Silencio AIDE Silencio aide.github.io Silencio Control de la integridad de archivos
-Silencio Lynis Silencio cisofy.com ← Seguridad de Linux auditando
-TEN Open Policy Agent Silencio www.openpolicyagent.org
+| Wazuh | wazuh.com ANTE SIEM, control de punta, FIM |
+Silencioso osquery | www.osquery.io | Inventario y consultas
+| OpenSCAP Silencioso www.open-scap.org Evaluación de la configuración de Linux |
+| Greenbone Community Edition tención greenbone.github.io ← Gestión de la Vulnerabilidad |
+| Nmap | nmap.org | Activo y descubrimiento de servicios
+| Trivy | trivy.dev | Código, imagen, dependencia, secreto y la configuración escaneado
+| OWASP ZAP | www.zaproxy.org 
+| Keycloak | www.keycloak.org TEN Identidad, MFA, roles y logs ANTE
+← DefectDojo | www.defectdojo.org | Encontrar admisión y remediación
+| AIDE | aide.github.io | Control de la integridad de archivos
+| Lynis | cisofy.com ← Seguridad de Linux auditando
+TEN Open Policy Agent | www.openpolicyagent.org
 
 * Limitación crítica* Las herramientas apoyan controles y pruebas; no seleccionan el tratamiento de riesgo, determinan la conformidad, reemplazan a los auditores competentes o certifican a una organización. Validar cobertura, calidad de los datos, configuración, permisos, actualizaciones y revisión humana.
-Silencio.
+|. |
 
 ## 22.1 CISO Assistant
 
@@ -851,16 +851,16 @@ Pruebas: alcance aprobado, configuración, versión, cobertura, resultados, revi
 
 ¿Son exactas las reclamaciones de certificación, alcance, acreditación y declaraciones de clientes?
 
-**Area** Silencio ** Cuestión del personal**
-Silencio. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-Silencio Contexto y alcance Silencio ¿Hay límites, dependencias, partes y cambios actuales? Verde / Amarillo / Rojo
-Silencio ¿Son coherentes los criterios y las decisiones del propietario oportunas? Verde / Amarillo / Rojo
-Silencio SoA y controles Silencio ¿Está alineada la selección, el estado y la evidencia? Verde / Amarillo / Rojo
-← Rendimiento Silencio Do objectives, metrics, incidents, and trends drive action? Verde / Amarillo / Rojo
-Silencio Proveedores Silencio ¿Se controlan riesgos, responsabilidad, monitoreo, incidentes y salidas? Verde / Amarillo / Rojo
+**Area** | ** Cuestión del personal**
+|. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  |
+| Contexto y alcance | ¿Hay límites, dependencias, partes y cambios actuales? Verde / Amarillo / Rojo
+| ¿Son coherentes los criterios y las decisiones del propietario oportunas? Verde / Amarillo / Rojo |
+| SoA y controles | ¿Está alineada la selección, el estado y la evidencia? Verde / Amarillo / Rojo
+← Rendimiento | Do objectives, metrics, incidents, and trends drive action? Verde / Amarillo / Rojo
+| Proveedores | ¿Se controlan riesgos, responsabilidad, monitoreo, incidentes y salidas? Verde / Amarillo / Rojo
 TENCIÓN ANTERIOR ¿Son las auditorías objetivas y las conclusiones corregidas con eficacia? Verde / Amarillo / Rojo
-TENIDO Mejora ¿Son las causas profundas, la recurrencia y las lecciones abordadas? Verde / Amarillo / Rojo
-Silencioso Certificación Silencio ¿Son las reclamaciones alcances, actuales y compatibles? Verde / Amarillo / Rojo
+| Mejora ¿Son las causas profundas, la recurrencia y las lecciones abordadas? Verde / Amarillo / Rojo |
+Silencioso Certificación | ¿Son las reclamaciones alcances, actuales y compatibles? Verde / Amarillo / Rojo
 
 # 24. Junior Analyst Career Guide
 
@@ -904,22 +904,22 @@ Análisis de la seguridad
 
 ## 24.2 Valor de los empleadores de habilidades
 
-Silencio**
-Silencio...
-TENIDOS conceptos ISMS TENIDO Explicar cláusulas 4-10 y mejora continua
-Ø Riesgo Silencio Construir un registro y un plan de tratamiento consistentes
+|** |
+|... |
+TENIDOS conceptos ISMS | Explicar cláusulas 4-10 y mejora continua
+Ø Riesgo | Construir un registro y un plan de tratamiento consistentes
 ← SoA ← Justificar las selecciones, exclusiones, estado y evidencia
-TENER Evidencia prueba TENIDO Definir poblaciones, muestras, procedimientos, excepciones y retests TENIDO
-← Alfabetización técnica Silencio Interpretar identidad, nube, registro, vulnerabilidad, respaldo y evidencia de configuración
-TEN Comunicación TENIDO Escribe conclusiones, acciones y resúmenes de gestión
+TENER Evidencia prueba | Definir poblaciones, muestras, procedimientos, excepciones y retests |
+← Alfabetización técnica | Interpretar identidad, nube, registro, vulnerabilidad, respaldo y evidencia de configuración
+TEN Comunicación | Escribe conclusiones, acciones y resúmenes de gestión
 TEN ética ANTE Utilizar datos sintéticos, sistemas autorizados y afirmaciones honestas
 
 25. Laboratorio Ficcional y Portfolio
 
 *Un entorno de prácticas seguras utilizando datos sintéticos y sistemas de laboratorio autorizados*.
 
-* La regla del laboratorio* Utilice una organización ficticia, datos sintéticos, sistemas aislados y herramientas que está autorizado para operar. No pretenda que un proyecto de cartera sea una certificación real o una auditoría cliente. Silencio
-Silencio.
+* La regla del laboratorio* Utilice una organización ficticia, datos sintéticos, sistemas aislados y herramientas que está autorizado para operar. No pretenda que un proyecto de cartera sea una certificación real o una auditoría cliente. |
+|. |
 
 1. Crear una empresa ficticia con dos productos, un servicio en la nube, una fuerza de trabajo remota y tres proveedores.
 
@@ -941,31 +941,31 @@ Silencio.
 
 10. Publicar sólo artefactos sintéticos y sanitarios con una clara declaración de limitaciones.
 
-Silencio **Portfolio artifact** Silencio **Lo que demuestra** tención
-Silencio...
-← Contexto, partes, alcance TENIDO Cláusula 4 razonamiento y límites
+| **Portfolio artifact** | **Lo que demuestra** tención
+|... |
+← Contexto, partes, alcance | Cláusula 4 razonamiento y límites
 tención método de riesgo, registro, tratamiento confidencialidad Cláusula 6 y responsabilidad de riesgo
 Silencioso Declaración de aplicabilidad Silencioso
-documento de trabajo de la prueba de control TENIDO Evidencia, muestreo, excepción y conclusión
+documento de trabajo de la prueba de control | Evidencia, muestreo, excepción y conclusión
 ← Programa de auditoría interna, plan, criterios, informe, y seguimiento
-← Gestión-revisión minutos Silencio Evaluación y decisiones Liderazgo
-Silencio Correctivo-acción récord TENIDO Causa raíz y eficacia
+← Gestión-revisión minutos | Evaluación y decisiones Liderazgo
+| Correctivo-acción récord | Causa raíz y eficacia
 ← Herramienta de prueba memo ← Alfabetización técnica y limitaciones
 
 # 26. Plan de aprendizaje de 30 días
 
 *Un calendario centrado para la creación de capacidad útil de nivel junior*.
 
-**Días** Silencio**
-Silencio------------------------------
-TENIDO 1-5 TENIDO ISMS, CIA, cláusulas, ISO 27001/27002 relación, ámbito de aplicación Silencio Mapa de concepto de una página y declaración de alcance
+**Días** |**
+|------------------------------ |
+| 1-5 | ISMS, CIA, cláusulas, ISO 27001/27002 relación, ámbito de aplicación | Mapa de concepto de una página y declaración de alcance
 Ø 6–10 tención Criterios de riesgo, escenarios, evaluación, tratamiento, aceptación
-TEN 11–14 TENIDO ANEXO Temas y Declaración de Aplicabilidad TENIDO Completa ficción SoA TENIDO
-TEN 15–18 TENIDO Políticas, competencia, comunicación, control de documentos, operaciones TENIDO Índice de pruebas y tres procedimientos de muestra TEN
-TEN 19–22 TENIDA métricas, monitoreo, auditoría interna, revisión de la gestión TENIDO hoja métrica, plan de auditoría, agenda de revisión ANTE
-Silencio 23–25 Silencio Noconformidad, causa raíz, acción correctiva, mejora Silencioso Dos registros de hallazgo y acción correctiva
-TEN 26–28 TENIDO Laboratorios autorizados de herramientas de código abierto Dos pruebas y memos de retest
-Silencio 29–30 Silencio Portfolio cleanup and interview practice
+TEN 11–14 | ANEXO Temas y Declaración de Aplicabilidad | Completa ficción SoA |
+TEN 15–18 | Políticas, competencia, comunicación, control de documentos, operaciones | Índice de pruebas y tres procedimientos de muestra |
+TEN 19–22 TENIDA métricas, monitoreo, auditoría interna, revisión de la gestión | hoja métrica, plan de auditoría, agenda de revisión ANTE
+| 23–25 | Noconformidad, causa raíz, acción correctiva, mejora Silencioso Dos registros de hallazgo y acción correctiva
+TEN 26–28 | Laboratorios autorizados de herramientas de código abierto Dos pruebas y memos de retest
+| 29–30 | Portfolio cleanup and interview practice
 
 27. Preparación de entrevistas
 
@@ -1025,10 +1025,10 @@ Los hechos estatales respaldados por pruebas y alcance definidos, revelan limita
 
 ## 28.1 Registro de riesgo mínimo
 
-Silencio**
-Silencio----------------------------------------------------------------
+|** |
+|---------------------------------------------------------------- |
 Identificación de riesgo y dueño de la vida
-TENIDO Objetivo / activo
+| Objetivo / activo |
 "El evento de la amenaza y la condición de vida"
 "Consequence"
 Los controles existentes en la vida son válidos.
@@ -1040,8 +1040,8 @@ El dueño de la acción y el tratamiento de la vida ha estado en la vida.
 
 ## 28.2 Documentos de prueba de control
 
-Silencio**
-Silencio.
+|** |
+|. |
 Criterios y control de la vida
 "Escopia y período de vida"
 "Principal y sistemas de vida"
@@ -1055,41 +1055,41 @@ Corrección y prueba de vida
 
 ## 28.3 Glosario
 
-Silencio**
-Silencio...
-TENIDO ANEXO A TENCIÓN Conjunto de referencia de 93 controles de seguridad de la información en ISO/IEC 27001:2022.
-TEN CIA TENIDO Confidencialidad, integridad y disponibilidad.
-Silencioso Conformity Silencio Fulfillment of a requirement.
-TENIDO Control TENIDO Medición que modifica o mantiene el riesgo.
-Silencio Acción Correctiva Silencio Acción frente a la causa de una no conformidad para prevenir la recurrencia.
-Silencio Información documentada Silencio Información que la organización debe controlar y mantener o retener.
-Silencio Parte interesada Silencio Persona u organización que puede afectar, ser afectada por, o percibirse afectada por una decisión o actividad. Silencio
-TENIDO ISMS TENIDO Sistema de gestión de la seguridad de la información.
-Silencio Noconformidad Silencioso para cumplir con un requisito.
-TENIDO Riesgo residual TENIDO El riesgo permanece después del tratamiento.
-Silencioso propietario Silencio Persona o entidad responsable y autorizado para gestionar un riesgo.
-Silencio SoA Silencioso Declaración de Aplicabilidad. Silencio
-tención Gestión superior Silencio Persona o grupo dirigiendo y controlando la organización al más alto nivel dentro del alcance. ←
+|** |
+|... |
+| ANEXO A TENCIÓN Conjunto de referencia de 93 controles de seguridad de la información en ISO/IEC 27001:2022. |
+TEN CIA | Confidencialidad, integridad y disponibilidad.
+Silencioso Conformity | Fulfillment of a requirement.
+| Control | Medición que modifica o mantiene el riesgo.
+| Acción Correctiva | Acción frente a la causa de una no conformidad para prevenir la recurrencia.
+| Información documentada | Información que la organización debe controlar y mantener o retener.
+| Parte interesada | Persona u organización que puede afectar, ser afectada por, o percibirse afectada por una decisión o actividad. |
+| ISMS | Sistema de gestión de la seguridad de la información.
+| Noconformidad Silencioso para cumplir con un requisito. |
+| Riesgo residual | El riesgo permanece después del tratamiento.
+Silencioso propietario | Persona o entidad responsable y autorizado para gestionar un riesgo.
+| SoA Silencioso Declaración de Aplicabilidad. |
+tención Gestión superior | Persona o grupo dirigiendo y controlando la organización al más alto nivel dentro del alcance. ←
 
 ## 28.4 Índice de asunto
 
 Subjeto**
-Silencio----------------------------
-TENIDO ANEXO A controls TENIDO 13-16
+|---------------------------- |
+| ANEXO A controls | 13-16
 Silencioso en la auditoría
-Silencioso Certificación Silencio 21 Silencio
-Silencio Cambio climático
-Silencio Acción correctiva
-TENIDO Evidencia TENIDO 5, 18
+Silencioso Certificación | 21 |
+| Cambio climático |
+| Acción correctiva |
+| Evidencia | 5, 18
 Silenciosas partes interesadas
 Silencioso analista junior
 Silencioso examen de la gestión
 TENIDA Metrics TENENCIA 11, 18
-Silencio Herramientas de código abierto Silencio 22 Silencio
+| Herramientas de código abierto | 22 |
 Silencioso evaluación y tratamiento de los riesgos
 Silencioso en la vida útil 2, 6
 Silencioso Declaración de aplicabilidad
-Silenciosos Proveedores Silencio 13, 18, 23 Silencio
+Silenciosos Proveedores | 13, 18, 23 |
 
 ## 28.5 Referencias oficiales
 
@@ -1105,5 +1105,5 @@ Silenciosos Proveedores Silencio 13, 18, 23 Silencio
 
 [ ]](https://www.iso.org/standard/iso-iec-27000-family)
 
-Silencio **Recuerdo final:** Adquirir o acceder legalmente a las normas oficiales antes de su aplicación o evaluación. Confirme las ediciones, enmiendas, acreditación, alcance de certificación, requisitos legales, contratos, tecnología, amenazas y cambio organizativo.
-Silencio.
+| **Recuerdo final:** Adquirir o acceder legalmente a las normas oficiales antes de su aplicación o evaluación. Confirme las ediciones, enmiendas, acreditación, alcance de certificación, requisitos legales, contratos, tecnología, amenazas y cambio organizativo. |
+|. |

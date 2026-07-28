@@ -6,8 +6,8 @@ Y COMPLIENCIA DE CLOUD
 
 Manual de Gestor Práctica y Analista Junior
 
-TEN **Lo que este manual hace:** Explica la gobernanza segura de la nube, arquitectura, identidad, redes, datos, cargas de trabajo, aplicaciones, Kubernetes, SaaS, monitoreo, resiliencia, pruebas de evidencia, CSA CCM v4.1, herramientas de código abierto, decisiones de gestión y trabajo analista orientado al trabajo. Silencio
-Silencio.
+TEN **Lo que este manual hace:** Explica la gobernanza segura de la nube, arquitectura, identidad, redes, datos, cargas de trabajo, aplicaciones, Kubernetes, SaaS, monitoreo, resiliencia, pruebas de evidencia, CSA CCM v4.1, herramientas de código abierto, decisiones de gestión y trabajo analista orientado al trabajo. |
+|. |
 
 **Alberto (Al) Leiva**
 
@@ -19,8 +19,8 @@ Los cambios de computación en la nube que opera la tecnología, la rapidez con 
 
 Este manual es neutral y utiliza lenguaje simple. No es asesoramiento legal, garantía o sustituto de la documentación del proveedor. Los servicios, características, amenazas, precios, contratos, regiones, estándares y guía de configuración cambian rápidamente. Confirme fuentes oficiales actuales y use cloud calificada, seguridad, privacidad, legal, arquitectura, ingeniería, auditoría y profesionales de negocios para decisiones reales.
 
-Silencio ** Nota de información actual:** Verificado 14 de julio de 2026. CSA Cloud Controls Matrix v4.1 es la última versión CCM/CAIQ, emitida en enero de 2026, con 207 objetivos de control en 17 dominios. Recursos actuales de CISA SCuBA, guía de nube NIST, CIS Se incorporan criterios de referencia y prácticas neutrales de proveedores.
-Silencio.
+| ** Nota de información actual:** Verificado 14 de julio de 2026. CSA Cloud Controls Matrix v4.1 es la última versión CCM/CAIQ, emitida en enero de 2026, con 207 objetivos de control en 17 dominios. Recursos actuales de CISA SCuBA, guía de nube NIST, CIS Se incorporan criterios de referencia y prácticas neutrales de proveedores. |
+|. |
 
 ## Cómo usar este manual
 
@@ -250,38 +250,38 @@ Este documento contiene una tabla de contenido de Word nativa y una guía de cap
 
 Guía del Capítulo
 
-Silencio **Capítulo**
-Silencio... ------------- La vida--
-Silencio 1 Silencio Fundaciones de Seguridad en la Nube
-Silencio 2 Modelos de Servicio Permanente y Responsabilidad Compartida
+| **Capítulo** |
+|... ------------- La vida-- |
+| 1 | Fundaciones de Seguridad en la Nube
+| 2 Modelos de Servicio Permanente y Responsabilidad Compartida |
 ← 3 ← La gobernanza, la estrategia y el riesgo en la nube
-Silencio 4 Silencio Inventario, Cuentas, Suscripciones y Propiedad TENED 8 TENIDO
+| 4 | Inventario, Cuentas, Suscripciones y Propiedad TENED 8 |
 TEN 5 TENIDOS Zonas seguras de Arquitectura y Aterrizaje
-Silencio 6 Silenciosos Identidad y Acceso Privilegiado
-Silencio 7 Silencio Red y Seguridad de la Conectividad
-Silencio 8 Silencio Seguridad y privacidad de los datos
-TEN 9 TENIDO Encriptación, Claves, Certificados y Secretos TENIDO 13 TENIDO
+| 6 Silenciosos Identidad y Acceso Privilegiado |
+| 7 | Red y Seguridad de la Conectividad
+| 8 | Seguridad y privacidad de los datos
+TEN 9 | Encriptación, Claves, Certificados y Secretos | 13 |
 TEN 10 TERRITORIFICACIÓN, Monitoreo y Detección
 ← Vulnerabilidad, Patch, y Exhibición de la Expresión
-TEN 12 TENIDO Compute, Storage, Database, and Endpoint Security
-Silencio 13 Silencio Seguridad de la Aplicación y DevSecOps
-TENIDO 14 TENIDO Infraestructura como Código y Política como Código
-Silencio 15 Silencio Containers and Kubernetes Silencio 19
+TEN 12 | Compute, Storage, Database, and Endpoint Security
+| 13 | Seguridad de la Aplicación y DevSecOps
+| 14 | Infraestructura como Código y Política como Código
+| 15 | Containers and Kubernetes | 19
 TEN 16 TERRITORIOS sin servidor, API y servicios enviados por eventos
-Silencio 17 Silencio SaaS Security and Business Applications Silencio 21 Silencio
-Silencio 18 ← Multi-Cloud, nube híbrida y Portabilidad Silencioso 22 Silencio
-Silencio, Resiliencia y Recuperación de Desastres
-Silencio 20 Silencio Cloud Incident Response and Forensics
+| 17 | SaaS Security and Business Applications | 21 |
+| 18 ← Multi-Cloud, nube híbrida y Portabilidad Silencioso 22 |
+|, Resiliencia y Recuperación de Desastres |
+| 20 | Cloud Incident Response and Forensics
 TEN 21 TENIDA Privacidad, Legal, Contrato y Residencia de Datos
-Silencio 22 Silencio CSA Cloud Controls Matrix v4.1 Domains TEN 27 TEN
-Silencioso 23 Silencio en la Nube Assurance and Provider Evidence
+| 22 | CSA Cloud Controls Matrix v4.1 Domains TEN 27 |
+Silencioso 23 | en la Nube Assurance and Provider Evidence
 Silencioso 24 Evaluación, Pruebas de Evidencia y métricas
-tención 25 Silencio AI Services and Emerging Cloud Risk tención 31 Silencio
-Silencio 26 Silencio Open-Source Herramientas Silencio 32 Silencio
+tención 25 | AI Services and Emerging Cloud Risk tención 31 |
+| 26 | Open-Source Herramientas | 32 |
 Nube Cuaderno de Seguridad de la Nube Cuaderno de la Vida 37
-Silencio 28 Silencio Junior Analyst Guía de Carreras
-Silencio 29 Silencio Fictional Laboratory, Treinta Días Plan, y Preparación de Entrevista
-TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 43 TENIDO
+| 28 | Junior Analyst Guía de Carreras
+| 29 | Fictional Laboratory, Treinta Días Plan, y Preparación de Entrevista
+| 30 TENIDOS Plantillas, Glosario, Índice y Referencias | 43 |
 
 # 1. Cloud Security Foundations
 
@@ -299,15 +299,15 @@ TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 43 TENIDO
 
 - Servicio de medición: el uso es monitoreado, controlado e informado.
 
-Silencio **Deployment** Silencio **Plain meaning**
-Silencio.
+| **Implementación** | **Significado claro**
+|. |
 Ø Nube pública ← Infraestructura de proveedores compartidos entre clientes con aislamiento lógico ← Configuración de inquilinos, identidad, datos, aseguramiento de proveedores
-Silencio Nube privada Silencio Capacidad de la nube dedicada a una organización Silencio Organización opera más responsabilidad de infraestructura
-TEN Comunidad nube TENIDO Compartido por organizaciones con necesidades comunes
+| Nube privada | Capacidad de la nube dedicada a una organización | Organización opera más responsabilidad de infraestructura
+TEN Comunidad nube | Compartido por organizaciones con necesidades comunes
 ← Nube híbrida ← Conectó distintos entornos de nube ANTERIED Identidad, datos, red, política, monitoreo, portabilidad
 
 TEN **Cloud no es igual de seguro por defecto:** La velocidad, la automatización, los servicios gestionados y la infraestructura resiliente pueden mejorar la seguridad, pero los errores también escalan rápidamente. Gobernanza y guardias deben moverse a la velocidad de la nube.
-Silencio.
+|. |
 
 # 2. Modelos de servicio y responsabilidad compartida
 
@@ -317,11 +317,11 @@ Silencio.
 
 Figura 1. Modelo de responsabilidad compartida
 
-Silencio **Modelo** Silencio ** Proveedor generalmente opera** Silencio **El cliente generalmente opera**
+| **Modelo** | ** Proveedor generalmente opera** | **El cliente generalmente opera**
 La vida eterna------------------------------------------------------------------------------------------------------------------------------------------
 TEN IaaS TENRI Instalaciones, hardware físico, virtualización básica e infraestructura de servicios TEN OS/workload, configuraciones, identidades, redes, aplicaciones, datos, monitoreo
-Silencio PaaS Silencio IaaaS más componentes gestionados de tiempo de ejecución / plataformas ← Aplicación, identidad, datos, configuración de servicio, integración, registro de archivos
-Silencio SaaS Silencio Plataforma de aplicación e infraestructura subyacente Silencio Usuarios, roles, configuración de inquilinos, opciones de datos, integraciones, endpoints, monitorización
+| PaaS | IaaaS más componentes gestionados de tiempo de ejecución / plataformas ← Aplicación, identidad, datos, configuración de servicio, integración, registro de archivos
+| SaaS | Plataforma de aplicación e infraestructura subyacente | Usuarios, roles, configuración de inquilinos, opciones de datos, integraciones, endpoints, monitorización
 TEN FaaS/serverless ANTE Infraestructura y ejecución gestionada plazo de ejecución TEN Código, dependencias, permisos, eventos, secretos, datos, configuración, observabilidad
 
 ## 2.1 Matriz de responsabilidad
@@ -350,15 +350,15 @@ TEN FaaS/serverless ANTE Infraestructura y ejecución gestionada plazo de ejecuc
 
 - métricas, mejora continua, capacitación, coordinación de costos/seguridad y gestión de la deuda técnica.
 
-Silencio **Role**
-Silencio----------------------------------------------------------------------------
-← Patrocinador ejecutivo Silencio Dirección, recursos, riesgo material, concentración de proveedores
+| **Rol** |
+|---------------------------------------------------------------------------- |
+← Patrocinador ejecutivo | Dirección, recursos, riesgo material, concentración de proveedores
 equipo de la plataforma de nube ← Zonas de aterrizaje, servicios compartidos, vigilancias, operaciones
-Silencio Propietario de Workload Silencio propósito de negocios, datos, configuración, riesgo, recuperación, costo
+| Propietario de Workload | propósito de negocios, datos, configuración, riesgo, recuperación, costo
 Requisitos, revisión de la arquitectura, monitoreo, evaluación, hallazgos
-TENIDO Equipo de identidad TENIDO Federación, MFA, privilegio, identidades de servicio, ciclo de vida
-Silencio Privacidad / legal / adquisiciones Silencio Funciones de datos, residencia, contrato, derechos, términos del proveedor Silencio
-← FinOps Silencio Visibilidad de los costos, propiedad, desperdicios, compromiso y riesgos
+| Equipo de identidad | Federación, MFA, privilegio, identidades de servicio, ciclo de vida
+| Privacidad / legal / adquisiciones | Funciones de datos, residencia, contrato, derechos, términos del proveedor |
+← FinOps | Visibilidad de los costos, propiedad, desperdicios, compromiso y riesgos
 tención Auditoría interna / evaluador
 
 # 4. Inventario, cuentas, suscripciones y propiedad
@@ -478,7 +478,7 @@ Gráfico 4. Ciclo de vida de datos en la nube
 - Retención de pruebas, retención legal, exportación, corrección, eliminación, caducidad de respaldo y eliminación de proveedores/subprocesadores.
 
 TEN **La residencia de datos es más que un selector de región:** Considere almacenamiento primario, réplicas, copias de seguridad, registros, soporte, subprocesadores, telemetría, recuperación en casos de desastre, administración y acceso legal del gobierno.
-Silencio.
+|. |
 
 # 9. Encriptación, llaves, certificados y secretos
 
@@ -550,14 +550,14 @@ Limitaciones de pruebas
 
 *Cada servicio gestionado elimina algunos trabajos operativos pero crea responsabilidades de configuración e integración*.
 
-Silencio **Recurso** Silencio**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Ø Máquinas virtuales Ø Imágenes, parche, endurecimiento, EDR, discos, metadatos, ruta de administración ANTERI inventario, procedencia de imagen, config/scan, cobertura de agente TEN
-tención de objetos TENIDO Acceso público, políticas, cifrado, versión, retención, registro de políticas efectivas , acceso a registros, ciclo de vida, configuración de bloqueo público
-tención Gestionada base de datos Silencio Network, identity, admin, encryption, backups, audit, version tención config export, users/roles, logs, restaura test, maintenance TEN
-TEN Bloqueo / archivo de almacenamiento TENIDO Acoplamiento, encriptación, instantáneas, compartir, copia de seguridad, eliminación ANTERIGEN inventario, políticas, instantáneas, registros de restauración/deslección
-Silencio Managed escritorio/punto de finalización ANTERIED Identidad, postura de dispositivo, aplicaciones, datos, sesiones, registro de entradas, políticas, acceso, eventos, pruebas de limpieza/terminación
-← Imagen/servicio en el mercado Silencio Publisher, procedencia, permisos, actualizaciones, datos, contrato aprobación, versión, SBOM/advisory, escaneo, evidencia del proveedor ←
+| **Recurso** |**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+Ø Máquinas virtuales Ø Imágenes, parche, endurecimiento, EDR, discos, metadatos, ruta de administración ANTERI inventario, procedencia de imagen, config/scan, cobertura de agente |
+tención de objetos | Acceso público, políticas, cifrado, versión, retención, registro de políticas efectivas , acceso a registros, ciclo de vida, configuración de bloqueo público
+tención Gestionada base de datos | Network, identity, admin, encryption, backups, audit, version tención config export, users/roles, logs, restaura test, maintenance |
+TEN Bloqueo / archivo de almacenamiento | Acoplamiento, encriptación, instantáneas, compartir, copia de seguridad, eliminación ANTERIGEN inventario, políticas, instantáneas, registros de restauración/deslección
+| Managed escritorio/punto de finalización ANTERIED Identidad, postura de dispositivo, aplicaciones, datos, sesiones, registro de entradas, políticas, acceso, eventos, pruebas de limpieza/terminación |
+← Imagen/servicio en el mercado | Publisher, procedencia, permisos, actualizaciones, datos, contrato aprobación, versión, SBOM/advisory, escaneo, evidencia del proveedor ←
 
 # 13. Seguridad de aplicaciones y DevSecOps
 
@@ -667,8 +667,8 @@ Figura 6. Capas de seguridad Kubernetes
 
 - Base de referencia de configuración, controles continuos de deriva, consentimiento de aplicación arriesgado, intercambio de datos, usuarios inactivos y conciliación de licencias/cuentas.
 
-Silencio ** Lugar ciego:** La aprobación de las adquisiciones no es una operación segura. Revise la configuración de inquilinos, aplicaciones, roles, compartir, retener y cambiar el proveedor a lo largo de la relación.
-Silencio.
+| ** Lugar ciego:** La aprobación de las adquisiciones no es una operación segura. Revise la configuración de inquilinos, aplicaciones, roles, compartir, retener y cambiar el proveedor a lo largo de la relación. |
+|. |
 
 # 18. Multi-Cloud, Hybrid Cloud y Portability
 
@@ -758,39 +758,39 @@ Gráfico 8 Flujo de trabajo de incidentes en la nube
 
 - Acceso a prueba, corrección, exportación, eliminación, retención, retención legal, comportamiento de respaldo, intercambio, consentimiento y controles de inquilinos.
 
-Silencio** Silencioso**
-Silencio.
-Silencio SOC 2 Silencio Proveedor sistema, criterios, período, pruebas, excepciones, CUECs, organizaciones de subservicio Silencio El cliente debe implementar CUECs y controles de inquilinos
-Silencio ISO/IEC 27001 latitud ISMS alcance, uso en la nube, proveedores, acceso, operaciones, incidentes, continuidad TENCIÓN El alcance del certificado puede excluir un servicio o ubicación ANTE
-TEN PCI DSS v4.0.1 TENIDO Alcance CDE, responsabilidad del proveedor de la nube, segmentación, evidencia, derechos de incidencias ANTE El cumplimiento del Proveedor no hace que el cliente cumpla
-Silencio HIPAA Silencioso Socio de negocios, acuerdo, análisis de riesgos, salvaguardias, contingencia e incidentes Silencio Aplicabilidad legal depende de hechos
-TENCIÓN GDPR TENIDO Los términos del procesador, seguridad, transferencias, derechos, infracciones, eliminación, subprocesadores ANTERI Las funciones y los mecanismos de transferencia necesitan un análisis legal
+|** Silencioso** |
+|. |
+| SOC 2 | Proveedor sistema, criterios, período, pruebas, excepciones, CUECs, organizaciones de subservicio | El cliente debe implementar CUECs y controles de inquilinos
+| ISO/IEC 27001 latitud ISMS alcance, uso en la nube, proveedores, acceso, operaciones, incidentes, continuidad TENCIÓN El alcance del certificado puede excluir un servicio o ubicación ANTE |
+TEN PCI DSS v4.0.1 | Alcance CDE, responsabilidad del proveedor de la nube, segmentación, evidencia, derechos de incidencias ANTE El cumplimiento del Proveedor no hace que el cliente cumpla
+| HIPAA Silencioso Socio de negocios, acuerdo, análisis de riesgos, salvaguardias, contingencia e incidentes | Aplicabilidad legal depende de hechos
+TENCIÓN GDPR | Los términos del procesador, seguridad, transferencias, derechos, infracciones, eliminación, subprocesadores ANTERI Las funciones y los mecanismos de transferencia necesitan un análisis legal
 TEN NIST RMF/800-53 TENIDOS Asignación, implementación, evaluación, autorización, monitorización de TENA Tailor al servicio y los controles heredados
-TEN CSA CCM v4.1 Silencio Objetivos de control específicos de la nube y la seguridad de CAIQ ← Mapping no es el cumplimiento automático
+TEN CSA CCM v4.1 | Objetivos de control específicos de la nube y la seguridad de CAIQ ← Mapping no es el cumplimiento automático
 
 # 22. CSA Cloud Controls Matrix v4.1 Dominios
 
 *CSA CCM v4.1 organiza 207 objetivos de control de nubes en 17 dominios.*
 
-Silencio **Code / domain** Silencio **Purpose**
-Silencio.
-Ø A destinatarioA — Auditoría &quot; Garantía &quot; , seguridad independiente e interna, planificación de evaluaciones, pruebas, conclusiones y coordinación de auditorías. Silencio
-TEN AIS — Aplicación &quot; Seguridad de la interfaz &quot; , Diseño de aplicaciones seguras, API, desarrollo, pruebas, despliegue y protección de la interfaz. Silencio
-TEN BCR — Gestión de la Continuidad Empresarial &quot; Resilience Operacional &quot; Continuidad, objetivos de recuperación, respaldos, ejercicios, dependencias y prestación de servicios resiliente. Silencio
-TEN CCC — Control de Cambios &quot; Gestión de Configuración TENIDO Bases de configuración aprobadas, cambios seguros, inventarios, pruebas, retroceso y control de deriva.
-← CEK — Cryptography, Encryption &quot; Key Management ← Cryptographic policy, keys, certificates, secrets, algoritmos, rotación, custodia y destrucción. Silencio
+| **Code / domain** | **Purpose**
+|. |
+Ø A destinatarioA — Auditoría &quot; Garantía &quot; , seguridad independiente e interna, planificación de evaluaciones, pruebas, conclusiones y coordinación de auditorías. |
+TEN AIS — Aplicación &quot; Seguridad de la interfaz &quot; , Diseño de aplicaciones seguras, API, desarrollo, pruebas, despliegue y protección de la interfaz. |
+TEN BCR — Gestión de la Continuidad Empresarial &quot; Resilience Operacional &quot; Continuidad, objetivos de recuperación, respaldos, ejercicios, dependencias y prestación de servicios resiliente. |
+TEN CCC — Control de Cambios &quot; Gestión de Configuración | Bases de configuración aprobadas, cambios seguros, inventarios, pruebas, retroceso y control de deriva.
+← CEK — Cryptography, Encryption &quot; Key Management ← Cryptographic policy, keys, certificates, secrets, algoritmos, rotación, custodia y destrucción. |
 TEN DCS — Datacenter Security ANTE Instalaciones físicas, controles ambientales, equipos, medios de comunicación, acceso, monitoreo y eliminación.
-Silencio DSP — Seguridad de datos &quot; Gestión de ciclos de vida &quot; , inventario de datos, clasificación, minimización, uso, intercambio, retención, eliminación, privacidad y protección. Silencio
-tención GRC — Gobernanza, Riesgo &quot; Cumplimiento de la política permanente, rendición de cuentas, gestión de riesgos, obligaciones jurídicas, supervisión, presentación de informes y mejora. Silencio
-tención de recursos humanos — Recursos humanos Silencioso Screening, acuerdos, concienciación, cambios de función, terminación, sanciones y responsabilidades laborales. Silencio
-Silencio IAM — Identidad &quot; Gestión de Accesos &quot; , vida útil, autenticación, autorización, privilegio, federación, identidades de servicio y revisión de acceso.
-TEN IPY — Interoperabilidad &quot; Portability &quot; Normas, interfaces, exportación de datos, migración, transparencia de dependencia y capacidad de salida. Silencio
-TEN IVS — Infraestructura &quot; Virtualization Security ANTE Compute, redes, virtualización, contenedores, hosts, imágenes, segmentación y aislamiento de carga de trabajo. Silencio
-TEN LOG — Monitorización de Logging, generación de eventos, reunión central, tiempo, protección, retención, detección, revisión y respuesta de alerta. Silencio
-TEN SEF — Security Incident Management, E-Discovery & Cloud Forensics TEN Planes de incidentes, informes, pruebas, investigación, cooperación con proveedores, recuperación y aprendizaje. Silencio
+| DSP — Seguridad de datos &quot; Gestión de ciclos de vida &quot; , inventario de datos, clasificación, minimización, uso, intercambio, retención, eliminación, privacidad y protección. |
+tención GRC — Gobernanza, Riesgo &quot; Cumplimiento de la política permanente, rendición de cuentas, gestión de riesgos, obligaciones jurídicas, supervisión, presentación de informes y mejora. |
+tención de recursos humanos — Recursos humanos Silencioso Screening, acuerdos, concienciación, cambios de función, terminación, sanciones y responsabilidades laborales. |
+| IAM — Identidad &quot; Gestión de Accesos &quot; , vida útil, autenticación, autorización, privilegio, federación, identidades de servicio y revisión de acceso. |
+TEN IPY — Interoperabilidad &quot; Portability &quot; Normas, interfaces, exportación de datos, migración, transparencia de dependencia y capacidad de salida. |
+TEN IVS — Infraestructura &quot; Virtualization Security ANTE Compute, redes, virtualización, contenedores, hosts, imágenes, segmentación y aislamiento de carga de trabajo. |
+TEN LOG — Monitorización de Logging, generación de eventos, reunión central, tiempo, protección, retención, detección, revisión y respuesta de alerta. |
+TEN SEF — Security Incident Management, E-Discovery & Cloud Forensics TEN Planes de incidentes, informes, pruebas, investigación, cooperación con proveedores, recuperación y aprendizaje. |
 TEN STA — Gestión de la Cadena de Suministros, Transparencia &quot; Responsabilidad &quot; , riesgo de proveedores y subproductores, contratos, propiedad, procedencia, vigilancia, incidentes y salida.
 tención TVM — Amenaza &quot; Gestión de vulnerabilidades &quot; .
-TEN UEM — Universal Endpoint Management TENIDO Gestión y protección de endpoints que acceden, administran o procesan servicios y datos en la nube. Silencio
+TEN UEM — Universal Endpoint Management | Gestión y protección de endpoints que acceden, administran o procesan servicios y datos en la nube. |
 
 ## 22.1 Cómo utilizar CCM y CAIQ
 
@@ -811,18 +811,18 @@ TEN UEM — Universal Endpoint Management TENIDO Gestión y protección de endpo
 *La garantía de la compañía reduce la incertidumbre sólo cuando el alcance y la responsabilidad del cliente coinciden con el uso real.*
 
 **Artifact** Silencioso**
-Silencio.
-Silencio SOC 2 Tipo 2 Silencio Entidad/servicio, criterios, período, opinión, pruebas, excepciones, CUECs, organizaciones de subservicio, eventos posteriores
-Silencio ISO certificado Silencioso Organización, alcance de servicio/ubicación, versión estándar, organismo de certificación, acreditación, fechas, status
+|. |
+| SOC 2 Tipo 2 | Entidad/servicio, criterios, período, opinión, pruebas, excepciones, CUECs, organizaciones de subservicio, eventos posteriores
+| ISO certificado Silencioso Organización, alcance de servicio/ubicación, versión estándar, organismo de certificación, acreditación, fechas, status |
 ← CSA STAR / CAIQ ANTERIOR nivel del registro, versión CCM/CAIQ, servicio exacto/entidad, respuestas, evidencia, fecha
-prueba de penetración Silencioso, fecha, semestre, metodología, exclusiones, hallazgos, corrección, retest Silencio
+prueba de penetración Silencioso, fecha, semestre, metodología, exclusiones, hallazgos, corrección, retest |
 viv Arquitectura/responsabilidad ¦ Proveedor/limitación de clientes, aislamiento de inquilinos, ruta de administración, datos, subprovidentes, control de propiedad
-← Resilience evidence tención Arquitectura, dependencias, RTO/RPO, ejercicios, resultados reales, fallos, corrección TENIDO
-TEN Vulnerability/development TEN Disclosure, secure SDLC, SBOM, scan/testing, patch targets, advisories, end-of-life TEN
+← Resilience evidence tención Arquitectura, dependencias, RTO/RPO, ejercicios, resultados reales, fallos, corrección |
+TEN Vulnerability/development TEN Disclosure, secure SDLC, SBOM, scan/testing, patch targets, advisories, end-of-life |
 tención Contrato / SLA Silencioso Seguridad, privacidad, aviso, evidencia, disponibilidad, soporte, cambio, salida, remedios
 
-TEN **Escalera de vídeo:** Un cuestionario es útil para el descubrimiento. Aumenta la confianza mediante documentos pertinentes, seguridad independiente, pruebas técnicas, observación, poblaciones completas y remediación verificada. Silencio
-Silencio.
+TEN **Escalera de vídeo:** Un cuestionario es útil para el descubrimiento. Aumenta la confianza mediante documentos pertinentes, seguridad independiente, pruebas técnicas, observación, poblaciones completas y remediación verificada. |
+|. |
 
 # 24. Assessment, Evidence Testing, and Metrics
 
@@ -847,14 +847,14 @@ Figura 9. Cadena de prueba de pruebas en la nube
 - Escribir condición, población, riesgo, causa, acción, propietario, fecha, control provisional y retest.
 
 Silencioso ** Métrico**
-Silencio------------------------------------------
+|------------------------------------------ |
 Ø Recursos activos para propietarios válidos
-Silencio Exposición pública Silencio Recursos accesibles a Internet por estado aprobado/no aprobado y crítico Silencio
+| Exposición pública | Recursos accesibles a Internet por estado aprobado/no aprobado y crítico |
 ← MFA / cobertura de privilegios ← Identidades privilegiadas con MFA / JIT requerido
 Ø Cobertura de registro ← Cuentas/servicios En-scopios enviando registros requeridos ÷ cuentas/servicios en-scopios
 Ø Encryption/key compliance tención Requisitos de los recursos sensibles requeridos de la política clave
-← IaC coverage Silencio Recursos de producción gestionados por código aprobado
-TENIDO Buscar edad TENIDO Días abiertos por severidad, explotabilidad, exposición, propietario y excepción
+← IaC coverage | Recursos de producción gestionados por código aprobado
+| Buscar edad | Días abiertos por severidad, explotabilidad, exposición, propietario y excepción
 ← Recuperación de la vida útil Representante prueba reunión completo RTO y RPO
 
 # 25. AI Services and Emerging Cloud Risk
@@ -875,7 +875,7 @@ TENIDO Buscar edad TENIDO Días abiertos por severidad, explotabilidad, exposici
 
 - IP/licensing, privacy, security, incident, evidence, portability, export, deletion, and provider exit.
 
-* Los servicios de IA todavía requieren inventario, propiedad, identidad, mínimo privilegio, gobernanza de datos, desarrollo seguro, registro, respuesta a incidentes, gestión de proveedores, resiliencia y eliminación verificada. Silencio
+* Los servicios de IA todavía requieren inventario, propiedad, identidad, mínimo privilegio, gobernanza de datos, desarrollo seguro, registro, respuesta a incidentes, gestión de proveedores, resiliencia y eliminación verificada. |
 Respuesta
 
 # 26. Open-Source Tools
@@ -883,28 +883,28 @@ Respuesta
 * Herramientas de código abierto soportan inventario, postura, IaC, Kubernetes, tiempo de ejecución, secreto y encontrar evidencia.*
 
 # Tool** Silencioso**
-Silencio.
-Silencio Prowler Silencio Seguridad en la nube postura y evaluación del cumplimiento
+|. |
+| Prowler | Seguridad en la nube postura y evaluación del cumplimiento
 Revisión de la configuración de seguridad de Multi-cloud
 tención Steampipe ← SQL consultas y paneles a través de las API de la nube
 Nube Custodio de la Nube
 tención Checkov ← Infraestructura como código y configuración escaneado
-tención Trivy Silencio Imágenes, repositorios, dependencias, secretos, Kubernetes e IaC cheques ←
-Silencio tóxico tóxico Terraform análisis de seguridad estática
-Silencio Terrascan Silencio Escaneo basado en políticas IaC
-Silencio OpenTofu Silencio Infraestructura de código abierto como provisión
-Silencio Política Abierta Agente Silencioso Decisiones generales de política como código
-Silencio Kyverno
+tención Trivy | Imágenes, repositorios, dependencias, secretos, Kubernetes e IaC cheques ←
+| tóxico tóxico Terraform análisis de seguridad estática |
+| Terrascan | Escaneo basado en políticas IaC
+| OpenTofu | Infraestructura de código abierto como provisión
+| Política Abierta Agente Silencioso Decisiones generales de política como código |
+| Kyverno |
 confidencialidad kube-bench Comprobaciones de Benchmark ←
-Silencio kube-hunter Silencio Kubernetes exposición descubrimiento
-Ø Falco Silencio para la detección de seguridad en tiempo de ejecución nativa en la nube
-Silencio Gitleaks Silencio Detección secreta en fuente e historia
-Silencio TruffleHog Silencio Un descubrimiento secreto verificado a través de repositorios y almacenamiento
-Silencio Wazuh fort Endpoint, burden, file-integrity, log, and alert monitoring Silencio
+| kube-hunter | Kubernetes exposición descubrimiento
+Ø Falco | para la detección de seguridad en tiempo de ejecución nativa en la nube
+| Gitleaks | Detección secreta en fuente e historia
+| TruffleHog | Un descubrimiento secreto verificado a través de repositorios y almacenamiento
+| Wazuh fort Endpoint, burden, file-integrity, log, and alert monitoring |
 ← DefectoDojo tóxico Encontrar la ingesta, la deduplicación, la remediación y la retesta
 
-TEN **Autorización y seguridad en costos:** Utilice herramientas sólo en cuentas de nube aprobadas, inquilinos, clusters, repositorios, datos y redes. Comienza solo a leer o a correr seco. Protege las credenciales e informes. La remediación automatizada puede eliminar datos, interrumpir el servicio, crear costos o ampliar el acceso; requerir revisión, aprobación, devolución y registro. Silencio
-Silencio.
+TEN **Autorización y seguridad en costos:** Utilice herramientas sólo en cuentas de nube aprobadas, inquilinos, clusters, repositorios, datos y redes. Comienza solo a leer o a correr seco. Protege las credenciales e informes. La remediación automatizada puede eliminar datos, interrumpir el servicio, crear costos o ampliar el acceso; requerir revisión, aprobación, devolución y registro. |
+|. |
 
 ## 26.1 Prowler
 
@@ -1054,15 +1054,15 @@ Retain: authority, account/region/scope, role/permissions, tool/version, policy/
 
 *Los administradores mantienen la velocidad de la nube alineada con la propiedad, los obstáculos, la evidencia, la resiliencia y las decisiones de riesgo.*
 
-**Area** Silencio **Pregunta principal**
-Silencio.
-Silencio Inventario Silencio ¿Se reconcilian todas las cuentas, recursos, propietarios, datos y costos? Silencio Inquilino o recurso público desconocido
-Silencio ¿Se asignan y prueban cada proveedor/clómero/control compartido? Informe del Proveedor Permanente tratado como prueba de cliente
+**Area** | **Pregunta principal**
+|. |
+| Inventario | ¿Se reconcilian todas las cuentas, recursos, propietarios, datos y costos? | Inquilino o recurso público desconocido
+| ¿Se asignan y prueban cada proveedor/clómero/control compartido? Informe del Proveedor Permanente tratado como prueba de cliente |
 Identidad permanente ¿Son los permisos de administración y carga de trabajo menos, temporales, revisados y supervisados? ← Claves estáticas o administración de pie
-Silencio ¿Dónde están los datos sensibles, quién puede usarlo, y puede ser eliminado/exportado? ← Replicaciones desconocidas, subprocesadores, o entrenamiento de IA
-¿Son consistentes las zonas de aterrizaje, las barreras, la tala, las redes, las claves y la recuperación? Silencio Carga de trabajo bypass fundación compartida ←
-← Envío Silencioso ¿Ha protegido la procedencia el código, los artefactos, los oleoductos y los cambios? Silencio Cambios de producción directa sin traza
-← Monitorización Silencio ¿Las exposiciones y alertas crean investigación y corrección? Silencio Dibujo verde con población incompleta
+| ¿Dónde están los datos sensibles, quién puede usarlo, y puede ser eliminado/exportado? ← Replicaciones desconocidas, subprocesadores, o entrenamiento de IA |
+¿Son consistentes las zonas de aterrizaje, las barreras, la tala, las redes, las claves y la recuperación? | Carga de trabajo bypass fundación compartida ←
+← Envío Silencioso ¿Ha protegido la procedencia el código, los artefactos, los oleoductos y los cambios? | Cambios de producción directa sin traza
+← Monitorización | ¿Las exposiciones y alertas crean investigación y corrección? | Dibujo verde con población incompleta
 ¿Puede el servicio completo cumplir los escenarios probados de RTO/RPO y falta de proveedores? ← Respaldo existe pero restaurado no probado
 
 ## 27.1 ritmo operativo
@@ -1122,7 +1122,7 @@ Gráfico 10 Camino analista de seguridad de la nube junior
 *Un ambiente de nube ficticia puede producir una cartera junior segura y creíble.*
 
 La regla del laboratorio:** Utilice una cuenta de sandbox con límites de gasto, datos sintéticos, cargas de trabajo de entrenamiento aisladas y autorización escrita. Nunca escanear objetivos públicos, empleadores, proveedores, o cuentas que no posee. Destruir los recursos del laboratorio y eliminar las credenciales después. ←
-Silencio.
+|. |
 
 ## 29.1 Portfolio lab
 
@@ -1146,18 +1146,18 @@ Silencio.
 
 ## 29.2 Plan de 30 días
 
-**Días** Silencio**
-Silencio--------------------------------------
-TEN 1–3 TENIDO Modelos en la nube, responsabilidad, gobernanza TENIDO mapa conceptual y matriz de responsabilidad
-Silencio 4–6 Silencio Cuentas, inventario, zonas de aterrizaje Ø Hierarquía, etiquetas, arquitectura
-Silencio 7–9 Silencioso Identidad, red, datos, cripto tención Cuatro documentos de trabajo de control
-TEN 10–12 ANTERIENTE ATENCIÓN, postura, vulnerabilidad TENIDO Evaluación y hallazgos solo lectura ANTE
-Silencio 13–15 Silencio IaC, policy, DevSecOps ANTE IaC escaneada y el código corregido Silencio
-TEN 16–18 TENIDO Containers, sin servidor, APIs TENIDO Kubernetes y listas de verificación API TENIDO
-TEN 19–21 Silencio SaaS, híbrido, privacidad, evidencia del proveedor TENS evaluación y revisión de seguridad
-Silencio y respuesta a incidentes
-TEN 25–27 TENIDO CCM v4.1 y pruebas de evidencia
-Silencio 28–30 Silencio Portfolio y entrevistas Silencio Dashboard, manager memo, cinco historias de STAR
+**Días** |**
+|-------------------------------------- |
+TEN 1–3 | Modelos en la nube, responsabilidad, gobernanza | mapa conceptual y matriz de responsabilidad
+| 4–6 | Cuentas, inventario, zonas de aterrizaje Ø Hierarquía, etiquetas, arquitectura
+| 7–9 Silencioso Identidad, red, datos, cripto tención Cuatro documentos de trabajo de control |
+TEN 10–12 ANTERIENTE ATENCIÓN, postura, vulnerabilidad | Evaluación y hallazgos solo lectura ANTE
+| 13–15 | IaC, policy, DevSecOps ANTE IaC escaneada y el código corregido |
+TEN 16–18 | Containers, sin servidor, APIs | Kubernetes y listas de verificación API |
+TEN 19–21 | SaaS, híbrido, privacidad, evidencia del proveedor TENS evaluación y revisión de seguridad
+| y respuesta a incidentes |
+TEN 25–27 | CCM v4.1 y pruebas de evidencia
+| 28–30 | Portfolio y entrevistas | Dashboard, manager memo, cinco historias de STAR
 
 ## 29.3 ¿Qué es responsabilidad compartida?
 
@@ -1205,14 +1205,14 @@ Alcance cuidadoso, sólo lectura de primeros pasos, evidencia confiable, validac
 
 ## 30.1 Registro de inventario y responsabilidad de la nube
 
-Silencio**
-Silencio...
+|** |
+|... |
 - Proveedor de la vida / arrendatario / cuenta / región infligida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \                                                                                                                                                                                                  
 , Servicio de Vida / recurso / propietario \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                            
 "Pripose" / environment / criticality ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \   \                                                                                                                                                                                                     
-TENIENDO Datos / residencia / retención TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \ \                                                                                                                                                                                            
+TENIENDO Datos / residencia / retención | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \ \                                                                                                                                                                                            
 Identidad permanente / privilegios / integración
-, la Red de Exhibiciones y la Exhibición Silencio \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \     \ \                                                                                                                                                                                             
+, la Red de Exhibiciones y la Exhibición | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \     \ \                                                                                                                                                                                             
 "La responsabilidad de los proveedores en la vida"
 "La responsabilidad de los clientes en la vida"
 Evidencia / evaluación de los resultados de la investigación
@@ -1220,8 +1220,8 @@ La recuperación de la vida / el incidente / la salida de la vida \ \ \ \ \ \ \ 
 
 ## 30.2 Papel de control de la nube
 
-Silencio**
-Silencio...
+|** |
+|... |
 Requirement / framework / version Н \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \                                                                                                                                                                                                        
 "La vida escoge / la responsabilidad"
 La arquitectura de la vida y la aplicación han sido incomprensibles.
@@ -1235,14 +1235,14 @@ Retest/Cierre de la vida
 
 ## 30.3 Revisión de la garantía de los proveedores
 
-Silencio**
-Silencio...
+|** |
+|... |
 "Proveedor/servicio/entidad en la vida"
-TENIDO Artifact/issuer/period TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \  \                                                                                                                                                                                               
+| Artifact/issuer/period | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \  \                                                                                                                                                                                               
 "Escopo/regiones/criterios"
-"Opinión/certificate status TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \ \                                                                                                                                                                                              
+"Opinión/certificate status | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \ \                                                                                                                                                                                              
 Tests/excepciones/finamientos de la vida
-TENIDOS DE LAS CUESTIONES DEL cliente TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+TENIDOS DE LAS CUESTIONES DEL cliente | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 "Las organizaciones de subservicio en la vida"
 Subsequent events/changes ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 "Aplicabilidad/salidas de evidencia"
@@ -1250,64 +1250,64 @@ Subsequent events/changes ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 
 ## 30.4 Registro de incidentes y recuperación
 
-Silencio**
-Silencio...
+|** |
+|... |
 "Principio/comandante/severidad"
 Tenant/accounts/resources  continuously \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
-Identidad/tokens / keys TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+Identidad/tokens / keys | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
 "Datos/regiones/providentes" sobre la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \  \                                                                                                                                                                                                       
-TENIENDO Timeline/logs/preservation TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+TENIENDO Timeline/logs/preservation | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 "Contenimiento/aprobaciones infligidas"
 Erradicación de la vida / fuente de confianza
-Restore / RTO / RPO Silencio \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \ \                                                                                                                                                                                                       
+Restore / RTO / RPO | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \  \ \                                                                                                                                                                                                       
 "Vidación/acceptancia de la vida"
 Lecciones/acción/retestigos sobre la vida
 
 ## 30.5 Glosario
 
-Silencio**
-Silencio...
+|** |
+|... |
 ← Iniciativa de Evaluación de Consensos en la India
-Silencio CCM Silencioso Cloud Controls Matrix.
-TEN Cloud control plano TEN APIs y servicios utilizados para administrar recursos en la nube. Silencio
-Silencio CSPM Silencioso Manejo de posturas de seguridad en la nube.
-tención Guardrail Silencio Regla preventiva o detective que limita el uso de la nube.
+| CCM Silencioso Cloud Controls Matrix. |
+TEN Cloud control plano TEN APIs y servicios utilizados para administrar recursos en la nube. |
+| CSPM Silencioso Manejo de posturas de seguridad en la nube. |
+tención Guardrail | Regla preventiva o detective que limita el uso de la nube.
 tención IaaAS Silencioso infraestructura como servicio.
-TENCIÓN IaC TENIDO Infraestructura como código.
-TENIDO Zona de aterrizaje TENIDO Fundamentos de nube estándar para la gobernanza y la carga de trabajo.
-Silencio PaaS Silencioso Plataforma como servicio.
-tención Política como código Silencio Reglas de política evaluadas a máquina almacenadas y gobernadas como código.
-Silencio RPO Silencio Pérdida máxima tolerable de datos medida en el tiempo.
-Silencio RTO TENIDO Tiempo de restauración.
+TENCIÓN IaC | Infraestructura como código.
+| Zona de aterrizaje | Fundamentos de nube estándar para la gobernanza y la carga de trabajo.
+| PaaS Silencioso Plataforma como servicio. |
+tención Política como código | Reglas de política evaluadas a máquina almacenadas y gobernadas como código.
+| RPO | Pérdida máxima tolerable de datos medida en el tiempo.
+| RTO | Tiempo de restauración.
 ← SaaS Silencioso Software como un Servicio.
-tención Servicio principal / carga de trabajo identidad Silencio Identidad no humana utilizada por software o automatización. Silencio
-Silencio Responsabilidad compartida Silencio Asignación de responsabilidades de proveedor y de seguridad de los clientes.
-TEN STAR TENIDO CSA Security, Trust, Assurance and Risk program/registry.
+tención Servicio principal / carga de trabajo identidad | Identidad no humana utilizada por software o automatización. |
+| Responsabilidad compartida | Asignación de responsabilidades de proveedor y de seguridad de los clientes.
+TEN STAR | CSA Security, Trust, Assurance and Risk program/registry.
 
 ## 30.6 Subject index
 
 Subjeto**
-Silencio...
+|... |
 ← Servicios de inteligencia artificial
-Silencioso Aplicaciones / DevSecOps Silencio 13
+Silencioso Aplicaciones / DevSecOps | 13
 Evaluación/evidencia en la vida cotidiana
-Silencio CCM v4.1
+| CCM v4.1 |
 TENIDA Datos/privacy TENED 8, 21
 tención Encryption/keys/secrets tención 9
 Identidad permanente
-Silencio IaC / policy TENIDO 14
-Silencio Respuesta del incidente
-Silencio Inventario/zonas de aterrizaje
+| IaC / policy | 14
+| Respuesta del incidente |
+| Inventario/zonas de aterrizaje |
 Silencioso Kubernetes
 Silenciosos en la vida
 Silencioso Silencioso
-Silencio Silencio Silencio .
+| | | .
 ← Resiliencia/recuperación
-Silencio Silencio Silencio
-tención Serverless / APIs TEN 16 TEN
-Silencio Responsabilidad compartida
+| | |
+tención Serverless / APIs TEN 16 |
+| Responsabilidad compartida |
 Ø Herramientas para prevenir la muerte
-Silencio Vulnerability Silencio 11
+| Vulnerability | 11
 
 ## 30.7 Referencias oficiales
 
@@ -1337,5 +1337,5 @@ Silencio Vulnerability Silencio 11
 
 - [Seguridad de aplicaciones nativas en la nube de XOWASP Top 10 seleccionado/u fiel](https://owasp.org/www-project-cloud-native-application-security-top-10/)
 
-Silencio **Recordaje final:** Los proveedores, servicios, características, regiones, amenazas, estándares, contratos, precios, herramientas y recomendaciones de configuración cambian rápidamente. Verifique el proveedor actual y la fuente autorizada antes de la implementación, evaluación o aceptación del riesgo.
-Silencio.
+| **Recordaje final:** Los proveedores, servicios, características, regiones, amenazas, estándares, contratos, precios, herramientas y recomendaciones de configuración cambian rápidamente. Verifique el proveedor actual y la fuente autorizada antes de la implementación, evaluación o aceptación del riesgo. |
+|. |

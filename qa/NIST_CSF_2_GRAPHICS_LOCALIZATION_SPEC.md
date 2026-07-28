@@ -331,6 +331,24 @@ Recommended filename:
 
 `image6_pt-BR.png`
 
+## Figure 7 — Authorized evidence workflow
+
+The localized figure must preserve this sequence:
+
+- Spanish (`es-419`): Autorizar, Recopilar, Validar, Corregir, Volver a probar.
+- Brazilian Portuguese (`pt-BR`): Autorizar, Coletar, Validar, Corrigir, Testar novamente.
+
+Recommended filenames: `image7_es-419.png` and `image7_pt-BR.png`.
+
+## Figure 8 — Portfolio practice workflow
+
+The localized figure must preserve this sequence:
+
+- Spanish (`es-419`): Aprender, Mapear, Probar, Informar, Aplicar.
+- Brazilian Portuguese (`pt-BR`): Aprender, Mapear, Testar, Relatar, Aplicar.
+
+Recommended filenames: `image8_es-419.png` and `image8_pt-BR.png`.
+
 ## Localization QA checklist
 
 - [ ] No unintended English text remains embedded in the localized figures.

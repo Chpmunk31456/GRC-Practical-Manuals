@@ -12,8 +12,8 @@
 
 Primera edición • Julio 2026
 
-Silencio **Inside:** Regla de Privacidad • Regla de Seguridad • Notificación de Breach • Parte 2 • Manual de administración • Herramientas de código abierto • Laboratorios de analista junior • Preparación de entrevistas
-Silencio.
+| **Inside:** Regla de Privacidad • Regla de Seguridad • Notificación de Breach • Parte 2 • Manual de administración • Herramientas de código abierto • Laboratorios de analista junior • Preparación de entrevistas |
+|. |
 
 # Publication and Use Notice
 
@@ -41,8 +41,8 @@ Los administradores deben asignar responsabilidad, financiar salvaguardias razon
 
 Este manual sigue un enfoque basado en la metodología. Una herramienta de exploración puede identificar una debilidad, pero no puede decidir si todo el análisis de riesgo es preciso y minucioso. Un repositorio de contrato puede almacenar un BAA, pero no puede probar que el vendedor lo siga. Un dashboard puede mostrar estado verde, pero la administración sigue siendo responsable de lo que significa ese estado.
 
-Silencio **Lección central:** El cumplimiento de HIPAA es un programa de gestión continuo que conecta la privacidad de la información sanitaria, la ciberseguridad, el comportamiento de la fuerza de trabajo, los proveedores, los derechos de los pacientes, la respuesta a incidentes y la evidencia.
-Silencio.
+| **Lección central:** El cumplimiento de HIPAA es un programa de gestión continuo que conecta la privacidad de la información sanitaria, la ciberseguridad, el comportamiento de la fuerza de trabajo, los proveedores, los derechos de los pacientes, la respuesta a incidentes y la evidencia. |
+|. |
 
 *— Alberto (Al) Leiva*
 
@@ -56,8 +56,8 @@ Los lectores técnicos deben conectar cada hallazgo técnico a la ePHI, un riesg
 
 La privacidad y los equipos legales deben verificar la orientación actual del HHS, el texto del ECFR, las leyes estatales y otras normas especializadas de información sobre salud.
 
-Silencio ** Nota de edición:** La guía del capítulo visible contiene números de página verificados para esta edición. El campo nativo de Word se puede refrescar después de la edición seleccionando la tabla de actualización, y luego actualizar la tabla completa.
-Silencio.
+| ** Nota de edición:** La guía del capítulo visible contiene números de página verificados para esta edición. El campo nativo de Word se puede refrescar después de la edición seleccionando la tabla de actualización, y luego actualizar la tabla completa. |
+|. |
 
 # Tabla de contenidos
 
@@ -81,7 +81,7 @@ Silencio.
 
 [1.3 Punto de control de la ley actual [9](#current-law-checkpoint)](#current-law-checkpoint)
 
-[2. Alcance, Roles, PHI y ePHI [10](#scope-roles-phi-and-ephi)](#scope-roles-phi-and-ephi)
+[2. Alcance, Rols, PHI y ePHI [10](#scope-roles-phi-and-ephi)](#scope-roles-phi-and-ephi)
 
 [2.1 Entidades cubiertas [10](#covered-entities)](#covered-entities)
 
@@ -343,12 +343,12 @@ Figura 1. Las principales áreas de cumplimiento HIPAA
 
 ## 1.1 The HIPAA Rules
 
-**Area** Silencio**
+**Area** |**
 ...--------------------------------------------------------------------------------------
-TENIDA Privacy Rule TENCIÓN Limita los usos y divulgaciones y da derechos de las personas TEN PHI en formato electrónico, papel y oral TEN
-Silencio Seguridad Regla Silencio Protege PHI electrónico TENIDO Salvaguardias administrativas, físicas y técnicas
-← Breach Notification Rule TEN Requiere evaluación y notificación después de ciertas infracciones TEN PHI no garantizado y documentado decisiones de riesgo TEN
-TENCIÓN TERRITORIO Explica investigaciones y penas TENIENTES Quejas, exámenes de cumplimiento, pruebas, corrección TENIDO
+TENIDA Privacy Rule TENCIÓN Limita los usos y divulgaciones y da derechos de las personas TEN PHI en formato electrónico, papel y oral |
+| Seguridad Regla | Protege PHI electrónico | Salvaguardias administrativas, físicas y técnicas
+← Breach Notification Rule TEN Requiere evaluación y notificación después de ciertas infracciones TEN PHI no garantizado y documentado decisiones de riesgo |
+TENCIÓN TERRITORIO Explica investigaciones y penas TENIENTES Quejas, exámenes de cumplimiento, pruebas, corrección |
 tención Transacciones y conjuntos de códigos tención Estándariza las operaciones electrónicas de salud
 
 ## 1.2 HIPAA no es una ley general de salud-datos
@@ -358,9 +358,9 @@ HIPAA se aplica a entidades cubiertas, socios comerciales y ciertos arreglos con
 ## 1.3 Punto de control de la ley actual
 
 **Importante:** La actualización de la Regla de Seguridad HIPAA de diciembre 2024 es una regla propuesta, no la actual Regla de Seguridad final. Este manual explica la norma actual y etiqueta claramente la propuesta como un tema de desarrollo futuro.
-Silencio.
+|. |
 
-2. Alcance, Roles, PHI y ePHI
+2. Alcance, Rols, PHI y ePHI
 
 *Cómo identificar entidades reguladas, información protegida, límites y responsabilidades*.
 
@@ -386,13 +386,13 @@ La información sobre la salud protegida es una información de salud individual
 
 ## 2.4 De-identification
 
-Silencio **Metodoxo** Silencioso**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------
+| **Metodoxo** Silencioso** |
+|---------------------------------------------------------------------------------------------------------------------------------------- |
 Un experto cualificado determina y documenta que el riesgo de identificación es muy pequeño tención Expert qualifications, método, Hipótesis, reporte  sometida
-Silencio Safe Harbor Silencio Eliminar los identificadores enumerados y no tienen ningún conocimiento real de que la información restante identifica a una persona identificadora lista de verificación, revisión de calidad, aprobación
+| Safe Harbor | Eliminar los identificadores enumerados y no tienen ningún conocimiento real de que la información restante identifica a una persona identificadora lista de verificación, revisión de calidad, aprobación
 
 *Manager checkpoint:** Requiere un análisis por escrito de alcance y función para cada entidad jurídica, servicio, producto, función del empleador, actividad de investigación, proveedor y flujo de datos.
-Silencio.
+|. |
 
 # 3. Regla de Privacidad: Usos y Divulgaciones
 
@@ -426,17 +426,17 @@ Cuando se aplica la norma mínima necesaria, se limitan los usos, las revelacion
 
 ## 3.5 Publicaciones permitidas especiales
 
-Silencio **Situación**
-Silencio.
-tención requerida por la ley Silencio Identificar el requisito legal exacto y limitar la revelación
-Silencio Salud pública Silencio Verificar autoridad receptora y propósito permitido
+| **Situación** |
+|. |
+tención requerida por la ley | Identificar el requisito legal exacto y limitar la revelación
+| Salud pública | Verificar autoridad receptora y propósito permitido
 ← Abuso, abandono o violencia doméstica ← Aplicar las condiciones, consideraciones de seguridad y las reglas de aviso .
 TENCIÓN DE LA OPERVISIÓN DE LA Salud TENIDA Confirmar autoridad de supervisión y alcance
-Silencio Procedimiento judicial o administrativo Silencioso Orden de revisión, orden de citación, aviso, orden de protección y condiciones de objeción
-Silencioso cumplimiento de la ley Silencio Identificar el permiso preciso y verificar el solicitante
-← Investigación Silencio Confirmación de autorización, renuncia, revisión preparatoria o condiciones engañosas
+| Procedimiento judicial o administrativo Silencioso Orden de revisión, orden de citación, aviso, orden de protección y condiciones de objeción |
+Silencioso cumplimiento de la ley | Identificar el permiso preciso y verificar el solicitante
+← Investigación | Confirmación de autorización, renuncia, revisión preparatoria o condiciones engañosas
 ← Amenaza seria   Aplicar condiciones de buena fe y de aplicación
-Silencio Remuneración de los Trabajadores Silencio Limite la divulgación a lo que la ley autoriza vivir
+| Remuneración de los Trabajadores | Limite la divulgación a lo que la ley autoriza vivir
 
 4. Derechos individuales y operaciones de privacidad
 
@@ -444,15 +444,15 @@ Silencio Remuneración de los Trabajadores Silencio Limite la divulgación a lo 
 
 ## 4.1 Sinopsis de derechos
 
-Silencio **Justo** Silencioso **Tiempo típico**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Justo** Silencioso **Tiempo típico** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 confidencialidad Aviso de las prácticas de privacidad At required service, enrollment, posting, and revision points
-TENIDO Acceder TENIDO Generalmente 30 días; una extensión de 30 días con notificación por escrito oportuna TEN Verify, search designated record set, review exclusions, format, fees, delivery TEN
-tención Enmienda Silencio Generalmente 60 días; una extensión de 30 días con aviso Silencio Revisión, aceptar o negar, registros de enlaces, notificar a las partes Silencio
-Silencio Contabilidad de las revelaciones Silencio Generalmente 60 días; una extensión de 30 días con aviso Silencio Buscar registros, aplicar excepciones, entregar contabilidad  eterna
-Silencioso petición de restricción Silencioso Revisión y respuesta; ciertas restricciones pagadas en el plan de salud deben ser aceptadas Silencio, bandera del sistema, control de aguas abajo
-Silencio Comunicaciones confidenciales Silencio Accommodate reasonable requests under the applicable rule Silencio Dirección alternativa, canal, manejo de seguridad
-← Reclamación Silencio No hay represalias; proceso bajo la política Silencioso Iniciar sesión, investigar, responder, mitigar, retener pruebas
+| Acceder | Generalmente 30 días; una extensión de 30 días con notificación por escrito oportuna TEN Verify, search designated record set, review exclusions, format, fees, delivery |
+tención Enmienda | Generalmente 60 días; una extensión de 30 días con aviso | Revisión, aceptar o negar, registros de enlaces, notificar a las partes |
+| Contabilidad de las revelaciones | Generalmente 60 días; una extensión de 30 días con aviso | Buscar registros, aplicar excepciones, entregar contabilidad  eterna
+Silencioso petición de restricción Silencioso Revisión y respuesta; ciertas restricciones pagadas en el plan de salud deben ser aceptadas |, bandera del sistema, control de aguas abajo
+| Comunicaciones confidenciales | Accommodate reasonable requests under the applicable rule | Dirección alternativa, canal, manejo de seguridad
+← Reclamación | No hay represalias; proceso bajo la política Silencioso Iniciar sesión, investigar, responder, mitigar, retener pruebas
 
 ## 4.2 El acceso no es el mismo que la autorización
 
@@ -494,8 +494,8 @@ Asegurar el cumplimiento de la fuerza laboral.
 
 ## 5.2 Requisitos y accesibles
 
-Silencio **La adición no significa opcional:** Para una especificación abordable, evalúe si es razonable y apropiado. Aplicarlo cuando lo sea. Si no lo es, documente por qué e implemente una alternativa razonable y apropiada equivalente cuando existe. Silencio
-Silencio.
+| **La adición no significa opcional:** Para una especificación abordable, evalúe si es razonable y apropiado. Aplicarlo cuando lo sea. Si no lo es, documente por qué e implemente una alternativa razonable y apropiada equivalente cuando existe. |
+|. |
 
 ## 5.3 Análisis de riesgos y gestión de riesgos
 
@@ -517,17 +517,17 @@ La actual Regla de Seguridad no establece una frecuencia de análisis de riesgo 
 
 *Los procesos de gestión que convierten la política en protección repetible*.
 
-Silencio** Silencio**
-Silencio--------------------------------------------------------------------
-TEN 164.308(a)(1) TENIDO Proceso de gestión de la seguridad TENIDO Realizar análisis de riesgos, gestión de riesgos, sanciones y revisión de la actividad del sistema de información. Silencio Análisis de riesgos, plan de tratamiento, sanciones, pruebas de revisión de registros
-tención 164.308(a)(2) Silencio Assigned security responsibility ← Designate the official responsible for Security Rule policies and procedures. Silencio Descripción del papel, nombramiento, línea de presentación de informes
-Silencio 164.308(a)(3) Silencio Seguridad de la fuerza de trabajo Silencio Autorizar, supervisar, limpiar y eliminar rápidamente el acceso a la fuerza de trabajo. Silencio Aprobaciones de acceso, selección, pruebas de rescisión
-Silencio 164.308(a)(4) Silencio Gestión de acceso a la información Silencio Acceso a control basado en función y necesidad, incluyendo establecimiento y modificación. Silencio Matriz de acceso, aprobaciones, revisiones periódicas
-Silencio 164.308(a)(5) Silencio Seguridad conciencia y entrenamiento Silencio Entrenar a la fuerza de trabajo y abordar recordatorios, malware, monitoreo de registros y gestión de contraseñas. Silencio Entrenamiento, simulaciones, recordatorios, seguimiento
-tención 164.308(a)(6) Silenciosos procedimientos de incidentes de seguridad Silencio Identificar, responder, mitigar, documentar e informar de incidentes. Silencio Plan de incidencias, entradas, evidencia, lecciones
-Silencio 164.308(a)(7) Silencio Plan de Contingencia Silencio Respaldos operativos, recuperación en casos de desastre, modo de emergencia, pruebas y análisis de crítica. informes de respaldo, pruebas de restauración, ejercicios, planes de recuperación
-tención 164.308(a)(8) Silencio Evaluación Silencioso Realizar evaluaciones técnicas y no técnicas periódicas después de los cambios pertinentes. TENIDO Alcance de evaluación, conclusiones, plan de corrección
-Silencio 164.308(b) Silencio Acuerdos asociados para empresas tención Uso de contratos u otros arreglos que requieren salvaguardias apropiadas. TEN BAA, due diligence, monitoring TENIDO
+|** |**
+|-------------------------------------------------------------------- |
+TEN 164.308(a)(1) | Proceso de gestión de la seguridad | Realizar análisis de riesgos, gestión de riesgos, sanciones y revisión de la actividad del sistema de información. | Análisis de riesgos, plan de tratamiento, sanciones, pruebas de revisión de registros
+tención 164.308(a)(2) | Assigned security responsibility ← Designate the official responsible for Security Rule policies and procedures. | Descripción del papel, nombramiento, línea de presentación de informes
+| 164.308(a)(3) | Seguridad de la fuerza de trabajo | Autorizar, supervisar, limpiar y eliminar rápidamente el acceso a la fuerza de trabajo. | Aprobaciones de acceso, selección, pruebas de rescisión
+| 164.308(a)(4) | Gestión de acceso a la información | Acceso a control basado en función y necesidad, incluyendo establecimiento y modificación. | Matriz de acceso, aprobaciones, revisiones periódicas
+| 164.308(a)(5) | Seguridad conciencia y entrenamiento | Entrenar a la fuerza de trabajo y abordar recordatorios, malware, monitoreo de registros y gestión de contraseñas. | Entrenamiento, simulaciones, recordatorios, seguimiento
+tención 164.308(a)(6) Silenciosos procedimientos de incidentes de seguridad | Identificar, responder, mitigar, documentar e informar de incidentes. | Plan de incidencias, entradas, evidencia, lecciones
+| 164.308(a)(7) | Plan de Contingencia | Respaldos operativos, recuperación en casos de desastre, modo de emergencia, pruebas y análisis de crítica. informes de respaldo, pruebas de restauración, ejercicios, planes de recuperación
+tención 164.308(a)(8) | Evaluación Silencioso Realizar evaluaciones técnicas y no técnicas periódicas después de los cambios pertinentes. | Alcance de evaluación, conclusiones, plan de corrección
+| 164.308(b) | Acuerdos asociados para empresas tención Uso de contratos u otros arreglos que requieren salvaguardias apropiadas. TEN BAA, due diligence, monitoring |
 
 ## 6.1 Revisión de la actividad del sistema de información
 
@@ -553,19 +553,19 @@ Definir qué registros de auditoría, informes de acceso, eventos de seguridad, 
 
 *Facilidades, estaciones de trabajo, medios de comunicación, identidad, acceso, auditoría, integridad y controles de transmisión.*
 
-Silencio** Silencio**
-Silencio...--------------------------------------------------------------------------------------------------------------
-tención 164.310(a) tención Controles de acceso a las instalaciones Silencio Limitar el acceso físico al permitir el acceso autorizado y la continuidad. Plan de instalación, registros de visitantes, registros de mantenimiento
-tención 164.310(b) Silencio Uso de estaciones de trabajo Silencio Definir funciones adecuadas y entorno físico para estaciones de trabajo usando ePHI. política de estaciones de trabajo, capacitación, observaciones
-Silencio 164.310(c) Silencio Seguridad de la estación de trabajo Silencio Restringir el acceso físico a estaciones de trabajo que acceden a ePHI. tención Localizaciones seguras, pantallas, controles de dispositivos
-TEN 164.310(d) TENIDO Controles de dispositivos y medios de comunicación TENIDO Recibimiento, movimiento, reutilización, respaldo, eliminación y rendición de cuentas. Silencio Inventario, cadena de custodia, prueba de limpieza y destrucción
-Silencio 164.312(a) Silencio Control de acceso Silencio Uso de IDs únicos, acceso de emergencia, y controles de logotipo y cifrado adecuados. Ajustes de IAM, prueba de emergencia, registro de cifrado
-tención 164.312(b) Silencio Controles de auditoría tención Record y examinar la actividad en sistemas que contengan o utilicen ePHI. Silencios, calendario de revisión, registros de investigación
-Silencio 164.312(c) Silencio Integridad Silencio Protege el ePHI de alteración o destrucción indebida. Controles de integridad, controles de cambio, validación
-Silencio 164.312(d) Silencio Persona o entidad autenticación Silencio Verificar que una persona o entidad que busca acceso es la reclamada. ← Ajustes de autenticación, MFA, registros de identidad
-Silencio 164.312(e) Silencio Seguridad de la transmisión Silencioso Protege ePHI contra el acceso no autorizado mientras se transmite. ← Encriptación, protocolos seguros, pruebas de arquitectura
-Silencio 164.314 Silencio Requisitos organizacionales Silencio Abordar contratos comerciales asociados y requisitos del plan de salud grupal. Ø Contratos, documentos del plan, revisiones
-TEN 164.316 TENRI Políticas, procedimientos y documentación TEN Aplicar políticas razonables y conservar la documentación necesaria durante seis años. Silencio Políticas aprobadas, versiones, pruebas de retención de seis años
+|** |**
+|...-------------------------------------------------------------------------------------------------------------- |
+tención 164.310(a) tención Controles de acceso a las instalaciones | Limitar el acceso físico al permitir el acceso autorizado y la continuidad. Plan de instalación, registros de visitantes, registros de mantenimiento
+tención 164.310(b) | Uso de estaciones de trabajo | Definir funciones adecuadas y entorno físico para estaciones de trabajo usando ePHI. política de estaciones de trabajo, capacitación, observaciones
+| 164.310(c) | Seguridad de la estación de trabajo | Restringir el acceso físico a estaciones de trabajo que acceden a ePHI. tención Localizaciones seguras, pantallas, controles de dispositivos
+TEN 164.310(d) | Controles de dispositivos y medios de comunicación | Recibimiento, movimiento, reutilización, respaldo, eliminación y rendición de cuentas. | Inventario, cadena de custodia, prueba de limpieza y destrucción
+| 164.312(a) | Control de acceso | Uso de IDs únicos, acceso de emergencia, y controles de logotipo y cifrado adecuados. Ajustes de IAM, prueba de emergencia, registro de cifrado
+tención 164.312(b) | Controles de auditoría tención Record y examinar la actividad en sistemas que contengan o utilicen ePHI. Silencios, calendario de revisión, registros de investigación
+| 164.312(c) | Integridad | Protege el ePHI de alteración o destrucción indebida. Controles de integridad, controles de cambio, validación
+| 164.312(d) | Persona o entidad autenticación | Verificar que una persona o entidad que busca acceso es la reclamada. ← Ajustes de autenticación, MFA, registros de identidad
+| 164.312(e) | Seguridad de la transmisión Silencioso Protege ePHI contra el acceso no autorizado mientras se transmite. ← Encriptación, protocolos seguros, pruebas de arquitectura
+| 164.314 | Requisitos organizacionales | Abordar contratos comerciales asociados y requisitos del plan de salud grupal. Ø Contratos, documentos del plan, revisiones
+TEN 164.316 TENRI Políticas, procedimientos y documentación TEN Aplicar políticas razonables y conservar la documentación necesaria durante seis años. | Políticas aprobadas, versiones, pruebas de retención de seis años
 
 ## 7.1 Principios de control técnico
 
@@ -597,13 +597,13 @@ Figura 4. Flujo de trabajo de ruptura HIPAA
 
 Se presume que el uso o la divulgación inadmisibles de PHI es una violación a menos que la entidad cubierta o asociado comercial demuestre una baja probabilidad de que el PHI estuviera comprometido. Evaluar al menos la naturaleza y el alcance del PHI y la probabilidad de reidentificación, la persona no autorizada, si el PHI fue adquirido o visto en realidad, y el alcance de la mitigación.
 
-Silencio **Notificación** Silencio ** Sinopsis del nombramiento**
-Silencio------------------------------------------------------ La vida--------------------------------
-Silencio Individuos TENIDO Sin demora irrazonable y a más tardar 60 días después del descubrimiento TENIDO Contenido, entrega, aviso sustitutorio, prueba
-TEN HHS — 500 o más TENIDO Bajo el cronograma de presentación de informes contemporáneos de la regla
-Silencio HHS — menos de 500 Silencio Presentación de informes anuales, a más tardar 60 días después de la finalización del año civil Silencio Pequeño tronco y sumisión
+| **Notificación** | ** Sinopsis del nombramiento**
+|------------------------------------------------------ La vida-------------------------------- |
+| Individuos | Sin demora irrazonable y a más tardar 60 días después del descubrimiento | Contenido, entrega, aviso sustitutorio, prueba
+TEN HHS — 500 o más | Bajo el cronograma de presentación de informes contemporáneos de la regla
+| HHS — menos de 500 | Presentación de informes anuales, a más tardar 60 días después de la finalización del año civil | Pequeño tronco y sumisión
 ← Medios de comunicación tención Más de 500 residentes de un estado o jurisdicción vivieron el recuento de Jurisdicción, aviso de los medios
-Silencio Business Associate to covered entity TEN sin demora irrazonable y a más tardar 60 días TENENCIA Fecha de descubrimiento, identidades si se conoce, hechos y aviso TENIDO
+| Business Associate to covered entity TEN sin demora irrazonable y a más tardar 60 días TENENCIA Fecha de descubrimiento, identidades si se conoce, hechos y aviso |
 
 ## 8.2 Excepciones
 
@@ -636,16 +636,16 @@ Derechos de rescisión por violación material
 ## 9.2 Due diligence
 
 **Area**
-Silencio.
+|. |
 ¿Qué PHI/ePHI, propósito, servicios, ubicaciones e interfaces? tención Flujo de datos, inventario, arquitectura
-TEN Seguridad TENIDO Análisis de riesgos, cifrado, identidad, registro, vulnerabilidad, respaldos, respuesta a incidentes? ← Políticas, pruebas, informes, remediación
-← Privacidad Silencio mínimo necesario, acceso a la fuerza de trabajo, apoyo a los derechos, controles de divulgación? procedimientos, roles, muestras
+TEN Seguridad | Análisis de riesgos, cifrado, identidad, registro, vulnerabilidad, respaldos, respuesta a incidentes? ← Políticas, pruebas, informes, remediación
+← Privacidad | mínimo necesario, acceso a la fuerza de trabajo, apoyo a los derechos, controles de divulgación? procedimientos, roles, muestras
 ¿Quién, con qué propósito, bajo qué acuerdo? ← Subprocesador lista y términos
 ¿Cuándo y cómo informará el informe de BA y cooperará? ← BAA, ejercicio, contactos
-¿Cómo acceder al final y PHI será devuelto o destruido? Silencio Plan de salida, prueba de eliminación, registro de riesgo residual
+¿Cómo acceder al final y PHI será devuelto o destruido? | Plan de salida, prueba de eliminación, registro de riesgo residual
 
-Silencio ** Punto de administración:** Un BAA firmado es necesario en muchas relaciones, pero no reemplaza la diligencia debida, la gestión de riesgos, el control de acceso, la vigilancia o la coordinación de incidentes. Silencio
-Silencio.
+| ** Punto de administración:** Un BAA firmado es necesario en muchas relaciones, pero no reemplaza la diligencia debida, la gestión de riesgos, el control de acceso, la vigilancia o la coordinación de incidentes. |
+|. |
 
 # 10. Parte 2 y Información Especial sobre Salud
 
@@ -669,7 +669,7 @@ La legislación estatal puede ser más estricta que la HIPAA y puede imponer nor
 
 ## 10.3 Situación de la norma de salud reproductiva
 
-**Estado actual:** Una orden judicial federal de 18 de junio de 2025 dejó la mayoría de la regla 2024 HIPAA de privacidad en salud reproductiva. El HHS declara que sólo quedaban ciertas modificaciones del Aviso de Privacidad Prácticas. Verifique la página actual del HHS y el asesoramiento legal antes de utilizar cualquier flujo de trabajo de 2024 certificados o salud reproductiva. Silencio
+**Estado actual:** Una orden judicial federal de 18 de junio de 2025 dejó la mayoría de la regla 2024 HIPAA de privacidad en salud reproductiva. El HHS declara que sólo quedaban ciertas modificaciones del Aviso de Privacidad Prácticas. Verifique la página actual del HHS y el asesoramiento legal antes de utilizar cualquier flujo de trabajo de 2024 certificados o salud reproductiva. |
 Respuesta de Dios.
 
 11. Ejecución, derecho del Estado y desarrollos actuales
@@ -714,69 +714,69 @@ HHS observa que un tribunal abandonó parte de su orientación tecnológica de s
 
 Regla de Seguridad
 
-Silencio **Citación** Silencio **Requisito** Silencio **Manager action** Silencio**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio 164.306 Silencio Reglas generales Silencio Protege la confidencialidad, la integridad y la disponibilidad del ePHI; aborda las amenazas anticipadas y los usos inválidos. programa de seguridad, decisiones de riesgo, análisis de flexibilidad
-TEN 164.308(a)(1) TENIDO Proceso de gestión de la seguridad TENIDO Realizar análisis de riesgos, gestión de riesgos, sanciones y revisión de la actividad del sistema de información. Silencio Análisis de riesgos, plan de tratamiento, sanciones, pruebas de revisión de registros
-tención 164.308(a)(2) Silencio Assigned security responsibility ← Designate the official responsible for Security Rule policies and procedures. Silencio Descripción del papel, nombramiento, línea de presentación de informes
-Silencio 164.308(a)(3) Silencio Seguridad de la fuerza de trabajo Silencio Autorizar, supervisar, limpiar y eliminar rápidamente el acceso a la fuerza de trabajo. Silencio Aprobaciones de acceso, selección, pruebas de rescisión
-Silencio 164.308(a)(4) Silencio Gestión de acceso a la información Silencio Acceso a control basado en función y necesidad, incluyendo establecimiento y modificación. Silencio Matriz de acceso, aprobaciones, revisiones periódicas
-Silencio 164.308(a)(5) Silencio Seguridad conciencia y entrenamiento Silencio Entrenar a la fuerza de trabajo y abordar recordatorios, malware, monitoreo de registros y gestión de contraseñas. Silencio Entrenamiento, simulaciones, recordatorios, seguimiento
-tención 164.308(a)(6) Silenciosos procedimientos de incidentes de seguridad Silencio Identificar, responder, mitigar, documentar e informar de incidentes. Silencio Plan de incidencias, entradas, evidencia, lecciones
-Silencio 164.308(a)(7) Silencio Plan de Contingencia Silencio Respaldos operativos, recuperación en casos de desastre, modo de emergencia, pruebas y análisis de crítica. informes de respaldo, pruebas de restauración, ejercicios, planes de recuperación
-tención 164.308(a)(8) Silencio Evaluación Silencioso Realizar evaluaciones técnicas y no técnicas periódicas después de los cambios pertinentes. TENIDO Alcance de evaluación, conclusiones, plan de corrección
-Silencio 164.308(b) Silencio Acuerdos asociados para empresas tención Uso de contratos u otros arreglos que requieren salvaguardias apropiadas. TEN BAA, due diligence, monitoring TENIDO
-tención 164.310(a) tención Controles de acceso a las instalaciones Silencio Limitar el acceso físico al permitir el acceso autorizado y la continuidad. Plan de instalación, registros de visitantes, registros de mantenimiento
-tención 164.310(b) Silencio Uso de estaciones de trabajo Silencio Definir funciones adecuadas y entorno físico para estaciones de trabajo usando ePHI. política de estaciones de trabajo, capacitación, observaciones
-Silencio 164.310(c) Silencio Seguridad de la estación de trabajo Silencio Restringir el acceso físico a estaciones de trabajo que acceden a ePHI. tención Localizaciones seguras, pantallas, controles de dispositivos
-TEN 164.310(d) TENIDO Controles de dispositivos y medios de comunicación TENIDO Recibimiento, movimiento, reutilización, respaldo, eliminación y rendición de cuentas. Silencio Inventario, cadena de custodia, prueba de limpieza y destrucción
-Silencio 164.312(a) Silencio Control de acceso Silencio Uso de IDs únicos, acceso de emergencia, y controles de logotipo y cifrado adecuados. Ajustes de IAM, prueba de emergencia, registro de cifrado
-tención 164.312(b) Silencio Controles de auditoría tención Record y examinar la actividad en sistemas que contengan o utilicen ePHI. Silencios, calendario de revisión, registros de investigación
-Silencio 164.312(c) Silencio Integridad Silencio Protege el ePHI de alteración o destrucción indebida. Controles de integridad, controles de cambio, validación
-Silencio 164.312(d) Silencio Persona o entidad autenticación Silencio Verificar que una persona o entidad que busca acceso es la reclamada. ← Ajustes de autenticación, MFA, registros de identidad
-Silencio 164.312(e) Silencio Seguridad de la transmisión Silencioso Protege ePHI contra el acceso no autorizado mientras se transmite. ← Encriptación, protocolos seguros, pruebas de arquitectura
-Silencio 164.314 Silencio Requisitos organizacionales Silencio Abordar contratos comerciales asociados y requisitos del plan de salud grupal. Ø Contratos, documentos del plan, revisiones
-TEN 164.316 TENRI Políticas, procedimientos y documentación TEN Aplicar políticas razonables y conservar la documentación necesaria durante seis años. Silencio Políticas aprobadas, versiones, pruebas de retención de seis años
+| **Citación** | **Requisito** | **Manager action** |**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 164.306 | Reglas generales | Protege la confidencialidad, la integridad y la disponibilidad del ePHI; aborda las amenazas anticipadas y los usos inválidos. programa de seguridad, decisiones de riesgo, análisis de flexibilidad
+TEN 164.308(a)(1) | Proceso de gestión de la seguridad | Realizar análisis de riesgos, gestión de riesgos, sanciones y revisión de la actividad del sistema de información. | Análisis de riesgos, plan de tratamiento, sanciones, pruebas de revisión de registros
+tención 164.308(a)(2) | Assigned security responsibility ← Designate the official responsible for Security Rule policies and procedures. | Descripción del papel, nombramiento, línea de presentación de informes
+| 164.308(a)(3) | Seguridad de la fuerza de trabajo | Autorizar, supervisar, limpiar y eliminar rápidamente el acceso a la fuerza de trabajo. | Aprobaciones de acceso, selección, pruebas de rescisión
+| 164.308(a)(4) | Gestión de acceso a la información | Acceso a control basado en función y necesidad, incluyendo establecimiento y modificación. | Matriz de acceso, aprobaciones, revisiones periódicas
+| 164.308(a)(5) | Seguridad conciencia y entrenamiento | Entrenar a la fuerza de trabajo y abordar recordatorios, malware, monitoreo de registros y gestión de contraseñas. | Entrenamiento, simulaciones, recordatorios, seguimiento
+tención 164.308(a)(6) Silenciosos procedimientos de incidentes de seguridad | Identificar, responder, mitigar, documentar e informar de incidentes. | Plan de incidencias, entradas, evidencia, lecciones
+| 164.308(a)(7) | Plan de Contingencia | Respaldos operativos, recuperación en casos de desastre, modo de emergencia, pruebas y análisis de crítica. informes de respaldo, pruebas de restauración, ejercicios, planes de recuperación
+tención 164.308(a)(8) | Evaluación Silencioso Realizar evaluaciones técnicas y no técnicas periódicas después de los cambios pertinentes. | Alcance de evaluación, conclusiones, plan de corrección
+| 164.308(b) | Acuerdos asociados para empresas tención Uso de contratos u otros arreglos que requieren salvaguardias apropiadas. TEN BAA, due diligence, monitoring |
+tención 164.310(a) tención Controles de acceso a las instalaciones | Limitar el acceso físico al permitir el acceso autorizado y la continuidad. Plan de instalación, registros de visitantes, registros de mantenimiento
+tención 164.310(b) | Uso de estaciones de trabajo | Definir funciones adecuadas y entorno físico para estaciones de trabajo usando ePHI. política de estaciones de trabajo, capacitación, observaciones
+| 164.310(c) | Seguridad de la estación de trabajo | Restringir el acceso físico a estaciones de trabajo que acceden a ePHI. tención Localizaciones seguras, pantallas, controles de dispositivos
+TEN 164.310(d) | Controles de dispositivos y medios de comunicación | Recibimiento, movimiento, reutilización, respaldo, eliminación y rendición de cuentas. | Inventario, cadena de custodia, prueba de limpieza y destrucción
+| 164.312(a) | Control de acceso | Uso de IDs únicos, acceso de emergencia, y controles de logotipo y cifrado adecuados. Ajustes de IAM, prueba de emergencia, registro de cifrado
+tención 164.312(b) | Controles de auditoría tención Record y examinar la actividad en sistemas que contengan o utilicen ePHI. Silencios, calendario de revisión, registros de investigación
+| 164.312(c) | Integridad | Protege el ePHI de alteración o destrucción indebida. Controles de integridad, controles de cambio, validación
+| 164.312(d) | Persona o entidad autenticación | Verificar que una persona o entidad que busca acceso es la reclamada. ← Ajustes de autenticación, MFA, registros de identidad
+| 164.312(e) | Seguridad de la transmisión Silencioso Protege ePHI contra el acceso no autorizado mientras se transmite. ← Encriptación, protocolos seguros, pruebas de arquitectura
+| 164.314 | Requisitos organizacionales | Abordar contratos comerciales asociados y requisitos del plan de salud grupal. Ø Contratos, documentos del plan, revisiones
+TEN 164.316 TENRI Políticas, procedimientos y documentación TEN Aplicar políticas razonables y conservar la documentación necesaria durante seis años. | Políticas aprobadas, versiones, pruebas de retención de seis años
 
 ## 12.2 Privacy Rule
 
-Silencio **Citación** Silencio **Requisito** Silencio **Plain meaning** Silencio**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 164.502 TENIDO Reglas generales de uso y divulgación TENIDO Utilizar o divulgar PHI únicamente según sea necesario o permitido; aplicar reglas de socios comerciales y personas fallecidas. Silencio Matriz de uso/disclosure, aprobaciones, registros de la revelación
-Silencio 164.504 Silencio Requisitos organizacionales Silencio Dirija a las entidades híbridas, grupos afiliados, socios empresariales y límites patrocinados por planes. ← Designations, BAA, documentos de plan, firewalls ←
-Silencio 164.506 Silencio Tratamiento, pago y operaciones Silencio Permite definir usos y divulgaciones de TPO y prácticas de consentimiento conexas. Silencio TPO mapa de propósito, aviso, acceso a la función
+| **Citación** | **Requisito** | **Significado claro** |**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 164.502 | Reglas generales de uso y divulgación | Utilizar o divulgar PHI únicamente según sea necesario o permitido; aplicar reglas de socios comerciales y personas fallecidas. | Matriz de uso/disclosure, aprobaciones, registros de la revelación
+| 164.504 | Requisitos organizacionales | Dirija a las entidades híbridas, grupos afiliados, socios empresariales y límites patrocinados por planes. ← Designations, BAA, documentos de plan, firewalls ←
+| 164.506 | Tratamiento, pago y operaciones | Permite definir usos y divulgaciones de TPO y prácticas de consentimiento conexas. | TPO mapa de propósito, aviso, acceso a la función
 TEN 164.508 ANTE Autorizaciones ANTE Requiere una autorización válida por escrito para usos y divulgaciones no permitidas de otra manera, incluyendo reglas especiales de autorización. Formulario de autorización, revocación, prueba de revelación
-TEN 164.510 TENIDO Oportunidad de acordar o objetar TENIDOS directorios de instalaciones y participación en cuidado o pago después de dar una oportunidad adecuada cuando sea necesario. Silencio Registro de preferencias, verificación de identidad y relación ←
-TEN 164.512 TENIDO Usos y revelaciones sin autorización o oportunidad TENIDO Permite actividades específicas tales como requisitos por ley, salud pública, supervisión, judicial, cumplimiento de la ley, investigación y situaciones graves cuando se cumplen las condiciones. ← Base legal, solicitud, verificación, aprobación, registro de la información
-TEN 164.514 TENIDO Otros requisitos de uso y divulgación TENIDO Cubre la deidentificación, códigos de reidentificación, mínimo necesario, conjuntos de datos limitados, acuerdos de uso de datos, recaudación de fondos y verificación. Silencio Método, determinación de expertos, DUA, verificación, examen mínimo necesario
-Silencio 164.520 Silencioso Aviso de prácticas de privacidad Silencio Requiere un aviso claro describiendo usos, revelaciones, deberes, derechos, quejas y contactos. NPP actual, distribución, reconocimiento, sitio web
-Silencio 164.522 Silencio Solicitudes de protección de la privacidad Silencio cubre restricciones y comunicaciones confidenciales, incluyendo la aceptación requerida de ciertas restricciones pagadas en total a los planes de salud. Solicitud, decisión, bandera del sistema, método de comunicación
-Silencio 164.524 Silencio Acceso Silencio Proporciona acceso a PHI en un conjunto de registros designados, generalmente dentro de 30 días, sujeto a exclusiones, reglas de negación, formato y tarifas permitidas. Silencio Solicitud de registro, búsqueda, revisión de la negación, entrega, cálculo de tarifas
-tención 164.526 Silencioso Enmienda Silencio Permite a las personas solicitar una enmienda; requiere decisiones, avisos, declaraciones de desacuerdo y vinculación récord. Silencio Solicitud, decisión, enmienda o denegación, notificaciones
-Silencio 164.528 Silencio Contabilidad de las revelaciones Silencio Requiere una contabilidad de ciertas revelaciones durante el período de seis años aplicable, con excepciones. Silencio Registro de información, solicitud, contabilidad, fecha de respuesta
-tención 164.530 Silencio Requisitos administrativos Silencio Requiere personal de privacidad, capacitación, salvaguardias, quejas, sanciones, mitigación, no represalias, políticas y documentación. Silencio Función, capacitación, denuncias, sanciones, políticas
+TEN 164.510 | Oportunidad de acordar o objetar TENIDOS directorios de instalaciones y participación en cuidado o pago después de dar una oportunidad adecuada cuando sea necesario. | Registro de preferencias, verificación de identidad y relación ←
+TEN 164.512 | Usos y revelaciones sin autorización o oportunidad | Permite actividades específicas tales como requisitos por ley, salud pública, supervisión, judicial, cumplimiento de la ley, investigación y situaciones graves cuando se cumplen las condiciones. ← Base legal, solicitud, verificación, aprobación, registro de la información
+TEN 164.514 | Otros requisitos de uso y divulgación | Cubre la deidentificación, códigos de reidentificación, mínimo necesario, conjuntos de datos limitados, acuerdos de uso de datos, recaudación de fondos y verificación. | Método, determinación de expertos, DUA, verificación, examen mínimo necesario
+| 164.520 Silencioso Aviso de prácticas de privacidad | Requiere un aviso claro describiendo usos, revelaciones, deberes, derechos, quejas y contactos. NPP actual, distribución, reconocimiento, sitio web
+| 164.522 | Solicitudes de protección de la privacidad | cubre restricciones y comunicaciones confidenciales, incluyendo la aceptación requerida de ciertas restricciones pagadas en total a los planes de salud. Solicitud, decisión, bandera del sistema, método de comunicación
+| 164.524 | Acceso | Proporciona acceso a PHI en un conjunto de registros designados, generalmente dentro de 30 días, sujeto a exclusiones, reglas de negación, formato y tarifas permitidas. | Solicitud de registro, búsqueda, revisión de la negación, entrega, cálculo de tarifas
+tención 164.526 Silencioso Enmienda | Permite a las personas solicitar una enmienda; requiere decisiones, avisos, declaraciones de desacuerdo y vinculación récord. | Solicitud, decisión, enmienda o denegación, notificaciones
+| 164.528 | Contabilidad de las revelaciones | Requiere una contabilidad de ciertas revelaciones durante el período de seis años aplicable, con excepciones. | Registro de información, solicitud, contabilidad, fecha de respuesta
+tención 164.530 | Requisitos administrativos | Requiere personal de privacidad, capacitación, salvaguardias, quejas, sanciones, mitigación, no represalias, políticas y documentación. | Función, capacitación, denuncias, sanciones, políticas
 TEN 164.532–535 ANTERI Transition and compliance provisions TEN Aborda las reglas de transición y las fechas de cumplimiento. tención Registro legal, decisión de transición, fecha de aprobación
 
 ## 12.3 Breach Notification Rule
 
-Silencio **Citación** Silencio **Requisito** Silencio **Plain meaning** Silencio**
-Silencio-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida--
-TEN 164.400 TENIDO Aplicabilidad ANTE Aplica el subpartido de notificación de incumplimiento a entidades cubiertas y asociados comerciales. ← Ámbito y análisis de roles
-TEN 164.402 TENIDO Definiciones y evaluación del riesgo de incumplimiento ANTERI Se presume una violación de PHI no garantizado a menos que la entidad muestre una baja probabilidad de compromiso utilizando los factores requeridos. Silencio Evaluación de cuatro factores, hechos, mitigación, aprobación
+| **Citación** | **Requisito** | **Significado claro** |**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- La vida-- |
+TEN 164.400 | Aplicabilidad ANTE Aplica el subpartido de notificación de incumplimiento a entidades cubiertas y asociados comerciales. ← Ámbito y análisis de roles
+TEN 164.402 | Definiciones y evaluación del riesgo de incumplimiento ANTERI Se presume una violación de PHI no garantizado a menos que la entidad muestre una baja probabilidad de compromiso utilizando los factores requeridos. | Evaluación de cuatro factores, hechos, mitigación, aprobación
 tención 164.404 Silencioso Aviso a las personas que viven Notificar a las personas afectadas sin demora irrazonable y a más tardar 60 días después del descubrimiento; cumplir con el contenido y las reglas de entrega. tención Notificación, búsqueda de direcciones, entrega y aviso sustituto
-tención 164.406 Silencioso Aviso a los medios de comunicación Silencio Por infracciones que afectan a más de 500 residentes de un estado o jurisdicción, notifique a los medios prominentes dentro del período requerido. Silencio Cuenta por jurisdicción, aviso de los medios de comunicación, prueba de entrega
-TEN 164.408 TENIDO NOTICIA A LA SECRETARÍA ANTERIVISIÓN El informe viola el HHS bajo las reglas de tiempo para 500 o más y menos de 500 individuos. TEN HHS submission, annual small-breach log TEN
-Silencio 164.410 Silencio Aviso por un socio de negocios Silencio A BA debe notificar a la entidad cubierta sin demora irrazonable y a más tardar 60 días, con identificación y hechos disponibles. TEN BA aviso, fecha de descubrimiento, información de la persona afectada
-TEN 164.412 TENIDO Aplazamiento de la aplicación de la ley ANTERIOR Cuando una declaración de cumplimiento de la ley calificada cumple con la norma. tención Registro de solicitud escrita o oral y cálculo de retraso
-Silencio 164.414 Silencio Requisitos administrativos y carga de la prueba Silencio Aplicar capacitación laboral, políticas, no represalias, documentación y prueba de que se hicieron o no se requerían avisos. políticas, capacitación, evaluación del riesgo, pruebas de notificación
+tención 164.406 Silencioso Aviso a los medios de comunicación | Por infracciones que afectan a más de 500 residentes de un estado o jurisdicción, notifique a los medios prominentes dentro del período requerido. | Cuenta por jurisdicción, aviso de los medios de comunicación, prueba de entrega
+TEN 164.408 | NOTICIA A LA SECRETARÍA ANTERIVISIÓN El informe viola el HHS bajo las reglas de tiempo para 500 o más y menos de 500 individuos. TEN HHS submission, annual small-breach log |
+| 164.410 | Aviso por un socio de negocios | A BA debe notificar a la entidad cubierta sin demora irrazonable y a más tardar 60 días, con identificación y hechos disponibles. TEN BA aviso, fecha de descubrimiento, información de la persona afectada
+TEN 164.412 | Aplazamiento de la aplicación de la ley ANTERIOR Cuando una declaración de cumplimiento de la ley calificada cumple con la norma. tención Registro de solicitud escrita o oral y cálculo de retraso
+| 164.414 | Requisitos administrativos y carga de la prueba | Aplicar capacitación laboral, políticas, no represalias, documentación y prueba de que se hicieron o no se requerían avisos. políticas, capacitación, evaluación del riesgo, pruebas de notificación
 
 ## 12.4 Enforcement and preemption
 
-Silencio ** Área de localización** Silencio**
-Silencio------------------------------------------------------------------------------------------------------------------ La vida eterna...
-tención 45 CFR Parte 160 Subparte B Silencio Preemption of state law TEN Mantener la matriz legal y el camino de escalada TENIENDO revisión de la ley del Estado, decisión de la abogada
-Silencio Parte 160 Subpart C Silencio Cumplimiento e investigaciones Silencio Cooperate, preserve los hechos, evite represalias Silencio Reclamación y archivo de respuesta
-tención Parte 160 Subpartes D–E Silencio Penal civil sanciones y procedimientos
+| ** Área de localización** |**
+|------------------------------------------------------------------------------------------------------------------ La vida eterna... |
+tención 45 CFR Parte 160 Subparte B | Preemption of state law TEN Mantener la matriz legal y el camino de escalada TENIENDO revisión de la ley del Estado, decisión de la abogada
+| Parte 160 Subpart C | Cumplimiento e investigaciones | Cooperate, preserve los hechos, evite represalias | Reclamación y archivo de respuesta
+tención Parte 160 Subpartes D–E | Penal civil sanciones y procedimientos
 
 ## 12.5 Método de verificación del cumplimiento
 
@@ -804,28 +804,28 @@ Gráfico 6 Ciclo de verificación del cumplimiento
 
 ## 12.6 Pruebas de verificación práctica
 
-Silencio **Área de control** Silencioso **Populación y muestra** Silencio**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TENIDO Acceso terminado TEN Todas las terminaciones de la fuerza laboral en el período; muestra de salidas de mayor riesgo y corrientes TENIDO Comparar tiempo de terminación de recursos humanos con cuenta, insignia, acceso remoto, correo electrónico, EHR, y acceso privilegiado desactivación; inspecciones TENIDO lista completa de recursos humanos, IAM y registros del sistema, entradas, aprobaciones, tiempo de desactivación, excepción y retest
-tención Revisión periódica de acceso Silencio Todos los comentarios requeridos por sistema y período; sistemas de muestra con ePHI y roles privilegiados Silencio Confirmación completa de la población de usuarios, evaluador calificado, necesidad de roles, decisiones, absorciones, fecha de finalización y seguimiento Silencioso exportación de usuarios, pruebas de revisores, pasajes de eliminación, seguimiento del punto final, conclusión TENIDO
-Revisión de la actividad del sistema de información permanente Todas las revisiones diarias, semanales o mensuales programadas; muestra durante todo el período Silencio Inspeccione los registros de fuentes, cobertura de alerta, identidad de revisor, investigación, escalada y pruebas retenidas SIEM report, review record, ticket, decision, unresolved gap
+| **Área de control** Silencioso **Populación y muestra** |**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Acceso terminado TEN Todas las terminaciones de la fuerza laboral en el período; muestra de salidas de mayor riesgo y corrientes | Comparar tiempo de terminación de recursos humanos con cuenta, insignia, acceso remoto, correo electrónico, EHR, y acceso privilegiado desactivación; inspecciones | lista completa de recursos humanos, IAM y registros del sistema, entradas, aprobaciones, tiempo de desactivación, excepción y retest
+tención Revisión periódica de acceso | Todos los comentarios requeridos por sistema y período; sistemas de muestra con ePHI y roles privilegiados | Confirmación completa de la población de usuarios, evaluador calificado, necesidad de roles, decisiones, absorciones, fecha de finalización y seguimiento Silencioso exportación de usuarios, pruebas de revisores, pasajes de eliminación, seguimiento del punto final, conclusión |
+Revisión de la actividad del sistema de información permanente Todas las revisiones diarias, semanales o mensuales programadas; muestra durante todo el período | Inspeccione los registros de fuentes, cobertura de alerta, identidad de revisor, investigación, escalada y pruebas retenidas SIEM report, review record, ticket, decision, unresolved gap
 TEN Vulnerability management TEN All in-scope assets and findings; select critical, high, aged, and accepted findings TEN Confirmación de cobertura y credenciales de escaneado, validación de hallazgos, comparación de plazos, corrección de inspección, y recan ANTERIA inventario, ajustes de escaneo, informe, ticket, excepción, rescan, riesgo residual
-← Respaldos y recuperación Silencio Todos los trabajos de copia de seguridad y las pruebas de restauración necesarias; éxito de la muestra, fracaso y eventos de recuperación Silencio Inspeccione el estado de trabajo, alertas de fracaso, respuesta, copias protegidas, restaurar evidencia, objetivo de recuperación, y lecciones pendientes .
-TEN Seguridad incidentes e infracciones Silencio Población total de incidentes reconciliada con alertas, mostrador de ayuda, privacidad y troncos de incumplimiento Clasificación de pruebas, contención, evaluación de cuatro factores, tiempo de notificación, mitigación y cierre del archivo Silencio Incident, evaluación de riesgos, avisos, aprobación, acción correctiva, retest Silencio
-TEN Business Associates ← Proveedores completos y población de BA; muestre proveedores de alto riesgo, nuevos, cambiados y rescindidos TEN VACÍFICO, términos BAA, debida diligencia, subcontratistas, pruebas de seguridad, incidentes, cambios y salida ANTERIOR inventario de proveedores, BAA, evaluación, hallazgos, monitoreo, destrucción o prueba de retorno TENIDO
-Silencio Derechos individuales   Todo acceso, enmienda, restricción, comunicación confidencial, contabilidad y solicitudes de denuncia Test identity, scope, search, deadlines, extension, denial review, fee, delivery, and kept result
-tención Formación y sanciones   Ocupación Personal completo y población de contratistas; funciones de muestra, nuevos alquileres, estudiantes fallecidos e incidentes Silencio Comparar asignaciones con población laboral, tiempo de culminación de pruebas, contenido, seguimiento y sanciones cuando sea aplicable Ø Roster, informe de terminación, recordatorios, historial de sanción, revisión de la gestión
+← Respaldos y recuperación | Todos los trabajos de copia de seguridad y las pruebas de restauración necesarias; éxito de la muestra, fracaso y eventos de recuperación | Inspeccione el estado de trabajo, alertas de fracaso, respuesta, copias protegidas, restaurar evidencia, objetivo de recuperación, y lecciones pendientes .
+TEN Seguridad incidentes e infracciones | Población total de incidentes reconciliada con alertas, mostrador de ayuda, privacidad y troncos de incumplimiento Clasificación de pruebas, contención, evaluación de cuatro factores, tiempo de notificación, mitigación y cierre del archivo | Incident, evaluación de riesgos, avisos, aprobación, acción correctiva, retest |
+TEN Business Associates ← Proveedores completos y población de BA; muestre proveedores de alto riesgo, nuevos, cambiados y rescindidos TEN VACÍFICO, términos BAA, debida diligencia, subcontratistas, pruebas de seguridad, incidentes, cambios y salida ANTERIOR inventario de proveedores, BAA, evaluación, hallazgos, monitoreo, destrucción o prueba de retorno |
+| Derechos individuales   Todo acceso, enmienda, restricción, comunicación confidencial, contabilidad y solicitudes de denuncia Test identity, scope, search, deadlines, extension, denial review, fee, delivery, and kept result |
+tención Formación y sanciones   Ocupación Personal completo y población de contratistas; funciones de muestra, nuevos alquileres, estudiantes fallecidos e incidentes | Comparar asignaciones con población laboral, tiempo de culminación de pruebas, contenido, seguimiento y sanciones cuando sea aplicable Ø Roster, informe de terminación, recordatorios, historial de sanción, revisión de la gestión
 
 ## 12.7 Confiabilidad de la evidencia
 
-Silencio **La calidad de la prueba** Silencioso**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN Weak Silencio Declaración verbal, captura de pantalla no fechada, exportación parcial o resumen creado por el propietario sin prueba de fuente TEN Solicitar datos fuente, fecha, alcance, identidad del sistema, revisor y población completa
-TEN UTILIZADO TENIDO Informe del sistema Dated ligado al alcance y el período correctos TEN Confirmar configuración, integridad, acceso e interpretación TEN
+| **La calidad de la prueba** Silencioso** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN Weak | Declaración verbal, captura de pantalla no fechada, exportación parcial o resumen creado por el propietario sin prueba de fuente TEN Solicitar datos fuente, fecha, alcance, identidad del sistema, revisor y población completa
+TEN UTILIZADO | Informe del sistema Dated ligado al alcance y el período correctos TEN Confirmar configuración, integridad, acceso e interpretación |
 ← Resultado generado por el sistema, además de revisión independiente, decisiones, entradas, corrección y retestigo ← Trace la cadena completa y registro de cualquier limitación
 
-Silencio **Regla de verificación:** Una búsqueda de herramientas es una entrada, no una conclusión. La verificación del cumplimiento requiere alcance, datos completos, examen humano, contexto jurídico y normativo, medidas correctivas y pruebas de que el control funciona con el tiempo.
-Silencio.
+| **Regla de verificación:** Una búsqueda de herramientas es una entrada, no una conclusión. La verificación del cumplimiento requiere alcance, datos completos, examen humano, contexto jurídico y normativo, medidas correctivas y pruebas de que el control funciona con el tiempo. |
+|. |
 
 # 13. Libro de juegos HIPAA de Manager
 
@@ -855,17 +855,17 @@ Silencio.
 
 ## 13.2 Dashboard mensual
 
-**Area** Silencio ** Cuestión del personal**
-Silencio.
+**Area** | ** Cuestión del personal**
+|. |
 tención Análisis de riesgos   ¿Están todos los sistemas, sistemas, ubicaciones y cambios cubiertos? Verde / Amarillo / Rojo
 tención de riesgo permanente ¿Hay altos riesgos asignados, financiados y programados? Verde / Amarillo / Rojo
-Silencio ¿Estaban a bordo, cambios, revisiones y terminación completadas? Verde / Amarillo / Rojo
-tención Revisión de la actividad Silencio ¿Se revisan registros y alertas con pruebas? Verde / Amarillo / Rojo
+| ¿Estaban a bordo, cambios, revisiones y terminación completadas? Verde / Amarillo / Rojo |
+tención Revisión de la actividad | ¿Se revisan registros y alertas con pruebas? Verde / Amarillo / Rojo
 TEN Vulnerabilidades ANTE ¿Son los hallazgos validados, priorizados, fijos y probados? Verde / Amarillo / Rojo
-← Backups Silencio ¿Han tenido éxito las copias de seguridad y las pruebas de restauración? Verde / Amarillo / Rojo
+← Backups | ¿Han tenido éxito las copias de seguridad y las pruebas de restauración? Verde / Amarillo / Rojo
 ¿Fueron hechos, fallos y avisos oportunos? Verde / Amarillo / Rojo
 TEN VENTOS ANTERIENTE ¿Son controladas BAAs, diligencia debida, incidentes y salidas? Verde / Amarillo / Rojo
-Silencio ¿Son solicitudes completas, precisas, seguras y oportunas? Verde / Amarillo / Rojo
+| ¿Son solicitudes completas, precisas, seguras y oportunas? Verde / Amarillo / Rojo |
 
 ## 13.3 Errores comunes de gestión
 
@@ -933,57 +933,57 @@ HIPAA Program Coordinator
 
 ## 14.3 Portafolio proof
 
-Silencio **Skill** Silencio**
-Silencio---------------------------- La vida----------
+| **Skill** |**
+|---------------------------- La vida---------- |
 Silencioso encubierto-entidad y función asociativa de negocios memo
-tención cartografía de datos Silencioso ePHI ciclo de vida, inventario del sistema y diagrama de flujo de datos TEN
+tención cartografía de datos Silencioso ePHI ciclo de vida, inventario del sistema y diagrama de flujo de datos |
 Ø Riesgo Silencioso análisis de riesgos y registro de tratamiento
 TEN Seguridad TENIDA Matriz de salvaguardia con muestras de evidencia
-TEN Privacidad TENIDO Adhesión de acceso y archivos de divulgación
-Respuesta del incidente Silencio Breach: evaluación de cuatro factores y decisión de notificación
-Silencioso riesgo de vendedor Silencio Lista de verificación BAA, diligencia debida y plan de acción correctiva
-Silencio Manejo comunicación Silencio Una página dashboard y resumen de riesgo ejecutivo
+TEN Privacidad | Adhesión de acceso y archivos de divulgación
+Respuesta del incidente | Breach: evaluación de cuatro factores y decisión de notificación
+Silencioso riesgo de vendedor | Lista de verificación BAA, diligencia debida y plan de acción correctiva
+| Manejo comunicación | Una página dashboard y resumen de riesgo ejecutivo
 
-Silencio ** Honra sincera:** Una cartera de laboratorio es el trabajo de formación, no la experiencia profesional. Etiqueta como ficticio, protege toda la información, y explica lo que requiere examen experto o legal.
-Silencio.
+| ** Honra sincera:** Una cartera de laboratorio es el trabajo de formación, no la experiencia profesional. Etiqueta como ficticio, protege toda la información, y explica lo que requiere examen experto o legal. |
+|. |
 
 # 15. Herramientas de código abierto para el trabajo HIPAA
 
 * Enlaces oficiales, inicios rápidos seguros, pruebas y limitaciones.*
 
 tención **Metodología primero:** Una herramienta puede apoyar un proceso de salvaguardia o evidencia. No puede certificar el cumplimiento de HIPAA, sustituir el análisis de riesgo, o decidir si una revelación o violación es legal. ←
-Silencio.
+|. |
 
-Silencio **Herramienta**
-Silencio----------------------------------------------------
-TENIDO CISO Assistant TENIDO GRC, risks, controls, evidence TENIDO Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-tención Wazuh ← SIEM, monitoreo de puntos finales, integridad de archivos TENIDO Análisis de riesgos, operación de salvaguardia, evidencia o remediación TENIDO
-TEN OpenSCAP TENIDO Evaluación de la configuración de Linux ANTE Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-Silencio Greenbone Community Edition ← Vulnerability escanear ← Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-osquery Silencio Inventario y consultas de Endpoint Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-tención Trivy Silencio Código, imagen, secreto y configuración escaneado rígido Análisis de riesgos, operación de salvaguardia, evidencia o remediación TENIDO
-Silencio OWASP ZAP TENIDO Pruebas autorizadas de aplicación web TENIDO Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-← Keycloak TENIDO Identidad, roles, autenticación, MFA TENIDO Análisis de riesgos, operación de salvaguardia, evidencia o remediación
-← DefectDojo Silencio Encontrar el seguimiento de la ingesta y la remediación
-Silencio Velociraptor Silencio Visibilidad de endpoint y respuesta a incidentes Silencio Análisis de riesgos, operación de salvaguardia, evidencia o remediación Silencio
-TEN Open Policy Agent TENIDO POLÍTICA Como código TENIDO Análisis de riesgos, operación de salvaguardia, evidencia o remediación TENIDO
+| **Herramienta** |
+|---------------------------------------------------- |
+| CISO Assistant | GRC, risks, controls, evidence | Análisis de riesgos, operación de salvaguardia, evidencia o remediación
+tención Wazuh ← SIEM, monitoreo de puntos finales, integridad de archivos | Análisis de riesgos, operación de salvaguardia, evidencia o remediación |
+TEN OpenSCAP | Evaluación de la configuración de Linux ANTE Análisis de riesgos, operación de salvaguardia, evidencia o remediación
+| Greenbone Community Edition ← Vulnerability escanear ← Análisis de riesgos, operación de salvaguardia, evidencia o remediación |
+osquery | Inventario y consultas de Endpoint Análisis de riesgos, operación de salvaguardia, evidencia o remediación
+tención Trivy | Código, imagen, secreto y configuración escaneado rígido Análisis de riesgos, operación de salvaguardia, evidencia o remediación |
+| OWASP ZAP | Pruebas autorizadas de aplicación web | Análisis de riesgos, operación de salvaguardia, evidencia o remediación
+← Keycloak | Identidad, roles, autenticación, MFA | Análisis de riesgos, operación de salvaguardia, evidencia o remediación
+← DefectDojo | Encontrar el seguimiento de la ingesta y la remediación
+| Velociraptor | Visibilidad de endpoint y respuesta a incidentes | Análisis de riesgos, operación de salvaguardia, evidencia o remediación |
+TEN Open Policy Agent | POLÍTICA Como código | Análisis de riesgos, operación de salvaguardia, evidencia o remediación |
 
 ## 15.1 Matriz de verificación de la herramienta a la adquisición
 
-Silencio **Herramienta o recurso** Silencio ** Apoyo a la HIPAA** Silencio ** tarea de verificación** Silencioso para retener ** Limitación importante**
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN CISO Assistant TEN 164.308(a)(1), 164.316, proveedor y gobernanza de pruebas TENER Map EPHI riesgos para las salvaguardias, propietarios, evidencias, hallazgos y tratamiento TENIDO registro de riesgos, matriz de control, aprobaciones, pista de auditoría TENER Registros en los que entran los usuarios; no prueba que la evidencia de origen es completa o precisa TEN
-HHS/ONC SRA Tool TENIDO 164.308(a)(1)(ii)(A) risk analysis Use preguntas estructuradas para identificar posibles lagunas de alcance y control TEN Evaluación completa, soporte de pruebas, acciones de tratamiento TEN A asistencia inicial; no garantiza un análisis preciso y minucioso de los riesgos institucionales TEN
-Silencio osquery Silencio 164.308(a)(1), 164.310(d), 164.312(a) y (d) Silencio Query endpoint users, software, cifrado, servicios, y dispositivo state ← Query, lista de hosts, timetamps, resultados completos, decisión de revisor tención La cobertura depende de los puntos finales instalados y de presentación de informes y tablas del sistema operativo
-Silencio Keycloak Silencio 164.308(a)(3)–(4), 164.312(a) y (d) Silencio Prueba identidad única, roles, menos privilegios, MFA, acceso de emergencia y eliminación Silenciosos Configuración exportación, usuario y población de papel, resultados de prueba, aprobaciones Silencio Sólo verifica sistemas usando esa plataforma de identidad; autorización de aguas abajo puede diferir TEN
-i) i) ii) d), 164,308 a) 6), 164,312 b) Recopilación de registros de pruebas, generación de alerta, integridad de archivos, revisión, investigación y escalada ANTERI inventario, reglas, alerta, ticket de revisión, respuesta y cierre Una alerta sin un examen humano documentado y la respuesta no prueba que la salvaguardia opera TEN
-TEN OpenSCAP TEN 164.308(a)(8), 164.312(a), 164.312(c) TEN Comparar los hosts aprobados de Linux con una corrección de base de seguridad seleccionada y retest de retest ANTERI Perfil, versión de contenido, alcance de host, informe HTML/ARF, excepción, rescan TENIDOS Baseline no es el mismo que el cumplimiento de HIPAA y puede afectar las aplicaciones TEN
-Silencio Greenbone Silencio 164.308(a)(1), 164.308(a)(8) Silencio Medir cobertura de vulnerabilidad autenticada, validar hallazgos, plazos de pista, y recan Silencio Lista de objetivos, versión de alimentación y escáner, ajustes, informe, entradas, rescan  durable No puede encontrar todas las debilidades; alcance, credenciales, falsos positivos y sistemas frágiles importa
-Silencio Trivy Silencio 164.308(a)(1), 164.312(c), software y riesgo en la nube Silencio Escanear código marcado, imágenes, dependencias, secretos y configuración de infraestructura TEN Target digest, base de datos y versión de herramientas, ajustes, resultado, ticket, retest TENED Los resultados pueden contener secretos y pueden perderse los riesgos de funcionamiento, empresa-lógica y despliegue TEN
-TENIDO OWASP ZAP TEN 164.308(a)(8), 164.312(c) y (e) TENIDO Revisión pasivamente y, cuando está autorizado, prueba activamente un laboratorio o aplicación web aprobada TENIDO Alcance escrito, versión, ajustes, hallazgos, validación, corrección, retest TENIDO Los escaneos activos pueden cambiar datos o interrumpir los sistemas de cuidado; la automatización no es una prueba de penetración completa
-Silencio DefectDojo Silencio 164.308(a)(1), 164.308(a)(6), corrective-action evidence Silencio Import findings, deduplicar, asigne, track risk decisions, retest, and close Silencio Encontrar historia, propietario, fecha de vencimiento, evidencia, aceptación de riesgo, cierre verificado tención El estado de flujo de trabajo no demuestra una solución; el cierre debe ser respaldado por una prueba independiente
-Silencio Velociraptor Silencio 164.308(a)(6), 164.312(b) Silencio Recopila los artefactos de punta aprobados durante una investigación aislada y cadena de documentos de custodia Silencio Solicitud de colección, resultados, notas de analista, registro de preservación Silencioso La colección poderosa puede exponer PHI o interrumpir los puntos finales; utilizar la autorización estricta y minimización Silencio
-TEN Open Policy Agent TEN 164.308(a)(1), 164.312(a) y (c) Silencio Test policy-as-code rules for required ownership, classification, encryption, or deployment conditions TEN Versión de política, tests, permitidos y negados insumos, decisión de tuberías, aprobación Las reglas de TENCIÓN sólo cubren condiciones codificadas; mala lógica o falta de integración crea falsa confianza
+| **Herramienta o recurso** | ** Apoyo a la HIPAA** | ** tarea de verificación** Silencioso para retener ** Limitación importante**
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN CISO Assistant TEN 164.308(a)(1), 164.316, proveedor y gobernanza de pruebas TENER Map EPHI riesgos para las salvaguardias, propietarios, evidencias, hallazgos y tratamiento | registro de riesgos, matriz de control, aprobaciones, pista de auditoría TENER Registros en los que entran los usuarios; no prueba que la evidencia de origen es completa o precisa |
+HHS/ONC SRA Tool | 164.308(a)(1)(ii)(A) risk analysis Use preguntas estructuradas para identificar posibles lagunas de alcance y control TEN Evaluación completa, soporte de pruebas, acciones de tratamiento TEN A asistencia inicial; no garantiza un análisis preciso y minucioso de los riesgos institucionales |
+| osquery | 164.308(a)(1), 164.310(d), 164.312(a) y (d) | Query endpoint users, software, cifrado, servicios, y dispositivo state ← Query, lista de hosts, timetamps, resultados completos, decisión de revisor tención La cobertura depende de los puntos finales instalados y de presentación de informes y tablas del sistema operativo
+| Keycloak | 164.308(a)(3)–(4), 164.312(a) y (d) | Prueba identidad única, roles, menos privilegios, MFA, acceso de emergencia y eliminación Silenciosos Configuración exportación, usuario y población de papel, resultados de prueba, aprobaciones | Sólo verifica sistemas usando esa plataforma de identidad; autorización de aguas abajo puede diferir |
+i) i) ii) d), 164,308 a) 6), 164,312 b) Recopilación de registros de pruebas, generación de alerta, integridad de archivos, revisión, investigación y escalada ANTERI inventario, reglas, alerta, ticket de revisión, respuesta y cierre Una alerta sin un examen humano documentado y la respuesta no prueba que la salvaguardia opera |
+TEN OpenSCAP TEN 164.308(a)(8), 164.312(a), 164.312(c) TEN Comparar los hosts aprobados de Linux con una corrección de base de seguridad seleccionada y retest de retest ANTERI Perfil, versión de contenido, alcance de host, informe HTML/ARF, excepción, rescan TENIDOS Baseline no es el mismo que el cumplimiento de HIPAA y puede afectar las aplicaciones |
+| Greenbone | 164.308(a)(1), 164.308(a)(8) | Medir cobertura de vulnerabilidad autenticada, validar hallazgos, plazos de pista, y recan | Lista de objetivos, versión de alimentación y escáner, ajustes, informe, entradas, rescan  durable No puede encontrar todas las debilidades; alcance, credenciales, falsos positivos y sistemas frágiles importa
+| Trivy | 164.308(a)(1), 164.312(c), software y riesgo en la nube | Escanear código marcado, imágenes, dependencias, secretos y configuración de infraestructura TEN Target digest, base de datos y versión de herramientas, ajustes, resultado, ticket, retest TENED Los resultados pueden contener secretos y pueden perderse los riesgos de funcionamiento, empresa-lógica y despliegue |
+| OWASP ZAP TEN 164.308(a)(8), 164.312(c) y (e) | Revisión pasivamente y, cuando está autorizado, prueba activamente un laboratorio o aplicación web aprobada | Alcance escrito, versión, ajustes, hallazgos, validación, corrección, retest | Los escaneos activos pueden cambiar datos o interrumpir los sistemas de cuidado; la automatización no es una prueba de penetración completa
+| DefectDojo | 164.308(a)(1), 164.308(a)(6), corrective-action evidence | Import findings, deduplicar, asigne, track risk decisions, retest, and close | Encontrar historia, propietario, fecha de vencimiento, evidencia, aceptación de riesgo, cierre verificado tención El estado de flujo de trabajo no demuestra una solución; el cierre debe ser respaldado por una prueba independiente
+| Velociraptor | 164.308(a)(6), 164.312(b) | Recopila los artefactos de punta aprobados durante una investigación aislada y cadena de documentos de custodia | Solicitud de colección, resultados, notas de analista, registro de preservación Silencioso La colección poderosa puede exponer PHI o interrumpir los puntos finales; utilizar la autorización estricta y minimización |
+TEN Open Policy Agent TEN 164.308(a)(1), 164.312(a) y (c) | Test policy-as-code rules for required ownership, classification, encryption, or deployment conditions TEN Versión de política, tests, permitidos y negados insumos, decisión de tuberías, aprobación Las reglas de TENCIÓN sólo cubren condiciones codificadas; mala lógica o falta de integración crea falsa confianza
 
 ## 15.2 Cómo validar una herramienta antes de confiar en ella
 
@@ -1035,7 +1035,7 @@ GRC, riesgos, controles, evidencia.
 
 **Documentación y configuración oficiales** Abra la guía oficial de asistentes CISO(https://intuitem.gitbook.io/ciso-assistant)
 
-### Quick start
+### Inicio rápido
 
 Crear una organización de salud ficticia, añadir un riesgo de ePHI, mapear una salvaguardia de reglas de seguridad, asignar un propietario y adjuntar evidencias sanitarias.
 
@@ -1049,7 +1049,7 @@ SIEM, monitoreo de puntos finales, integridad de archivos.
 
 **Documentación y configuración oficiales** Abra la guía oficial Wazuh realizada/u título](https://documentation.wazuh.com/current/quickstart.html)
 
-### Quick start
+### Inicio rápido
 
 Conectar un punto final de laboratorio, crear un evento inofensivo, revisar la alerta y guardar el evento, la decisión del revisor y el seguimiento.
 
@@ -1063,7 +1063,7 @@ Evaluación de configuración de Linux.
 
 **Característica y configuración:** [ejecutado]Abre la guía oficial OpenSCAP realizada/u contacto](https://www.open-scap.org/getting-started/)
 
-### Quick start
+### Inicio rápido
 
 Evaluar un host Linux de laboratorio contra un perfil adecuado, exportar el informe, fijar un ajuste aprobado y comparar resultados.
 
@@ -1077,7 +1077,7 @@ Escaneo de vulnerabilidad.
 
 **Documentación y configuración oficiales:** [Seguridad]Abre la guía oficial Greenbone Community Edition realizada/u contactos](https://greenbone.github.io/docs/latest/)
 
-### Quick start
+### Inicio rápido
 
 Escanear sólo un objetivo de laboratorio aprobado, validar un hallazgo, corregirlo, cambiar y registrar el alcance, versión, resultado y revisor.
 
@@ -1091,7 +1091,7 @@ Fin de inventario y consultas.
 
 **Documentación y configuración oficiales:** [Seguridad]Abre la guía oficial del osquery realizada/u contacto](https://osquery.readthedocs.io/en/stable/)
 
-### Quick start
+### Inicio rápido
 
 Query users, software, cifrado, o procesos en un endpoint de laboratorio y grabar la consulta, host, fecha, resultado y revisión.
 
@@ -1105,7 +1105,7 @@ Código, imagen, secreto y análisis de configuración.
 
 **Documentación y configuración oficiales** Abra la guía oficial Trivy realizada/u título](https://trivy.dev/latest/)
 
-### Quick start
+### Inicio rápido
 
 Escanear una imagen de laboratorio o un repositorio de pruebas, proteger el informe, validar un hallazgo, arreglarlo y volver a escanear.
 
@@ -1119,7 +1119,7 @@ Pruebas de aplicación web autorizadas.
 
 **Documentación y configuración oficiales** Abra la guía oficial OWASP ZAP efectuada / u fiel](https://www.zaproxy.org/getting-started/)
 
-### Quick start
+### Inicio rápido
 
 Proxy una aplicación de entrenamiento local, empezar con análisis pasivos, validar un resultado, y exportar el alcance y el informe.
 
@@ -1133,7 +1133,7 @@ Identidad, roles, autenticación, MFA.
 
 **Característica y configuración:** [ejecutado]Abre la guía oficial de Keycloak realizada/u contacto](https://www.keycloak.org/guides)
 
-### Quick start
+### Inicio rápido
 
 Crear un ámbito de laboratorio, roles, usuarios y MFA; probar menos privilegios y configuración de exportación y revisar pruebas.
 
@@ -1147,7 +1147,7 @@ Encontrar captación y seguimiento de remediación.
 
 **Característica y configuración:** [ejecutado]Abre el defecto oficialDojo guía seleccionada/u contacto](https://docs.defectdojo.com/)
 
-### Quick start
+### Inicio rápido
 
 Importar un análisis de laboratorio, validar y asignar un hallazgo, registrar la corrección, retestarlo y cerrarlo con evidencia.
 
@@ -1161,7 +1161,7 @@ Visibilidad del punto final y respuesta a incidentes.
 
 **Documentación y configuración oficiales** Abra la guía oficial Velociraptor realizada/u título](https://docs.velociraptor.app/)
 
-### Quick start
+### Inicio rápido
 
 Utilice un cliente de laboratorio aislado, recoger un artefacto aprobado inofensivo, revisar el resultado, y registrar el propósito, alcance y acceso.
 
@@ -1175,7 +1175,7 @@ Política como código.
 
 **Documentación y configuración oficiales** Abra la guía oficial de Agentes de Política Abierta(https://www.openpolicyagent.org/docs)
 
-### Quick start
+### Inicio rápido
 
 Escribir una regla de laboratorio que niega un recurso de ePHI sin un propietario o etiqueta de clasificación; probar los insumos permitidos y negados.
 
@@ -1255,12 +1255,12 @@ Explicar suposiciones y donde se requiere revisión legal, de privacidad, clíni
 
 *Un mes realista de lectura, práctica, trabajo de cartera y preparación de entrevistas*.
 
-Silencio **Week** Silencio**
-Silencio----------------------------
-← Semana 1 TENIDO Alcance, roles, PHI/ePHI, Privacy Rule TENIDO Scope memo, mapa de datos, ejemplos de uso/disclosure
+| **Week** |**
+|---------------------------- |
+← Semana 1 | Alcance, roles, PHI/ePHI, Privacy Rule | Scope memo, mapa de datos, ejemplos de uso/disclosure
 Silencioso Semana 2 Silencioso Seguridad Regla y análisis de riesgos
 Silencioso Semana 3 Silencioso Derechos, violación, proveedores, Parte 2 Silencioso archivo Derechos, evaluación de la violación, revisión de los proveedores
-Silencio Semana 4 Silencio Herramientas, portafolio, entrevista Silencio Portafolio y respuestas prácticas
+| Semana 4 | Herramientas, portafolio, entrevista | Portafolio y respuestas prácticas
 
 ## 17.1 hábitos diarios
 
@@ -1363,15 +1363,15 @@ Validación y reprueba pruebas
 
 ## 19.3 Breach fact sheet
 
-Silencio **Field** Silencio **Información requerida**
-Silencio.
-Silencio Descubrimiento Silencio Quien lo descubrió, cuándo, y cuando la entidad se hizo consciente
-Silencio Qué pasó, sistemas, cuentas, ubicación, contención
-TEN PHI TENIDO Naturaleza, sensibilidad, identificadores, personas, cantidad, probabilidad de reidentificación ANTE
+| **Field** | **Información requerida**
+|. |
+| Descubrimiento | Quien lo descubrió, cuándo, y cuando la entidad se hizo consciente
+| Qué pasó, sistemas, cuentas, ubicación, contención |
+TEN PHI | Naturaleza, sensibilidad, identificadores, personas, cantidad, probabilidad de reidentificación ANTE
 Recipiente de la vida Quienes lo recibieron o accedieron y sus obligaciones
-Silencioso Adquisición Silencio Si PHI fue adquirido o visto en realidad
-TENIDA Mitigation TEN Retrieval, deletion, assurances, account actions, monitoring TEN
-TENCIÓN TENIDA Excepción o análisis de baja probabilidad, avisos, aprobadores TEN
+Silencioso Adquisición | Si PHI fue adquirido o visto en realidad
+TENIDA Mitigation TEN Retrieval, deletion, assurances, account actions, monitoring |
+TENCIÓN TENIDA Excepción o análisis de baja probabilidad, avisos, aprobadores |
 ← Acción permanente Corrección, sanciones, capacitación, pruebas, lecciones
 
 ## 19.4 BAA checklist
@@ -1465,20 +1465,20 @@ Regla de seguridad. Las normas HIPAA que protegen el ePHI mediante salvaguardias
 *Una guía alfabética para los principales temas. Referencias apuntan a secciones para que el índice siga siendo útil después de la edición.*
 
 * Tema* *Tema* *Las secciones** *Tema*
-Silencio--------------------------------------------------------------------------
-TENIDO Acceder a la derecha Silencio 4, 12.2, 19 TENIDO Aviso sobre las prácticas de privacidad
-Silencio Addressable Silencio 5.2, 20 Silencio Herramientas de código abierto Silencio 15 Silencio
+|-------------------------------------------------------------------------- |
+| Acceder a la derecha | 4, 12.2, 19 | Aviso sobre las prácticas de privacidad
+| Addressable | 5.2, 20 | Herramientas de código abierto | 15 |
 Silenciosos salvaguardias administrativas Silencioso 6, 12.1
-Silencioso Autorización Silencio 3.3, 12.2 Silencio
+Silencioso Autorización | 3.3, 12.2 |
 Silencioso en la vida 8, 12,3, 19.3
-Silencioso socio de negocios Silencioso 2.2, 9, 19.4 Silencioso Privacidad Regla 3-4, 12.2 Silencio
-Silencio Deidentificación Silencio 2.4, 3.5 Silencio Salud reproductiva
-TENIDO EPHI TENIDO 2.3, 5–7 TENIDO Análisis del riesgo ANTE 5.3, 6, 12.1 TENIDO
+Silencioso socio de negocios Silencioso 2.2, 9, 19.4 Silencioso Privacidad Regla 3-4, 12.2 |
+| Deidentificación | 2.4, 3.5 | Salud reproductiva
+| EPHI | 2.3, 5–7 | Análisis del riesgo ANTE 5.3, 6, 12.1 |
 Silenciosos en la práctica 11 , 12.4 Silenciosos
-TENIDO HIPAA Security Rule NPRM TEN 1.3, 11.4 TENIDO LA LEY DEL ESTADO Silencio 10.2, 11.3
-Silencio Derechos individuales Silencio 4 Silencio
+| HIPAA Security Rule NPRM TEN 1.3, 11.4 | LA LEY DEL ESTADO | 10.2, 11.3
+| Derechos individuales | 4 |
 Silencioso analista junior
-Silencio Mínimo necesario Silencio 3.4, 12.2 Silencioso entrenamiento de fuerza de trabajo
+| Mínimo necesario | 3.4, 12.2 Silencioso entrenamiento de fuerza de trabajo
 
 # 22. Referencias oficiales y estudio ulterior
 
@@ -1534,5 +1534,5 @@ Silencio Mínimo necesario Silencio 3.4, 12.2 Silencioso entrenamiento de fuerza
 
 [ ]](https://www.openpolicyagent.org/docs)
 
-Silencio **Recuerdo final:** Reglamentos, decisiones judiciales, orientación, cuantías de la pena, tecnología y cambios de hechos. Verifique las fuentes actuales de eCFR, HHS y NIST, ley estatal, estado de la Parte 2 y asesoramiento legal calificado antes de actuar en un asunto real. ←
+| **Recuerdo final:** Reglamentos, decisiones judiciales, orientación, cuantías de la pena, tecnología y cambios de hechos. Verifique las fuentes actuales de eCFR, HHS y NIST, ley estatal, estado de la Parte 2 y asesoramiento legal calificado antes de actuar en un asunto real. ← |
 Respuesta

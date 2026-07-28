@@ -1,1509 +1,794 @@
-> **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
+# NIST Cybersecurity Framework 2.0
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E COMPLIANÇA
+## GRC prático, implementação, evidências e ferramentas de código aberto
 
-**NIST CYBERSECURITY Framework 2.0**
+*Manual de trabalho para gestores, analistas juniores, estudantes, profissionais em transição de carreira e equipes de cibersegurança*
 
-**Práctica GRC, Implementação, Evidência e Ferramentas de Código Aberto**
-
-* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira e equipes de segurança cibernética*
-
-** Alberto (Al) Leiva**
+**Alberto (Al) Leiva**
 
 Primeira edição • Julho de 2026
 
-Inside:** Todos os 106 CSF Resultados principais • Perfis • Níveis • GRC • cadeia de abastecimento • provas • testes de controlo • ferramentas de código aberto • laboratórios • preparação de carreira
----------------------------------------------------------------------------------------------------------------------------
+| **Conteúdo:** Todos os 106 resultados do Núcleo do CSF • Perfis • Tiers • GRC • cadeia de suprimentos • evidências • teste de controles • ferramentas de código aberto • laboratórios • preparação profissional |
+|---|
 
-# Publicação e Aviso de Uso
+# Aviso de publicação e uso
 
 Autor: Alberto (Al) Leiva
 
-Edição: Primeira Edição, Julho 2026
+Edição: Primeira edição, julho de 2026
 
-Objetivo: Educação prática gratuita para gestores, analistas júnior, estudantes, profissionais de mudança de carreira, profissionais de risco e profissionais de segurança cibernética.
+Objetivo: Oferecer educação gratuita e prática para gestores, analistas juniores, estudantes, profissionais em transição de carreira, profissionais de riscos e especialistas em cibersegurança.
 
-# # Aviso educacional
+## Aviso educacional
 
-Este manual fornece informações educacionais gerais. Não cria certificação, conformidade legal, um parecer de auditoria ou uma garantia de segurança. As organizações devem adaptar o NIST CSF à sua missão, riscos, obrigações, apetite de risco, recursos, tecnologias e stakeholders. Use as fontes oficiais atuais e qualificadas legais, risco, privacidade, segurança, auditoria e consultoria técnica para decisões reais.
+Este manual fornece informações educacionais gerais. Ele não constitui certificação, conformidade legal, opinião de auditoria nem garantia de segurança. Cada organização deve adaptar o NIST CSF à sua missão, aos seus riscos, às suas obrigações, ao seu apetite a risco, aos seus recursos, às suas tecnologias e às suas partes interessadas. Para decisões reais, utilize fontes oficiais atualizadas e orientação qualificada nas áreas jurídica, de riscos, privacidade, segurança física, auditoria e tecnologia.
 
-# # Uso ético e autorizado
+## Uso ético e autorizado
 
-Use ferramentas técnicas apenas em sistemas, aplicativos, redes, contas em nuvem e dados que você possui ou estão especificamente autorizados por escrito para avaliar. Use dados ficcionais, sintéticos ou aprovados em treinamento. A habilidade técnica não cria permissão.
+Utilize ferramentas técnicas somente em sistemas, aplicações, redes, contas em nuvem e dados que sejam de sua propriedade ou para os quais você tenha autorização específica por escrito. Em atividades de treinamento, utilize dados fictícios, sintéticos ou aprovados. Capacidade técnica não constitui autorização.
 
-Prefácio
+# Prefácio
 
-*Uma introdução acolhedora à gestão prática dos riscos de cibersegurança.*
+*Uma introdução acessível ao gerenciamento prático de riscos de cibersegurança.*
 
-O trabalho de segurança cibernética pode parecer uma coleção de produtos, alertas, políticas e tarefas técnicas. O NIST Cybersecurity Framework dá a essas atividades uma linguagem compartilhada. Ajuda os líderes a explicar o que os resultados importam, ajuda os gestores a definir prioridades e ajuda os profissionais a conectar o trabalho diário ao risco organizacional.
+O trabalho de cibersegurança pode parecer uma coleção de produtos, alertas, políticas e tarefas técnicas. O NIST Cybersecurity Framework oferece uma linguagem comum para conectar essas atividades. Ele ajuda líderes a explicar quais resultados são importantes, gestores a definir prioridades e profissionais a relacionar o trabalho diário ao risco organizacional.
 
-CSF 2.0 é deliberadamente flexível. Ele não diz a todas as organizações para comprar a mesma ferramenta, implementar o mesmo controle, ou alcançar o mesmo nível. Descreve os resultados. Um hospital, fabricante, escola, banco, startup, agência governamental e sem fins lucrativos podem usar o mesmo núcleo ao escolher diferentes prioridades e implementações.
+O CSF 2.0 é deliberadamente flexível. Ele não exige que todas as organizações comprem a mesma ferramenta, implementem o mesmo controle ou alcancem o mesmo Tier. Ele descreve resultados. Um hospital, uma indústria, uma escola, um banco, uma startup, um órgão governamental ou uma organização sem fins lucrativos podem utilizar o mesmo Núcleo e, ao mesmo tempo, escolher prioridades e implementações diferentes.
 
-Este manual segue uma metodologia-primeira abordagem. Uma planilha de framework é útil somente quando o escopo é preciso. Um painel verde é útil apenas quando as evidências são confiáveis. Um resultado do scanner é útil apenas quando alguém valida, prioriza, corrige e reteste. Os gestores continuam a ser responsáveis por decisões; os analistas melhoram essas decisões reunindo fatos completos e comunicando-se claramente.
+Este manual adota uma abordagem que começa pela metodologia. Uma planilha de framework só é útil quando o escopo é preciso. Um painel verde só é útil quando as evidências são confiáveis. O resultado de um scanner só é útil quando alguém o valida, prioriza, corrige e testa novamente. Os gestores continuam responsáveis pelas decisões; os analistas melhoram essas decisões ao reunir fatos completos e comunicá-los com clareza.
 
-Como usar este manual
+# Como utilizar este manual
 
-Os gestores devem começar pelos capítulos 1–3, 10–17 e pelos modelos do capítulo 22.
+Os gestores devem começar pelos capítulos 1–3 e 10–17, além dos modelos do capítulo 22.
 
-Os analistas júnior devem estudar os seis capítulos de Função, método de verificação, ferramentas, laboratório e preparação de entrevista.
+Os analistas juniores devem estudar os seis capítulos dedicados às Funções, o método de verificação, as ferramentas, o laboratório e a preparação para entrevistas.
 
-As equipes técnicas devem mapear os achados para ativos, riscos, resultados CSF, implementação, proprietários, evidências e medidas corretivas.
+As equipes técnicas devem relacionar os achados a ativos, riscos, resultados do CSF, implementação, responsáveis, evidências e ações corretivas.
 
-As equipes legais, de privacidade, de segurança, de tecnologia operacional e de negócios devem rever as decisões que afetam suas responsabilidades.
+As equipes jurídica, de privacidade, segurança física, tecnologia operacional e negócios devem revisar as decisões que afetem suas responsabilidades.
 
-*Conteúdo verdadeiro da palavra:** O guia de capítulo abaixo contém números de página específicos da edição após a renderização final. O documento também contém um campo TOC nativo do Word. Depois de editar, clique com o botão direito e selecione Atualizar Campo e, em seguida, Atualizar tabela inteira.
-□------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Sumário real do Word:** O guia de capítulos inclui números de página específicos da edição após a renderização final. O documento também contém um campo nativo de sumário do Word. Depois de editar, clique com o botão direito no campo, selecione **Atualizar Campo** e depois **Atualizar o índice inteiro**. |
+|---|
 
-Sumário
+# 1. Fundamentos do NIST CSF 2.0
 
-[Comunicação de publicação e utilização [2](#publication-and-use-notice)](#publication-and-use-notice)
+*O que é o framework, o que mudou e o que ele não afirma.*
 
-[Comunicação educativa [2](#educational-notice)](#educational-notice)
+![As Funções Governar, Identificar, Proteger, Detectar, Responder e Recuperar operam como um sistema conectado.](media/image1_pt-BR.png){width=6.15in height=3.39605in}
 
-[Utilização ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)
+Figura 1. As seis Funções do NIST CSF 2.0
 
-[Prefácio [3](#preface)](#preface)
+## 1.1 O que é o CSF 2.0
 
-[Como usar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
+O NIST publicou o CSF 2.0 em 26 de fevereiro de 2024. Ele foi desenvolvido para organizações de qualquer porte, setor e nível de sofisticação técnica. Seus resultados são neutros em relação a país, setor e tecnologia. Uma organização pode adotá-lo voluntariamente ou porque uma política, um contrato, um regulador, um cliente ou uma norma interna assim o exige.
 
-[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)
+## 1.2 O que mudou em relação ao CSF 1.1
 
-[1. NIST CSF 2.0 Fundações [9](#nist-csf-2.0-foundations)](#nist-csf-2.0-foundations)
+- **GOVERN** tornou-se a sexta Função, colocando liderança, política, risco empresarial e prestação de contas no centro do framework.
+- A cibersegurança da cadeia de suprimentos recebeu maior ênfase.
+- A linguagem foi ampliada para além da infraestrutura crítica, permitindo que o framework atenda claramente a todos os tipos de organização.
+- Perfis, Tiers, Exemplos de Implementação, Referências Informativas e Guias de Início Rápido formam agora um portfólio mais amplo de recursos do CSF.
+- Algumas numerações de Subcategorias contêm lacunas intencionais porque determinados conteúdos do CSF 1.1 foram realocados dentro do CSF 2.0.
 
-[1.1 O que é CSF 2.0 [9](#what-csf-2.0-is)](#what-csf-2.0-is)
+## 1.3 O que o CSF 2.0 não é
 
-[1.2 O que mudou com CSF 1.1 [9](#what-changed-from-csf-1.1)](#what-changed-from-csf-1.1)
+- Não é, por si só, uma lei.
+- Não é um catálogo único de controles nem uma lista obrigatória de tecnologias.
+- Não fornece uma pontuação universal de aprovação ou reprovação.
+- O NIST não certifica organizações, produtos, consultores nem avaliadores em relação ao CSF.
+- Um Tier elevado não é automaticamente o objetivo correto para todos os escopos.
+- Relacionar uma prática a um resultado do CSF não comprova que esse resultado tenha sido alcançado.
 
-[1.3 O que CSF 2.0 não é [9](#what-csf-2.0-is-not)](#what-csf-2.0-is-not)
+# 2. Núcleo, Perfis, Tiers e recursos de apoio
 
-[2. Núcleo, perfis, níveis e recursos de apoio [11](#core-profiles-tiers-and-supporting-resources)](#core-profiles-tiers-and-supporting-resources)
+*Os componentes do CSF 2.0 e como eles se relacionam.*
 
-[3. Roteiro de Implementação Prática [12](#practical-implementation-roadmap)](#practical-implementation-roadmap)
+![As Funções contêm Categorias, e as Categorias contêm Subcategorias específicas orientadas a resultados.](media/image2_pt-BR.png){width=6.15in height=2.6593in}
 
-[4. Função do Governo [13](#govern-function)](#govern-function)
+Figura 2. Hierarquia do Núcleo do CSF
 
-[Contexto organizacional (GV.OC) [13](#organizational-context-gv.oc)](#organizational-context-gv.oc)
+| **Componente** | **Objetivo** | **Uso prático** |
+|---|---|---|
+| Núcleo | Hierarquia de seis Funções, 22 Categorias e 106 Subcategorias | Descrever os resultados de cibersegurança desejados |
+| Perfil Organizacional | Resultados atuais e/ou alvo para um escopo definido | Comparar a postura, priorizar lacunas e planejar o trabalho |
+| Perfil da Comunidade | Linha de base compartilhada de resultados para um setor, tecnologia, ameaça ou caso de uso | Utilizá-la como insumo para o Perfil-Alvo de uma organização |
+| Tiers | Contexto sobre o rigor das práticas de governança e gerenciamento de riscos | Caracterizar as condições do Perfil Atual e do Perfil-Alvo |
+| Exemplos de Implementação | Ações orientativas que podem ajudar a alcançar resultados | Gerar ideias, adaptá-las e validá-las |
+| Referências Informativas | Correspondências com normas, orientações, regulamentos e outras fontes | Selecionar práticas e controles mais detalhados |
+| Guias de Início Rápido | Orientações breves e práticas sobre usos específicos do CSF | Iniciar trabalhos sobre Perfis, Tiers, ERM, cadeia de suprimentos e pequenas empresas |
 
-[Estratégia de gestão do risco (GV.RM) [13](#risk-management-strategy-gv.rm)](#risk-management-strategy-gv.rm)
+| **Números importantes:** O CSF 2.0 contém 6 Funções, 22 Categorias e 106 Subcategorias. As Subcategorias descrevem resultados; elas não exigem produtos específicos nem implementações idênticas. |
+|---|
 
-[Roles, Responsabilidades e Autoridades (GV.RR) [14](#roles-responsibilities-and-authorities-gv.rr)](#roles-responsibilities-and-authorities-gv.rr)
+# 3. Roteiro prático de implementação
 
-[Política (GV.PO) [14](#policy-gv.po)](#policy-gv.po)
+*Uma forma repetível de passar da linguagem do framework para melhorias financiadas.*
 
-[Oversight (GV.OV) [14](#oversight-gv.ov)](#oversight-gv.ov)
+- Designe um patrocinador executivo e um responsável pelo programa.
+- Defina o escopo do Perfil: empresa, unidade de negócios, produto, serviço, sistema, região ou ecossistema de fornecedores.
+- Reúna informações sobre a missão, as partes interessadas, as obrigações jurídicas e contratuais, os riscos, ativos, ameaças, incidentes, auditorias, força de trabalho e fornecedores.
+- Selecione os resultados do CSF aplicáveis e crie um Perfil Atual utilizando evidências confiáveis.
+- Defina um Perfil-Alvo baseado em risco, considerando os Perfis da Comunidade e as obrigações aplicáveis.
+- Analise lacunas, dependências, custos, viabilidade e redução de risco.
+- Crie um plano de ação aprovado com responsáveis, recursos, marcos, métricas e medidas de proteção provisórias.
+- Implemente controles e procedimentos operacionais.
+- Teste a eficácia do desenho e a eficácia operacional utilizando populações completas e amostras representativas.
+- Relate riscos, decisões, exceções, progresso e limitações.
+- Atualize os Perfis após mudanças relevantes, incidentes, exercícios, revisões ou alterações no risco.
 
-[Gestão do risco da cadeia de abastecimento de cibersegurança (GV.SC) [15](#cybersecurity-supply-chain-risk-management-gv.sc)](#cybersecurity-supply-chain-risk-management-gv.sc)
+| **Comece com um escopo pequeno sem perder a integridade:** Uma organização pequena pode começar por um serviço crítico ou processo de alto risco. Mantenha o escopo transparente, documente as exclusões e amplie-o de forma deliberada. |
+|---|
+
+# 4. Função GOVERNAR
+
+*Explicação completa, em linguagem clara, de cada Categoria e Subcategoria de GOVERNAR.*
+
+| **Objetivo da Função:** Definir direção, expectativas, responsabilização, políticas, supervisão e gestão do risco da cadeia de suprimentos. |
+|---|
+
+## Contexto organizacional (GV.OC)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.OC-01 | Relacionar as decisões de cibersegurança à missão da organização. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de missão e partes interessadas, registro de obrigações, mapa de dependências |
+| GV.OC-02 | Identificar as partes interessadas e considerar suas expectativas de cibersegurança. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de missão e partes interessadas, registro de obrigações, mapa de dependências |
+| GV.OC-03 | Identificar e gerenciar obrigações legais, regulatórias, contratuais, de privacidade e de liberdades civis. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de missão e partes interessadas, registro de obrigações, mapa de dependências |
+| GV.OC-04 | Compreender e comunicar os serviços críticos que outras partes esperam da organização. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de missão e partes interessadas, registro de obrigações, mapa de dependências |
+| GV.OC-05 | Compreender e comunicar os resultados, as capacidades e os serviços externos dos quais a organização depende. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de missão e partes interessadas, registro de obrigações, mapa de dependências |
+
+> **Importante:** Os resultados do CSF não constituem uma lista de tecnologias obrigatórias. Selecione métodos de implementação e controles conforme o risco, a missão, as obrigações, os recursos e o Perfil-Alvo definido.
+
+## Estratégia de gestão de riscos (GV.RM)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.RM-01 | Alinhar os objetivos de gestão do risco de cibersegurança com as partes interessadas relevantes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-02 | Estabelecer, comunicar e manter declarações de apetite e tolerância a risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-03 | Integrar o risco de cibersegurança aos processos de gestão de riscos corporativos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-04 | Definir e comunicar opções aceitáveis de resposta ao risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-05 | Estabelecer canais de comunicação para riscos cibernéticos, inclusive riscos de fornecedores e terceiros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-06 | Utilizar um método consistente para calcular, documentar, categorizar e priorizar riscos cibernéticos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+| GV.RM-07 | Incluir oportunidades benéficas e riscos positivos nas discussões de cibersegurança. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | apetite a risco, metodologia, registro de riscos corporativos, fluxos de reporte |
+
+## Papéis, responsabilidades e autoridades (GV.RR)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.RR-01 | A liderança assume a responsabilidade pelo risco de cibersegurança e apoia uma cultura ética e de melhoria contínua. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz RACI, descrições de cargo, orçamento, registros da força de trabalho |
+| GV.RR-02 | Estabelecer, comunicar, compreender e fazer cumprir papéis, responsabilidades e autoridades de cibersegurança. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz RACI, descrições de cargo, orçamento, registros da força de trabalho |
+| GV.RR-03 | Alocar pessoas, orçamento, tecnologia e tempo de acordo com a estratégia e as políticas de risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz RACI, descrições de cargo, orçamento, registros da força de trabalho |
+| GV.RR-04 | Incorporar responsabilidades de cibersegurança às práticas de recursos humanos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz RACI, descrições de cargo, orçamento, registros da força de trabalho |
+
+## Política (GV.PO)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.PO-01 | Estabelecer, comunicar e aplicar a política de cibersegurança de acordo com o contexto, a estratégia e as prioridades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | política aprovada, confirmações de ciência, histórico de revisão, registros de aplicação |
+| GV.PO-02 | Revisar e atualizar a política quando houver mudanças em requisitos, ameaças, tecnologia ou missão. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | política aprovada, confirmações de ciência, histórico de revisão, registros de aplicação |
+
+## Supervisão (GV.OV)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.OV-01 | Revisar os resultados da estratégia e utilizá-los para ajustar a direção. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | painel, atas de reunião, decisões, alterações de estratégia |
+| GV.OV-02 | Ajustar a estratégia de risco quando requisitos ou riscos não estiverem plenamente cobertos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | painel, atas de reunião, decisões, alterações de estratégia |
+| GV.OV-03 | Avaliar o desempenho de cibersegurança e determinar as mudanças necessárias. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | painel, atas de reunião, decisões, alterações de estratégia |
+
+## Gestão do risco de cibersegurança na cadeia de suprimentos (GV.SC)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| GV.SC-01 | Estabelecer programa, estratégia, objetivos, políticas e processos acordados para o risco da cadeia de suprimentos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-02 | Coordenar os papéis de cibersegurança de fornecedores, clientes, parceiros e responsáveis internos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-03 | Integrar o risco da cadeia de suprimentos à cibersegurança, ao ERM, às avaliações e à melhoria. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-04 | Conhecer os fornecedores e priorizá-los conforme a criticidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-05 | Incluir requisitos de cibersegurança priorizados em contratos e acordos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-06 | Realizar planejamento e diligência prévia antes de iniciar relacionamentos com terceiros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-07 | Registrar, avaliar, responder e monitorar riscos de fornecedores, produtos, serviços e terceiros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-08 | Incluir terceiros relevantes no planejamento, na resposta e na recuperação de incidentes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-09 | Monitorar a segurança da cadeia de suprimentos durante o ciclo de vida de produtos e serviços tecnológicos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+| GV.SC-10 | Planejar atividades de segurança para o encerramento de uma parceria ou contrato de serviço. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de fornecedores, classificação, diligência prévia, contratos, monitoramento, evidências de encerramento |
+
+# 5. Função IDENTIFICAR
+
+*Explicação completa, em linguagem clara, de cada Categoria e Subcategoria de IDENTIFICAR.*
+
+| **Objetivo da Função:** Compreender ativos, dependências, ameaças, vulnerabilidades, riscos e necessidades de melhoria. |
+|---|
+
+## Gestão de ativos (ID.AM)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| ID.AM-01 | Manter um inventário do hardware gerenciado. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-02 | Manter um inventário de software, serviços e sistemas gerenciados. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-03 | Manter diagramas atualizados das comunicações de rede e dos fluxos de dados autorizados. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-04 | Manter um inventário dos serviços fornecidos por terceiros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-05 | Priorizar ativos conforme classificação, criticidade, recursos e impacto na missão. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-07 | Inventariar tipos de dados definidos e seus metadados. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+| ID.AM-08 | Gerenciar sistemas, hardware, software, serviços e dados durante todo o ciclo de vida. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventários de ativos e dados, responsáveis, diagramas, registros do ciclo de vida |
+
+## Avaliação de riscos (ID.RA)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| ID.RA-01 | Identificar, validar e registrar vulnerabilidades dos ativos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-02 | Receber inteligência de ameaças cibernéticas de fontes de compartilhamento adequadas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-03 | Identificar e registrar ameaças internas e externas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-04 | Estimar a probabilidade e o impacto de ameaças explorarem vulnerabilidades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-05 | Utilizar ameaças, vulnerabilidades, probabilidade e impacto para compreender o risco inerente e as prioridades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-06 | Selecionar, priorizar, planejar, acompanhar e comunicar respostas ao risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-07 | Avaliar, registrar, aprovar e acompanhar o efeito de mudanças e exceções sobre o risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-08 | Estabelecer um processo para receber, analisar e responder a divulgações de vulnerabilidades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-09 | Avaliar a autenticidade e a integridade de hardware e software antes da aquisição e do uso. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+| ID.RA-10 | Avaliar fornecedores críticos antes da aquisição. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | registros de ameaças e vulnerabilidades, análise de risco, tratamento e exceções |
+
+## Melhoria (ID.IM)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação pelo gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| ID.IM-01 | Identificar melhorias a partir de avaliações. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
+| ID.IM-02 | Identificar melhorias a partir de testes e exercícios, inclusive exercícios coordenados com terceiros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
+| ID.IM-03 | Identificar melhorias durante a execução de processos, procedimentos e atividades. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
+| ID.IM-04 | Estabelecer, comunicar, manter e aprimorar planos de resposta a incidentes e de cibersegurança operacional. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | avaliações, exercícios, lições aprendidas, ações corretivas, planos atualizados |
+
+> **Status:** Tradução humana revisada para integração. Mantém os identificadores oficiais do NIST CSF 2.0. Este arquivo substitui somente o conteúdo textual dos capítulos 6–9; a edição completa ainda requer integração, nova geração de DOCX/PDF e revisão visual.
+
+# 6. Função PROTEGER
+
+*Descrição completa, em linguagem clara, de cada Categoria e Subcategoria de PROTEGER.*
+
+| **Objetivo da Função:** Aplicar salvaguardas que reduzam a probabilidade e o impacto de eventos de cibersegurança. |
+|---|
+
+## Gestão de identidades, autenticação e controle de acesso (PR.AA)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| PR.AA-01 | Gerenciar identidades e credenciais de pessoas, serviços e equipamentos autorizados. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+| PR.AA-02 | Comprovar identidades e vinculá-las a credenciais de acordo com o risco da interação. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+| PR.AA-03 | Autenticar usuários, serviços e equipamentos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+| PR.AA-04 | Proteger, transmitir e verificar declarações de identidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+| PR.AA-05 | Definir, aplicar e revisar permissões com base em privilégio mínimo e segregação de funções. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+| PR.AA-06 | Gerenciar, monitorar e aplicar o acesso físico de acordo com o risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de identidades, matriz de acesso, configuração de MFA, revisões, chamados de desligamento |
+
+## Conscientização e treinamento (PR.AT)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| PR.AT-01 | Fornecer ao pessoal os conhecimentos e as habilidades necessários para executar o trabalho cotidiano considerando o risco cibernético. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | currículo por função, listas de presença, conclusão, exercícios, acompanhamento |
+| PR.AT-02 | Fornecer às pessoas em funções especializadas os conhecimentos e as habilidades de cibersegurança exigidos por essas funções. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | currículo por função, listas de presença, conclusão, exercícios, acompanhamento |
+
+## Segurança de dados (PR.DS)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| PR.DS-01 | Proteger dados em repouso quanto à confidencialidade, integridade e disponibilidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | classificação, configuração de criptografia, registros de DLP, testes de backup e restauração |
+| PR.DS-02 | Proteger dados em trânsito quanto à confidencialidade, integridade e disponibilidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | classificação, configuração de criptografia, registros de DLP, testes de backup e restauração |
+| PR.DS-10 | Proteger dados em uso quanto à confidencialidade, integridade e disponibilidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | classificação, configuração de criptografia, registros de DLP, testes de backup e restauração |
+| PR.DS-11 | Criar, proteger, manter e testar backups. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | classificação, configuração de criptografia, registros de DLP, testes de backup e restauração |
 
-[5. Função IDENTIFY [16](#identify-function)](#identify-function)
+## Segurança de plataformas (PR.PS)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| PR.PS-01 | Estabelecer e aplicar práticas de gestão de configuração. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+| PR.PS-02 | Manter, substituir e remover software de acordo com o risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+| PR.PS-03 | Manter, substituir e remover hardware de acordo com o risco. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+| PR.PS-04 | Gerar registros e disponibilizá-los para monitoramento contínuo. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+| PR.PS-05 | Impedir a instalação e a execução de software não autorizado. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+| PR.PS-06 | Integrar e monitorar práticas de desenvolvimento seguro de software durante todo o ciclo de vida. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linhas de base, registros de correções e fim de vida, logs, listas de permissão, evidências de SDLC seguro |
+
+## Resiliência da infraestrutura tecnológica (PR.IR)
+
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| PR.IR-01 | Proteger redes e ambientes contra acesso e uso lógico não autorizado. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade |
+| PR.IR-02 | Proteger ativos tecnológicos contra ameaças ambientais. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade |
+| PR.IR-03 | Implementar mecanismos que atendam às necessidades de resiliência em condições normais e adversas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade |
+| PR.IR-04 | Manter capacidade de recursos suficiente para sustentar a disponibilidade. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade |
 
-[Gestão de ativos (ID.AM) [16](#asset-management-id.am)](#asset-management-id.am)
+# 7. Função DETECTAR
 
-[Avaliação do risco (ID.RA) [16](#risk-assessment-id.ra)](#risk-assessment-id.ra)
+*Descrição completa, em linguagem clara, de cada Categoria e Subcategoria de DETECTAR.*
 
-[Melhoramento (ID.IM) [17](#improvement-id.im)](#improvement-id.im)
+| **Objetivo da Função:** Monitorar e analisar eventos para identificar possíveis ataques e comprometimentos. |
+|---|
 
-[6. Função de proteção [18](#protect-function)](#protect-function)
+## Monitoramento contínuo (DE.CM)
 
-[Gestão de identidade, autenticação e controle de acesso (PR.AA) [18](#identity-management-authentication-and-access-control-pr.aa)](#identity-management-authentication-and-access-control-pr.aa)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| DE.CM-01 | Monitorar redes e serviços de rede para identificar eventos potencialmente adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento de fornecedores |
+| DE.CM-02 | Monitorar o ambiente físico para identificar eventos potencialmente adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento de fornecedores |
+| DE.CM-03 | Monitorar a atividade do pessoal e o uso de tecnologia para identificar eventos potencialmente adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento de fornecedores |
+| DE.CM-06 | Monitorar atividades e serviços de provedores externos para identificar eventos adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento de fornecedores |
+| DE.CM-09 | Monitorar hardware, software, ambientes de execução e dados para identificar eventos adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento de fornecedores |
 
-[Consciência e formação (PR.AT) [18](#awareness-and-training-pr.at)](#awareness-and-training-pr.at)
+## Análise de eventos adversos (DE.AE)
 
-[Segurança de dados (PR.DS) [18](#data-security-pr.ds)](#data-security-pr.ds)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| DE.AE-02 | Analisar eventos potencialmente adversos para compreender atividades relacionadas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
+| DE.AE-03 | Correlacionar informações de múltiplas fontes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
+| DE.AE-04 | Estimar o escopo e o impacto de eventos adversos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
+| DE.AE-06 | Fornecer informações sobre eventos adversos a pessoas e ferramentas autorizadas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
+| DE.AE-07 | Utilizar inteligência de ameaças e contexto na análise de eventos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
+| DE.AE-08 | Declarar incidentes quando os eventos atenderem aos critérios definidos. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração |
 
-[Segurança da plataforma (PR.PS) [19](#platform-security-pr.ps)](#platform-security-pr.ps)
+# 8. Função RESPONDER
 
-[Resistência à infraestrutura tecnológica (PR.IR) [19](#technology-infrastructure-resilience-pr.ir)](#technology-infrastructure-resilience-pr.ir)
+*Descrição completa, em linguagem clara, de cada Categoria e Subcategoria de RESPONDER.*
 
-[7. Função DETECT [21](#detect-function)](#detect-function)
+| **Objetivo da Função:** Gerenciar, analisar, comunicar, conter e erradicar incidentes declarados. |
+|---|
 
-[Monitorização contínua (DE.CM) [21](#continuous-monitoring-de.cm)](#continuous-monitoring-de.cm)
+## Gestão de incidentes (RS.MA)
 
-[Análise adversa dos acontecimentos (DE.AE) [21](#adverse-event-analysis-de.ae)](#adverse-event-analysis-de.ae)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RS.MA-01 | Executar o plano de resposta com terceiros relevantes depois que um incidente for declarado. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de incidentes, chamados, triagem, prioridade, escalonamento, decisão de recuperação |
+| RS.MA-02 | Fazer a triagem e validar relatos de incidentes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de incidentes, chamados, triagem, prioridade, escalonamento, decisão de recuperação |
+| RS.MA-03 | Classificar e priorizar incidentes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de incidentes, chamados, triagem, prioridade, escalonamento, decisão de recuperação |
+| RS.MA-04 | Escalonar ou elevar incidentes quando necessário. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de incidentes, chamados, triagem, prioridade, escalonamento, decisão de recuperação |
+| RS.MA-05 | Aplicar critérios para iniciar a recuperação. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de incidentes, chamados, triagem, prioridade, escalonamento, decisão de recuperação |
 
-[8. Função de resposta [23](#respond-function)](#respond-function)
+## Análise de incidentes (RS.AN)
 
-[Gestão de incidentes (RS.MA) [23](#incident-management-rs.ma)](#incident-management-rs.ma)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RS.AN-03 | Determinar o que ocorreu e identificar a causa raiz. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linha do tempo, notas forenses, registro de evidências, hashes, análise de causa raiz |
+| RS.AN-06 | Registrar as ações de investigação e preservar a integridade e a procedência dos registros. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linha do tempo, notas forenses, registro de evidências, hashes, análise de causa raiz |
+| RS.AN-07 | Coletar dados e metadados do incidente preservando sua integridade e procedência. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linha do tempo, notas forenses, registro de evidências, hashes, análise de causa raiz |
+| RS.AN-08 | Estimar e validar a magnitude do incidente. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | linha do tempo, notas forenses, registro de evidências, hashes, análise de causa raiz |
 
-[Análise Incidental (RS.AN) [23](#incident-analysis-rs.an)](#incident-analysis-rs.an)
+## Relato e comunicação da resposta a incidentes (RS.CO)
 
-[Reportagem e comunicação de resposta incidente (RS.CO) [24](#incident-response-reporting-and-communication-rs.co)](#incident-response-reporting-and-communication-rs.co)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RS.CO-02 | Notificar as partes interessadas internas e externas exigidas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz de notificação, mensagens, aprovações, registros de entrega |
+| RS.CO-03 | Compartilhar informações com as partes interessadas designadas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | matriz de notificação, mensagens, aprovações, registros de entrega |
 
-[Mitigação incidente (RS.MI) [24](#incident-mitigation-rs.mi)](#incident-mitigation-rs.mi)
+## Mitigação de incidentes (RS.MI)
 
-[9. Função de recuperação [25](#recover-function)](#recover-function)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RS.MI-01 | Conter incidentes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | ações de contenção e erradicação, validação, decisão sobre risco residual |
+| RS.MI-02 | Erradicar incidentes. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | ações de contenção e erradicação, validação, decisão sobre risco residual |
 
-[Execução do plano de recuperação de incidentes (RC.RP) [25](#incident-recovery-plan-execution-rc.rp)](#incident-recovery-plan-execution-rc.rp)
+# 9. Função RECUPERAR
 
-[Comunicação relativa à recuperação de incidentes (RC.CO) [25](#incident-recovery-communication-rc.co)](#incident-recovery-communication-rc.co)
+*Descrição completa, em linguagem clara, de cada Categoria e Subcategoria de RECUPERAR.*
 
-[10. Perfis organizacionais [26](#organizational-profiles)](#organizational-profiles)
+| **Objetivo da Função:** Restaurar ativos e operações e comunicar o progresso da recuperação. |
+|---|
 
-[10.1 Declaração de âmbito do perfil [26](#profile-scope-statement)](#profile-scope-statement)
+## Execução do plano de recuperação de incidentes (RC.RP)
 
-[10.2 Estado do resultado [26](#outcome-status)](#outcome-status)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RC.RP-01 | Executar atividades de recuperação quando o processo de incidentes iniciar a recuperação. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
+| RC.RP-02 | Selecionar, delimitar, priorizar e executar ações de recuperação. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
+| RC.RP-03 | Verificar a integridade dos backups e dos ativos de restauração antes da restauração. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
+| RC.RP-04 | Utilizar as necessidades da missão e o risco cibernético para estabelecer as condições operacionais após o incidente. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
+| RC.RP-05 | Verificar os ativos restaurados, restabelecer o serviço e confirmar o estado normal de operação. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
+| RC.RP-06 | Declarar a recuperação concluída com base em critérios definidos e finalizar a documentação do incidente. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | plano de recuperação, registros de restauração, verificações de integridade, validação do serviço, encerramento |
 
-[27](#gap-prioritization)](#gap-prioritization)
+## Comunicação da recuperação de incidentes (RC.CO)
 
-[11. CSF Tiers [28](#csf-tiers)](#csf-tiers)
+| **Resultado** | **Significado em linguagem clara** | **Verificação do gestor ou analista** | **Exemplos de evidência** |
+|---|---|---|---|
+| RC.CO-03 | Comunicar o progresso da recuperação e as capacidades restauradas às partes interessadas designadas. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | atualizações às partes interessadas, mensagens públicas aprovadas, comprovação de entrega |
+| RC.CO-04 | Emitir atualizações públicas sobre a recuperação por meio de métodos e mensagens aprovados. | Confirmar responsável, escopo, implementação, revisão, exceções, ações corretivas e operação repetível. | atualizações às partes interessadas, mensagens públicas aprovadas, comprovação de entrega |
 
-[12. Risco empresarial, apetite de risco e comunicação [29](#enterprise-risk-risk-appetite-and-communication)](#enterprise-risk-risk-appetite-and-communication)
+> **Nota de aplicação:** Os resultados do CSF não formam uma lista de tecnologias obrigatórias. Os métodos de implementação e controles devem ser selecionados conforme o risco, a missão, as obrigações, os recursos e o Perfil-Alvo definido para o escopo.
 
-[12.1 Declaração de risco [29](#executive-risk-statement)](#executive-risk-statement)
+# 10. Perfis Organizacionais
 
-[12.2 Perguntas a nível de conselho [29](#board-level-questions)](#board-level-questions)
+*Como descrever a postura atual, definir um objetivo e criar um plano de ação priorizado.*
 
-[13. Risco da cadeia de abastecimento de segurança cibernética [30](#cybersecurity-supply-chain-risk)](#cybersecurity-supply-chain-risk)
+![Um Perfil-Alvo é útil quando suas lacunas se transformam em ações baseadas em risco, com responsáveis e recursos definidos.](media/image3_pt-BR.png){width=6.15in height=3.39605in}
 
-[14. Métricas, provas e relatórios [31](#metrics-evidence-and-reporting)](#metrics-evidence-and-reporting)
+**Figura 3. Do Perfil Atual ao plano de ação**
 
-[14.1 Qualidade dos elementos de prova [31](#evidence-quality)](#evidence-quality)
+### 10.1 Declaração de escopo do Perfil
 
-[15. Ensaios de verificação e controlo da conformidade [32](#compliance-verification-and-control-testing)](#compliance-verification-and-control-testing)
+- Objetivo empresarial ou de missão.
+- Sistemas, serviços, dados, instalações, pessoas, fornecedores e localidades incluídos.
+- Período avaliado e data da evidência.
+- Partes interessadas e autoridade para decisão.
+- Obrigações legais, contratuais e de política, além dos Perfis da Comunidade utilizados como referência.
+- Premissas, exclusões, dependências e limitações.
 
-[15.1 Ensaios práticos de verificação [32](#practical-verification-tests)](#practical-verification-tests)
+### 10.2 Status dos resultados
 
-[15.2 Língua de conclusão [33](#conclusion-language)](#conclusion-language)
+| **Status** | **Significado** | **Suporte necessário** |
+|---|---|---|
+| Alcançado | O resultado, dentro do escopo definido, está implementado e opera conforme o esperado. | Responsável, população completa, desenho, evidência operacional, teste e conclusão. |
+| Parcialmente alcançado | Parte do escopo está ausente ou a operação é incompleta ou inconsistente. | Lacuna exata, risco afetado, ação provisória, responsável e prazo. |
+| Não alcançado | O resultado é aplicável, mas não está em operação. | Decisão de risco, tratamento, recursos e cronograma. |
+| Não aplicável | O resultado não se aplica ao escopo definido. | Justificativa documentada e aprovação. |
+| Não avaliado | A evidência é insuficiente para uma conclusão. | Solicitação de evidência, responsável e prazo. |
 
-[16. Ferramentas de código aberto para CSF Work [34](#open-source-tools-for-csf-work)](#open-source-tools-for-csf-work)
+### 10.3 Priorização de lacunas
 
-[16.1 Lista de verificação de validação da ferramenta [34](#tool-validation-checklist)](#tool-validation-checklist)
+Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, criticidade dos ativos, obrigações legais e contratuais, exposição, dependências, segurança física, privacidade, controles atuais, tempo estimado para exploração, esforço de correção e recursos disponíveis. Não classifique lacunas apenas pela severidade indicada por uma ferramenta de varredura.
 
-[16.2 Assistente CISO [35](#ciso-assistant)](#ciso-assistant)
+# 11. Níveis do CSF
 
-[Início rápido [35](#quick-start)](#quick-start)
+*Como utilizar Parcial, Informado pelo Risco, Repetível e Adaptativo sem transformá-los em uma pontuação.*
 
-[Evidência e limitação [35](#evidence-and-limitation)](#evidence-and-limitation)
+![Os Níveis do CSF oferecem contexto sobre o rigor da governança e das práticas de gestão de riscos.](media/image4_pt-BR.png){width=6.15in height=3.35755in}
 
-[16.3 Wazuh [35](#wazuh)](#wazuh)
+**Figura 4. Níveis do CSF**
 
-[Início rápido [35](#quick-start-1)](#quick-start-1)
+| **Nível** | **Significado prático** | **Evidência útil** |
+|---|---|---|
+| Nível 1 — Parcial | As práticas são principalmente informais, irregulares e nem sempre orientadas por objetivos ou ameaças. | Decisões caso a caso e ausência de processos consistentes em toda a organização. |
+| Nível 2 — Informado pelo Risco | A direção aprova práticas de risco, mas elas não estão estabelecidas de forma consistente em toda a organização. | Práticas aprovadas, implementação local e conhecimento parcial de riscos e fornecedores. |
+| Nível 3 — Repetível | Políticas e práticas repetíveis estão definidas, implementadas, revisadas e atualizadas em toda a organização. | Políticas aprovadas, execução consistente, funções qualificadas, compartilhamento periódico de informações e ações sobre fornecedores. |
+| Nível 4 — Adaptativo | A gestão de riscos faz parte da cultura e se adapta por meio de lições aprendidas, informações preditivas e percepção quase em tempo real. | Decisões integradas à gestão de riscos corporativos, controles adaptativos, melhoria contínua e resposta oportuna ao risco de fornecedores. |
 
-[Evidência e limitação [35](#evidence-and-limitation-1)](#evidence-and-limitation-1)
+- Selecione o Nível para um escopo de Perfil definido, e não como um rótulo genérico para toda a empresa.
+- Use risco, missão, obrigações, custo e benefício para definir o Nível-Alvo.
+- Não faça média dos números dos Níveis para criar uma pontuação enganosa.
+- Documente a evidência e as diferenças entre Funções.
+- Reavalie quando houver mudanças relevantes em risco, missão, fornecedores ou tecnologia.
 
-[16.4 osquery [35](#osquery)](#osquery)
+# 12. Risco corporativo, apetite a risco e comunicação
 
-[Início rápido [35](#quick-start-2)](#quick-start-2)
+*Como conectar a cibersegurança às decisões executivas e do órgão de governança.*
 
-[Evidência e limitação [36](#evidence-and-limitation-2)](#evidence-and-limitation-2)
+| **Conceito** | **Significado prático** | **Exemplo** |
+|---|---|---|
+| Apetite a risco | Quantidade e tipo geral de risco que a organização está disposta a assumir ou reter. | Apetite muito baixo para interrupção de serviços de emergência. |
+| Tolerância a risco | Variação específica aceitável em torno de um objetivo. | No máximo quatro horas de indisponibilidade para um serviço crítico definido. |
+| Risco inerente | Risco antes de considerar os controles. | Serviço exposto à Internet com dados valiosos e ameaças ativas. |
+| Risco residual | Risco que permanece após a aplicação dos controles. | Risco remanescente de indisponibilidade ou violação após MFA, segmentação, monitoramento e recuperação. |
+| Resposta ao risco | Aceitar, evitar, mitigar, transferir ou compartilhar o risco, ou aproveitar uma oportunidade. | Retirar software sem suporte, reduzir exposição e segurar parte do risco residual. |
+| Risco positivo | Oportunidade que pode melhorar o alcance dos objetivos. | Automação segura que reduz erros e melhora a velocidade de detecção. |
 
-[16.5 OpenSCAP [36](#openscap)](#openscap)
+## 12.1 Declaração executiva de risco
 
-[Início rápido [36](#quick-start-3)](#quick-start-3)
+> **Modelo:** Como [ameaça] pode explorar [vulnerabilidade] e afetar [ativo ou objetivo], a organização pode sofrer [impacto empresarial]. Os controles existentes [resumo] deixam [exposição residual]. A direção deve [resposta] até [data], sob responsabilidade de [função], e monitorar [medida].
 
-[Evidência e limitação [36](#evidence-and-limitation-3)](#evidence-and-limitation-3)
+## 12.2 Perguntas para o órgão de governança
 
-[16.6 Greenbone Community Edition [36](#greenbone-community-edition)](#greenbone-community-edition)
+- Quais objetivos de missão e serviços críticos enfrentam o maior risco cibernético?
+- Quais riscos excedem o apetite ou a tolerância aprovados?
+- Quais decisões exigem financiamento ou aceitação explícita do risco?
+- Quão confiável é a evidência que sustenta o status informado?
+- Onde existem concentrações de fornecedores ou pontos únicos de falha?
+- O que incidentes, exercícios, auditorias e quase incidentes nos ensinaram?
+- As capacidades de recuperação foram comprovadas para os serviços mais importantes?
 
-[Início rápido [36](#quick-start-4)](#quick-start-4)
+# 13. Risco de cibersegurança na cadeia de suprimentos
 
-[Evidência e limitação [36](#evidence-and-limitation-4)](#evidence-and-limitation-4)
+*Como gerenciar fornecedores, produtos, serviços e dependências ao longo de todo o ciclo de vida.*
 
-[16.7 Trivy [36](#trivy)](#trivy)
+![Planejar, selecionar, contratar, monitorar e encerrar relações com responsabilidades de segurança claramente definidas.](media/image5_pt-BR.png){width=6.15in height=3.21373in}
 
-[Início rápido [36](#quick-start-5)](#quick-start-5)
+**Figura 5. Ciclo de vida da cibersegurança na cadeia de suprimentos**
 
-[Evidência e limitação [37](#evidence-and-limitation-5)](#evidence-and-limitation-5)
-
-[16,8 OWASP ZAP [37](#owasp-zap)](#owasp-zap)
-
-[Início rápido [37](#quick-start-6)](#quick-start-6)
-
-[Evidência e limitação [37](#evidence-and-limitation-6)](#evidence-and-limitation-6)
-
-[16.9 Keycloak [37](#keycloak)](#keycloak)
-
-[Início rápido [37](#quick-start-7)](#quick-start-7)
-
-[Evidência e limitação [37](#evidence-and-limitation-7)](#evidence-and-limitation-7)
-
-[16,10 DefectDojo [37](#defectdojo)](#defectdojo)
-
-[Início rápido [37](#quick-start-8)](#quick-start-8)
-
-[Evidência e limitação [37](#evidence-and-limitation-8)](#evidence-and-limitation-8)
-
-[16.11 Velociraptor [38](#velociraptor)](#velociraptor)
-
-[Início rápido [38](#quick-start-9)](#quick-start-9)
-
-[Evidência e limitação [38](#evidence-and-limitation-9)](#evidence-and-limitation-9)
-
-[16.12 Agente de política aberta [38](#open-policy-agent)](#open-policy-agent)
-
-[Início rápido [38](#quick-start-10)](#quick-start-10)
-
-[Evidência e limitação [38](#evidence-and-limitation-10)](#evidence-and-limitation-10)
-
-[16.13 OpenSearch [38](#opensearch)](#opensearch)
-
-[Início rápido [38](#quick-start-11)](#quick-start-11)
-
-[Evidência e limitação [38](#evidence-and-limitation-11)](#evidence-and-limitation-11)
-
-[16.14 Ferramentas NIST oficiais [38](#official-nist-tools)](#official-nist-tools)
-
-[17. Playbook CSF do gestor [40](#managers-csf-playbook)](#managers-csf-playbook)
-
-[17.1 Questões mensais [40](#monthly-questions)](#monthly-questions)
-
-[17.2 Painel [40](#dashboard)](#dashboard)
-
-[17.3 Erros comuns [40](#common-mistakes)](#common-mistakes)
-
-[18. De Iniciante a Analista Júnior [41](#from-beginner-to-junior-analyst)](#from-beginner-to-junior-analyst)
-
-[18.1 Funções de nível de entrada [41](#entry-level-roles)](#entry-level-roles)
-
-[18.2 Trabalhar um analista júnior pode executar [41](#work-a-junior-analyst-may-perform)](#work-a-junior-analyst-may-perform)
-
-[18.3 Prova de carteira [42](#portfolio-proof)](#portfolio-proof)
-
-[19. Laboratório Fictício e Portfólio [43](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
-
-[Projecto 1 — Âmbito e contexto [43](#project-1-scope-and-context)](#project-1-scope-and-context)
-
-[Projeto 2 — Ativos e mapa de dados [43](#project-2-asset-and-data-map)](#project-2-asset-and-data-map)
-
-[Projeto 3 — Risco [43](#project-3-risk)](#project-3-risk)
-
-[Projeto 4 — Perfis [43](#project-4-profiles)](#project-4-profiles)
-
-[Projeto 5 — Controlos e testes [43](#project-5-controls-and-tests)](#project-5-controls-and-tests)
-
-[Projeto 6 — Incidente [43](#project-6-incident)](#project-6-incident)
-
-[Projeto 7 — Ferramentas [43](#project-7-tools)](#project-7-tools)
-
-[Projecto 8 — Relatório executivo [43](#project-8-executive-report)](#project-8-executive-report)
-
-[20. Plano de aprendizagem de trinta dias [44](#thirty-day-learning-plan)](#thirty-day-learning-plan)
-
-[20,1 Costumes diários [44](#daily-habit)](#daily-habit)
-
-[21. Preparação da entrevista [45](#interview-preparation)](#interview-preparation)
-
-[O que é NIST CSF 2.0? [45](#what-is-nist-csf-2.0)](#what-is-nist-csf-2.0)
-
-[Quais são as seis Funções? [45](#what-are-the-six-functions)](#what-are-the-six-functions)
-
-[Por que foi adicionado o Govern? [45](#why-was-govern-added)](#why-was-govern-added)
-
-[O que é um perfil atual? [45](#what-is-a-current-profile)](#what-is-a-current-profile)
-
-[O que é um perfil alvo? [45](#what-is-a-target-profile)](#what-is-a-target-profile)
-
-[O que são níveis? [45](#what-are-tiers)](#what-are-tiers)
-
-[O CSF certifica a conformidade? [45](#does-csf-certify-compliance)](#does-csf-certify-compliance)
-
-[Como você verifica um resultado? [45](#how-do-you-verify-an-outcome)](#how-do-you-verify-an-outcome)
-
-[Como devem ser usadas as ferramentas? [45](#how-should-tools-be-used)](#how-should-tools-be-used)
-
-[Como você prioriza lacunas? [46](#how-do-you-prioritize-gaps)](#how-do-you-prioritize-gaps)
-
-[22. Modelos e listas de verificação [47](#templates-and-checklists)](#templates-and-checklists)
-
-[22.1 Registo do perfil [47](#profile-record)](#profile-record)
-
-[22.2 Registo de risco [47](#risk-register)](#risk-register)
-
-[22.3 Folha de ensaio de controlo [47](#control-test-sheet)](#control-test-sheet)
-
-[22.4 Avaliação do fornecedor [47](#supplier-review)](#supplier-review)
-
-[22.5 Lista de verificação de prontidão do gestor [48](#manager-readiness-checklist)](#manager-readiness-checklist)
-
-[23. Índice de Glossário e Assunto [49](#glossary-and-subject-index)](#glossary-and-subject-index)
-
-[23.1 Índice do assunto [49](#subject-index)](#subject-index)
-
-[24. Referências oficiais e estudo complementar [50](#official-references-and-further-study)](#official-references-and-further-study)
-
-# 1. Fundação NIST CSF 2.0
-
-* O que é o framework, o que mudou, e o que não reivindica.*
-
-![Governa, Identificar, Proteger, Detectar, Responder e Recuperar trabalho como um sistema conectado.](media/image1_pt-BR.png)
-
-Figura 1. As seis funções NIST CSF 2.0
-
-## 1.1 O que é CSF 2.0
-
-NIST publicou CSF 2.0 em 26 de fevereiro de 2024. É projetado para organizações de cada tamanho, setor e nível de sofisticação técnica. Seus resultados são país, setor e tecnologia neutra. As organizações podem adotá-lo voluntariamente ou porque uma política, contrato, regulador, cliente ou padrão interno pede por ele.
-
-# 1.2 O que mudou com CSF 1.1
-
-- GOVERNO tornou-se uma sexta função, colocando liderança, política, risco empresarial, e responsabilização no centro.
-
-- A segurança cibernética da cadeia de abastecimento recebeu maior ênfase.
-
-- A linguagem foi alargada para além da infra-estrutura crítica, pelo que o quadro serve claramente a todas as organizações.
-
-- Perfis, Níveis, Exemplos de Implementação, Referências Informativas e Guias de Iniciação Rápida formam um portfólio CSF maior.
-
-- Alguns números de subcategoria contêm lacunas intencionais porque CSF 1.1 conteúdo movido dentro CSF 2.0.
-
-# # 1.3 O que CSF 2.0 não é
-
-- Não é uma lei sozinha.
-
-- Não é um catálogo de controle único ou lista de tecnologia obrigatória.
-
-- Não fornece uma pontuação universal passe/falha.
-
-- NIST não certifica organizações, produtos, consultores ou avaliadores contra o CSF.
-
-- Um nível alto não é automaticamente o alvo certo para cada escopo.
-
-- Um mapeamento para um resultado CSF não prova que o resultado é alcançado.
-
-# 2. Núcleo, Perfis, Níveis e Recursos de Apoio
-
-* As peças de CSF 2.0 e como eles se encaixam.*
-
-![Funções contêm Categorias, que contêm subcategorias específicas focadas em resultados.](media/image2_pt-BR.png)
-
-Figura 2. CSF Hierarquia do núcleo
-
-• ** ** ** ** ** ** ** Uso prático **
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Uma hierarquia de seis Funções, 22 Categorias e 106 Subcategorias
-Perfil Organizacional Resultados atuais e/ou alvos para um escopo definido Compare postura, priorize lacunas, plan work
-Perfil da Comunidade Uma linha de base de resultados partilhados para um sector, tecnologia, ameaça ou caso de utilização .
-Contexto para o rigor da governação e das práticas de gestão de riscos
-□ Exemplos de Implementação • Ações nocionais que podem ajudar a alcançar resultados
-• Referências informativas; • Mapeamento de padrões, orientações, regulamentos e outras fontes;
-Guias de Iniciação Rápida Guia Acionável Breve sobre CSF específico usa Perfil Inicial, Nível, MTC, cadeia de suprimentos e trabalho de pequeno negócio
-
-Números que importam:** CSF 2.0 contém 6 Funções, 22 Categorias e 106 subcategorias. As subcategorias descrevem resultados, produtos não exigidos ou implementações idênticas. □
-□-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-3. Roteiro de Implementação Prática
-
-*Uma forma repetitiva de passar da linguagem framework para a melhoria financiada.*
-
-- Nomeie um patrocinador executivo e proprietário do programa.
-
-- Defina o escopo do perfil: empresa, unidade de negócios, produto, serviço, sistema, região ou ecossistema de fornecedores.
-
-- Reunir missão, stakeholder, legal, contratual, risco, ativo, ameaça, incidente, auditoria, força de trabalho e informações do fornecedor.
-
-- Selecione os resultados CSF aplicáveis e crie um perfil atual usando evidências confiáveis.
-
-- Definir um perfil-alvo baseado no risco, considerando Perfis e obrigações da Comunidade.
-
-- Analise lacunas, dependências, custo, viabilidade e redução de risco.
-
-- Criar um plano de ação aprovado com proprietários, recursos, marcos, medidas e proteção provisória.
-
-- Aplicar controlos e procedimentos operacionais.
-
-- Projeto de teste e eficácia operacional com populações completas e amostras representativas.
-
-- Relatar risco, decisões, exceções, progresso e limitações.
-
-- Atualizar perfis após mudanças materiais, incidentes, exercícios, comentários ou risco de mudança.
-
-Comece pequeno sem perder a integridade:** Uma pequena organização pode começar com um serviço crítico ou processo de alto risco. Mantenha o escopo honesto, registre exclusões e expanda deliberadamente. □
----------------------------------------------------------------------------------------------------
-
-4. Função do GOVERNO
-
-* Uma discriminação completa em língua simples de cada categoria e subcategoria GOVERN.*
-
-□ ** Objectivo da função:** Defina direção, expectativas, responsabilização, política, supervisão e gerenciamento de risco da cadeia de suprimentos. □
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# # Contexto organizacional (GV.OC)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ GV.OC-01 □ Conecte as decisões de segurança cibernética à missão da organização. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Missão e registros de stakeholders, registro de obrigações, mapa de dependência
-□ GV.OC-02 Identifique os stakeholders e considere suas expectativas de segurança cibernética. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Missão e registros de stakeholders, registro de obrigações, mapa de dependência
-□ GV.OC-03 Identifique e gerencie obrigações legais, regulamentares, contratuais, de privacidade e de liberdade civil. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Missão e registros de stakeholders, registro de obrigações, mapa de dependência
-O GV.OC-04 Compreender e comunicar os serviços críticos que outros esperam da organização. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Missão e registros de stakeholders, registro de obrigações, mapa de dependência
-GV.OC-05 Compreender e comunicar os resultados, capacidades e serviços externos da organização depende. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Missão e registros de stakeholders, registro de obrigações, mapa de dependência
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-## Estratégia de Gestão de Risco (GV.RM)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ GV.RM-01 □ Concordo com os objetivos de gerenciamento de risco de segurança cibernética com as partes interessadas relevantes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-• GV.RM-02 • Estabelecer, comunicar e manter as declarações de risco de apetite e tolerância. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-O GV.RM-03 Integra o risco de segurança cibernética em processos de gestão de riscos empresariais. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-□ GV.RM-04 □ Definir e comunicar opções aceitáveis de resposta ao risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-O GV.RM-05 Criar caminhos de comunicação para riscos cibernéticos, incluindo riscos de fornecedores e terceiros. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-Use um método consistente para calcular, documentar, categorizar e priorizar riscos cibernéticos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-O GV.RM-07 Inclui oportunidades benéficas e risco positivo nas discussões sobre segurança cibernética. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Risco de apetite, método, registo de risco empresarial, caminhos de comunicação
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Funções, responsabilidades e autoridades (GV.RR)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-GV.RR-01 A liderança aceita a responsabilidade pelo risco de cibersegurança e apoia uma cultura ética, melhorando. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. RACI, descrições de trabalho, orçamento, registros de força de trabalho
-□ GV.RR-02 □ Estabelecer, comunicar, compreender e impor funções cibernéticas, responsabilidades e autoridade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. RACI, descrições de trabalho, orçamento, registros de força de trabalho
-Alocar pessoas, dinheiro, tecnologia e tempo de acordo com a estratégia e política de risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. RACI, descrições de trabalho, orçamento, registros de força de trabalho
-O GV.RR-04 Incluir responsabilidades de segurança cibernética nas práticas de recursos humanos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. RACI, descrições de trabalho, orçamento, registros de força de trabalho
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Política (GV.PO)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ GV.PO-01 □ Estabelecer, comunicar e aplicar a política de segurança cibernética com base em contexto, estratégia e prioridades. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Política aprovada, agradecimentos, histórico de revisão, registros de execução
-O GV.PO-02 Revisão e atualização da política quando os requisitos, ameaças, tecnologia ou a mudança da missão. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Política aprovada, agradecimentos, histórico de revisão, registros de execução
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Supervisão (GV.OV)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O GV.OV-01 Reveja os resultados da estratégia e use-os para ajustar a direção. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Painel, atas de reunião, decisões, mudanças de estratégia
-Ajustar a estratégia de risco quando os requisitos ou riscos não são totalmente cobertos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Painel, atas de reunião, decisões, mudanças de estratégia
-Avaliar o desempenho em segurança cibernética e determinar as mudanças necessárias. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Painel, atas de reunião, decisões, mudanças de estratégia
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Gerenciamento de risco da cadeia de suprimentos de segurança cibernética (GV.SC)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ GV.SC-01 □ Estabelecer um programa de risco de cadeia de suprimentos, estratégia, objetivos, políticas e processos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-O GV.SC-02 O Coordene funções de segurança cibernética para fornecedores, clientes, parceiros e proprietários internos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-O GV.SC-03 Integra o risco de cadeia de suprimentos no trabalho de cibersegurança, MTC, avaliação e melhoria. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-GV.SC-04 Conheça os fornecedores e priorize-os por criticidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-□ GV.SC-05 □ Coloque requisitos de segurança cibernética priorizados em contratos e acordos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-O GV.SC-06 Realizar planejamento e diligência devida antes de iniciar relacionamentos de terceiros. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-O GV.SC-07 Record, avalie, responda e monitore os riscos do fornecedor, produto, serviço e terceiros. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-□ GV.SC-08 □ Inclua terceiros relevantes no planejamento, resposta e recuperação de incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-• GV.SC-09 • Monitore a segurança da cadeia de suprimentos ao longo do ciclo de vida do produto e do serviço tecnológico. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-O GV.SC-10 Planeje atividades de segurança para o fim de um acordo de parceria ou serviço. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário do fornecedor, nivelamento, due diligence, contratos, monitoramento, prova de saída
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 5. Função IDENTIFY
-
-* Uma discriminação completa em língua simples de cada categoria e subcategoria IDENTIFY.*
-
-□ ** Objectivo da função:** Compreenda ativos, dependências, ameaças, vulnerabilidades, riscos e necessidades de melhoria. □
-O que é que se passa?
-
-# # Gerenciamento de ativos (ID.AM)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• ID.AM-01 • Mantenha um inventário de hardware gerenciado. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-• ID.AM-02 • Mantenha um inventário de software, serviços e sistemas gerenciados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-O ID.AM-03 mantém diagramas atuais de comunicação de rede autorizada e fluxos de dados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-O ID.AM-04 Manter um inventário dos serviços fornecidos pelo fornecedor. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-O ID.AM-05 Priorizar ativos por classificação, criticidade, recursos e impacto da missão. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-□ ID.AM-07 □ Inventário designado tipos de dados e seus metadados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-O ID.AM-08 Gerenciar sistemas, hardware, software, serviços e dados ao longo de seus ciclos de vida. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. inventários de ativos e dados, proprietários, diagramas, registros de ciclo de vida
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Avaliação de risco (ID.RA)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ ID.RA-01 Identifique, valide e registre vulnerabilidades de ativos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-□ ID.RA-02 □ Receba informações sobre ameaças cibernéticas de fontes de compartilhamento adequadas. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-□ ID.RA-03 Identifique e registre ameaças internas e externas. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-□ ID.RA-04 □ Estimar a probabilidade e o impacto das ameaças que exploram vulnerabilidades. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-□ ID.RA-05 □ Use ameaças, vulnerabilidades, probabilidade e impacto para entender o risco e prioridades inerentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-□ ID.RA-06 Escolha, priorize, planifique, rastreie e comunique respostas de risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-Avaliar, registrar, aprovar e rastrear o efeito de risco de mudanças e exceções. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-O ID.RA-08 Estabelecer um processo para receber, analisar e responder às divulgações de vulnerabilidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-Avaliar a autenticidade e integridade do hardware e software antes da aquisição e uso. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-O ID.RA-10 Avaliar fornecedores críticos antes da aquisição. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Registros de ameaça e vulnerabilidade, análise de risco, tratamento e exceções
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Melhoria (ID.IM)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• ID.IM-01 • Identificar melhorias das avaliações. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Avaliação, exercício, lições, ações corretivas, planos atualizados
-• ID.IM-02 • Identificar melhorias de testes e exercícios, incluindo exercícios coordenados de terceiros. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Avaliação, exercício, lições, ações corretivas, planos atualizados
-O ID.IM-03 Identificar melhorias durante os processos operacionais, procedimentos e atividades. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Avaliação, exercício, lições, ações corretivas, planos atualizados
-O ID.IM-04 Estabelecer, comunicar, manter e melhorar os planos de cibersegurança operacionais e de resposta a incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Avaliação, exercício, lições, ações corretivas, planos atualizados
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 6. Função de proteção
-
-* Uma discriminação completa em linguagem simples de cada categoria e subcategoria PROTECT.*
-
-□ ** Objectivo da função:** Use salvaguardas que reduzem a probabilidade e o impacto de eventos de segurança cibernética.
-□-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# # Gestão de Identidade, Autenticação e Controle de Acesso (PR.AA)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O PR.AA-01 Gerencia identidades e credenciais para pessoas, serviços e hardware autorizados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-O PR.AA-02 O que prova identidades e as vincula a credenciais de acordo com o risco da interação. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-O PR.AA-03 O Autenticar usuários, serviços e hardware. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-O PR.AA-04 protege, transmite e verifica as afirmações de identidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-□ PR.AA-05 □ Defina, execute e reveja permissões usando o menor privilégio e separação de deveres. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-O PR.AA-06 Gerenciar, monitorar e impor o acesso físico de acordo com o risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de identidade, matriz de acesso, configurações de MFA, revisões, tickets de remoção
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Conscientização e treino (PR.AT)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• PR.AT-01 • Dê ao pessoal o conhecimento e as habilidades para executar o trabalho normal com risco cibernético em mente. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Currículo baseado em funções, lista, conclusão, exercícios, acompanhamento
-- PR.AT-02 - Dê às pessoas em papéis especializados os conhecimentos e habilidades de cibersegurança que esses papéis exigem. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Currículo baseado em funções, lista, conclusão, exercícios, acompanhamento
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Segurança de dados (PR.DS)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O PR.DS-01 Proteger os dados em repouso para confidencialidade, integridade e disponibilidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Classificação, configurações de criptografia, registros DLP, testes de backup e restauração
-O PR.DS-02 Proteger dados em trânsito para confidencialidade, integridade e disponibilidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Classificação, configurações de criptografia, registros DLP, testes de backup e restauração
-O PR.DS-10 Proteger dados em uso para confidencialidade, integridade e disponibilidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Classificação, configurações de criptografia, registros DLP, testes de backup e restauração
-• PR.DS-11 • Crie, proteja, mantenha e teste backups. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Classificação, configurações de criptografia, registros DLP, testes de backup e restauração
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Segurança da plataforma (PR.PS)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ PR.PS-01 □ Estabelecer e aplicar práticas de gestão de configuração. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Linhas de base, registros de patch e EOL, logs, allowlisting, evidência de SDLC seguro
-• PR.PS-02 • Manter, substituir e remover software de acordo com o risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Linhas de base, registros de patch e EOL, logs, allowlisting, evidência de SDLC seguro
-• PR.PS-03 • Manter, substituir e remover hardware de acordo com o risco. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. □ Baselines, patch e registros EOL, logs, allowlisting, evidência de SDLC seguro
-O PR.PS-04 Gerar registros e torná-los disponíveis para monitoramento contínuo. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. □ Baselines, patch e registros EOL, logs, allowlisting, evidência de SDLC seguro
-O PR.PS-05 Impedir a instalação e execução de software não autorizado. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Linhas de base, registros de patch e EOL, logs, allowlisting, evidência de SDLC seguro
-O PR.PS-06 Integrar e monitorar práticas seguras de desenvolvimento de software ao longo do ciclo de vida. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Linhas de base, registros de patch e EOL, logs, allowlisting, evidência de SDLC seguro
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Resiliência de infraestrutura tecnológica (PR.IR)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ PR.IR-01 □ Proteja redes e ambientes de acesso lógico e uso não autorizados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade
-O PR.IR-02 Proteger os ativos da tecnologia contra ameaças ambientais. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade
-O PR.IR-03 O Implemente mecanismos que atendam às necessidades de resiliência durante condições normais e adversas. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade
-• PR.IR-04 • Mantenha capacidade de recursos suficiente para suportar disponibilidade. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Arquitetura, segmentação, controles ambientais, testes de resiliência e capacidade
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 7. Função DETECT
-
-* Uma desagregação completa em linguagem simples de cada categoria e subcategoria do DETECT.*
-
-□ ** Objectivo da função:** Monitore e analise eventos para que potenciais ataques e compromissos sejam encontrados. □
-□--------------------------------------------------------------------------------------------------------------------------------------------------
-
-# # Monitorização contínua (DE.CM)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• DE.CM-01 • Monitore redes e serviços de rede para eventos potencialmente adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento do provedor
-• DE.CM-02 • Monitore o ambiente físico para eventos potencialmente adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento do provedor
-• DE.CM-03 • Monitore a atividade do pessoal e o uso da tecnologia para eventos potencialmente adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento do provedor
-DE.CM-06 Monitore atividades e serviços de provedor de serviços externos para eventos adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento do provedor
-• DE.CM-09 • Monitore hardware, software, ambientes de execução e dados para eventos adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Inventário de cobertura, telemetria, alertas, registros de revisão, monitoramento do provedor
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Análise de eventos adversos (DE.AE)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-DE.AE-02 □ Analise os efeitos adversos potenciais para compreender a atividade relacionada. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-□ DE.AE-03 □ Correlate information from multiple sources. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-□ DE.AE-04 □ Estimar o âmbito e o impacto dos acontecimentos adversos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-O DE.AE-06 fornece informações de eventos adversos a pessoas e ferramentas autorizadas. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-□ DE.AE-07 □ Use a inteligência de ameaça e o contexto na análise de eventos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-□ DE.AE-08 □ Declare incidentes quando os eventos cumprirem critérios definidos. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Regras de correlação, alertas enriquecidos, análise de impacto, registro de declaração .
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 8. Função de Resposta
-
-* Uma discriminação completa em linguagem simples de cada categoria e subcategoria RESPOND.*
-
-□ ** Objectivo da função:** Gerenciar, analisar, comunicar, conter e erradicar incidentes declarados. □
-O que é que se passa?
-
-# # Gestão de incidentes (RS.MA)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O RS.MA-01 execute o plano de resposta com terceiros relevantes após um incidente ser declarado. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de incidentes, bilhetes, triagem, prioridade, escalada, decisão de recuperação
-□ RS.MA-02 □ Triagem e validação de relatórios de incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de incidentes, bilhetes, triagem, prioridade, escalada, decisão de recuperação
-O RS.MA-03 O Categorize e priorize incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de incidentes, bilhetes, triagem, prioridade, escalada, decisão de recuperação
-□ RS.MA-04 • Escalar ou elevar incidentes quando necessário. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de incidentes, bilhetes, triagem, prioridade, escalada, decisão de recuperação
-RS.MA-05 (Aplicar critérios para começar a recuperação). Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de incidentes, bilhetes, triagem, prioridade, escalada, decisão de recuperação
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Análise de incidentes (RS.AN)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O RS.AN-03 Determinar o que ocorreu e identificar a causa da raiz. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. linha do tempo, notas forenses, log de evidências, hashes, análise de causa raiz
-O RS.AN-06 Gravar ações investigativas e preservar a integridade e procedência dos registros. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. linha do tempo, notas forenses, log de evidências, hashes, análise de causa raiz
-O RS.AN-07 Colete dados e metadados incidentes enquanto preserva a integridade e a proveniência. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. linha do tempo, notas forenses, log de evidências, hashes, análise de causa raiz
-□ RS.AN-08 □ Estimar e validar a magnitude do incidente. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. linha do tempo, notas forenses, log de evidências, hashes, análise de causa raiz
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Relatório e comunicação de resposta a incidentes (RS.CO)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O RS.CO-02 Notificar as partes interessadas internas e externas necessárias. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Matriz de notificação, mensagens, aprovações, registros de entrega
-O RS.CO-03 Partilhar informações com as partes interessadas designadas. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Matriz de notificação, mensagens, aprovações, registros de entrega
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Mitigação de incidentes (RS.MI)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-RS.MI-01 . Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Acções de contenção e erradicação, validação, decisão de risco residual
-RS.MI-02 □ Erradicar incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Acções de contenção e erradicação, validação, decisão de risco residual
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 9. Função de recuperação
-
-* Uma desagregação completa em linguagem simples de cada categoria e subcategoria RECOVER.*
-
-□ ** Objectivo da função:** Restaurar ativos e operações e comunicar progresso de recuperação.
------------------------------------------------------------------------------
-
-# # Plano de recuperação de incidentes Execução (RC.RP)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O RC.RP-01 executa atividades de recuperação quando o processo de incidente inicia a recuperação. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-□ RC.RP-02 □ Selecione, escopo, priorize e execute ações de recuperação. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-□ RC.RP-03 □ Verifique a integridade de backup e restauração antes da restauração. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-• RC.RP-04 • Use as necessidades da missão e risco cibernético para estabelecer condições operacionais pós-incidentes. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-□ RC.RP-05 □ Verifique os ativos restaurados, restaure o serviço e confirme o estado operacional normal. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-□ RC.RP-06 □ Declare recuperação completa usando critérios e terminar documentação incidente. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. Plano de recuperação, registros de restauração, verificações de integridade, validação de serviço, fechamento
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# # Comunicação de recuperação de incidentes (RC.CO)
-
-Resultado** Resultado** Significado do plano** Verificação do gestor ou analista** Exemplo de evidência**
-----------------------------------------------------------------------------------------------------------------------
-□ RC.CO-03 □ Comunicar o progresso da recuperação e a capacidade restaurada aos stakeholders designados. Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. As atualizações dos stakeholders, as mensagens públicas aprovadas, a prova da entrega
-O RC.CO-04 O que está acontecendo? Confirmar propriedade, escopo, implementação, revisão, exceções, ação corretiva e operação repetitiva. As atualizações dos stakeholders, as mensagens públicas aprovadas, a prova da entrega
-
-*Importante: Resultados CSF não são uma lista de verificação de tecnologias necessárias. Selecione métodos de implementação e controles de acordo com o risco, missão, obrigações, recursos e o perfil alvo escopo.*
-
-# 10. Perfil Organizacional
-
-* Como descrever a postura atual, definir um alvo e construir um plano de ação priorizado.*
-
-![Um perfil alvo é útil quando suas lacunas se tornam de propriedade, financiada, ação baseada em risco.](media/image3_pt-BR.png)
-
-Figura 3. Perfil atual do plano de ação
-
-## 10.1 Declaração de escopo de perfil
-
-- Negócios ou missão
-
-- Sistemas, serviços, dados, instalações, pessoas, fornecedores e locais incluídos
-
-- Período e data da prova
-
-- Interessados e autoridade de decisão
-
-- Inputs de perfil jurídico, contratual, político e comunitário
-
-- Suposições, exclusões, dependências e limitações
-
-## 10.2 Situação dos resultados
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-------------------------------------------------
-Realizado O resultado de escopo é implementado e operacional como pretendido Proprietário, população completa, projeto, evidência operacional, teste e conclusão
-□ Alcançado parcialmente □ Falta algum escopo ou operação ou incoerência
-Não alcançado O resultado é aplicável, mas não está em operação.
-Não aplicável O resultado não se aplica a este âmbito definido .
-□ Não avaliado □ As provas são insuficientes para uma conclusão
-
-## 10.3 Priorização da gap
-
-Priorizar lacunas usando impacto da missão, probabilidade de ameaça, criticidade de ativos, obrigações legais e contratuais, exposição, dependências, segurança, privacidade, controles atuais, tempo para explorar, esforço de remediação e recursos disponíveis. Não ranqueie as lacunas apenas pela etiqueta de severidade de um scanner.
-
-# 11. CSF Níveis
-
-*Usando Parcial, Risco Informado, Repetido e Adaptativo sem transformá-los em uma pontuação.*
-
-![Tiers fornecem contexto para governança e rigor de gestão de risco.](media/image4_pt-BR.png)
-
-Figura 4. CSF Níveis
-
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O nível 1 — As práticas são amplamente ad hoc, irregular e inconsistentemente informadas por objectivos ou ameaças. Exemplos de decisões caso a caso e processos de organização em falta
-Nível 2 — Risco Informado A Gestão aprova práticas de risco, mas não são consistentemente estabelecidas em toda a organização. □ Práticas aprovadas, implementação local, risco parcial e sensibilização do fornecedor
-Nível 3 — Políticas e práticas repetitivas são definidas, implementadas, revisadas e atualizadas em toda a organização. □ Política aprovada, execução consistente, papéis qualificados, compartilhamento regular de informações e ação do fornecedor
-O nível 4 — Adaptive A gestão de riscos faz parte da cultura e adapta-se utilizando lições, informação preditiva e consciência quase em tempo real. • Decisões integradas em matéria de MTC, controlos adaptativos, melhoria contínua e acção atempada em matéria de risco para os fornecedores
-
-- Escolha níveis para um escopo de perfil definido, não como uma vaga etiqueta empresarial.
-
-- Use risco, missão, obrigações, custo e benefício para escolher o Nível alvo.
-
-- Não a média dos números de nível em uma pontuação enganosa.
-
-- Documentar provas e diferenças entre as funções.
-
-- Reavaliar quando o risco, missão, fornecedores ou tecnologia muda materialmente.
-
-# 12. Risco Empresarial, Apetite de Risco e Comunicação
-
-* Conectando a cibersegurança com decisões executivas e de conselho.*
-
-Concepção** Concepção** Concepção** Concepção**
-□----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-O apetite de risco A quantidade ampla e o tipo de risco que a organização está disposta a perseguir ou manter.
-• Tolerância de risco • Variação aceitável específica em torno dos objectivos • Não mais do que quatro horas de interrupção para um serviço crítico definido
-Risco inerente antes de considerar os controles Serviço voltado para a Internet com dados valiosos e ameaças ativas
-Risco residual .. Risco remanescente após os controlos .
-Responder ao risco Aceitar, evitar, mitigar, transferir/compartilhar, ou procurar oportunidades; Aposentar software não suportado, reduzir a exposição, assegurar uma porção residual;
-Oportunidade que pode melhorar os objetivos
-
-## 12.1 Declaração de risco executiva
-
-Como \[ameaça\] poderia explorar \[vulnerabilidade\] afetando \[ativo ou objetivo\], a organização pode experimentar \[impacto empresarial\]. Os controlos existentes \[summary\] deixam \[exposição residual\]. A gestão deve \[resposta\] por \[data\], propriedade de \[role\], e monitorar \[medida\]. □
-□----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## 12.2 Perguntas a nível de conselho
-
-- Quais objetivos da missão e serviços críticos enfrentam o maior risco cibernético?
-
-- Que risco excede o apetite ou a tolerância?
-
-- Que decisões requerem financiamento ou aceitação de riscos?
-
-- Qual é a fiabilidade das provas?
-
-- Onde estão as concentrações de fornecedores e pontos únicos de falha?
-
-- O que é que os incidentes, exercícios, auditorias, e quase faltas nos ensinaram?
-
-- As capacidades de recuperação são comprovadas para os serviços mais importantes?
-
-# 13. Risco da cadeia de suprimentos de segurança cibernética
-
-* Gerenciando fornecedores, produtos, serviços e dependências ao longo do ciclo de vida.*
-
-![Planejar, selecionar, contratar, monitorar e sair com responsabilidades de segurança definidas.](media/image5_pt-BR.png)
-
-Figura 5. Ciclo de vida de segurança cibernética da cadeia de abastecimento
-
-1. Fornecedores de inventário, subcontratantes, produtos, serviços, fluxos de dados, acesso, locais e dependências.
-
-2. Relações de nível por criticidade, sensibilidade, acesso, substituibilidade, concentração, segurança e impacto operacional.
-
-3. Execute diligência proporcional antes da compra ou renovação.
-
-4. Coloque funções mensuráveis de cibersegurança, incidente, notificação, evidência, subcontratante, resiliência, retorno e destruição em acordos.
-
-5. Monitorar mudanças, achados, incidentes, saúde financeira, desempenho de serviços e dependências materiais de quarta parte.
-
+1. Mantenha um inventário de fornecedores, subcontratados, produtos, serviços, fluxos de dados, acessos, localidades e dependências.
+2. Classifique as relações por criticidade, sensibilidade, acesso, possibilidade de substituição, concentração, segurança física e impacto operacional.
+3. Realize diligência prévia proporcional antes da compra ou renovação.
+4. Inclua nos contratos obrigações mensuráveis sobre cibersegurança, incidentes, notificação, evidência, subcontratados, resiliência, devolução e destruição de dados.
+5. Monitore mudanças, achados, incidentes, saúde financeira, desempenho do serviço e dependências materiais de quartas partes.
 6. Inclua terceiros críticos em exercícios, resposta, recuperação e comunicação.
+7. No encerramento, remova acessos, recupere ativos, devolva ou destrua dados, transfira conhecimento, preserve registros obrigatórios e valide a conclusão.
 
-7. Na saída, remover o acesso, recuperar ativos, devolver ou destruir dados, transferir conhecimento, preservar registros necessários e validar a conclusão.
+> **Alerta contratual:** Um questionário ou uma cláusula contratual, por si só, não comprova que os controles do fornecedor funcionam. Combine direitos contratuais com evidência baseada em risco, monitoramento, informações sobre incidentes e acompanhamento de ações corretivas.
 
-Aviso de contrato: ** Um questionário ou cláusula contratual não prova que os controlos de um fornecedor funcionem. Combine direitos contratuais com evidências baseadas em risco, monitoramento, informações de incidentes e acompanhamento de ações corretivas.
-□-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 14. Métricas, evidências e relatórios
 
-# 14. Métricas, Evidências e Relatórios
+*Medidas que apoiam decisões, em vez de produzir painéis meramente decorativos.*
 
-* Medidas que suportam decisões em vez de produzir painéis decorativos.*
+| **Tipo de medida** | **Pergunta respondida** | **Exemplo** |
+|---|---|---|
+| Medida de implementação | A salvaguarda foi implantada? | Percentual de contas privilegiadas no escopo que usam MFA resistente a phishing. |
+| Medida operacional | Está funcionando de forma consistente? | Percentual de contas de pessoas desligadas desabilitadas dentro do prazo aprovado. |
+| Indicador de risco | A exposição está aumentando? | Vulnerabilidades críticas vencidas em ativos expostos à Internet. |
+| Medida de resultado | O resultado desejado está ocorrendo? | Redução de eventos de acesso não autorizado para o serviço avaliado. |
+| Medida de resiliência | A organização consegue continuar e se recuperar? | Percentual de restaurações de serviços críticos que atendem aos objetivos de recuperação. |
+| Medida de qualidade da evidência | O status informado é confiável? | Percentual de conclusões sustentadas por populações completas e testes independentes. |
 
-** ** Tipo de medida** ** Pergunta respondida** ** Exemplo**
----------------------------------------------
-• Medida de implementação Percentagem de contas privilegiadas no âmbito utilizando MFA resistente ao phishing
-□ Medida de funcionamento Funciona de forma consistente? Percentagem de contas encerradas desactivadas dentro do prazo aprovado
-Indicador de risco A exposição está a aumentar? □ Vulnerabilidades críticas no passado prazo baseado no risco em activos virados para a Internet
-□ Medida de resultado O resultado desejado está ocorrendo? Redução de eventos de acesso não autorizados para o serviço escopo
-□ Medida de resiliência; Pode a organização continuar e recuperar? Percentagem de restaurações de serviços críticos que cumprem os objectivos de recuperação
-□ Medida de qualidade de evidência □ O estado relatado pode ser confiável? Percentagem de conclusões de resultados apoiadas por populações completas e testes independentes
+![Um mapeamento se torna confiável quando os controles e as evidências operacionais são testados.](media/image6_pt-BR.png){width=6.15in height=2.73265in}
 
-![Um mapeamento torna-se confiável quando controles e evidências operacionais são testados.](media/image6_pt-BR.png)
+**Figura 6. Cadeia do resultado à evidência**
 
-Figura 6. Cadeia de resultado à evidência
+## 14.1 Qualidade da evidência
 
-# # 14,1 Qualidade das provas
+| **Qualidade** | **Exemplo** | **Resposta do analista** |
+|---|---|---|
+| Fraca | Declaração verbal, captura de tela sem data, exportação parcial ou resumo sem suporte. | Solicitar fonte, data, escopo, população, responsável, revisor e identidade do sistema. |
+| Útil | Relatório datado do sistema, vinculado ao escopo e período corretos. | Confirmar configuração, completude, acesso, interpretação e exceções. |
+| Forte | Dados do sistema somados a revisão independente, decisões, ação corretiva e novo teste. | Rastrear toda a cadeia de evidência e declarar as limitações. |
 
-* Qualidade** * Exemplo** ** ** Resposta do analista**
-----------------------------------------------------------------------------------------------
-□ Fraca declaração verbal, captura de tela sem data, exportação parcial, resumo não suportado □ Solicitar fonte, data, escopo, população, proprietário, revisor e identidade do sistema
-□ Relatório útil do sistema Datado ligado ao escopo e período corretos
-Dados fortes do sistema mais revisão independente, decisões, ação corretiva, e reteste
+# 15. Verificação de conformidade e testes de controles
 
-# 15. Verificação de conformidade e testes de controle
+*Como determinar se um resultado do CSF, dentro de um escopo definido, foi realmente alcançado.*
 
-* Como determinar se um resultado CSF escopo é realmente alcançado.*
+> **Distinção importante:** Alinhamento ao CSF não equivale automaticamente a conformidade legal, certificação ou opinião de auditoria. Teste as obrigações e os controles realmente aplicáveis à organização e use os resultados do CSF para organizar e comunicar as conclusões.
 
-Distinção importante:** O alinhamento CSF não é automaticamente conformidade legal, certificação ou um parecer de auditoria. Teste as obrigações reais e controles que se aplicam à organização, em seguida, use CSF resultados para organizar e comunicar resultados. □
-□----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- (--------------------------------------
-
-1. Defina o resultado CSF escopo, risco, controle, proprietário, sistemas, locais, população, período, frequência e evidência esperada.
-
-2. Avaliar o desenho do controle: o controle, se realizado como descrito, alcançaria razoavelmente o resultado pretendido?
-
-3. Obter a população completa e testar sua completude e precisão contra uma fonte independente.
-
-4. Escolha uma amostra baseada em risco cobrindo datas relevantes, sistemas, proprietários, locais, itens incomuns, e falhas.
-
-5. Inspecione as evidências e, quando prático, reflita ou confirme de forma independente o resultado do controle.
-
-6. Gravar exceções com critérios exatos, fatos, duração, ativos afetados, causa, probabilidade, impacto e proteção existente.
-
-7. Atribuir medidas corretivas, proteção provisória, proprietário, recursos, data de vencimento e escalada.
-
-8. Teste novamente a correção em toda a população afetada e escreva uma conclusão clara com limitações.
+1. Defina o resultado do CSF, risco, controle, responsável, sistemas, localidades, população, período, frequência e evidência esperada.
+2. Avalie o desenho do controle: se executado conforme descrito, ele alcançaria razoavelmente o resultado pretendido?
+3. Obtenha a população completa e teste sua completude e exatidão contra uma fonte independente.
+4. Selecione uma amostra baseada em risco que cubra datas, sistemas, responsáveis, localidades, itens incomuns e falhas relevantes.
+5. Inspecione a evidência e, quando possível, refaça ou confirme de forma independente o resultado do controle.
+6. Registre exceções com critérios, fatos, duração, ativos afetados, causa, probabilidade, impacto e proteções existentes.
+7. Defina ação corretiva, proteção provisória, responsável, recursos, prazo e escalonamento.
+8. Refaça o teste sobre a população afetada e redija uma conclusão clara, incluindo limitações.
 
 ## 15.1 Testes práticos de verificação
 
-* ** Área de controlo** **População e amostra** ** Procedimento de teste** ** Evidência**
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Todos os ativos no escopo; amostra crítica, nova, nuvem, remoto, fornecedor-gerido, e itens aposentados; inventário reconcile com identidade, rede, nuvem, aquisição, vulnerabilidade, e fontes de endpoint; Exportações, reconciliação, propriedade, lacunas, correção e reteste;
-□ Acesse o ciclo de vida □ Todos os joiners, moderadores, leavers, serviços e contas privilegiadas □ Compare aprovações e necessidade de papel com provisionamento, revisão, mudança e remoções de timestamps
-Todos os ativos e achados; amostra crítica, alta, idade, itens aceitos e fechados; Validar a cobertura e credenciais, confirmar os resultados, prazos, correção, exceção e rescan Inventário, escanear configuração, relatório, tickets, aprovações, rescan
-Todas as fontes de log, alertas, avaliações e incidentes necessários ..Testar a cobertura da fonte, tempo, regra, geração de alerta, revisão, escalada e retenção .. Lista de fontes, configuração, alerta, ticket, revisão e fechamento ..
-Todos os trabalhos de backup e testes necessários; sucesso de amostra, falha e serviços críticos □ Inspecione proteção, resposta à falha, restauração, integridade, objetivos de recuperação e lições □ Empregos, alertas, restaurar saída, exercício, correção, reteste
-• Superintendência do fornecedor • Todos os fornecedores; amostra crítica, nova, alterada, envolvida em incidentes, e relacionamentos saídos Triagem de teste, due diligence, contrato, monitoramento, tarefas de incidente, ação corretiva, e saída, inventário, avaliação, acordo, descobertas, monitoramento, prova de remoção,
-Resposta ao incidente; população completa de eventos e incidentes reconciliada com fontes de alerta, socorro, privacidade, legal e operações; Declaração de teste, triagem, análise, evidência, notificação, contenção, erradicação, recuperação, e lições
-Todos os repositórios, releases, dependências, exceções e achados no âmbito do escopo.
+| **Área de controle** | **População e amostra** | **Procedimento de teste** | **Evidência** |
+|---|---|---|---|
+| Inventário de ativos | Todos os ativos no escopo; incluir na amostra ativos críticos, novos, em nuvem, remotos, gerenciados por fornecedores e desativados. | Conciliar o inventário com fontes de identidade, rede, nuvem, compras, vulnerabilidades e endpoints. | Exportações, conciliação, propriedade, lacunas, correção e novo teste. |
+| Ciclo de vida do acesso | Todas as admissões, mudanças, desligamentos, contas de serviço e contas privilegiadas. | Comparar aprovações e necessidade da função com prazos de provisionamento, revisão, alteração e remoção. | Populações de RH e IAM, aprovações, revisões, chamados, logs e exceções. |
+| Gestão de vulnerabilidades | Todos os ativos e achados; incluir críticos, altos, antigos, aceitos e encerrados. | Validar cobertura e credenciais; confirmar achado, prazo, correção, exceção e nova varredura. | Inventário, configuração de varredura, relatório, chamados, aprovações e nova varredura. |
+| Logs e detecção | Todas as fontes de log exigidas, alertas, revisões e incidentes. | Testar cobertura de fontes, horário, regra, geração de alerta, revisão, escalonamento e retenção. | Lista de fontes, configuração, alerta, chamado, revisão e encerramento. |
+| Backup e recuperação | Todos os trabalhos de backup e testes exigidos; incluir sucessos, falhas e serviços críticos. | Examinar proteção, resposta a falhas, restauração, integridade, objetivos de recuperação e lições aprendidas. | Trabalhos, alertas, resultados de restauração, exercícios, correções e novo teste. |
+| Supervisão de fornecedores | Todos os fornecedores; incluir críticos, novos, alterados, envolvidos em incidentes e relações encerradas. | Testar classificação, diligência prévia, contrato, monitoramento, obrigações de incidente, ação corretiva e saída. | Inventário, avaliação, contrato, achados, monitoramento e evidência de remoção de acesso. |
+| Resposta a incidentes | População completa conciliada com alertas, service desk, privacidade, jurídico e operações. | Testar declaração, triagem, análise, evidência, notificação, contenção, erradicação, recuperação e lições aprendidas. | Linha do tempo, chamados, registro de evidências, mensagens, recuperação e melhoria. |
+| Desenvolvimento seguro | Todos os repositórios, versões, dependências, exceções e achados no escopo. | Testar requisitos, revisão, análise, segredos, dependências, aprovação, implantação, correção e novo teste. | Logs do pipeline, revisão, análise, chamado, versão e validação. |
+
+## 15.2 Linguagem de conclusão
+
+> **Exemplo:** Para o serviço e o período de revisão definidos, o controle foi adequadamente desenhado e operou conforme o esperado em 37 de 40 eventos da amostra. Três remoções de acesso ocorreram fora da tolerância aprovada. A direção definiu uma ação corretiva, adicionou escalonamento automatizado e o novo teste confirmou a remoção tempestiva na população completa subsequente. A conclusão não abrange sistemas excluídos do escopo declarado.
+
+# 16. Ferramentas de código aberto para trabalho com o CSF
+
+*Links oficiais, inícios rápidos seguros, possível apoio ao CSF, evidências e limitações.*
+
+![Autorização, validação, ação corretiva e novos testes transformam resultados técnicos em evidências úteis.](media/image7_pt-BR.png){width=6.15in height=3.39605in}
+
+Figura 7. Do resultado da ferramenta à evidência útil
+
+| **Ferramenta** | **Finalidade** | **Possível apoio ao CSF** |
+|---|---|---|
+| CISO Assistant | GRC, Perfis, riscos, controles e evidências | GV, ID e relatórios |
+| Wazuh | SIEM, monitoramento de endpoints e integridade | DE.CM, DE.AE e RS.MA |
+| osquery | Inventário de endpoints e evidências por consultas | ID.AM, PR.PS e PR.AA |
+| OpenSCAP | Avaliação de configuração Linux | PR.PS e ID.IM |
+| Greenbone Community Edition | Avaliação de vulnerabilidades | ID.RA e ID.IM |
+| Trivy | Análise de código, imagens, dependências, segredos e configuração | ID.RA e PR.PS |
+| OWASP ZAP | Avaliação autorizada de aplicações web | ID.RA e ID.IM |
+| Keycloak | Identidade, funções, autenticação e MFA | PR.AA |
+| DefectDojo | Recebimento de achados e acompanhamento de correção | ID.RA, ID.IM e GV.OV |
+| Velociraptor | Visibilidade de endpoints e resposta a incidentes | DE.CM e RS.AN |
+| Open Policy Agent | Política como código | GV.PO, PR.AA e PR.PS |
+| OpenSearch | Busca, análise, painéis e monitoramento de segurança | DE.CM, DE.AE e GV.OV |
+
+## 16.1 Lista de verificação para validação de ferramentas
+
+- Aprovar finalidade, responsável, escopo, dados, sistemas, hospedagem, acesso de suporte e retenção.
+- Verificar fonte oficial, versão, dependências, integridade, método de atualização e configuração segura.
+- Testar uma condição conhecida que a ferramenta deve detectar ou bloquear.
+- Testar uma condição permitida conhecida para identificar falhas desnecessárias.
+- Comparar a cobertura com uma população independente de ativos, agentes, repositórios ou identidades.
+- Restringir administração, proteger credenciais e relatórios, registrar alterações e testar backup ou recuperação da ferramenta.
+- Definir validação humana, escalonamento, exceções, correção e novos testes.
+- Revalidar após atualizações relevantes, mudanças de integração ou configuração, ou falhas.
+
+## 16.2–16.13 Orientação comum para as ferramentas
+
+Para CISO Assistant, Wazuh, osquery, OpenSCAP, Greenbone Community Edition, Trivy, OWASP ZAP, Keycloak, DefectDojo, Velociraptor, Open Policy Agent e OpenSearch:
+
+1. Usar somente sistemas próprios ou expressamente autorizados por escrito.
+2. Registrar versão, configuração, escopo, população-alvo, data, operador e revisor.
+3. Preservar resultados brutos, decisões, exceções, ações corretivas e novos testes.
+4. Validar pelo menos uma condição conhecida e uma condição permitida.
+5. Não apresentar o resultado de uma ferramenta como certificação, conformidade legal, cobertura completa ou conclusão de auditoria.
+
+### Inícios rápidos revisados
+
+- **CISO Assistant:** criar uma organização fictícia, selecionar cinco resultados do CSF, atribuir responsáveis, anexar evidências higienizadas, registrar uma lacuna e criar um plano de ação.
+- **Wazuh:** conectar um endpoint autorizado de laboratório, gerar um evento inofensivo, revisar o alerta e preservar o evento e o ticket.
+- **osquery:** consultar usuários, software, serviços, criptografia ou processos em um endpoint de laboratório e registrar consulta, host, horário, saída e revisão.
+- **OpenSCAP:** avaliar um Linux autorizado em relação a um perfil apropriado, corrigir uma configuração aprovada e comparar relatórios antes e depois.
+- **Greenbone Community Edition:** analisar somente um alvo autorizado, validar um achado, corrigi-lo, executar nova análise e documentar limitações.
+- **Trivy:** analisar uma imagem fixada ou repositório de teste, proteger o relatório, validar um resultado, corrigi-lo e repetir a análise.
+- **OWASP ZAP:** usar uma aplicação local de treinamento, iniciar com análise passiva e preservar o escopo e os resultados aprovados.
+- **Keycloak:** criar um realm de laboratório, usuários, funções e MFA; testar privilégio mínimo, acesso negado e remoção.
+- **DefectDojo:** importar um relatório de laboratório, validar e atribuir um achado, registrar a correção, testar novamente e encerrar com evidência.
+- **Velociraptor:** usar um cliente isolado, coletar um artefato inofensivo autorizado e registrar finalidade, escopo, revisão e preservação.
+- **Open Policy Agent:** escrever uma regra de laboratório que exija responsável, classificação e ambiente aprovado; testar entradas permitidas e negadas.
+- **OpenSearch:** carregar eventos sintéticos, criar uma busca e um painel, e documentar cobertura, acesso, retenção e limitações.
+
+## 16.14 Ferramentas oficiais do NIST
+
+- **Ferramenta de referência do CSF 2.0:** explorar e exportar o Núcleo oficial.
+- **Perfis Organizacionais:** usar a orientação e os modelos oficiais do NIST.
+
+# 17. Guia prático do CSF para gestores
+
+## 17.1 Perguntas mensais
+
+- O que mudou na missão, sistemas, dados, ameaças, obrigações, fornecedores ou apetite a risco?
+- Quais riscos excedem a tolerância e quem tem autoridade para decidir?
+- As conclusões do Perfil Atual são sustentadas por evidências confiáveis?
+- Quais planos de ação estão atrasados, bloqueados, subfinanciados ou dependem de terceiros?
+- Fornecedores críticos são monitorados e incluídos em resposta e recuperação?
+- Falhas, incidentes, exercícios, testes e quase incidentes resultaram em melhorias?
+- Os serviços críticos conseguem se recuperar dentro dos objetivos aprovados?
+- Quais limitações a liderança deve compreender antes de confiar no painel?
+
+## 17.2 Painel
+
+| **Área** | **Pergunta de gestão** | **Status** |
+|---|---|---|
+| Governança | Estratégia, política, funções, recursos e supervisão estão alinhados ao risco? | Verde / Amarelo / Vermelho |
+| Perfil | O escopo está atualizado e o Perfil-Alvo está aprovado? | Verde / Amarelo / Vermelho |
+| Risco | Quais riscos residuais excedem a tolerância? | Verde / Amarelo / Vermelho |
+| Ativos | Ativos, dados, fluxos e fornecedores críticos são conhecidos? | Verde / Amarelo / Vermelho |
+| Proteção | Controles de identidade, dados, plataforma, treinamento e resiliência estão funcionando? | Verde / Amarelo / Vermelho |
+| Detecção | O monitoramento é completo, revisado e conectado a critérios de incidente? | Verde / Amarelo / Vermelho |
+| Resposta | Incidentes são classificados, analisados, comunicados, contidos e erradicados? | Verde / Amarelo / Vermelho |
+| Recuperação | A integridade da restauração e os objetivos de serviço foram comprovados? | Verde / Amarelo / Vermelho |
+| Melhoria | Achados foram corrigidos e submetidos a novos testes independentes? | Verde / Amarelo / Vermelho |
 
-# # 15.2 Linguagem de conclusão
+## 17.3 Erros comuns
 
-Exemplo:** Para o período definido de serviço e revisão, o controle foi adequadamente projetado e operado para 37 de 40 eventos amostrados. Três remoções tardias de acesso ultrapassaram a tolerância aprovada. A gerência atribuiu medidas corretivas, adicionou escalonamento automatizado e reteste confirmou a remoção oportuna para a população completa subsequente. A conclusão não abrange os sistemas excluídos do âmbito de aplicação indicado.
-□-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Tratar o CSF como lista de verificação de TI, e não como trabalho de risco corporativo.
+- Começar por ferramentas antes de missão, escopo, risco e resultados.
+- Marcar resultados como alcançados apenas porque existe uma política.
+- Usar uma única pontuação que oculte fraquezas críticas e diferenças de escopo.
+- Chamar os Níveis de níveis de maturidade sem considerar o contexto pretendido pelo NIST.
+- Copiar um Perfil-Alvo sem adaptá-lo ao risco da organização.
+- Ignorar fornecedores, nuvem, OT, dados, pessoas, instalações e dependências.
+- Encerrar achados sem novos testes.
+- Descrever alinhamento ao CSF como conformidade legal ou certificação do NIST.
 
-# 16. Ferramentas de código aberto para CSF Work
+# 18. De iniciante a analista júnior
 
-* Links oficiais, inícios rápidos seguros, suporte CSF, evidências e limitações.*
+![Aprender, mapear, testar, relatar e se candidatar com evidências honestas de portfólio.](media/image8_pt-BR.png){width=6.15in height=3.20335in}
 
-![Autorização, validação, ação corretiva e reteste transformam a saída técnica em evidência útil.](media/image1_pt-BR.png)
+Figura 8. Caminho para analista júnior
 
-Figura 7. Da saída da ferramenta à evidência
+## 18.1 Funções de entrada
 
-• **Ferramenta** **Purpose** **Possible CSF support**
----------------------------------------------------------------------------------
-Assistente do CISO GRC, Perfis, riscos, controlos, evidência .
-. Wazuh .. SIEM, monitorização dos parâmetros de avaliação, integridade .. DE.CM, DE.AE, RS.MA
-Osquery □ Endpoint inventory and query evidence □ ID.AM, PR.PS, PR.AA
-• Avaliação da configuração do OpenSCAP - Linux
-□ Greenbone Community Edition – Avaliação da vulnerabilidade
-Varredura de código, imagem, dependência, segredo, e configuração
-OWASP ZAP □ Avaliação autorizada da aplicação da web
-Keycloak, identidade, funções, autenticação e MFA, PR.AA
-• DefectDojo • Encontrar o seguimento da ingestão e da remediação
-□ Velociraptor □ Visibilidade e resposta de incidentes do ponto de extremidade
-□ Open Policy Agent □ Policy as code GV.PO, PR.AA, PR.PS
-Pesquisa, análise, painéis e monitoramento de segurança □ DE.CM, DE.AE, GV.OV
+Analista Júnior de GRC; Analista de Risco de Cibersegurança; Analista de Conformidade; Analista de Controles de Segurança; Analista de Risco de Terceiros; Analista de Asseguração de Segurança; Analista de Programa de Cibersegurança; Analista Júnior de Segurança; Analista de Preparação para Auditoria.
 
-## 16.1 Lista de verificação de validação de ferramentas
+## 18.2 Trabalho que um analista júnior pode realizar
 
-- Aprovar finalidade, proprietário, escopo, dados, sistemas, hospedagem, acesso de suporte e retenção.
+- Manter inventários de ativos, dados, sistemas, riscos, obrigações, fornecedores e evidências.
+- Coletar e organizar evidências para resultados do CSF com escopo definido.
+- Revisar amostras de acesso, vulnerabilidades, treinamento, logs, backups, fornecedores e incidentes.
+- Documentar status do Perfil, lacunas, limitações, responsáveis e planos de ação.
+- Acompanhar ações corretivas, exceções, aceitações de risco e novos testes.
+- Preparar painéis claros sem ocultar incerteza.
+- Apoiar exercícios, cronologias de incidentes, lições aprendidas e atualizações de planos.
+- Proteger informações confidenciais e respeitar limites de autorização.
 
-- Verifique a fonte oficial, versão, dependências, integridade, método de atualização e configuração segura.
+## 18.3 Evidências de portfólio
 
-- Teste uma condição conhecida que a ferramenta deve detectar ou bloquear.
+| **Competência** | **Item fictício de portfólio** |
+|---|---|
+| Escopo | Declaração de escopo e premissas do Perfil |
+| Mapeamento do Núcleo | Matriz de aplicabilidade e evidências de todos os resultados |
+| Gestão de ativos | Inventário de sistemas, dados, fornecedores e fluxos |
+| Risco | Registro com apetite, tolerância, resposta e decisão residual |
+| Perfis | Perfis Atual e Alvo com lacunas priorizadas |
+| Testes | Planilhas de teste de acesso, vulnerabilidades, backups, logs e fornecedores |
+| Resposta a incidentes | Linha do tempo sintética, registro de evidências, comunicação e lições |
+| Comunicação executiva | Painel de uma página e declaração executiva de risco |
 
-- Teste uma condição conhecida para identificar falhas desnecessárias.
+# 19. Laboratório fictício e portfólio
 
-- Compare a cobertura da ferramenta com um ativo independente, agente, repositório ou população de identidade.
+Harbor Light Services é uma organização fictícia. Toda pessoa, conta, endereço, ativo, evento, registro de cliente e fornecedor é inventado.
 
-- Restrinja a administração, proteja credenciais e relatórios, alterações de log, e ferramenta de teste backup ou recuperação.
-
-- Definir validação humana, escalada, exceção, correção e reteste.
-
-- Revalidar após atualizações de material, alterações de integração, alterações de configuração ou falhas.
-
-# # 16.2 Assistente do CISO
-
-GRC, Perfis, riscos, controles, evidências. Possível suporte CSF: GV, ID, relatório.
-
-** Documentação oficial:** [<u> Abra o guia oficial do Assistente CISO</u>(https://intuitem.gitbook.io/ciso-assistant)
-
-Um começo rápido
-
-Crie uma organização fictícia, selecione cinco resultados CSF, atribua proprietários, anexe evidências higienizadas, grave uma lacuna e construa um plano de ação.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16,3 Wazuh
-
-SIEM, monitorização dos parâmetros de avaliação, integridade. Possível suporte CSF: DE.CM, DE.AE, RS.MA.
-
-** Documentação oficial:** [<u> Abra o guia oficial Wazuh</u>](https://documentation.wazuh.com/current/quickstart.html)
-
-Um começo rápido
-
-Conecte um terminal de laboratório autorizado, crie um evento inofensivo, reveja o alerta, documente a decisão e mantenha o evento e o ticket.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16,4 Osquery
-
-Endpoint inventário e pesquisa de evidências. Possível suporte CSF: ID.AM, PR.PS, PR.AA.
-
-** Documentação oficial:** [<u>Abre o guia oficial de osquery</u>](https://osquery.readthedocs.io/en/stable/)
-
-Um começo rápido
-
-Consultar usuários, software, serviços, criptografia ou processos em um endpoint de laboratório; registrar consulta, host, tempo, saída e revisão.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.5 OpenSCAP
-
-Avaliação da configuração do Linux. Possível suporte CSF: PR.PS, ID.IM.
-
-** Documentação oficial:** [<u>Abre o guia oficial OpenSCAP</u>](https://www.open-scap.org/getting-started/)
-
-Um começo rápido
-
-Avaliar um laboratório Linux autorizado contra um perfil adequado, corrigir uma configuração aprovada e comparar os relatórios anteriores e posteriores.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# 16.6 Greenbone Community Edition
-
-Avaliação da vulnerabilidade. Possível suporte CSF: ID.RA, ID.IM.
-
-**Documentação oficial:** [<u>Abre o guia oficial da Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)
-
-Um começo rápido
-
-Analisar apenas um alvo de laboratório aprovado, validar um achado, corrigi-lo, rescan, e escopo do documento e limitações.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# 16,7 Trivy
-
-Digitalização de código, imagem, dependência, segredo e configuração. Possível suporte CSF: ID.RA, PR.PS.
-
-** Documentação oficial:** [<u> Abra o guia oficial Trivy</u>](https://trivy.dev/latest/)
-
-Um começo rápido
-
-Examine uma imagem de laboratório ou repositório de testes, proteja o relatório, valide um resultado, corrija-o e verifique novamente.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# 16.8 OWASP ZAP
-
-Avaliação autorizada da aplicação web. Possível suporte CSF: ID.RA, ID.IM.
-
-** Documentação oficial:** [<u> Abra o guia oficial OWASP ZAP</u>](https://www.zaproxy.org/getting-started/)
-
-Um começo rápido
-
-Proxy uma aplicação de treinamento local, começar com análise passiva, validar um achado, e manter o escopo e resultados aprovados.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.9 Keycloak
-
-Identidade, papéis, autenticação e MFA. Possível suporte CSF: PR.AA.
-
-** Documentação oficial:** [<u>Abre o guia oficial do Keycloak</u>](https://www.keycloak.org/guides)
-
-Um começo rápido
-
-Crie um reino de laboratório, usuários, papéis e MFA; teste menos privilégio, acesso falhado e remoção; exporte evidências de configuração higienizadas.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.10 DefectDojo
-
-Encontrar a entrada e o rastreio de remediação. Possível suporte CSF: ID.RA, ID.IM, GV.OV.
-
-**Documentação oficial:** [<u>Abra o guia oficial DefectDojo</u>](https://docs.defectdojo.com/)
-
-Um começo rápido
-
-Importar um relatório de laboratório, validar e atribuir um achado, correção de registro, reteste-o, e fechá-lo com prova.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.11 Velociraptor
-
-Visibilidade do ponto final e resposta ao incidente. Possível suporte CSF: DE.CM, RS.AN.
-
-** Documentação oficial:** [<u>Abrir o guia oficial Velociraptor</u>](https://docs.velociraptor.app/)
-
-Um começo rápido
-
-Use um cliente de laboratório isolado, colete um artefato aprovado inofensivo, e finalidade de registro, escopo, coleta, revisão e preservação.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.12 Open Policy Agent
-
-Política como código. Possível suporte CSF: GV.PO, PR.AA, PR.PS.
-
-**Documentação oficial:** [<u>Abre o guia oficial do Agente de Política Aberta</u>](https://www.openpolicyagent.org/docs)
-
-Um começo rápido
-
-Escreva uma regra de laboratório que exija um proprietário, classificação e ambiente aprovado; teste de entradas permitidas e negadas.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.13 OpenSearch
-
-Pesquisa, análise, painéis e monitoramento de segurança. Possível suporte CSF: DE.CM, DE.AE, GV.OV.
-
-** Documentação oficial:** [<u>Abre o guia oficial OpenSearch</u>](https://opensearch.org/docs/latest/getting-started/)
-
-Um começo rápido
-
-Carregar eventos de segurança sintéticos, construir uma pesquisa e painel, cobertura de dados de documentos, acesso, retenção, revisão e limitações.
-
-# # Evidência e limitação
-
-Manter autorização, escopo, população alvo, ferramenta e versão de conteúdo, configuração, resultado bruto, revisor, decisão, ação corretiva, exceção e reteste. A ferramenta suporta o trabalho selecionado; não pode certificar o alinhamento CSF, determinar escopo completo, ou substituir julgamento humano qualificado.
-
-# # 16.14 Ferramentas oficiais NIST
-
-** Ferramenta de referência CSF 2.0:** [<u>Explore e exporte o núcleo oficial CSF</u>](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters)
-
-**Perfis Organizacionais:** [<u>Abrir NIST Guia de perfil e modelos</u>](https://www.nist.gov/cyberframework/profiles)
-
-# 17. CSF do gerente Playbook
-
-*Perguntas, rotinas de governança, painéis e gestores de decisões devem controlar.*
-
-# # 17.1 Perguntas mensais
-
-- O que mudou em missão, sistemas, dados, ameaças, obrigações, fornecedores, ou risco de apetite?
-
-- Que riscos excedem a tolerância e quem tem autoridade para decidir?
-
-- As conclusões do Perfil Actual são apoiadas por provas fiáveis?
-
-Que planos de acção são atrasados, bloqueados, subfinanciados ou dependentes de outros?
-
-- Os fornecedores críticos são monitorados e incluídos no trabalho de incidente e recuperação?
-
-- Controlar falhas, incidentes, exercícios, testes e quase falhas levou a melhorias?
-
-- Os serviços críticos podem recuperar dentro dos objetivos aprovados?
-
-- Quais as limitações que a liderança deve entender antes de confiar no painel?
-
-# # 17.2 Painel
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
--------------------------------------------------------------------------------------------------
-• Governança – A estratégia, política, papéis, recursos e supervisão estão alinhados ao risco? Verde / Amarelo / Vermelho
-Perfil O escopo é atual e o perfil alvo é aprovado? Verde / Amarelo / Vermelho
-Risco Que riscos residuais excedem a tolerância? Verde / Amarelo / Vermelho
-□ Activos □ Activos críticos, dados, fluxos e fornecedores são conhecidos? Verde / Amarelo / Vermelho
-□ Proteção □ Identidade, dados, plataforma, treinamento e resiliência estão funcionando? Verde / Amarelo / Vermelho
-Detecção O monitoramento está completo, revisto e conectado aos critérios de incidente? Verde / Amarelo / Vermelho
-• Resposta: Os incidentes são triados, analisados, comunicados, contidos e erradicados? Verde / Amarelo / Vermelho
-Recuperação , a integridade da restauração e os objetivos de serviço crítico são comprovados? Verde / Amarelo / Vermelho
-□ Melhoria □ Os resultados são corrigidos e testados de forma independente? Verde / Amarelo / Vermelho
-
-# # 17.3 Erros comuns
-
-- Tratando CSF como uma lista de verificação de TI em vez de trabalho de risco empresarial.
-
-- Começando com ferramentas em vez de missão, escopo, risco e resultados.
-
-- Marcar os resultados obtidos apenas a partir do texto político.
-
-- Usando uma única pontuação que esconde fraquezas críticas e diferenças de escopo.
-
-- Chamar os níveis de maturidade dos Tiers sem compreender o contexto pretendido da NIST.
-
-- Copiar um perfil alvo sem o adaptar ao risco organizacional.
-
-- Ignorar fornecedores, serviços de nuvem, OT, dados, pessoas, instalações e dependências.
-
-- Fechando as descobertas sem retestes.
-
-- Descrevendo o alinhamento CSF como conformidade legal ou certificação NIST.
-
-# 18. De Iniciante a Analista Júnior
-
-* Um caminho seguro e honesto para GRC, análise de risco, conformidade e cibersegurança.*
-
-![Learn, map, test, report, and apply with honest portfolio evidence.](media/image2_pt-BR.png)
-
-Figura 8. Caminho do analista júnior
-
-# # 18.1 Funções de nível de entrada
-
-GRC Júnior Analisador
-
-Analista de Risco de Cibersegurança
-
-Analisador de conformidade
-
-Analista de Controles de Segurança
-
-Analista de Riscos de Terceiros
-
-Analista de Garantia de Segurança
-
-Analista do Programa de Cibersegurança
-
-Analista de Segurança Júnior
-
-Analisador de Prontos de Auditoria
-
-# # 18.2 Trabalho que um analista júnior pode executar
-
-- Manter ativos, dados, sistema, risco, obrigação, fornecedor e inventários de evidências.
-
-- Recolha e organize provas para resultados CSF.
-
-- Revise acesso, vulnerabilidade, treinamento, registro, backup, fornecedor e amostras de incidentes.
-
-- Status do Perfil do Documento, lacunas, limitações, proprietários e planos de ação.
-
-- Rastreie ações corretivas, exceções, aceitação de riscos e retestes.
-
-- Preparar painéis claros e materiais de reunião sem esconder incerteza.
-
-- Exercícios de suporte, cronogramas de incidentes, lições aprendidas e atualizações de planejamento.
-
-- Proteger informações confidenciais e seguir limites de autorização.
-
-# # 18.3 Prova de carteira
-
-** **Habilidade** ** item de carteira **
--------------------------------------------------------------------------------------------------------------------------------------------------------
-• Âmbito de aplicação
-Mapeamento de núcleos
-Gerenciamento de ativos , sistema, dados, fornecedor e inventário de fluxo ,
-□ Risco □ Risco de registo com apetite, tolerância, resposta e decisão residual
-Perfis atuais e de destino com lacunas priorizadas
-Testes de acesso, vulnerabilidade, backup, registro e folhas de teste do fornecedor
-Resposta ao incidente □ Linha do tempo sintética, registro de evidências, comunicação e lições
-• Comunicação de gestão – Painel de uma página e declaração de risco executivo
-
-# 19. Laboratório Fictício e Portfólio
-
-* Um ambiente de prática completo usando informações sintéticas e sistemas de laboratório autorizados.*
-
-Harbor Light Services é uma organização fictícia que fornece um portal de clientes, call center, colaboração em nuvem, integração de pagamentos, força de trabalho remota e análise hospedada por fornecedores. Cada pessoa, conta, endereço, ativo, evento, registro de cliente e fornecedor é inventado.
-
-# # Projeto 1 — Âmbito e contexto
-
-Defina missão, stakeholders, obrigações, serviços críticos, dependências, exclusões e proprietários.
-
-# # Projeto 2 — Ativos e mapas de dados
-
-Construir inventários e um diagrama de fluxo de dados autorizado.
-
-# # Projeto 3 — Risco
-
-Crie uma ameaça, vulnerabilidade, probabilidade, impacto, tratamento e registro de risco residual.
-
-# # Projeto 4 — Perfis
-
-Crie perfis de alvo atuais e baseados em risco baseados em evidências.
-
-# # Projeto 5 - Controles e testes
-
-Projete e execute testes fictícios para acesso, vulnerabilidades, logs, backups e fornecedores.
-
-# Projeto 6 — Incidente
-
-Analisar eventos sintéticos, declarar um incidente, preservar evidências, conter, erradicar, restaurar e aprender.
-
-# # Projeto 7 — Ferramentas
-
-Use três ferramentas do Capítulo 16 em um laboratório isolado e registro de autorização, versão, escopo, achados, correção e reteste.
-
-# # Projeto 8 – Relatório Executivo
-
-Prepare um painel, declarações de alto risco, plano de ação, decisões e limitações.
-
-Ética em Portfólio:** Rotular todo o trabalho como formação fictícia. Nunca publicar empregador, cliente, paciente, cliente, empregado, fornecedor, arquitetura, vulnerabilidade, credencial, ou informações incidentes sem autorização explícita. □
-□-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# 20. Plano de Aprendizagem de Trinta Dias
-
-* Um mês realista de leitura oficial, prática, trabalho de portfólio, e preparação de entrevista.*
-
-*Semana** ** Foco** ** Saída exigida**
-----------------------------------------------------------------------------------------------------------------------------------------
-□ Semana 1 – CSF proposite, Core, seis Funções, contexto e ativos □ Memo de escopo, mapa de stakeholders, inventário de ativos e dados
-• Semana 2 • Risco, Perfis, Tiers, governança e cadeia de suprimentos
-A semana 3 Resguarda, monitoramento, resposta, recuperação, evidência, e testes
-• Semana 4 • Ferramentas, relatórios, portfólio e entrevistas
-
-# # 20,1 hábito diário
-
-Leia uma secção oficial de NIST ou grupo de resultados.
-
-Explique-o em linguagem simples sem mudar o seu significado.
-
-Criar uma prova fictícia.
-
-Teste sua completude, escopo, data, propriedade e confiabilidade.
-
-Escreva uma conclusão, ação corretiva ou lição.
-
-# 21. Preparação da entrevista
-
-* Respostas curtas e precisas para analistas e gerentes júnior.*
-
-# # O que é NIST CSF 2.0?
-
-Um framework flexível e focado em resultados que ajuda as organizações a entender, avaliar, priorizar e comunicar riscos de cibersegurança usando o Núcleo, Perfis, Níveis e recursos de suporte.
-
-# # Quais são as seis Funções?
-
-Governar, Identificar, Proteger, Detectar, Responder e Recuperar.
-
-# # Por que Govern foi adicionado?
-
-Torna explícita a responsabilização, política, estratégia de risco, integração empresa-risco, supervisão e risco de cadeia de suprimentos.
-
-# # O que é um perfil atual?
-
-Uma descrição dos resultados principais que um escopo definido está atualmente alcançando ou tentando alcançar, incluindo como ou em que medida.
-
-# # O que é um perfil de alvo?
-
-Os resultados principais priorizados a organização seleciona para um estado futuro definido com base em missão, risco, obrigações, stakeholders e recursos.
-
-# # O que são Tiers?
-
-Contexto para o rigor da governança e práticas de gestão de risco de cibersegurança: Partel, Risco Informado, Repetido e Adaptativo.
-
-# # CSF certifica conformidade?
-
-Não. O alinhamento CSF não cria conformidade legal ou certificação NIST. As obrigações aplicáveis e os controlos executados devem ser avaliados separadamente.
-
-# # Como você verifica um resultado?
-
-Defina escopo e critérios, avalie o desenho do controle, obtenha uma população completa, amostra por risco, inspecione e reflita, registre exceções, corrija, reteste e declare uma conclusão apoiada.
-
-# # Como devem ser usadas ferramentas?
-
-Só com autorização e como uma fonte de provas. Validar cobertura e resultados, proteger saídas, corrigir lacunas confirmadas e reteste.
-
-# # Como você prioriza lacunas?
-
-Use o impacto da missão, ameaça, probabilidade, criticidade de ativos e fornecedores, obrigações, exposição, dependências, controles existentes, custo, viabilidade e apetite de risco.
-
-Resposta de 60 segundos do gerente:** Eu uso CSF 2.0 para conectar segurança cibernética com risco de negócios. Nós definimos escopo e stakeholders, selecionamos resultados aplicáveis, criamos perfis de alvo baseados em evidências atuais e baseados em risco, priorizamos lacunas contra o apetite e obrigações, planos de ação de fundos, provas operacionais de testes, incluem fornecedores, e reportamos decisões e limitações claramente. Ferramentas suportam o trabalho, mas as pessoas permanecem responsáveis pelo escopo, julgamento, correção e risco residual.
-O que se passa?
-
-# 22. Modelos e Listas de Verificação
-
-* Estruturas reutilizáveis para um sistema organizacional aprovado.*
-
-# # 22.1 Registro de perfil
-
-- Escopo, finalidade, proprietário, patrocinador, stakeholders, data e gatilho de revisão
-
-- Identificador de função, categoria e subcategoria
-
-- Aplicabilidade e lógica
-
-- Situação atual, implementação, proprietário, evidência, teste, exceção e limitação
-
-- Estatuto do alvo e prioridade
-
-- Gap, risco, ação, proteção provisória, proprietário, recursos, data, dependência e reteste
-
-- Current e Target Tier contexto onde útil
-
-- Histórico de aprovação e versão
-
-# # 22.2 Registro de risco
-
-- Objetivo, ativo, serviço, dados, fornecedor e proprietário
-
-- Ameaça, vulnerabilidade, cenário e resultados CSF afetados
-
-- Controlos e provas existentes
-
-- Probabilidade, impacto, risco inerente e método
-
-- Resposta, ação, proprietário, recursos, data e dependência
-
-- Risco residual, comparação apetite/tolerância e autoridade de aceitação
-
-- Indicador, gatilho de revisão, expiração de exceção e reteste
-
-# # 22.3 Folha de teste de controle
-
-- Resultado, risco, controle, proprietário, frequência, sistemas, locais e período
-
-- Critérios de concepção e provas esperadas
-
-- Verificação completa da população e completude
-
-- Método de amostragem e itens selecionados
-
-- Procedimento, provas inspeccionadas, reavaliação e resultado
-
-- Excepções, causa, impacto, ação, proprietário, data e proteção provisória
-
-- Reteste, conclusão, limitações, revisor e aprovação
-
-# # 22.4 Avaliação do fornecedor
-
-- Serviço, proprietário, criticidade, acesso, dados, locais, subcontratantes, dependências e alternativas
-
-- Due diligence, autenticidade, desenvolvimento seguro, vulnerabilidades, resiliência, histórico de incidentes e preocupações financeiras ou operacionais
-
-- Requisitos contratuais, direitos de prova, notificação, recuperação, retorno/destruição e saída
-
-- Acompanhamento, descobertas, exceções, ações corretivas, exercícios, incidentes, mudanças, renovação e rescisão
-
-## 22.5 Lista de verificação de prontidão do gerente
-
-- Patrocinador, papéis, recursos, política e estratégia de risco aprovados
-
-- Escopo, stakeholders, obrigações, serviços críticos, dependências e fornecedores atuais
-
-- Activo, dados, sistema, serviço, identidade, vulnerabilidade e populações de risco reconciliadas
-
-- Perfis atuais e alvo suportados e aprovados
-
-- Plano de acção baseado no risco financiado e monitorizado
-
-- Evidências de segurança, monitoramento, incidente e recuperação testadas
-
-- Controladores de ciclo de vida do fornecedor operando
-
-- Métricas ligadas aos riscos e resultados
-
-- Excepções, aceitações, limitações e retestes visíveis para os tomadores de decisão
-
-# 23. Glossário e Índice de assuntos
-
-*Definições em inglês e um guia para tópicos principais.*
-
-**Categoria.** Um grupo de resultados de cibersegurança relacionados dentro de uma função.
-
-** Perfil Comunitário. ** Uma linha de base publicada de resultados CSF para o setor compartilhado, tecnologia, ameaça ou necessidades de caso de uso.
-
-**Core.** A hierarquia de Funções, Categorias e Subcategorias que descreve os resultados da segurança cibernética.
-
-** Perfil atual.** Os resultados de um escopo definido está atualmente alcançando ou tentando alcançar, incluindo como ou em que medida.
-
-** Risco de cibersegurança. O possível efeito da incerteza sobre a informação e tecnologia e os objetivos organizacionais relacionados.
-
-**Função.** O mais alto nível de resultado CSF: Govern, Identificar, Proteger, Detectar, Responder ou Recuperar.
-
-** Exemplo de Implementação. ** Uma ilustração nocional, orientada para a acção, de uma possível forma de apoiar um resultado essencial.
-
-** Referência informativa. ** Um mapeamento entre um resultado do núcleo e outro padrão, diretriz, regulação ou fonte.
-
-** Perfil Organizacional. ** Um mecanismo para descrever a atual e/ou a postura de segurança cibernética do alvo usando resultados essenciais.
-
-** Risco residual. O risco permanece após os controles e as respostas são consideradas.
-
-**Apetece-lhe o riso. ** A ampla quantidade e tipo de risco que uma organização está disposta a perseguir ou manter.
-
-** Tolerância ao risco. ** Variação aceitável em torno de objetivos específicos ou desempenho.
-
-**Subcategoria. ** Um resultado específico de cibersegurança dentro de uma categoria.
-
-** Perfil do Alvo. ** Os resultados selecionados e priorizados um escopo definido visa alcançar.
-
-**Tier.** Contexto para o rigor da governança de risco de cibersegurança e práticas de gestão de risco.
-
-# # 23.1 Índice de assunto
-
-Capítulos
------------------------------------------
-Controle de acesso , , 15-16, 22 , , Metrics , 14, 17 ,
-• Inventário de ativos 5, 15, 22
-• Preparação para auditorias • 14–15, 22 • Perfil Organizacional • 2–3, 10
-Compliance 1 , 15 , Proteja 6 ,
-Recupere
-Detectar , , 7 , Risco apetite , , 12
-A avaliação do risco
-• Govern 4, 12–13, 17 • Cadeia de suprimentos
-. Identifique .. 5 .
-Resposta ao incidente .. 8, 15, 19 .. Verificação .. 14–16 .
-• Analista júnior . . . .
-
-# 24. Referências Oficiais e Estudo Adicional
-
-*Publicações, ferramentas e documentação de projeto atuais do NIST.*
-
-[<u>NIST Cybersecurity Framework 2.0 — CSWP 29</u>](https://doi.org/10.6028/NIST.CSWP.29)
-
-[<u>NIST Cybersecurity Framework website</u>](https://www.nist.gov/cyberframework)
-
-[<u> Ferramenta de Referência CSF 2.0</u>](https://csrc.nist.gov/Projects/cybersecurity-framework/Filters#/csf/filters)
-
-[<u>CSF 2.0 Perguntas Frequentes</u>](https://www.nist.gov/cyberframework/faqs)
-
-[<u>CSF 2.0 Perfis</u>](https://www.nist.gov/cyberframework/profiles)
-
-[<u>CSF 2.0 Referências Informativas</u>](https://www.nist.gov/cyberframework/informative-references)
-
-[<u>CSF 2.0 Guia de Recursos e Visão Geral – SP 1299</u>](https://doi.org/10.6028/NIST.SP.1299)
-
-[<u>CSF 2.0 Perfil Organizacional Guia de Início Rápido – SP 1301</u>](https://doi.org/10.6028/NIST.SP.1301)
-
-[<u>CSF 2.0 Tiers Quick-Start Guide — SP 1302</u>](https://doi.org/10.6028/NIST.SP.1302)
-
-[<u>CSF 2.0 Guia de Gestão de Riscos Empresariais — SP 1303</u>](https://doi.org/10.6028/NIST.SP.1303)
-
-[<u>CSF 2.0 Small Business Quick-Start Guide — SP 1300</u>](https://doi.org/10.6028/NIST.SP.1300)
-
-[<u>NIST SP 800-53 Rev. 5</u>](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)
-
-[<u>NIST SP 800-61 Rev. 3 — Resposta a incidentes</u>](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
-
-[<u>NIST SP 800-218 — Secure Software Development Framework</u>](https://csrc.nist.gov/pubs/sp/800/218/final)
-
-[<u>NIST NICE Workforce Framework</u>](https://www.nist.gov/itl/applied-cybersecurity/nice/nice-framework-resource-center)
-
-**Lembrança final:** O núcleo CSF é estável, enquanto exemplos de implementação online, referências informativas, orientações, mapeamentos, ameaças, tecnologias e obrigações podem mudar. Verifique as fontes oficiais NIST e os requisitos específicos da organização antes de agir.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- **Projeto 1 — Escopo e contexto:** missão, partes interessadas, obrigações, serviços críticos, dependências, exclusões e responsáveis.
+- **Projeto 2 — Mapa de ativos e dados:** inventários e diagrama autorizado de fluxo de dados.
+- **Projeto 3 — Risco:** registro de ameaças, vulnerabilidades, probabilidade, impacto, tratamento e risco residual.
+- **Projeto 4 — Perfis:** Perfil Atual baseado em evidências e Perfil-Alvo baseado em risco.
+- **Projeto 5 — Controles e testes:** testes fictícios de acesso, vulnerabilidades, logs, backups e fornecedores.
+- **Projeto 6 — Incidente:** analisar eventos sintéticos, declarar incidente, preservar evidências, conter, erradicar, restaurar e aprender.
+- **Projeto 7 — Ferramentas:** usar três ferramentas do Capítulo 16 em laboratório isolado e registrar autorização, versão, escopo, correção e novos testes.
+- **Projeto 8 — Relatório executivo:** painel, principais riscos, plano de ação, decisões e limitações.
+
+> **Ética do portfólio:** identificar todo o trabalho como treinamento fictício. Nunca publicar informações reais de empregadores, clientes, pacientes, funcionários, fornecedores, arquiteturas, vulnerabilidades, credenciais ou incidentes sem autorização expressa.
+
+# 20. Plano de aprendizagem de trinta dias
+
+| **Semana** | **Foco** | **Entrega obrigatória** |
+|---|---|---|
+| 1 | Finalidade do CSF, Núcleo, seis Funções, contexto e ativos | Memorando de escopo, mapa de partes interessadas e inventário de ativos e dados |
+| 2 | Risco, Perfis, Níveis, governança e cadeia de suprimentos | Registro de riscos, Perfis Atual e Alvo e classificação de fornecedores |
+| 3 | Salvaguardas, monitoramento, resposta, recuperação, evidências e testes | Cinco testes de controle, arquivo de incidente e evidências de recuperação |
+| 4 | Ferramentas, relatórios, portfólio e entrevistas | Portfólio higienizado, painel e respostas praticadas |
+
+## 20.1 Hábito diário
+
+Ler uma seção oficial do NIST ou grupo de resultados; explicar em linguagem simples sem alterar o significado; criar uma evidência fictícia; verificar integridade, escopo, data, responsabilidade e confiabilidade; escrever uma conclusão, ação corretiva ou lição.
+
+# 21. Preparação para entrevistas
+
+- **O que é o NIST CSF 2.0?** Um framework flexível e orientado a resultados para compreender, avaliar, priorizar e comunicar risco de cibersegurança por meio do Núcleo, Perfis, Níveis e recursos de apoio.
+- **Quais são as seis Funções?** Governar, Identificar, Proteger, Detectar, Responder e Recuperar.
+- **Por que Governar foi adicionado?** Para tornar explícitas a responsabilidade da liderança, política, estratégia de risco, integração com ERM, supervisão e risco da cadeia de suprimentos.
+- **O que é um Perfil Atual?** Uma descrição dos resultados que um escopo definido alcança ou tenta alcançar atualmente, incluindo como e em que medida.
+- **O que é um Perfil-Alvo?** Os resultados priorizados selecionados para um estado futuro conforme missão, risco, obrigações, partes interessadas e recursos.
+- **O que são os Níveis?** Contexto para o rigor da governança e gestão do risco: Parcial, Informado pelo Risco, Repetível e Adaptável.
+- **O CSF certifica conformidade?** Não. O alinhamento não cria conformidade legal nem certificação do NIST.
+- **Como verificar um resultado?** Definir escopo e critérios, avaliar o desenho, obter população completa, amostrar por risco, inspecionar e reproduzir, registrar exceções, corrigir, testar novamente e concluir com evidências.
+- **Como as ferramentas devem ser usadas?** Somente com autorização e como uma fonte de evidência; validar cobertura e resultados, proteger saídas, corrigir lacunas e testar novamente.
+- **Como priorizar lacunas?** Conforme impacto na missão, ameaça, probabilidade, criticidade, obrigações, exposição, dependências, controles existentes, custo, viabilidade e apetite a risco.
+
+> **Resposta de 60 segundos para gestores:** Uso o CSF 2.0 para conectar cibersegurança ao risco corporativo. Definimos escopo e partes interessadas, selecionamos resultados aplicáveis, construímos Perfis Atual e Alvo, priorizamos lacunas, financiamos planos, testamos evidências operacionais, incluímos fornecedores e comunicamos decisões e limitações. As ferramentas apoiam o trabalho, mas as pessoas continuam responsáveis por escopo, julgamento, correção e risco residual.
+
+# 22. Modelos e listas de verificação
+
+## 22.1 Registro de Perfil
+
+Escopo, finalidade, responsável, patrocinador, partes interessadas, data, gatilho de revisão; identificador de Função, Categoria e Subcategoria; aplicabilidade; status atual; implementação; evidência; teste; exceção; limitação; status-alvo; prioridade; lacuna; risco; ação; proteção provisória; recursos; data; dependência; novo teste; contexto de Nível; aprovação e histórico de versões.
+
+## 22.2 Registro de riscos
+
+Objetivo, ativo, serviço, dados, fornecedor e responsável; ameaça, vulnerabilidade, cenário e resultados afetados; controles e evidências; probabilidade, impacto e risco inerente; resposta, ação, recursos e data; risco residual, comparação com apetite/tolerância e autoridade de aceitação; indicador, gatilho de revisão, vencimento de exceção e novo teste.
+
+## 22.3 Planilha de teste de controle
+
+Resultado, risco, controle, responsável, frequência, sistemas, locais e período; critérios de desenho; evidência esperada; população completa; verificação de completude; método de amostragem; procedimento; evidência inspecionada; reprodução; exceções; causa; impacto; ação; proteção provisória; novo teste; conclusão; limitações; revisor e aprovação.
+
+## 22.4 Revisão de fornecedores
+
+Serviço, responsável, criticidade, acesso, dados, locais, subcontratados, dependências e alternativas; due diligence, autenticidade, desenvolvimento seguro, vulnerabilidades, resiliência, histórico de incidentes e situação financeira/operacional; requisitos contratuais, direitos de evidência, notificação, recuperação, devolução/destruição e saída; monitoramento, achados, exceções, ações, exercícios, incidentes, mudanças, renovação e encerramento.
+
+## 22.5 Lista de preparação para gestores
+
+Patrocinador, funções, recursos, política e estratégia aprovados; escopo, partes interessadas, obrigações, serviços críticos, dependências e fornecedores atualizados; populações reconciliadas; Perfis sustentados e aprovados; plano financiado; evidências testadas; controles de fornecedores operando; métricas ligadas a risco; exceções, aceitações, limitações e novos testes visíveis.
+
+# 23. Glossário e índice temático
+
+**Categoria:** grupo de resultados relacionados dentro de uma Função.  
+**Perfil da Comunidade:** linha de base publicada para necessidades compartilhadas de setor, tecnologia, ameaça ou caso de uso.  
+**Núcleo:** hierarquia de Funções, Categorias e Subcategorias.  
+**Perfil Atual:** resultados que um escopo alcança ou tenta alcançar atualmente.  
+**Risco de cibersegurança:** possível efeito da incerteza sobre informação, tecnologia e objetivos organizacionais.  
+**Função:** nível mais alto do CSF.  
+**Exemplo de Implementação:** ilustração orientada à ação de uma possível forma de apoiar um resultado.  
+**Referência Informativa:** mapeamento entre um resultado e outra norma, orientação, regulamentação ou fonte.  
+**Perfil Organizacional:** mecanismo para descrever a postura Atual e/ou Alvo.  
+**Risco residual:** risco que permanece após considerar controles e respostas.  
+**Apetite a risco:** quantidade e tipo amplo de risco que uma organização está disposta a buscar ou reter.  
+**Tolerância a risco:** variação aceitável em torno de objetivos específicos.  
+**Subcategoria:** resultado específico dentro de uma Categoria.  
+**Perfil-Alvo:** resultados selecionados e priorizados que um escopo pretende alcançar.  
+**Nível:** contexto do rigor da governança e gestão de riscos.
+
+## 23.1 Índice temático
+
+| **Tema** | **Capítulos** | **Tema** | **Capítulos** |
+|---|---:|---|---:|
+| Controle de acesso | 6, 15–16, 22 | Métricas | 14, 17 |
+| Inventário de ativos | 5, 15, 22 | Ferramentas de código aberto | 16 |
+| Preparação para auditoria | 14–15, 22 | Perfis Organizacionais | 2–3, 10 |
+| Conformidade | 1, 15 | Proteger | 6 |
+| Núcleo | 2, 4–9 | Recuperar | 9 |
+| Detectar | 7 | Apetite a risco | 4, 12 |
+| Evidências | 14–16 | Avaliação de riscos | 5, 12, 22 |
+| Governar | 4, 12–13, 17 | Cadeia de suprimentos | 4, 13, 15, 22 |
+| Identificar | 5 | Níveis | 2, 11 |
+| Resposta a incidentes | 8, 15, 19 | Verificação | 14–16 |
+| Analista júnior | 18–21 | Gestão de vulnerabilidades | 5, 15–16 |
+
+# 24. Referências oficiais e estudos adicionais
+
+- NIST Cybersecurity Framework 2.0 — CSWP 29
+- Site oficial do NIST Cybersecurity Framework
+- Ferramenta de referência do CSF 2.0
+- Perguntas frequentes do CSF 2.0
+- Perfis do CSF 2.0
+- Referências Informativas do CSF 2.0
+- SP 1299 — Guia de recursos e visão geral
+- SP 1301 — Guia rápido de Perfis Organizacionais
+- SP 1302 — Guia rápido de Níveis
+- SP 1303 — Guia rápido de gestão de riscos corporativos
+- SP 1300 — Guia rápido para pequenas empresas
+- NIST SP 800-53 Rev. 5
+- NIST SP 800-61 Rev. 3 — Resposta a incidentes
+- NIST SP 800-218 — Secure Software Development Framework
+- NIST NICE Workforce Framework
+
+> **Lembrete final:** o Núcleo do CSF é estável, mas Exemplos de Implementação, Referências Informativas, orientações, mapeamentos, ameaças, tecnologias e obrigações podem mudar. Verifique sempre as fontes oficiais atuais do NIST e os requisitos específicos da organização antes de agir.

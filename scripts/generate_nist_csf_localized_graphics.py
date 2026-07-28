@@ -27,7 +27,7 @@ def heading(draw, text):
     draw.text((W // 2, 40), text, font=font(48, True), fill=NAVY, anchor="ma")
 
 
-def wrapped(draw, xy, text, width, text_font, fill=DARK, anchor="mm"):
+def wrapped(draw, xy, text, width, text_font, fill=DARK, anchor="mm", spacing=6):
     words = text.split()
     lines, current = [], ""
     for word in words:
@@ -40,8 +40,10 @@ def wrapped(draw, xy, text, width, text_font, fill=DARK, anchor="mm"):
             current = word
     if current:
         lines.append(current)
-    draw.multiline_text(xy, "\n".join(lines), font=text_font, fill=fill,
-                        anchor=anchor, align="center", spacing=6)
+    draw.multiline_text(
+        xy, "\n".join(lines), font=text_font, fill=fill,
+        anchor=anchor, align="center", spacing=spacing
+    )
 
 
 def save(image, directory, filename, aliases=()):
@@ -52,12 +54,14 @@ def save(image, directory, filename, aliases=()):
 
 
 def figure1(lang, directory):
-    labels = ["GOBERNAR", "IDENTIFICAR", "PROTEGER", "DETECTAR", "RESPONDER", "RECUPERAR"]
+    labels = (["GOBERNAR", "IDENTIFICAR", "PROTEGER", "DETECTAR", "RESPONDER", "RECUPERAR"]
+              if lang == "es" else
+              ["GOVERNAR", "IDENTIFICAR", "PROTEGER", "DETECTAR", "RESPONDER", "RECUPERAR"])
     title = "Las seis Funciones del NIST CSF 2.0" if lang == "es" else "As seis Funções do NIST CSF 2.0"
     image = Image.new("RGB", (W, H), BG)
     draw = ImageDraw.Draw(image)
     heading(draw, title)
-    cx, cy, outer, inner = 900, 535, 340, 155
+    cx, cy, outer, inner = 900, 545, 325, 150
     colors = [PURPLE, BLUE, TEAL, GOLD, ORANGE, GREEN]
     for index, color in enumerate(colors):
         start = -90 + index * 60
@@ -66,9 +70,10 @@ def figure1(lang, directory):
     draw.ellipse((cx - inner, cy - inner, cx + inner, cy + inner), fill="white", outline=NAVY, width=5)
     for index, label in enumerate(labels):
         angle = math.radians(-60 + index * 60)
-        x, y = cx + 238 * math.cos(angle), cy + 238 * math.sin(angle)
-        wrapped(draw, (x, y), label, 190, font(24, True), fill="white")
-    draw.text((cx, cy), "NÚCLEO", font=font(42, True), fill=NAVY, anchor="mm")
+        x, y = cx + 225 * math.cos(angle), cy + 225 * math.sin(angle)
+        wrapped(draw, (x, y), label, 155, font(21, True), fill="white", spacing=3)
+    core = "NÚCLEO" if lang == "es" else "NÚCLEO"
+    draw.text((cx, cy), core, font=font(40, True), fill=NAVY, anchor="mm")
     localized = "image1_es-419.png" if lang == "es" else "image1_pt-BR.png"
     save(image, directory, localized, aliases=("image1.png",))
 
@@ -136,13 +141,15 @@ def figure4(lang, directory):
     heading(draw, title)
     colors = [GRAY, (194, 220, 244), (112, 181, 214), GREEN]
     for index, (label, color) in enumerate(zip(levels, colors)):
-        x, top = 140 + index * 390, 690 - index * 125
-        draw.rounded_rectangle((x, top, x + 330, 840), radius=20, fill=color, outline=NAVY, width=3)
-        wrapped(draw, (x + 165, top + 60), label, 290, font(27, True), fill=DARK if index < 3 else "white")
-    draw.line((120, 885, 1600, 285), fill=ORANGE, width=10)
-    draw.polygon([(1575, 278), (1625, 268), (1600, 320)], fill=ORANGE)
+        x, top = 120 + index * 375, 690 - index * 115
+        draw.rounded_rectangle((x, top, x + 315, 835), radius=20, fill=color, outline=NAVY, width=3)
+        wrapped(draw, (x + 157, top + 65), label, 265, font(25, True), fill=DARK if index < 3 else "white")
+    draw.line((115, 875, 1600, 300), fill=ORANGE, width=8)
+    draw.polygon([(1575, 293), (1625, 282), (1600, 335)], fill=ORANGE)
+    panel = (1250, 120, 1710, 265)
+    draw.rounded_rectangle(panel, radius=18, fill=(248, 250, 253), outline=BLUE, width=2)
     for index, text in enumerate(side):
-        draw.text((1420, 180 + index * 55), text, font=font(24, True), fill=NAVY, anchor="ma")
+        draw.text((1480, 150 + index * 42), text, font=font(21, True), fill=NAVY, anchor="ma")
     localized = "image4_es-419.png" if lang == "es" else "image4_pt-BR.png"
     alias = "image4_es.png" if lang == "es" else "image4_pt.png"
     save(image, directory, localized, aliases=(alias,))
@@ -162,7 +169,7 @@ def figure5(lang, directory):
     image = Image.new("RGB", (W, H), BG)
     draw = ImageDraw.Draw(image)
     heading(draw, title)
-    cx, cy, radius = 900, 535, 270
+    cx, cy, radius = 900, 535, 250
     colors = [NAVY, BLUE, TEAL, GREEN, GOLD, ORANGE]
     points = []
     for index in range(6):
@@ -170,15 +177,16 @@ def figure5(lang, directory):
         points.append((cx + radius * math.cos(angle), cy + radius * math.sin(angle)))
     for index in range(6):
         draw.line((*points[index], *points[(index + 1) % 6]), fill=(150, 160, 175), width=5)
+    support_positions = [(900, 135), (1435, 285), (1460, 745), (900, 900), (340, 745), (335, 285)]
     for index, (label, support, color) in enumerate(zip(labels, supports, colors)):
-        angle = math.radians(-90 + index * 60)
         x, y = points[index]
-        draw.ellipse((x - 105, y - 105, x + 105, y + 105), fill=color, outline="white", width=5)
-        wrapped(draw, (x, y), f"{index + 1}. {label}", 170, font(22, True), fill="white")
-        xo, yo = cx + (radius + 185) * math.cos(angle), cy + (radius + 185) * math.sin(angle)
-        wrapped(draw, (xo, yo), support, 250, font(18), fill=DARK)
-    draw.ellipse((cx - 120, cy - 120, cx + 120, cy + 120), fill="white", outline=NAVY, width=5)
-    wrapped(draw, (cx, cy), "CICLO DE\nVIDA", 190, font(34, True), fill=NAVY)
+        draw.ellipse((x - 98, y - 98, x + 98, y + 98), fill=color, outline="white", width=5)
+        wrapped(draw, (x, y), f"{index + 1}. {label}", 155, font(20, True), fill="white", spacing=3)
+        xo, yo = support_positions[index]
+        wrapped(draw, (xo, yo), support, 280, font(17, True), fill=DARK, spacing=3)
+    draw.ellipse((cx - 112, cy - 112, cx + 112, cy + 112), fill="white", outline=NAVY, width=5)
+    center_text = "CICLO DE\nVIDA"
+    wrapped(draw, (cx, cy), center_text, 180, font(32, True), fill=NAVY)
     localized = "image5_es-419.png" if lang == "es" else "image5_pt-BR.png"
     alias = "image5_es.png" if lang == "es" else "image5_pt.png"
     save(image, directory, localized, aliases=(alias,))
@@ -195,17 +203,25 @@ def figure6(lang, directory):
     draw = ImageDraw.Draw(image)
     heading(draw, title)
     colors = [NAVY, BLUE, TEAL, GREEN, GOLD, ORANGE, PURPLE, BLUE, TEAL, GREEN]
-    start_x, y, box_width, gap = 80, 420, 145, 25
+    box_width, box_height, gap = 300, 145, 30
+    start_x, start_y = 120, 245
     for index, (label, color) in enumerate(zip(labels, colors)):
-        x = start_x + index * (box_width + gap)
-        draw.rounded_rectangle((x, y, x + box_width, y + 170), radius=18, fill=color)
-        wrapped(draw, (x + box_width / 2, y + 85), label, box_width - 20, font(22, True), fill="white")
-        if index < 9:
-            draw.line((x + box_width, y + 85, x + box_width + gap - 5, y + 85), fill=DARK, width=5)
-            draw.polygon([(x + box_width + gap - 5, y + 75), (x + box_width + gap + 10, y + 85),
-                          (x + box_width + gap - 5, y + 95)], fill=DARK)
-    draw.arc((950, 620, 1510, 920), 0, 180, fill=ORANGE, width=6)
-    draw.text((1230, 880), "ciclo de mejora" if lang == "es" else "ciclo de melhoria",
+        row, col = divmod(index, 5)
+        x = start_x + col * (box_width + gap)
+        y = start_y + row * 280
+        draw.rounded_rectangle((x, y, x + box_width, y + box_height), radius=18, fill=color)
+        wrapped(draw, (x + box_width / 2, y + box_height / 2), label, box_width - 38,
+                font(25, True), fill="white", spacing=4)
+        if col < 4:
+            draw.line((x + box_width, y + box_height / 2, x + box_width + gap - 8, y + box_height / 2),
+                      fill=DARK, width=5)
+            draw.polygon([(x + box_width + gap - 8, y + box_height / 2 - 10),
+                          (x + box_width + gap + 7, y + box_height / 2),
+                          (x + box_width + gap - 8, y + box_height / 2 + 10)], fill=DARK)
+    draw.line((1590, 390, 1590, 500), fill=DARK, width=5)
+    draw.polygon([(1580, 495), (1590, 512), (1600, 495)], fill=DARK)
+    draw.arc((1050, 690, 1600, 930), 0, 180, fill=ORANGE, width=7)
+    draw.text((1325, 900), "ciclo de mejora" if lang == "es" else "ciclo de melhoria",
               font=font(26, True), fill=ORANGE, anchor="mm")
     localized = "image6_es-419.png" if lang == "es" else "image6_pt-BR.png"
     alias = "image6_es.png" if lang == "es" else "image6_pt.png"

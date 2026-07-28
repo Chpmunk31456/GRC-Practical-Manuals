@@ -38,26 +38,32 @@ jobs:
           from pathlib import Path
           import re
 
-          files = [
-              Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'),
-              Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'),
+          editions = [
+              (
+                  Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'),
+                  [f'media/image{i}_es-419.png' for i in range(1, 7)],
+              ),
+              (
+                  Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'),
+                  [f'media/image{i}_pt-BR.png' for i in range(1, 7)],
+              ),
           ]
 
-          for path in files:
+          for path, figure_paths in editions:
               normalized = []
-              replacements = 0
+              figure_index = 0
               for line in path.read_text(encoding='utf-8').splitlines():
-                  if 'img src="' in line:
-                      src_match = re.search(r'img src="([^"]+)"', line)
+                  if 'img src="' in line and figure_index < 6:
                       alt_match = re.search(r'alt="([^"]*)"', line)
-                      if src_match:
-                          alt = alt_match.group(1) if alt_match else 'Localized NIST CSF figure'
-                          line = f'![{alt}]({src_match.group(1)})'
-                          replacements += 1
+                      alt = alt_match.group(1) if alt_match else f'Localized NIST CSF Figure {figure_index + 1}'
+                      line = f'![{alt}]({figure_paths[figure_index]})'
+                      figure_index += 1
                   normalized.append(line)
               path.write_text('\n'.join(normalized) + '\n', encoding='utf-8')
-              assert replacements >= 6, (path, replacements)
-              print(f'Normalized {replacements} image references in {path}.')
+              assert figure_index == 6, (path, figure_index)
+              for figure_path in figure_paths:
+                  assert (path.parent / figure_path).is_file(), (path, figure_path)
+              print(f'Normalized six deterministic image references in {path}.')
           PY
 
       - name: Verify graphics inventory and dimensions
@@ -103,15 +109,16 @@ jobs:
           from pathlib import Path
           from zipfile import ZipFile
 
-          files = [
+          docx_files = [
               Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx'),
               Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx'),
           ]
-          for path in files:
-              with ZipFile(path) as archive:
+
+          for docx in docx_files:
+              with ZipFile(docx) as archive:
                   media = [name for name in archive.namelist() if name.startswith('word/media/') and not name.endswith('/')]
-              assert len(media) >= 6, f'{path} contains only {len(media)} embedded media files: {media}'
-              print(f'{path} contains {len(media)} embedded media files.')
+              assert len(media) >= 6, f'{docx} contains only {len(media)} embedded media files: {media}'
+              print(f'{docx} contains {len(media)} embedded media files.')
           PY
 
       - name: Update graphics QA record
@@ -127,7 +134,7 @@ jobs:
           - Six Latin American Spanish PNG graphics generated.
           - Six Brazilian Portuguese PNG graphics generated.
           - Localized labels follow `qa/NIST_CSF_2_GRAPHICS_LOCALIZATION_SPEC.md`.
-          - Markdown image references use language-specific filenames and valid Markdown image syntax.
+          - Markdown image references use language-specific filenames.
           - Localized captions and alt text are retained in the Markdown editions.
           - Spanish and Brazilian Portuguese DOCX files regenerated with embedded graphics.
           - Spanish and Brazilian Portuguese PDF files regenerated from the DOCX editions.
@@ -156,3 +163,5 @@ jobs:
             git commit -m 'Integrate localized NIST CSF graphics and rebuild editions'
             git push origin HEAD:production/multilingual-grc-editions
           fi
+
+# Controlled trigger: localized graphics production run.

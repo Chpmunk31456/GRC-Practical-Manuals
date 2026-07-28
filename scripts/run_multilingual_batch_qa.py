@@ -32,6 +32,9 @@ KNOWN_DEFECTS = [
 
 HEADING_RE = re.compile(r"^# (\d+)\.", re.MULTILINE)
 IMAGE_RE = re.compile(r"<img\s+[^>]*alt=\"([^\"]*)\"", re.IGNORECASE)
+IMAGE_SRC_RE = re.compile(r"<img\s+[^>]*src=\"([^\"]+)\"[^>]*>", re.IGNORECASE)
+IMAGE_TAG_START_RE = re.compile(r"<img\b", re.IGNORECASE)
+MARKDOWN_IMAGE_RE = re.compile(r"!\[(?P<alt>[^\]]*)\]\((?P<src>[^)]+)\)")
 
 results: list[dict[str, object]] = []
 for path in TARGETS:
@@ -40,12 +43,28 @@ for path in TARGETS:
     headings = sorted({int(x) for x in HEADING_RE.findall(text)})
     markers = [m for m in ENGLISH_MARKERS[lang] if m in text]
     defects = [d for d in KNOWN_DEFECTS if d in text]
-    empty_alt = sum(1 for alt in IMAGE_RE.findall(text) if not alt.strip())
+    markdown_images = list(MARKDOWN_IMAGE_RE.finditer(text))
+    empty_alt = (
+        sum(1 for alt in IMAGE_RE.findall(text) if not alt.strip())
+        + sum(1 for image in markdown_images if not image.group("alt").strip())
+    )
+    html_image_sources = IMAGE_SRC_RE.findall(text)
+    image_sources = html_image_sources + [
+        image.group("src") for image in markdown_images
+    ]
+    malformed_image_tags = len(IMAGE_TAG_START_RE.findall(text)) - len(html_image_sources)
+    missing_images = [
+        source for source in image_sources
+        if not (path.parent / source).resolve().is_file()
+    ]
     malformed_tables = sum(
         1 for line in text.splitlines()
         if line.startswith("|") and line.count("|") < 2
     )
-    status = "PASS" if not markers and not defects and not empty_alt and not malformed_tables else "REVIEW"
+    status = "PASS" if not (
+        markers or defects or empty_alt or malformed_tables
+        or malformed_image_tags or missing_images
+    ) else "REVIEW"
     results.append({
         "file": str(path.relative_to(ROOT)),
         "language": lang,
@@ -55,6 +74,8 @@ for path in TARGETS:
         "known_defects": defects,
         "empty_alt_text_count": empty_alt,
         "malformed_table_line_count": malformed_tables,
+        "malformed_image_tag_count": malformed_image_tags,
+        "missing_image_sources": missing_images,
         "characters": len(text),
         "lines": text.count("\n") + 1,
     })
@@ -77,14 +98,15 @@ lines = [
     f"Automated pass: **{summary['pass']}**",
     f"Requires review: **{summary['review']}**",
     "",
-    "| Status | Language | File | English leakage | Known defects | Empty alt text | Malformed table lines |",
-    "|---|---|---|---:|---:|---:|---:|",
+    "| Status | Language | File | English leakage | Known defects | Empty alt text | Malformed tables | Malformed images | Missing images |",
+    "|---|---|---|---:|---:|---:|---:|---:|---:|",
 ]
 for row in results:
     lines.append(
         f"| {row['status']} | {row['language']} | `{row['file']}` | "
         f"{len(row['english_markers'])} | {len(row['known_defects'])} | "
-        f"{row['empty_alt_text_count']} | {row['malformed_table_line_count']} |"
+        f"{row['empty_alt_text_count']} | {row['malformed_table_line_count']} | "
+        f"{row['malformed_image_tag_count']} | {len(row['missing_image_sources'])} |"
     )
 lines += [
     "",

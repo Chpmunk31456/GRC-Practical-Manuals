@@ -54,7 +54,7 @@ Los equipos legales, de privacidad, seguridad física, tecnología operacional y
 
 *Qué es el marco, qué cambió y qué no afirma.*
 
-<img src="media/image1.png" style="width:6.15in;height:3.39605in" alt="GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND y RECOVER funcionan como un sistema conectado." />
+![Las Funciones Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar operan como un sistema conectado.](media/image1_es-419.png){width=6.15in height=3.39605in}
 
 Figura 1. Las seis Funciones del NIST CSF 2.0
 
@@ -83,7 +83,7 @@ NIST publicó el CSF 2.0 el 26 de febrero de 2024. Está diseñado para organiza
 
 *Los componentes del CSF 2.0 y cómo se relacionan entre sí.*
 
-<img src="media/image2.png" style="width:6.15in;height:2.6593in" alt="Las Funciones contienen Categorías, y las Categorías contienen Subcategorías específicas centradas en resultados." />
+![Las Funciones contienen Categorías, y las Categorías contienen Subcategorías específicas centradas en resultados.](media/image2_es-419.png){width=6.15in height=2.6593in}
 
 Figura 2. Jerarquía del Núcleo del CSF
 
@@ -150,7 +150,7 @@ Figura 2. Jerarquía del Núcleo del CSF
 | GV.RM-06 | Usar un método coherente para calcular, documentar, categorizar y priorizar riesgos cibernéticos. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
 | GV.RM-07 | Incluir oportunidades beneficiosas y riesgo positivo en las conversaciones de ciberseguridad. | Confirmar responsable, alcance, implementación, revisión, excepciones, acciones correctivas y operación repetible. | apetito de riesgo, metodología, registro de riesgos empresariales, rutas de reporte |
 
-## Rols, responsabilidades y autoridades (GV.RR)
+## Roles, responsabilidades y autoridades (GV.RR)
 
 | **Resultado** | **Significado en lenguaje claro** | **Verificación del gerente o analista** | **Ejemplos de evidencia** |
 |---|---|---|---|
@@ -387,7 +387,7 @@ Figura 2. Jerarquía del Núcleo del CSF
 
 *Cómo describir la postura actual, establecer un objetivo y crear un plan de acción priorizado.*
 
-<img src="media/image3_es.png" style="width:6.15in;height:3.39605in" alt="Un Perfil Objetivo es útil cuando sus brechas se convierten en acciones basadas en riesgo, con responsables y financiamiento definidos." />
+![Un Perfil Objetivo es útil cuando sus brechas se convierten en acciones basadas en riesgo, con responsables y financiamiento definidos.](media/image3_es-419.png){width=6.15in height=3.39605in}
 
 **Figura 3. Del Perfil Actual al plan de acción**
 
@@ -418,7 +418,7 @@ Priorice las brechas considerando el impacto sobre la misión, la probabilidad d
 
 *Cómo utilizar Parcial, Informado por el Riesgo, Repetible y Adaptativo sin convertirlos en una puntuación.*
 
-<img src="media/image4_es.png" style="width:6.15in;height:3.35755in" alt="Los Niveles del CSF ofrecen contexto sobre el rigor de la gobernanza y de las prácticas de gestión del riesgo." />
+![Los Niveles del CSF ofrecen contexto sobre el rigor de la gobernanza y de las prácticas de gestión del riesgo.](media/image4_es-419.png){width=6.15in height=3.35755in}
 
 **Figura 4. Niveles del CSF**
 
@@ -466,7 +466,7 @@ Priorice las brechas considerando el impacto sobre la misión, la probabilidad d
 
 *Cómo gestionar proveedores, productos, servicios y dependencias durante todo el ciclo de vida.*
 
-<img src="media/image5_es.png" style="width:6.15in;height:3.21373in" alt="Planificar, seleccionar, contratar, monitorear y finalizar relaciones con responsabilidades de seguridad claramente definidas." />
+![Planificar, seleccionar, contratar, monitorear y finalizar relaciones con responsabilidades de seguridad claramente definidas.](media/image5_es-419.png){width=6.15in height=3.21373in}
 
 **Figura 5. Ciclo de vida de la ciberseguridad en la cadena de suministro**
 
@@ -493,7 +493,7 @@ Priorice las brechas considerando el impacto sobre la misión, la probabilidad d
 | Medida de resiliencia | ¿Puede la organización continuar y recuperarse? | Porcentaje de restauraciones de servicios críticos que cumplen los objetivos de recuperación. |
 | Medida de calidad de evidencia | ¿Puede confiarse en el estado reportado? | Porcentaje de conclusiones respaldadas por poblaciones completas y pruebas independientes. |
 
-<img src="media/image6_es.png" style="width:6.15in;height:2.73265in" alt="Una correspondencia es confiable cuando los controles y la evidencia operativa se someten a pruebas." />
+![Una correspondencia es confiable cuando los controles y la evidencia operativa se someten a pruebas.](media/image6_es-419.png){width=6.15in height=2.73265in}
 
 **Figura 6. Cadena del resultado a la evidencia**
 
@@ -541,7 +541,7 @@ Priorice las brechas considerando el impacto sobre la misión, la probabilidad d
 
 *Enlaces oficiales, inicios rápidos seguros, apoyo posible al CSF, evidencia y limitaciones.*
 
-<img src="media/image7_es-419.png" style="width:6.15in;height:3.39605in" alt="La autorización, la validación, la acción correctiva y la repetición de pruebas convierten los resultados técnicos en evidencia útil." />
+![La autorización, la validación, la acción correctiva y la repetición de pruebas convierten los resultados técnicos en evidencia útil.](media/image7_es-419.png){width=6.15in height=3.39605in}
 
 Figura 7. Del resultado de una herramienta a evidencia útil
 
@@ -642,7 +642,7 @@ Para CISO Assistant, Wazuh, osquery, OpenSCAP, Greenbone Community Edition, Triv
 
 # 18. De principiante a analista junior
 
-<img src="media/image8_es-419.png" style="width:6.15in;height:3.20335in" alt="Aprender, mapear, probar, informar y postularse con evidencia honesta de portafolio." />
+![Aprender, mapear, probar, informar y postularse con evidencia honesta de portafolio.](media/image8_es-419.png){width=6.15in height=3.20335in}
 
 Figura 8. Ruta hacia el puesto de analista junior
 

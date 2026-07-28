@@ -54,7 +54,7 @@ As equipes jurídica, de privacidade, segurança física, tecnologia operacional
 
 *O que é o framework, o que mudou e o que ele não afirma.*
 
-<img src="media/image1.png" style="width:6.15in;height:3.39605in" alt="GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND e RECOVER funcionam como um sistema conectado." />
+![As Funções Governar, Identificar, Proteger, Detectar, Responder e Recuperar operam como um sistema conectado.](media/image1_pt-BR.png){width=6.15in height=3.39605in}
 
 Figura 1. As seis Funções do NIST CSF 2.0
 
@@ -83,7 +83,7 @@ O NIST publicou o CSF 2.0 em 26 de fevereiro de 2024. Ele foi desenvolvido para 
 
 *Os componentes do CSF 2.0 e como eles se relacionam.*
 
-<img src="media/image2.png" style="width:6.15in;height:2.6593in" alt="As Funções contêm Categorias, e as Categorias contêm Subcategorias específicas orientadas a resultados." />
+![As Funções contêm Categorias, e as Categorias contêm Subcategorias específicas orientadas a resultados.](media/image2_pt-BR.png){width=6.15in height=2.6593in}
 
 Figura 2. Hierarquia do Núcleo do CSF
 
@@ -387,7 +387,7 @@ Figura 2. Hierarquia do Núcleo do CSF
 
 *Como descrever a postura atual, definir um objetivo e criar um plano de ação priorizado.*
 
-<img src="media/image3_ptbr.png" style="width:6.15in;height:3.39605in" alt="Um Perfil-Alvo é útil quando suas lacunas se transformam em ações baseadas em risco, com responsáveis e recursos definidos." />
+![Um Perfil-Alvo é útil quando suas lacunas se transformam em ações baseadas em risco, com responsáveis e recursos definidos.](media/image3_pt-BR.png){width=6.15in height=3.39605in}
 
 **Figura 3. Do Perfil Atual ao plano de ação**
 
@@ -418,7 +418,7 @@ Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, c
 
 *Como utilizar Parcial, Informado pelo Risco, Repetível e Adaptativo sem transformá-los em uma pontuação.*
 
-<img src="media/image4_ptbr.png" style="width:6.15in;height:3.35755in" alt="Os Níveis do CSF oferecem contexto sobre o rigor da governança e das práticas de gestão de riscos." />
+![Os Níveis do CSF oferecem contexto sobre o rigor da governança e das práticas de gestão de riscos.](media/image4_pt-BR.png){width=6.15in height=3.35755in}
 
 **Figura 4. Níveis do CSF**
 
@@ -466,7 +466,7 @@ Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, c
 
 *Como gerenciar fornecedores, produtos, serviços e dependências ao longo de todo o ciclo de vida.*
 
-<img src="media/image5_ptbr.png" style="width:6.15in;height:3.21373in" alt="Planejar, selecionar, contratar, monitorar e encerrar relações com responsabilidades de segurança claramente definidas." />
+![Planejar, selecionar, contratar, monitorar e encerrar relações com responsabilidades de segurança claramente definidas.](media/image5_pt-BR.png){width=6.15in height=3.21373in}
 
 **Figura 5. Ciclo de vida da cibersegurança na cadeia de suprimentos**
 
@@ -493,7 +493,7 @@ Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, c
 | Medida de resiliência | A organização consegue continuar e se recuperar? | Percentual de restaurações de serviços críticos que atendem aos objetivos de recuperação. |
 | Medida de qualidade da evidência | O status informado é confiável? | Percentual de conclusões sustentadas por populações completas e testes independentes. |
 
-<img src="media/image6_ptbr.png" style="width:6.15in;height:2.73265in" alt="Um mapeamento se torna confiável quando os controles e as evidências operacionais são testados." />
+![Um mapeamento se torna confiável quando os controles e as evidências operacionais são testados.](media/image6_pt-BR.png){width=6.15in height=2.73265in}
 
 **Figura 6. Cadeia do resultado à evidência**
 
@@ -541,7 +541,7 @@ Priorize as lacunas considerando impacto na missão, probabilidade de ameaça, c
 
 *Links oficiais, inícios rápidos seguros, possível apoio ao CSF, evidências e limitações.*
 
-<img src="media/image7_pt-BR.png" style="width:6.15in;height:3.39605in" alt="Autorização, validação, ação corretiva e novos testes transformam resultados técnicos em evidências úteis." />
+![Autorização, validação, ação corretiva e novos testes transformam resultados técnicos em evidências úteis.](media/image7_pt-BR.png){width=6.15in height=3.39605in}
 
 Figura 7. Do resultado da ferramenta à evidência útil
 
@@ -642,7 +642,7 @@ Para CISO Assistant, Wazuh, osquery, OpenSCAP, Greenbone Community Edition, Triv
 
 # 18. De iniciante a analista júnior
 
-<img src="media/image8_pt-BR.png" style="width:6.15in;height:3.20335in" alt="Aprender, mapear, testar, relatar e se candidatar com evidências honestas de portfólio." />
+![Aprender, mapear, testar, relatar e se candidatar com evidências honestas de portfólio.](media/image8_pt-BR.png){width=6.15in height=3.20335in}
 
 Figura 8. Caminho para analista júnior
 

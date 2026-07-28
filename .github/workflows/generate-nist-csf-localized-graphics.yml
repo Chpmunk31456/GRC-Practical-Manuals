@@ -123,7 +123,7 @@ jobs:
           for docx in docx_files:
               with ZipFile(docx) as archive:
                   media = [name for name in archive.namelist() if name.startswith('word/media/') and not name.endswith('/')]
-              assert len(media) >= 6, f'{docx} contains only {len(media)} embedded media files: {media}'
+              assert len(media) >= 8, f'{docx} contains only {len(media)} embedded media files: {media}'
               print(f'{docx} contains {len(media)} embedded media files.')
           PY
 

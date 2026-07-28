@@ -1,12 +1,12 @@
 {
   "files_scanned": 22,
-  "pass": 22,
-  "review": 0,
+  "pass": 11,
+  "review": 11,
   "results": [
     {
       "file": "01-foundations\\CIS_Controls_v8.1\\Espanol\\CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
       "language": "Espanol",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         2,
         4,
@@ -32,13 +32,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 1,
+      "missing_image_sources": [],
       "characters": 161239,
       "lines": 1161
     },
     {
       "file": "01-foundations\\CIS_Controls_v8.1\\Portugues_BR\\CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         3,
@@ -73,6 +75,19 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png",
+        "media/image10.png"
+      ],
       "characters": 144837,
       "lines": 1161
     },
@@ -110,7 +125,9 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
-      "characters": 82451,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
+      "characters": 82321,
       "lines": 795
     },
     {
@@ -147,7 +164,9 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
-      "characters": 79260,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
+      "characters": 79112,
       "lines": 795
     },
     {
@@ -187,13 +206,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 100028,
       "lines": 1477
     },
     {
       "file": "01-foundations\\NIST_RMF_SP_800-53\\Portugues_BR\\NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -229,6 +250,19 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png",
+        "media/image10.png"
+      ],
       "characters": 88698,
       "lines": 1477
     },
@@ -255,13 +289,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 95608,
       "lines": 1110
     },
     {
       "file": "02-management-systems\\ISO_IEC_27001_27002\\Portugues_BR\\ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         3,
@@ -294,6 +330,18 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png"
+      ],
       "characters": 92166,
       "lines": 1110
     },
@@ -306,6 +354,8 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 11905,
       "lines": 220
     },
@@ -318,13 +368,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 14434,
       "lines": 220
     },
     {
       "file": "04-regulatory-compliance\\GDPR\\Espanol\\GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
       "language": "Espanol",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         3,
@@ -346,13 +398,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 1,
+      "missing_image_sources": [],
       "characters": 94421,
       "lines": 1404
     },
     {
       "file": "04-regulatory-compliance\\GDPR\\Portugues_BR\\GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -374,6 +428,14 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png"
+      ],
       "characters": 90229,
       "lines": 1404
     },
@@ -402,13 +464,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 95844,
       "lines": 1539
     },
     {
       "file": "04-regulatory-compliance\\HIPAA\\Portugues_BR\\HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -433,6 +497,16 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png"
+      ],
       "characters": 94041,
       "lines": 1539
     },
@@ -462,13 +536,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 92283,
       "lines": 1197
     },
     {
       "file": "04-regulatory-compliance\\PCI_DSS_v4.0.1\\Portugues_BR\\PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -500,6 +576,18 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png"
+      ],
       "characters": 89790,
       "lines": 1197
     },
@@ -538,13 +626,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 83262,
       "lines": 1458
     },
     {
       "file": "05-operational-resilience\\Incident_Response_BCDR\\Portugues_BR\\Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -576,6 +666,19 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png",
+        "media/image10.png"
+      ],
       "characters": 81690,
       "lines": 1458
     },
@@ -616,13 +719,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 83615,
       "lines": 1342
     },
     {
       "file": "06-cloud-and-technology-risk\\Cloud_Security_and_Compliance\\Portugues_BR\\Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         2,
@@ -656,6 +761,19 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png",
+        "media/image10.png"
+      ],
       "characters": 80728,
       "lines": 1342
     },
@@ -688,13 +806,15 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [],
       "characters": 80587,
       "lines": 1300
     },
     {
       "file": "07-third-party-risk\\Third_Party_Risk_and_Supply_Chain\\Portugues_BR\\Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
       "language": "Portugues_BR",
-      "status": "PASS",
+      "status": "REVIEW",
       "chapter_headings": [
         1,
         3,
@@ -723,6 +843,19 @@
       "known_defects": [],
       "empty_alt_text_count": 0,
       "malformed_table_line_count": 0,
+      "malformed_image_tag_count": 0,
+      "missing_image_sources": [
+        "media/image1.png",
+        "media/image2.png",
+        "media/image3.png",
+        "media/image4.png",
+        "media/image5.png",
+        "media/image6.png",
+        "media/image7.png",
+        "media/image8.png",
+        "media/image9.png",
+        "media/image10.png"
+      ],
       "characters": 79579,
       "lines": 1300
     }

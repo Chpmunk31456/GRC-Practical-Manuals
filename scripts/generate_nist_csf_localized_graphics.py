@@ -1,6 +1,7 @@
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import math
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 W, H = 1800, 1000
@@ -15,8 +16,21 @@ PURPLE = (111, 67, 148)
 GRAY = (235, 239, 244)
 DARK = (30, 35, 40)
 LINE = (80, 90, 105)
-FONT_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+FONT_REGULAR = (
+    "C:/Windows/Fonts/arial.ttf"
+    if Path("C:/Windows/Fonts/arial.ttf").exists()
+    else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+)
+FONT_BOLD = (
+    "C:/Windows/Fonts/arialbd.ttf"
+    if Path("C:/Windows/Fonts/arialbd.ttf").exists()
+    else "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+)
+HTML_IMAGE_RE = re.compile(
+    r'<img\s+src="(?P<src>[^"]+)"\s+style="width:(?P<width>[^;"]+);'
+    r'height:(?P<height>[^"]+)"\s+alt="(?P<alt>[^"]*)"\s*/?>',
+    re.IGNORECASE,
+)
 
 
 def font(size, bold=False):
@@ -228,6 +242,93 @@ def figure6(lang, directory):
     save(image, directory, localized, aliases=(alias,))
 
 
+def five_step_figure(lang, directory, number, labels, details, footer):
+    image = Image.new("RGB", (W, H), BG)
+    draw = ImageDraw.Draw(image)
+    colors = [NAVY, BLUE, TEAL, GOLD, GREEN]
+    box_width, box_height, gap = 300, 250, 30
+    start_x, start_y = 65, 315
+    for index, (label, detail, color) in enumerate(zip(labels, details, colors)):
+        x = start_x + index * (box_width + gap)
+        draw.rounded_rectangle(
+            (x, start_y, x + box_width, start_y + box_height),
+            radius=22,
+            fill=color,
+        )
+        wrapped(
+            draw,
+            (x + box_width / 2, start_y + 92),
+            label,
+            box_width - 35,
+            font(31, True),
+            fill="white",
+        )
+        wrapped(
+            draw,
+            (x + box_width / 2, start_y + 175),
+            detail,
+            box_width - 35,
+            font(23),
+            fill="white",
+        )
+        if index < 4:
+            arrow_y = start_y + box_height / 2
+            draw.line(
+                (x + box_width, arrow_y, x + box_width + gap - 8, arrow_y),
+                fill=LINE,
+                width=7,
+            )
+            draw.polygon(
+                [
+                    (x + box_width + gap - 8, arrow_y - 12),
+                    (x + box_width + gap + 7, arrow_y),
+                    (x + box_width + gap - 8, arrow_y + 12),
+                ],
+                fill=LINE,
+            )
+    wrapped(draw, (W // 2, 750), footer, W - 120, font(38, True), fill=NAVY)
+    locale = "es-419" if lang == "es" else "pt-BR"
+    save(image, directory, f"image{number}_{locale}.png")
+
+
+def figure7(lang, directory):
+    labels = (
+        ["AUTORIZAR", "RECOPILAR", "VALIDAR", "CORREGIR", "VOLVER A PROBAR"]
+        if lang == "es"
+        else ["AUTORIZAR", "COLETAR", "VALIDAR", "CORRIGIR", "TESTAR NOVAMENTE"]
+    )
+    details = (
+        ["Alcance escrito", "Resultado versionado", "Revisión humana", "Responsable + fecha", "Prueba de cierre"]
+        if lang == "es"
+        else ["Escopo escrito", "Resultado versionado", "Revisão humana", "Responsável + data", "Prova de encerramento"]
+    )
+    footer = (
+        "Un informe de herramienta es una entrada, no prueba de que se logró un resultado del CSF"
+        if lang == "es"
+        else "Um relatório de ferramenta é uma entrada, não prova de que um resultado do CSF foi alcançado"
+    )
+    five_step_figure(lang, directory, 7, labels, details, footer)
+
+
+def figure8(lang, directory):
+    labels = (
+        ["APRENDER", "MAPEAR", "PROBAR", "INFORMAR", "APLICAR"]
+        if lang == "es"
+        else ["APRENDER", "MAPEAR", "TESTAR", "RELATAR", "APLICAR"]
+    )
+    details = (
+        ["Núcleo + riesgo", "Activos + resultados", "Controles + evidencia", "Brechas + acciones", "Rol júnior"]
+        if lang == "es"
+        else ["Núcleo + risco", "Ativos + resultados", "Controles + evidências", "Lacunas + ações", "Função júnior"]
+    )
+    footer = (
+        "Un portafolio sólido demuestra alcance honesto, evidencia confiable, redacción clara y práctica segura"
+        if lang == "es"
+        else "Um portfólio sólido demonstra escopo honesto, evidências confiáveis, redação clara e prática segura"
+    )
+    five_step_figure(lang, directory, 8, labels, details, footer)
+
+
 def update_markdown(path, lang):
     text = path.read_text(encoding="utf-8")
     if lang == "es":
@@ -248,12 +349,23 @@ def update_markdown(path, lang):
                 'alt="As Funções Governar, Identificar, Proteger, Detectar, Responder e Recuperar operam como um sistema conectado."',
             'media/image2.png': 'media/image2_pt-BR.png',
             'media/image3_pt.png': 'media/image3_pt-BR.png',
+            'media/image3_ptbr.png': 'media/image3_pt-BR.png',
             'media/image4_pt.png': 'media/image4_pt-BR.png',
+            'media/image4_ptbr.png': 'media/image4_pt-BR.png',
             'media/image5_pt.png': 'media/image5_pt-BR.png',
+            'media/image5_ptbr.png': 'media/image5_pt-BR.png',
             'media/image6_pt.png': 'media/image6_pt-BR.png',
+            'media/image6_ptbr.png': 'media/image6_pt-BR.png',
         }
     for old, new in replacements.items():
         text = text.replace(old, new)
+    text = HTML_IMAGE_RE.sub(
+        lambda match: (
+            f'![{match.group("alt")}]({match.group("src")})'
+            f'{{width={match.group("width")} height={match.group("height")}}}'
+        ),
+        text,
+    )
     path.write_text(text, encoding="utf-8")
 
 
@@ -274,8 +386,10 @@ def main():
         figure4(lang, media)
         figure5(lang, media)
         figure6(lang, media)
+        figure7(lang, media)
+        figure8(lang, media)
         update_markdown(markdown[lang], lang)
-    print("Generated 12 localized NIST CSF graphics and updated both Markdown editions.")
+    print("Generated 16 localized NIST CSF graphics and updated both Markdown editions.")
 
 
 if __name__ == "__main__":

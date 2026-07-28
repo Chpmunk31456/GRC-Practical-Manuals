@@ -22,7 +22,7 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: production/multilingual-grc-editions
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python 3.11
@@ -159,7 +159,7 @@ jobs:
           } >> production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
       - name: Commit generated drafts or diagnostic report
-        if: always()
+        if: always() && github.ref_name == 'production/multilingual-grc-editions'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

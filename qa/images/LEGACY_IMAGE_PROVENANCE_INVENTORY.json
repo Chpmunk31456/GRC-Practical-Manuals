@@ -7,14 +7,14 @@
   "classification_note": "Classification flags are evidence properties and may overlap. Primary classification is mutually exclusive. A duplicate count denotes localized references that share the same family/source asset, not duplicate image files.",
   "summary": {
     "total_inventory_records": 82,
-    "total_unresolved_references": 76,
-    "total_restored_localized_references": 6,
+    "total_unresolved_references": 69,
+    "total_restored_localized_references": 13,
     "totals_by_manual": {
       "CIS Controls v8.1": 11,
       "NIST RMF / SP 800-53": 10,
       "ISO/IEC 27001/27002": 9,
       "GDPR": 0,
-      "HIPAA": 7,
+      "HIPAA": 0,
       "PCI DSS v4.0.1": 9,
       "Incident Response / BCDR": 10,
       "Cloud Security and Compliance": 10,
@@ -22,11 +22,11 @@
     },
     "totals_by_language": {
       "Latin American Spanish": 1,
-      "Brazilian Portuguese": 75
+      "Brazilian Portuguese": 68
     },
     "totals_by_primary_classification": {
-      "requires_localization": 76,
-      "restored_localized": 6
+      "requires_localization": 69,
+      "restored_localized": 13
     },
     "classification_flag_totals": {
       "duplicate_reference_records": 4,
@@ -1592,10 +1592,10 @@
         "sha256": "cd0b0efa0cb5cd2d10a92ea8f7aab48c8be3100e6a5821937b7b3acebd88c520",
         "size_bytes": 71632
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image1.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1611,8 +1611,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and matches the sole scaled image on page 9 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image1.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "1be0b65fcd1e29357c858b10f4786709c6b821d727bacbe973cab6d20655f5af",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1828,
+        "height": 886
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-038",
@@ -1631,10 +1642,10 @@
         "sha256": "14243cdd601a07e1ba8db0a2fd96fafeece8f692373c335d84e7f518b3098111",
         "size_bytes": 69690
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image2.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1650,8 +1661,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 10 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image2.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "3a9554699a287cea3da08b8864eaa1f362818d94f469afa510bc28e1ab863086",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1666,
+        "height": 886
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-039",
@@ -1670,10 +1692,10 @@
         "sha256": "4eff6992d2e8c68f9ce0dfcb265da0a513f75b70760abdaffa0ba787e001ce3c",
         "size_bytes": 67581
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image3.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1689,8 +1711,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 14 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image3.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "0a31ac79a00343e0390b2c6eca03232f028e63c70ab1e33073ead0ad18e92199",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1635,
+        "height": 886
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-040",
@@ -1709,10 +1742,10 @@
         "sha256": "5ac7d4c8dab0a8a4144f24651df3d7c3314bd52566ea1a506e94f5d5cfb7e4b9",
         "size_bytes": 83326
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image4.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1728,8 +1761,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 18 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image4.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "bd5eb3c2e1dc7e46220e0b40e40466b6815bca6a1d690c6cdb19c08f925ea5a6",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1628,
+        "height": 915
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-041",
@@ -1748,10 +1792,10 @@
         "sha256": "ae43dab6dac435eaa2ae07536d5bb92874b07a6dca05be1dac47b655714213c7",
         "size_bytes": 77730
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image5.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1767,8 +1811,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 24 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image5.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "0a4e2094e04f1d7a210a269699eace0d768cba55bc4e5011ccaa2b8333258926",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1628,
+        "height": 945
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-042",
@@ -1787,10 +1842,10 @@
         "sha256": "16a328d6362e198d48f03f678463ba13f2cfabab2123a022c1b47128ebe80f1b",
         "size_bytes": 62094
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image6.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1806,8 +1861,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 27 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image6.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "ed7cd4b9a6b651223d7a019530fc2eb0e26122f08f52c5725c1b1c70baf846b9",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1646,
+        "height": 886
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-043",
@@ -1826,10 +1892,10 @@
         "sha256": "22ebda5f4c02da795b7f589bef6a28d279207518b818fc4788dc844e02bedacf",
         "size_bytes": 62639
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image7.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1845,8 +1911,19 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX and is pixel-identical to the sole image on page 31 of the authoritative English PDF. Visual audit confirms the source graphic contains English text. A validated Brazilian Portuguese localization now exists at the recorded destination.",
+      "restoration_status": "restored",
+      "localization_status": "localized_brazilian_portuguese",
+      "restored_destination": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image7.png",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "localized_image_sha256": "8efbb33ff563a5a71976666315cc4e81830aa9622dc41b1efc22bdd18b17895d",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1628,
+        "height": 915
+      },
+      "completion_commit": null
     },
     {
       "id": "LEGACY-IMG-044",

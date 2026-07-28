@@ -311,7 +311,7 @@ Sumário
 
 *O que a lei protege, o que significa conformidade e o que os gestores possuem.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.23744in" alt="Quatro blocos conectados mostram pessoas, dados, propósito e controle." />
+![Quatro blocos conectados mostram pessoas, dados, propósito e controle.](media/image1.png){width=6.15in height=3.23744in}
 
 Figura 1. GDPR como um programa prático de gestão
 
@@ -376,7 +376,7 @@ Dados pessoais são mais amplos do que informações que nomeiam diretamente alg
 
 * As regras que moldam cada finalidade de processamento.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.34699in" alt="O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão." />
+![O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão.](media/image2.png){width=6.15in height=3.34699in}
 
 Figura 2. Ciclo de vida dos dados pessoais
 
@@ -411,7 +411,7 @@ O consentimento deve ser específico, informado, inequívoco, livremente dado e 
 
 * Como receber, avaliar, completar e solicitar documentos.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.34699in" alt="Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados." />
+![Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados.](media/image3.png){width=6.15in height=3.34699in}
 
 Figura 3. Fluxo de trabalho de dados-sujeitos-direitos
 
@@ -479,7 +479,7 @@ O registro de direitos Operações de privacidade O pedido, queixa, item atrasad
 
 * salvaguardas baseadas no risco, fatos incidentes, decisões de notificação e prova.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.45654in" alt="Conter, avaliar, decidir e melhorar são mostrados como um processo ligado." />
+![Conter, avaliar, decidir e melhorar são mostrados como um processo ligado.](media/image4.png){width=6.15in height=3.45654in}
 
 Figura 4. Fluxo de trabalho de violação de dados pessoais
 
@@ -791,7 +791,7 @@ Os fornecedores □ São contratos, subprocessadores e locais atuais? Verde / Am
 
 * Um caminho seguro e honesto de aprender a lei para demonstrar capacidade de entrada.*
 
-<img src="media/image5.png" style="largura:6.15in;altura:3.34699in" alt="Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira." />
+![Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira.](media/image5.png){width=6.15in height=3.34699in}
 
 Figura 5. Caminho do analista de privacidade júnior
 

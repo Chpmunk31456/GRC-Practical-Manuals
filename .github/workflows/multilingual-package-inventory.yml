@@ -77,7 +77,7 @@ jobs:
           find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0 |
           while IFS= read -r -d '' source; do
             stem="${source%.md}"
-            pandoc "$source" --toc -o "${stem}.docx"
+            pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
             libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
             test -s "${stem}.docx"
             test -s "${stem}.pdf"

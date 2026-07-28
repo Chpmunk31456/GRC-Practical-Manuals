@@ -791,7 +791,7 @@ Retención permanente ¿Están operando y revisando trabajos de supresión? Verd
 
 *Un camino seguro y honesto de aprender la ley a demostrar la capacidad de entrada*.
 
-<img src="media/image5.png" style="width:6.15in;height:3.34699in" alt="El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional." />
+![El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional.](media/image5.png){width=6.15in height=3.34699in}
 
 Figura 5. Vía de análisis de privacidad junior
 

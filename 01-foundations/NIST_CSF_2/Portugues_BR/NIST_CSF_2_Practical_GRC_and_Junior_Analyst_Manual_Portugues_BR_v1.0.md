@@ -324,7 +324,7 @@ Sumário
 
 * O que é o framework, o que mudou, e o que não reivindica.*
 
-<img src="media/image1_pt-BR.png" style="largura:6.15in;altura:3.39605in" alt="Governa, Identificar, Proteger, Detectar, Responder e Recuperar trabalho como um sistema conectado." />
+![Governa, Identificar, Proteger, Detectar, Responder e Recuperar trabalho como um sistema conectado.](media/image1_pt-BR.png)
 
 Figura 1. As seis funções NIST CSF 2.0
 
@@ -362,7 +362,7 @@ NIST publicou CSF 2.0 em 26 de fevereiro de 2024. É projetado para organizaçõ
 
 * As peças de CSF 2.0 e como eles se encaixam.*
 
-<img src="media/image2_pt-BR.png" style="largura:6.15in;altura:2.6593in" alt="Funções contêm Categorias, que contêm subcategorias específicas focadas em resultados." />
+![Funções contêm Categorias, que contêm subcategorias específicas focadas em resultados.](media/image2_pt-BR.png)
 
 Figura 2. CSF Hierarquia do núcleo
 
@@ -714,7 +714,7 @@ O RC.CO-04 O que está acontecendo? Confirmar propriedade, escopo, implementaç�
 
 * Como descrever a postura atual, definir um alvo e construir um plano de ação priorizado.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.39605in" alt="Um perfil alvo é útil quando suas lacunas se tornam de propriedade, financiada, ação baseada em risco." />
+![Um perfil alvo é útil quando suas lacunas se tornam de propriedade, financiada, ação baseada em risco.](media/image3_pt-BR.png)
 
 Figura 3. Perfil atual do plano de ação
 
@@ -750,7 +750,7 @@ Priorizar lacunas usando impacto da missão, probabilidade de ameaça, criticida
 
 *Usando Parcial, Risco Informado, Repetido e Adaptativo sem transformá-los em uma pontuação.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.35755in" alt="Tiers fornecem contexto para governança e rigor de gestão de risco." />
+![Tiers fornecem contexto para governança e rigor de gestão de risco.](media/image4_pt-BR.png)
 
 Figura 4. CSF Níveis
 
@@ -809,7 +809,7 @@ Como \[ameaça\] poderia explorar \[vulnerabilidade\] afetando \[ativo ou objeti
 
 * Gerenciando fornecedores, produtos, serviços e dependências ao longo do ciclo de vida.*
 
-<img src="media/image5.png" style="largura:6.15in;altura:3.2137in" alt="Planejar, selecionar, contratar, monitorar e sair com responsabilidades de segurança definidas." />
+![Planejar, selecionar, contratar, monitorar e sair com responsabilidades de segurança definidas.](media/image5_pt-BR.png)
 
 Figura 5. Ciclo de vida de segurança cibernética da cadeia de abastecimento
 
@@ -843,7 +843,7 @@ Indicador de risco A exposição está a aumentar? □ Vulnerabilidades crítica
 □ Medida de resiliência; Pode a organização continuar e recuperar? Percentagem de restaurações de serviços críticos que cumprem os objectivos de recuperação
 □ Medida de qualidade de evidência □ O estado relatado pode ser confiável? Percentagem de conclusões de resultados apoiadas por populações completas e testes independentes
 
-<img src="media/image6.png" style="largura:6.15in;altura:2.73265in" alt="Um mapeamento torna-se confiável quando controles e evidências operacionais são testados." />
+![Um mapeamento torna-se confiável quando controles e evidências operacionais são testados.](media/image6_pt-BR.png)
 
 Figura 6. Cadeia de resultado à evidência
 

@@ -324,7 +324,7 @@ Silencio.
 
 *Qué marco es, qué cambió, y lo que no reclama.*
 
-■img src="media/image1_es-419.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Govern, Identificar, Proteger, Detectar, Responder y Recuperar el trabajo como un sistema conectado." /
+![Govern, Identificar, Proteger, Detectar, Responder y Recuperar el trabajo como un sistema conectado.](media/image1_es-419.png)
 
 Figura 1. Las seis funciones NIST CSF 2.0
 
@@ -362,7 +362,7 @@ NIST publicó CSF 2.0 el 26 de febrero de 2024. Está diseñado para organizacio
 
 *Las piezas de CSF 2.0 y cómo encajan juntos.*
 
-■img src="media/image2_es-419.png" style="width:6.15in;height:2.6593in" alt="Las fusiones contienen Categorías, que contienen Subcategorías específicas centradas en el resultado." /
+![Las fusiones contienen Categorías, que contienen Subcategorías específicas centradas en el resultado.](media/image2_es-419.png)
 
 Figura 2. CSF Categoría básica
 
@@ -714,7 +714,7 @@ Silencio RC.CO-04 Silencio Edición de actualizaciones de recuperación pública
 
 *Cómo describir la postura actual, establecer un objetivo y construir un plan de acción priorizado*.
 
-■img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="A Target Profile es útil cuando sus brechas se convierten en acción de propiedad, financiada y basada en el riesgo."
+![A Target Profile es útil cuando sus brechas se convierten en acción de propiedad, financiada y basada en el riesgo.](media/image3_es-419.png)
 
 Gráfico 3 Perfil actual del plan de acción
 
@@ -809,7 +809,7 @@ Silencio.
 
 * Gestionar proveedores, productos, servicios y dependencias en todo el ciclo de vida*.
 
-יimg src="media/image5.png" style="width:6.15in;height:3.21373in" alt="Plan, select, contract, monitor, y salida con responsabilidades de seguridad definidas".
+![Plan, select, contract, monitor, y salida con responsabilidades de seguridad definidas](media/image4_es-419.png)
 
 Gráfico 5 Ciclo de vida de ciberseguridad en cadena de suministro
 
@@ -900,7 +900,7 @@ Herramientas de código abierto para CSF Work
 
 *Acoplamientos oficiales, inicios rápidos seguros, soporte CSF, evidencia y limitaciones.*
 
-■img src="media/image7.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Autorización, validación, acción correctiva, y retesting convierten la producción técnica en evidencia útil."
+![Autorización, validación, acción correctiva, y retesting convierten la producción técnica en evidencia útil.](media/image5_es-419.png)
 
 Figure 7. From tool output to evidence
 
@@ -1171,7 +1171,7 @@ Silencio Respuesta Silencio ¿Los incidentes son triaged, analizados, comunicado
 
 *Un camino seguro y honesto hacia GRC, riesgo, cumplimiento y análisis de ciberseguridad.*
 
-■img src="media/image8.png" estilo="Ancho:6.15in; Altura:3.20335in" alt="Aprender, mapa, test, reportar y aplicar con evidencia de cartera honesta." /
+![Aprender, mapa, test, reportar y aplicar con evidencia de cartera honesta.](media/image6_es-419.png)
 
 Figura 8. Vía de analista junior
 

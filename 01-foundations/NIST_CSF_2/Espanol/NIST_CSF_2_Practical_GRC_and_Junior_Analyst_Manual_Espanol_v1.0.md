@@ -324,7 +324,7 @@ Silencio.
 
 *Qué marco es, qué cambió, y lo que no reclama.*
 
-■img src="media/image1.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Govern, Identificar, Proteger, Detectar, Responder y Recuperar el trabajo como un sistema conectado." /
+■img src="media/image1_es-419.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Govern, Identificar, Proteger, Detectar, Responder y Recuperar el trabajo como un sistema conectado." /
 
 Figura 1. Las seis funciones NIST CSF 2.0
 
@@ -362,7 +362,7 @@ NIST publicó CSF 2.0 el 26 de febrero de 2024. Está diseñado para organizacio
 
 *Las piezas de CSF 2.0 y cómo encajan juntos.*
 
-■img src="media/image2.png" style="width:6.15in;height:2.6593in" alt="Las fusiones contienen Categorías, que contienen Subcategorías específicas centradas en el resultado." /
+■img src="media/image2_es-419.png" style="width:6.15in;height:2.6593in" alt="Las fusiones contienen Categorías, que contienen Subcategorías específicas centradas en el resultado." /
 
 Figura 2. CSF Categoría básica
 

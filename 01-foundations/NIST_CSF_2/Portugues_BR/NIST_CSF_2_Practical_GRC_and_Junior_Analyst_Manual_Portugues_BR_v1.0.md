@@ -324,7 +324,7 @@ Sumário
 
 * O que é o framework, o que mudou, e o que não reivindica.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="Governa, Identificar, Proteger, Detectar, Responder e Recuperar trabalho como um sistema conectado." />
+<img src="media/image1_pt-BR.png" style="largura:6.15in;altura:3.39605in" alt="Governa, Identificar, Proteger, Detectar, Responder e Recuperar trabalho como um sistema conectado." />
 
 Figura 1. As seis funções NIST CSF 2.0
 
@@ -362,7 +362,7 @@ NIST publicou CSF 2.0 em 26 de fevereiro de 2024. É projetado para organizaçõ
 
 * As peças de CSF 2.0 e como eles se encaixam.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:2.6593in" alt="Funções contêm Categorias, que contêm subcategorias específicas focadas em resultados." />
+<img src="media/image2_pt-BR.png" style="largura:6.15in;altura:2.6593in" alt="Funções contêm Categorias, que contêm subcategorias específicas focadas em resultados." />
 
 Figura 2. CSF Hierarquia do núcleo
 

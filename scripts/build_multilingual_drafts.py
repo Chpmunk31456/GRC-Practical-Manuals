@@ -155,6 +155,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--target", choices=sorted(LANGUAGES), action="append", help="Limit target language.")
     parser.add_argument("--source", action="append", help="Limit sources by repository-relative path or filename.")
     parser.add_argument("--source-limit", type=int, help="Process at most this many matched source files.")
+    parser.add_argument("--line-limit", type=int, help="Translate at most this many source lines (smoke tests only).")
     parser.add_argument("--max-chars", type=int, default=DEFAULT_MAX_CHARS, help="Maximum translation chunk size.")
     parser.add_argument(
         "--destination-root",
@@ -173,6 +174,8 @@ def source_matches(source: Path, filters: list[str] | None) -> bool:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    if args.line_limit is not None and args.line_limit < 1:
+        raise SystemExit("--line-limit must be at least 1")
     sources = sorted(ROOT.glob("[0-9][0-9]-*/**/English_Source_*.md"))
     sources = [source for source in sources if source_matches(source, args.source)]
     if args.source_limit is not None:
@@ -187,6 +190,8 @@ def main(argv: list[str] | None = None) -> int:
     skipped = 0
     for source in sources:
         original = source.read_text(encoding="utf-8-sig", errors="strict")
+        if args.line_limit is not None:
+            original = "\n".join(original.splitlines()[: args.line_limit]) + "\n"
         relative_source = source.relative_to(ROOT)
         for target in targets:
             cfg = LANGUAGES[target]

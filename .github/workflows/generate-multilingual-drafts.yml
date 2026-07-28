@@ -97,6 +97,7 @@ jobs:
           smoke_dir="${RUNNER_TEMP}/multilingual-smoke"
           python scripts/build_multilingual_drafts.py \
             --source-limit 1 \
+            --line-limit 25 \
             --target es \
             --max-chars 400 \
             --destination-root "$smoke_dir"

@@ -50,20 +50,26 @@ jobs:
           ]
 
           for path, figure_paths in editions:
+              lines = path.read_text(encoding='utf-8').splitlines()
               normalized = []
-              figure_index = 0
-              for line in path.read_text(encoding='utf-8').splitlines():
-                  if 'img src="' in line and figure_index < 6:
+              replacement_index = 0
+
+              for line in lines:
+                  if 'img src="' in line and replacement_index < 6:
                       alt_match = re.search(r'alt="([^"]*)"', line)
-                      alt = alt_match.group(1) if alt_match else f'Localized NIST CSF Figure {figure_index + 1}'
-                      line = f'![{alt}]({figure_paths[figure_index]})'
-                      figure_index += 1
+                      alt = alt_match.group(1) if alt_match else f'Localized NIST CSF Figure {replacement_index + 1}'
+                      line = f'![{alt}]({figure_paths[replacement_index]})'
+                      replacement_index += 1
                   normalized.append(line)
-              path.write_text('\n'.join(normalized) + '\n', encoding='utf-8')
-              assert figure_index == 6, (path, figure_index)
+
+              text = '\n'.join(normalized) + '\n'
+              path.write_text(text, encoding='utf-8')
+
+              present = [figure_path for figure_path in figure_paths if f']({figure_path})' in text]
+              assert len(present) == 6, (path, present)
               for figure_path in figure_paths:
                   assert (path.parent / figure_path).is_file(), (path, figure_path)
-              print(f'Normalized six deterministic image references in {path}.')
+              print(f'Confirmed six deterministic image references in {path}; repaired {replacement_index}.')
           PY
 
       - name: Verify graphics inventory and dimensions
@@ -223,4 +229,4 @@ jobs:
             git push origin HEAD:production/multilingual-grc-editions
           fi
 
-# Controlled trigger: final corrected NIST graphics rendering and QA evidence.
+# Controlled trigger: idempotent final corrected NIST graphics rendering and QA evidence.

@@ -14,6 +14,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: multilingual-production-writes
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest

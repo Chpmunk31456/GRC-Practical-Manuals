@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: multilingual-production-writes
+  cancel-in-progress: false
+
 jobs:
   produce-and-verify:
     runs-on: ubuntu-latest
@@ -17,7 +21,7 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: production/multilingual-grc-editions
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python 3.11
@@ -103,6 +107,7 @@ jobs:
           EOF
 
       - name: Commit generated packages and reports
+        if: github.ref_name == 'production/multilingual-grc-editions'
         shell: bash
         run: |
           set -euo pipefail

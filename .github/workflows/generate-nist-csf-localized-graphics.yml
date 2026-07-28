@@ -36,11 +36,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for lang_dir in \
-            01-foundations/NIST_CSF_2/Espanol \
-            01-foundations/NIST_CSF_2/Portugues_BR; do
-            test "$(find "$lang_dir/media" -maxdepth 1 -type f -name 'image[1-6]_*.png' | wc -l)" -eq 6
-          done
+          test "$(find 01-foundations/NIST_CSF_2/Espanol/media -maxdepth 1 -type f -name 'image[1-6]_es-419.png' | wc -l)" -eq 6
+          test "$(find 01-foundations/NIST_CSF_2/Portugues_BR/media -maxdepth 1 -type f -name 'image[1-6]_pt-BR.png' | wc -l)" -eq 6
           python - <<'PY'
           from pathlib import Path
           from PIL import Image

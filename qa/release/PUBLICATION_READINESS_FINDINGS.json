@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-07-28",
+  "repository": "Chpmunk31456/GRC-Practical-Manuals",
+  "audited_production_sha": "f28485b0387d70c90ecb07823f59d8363989989a",
+  "expected_starting_sha": "dcd8e9173d50e09be2c6bccf8a1ffe596542bd33",
+  "main_sha": "9e12c944c22ec01168185abef3a183c5ed669726",
+  "summary": {
+    "total_findings": 10,
+    "Critical": 0,
+    "High": 5,
+    "Medium": 3,
+    "Low": 1,
+    "Advisory": 1,
+    "blocking_count": 5,
+    "final_decision": "NOT READY — REMEDIATION REQUIRED"
+  },
+  "findings": [
+    {
+      "id": "PRA-001",
+      "severity": "High",
+      "category": "Generated Documents / Packaging Workflow",
+      "title": "All 22 localized DOCX packages omit embedded figures",
+      "description": "The latest production packaging run rebuilt every Spanish and Brazilian Portuguese DOCX without any word/media assets. The resulting PDFs are searchable but inherit the missing-figure condition. This includes the restored GDPR and HIPAA figures and the previously validated NIST figures.",
+      "evidence": [
+        "All 22 localized DOCX ZIPs parse successfully but contain zero word/media entries.",
+        ".github/workflows/multilingual-package-inventory.yml:80 invokes pandoc without --resource-path.",
+        ".github/workflows/generate-multilingual-drafts.yml:138 shows the resource-path control used by the safer workflow.",
+        "Production commit f28485b0387d70c90ecb07823f59d8363989989a modified exactly the 22 localized DOCX/PDF pairs after PR #13 merged."
+      ],
+      "affected_paths": [
+        ".github/workflows/multilingual-package-inventory.yml",
+        "**/Espanol/*.docx",
+        "**/Espanol/*.pdf",
+        "**/Portugues_BR/*.docx",
+        "**/Portugues_BR/*.pdf"
+      ],
+      "blocking": true,
+      "recommended_remediation": "Correct the production package builder to use the localized manual directory as its resource path, add per-family embedded-figure assertions, regenerate all 22 localized package pairs, and rerun full integrity and visual checks.",
+      "verification_method": "ZIP/XML inspection of every DOCX, PDF text extraction, production commit diff, and workflow source review",
+      "status": "open"
+    },
+    {
+      "id": "PRA-002",
+      "severity": "High",
+      "category": "images-and-provenance",
+      "title": "Sixty-nine inventoried localized image references remain missing",
+      "description": "All 69 unresolved provenance records point to destination assets that do not currently exist. Their English-source provenance is recoverable, but localization is incomplete, so the figures do not render and remain publication blockers.",
+      "evidence": [
+        "Inventory: 82 total records, 13 restored, 69 unresolved.",
+        "All 69 unresolved destination paths are absent.",
+        "Breakdown: CIS Controls 11; NIST RMF / SP 800-53 10; ISO/IEC 27001/27002 9; PCI DSS 9; Incident Response / BCDR 10; Cloud Security 10; Third-Party Risk 10.",
+        "Language breakdown: Latin American Spanish 1; Brazilian Portuguese 68."
+      ],
+      "affected_paths": [
+        "qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json",
+        "qa/images/LEGACY_IMAGE_PROVENANCE_AUDIT.md",
+        "01-foundations/**/Espanol/*.md",
+        "01-foundations/**/Portugues_BR/*.md",
+        "02-management-systems/**/Portugues_BR/*.md",
+        "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/*.md",
+        "05-operational-resilience/**/Portugues_BR/*.md",
+        "06-cloud-and-technology-risk/**/Portugues_BR/*.md",
+        "07-third-party-risk/**/Portugues_BR/*.md"
+      ],
+      "blocking": true,
+      "recommended_remediation": "Continue the provenance-controlled, owner-reviewed localization process in one- or two-family batches; rebuild and validate affected packages after each approved batch.",
+      "verification_method": "Inventory reconciliation, destination existence checks, Markdown path resolution, hash and dimension verification",
+      "status": "open"
+    },
+    {
+      "id": "PRA-003",
+      "severity": "High",
+      "category": "markdown-links",
+      "title": "Widespread internal Markdown navigation targets do not resolve",
+      "description": "Automated anchor reconstruction found 2,687 unresolved internal-anchor links across 29 Markdown files. Representative TOC links omit numbering or retain punctuation that GitHub removes from generated anchors.",
+      "evidence": [
+        "2,862 internal-anchor links checked; 2,687 did not match a generated heading anchor.",
+        "01-foundations/CIS_Controls_v8.1/English_Source_CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md links to #cis-controls-v8.1-foundations while the heading is '# 1. CIS Controls v8.1 Foundations' at line 187.",
+        "The condition affects 29 Markdown files and therefore primary navigation at repository scale."
+      ],
+      "affected_paths": [
+        "**/*.md"
+      ],
+      "blocking": true,
+      "recommended_remediation": "Generate stable explicit anchors or rebuild every TOC from the actual heading anchors, then validate with a second independent anchor/link parser.",
+      "verification_method": "UTF-8 Markdown parsing, heading normalization, target-to-anchor reconciliation, and representative manual inspection",
+      "status": "open"
+    },
+    {
+      "id": "PRA-004",
+      "severity": "High",
+      "category": "language-and-editorial",
+      "title": "Material language, extraction, and human-review gates remain open",
+      "description": "The repository still labels the localized editions as machine-assisted drafts and explicitly records native-language, visual, accessibility, and technical/factual review as incomplete. High-risk spot checks also found obvious extraction artifacts and untranslated fragments.",
+      "evidence": [
+        "qa/README.md:10-13 records language review in progress and visual, accessibility, and technical/factual review pending.",
+        "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md:728-730 contains a broken table header and 'TEN TODO' extraction residue.",
+        "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.md:723,731,739 contains hash-only level-six headings.",
+        "Draft notices remain present, appropriately preventing final-edition claims."
+      ],
+      "affected_paths": [
+        "qa/README.md",
+        "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+        "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.md",
+        "**/Espanol/*.md",
+        "**/Portugues_BR/*.md"
+      ],
+      "blocking": true,
+      "recommended_remediation": "Complete native-language, legal/regulatory, technical/factual, extraction-artifact, and page-by-page editorial review with recorded sign-off; remediate findings in separate manual-scoped PRs.",
+      "verification_method": "Repository status-document review plus representative and high-risk line-level editorial inspection",
+      "status": "open"
+    },
+    {
+      "id": "PRA-005",
+      "severity": "High",
+      "category": "automation-and-release-gates",
+      "title": "No complete current release-gate workflow result exists for the audited production head",
+      "description": "The inventory pipeline run that created the audited package commit succeeded, but the audited SHA itself has no independent full release-gate run. Other relevant workflows last passed on older commits, and the successful inventory workflow did not detect the zero-image packages.",
+      "evidence": [
+        "Run 30406450571 succeeded at dcd8e9173d50e09be2c6bccf8a1ffe596542bd33 and created f28485b0387d70c90ecb07823f59d8363989989a.",
+        "Build multilingual documents last passed in run 30397710662 at d0d802f3ddfd12257bc7efa6e44739586eaf7f19.",
+        "Generate multilingual drafts last passed in run 30392074420 at 9f4ea6bade27104cd336339786237fe7c08240e2.",
+        "Package multilingual QA last passed in run 30261820792 at 3fbf90155a5383a47c6204afb854d88ad85a03d8.",
+        "No dedicated release workflow is present."
+      ],
+      "affected_paths": [
+        ".github/workflows/",
+        "MULTILINGUAL_BUILD_VERIFICATION.md",
+        "MULTILINGUAL_PACKAGE_INVENTORY.json",
+        "MULTILINGUAL_PACKAGE_INVENTORY.md"
+      ],
+      "blocking": true,
+      "recommended_remediation": "Create or extend a non-writing release-gate workflow that runs at the candidate SHA and validates links, required images, embedded figures, package freshness, accessibility proxies, inventory reconciliation, and all regression tests.",
+      "verification_method": "Live GitHub Actions workflow/run inspection and workflow-source review",
+      "status": "open"
+    },
+    {
+      "id": "PRA-006",
+      "severity": "Medium",
+      "category": "markdown-structure",
+      "title": "Malformed tables, heading jumps, duplicate headings, and one unresolved placeholder remain",
+      "description": "Mechanical review found 85 malformed table separators across 9 files, 3 heading-level jumps, 24 duplicate-heading groups, and one unambiguous uppercase TODO extraction residue.",
+      "evidence": [
+        "85 table structures have header/separator column-count mismatches.",
+        "Three heading-level jumps include NIST CSF localized files and NIST RMF Spanish.",
+        "Twenty-four duplicate-heading groups can produce ambiguous anchors.",
+        "CIS Spanish line 730 contains 'TEN TODO'."
+      ],
+      "affected_paths": [
+        "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+        "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+        "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+        "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.md"
+      ],
+      "blocking": false,
+      "recommended_remediation": "Review and repair the affected tables and headings in manual-scoped editorial PRs, preserving substantive meaning and framework identifiers.",
+      "verification_method": "Markdown table, heading, duplicate-anchor, code-fence, and placeholder analysis",
+      "status": "open"
+    },
+    {
+      "id": "PRA-007",
+      "severity": "Medium",
+      "category": "accessibility",
+      "title": "Accessibility and document-metadata verification is incomplete",
+      "description": "Accessibility review remains explicitly pending. All 22 localized DOCX and PDF packages lack document-title metadata, and missing figures prevent validation of equivalent text, reading order, contrast, and color-independent meaning in the generated editions.",
+      "evidence": [
+        "qa/README.md:11-12 marks page-by-page visual and accessibility review pending.",
+        "Zero of 22 localized DOCX core-property records contain a title.",
+        "Zero of 22 localized PDFs contain title metadata.",
+        "Page-level reading order, PDF tagging, contrast, and assistive-technology behavior could not be certified."
+      ],
+      "affected_paths": [
+        "ACCESSIBILITY.md",
+        "qa/README.md",
+        "**/Espanol/*.docx",
+        "**/Espanol/*.pdf",
+        "**/Portugues_BR/*.docx",
+        "**/Portugues_BR/*.pdf"
+      ],
+      "blocking": false,
+      "recommended_remediation": "After package regeneration, add language and title metadata, run authoring-tool accessibility checks, inspect tags and reading order, and record assistive-technology and page-by-page visual results.",
+      "verification_method": "DOCX core-property and ZIP/XML inspection, PDF metadata extraction, repository accessibility-status review",
+      "status": "open"
+    },
+    {
+      "id": "PRA-008",
+      "severity": "Medium",
+      "category": "repository-metadata",
+      "title": "Repository metadata is incomplete or stale for a release candidate",
+      "description": "The README understates multilingual availability, and standard security, conduct, and citation metadata files are absent.",
+      "evidence": [
+        "README.md:30-34 says only SOC 2 has Spanish Markdown despite 22 localized editions being present.",
+        "SECURITY.md is absent.",
+        "CODE_OF_CONDUCT.md is absent.",
+        "CITATION.cff is absent."
+      ],
+      "affected_paths": [
+        "README.md",
+        "SECURITY.md",
+        "CODE_OF_CONDUCT.md",
+        "CITATION.cff"
+      ],
+      "blocking": false,
+      "recommended_remediation": "Update the catalog and language statement, define a security-reporting route, and decide whether conduct and citation metadata are required for the intended distribution.",
+      "verification_method": "Root metadata inventory and README line-level review",
+      "status": "open"
+    },
+    {
+      "id": "PRA-009",
+      "severity": "Low",
+      "category": "repository-hygiene",
+      "title": "Unreferenced QA assets and retained work branches need disposition",
+      "description": "Sixty-six tracked images are not referenced by Markdown. Many are intentional QA render artifacts, while some are localized NIST alternates. Two non-production work branches remain in addition to main and production.",
+      "evidence": [
+        "95 tracked images checked; 66 are not referenced from Markdown.",
+        "Live branches: main, production/multilingual-grc-editions, editorial/multilingual-language-review, restore/hipaa-remaining-images-batch."
+      ],
+      "affected_paths": [
+        "qa/nist_visual_qa/",
+        "qa/nist_visual_qa_compact/",
+        "qa/nist_visual_qa_final/",
+        "qa/nist_visual_qa_tiny/",
+        "01-foundations/NIST_CSF_2/Espanol/media/",
+        "01-foundations/NIST_CSF_2/Portugues_BR/media/"
+      ],
+      "blocking": false,
+      "recommended_remediation": "Classify retained QA evidence versus orphaned production assets and document or remove only through a separate reviewed cleanup change.",
+      "verification_method": "Tracked-image inventory, SHA-256 grouping, Markdown-reference reconciliation, live branch listing",
+      "status": "open"
+    },
+    {
+      "id": "PRA-010",
+      "severity": "Advisory",
+      "category": "evidence-limitation",
+      "title": "External HTTP link reachability could not be verified from the audit environment",
+      "description": "The audit extracted 184 unique external URLs, but outbound HTTP checks failed at the audit environment boundary before an HTTP status was returned. These URLs are not counted as broken without network evidence.",
+      "evidence": [
+        "184 unique external URLs extracted from 924 total link/image targets.",
+        "All 184 network attempts ended without an HTTP response in this environment.",
+        "Relative repository links were evaluated independently."
+      ],
+      "affected_paths": [
+        "**/*.md"
+      ],
+      "blocking": false,
+      "recommended_remediation": "Run an allow-listed external-link checker from CI, retain status and redirect evidence, and review failures for authoritative replacement URLs.",
+      "verification_method": "Independent URL extraction plus attempted live HTTP checks; environment limitation recorded",
+      "status": "open"
+    }
+  ]
+}

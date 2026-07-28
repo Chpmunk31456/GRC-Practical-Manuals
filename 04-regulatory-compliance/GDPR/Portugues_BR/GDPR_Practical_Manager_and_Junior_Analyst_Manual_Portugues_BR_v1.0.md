@@ -155,7 +155,7 @@ Sumário
 
 [9.11 Capítulo XI — Disposições finais [24](#chapter-xi-final-provisions)](#chapter-xi-final-provisions)
 
-[10. GDPR Playbook [25](#managers-gdpr-playbook)](#managers-gdpr-playbook)
+[10. Manual do GDPR para gerentes [25](#managers-gdpr-playbook)](#managers-gdpr-playbook)
 
 [10.1 Perguntas para cada proprietário de processamento [25](#questions-for-every-processing-owner)](#questions-for-every-processing-owner)
 
@@ -730,7 +730,7 @@ O relatório da Comissão requer relatórios periódicos de avaliação, especia
 A revisão de outros actos jurídicos da União exige uma revisão e uma eventual alteração de outras leis da UE em matéria de protecção de dados para assegurar a coerência. □ Acompanhar a regra jurídica e qualquer acção da Comissão ou dos Estados-Membros que afecte a organização. □ Registo legal, notas de revisão, decisão de gestão
 Entrada em vigor e aplicação dos Estados e aplicação a partir de 25 de maio de 2018. Acompanhar a regra jurídica e qualquer acção da Comissão ou dos Estados-Membros que afecte a organização. □ Registo legal, notas de revisão, decisão de gestão
 
-# 10. GDPR do gerente Playbook
+# 10. Manual do GDPR para gerentes
 
 *Perguntas, reuniões, métricas, decisões e sinais de alerta para a gestão.*
 
@@ -1233,7 +1233,7 @@ Consequências Efeitos prováveis sobre as pessoas
 □ Ação □ Contenção, recuperação, proteção, correção, lições
 □ Homologação • Titular da decisão, entrada legal/DPO, datas
 
-# # 16,5 Manager pré-lançamento checklist
+## 16.5 Lista de verificação pré-lançamento para gerentes
 
 - Finalidade e proprietário aprovado
 

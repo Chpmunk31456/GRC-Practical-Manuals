@@ -36,7 +36,7 @@
       "missing_image_sources": [
         "media/image3.png"
       ],
-      "characters": 161238,
+      "characters": 161284,
       "lines": 1161
     },
     {
@@ -90,7 +90,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 144837,
+      "characters": 144853,
       "lines": 1161
     },
     {
@@ -404,7 +404,7 @@
       "missing_image_sources": [
         "media/image5.png"
       ],
-      "characters": 94424,
+      "characters": 94567,
       "lines": 1404
     },
     {
@@ -440,7 +440,7 @@
         "media/image4.png",
         "media/image5.png"
       ],
-      "characters": 90229,
+      "characters": 90264,
       "lines": 1404
     },
     {

@@ -144,7 +144,7 @@ Contenido de la palabra:** Este documento contiene un campo de mesa de contenido
 
 [24.16 Velociraptor [40](#velociraptor)](#velociraptor)
 
-[25. El CIS Controls Playbook [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
+[25. Manual de los Controles CIS para gerentes [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
 
 [26. Guía de la carrera de analista junior [42](#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
@@ -178,7 +178,7 @@ Contenido de la palabra:** Este documento contiene un campo de mesa de contenido
 
 [30.1 Documentos de trabajo de medición de seguridad [48](#safeguard-measurement-workpaper)](#safeguard-measurement-workpaper)
 
-[30.2 Registro de búsqueda y prueba [48](#finding-and-retest-record)](#finding-and-retest-record)
+[30.2 Registro de hallazgos y nuevas pruebas [48](#finding-and-retest-record)](#finding-and-retest-record)
 
 [30.3 Glosario [48](#glossary)](#glossary)
 
@@ -875,7 +875,7 @@ Inicio rápido seguro: Despliegue sólo en un laboratorio autorizado aislado, re
 
 Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
 
-# 25. Manual de Controles CIS de Manager
+# 25. Manual de los Controles CIS para gerentes
 
 *Las preguntas, el tablero, la propiedad y los administradores de decisiones deben controlar.*
 
@@ -1083,7 +1083,7 @@ Inputs y validación de la vida
 Excepciones y limitaciones de la vida
 La acción, el dueño, la fecha y la prueba de la vida
 
-## 30.2 Finding and retest record
+## 30.2 Registro de hallazgos y nuevas pruebas
 
 |** |
 |... |

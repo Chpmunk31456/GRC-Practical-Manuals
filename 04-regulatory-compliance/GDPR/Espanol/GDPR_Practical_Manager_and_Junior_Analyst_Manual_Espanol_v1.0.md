@@ -50,7 +50,7 @@ Cómo utilizar este manual
 
 Los administradores deben comenzar con los capítulos 1 a 8 y utilizar el libro de juegos y las plantillas como referencias de trabajo.
 
-Los analistas juniores deben estudiar los derechos, evidencia, guía de artículos, herramientas, laboratorio ficticio, proyectos de cartera y capítulo de entrevista.
+Los analistas junior deben estudiar los derechos, la evidencia, la guía de artículos, las herramientas, el laboratorio ficticio, los proyectos de portafolio y el capítulo de entrevistas.
 
 Los lectores técnicos deben conectar cada herramienta a un propósito definido, riesgo, control, propietario y proceso de revisión.
 
@@ -155,7 +155,7 @@ Respuesta
 
 [9.11 Capítulo XI - Disposiciones finales [24](#chapter-xi-final-provisions)](#chapter-xi-final-provisions)
 
-[10. Manual de juegos GDPR [25](#managers-gdpr-playbook)](#managers-gdpr-playbook)
+[10. Manual del GDPR para gerentes [25](#managers-gdpr-playbook)](#managers-gdpr-playbook)
 
 [10.1 Preguntas para cada propietario del procesamiento [25](#questions-for-every-processing-owner)](#questions-for-every-processing-owner)
 
@@ -369,7 +369,7 @@ TEN DPO | Asesor y monitor independiente donde se designa TENA AVISO, monitoree,
 
 Los datos personales son más amplios que la información que nombre directamente a alguien. Los datos especiales incluyen información sobre el origen racial o étnico, opiniones políticas, religión o creencias, membresía sindical, genética, biometría utilizada para la identificación única, salud, vida sexual o orientación sexual. Los datos sobre condenas y delitos penales tienen controles separados en virtud del artículo 10.
 
-*Manager checkpoint:** Requiere un análisis por escrito de alcance y función antes de aprobar un nuevo producto, proveedor, tecnología de seguimiento, caso de uso de inteligencia artificial o flujo internacional de datos. |
+| **Punto de control para gerentes:** Requiere un análisis por escrito del alcance y la función antes de aprobar un nuevo producto, proveedor, tecnología de seguimiento, caso de uso de inteligencia artificial o flujo internacional de datos. |
 |. |
 
 # 3. Principios y bases legales
@@ -730,7 +730,7 @@ TEN 94 | Repetición de la Directiva 95/46/EC TENCIÓN Repeti la antigua Directi
 TEN 98 | Revisión de otros actos jurídicos de la Unión ANTE Requiere revisión y posible enmienda de otras leyes de protección de datos de la UE para la coherencia. | Seguimiento de la norma jurídica y de cualquier acción de la Comisión o de los Estados Miembros que afecte a la organización. | Registro legal, notas de revisión, decisión de gestión
 | 99 | Entrada en vigor y aplicación | Estados entrar en vigor y aplicación desde el 25 de mayo de 2018. | Seguimiento de la norma jurídica y de cualquier acción de la Comisión o de los Estados Miembros que afecte a la organización. | Registro legal, notas de revisión, decisión de gestión
 
-# 10. Libro de juegos GDPR
+# 10. Manual del GDPR para gerentes
 
 *Preguntas, reuniones, métricas, decisiones y señales de advertencia para la gestión*.
 
@@ -791,7 +791,7 @@ Retención permanente ¿Están operando y revisando trabajos de supresión? Verd
 
 *Un camino seguro y honesto de aprender la ley a demostrar la capacidad de entrada*.
 
-<img src="media/image5.png" style="width:6.15in;height:3.34699in" alt="Aprendizaje, práctica, cartera, explicación y aplicación forman un camino de carrera." />
+<img src="media/image5.png" style="width:6.15in;height:3.34699in" alt="El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional." />
 
 Figura 5. Vía de análisis de privacidad junior
 
@@ -842,7 +842,7 @@ tención de riesgo | DPIA pantalla y DPIA ficticio completo
 Ø Incidentes ← Breach ficha informativa, evaluación del riesgo, decisión de notificación
 | Comunicación | Resumen del administrador de una página y explicación de entrevista
 
-| ** Honra sincera:** Una cartera de laboratorio no es experiencia laboral profesional. Etiquete claramente como práctica, utilice datos ficticios y explique lo que aprendió y lo que requirió examen de expertos. |
+| **Honestidad profesional:** Un portafolio de laboratorio no equivale a experiencia laboral profesional. Identifíquelo claramente como práctica, utilice datos ficticios y explique qué aprendió y qué requirió revisión de especialistas. |
 Respuesta
 
 Herramientas de código abierto para el trabajo GDPR
@@ -1082,7 +1082,7 @@ Use tres herramientas Capítulo 12 en un laboratorio aislado y limitaciones de d
 
 # 14. Plan de aprendizaje de 30 días
 
-*Un mes realista de estudio, práctica, trabajo de cartera y preparación de entrevistas.*
+*Un mes realista de estudio, práctica, trabajo de portafolio y preparación para entrevistas.*
 
 | **Week** |**
 |-------------------------------- |
@@ -1101,7 +1101,7 @@ TEN Week 4 | Herramientas, portafolio, entrevista, aplicación | Portafolio y re
 
 4. Revisar el registro de claridad y evidencia.
 
-5. Añadir una mejora a la cartera.
+5. Añadir una mejora al portafolio.
 
 15. Preparación de entrevistas
 
@@ -1233,7 +1233,7 @@ prehensión de riesgo tóxico probabilidad, severidad, análisis de alto riesgo
 tención, recuperación, protección, corrección, lecciones
 ← Aprobación Silencioso Propietario de la decisión, entrada legal/DPO, fechas
 
-## 16,5 Manager pre-launch checklist
+## 16.5 Lista de verificación previa al lanzamiento para gerentes
 
 - Propósito y propietario aprobado
 

@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '.github/workflows/launch-nist-integration.yml'
+      - 'production/NIST_GRAPHICS_LAUNCH.trigger'
   workflow_dispatch:
 
 permissions:

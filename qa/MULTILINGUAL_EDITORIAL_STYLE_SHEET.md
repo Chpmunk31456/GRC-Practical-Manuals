@@ -133,4 +133,3 @@ Avoid:
 - [ ] Corrections are limited to language issues that are clear from the English source.
 - [ ] Uncertain terminology is recorded for human review instead of guessed.
 - [ ] DOCX/PDF regeneration occurs only after the manual’s Markdown correction set is accepted.
-

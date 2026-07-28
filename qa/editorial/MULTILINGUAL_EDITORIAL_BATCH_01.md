@@ -83,4 +83,3 @@ The following remain required before publication:
 - page-by-page visual review of DOCX and PDF output;
 - review and resolution of all 82 legacy non-NIST image references;
 - review of residual mixed-language prose and extraction damage outside the narrow high-confidence corrections in this batch.
-

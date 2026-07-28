@@ -14,6 +14,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: multilingual-production-writes
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -22,7 +26,7 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: production/multilingual-grc-editions
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python 3.11
@@ -89,15 +93,33 @@ jobs:
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
+      - name: Validate one bounded translation
+        timeout-minutes: 10
+        shell: bash
+        run: |
+          set -euo pipefail
+          smoke_dir="${RUNNER_TEMP}/multilingual-smoke"
+          python scripts/build_multilingual_drafts.py \
+            --source-limit 1 \
+            --line-limit 25 \
+            --target es \
+            --max-chars 400 \
+            --destination-root "$smoke_dir"
+          test "$(find "$smoke_dir" -type f -name '*.md' | wc -l)" -eq 1
+          grep -q 'Estado de revisión' "$(find "$smoke_dir" -type f -name '*.md' -print -quit)"
+
       - name: Generate multilingual Markdown drafts
         id: generate_markdown
+        timeout-minutes: 45
         shell: bash
         run: |
           set -o pipefail
           {
             echo
             echo '## Generate translated Markdown'
-            python scripts/build_multilingual_drafts.py
+            python scripts/build_multilingual_drafts.py \
+              --refresh-generated \
+              --allow-protected-existing
             echo
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
@@ -144,7 +166,7 @@ jobs:
           } >> production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 
       - name: Commit generated drafts or diagnostic report
-        if: always()
+        if: always() && github.ref_name == 'production/multilingual-grc-editions'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - production/multilingual-grc-editions
+  pull_request:
+    branches:
+      - production/multilingual-grc-editions
   workflow_dispatch:
 
 permissions:
@@ -21,7 +24,7 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python 3.11

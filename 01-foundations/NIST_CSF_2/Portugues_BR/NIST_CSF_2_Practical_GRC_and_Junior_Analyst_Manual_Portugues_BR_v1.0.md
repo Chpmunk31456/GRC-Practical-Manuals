@@ -900,7 +900,7 @@ Exemplo:** Para o período definido de serviço e revisão, o controle foi adequ
 
 * Links oficiais, inícios rápidos seguros, suporte CSF, evidências e limitações.*
 
-<img src="media/image7.png" style="largura:6.15in;altura:3.39605in" alt="Autorização, validação, ação corretiva e reteste transformam a saída técnica em evidência útil." />
+![Autorização, validação, ação corretiva e reteste transformam a saída técnica em evidência útil.](media/image1_pt-BR.png)
 
 Figura 7. Da saída da ferramenta à evidência
 
@@ -1171,7 +1171,7 @@ Recuperação , a integridade da restauração e os objetivos de serviço críti
 
 * Um caminho seguro e honesto para GRC, análise de risco, conformidade e cibersegurança.*
 
-<img src="media/image8.png" style="width:6.15in;height:3.20335in" alt="Learn, map, test, report, and apply with honest portfolio evidence." />
+![Learn, map, test, report, and apply with honest portfolio evidence.](media/image2_pt-BR.png)
 
 Figura 8. Caminho do analista júnior
 

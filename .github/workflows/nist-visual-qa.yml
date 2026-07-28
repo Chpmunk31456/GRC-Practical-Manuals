@@ -26,16 +26,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Render figure pages and create contact sheets
+      - name: Render compact figure-page contact sheets
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p qa/nist_visual_qa
+          mkdir -p qa/nist_visual_qa_compact
           process_pdf() {
             lang="$1"
             pdf="$2"
             prefix="$3"
-            work="qa/nist_visual_qa/${prefix}_work"
+            work="qa/nist_visual_qa_compact/${prefix}_work"
             mkdir -p "$work"
             pages=""
             total=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
@@ -47,22 +47,18 @@ jobs:
             done
             pages=$(printf '%s\n' "$pages" | xargs -n1 | awk '!seen[$0]++' | xargs)
             test -n "$pages"
-            printf '%s\n' "$pages" > "qa/nist_visual_qa/${prefix}_figure_pages.txt"
+            printf '%s\n' "$pages" > "qa/nist_visual_qa_compact/${prefix}_figure_pages.txt"
             idx=0
             for p in $pages; do
               idx=$((idx+1))
-              pdftoppm -f "$p" -l "$p" -jpeg -r 110 -jpegopt quality=70 "$pdf" "$work/page" >/dev/null 2>&1
+              pdftoppm -f "$p" -l "$p" -jpeg -r 72 -jpegopt quality=50 "$pdf" "$work/page" >/dev/null 2>&1
               src=$(ls "$work"/page-*.jpg | tail -n1)
-              convert "$src" -resize 720x950\> -gravity north -background white -splice 0x54 \
-                -pointsize 28 -fill black -annotate +0+12 "${lang} - page ${p}" \
+              convert "$src" -resize 360x480\> -gravity north -background white -splice 0x28 \
+                -pointsize 16 -fill black -annotate +0+6 "${lang} p.${p}" \
                 "$work/thumb_${idx}.jpg"
             done
-            montage "$work"/thumb_*.jpg -tile 2x -geometry +12+12 -background white \
-              -quality 65 "qa/nist_visual_qa/${prefix}_contact_sheet.jpg"
-            base64 -w 0 "qa/nist_visual_qa/${prefix}_contact_sheet.jpg" > "qa/nist_visual_qa/${prefix}_contact_sheet.b64"
-            split -b 45000 -d -a 2 "qa/nist_visual_qa/${prefix}_contact_sheet.b64" "qa/nist_visual_qa/${prefix}_contact_sheet.b64.part"
-            rm "qa/nist_visual_qa/${prefix}_contact_sheet.b64"
-            rm -rf "$work"
+            montage "$work"/thumb_*.jpg -tile 2x -geometry +6+6 -background white \
+              -quality 45 "qa/nist_visual_qa_compact/${prefix}_compact.jpg"
           }
 
           process_pdf "Spanish" \
@@ -72,10 +68,10 @@ jobs:
             "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf" \
             "pt"
 
-      - name: Commit temporary QA assets
+      - name: Commit compact QA assets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add qa/nist_visual_qa
-          git commit -m 'Add temporary NIST visual QA contact sheets'
+          git add qa/nist_visual_qa_compact
+          git commit -m 'Add compact NIST visual QA assets'
           git push origin HEAD:production/multilingual-grc-editions

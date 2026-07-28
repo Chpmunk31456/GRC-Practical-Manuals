@@ -88,6 +88,9 @@ jobs:
       - name: Run multilingual inventory
         run: python scripts/inventory_multilingual_packages.py
 
+      - name: Verify embedded DOCX media
+        run: python scripts/validate_docx_embedded_media.py
+
       - name: Write production verification report
         shell: bash
         run: |

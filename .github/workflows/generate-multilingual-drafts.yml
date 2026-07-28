@@ -113,7 +113,7 @@ jobs:
           {
             echo
             echo '## Generate translated Markdown'
-            python scripts/build_multilingual_drafts.py
+            python scripts/build_multilingual_drafts.py --allow-unresolved-existing
             echo
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md

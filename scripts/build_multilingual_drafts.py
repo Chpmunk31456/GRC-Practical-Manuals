@@ -8,6 +8,8 @@ files are explicitly labeled as machine-assisted drafts pending human language r
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import re
 from pathlib import Path
 
@@ -45,10 +47,70 @@ PROTECTED_PATTERNS = [
 ]
 
 DEFAULT_MAX_CHARS = 800
+CHECKPOINT_VERSION = 1
+GENERATOR_ID = "scripts/build_multilingual_drafts.py"
 
 
 def log(message: str) -> None:
     print(message, flush=True)
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def checkpoint_path(destination: Path) -> Path:
+    return destination.with_suffix(destination.suffix + ".translation-checkpoint.json")
+
+
+def generation_settings(*, max_chars: int, line_limit: int | None) -> dict[str, object]:
+    return {
+        "source_language": "en",
+        "translation_engine": "argos",
+        "max_chars": max_chars,
+        "line_limit": line_limit,
+    }
+
+
+def expected_checkpoint(
+    *,
+    source_text: str,
+    output_text: str,
+    target: str,
+    max_chars: int,
+    line_limit: int | None,
+) -> dict[str, object]:
+    return {
+        "generator": GENERATOR_ID,
+        "checkpoint_version": CHECKPOINT_VERSION,
+        "source_sha256": sha256_text(source_text),
+        "output_sha256": sha256_text(output_text),
+        "target_language": target,
+        "settings": generation_settings(max_chars=max_chars, line_limit=line_limit),
+    }
+
+
+def read_checkpoint(path: Path) -> dict[str, object] | None:
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def trusted_generated_checkpoint(checkpoint: dict[str, object] | None) -> bool:
+    return bool(
+        checkpoint
+        and checkpoint.get("generator") == GENERATOR_ID
+        and checkpoint.get("checkpoint_version") == CHECKPOINT_VERSION
+        and isinstance(checkpoint.get("output_sha256"), str)
+    )
+
+
+def atomic_write(path: Path, text: str) -> None:
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(text, encoding="utf-8")
+    temporary.replace(path)
 
 
 def protect(text: str) -> tuple[str, dict[str, str]]:
@@ -151,7 +213,16 @@ def output_name(source: Path, suffix: str) -> str:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--force", action="store_true", help="Overwrite completed localized output files.")
+    parser.add_argument(
+        "--refresh-generated",
+        action="store_true",
+        help="Refresh only stale, unmodified outputs with trusted workflow checkpoints.",
+    )
+    parser.add_argument(
+        "--allow-unresolved-existing",
+        action="store_true",
+        help="Return success after clearly reporting protected or stale existing outputs.",
+    )
     parser.add_argument("--target", choices=sorted(LANGUAGES), action="append", help="Limit target language.")
     parser.add_argument("--source", action="append", help="Limit sources by repository-relative path or filename.")
     parser.add_argument("--source-limit", type=int, help="Process at most this many matched source files.")
@@ -188,8 +259,11 @@ def main(argv: list[str] | None = None) -> int:
     targets = args.target or list(LANGUAGES)
     generated = 0
     skipped = 0
+    protected = 0
+    stale = 0
     for source in sources:
-        original = source.read_text(encoding="utf-8-sig", errors="strict")
+        complete_source = source.read_text(encoding="utf-8-sig", errors="strict")
+        original = complete_source
         if args.line_limit is not None:
             original = "\n".join(original.splitlines()[: args.line_limit]) + "\n"
         relative_source = source.relative_to(ROOT)
@@ -206,10 +280,51 @@ def main(argv: list[str] | None = None) -> int:
                 if destination.is_relative_to(ROOT)
                 else str(destination)
             )
-            if destination.is_file() and destination.stat().st_size > 0 and not args.force:
-                log(f"[skip] completed output exists: {display_destination}")
-                skipped += 1
-                continue
+            metadata_path = checkpoint_path(destination)
+            if destination.is_file():
+                existing = destination.read_text(encoding="utf-8")
+                checkpoint = read_checkpoint(metadata_path)
+                if not trusted_generated_checkpoint(checkpoint):
+                    log(
+                        f"[protected] output={display_destination} reason=no-trusted-checkpoint "
+                        "classification=manual-or-legacy action=leave-unchanged"
+                    )
+                    protected += 1
+                    continue
+                if checkpoint["output_sha256"] != sha256_text(existing):
+                    log(
+                        f"[protected] output={display_destination} reason=output-modified-after-generation "
+                        "classification=manual-or-reviewed action=leave-unchanged"
+                    )
+                    protected += 1
+                    continue
+
+                current = expected_checkpoint(
+                    source_text=complete_source,
+                    output_text=existing,
+                    target=target,
+                    max_chars=args.max_chars,
+                    line_limit=args.line_limit,
+                )
+                comparable_keys = (
+                    "generator",
+                    "checkpoint_version",
+                    "source_sha256",
+                    "target_language",
+                    "settings",
+                )
+                if all(checkpoint.get(key) == current[key] for key in comparable_keys):
+                    log(f"[skip] valid checkpoint: {display_destination}")
+                    skipped += 1
+                    continue
+                if not args.refresh_generated:
+                    log(
+                        f"[stale] output={display_destination} reason=source-or-settings-changed "
+                        "action=rerun-with---refresh-generated"
+                    )
+                    stale += 1
+                    continue
+                log(f"[refresh] trusted stale generated output: {display_destination}")
 
             log(f"[start] source={relative_source} target={target} output={display_destination}")
             translated = translate_markdown(
@@ -219,12 +334,29 @@ def main(argv: list[str] | None = None) -> int:
                 source_name=relative_source.as_posix(),
                 max_chars=args.max_chars,
             )
-            temporary = destination.with_suffix(destination.suffix + ".tmp")
-            temporary.write_text(translated, encoding="utf-8")
-            temporary.replace(destination)
+            metadata = expected_checkpoint(
+                source_text=complete_source,
+                output_text=translated,
+                target=target,
+                max_chars=args.max_chars,
+                line_limit=args.line_limit,
+            )
+            atomic_write(destination, translated)
+            atomic_write(metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
             log(f"[complete] output={display_destination} chars={len(translated)}")
             generated += 1
-    log(f"[summary] generated={generated} skipped={skipped} sources={len(sources)} targets={len(targets)}")
+    unresolved = protected + stale
+    log(
+        f"[summary] generated={generated} skipped={skipped} protected={protected} stale={stale} "
+        f"sources={len(sources)} targets={len(targets)}"
+    )
+    if unresolved and not args.allow_unresolved_existing:
+        log(
+            "[action-required] Existing outputs were left unchanged. Review the classifications; "
+            "use --refresh-generated only for trusted stale generated files, or "
+            "--allow-unresolved-existing to acknowledge protected legacy/manual outputs."
+        )
+        return 2
     return 0
 
 

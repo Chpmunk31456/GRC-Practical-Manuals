@@ -61,7 +61,7 @@ jobs:
 
       - name: Generate Spanish and Brazilian Portuguese Markdown drafts
         timeout-minutes: 45
-        run: python scripts/build_multilingual_drafts.py
+        run: python scripts/build_multilingual_drafts.py --allow-unresolved-existing
 
       - name: Build DOCX and searchable PDF editions
         shell: bash

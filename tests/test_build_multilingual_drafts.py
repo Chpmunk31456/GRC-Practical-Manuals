@@ -39,6 +39,14 @@ def load_script(translator: FakeTranslator):
 
 
 class BuildMultilingualDraftsTests(unittest.TestCase):
+    def make_source(self, root: Path, text: str = "New source\n") -> tuple[Path, Path]:
+        source_dir = root / "01-foundations" / "Example"
+        source_dir.mkdir(parents=True)
+        source = source_dir / "English_Source_Example_v1.0.md"
+        source.write_text(text, encoding="utf-8")
+        destination = source_dir / "Espanol" / "Example_Espanol_v1.0.md"
+        return source, destination
+
     def test_chunking_preserves_protected_markdown_and_logs_progress(self) -> None:
         translator = FakeTranslator()
         module = load_script(translator)
@@ -65,28 +73,90 @@ class BuildMultilingualDraftsTests(unittest.TestCase):
         self.assertIn("```bash\necho unchanged\n```", translated)
         self.assertIn("source=manual.md target=es line=1/", stdout.getvalue())
 
-    def test_existing_output_is_skipped_without_force(self) -> None:
+    def test_unchanged_source_with_valid_checkpoint_is_skipped(self) -> None:
         translator = FakeTranslator()
         module = load_script(translator)
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            source_dir = root / "01-foundations" / "Example"
-            source_dir.mkdir(parents=True)
-            (source_dir / "English_Source_Example_v1.0.md").write_text("New source\n", encoding="utf-8")
-            localized = source_dir / "Espanol"
-            localized.mkdir()
-            destination = localized / "Example_Espanol_v1.0.md"
-            destination.write_text("Reviewed edition\n", encoding="utf-8")
+            _, destination = self.make_source(root)
             module.ROOT = root
+            self.assertEqual(0, module.main(["--target", "es"]))
+            generated = destination.read_text(encoding="utf-8")
+            translator.chunks.clear()
 
             stdout = io.StringIO()
             with redirect_stdout(stdout):
                 result = module.main(["--target", "es"])
 
             self.assertEqual(0, result)
-            self.assertEqual("Reviewed edition\n", destination.read_text(encoding="utf-8"))
+            self.assertEqual(generated, destination.read_text(encoding="utf-8"))
             self.assertEqual([], translator.chunks)
-            self.assertIn("[skip] completed output exists", stdout.getvalue())
+            self.assertIn("[skip] valid checkpoint", stdout.getvalue())
+
+    def test_changed_source_invalidates_checkpoint(self) -> None:
+        translator = FakeTranslator()
+        module = load_script(translator)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, destination = self.make_source(root)
+            module.ROOT = root
+            self.assertEqual(0, module.main(["--target", "es"]))
+            generated = destination.read_text(encoding="utf-8")
+            translator.chunks.clear()
+            source.write_text("Changed English source\n", encoding="utf-8")
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = module.main(["--target", "es"])
+
+            self.assertEqual(2, result)
+            self.assertEqual(generated, destination.read_text(encoding="utf-8"))
+            self.assertEqual([], translator.chunks)
+            self.assertIn("[stale]", stdout.getvalue())
+            self.assertIn("--refresh-generated", stdout.getvalue())
+
+    def test_reviewed_file_remains_protected_even_when_refresh_requested(self) -> None:
+        translator = FakeTranslator()
+        module = load_script(translator)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            _, destination = self.make_source(root)
+            module.ROOT = root
+            self.assertEqual(0, module.main(["--target", "es"]))
+            destination.write_text("Human-reviewed localized edition\n", encoding="utf-8")
+            translator.chunks.clear()
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = module.main(
+                    ["--target", "es", "--refresh-generated", "--allow-unresolved-existing"]
+                )
+
+            self.assertEqual(0, result)
+            self.assertEqual("Human-reviewed localized edition\n", destination.read_text(encoding="utf-8"))
+            self.assertEqual([], translator.chunks)
+            self.assertIn("reason=output-modified-after-generation", stdout.getvalue())
+            self.assertIn("classification=manual-or-reviewed", stdout.getvalue())
+
+    def test_legacy_existing_file_without_checkpoint_is_reported(self) -> None:
+        translator = FakeTranslator()
+        module = load_script(translator)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            _, destination = self.make_source(root)
+            destination.parent.mkdir()
+            destination.write_text("Legacy localized edition\n", encoding="utf-8")
+            module.ROOT = root
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = module.main(["--target", "es"])
+
+            self.assertEqual(2, result)
+            self.assertEqual("Legacy localized edition\n", destination.read_text(encoding="utf-8"))
+            self.assertEqual([], translator.chunks)
+            self.assertIn("reason=no-trusted-checkpoint", stdout.getvalue())
+            self.assertIn("[action-required]", stdout.getvalue())
 
     def test_translation_error_identifies_exact_context(self) -> None:
         translator = FakeTranslator()

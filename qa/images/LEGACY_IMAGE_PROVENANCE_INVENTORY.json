@@ -1,0 +1,3304 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-07-28",
+  "base_branch": "production/multilingual-grc-editions",
+  "base_commit": "1dfbf3082aefc42fc413cca79250012b7b005ff2",
+  "scope": "Inventory and provenance audit only; no image or manual changes.",
+  "classification_note": "Classification flags are evidence properties and may overlap. Primary classification is mutually exclusive. A duplicate count denotes localized references that share the same family/source asset, not duplicate image files.",
+  "summary": {
+    "total_unresolved_references": 82,
+    "totals_by_manual": {
+      "CIS Controls v8.1": 11,
+      "NIST RMF / SP 800-53": 10,
+      "ISO/IEC 27001/27002": 9,
+      "GDPR": 6,
+      "HIPAA": 7,
+      "PCI DSS v4.0.1": 9,
+      "Incident Response / BCDR": 10,
+      "Cloud Security and Compliance": 10,
+      "Third-Party Risk and Supply Chain Security": 10
+    },
+    "totals_by_language": {
+      "Latin American Spanish": 2,
+      "Brazilian Portuguese": 80
+    },
+    "totals_by_primary_classification": {
+      "requires_localization": 82
+    },
+    "classification_flag_totals": {
+      "duplicate_reference_records": 4,
+      "duplicate_asset_groups": 2,
+      "duplicate_excess_references": 2,
+      "obsolete": 0,
+      "recoverable": 82,
+      "requires_localization": 82,
+      "no_trustworthy_source": 0
+    },
+    "unique_english_source_assets": 80
+  },
+  "proposed_resolution_batches": [
+    {
+      "batch": 1,
+      "manual_families": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "reason": "Start with the smallest regulatory pair and resolve the GDPR cross-language duplicate once."
+    },
+    {
+      "batch": 2,
+      "manual_families": [
+        "CIS Controls v8.1"
+      ],
+      "reason": "Resolve the remaining cross-language duplicate while keeping one ten-figure family isolated."
+    },
+    {
+      "batch": 3,
+      "manual_families": [
+        "ISO/IEC 27001/27002",
+        "PCI DSS v4.0.1"
+      ],
+      "reason": "Process two nine-figure control and assurance families together."
+    },
+    {
+      "batch": 4,
+      "manual_families": [
+        "NIST RMF / SP 800-53",
+        "Incident Response / BCDR"
+      ],
+      "reason": "Process two ten-figure security and resilience families."
+    },
+    {
+      "batch": 5,
+      "manual_families": [
+        "Cloud Security and Compliance",
+        "Third-Party Risk and Supply Chain Security"
+      ],
+      "reason": "Finish with the two ten-figure technology and supply-chain families."
+    }
+  ],
+  "references": [
+    {
+      "id": "LEGACY-IMG-001",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Latin American Spanish",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+      "markdown_line": 275,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Gráfico 3 CIS Estructura de medición de salvaguardias",
+      "alt_text": "La especificación oficial pasa de los datos definidos a las operaciones, medidas, métricas y revisión de procedimiento.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "4d6715c8d58edc0c0c4540952d5c5e820959fdbedf22b855607e1f742ca494da",
+        "size_bytes": 64531
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Espanol/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "4d6715c8d58edc0c0c4540952d5c5e820959fdbedf22b855607e1f742ca494da",
+          "size_bytes": 64531
+        }
+      ],
+      "duplicate_reference": true,
+      "duplicate_reference_locations": [
+        {
+          "language": "Brazilian Portuguese",
+          "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+          "image_path": "media/image3.png"
+        }
+      ],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-002",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 193,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Os 18 controles de segurança críticos CIS",
+      "alt_text": "Os controles organizam 153 Salvaguardas em um programa defensivo prático.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "e9fa670695e8c0134bb13518e5fd154f670ce938c36e6463f84159966a3a7e37",
+        "size_bytes": 161969
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "e9fa670695e8c0134bb13518e5fd154f670ce938c36e6463f84159966a3a7e37",
+          "size_bytes": 161969
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-003",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 222,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Progressão do Grupo de Implementação",
+      "alt_text": "Cada grupo constrói sobre o grupo anterior; IG3 contém todas as salvaguardas.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "33b8748d2e5918a72eee2dfbd4734e0c3d2082727b291bf98d900f12d99d525a",
+        "size_bytes": 51426
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "33b8748d2e5918a72eee2dfbd4734e0c3d2082727b291bf98d900f12d99d525a",
+          "size_bytes": 51426
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-004",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 275,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. CIS Estrutura de medição de salvaguarda",
+      "alt_text": "A especificação oficial passa de entradas de dados definidas para operações, medidas, métricas e revisão de procedimentos.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "4d6715c8d58edc0c0c4540952d5c5e820959fdbedf22b855607e1f742ca494da",
+        "size_bytes": 64531
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "4d6715c8d58edc0c0c4540952d5c5e820959fdbedf22b855607e1f742ca494da",
+          "size_bytes": 64531
+        }
+      ],
+      "duplicate_reference": true,
+      "duplicate_reference_locations": [
+        {
+          "language": "Latin American Spanish",
+          "markdown_file": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+          "image_path": "media/image3.png"
+        }
+      ],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-005",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 335,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Ciclo de inventário de ativos e software",
+      "alt_text": "Discovery, reconciliation, response, and review keep foundal populations current.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "48061ff30e30bcbcd8105c9909090fddb72afdb109bd86613f5f5081086bb88a",
+        "size_bytes": 65945
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "48061ff30e30bcbcd8105c9909090fddb72afdb109bd86613f5f5081086bb88a",
+          "size_bytes": 65945
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-006",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 375,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Ciclo de vida de proteção de dados",
+      "alt_text": "Descobrir, classificar, proteger, reter e eliminar dados de acordo com a sensibilidade e necessidade.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "1901a1854735c6317970805dd6ea69bd0bf542637ed37ae596f64baeb2a44b0b",
+        "size_bytes": 60193
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "1901a1854735c6317970805dd6ea69bd0bf542637ed37ae596f64baeb2a44b0b",
+          "size_bytes": 60193
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-007",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 447,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Ciclo de vida de identidade e acesso",
+      "alt_text": "Contas e privilégios exigem criação aprovada, autenticação forte, revisão e revogação oportuna.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "95782a5cdb8cb6b4c33cf6c3cc4dcac7446f9f694a1ebb8dfb24b3a2989ff68f",
+        "size_bytes": 63230
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "95782a5cdb8cb6b4c33cf6c3cc4dcac7446f9f694a1ebb8dfb24b3a2989ff68f",
+          "size_bytes": 63230
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-008",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 471,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Gestão contínua da vulnerabilidade",
+      "alt_text": "Complete coverage and verific remediation matter more than produting scan reports.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "4fc7b6ef3432347bdcbe73c6f9c0134910d5302ace8befe1298466150880745b",
+        "size_bytes": 62033
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "4fc7b6ef3432347bdcbe73c6f9c0134910d5302ace8befe1298466150880745b",
+          "size_bytes": 62033
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-009",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 593,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Fluxo de trabalho de monitorização à resposta",
+      "alt_text": "Contexto centralizado, detecção sintonizada, investigação humana e resposta criam defesa útil.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "98c8e146487155663e4e139cfc096698da0ffbc5446bbf7061e4811aebabb6f7",
+        "size_bytes": 61892
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "98c8e146487155663e4e139cfc096698da0ffbc5446bbf7061e4811aebabb6f7",
+          "size_bytes": 61892
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-010",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 686,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Disponibilidade para resposta ao incidente",
+      "alt_text": "Preparados papéis, relatórios, comunicação, exercícios e comentários reduzem o impacto incidente.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "52156a7e51140521c97235195b393293acb599af81695e7dd3962cc84850c917",
+        "size_bytes": 64488
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "52156a7e51140521c97235195b393293acb599af81695e7dd3962cc84850c917",
+          "size_bytes": 64488
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-011",
+      "manual_family": "CIS Controls v8.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 913,
+      "exact_image_path": "media/image10.png",
+      "figure_number": 10,
+      "caption": "Figura 10. CIS Júnior Controla o caminho do analista",
+      "alt_text": "Learn the framework, map Safeguards, measure evidence, report gaps, and build an honest portfolio.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image10.png",
+        "sha256": "0457461a3bd41c4720c55d51c16c30ff5945b30c1715721d0de900c454e7a3f0",
+        "size_bytes": 61183
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/CIS_Controls_v8.1/Portugues_BR/media/image10.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image10.png",
+          "sha256": "0457461a3bd41c4720c55d51c16c30ff5945b30c1715721d0de900c454e7a3f0",
+          "size_bytes": 61183
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-012",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 302,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Sete passos RMF",
+      "alt_text": "Prepare suporta cada passo, e Monitor alimenta novas informações de volta às decisões de risco.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "bf9139cc64951e64b6eeda9d2b036e558727b7bf9785f376d166962898c9f12c",
+        "size_bytes": 56819
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "bf9139cc64951e64b6eeda9d2b036e558727b7bf9785f376d166962898c9f12c",
+          "size_bytes": 56819
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-013",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 341,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Três níveis de gestão de risco",
+      "alt_text": "Enterprise direction, mission/business needs, and system controls must stay connected.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "cff99c3c2a9a814705fa8a67c799c5a90dea0b66e88d45a77f518e745c8338db",
+        "size_bytes": 40830
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "cff99c3c2a9a814705fa8a67c799c5a90dea0b66e88d45a77f518e745c8338db",
+          "size_bytes": 40830
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-014",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 429,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Fluxo de trabalho de categorização",
+      "alt_text": "Categorização começa com impacto da informação e produz um nível de impacto do sistema aprovado.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "7c1d6b105951d7729cee70da52227279d160015d3a54f7e4e1a95ff1b50ac5d3",
+        "size_bytes": 55323
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "7c1d6b105951d7729cee70da52227279d160015d3a54f7e4e1a95ff1b50ac5d3",
+          "size_bytes": 55323
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-015",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 518,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Decisão de autorização de risco",
+      "alt_text": "O pacote suporta uma decisão responsável com escopo definido, condições, duração e monitoramento.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "6559a15901813af60e19c407fa9d5c756cca5bda205ed2ee544b66f88291927a",
+        "size_bytes": 61069
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "6559a15901813af60e19c407fa9d5c756cca5bda205ed2ee544b66f88291927a",
+          "size_bytes": 61069
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-016",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 572,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Personalização de controle",
+      "alt_text": "Tailoring altera uma linha de base inicial em um conjunto de controle documentado baseado em risco.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "e009687ce400e38dc3354c1e0ef079cc0bb9294074a15b889a45f5e49341a3ed",
+        "size_bytes": 57294
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "e009687ce400e38dc3354c1e0ef079cc0bb9294074a15b889a45f5e49341a3ed",
+          "size_bytes": 57294
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-017",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 627,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Anatomia de controle",
+      "alt_text": "Identificadores de controle sozinhos são insuficientes; leitura de requisitos, parâmetros, discussão e melhorias juntos.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "0692dada06e8ae304bb7e10f034e7fded60f8ac7e1bcfdf6efe216507b21a64c",
+        "size_bytes": 59719
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "0692dada06e8ae304bb7e10f034e7fded60f8ac7e1bcfdf6efe216507b21a64c",
+          "size_bytes": 59719
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-018",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 657,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Estrutura do procedimento de avaliação",
+      "alt_text": "Métodos, objetos, profundidade e cobertura devem se adequar ao objetivo e risco.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "c8a2a71f4808e9c72206a395f0a8825d05a38c6568290d70cf984932b94295fe",
+        "size_bytes": 62485
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "c8a2a71f4808e9c72206a395f0a8825d05a38c6568290d70cf984932b94295fe",
+          "size_bytes": 62485
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-019",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 750,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Monitoramento contínuo e resposta",
+      "alt_text": "Monitoramento fecha a alça da mudança e evidências para decisões de risco corrigidas.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "c5f0cd033292481969e30ac6b352aa7aa914f1a6f3bba6bd6a2d7dccb0719ede",
+        "size_bytes": 57391
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "c5f0cd033292481969e30ac6b352aa7aa914f1a6f3bba6bd6a2d7dccb0719ede",
+          "size_bytes": 57391
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-020",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 769,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Fluxo do modelo OSCAL",
+      "alt_text": "Modelos OSCAL conectam o que é necessário, como é implementado, como é avaliado e o que permanece aberto.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "c9618a6f6b20a3490723a9e72ddbcddf24f5894533e1e9b831d90229956b49ef",
+        "size_bytes": 62286
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "c9618a6f6b20a3490723a9e72ddbcddf24f5894533e1e9b831d90229956b49ef",
+          "size_bytes": 62286
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-021",
+      "manual_family": "NIST RMF / SP 800-53",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 1220,
+      "exact_image_path": "media/image10.png",
+      "figure_number": 10,
+      "caption": "Figura 10. Caminho de analista RMF júnior",
+      "alt_text": "Trace cada conclusão da exigência à implementação, evidência, resultado, risco e ação.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+        "internal_path": "word/media/image10.png",
+        "sha256": "6f4c9012e7d6357197688e52de8760d425d8e97898ccbdfbe97d1736af030a05",
+        "size_bytes": 50971
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image10.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx",
+          "internal_path": "word/media/image10.png",
+          "sha256": "6f4c9012e7d6357197688e52de8760d425d8e97898ccbdfbe97d1736af030a05",
+          "size_bytes": 50971
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-022",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 187,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Ciclo de melhoria contínua do ISMS",
+      "alt_text": "Contexto e planejamento de unidade de risco, implementação, avaliação e melhoria.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "bd56af707413c873bc9a0e63210a31494066bf08ecd85552d9b5fd8e6e5ae52c",
+        "size_bytes": 61541
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "bd56af707413c873bc9a0e63210a31494066bf08ecd85552d9b5fd8e6e5ae52c",
+          "size_bytes": 61541
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-023",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 236,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Fluxo de trabalho de risco de segurança da informação",
+      "alt_text": "Donos de risco avaliam cenários, tratamento e risco residual utilizando critérios definidos.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "b2d65eceaed3e2cb8e06d074bf04f466565020e420dcfb84213d2b5158398856",
+        "size_bytes": 64334
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "b2d65eceaed3e2cb8e06d074bf04f466565020e420dcfb84213d2b5158398856",
+          "size_bytes": 64334
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-024",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 258,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Declaração de fluxo de trabalho de aplicabilidade",
+      "alt_text": "The SoA registra seleção de controle fundamentada e status de implementação.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "d00bf49d8c57d981aba012718de4af7480c2395c0fad78fd9170291c688dc193",
+        "size_bytes": 62013
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "d00bf49d8c57d981aba012718de4af7480c2395c0fad78fd9170291c688dc193",
+          "size_bytes": 62013
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-025",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 285,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Cadeia de exigência à evidência",
+      "alt_text": "A evidência deve sustentar o desenho, a operação, as exceções, a correção e o reteste.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "fb018f664da63124a33c7729565db163660fc9dbcd1b75f08de182af98624415",
+        "size_bytes": 62843
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "fb018f664da63124a33c7729565db163660fc9dbcd1b75f08de182af98624415",
+          "size_bytes": 62843
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-026",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 403,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Fluxo de trabalho de auditoria interna",
+      "alt_text": "Um programa de auditoria segue risco, independência, evidências, relatórios e acompanhamento verificado.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "b887c9853701199c64308a86f718d46640f775a8d6b1c1c141d55a72c9703caf",
+        "size_bytes": 66114
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "b887c9853701199c64308a86f718d46640f775a8d6b1c1c141d55a72c9703caf",
+          "size_bytes": 66114
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-027",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 421,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Temas de controlo do anexo A",
+      "alt_text": "Os 93 controles de referência são agrupados em temas organizacionais, pessoas, físicos e tecnológicos.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "26374cfeeba69538a022d84a7ba8c75b6ff0b2bcddba3a197e15115e01c4460f",
+        "size_bytes": 60995
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "26374cfeeba69538a022d84a7ba8c75b6ff0b2bcddba3a197e15115e01c4460f",
+          "size_bytes": 60995
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-028",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 472,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Gestão de incidentes de segurança",
+      "alt_text": "Preparar, avaliar, responder, preservar evidências e aprender com incidentes.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "51dff9a47f04b9ca5a8f4ad6bb0f162bff969ee8576427dd5925f897f3b7b081",
+        "size_bytes": 57784
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "51dff9a47f04b9ca5a8f4ad6bb0f162bff969ee8576427dd5925f897f3b7b081",
+          "size_bytes": 57784
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-029",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 669,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Caminho de certificação",
+      "alt_text": "A disponibilidade é seguida de avaliação de certificação e atividades de vigilância e renovação contínuas.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "635b75e26b4951ffb6783ebb58dcf646dfb5b7ce495b4456c5486ccbae005a89",
+        "size_bytes": 62436
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "635b75e26b4951ffb6783ebb58dcf646dfb5b7ce495b4456c5486ccbae005a89",
+          "size_bytes": 62436
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-030",
+      "manual_family": "ISO/IEC 27001/27002",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 869,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Caminho de analista ISO 27001 Júnior",
+      "alt_text": "Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "6e2af32029850762ca0fb38ed2944eea7853552b61210008a48f49910f36db23",
+        "size_bytes": 59619
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "6e2af32029850762ca0fb38ed2944eea7853552b61210008a48f49910f36db23",
+          "size_bytes": 59619
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-031",
+      "manual_family": "GDPR",
+      "language": "Latin American Spanish",
+      "markdown_file": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+      "markdown_line": 794,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Vía de análisis de privacidad junior",
+      "alt_text": "El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "e4d1806d1dd3f91acde5b16d7aacc575a52f115fa0067fdf6589b1dd8195169f",
+        "size_bytes": 59337
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Espanol/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "e4d1806d1dd3f91acde5b16d7aacc575a52f115fa0067fdf6589b1dd8195169f",
+          "size_bytes": 59337
+        }
+      ],
+      "duplicate_reference": true,
+      "duplicate_reference_locations": [
+        {
+          "language": "Brazilian Portuguese",
+          "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+          "image_path": "media/image5.png"
+        }
+      ],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-032",
+      "manual_family": "GDPR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 314,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. GDPR como um programa prático de gestão",
+      "alt_text": "Quatro blocos conectados mostram pessoas, dados, propósito e controle.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "872971742621eef8cb67d8024ab2094426984720ccf6ddd78c7c476df30d707e",
+        "size_bytes": 66310
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "872971742621eef8cb67d8024ab2094426984720ccf6ddd78c7c476df30d707e",
+          "size_bytes": 66310
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-033",
+      "manual_family": "GDPR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 379,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Ciclo de vida dos dados pessoais",
+      "alt_text": "O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "c73b0692d8c19f1dc6ff84fda67551e5a965e67d8b5bdfe996ed88b46cd28362",
+        "size_bytes": 64163
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "c73b0692d8c19f1dc6ff84fda67551e5a965e67d8b5bdfe996ed88b46cd28362",
+          "size_bytes": 64163
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-034",
+      "manual_family": "GDPR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 414,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Fluxo de trabalho de dados-sujeitos-direitos",
+      "alt_text": "Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "06319df052206cd7a287d55f5542d400707a5db5b73ceb19ab04439ac4bde4fa",
+        "size_bytes": 66234
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "06319df052206cd7a287d55f5542d400707a5db5b73ceb19ab04439ac4bde4fa",
+          "size_bytes": 66234
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-035",
+      "manual_family": "GDPR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 482,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Fluxo de trabalho de violação de dados pessoais",
+      "alt_text": "Conter, avaliar, decidir e melhorar são mostrados como um processo ligado.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "3c95e5ecbc237c39baeb3e78bf58b04a1c3bcb99c5d814305af628bee050f964",
+        "size_bytes": 74336
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "3c95e5ecbc237c39baeb3e78bf58b04a1c3bcb99c5d814305af628bee050f964",
+          "size_bytes": 74336
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-036",
+      "manual_family": "GDPR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 794,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Caminho do analista de privacidade júnior",
+      "alt_text": "Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "e4d1806d1dd3f91acde5b16d7aacc575a52f115fa0067fdf6589b1dd8195169f",
+        "size_bytes": 59337
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/GDPR/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "e4d1806d1dd3f91acde5b16d7aacc575a52f115fa0067fdf6589b1dd8195169f",
+          "size_bytes": 59337
+        }
+      ],
+      "duplicate_reference": true,
+      "duplicate_reference_locations": [
+        {
+          "language": "Latin American Spanish",
+          "markdown_file": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
+          "image_path": "media/image5.png"
+        }
+      ],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-037",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 340,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. As principais áreas de conformidade HIPAA",
+      "alt_text": "Privacidade, Segurança, Notificação de Violação e Execução estão conectados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "cd0b0efa0cb5cd2d10a92ea8f7aab48c8be3100e6a5821937b7b3acebd88c520",
+        "size_bytes": 71632
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "cd0b0efa0cb5cd2d10a92ea8f7aab48c8be3100e6a5821937b7b3acebd88c520",
+          "size_bytes": 71632
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-038",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 367,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Ciclo de vida da IPH",
+      "alt_text": "PHI é criado, usado, compartilhado, armazenado e destruído em todo o seu ciclo de vida.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "14243cdd601a07e1ba8db0a2fd96fafeece8f692373c335d84e7f518b3098111",
+        "size_bytes": 69690
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "14243cdd601a07e1ba8db0a2fd96fafeece8f692373c335d84e7f518b3098111",
+          "size_bytes": 69690
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-039",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 481,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. HIPAA Salvaguardas das regras de segurança",
+      "alt_text": "As salvaguardas administrativas, físicas e técnicas dependem da análise de risco.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "4eff6992d2e8c68f9ce0dfcb265da0a513f75b70760abdaffa0ba787e001ce3c",
+        "size_bytes": 67581
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "4eff6992d2e8c68f9ce0dfcb265da0a513f75b70760abdaffa0ba787e001ce3c",
+          "size_bytes": 67581
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-040",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 592,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Fluxo de trabalho de violação HIPAA",
+      "alt_text": "Descoberta, contenção, avaliação, notificação e melhoria formam um único processo.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "5ac7d4c8dab0a8a4144f24651df3d7c3314bd52566ea1a506e94f5d5cfb7e4b9",
+        "size_bytes": 83326
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "5ac7d4c8dab0a8a4144f24651df3d7c3314bd52566ea1a506e94f5d5cfb7e4b9",
+          "size_bytes": 83326
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-041",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 785,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Ciclo de verificação da conformidade",
+      "alt_text": "Comece com o requisito e escopo, teste o controle, exceções corretas e reteste antes de concluir.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "ae43dab6dac435eaa2ae07536d5bb92874b07a6dca05be1dac47b655714213c7",
+        "size_bytes": 77730
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "ae43dab6dac435eaa2ae07536d5bb92874b07a6dca05be1dac47b655714213c7",
+          "size_bytes": 77730
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-042",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 894,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Caminho de analista HIPAA júnior",
+      "alt_text": "Aprender, mapear, testar, documentar e aplicar trabalho formam uma trajetória de carreira.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "16a328d6362e198d48f03f678463ba13f2cfabab2123a022c1b47128ebe80f1b",
+        "size_bytes": 62094
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "16a328d6362e198d48f03f678463ba13f2cfabab2123a022c1b47128ebe80f1b",
+          "size_bytes": 62094
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-043",
+      "manual_family": "HIPAA",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 1028,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Da saída da ferramenta à evidência de conformidade",
+      "alt_text": "Um relatório sozinho não é prova; autorização, validação, remediação, e reteste criar a cadeia de evidências.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "22ebda5f4c02da795b7f589bef6a28d279207518b818fc4788dc844e02bedacf",
+        "size_bytes": 62639
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/HIPAA/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "22ebda5f4c02da795b7f589bef6a28d279207518b818fc4788dc844e02bedacf",
+          "size_bytes": 62639
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-044",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 277,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Os doze requisitos PCI DSS",
+      "alt_text": "Segurança de pagamento combina rede, sistema, dados, identidade, física, monitoramento, testes e controles de governança.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "3f302548b746cee4b519c05db742679ae819c4376110171a3c1e04823a81e91b",
+        "size_bytes": 86256
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "3f302548b746cee4b519c05db742679ae819c4376110171a3c1e04823a81e91b",
+          "size_bytes": 86256
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-045",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 312,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Categorias de dados de conta",
+      "alt_text": "PAN é central para a aplicabilidade; dados de autenticação sensíveis recebem tratamento pós-autorização mais rigoroso.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "3d629799bdc1d4c89157220a68a5ad1fe06ec48b826d05de7435277be1f3306b",
+        "size_bytes": 89725
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "3d629799bdc1d4c89157220a68a5ad1fe06ec48b826d05de7435277be1f3306b",
+          "size_bytes": 89725
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-046",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 347,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Fluxo de scoping PCI DSS",
+      "alt_text": "Comece com fluxos de dados de conta e inclui sistemas conectados e de impacto de segurança.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "83e2df7af3a58d29098df5518e0a3900996e31c617c3238c05b964ed466fb121",
+        "size_bytes": 76571
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "83e2df7af3a58d29098df5518e0a3900996e31c617c3238c05b964ed466fb121",
+          "size_bytes": 76571
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-047",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 367,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Segmentação e redução de escopo",
+      "alt_text": "A segmentação deve ser executada, monitorada e testada antes que os sistemas sejam tratados como fora de alcance.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "80ab1403158b6dad02c26217b5fb146256ba70cf512ecf3d6b5164efaac6f82b",
+        "size_bytes": 66208
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "80ab1403158b6dad02c26217b5fb146256ba70cf512ecf3d6b5164efaac6f82b",
+          "size_bytes": 66208
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-048",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 400,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Abordagens definidas e personalizadas",
+      "alt_text": "Ambos os enfoques devem atender ao objetivo de exigência e ser avaliáveis.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "b7e0c3b0b530cef180129cdfae345e65a742c540f7b10e74d08c6dff5d893f30",
+        "size_bytes": 91105
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "b7e0c3b0b530cef180129cdfae345e65a742c540f7b10e74d08c6dff5d893f30",
+          "size_bytes": 91105
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-049",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 521,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Protecção da página de pagamento do comércio electrónico",
+      "alt_text": "Inventário, autorize, valide, monitore e responda ao script de pagamento-página e mudanças de cabeçalho.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "9aab2259a2d62e12f82b7aa0843a20b1643b9d89b32896dbcdff2706c848bc6c",
+        "size_bytes": 76709
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "9aab2259a2d62e12f82b7aa0843a20b1643b9d89b32896dbcdff2706c848bc6c",
+          "size_bytes": 76709
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-050",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 642,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Fluxo de trabalho de resposta incidente de pagamento",
+      "alt_text": "Detect, conter, analisar, notificar, recuperar e melhorar usando responsabilidades e contatos preparados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "fc2f547b8c21c6c531a3ef1318bde0d702528bb22cb03dbe0d73ebc365a409a1",
+        "size_bytes": 73625
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "fc2f547b8c21c6c531a3ef1318bde0d702528bb22cb03dbe0d73ebc365a409a1",
+          "size_bytes": 73625
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-051",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 650,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 7,
+      "caption": "> Figura 7. Cadeia de exigência à prova",
+      "alt_text": "Uma conclusão defensável conecta critérios, escopo, projeto de controle, evidência completa, teste, correção e reteste.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "eb0b827f0ccfa5885aaddb25c3fcdb177c867d5062c30381a69c525a17ae0593",
+        "size_bytes": 73247
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "eb0b827f0ccfa5885aaddb25c3fcdb177c867d5062c30381a69c525a17ae0593",
+          "size_bytes": 73247
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-052",
+      "manual_family": "PCI DSS v4.0.1",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 958,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Caminho de analista de ICP Júnior",
+      "alt_text": "Learn escopo e dados, requisitos de mapa, provas de teste, relatórios de lacunas, e construir um portfólio honesto.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "15497f4531530e26f0de59f21c8641ed6d27403720dc88cfabd975ebe21fe97b",
+        "size_bytes": 60542
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "15497f4531530e26f0de59f21c8641ed6d27403720dc88cfabd975ebe21fe97b",
+          "size_bytes": 60542
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-053",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 290,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Ciclo integrado de resiliência cibernética",
+      "alt_text": "Governa, Identificar e Proteger a preparação de suporte; Detectar, Responder e Recuperar incidentes lidar; lições melhorar cada função.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "3891f95f7e8e0176f7d75408d5198c5b9834e863c06191fa67f31023e73e0393",
+        "size_bytes": 57645
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "3891f95f7e8e0176f7d75408d5198c5b9834e863c06191fa67f31023e73e0393",
+          "size_bytes": 57645
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-054",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 336,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Cadeia de raciocínio BIA",
+      "alt_text": "Analisar o impacto antes de escolher soluções de tecnologia ou continuidade.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "12a96a440d9d3e1ac40adbcbae2160858cd0c17fbdfd673a48f4e62134a95b25",
+        "size_bytes": 56986
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "12a96a440d9d3e1ac40adbcbae2160858cd0c17fbdfd673a48f4e62134a95b25",
+          "size_bytes": 56986
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-055",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 432,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Fluxo de trabalho de detecção em caso",
+      "alt_text": "Um sinal torna-se um incidente apenas após validação e classificação sob critérios aprovados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "a306683cbb9f98b46fd135d4775a7283411f339d17a4eb1efc5c3cec8527606d",
+        "size_bytes": 58967
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "a306683cbb9f98b46fd135d4775a7283411f339d17a4eb1efc5c3cec8527606d",
+          "size_bytes": 58967
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-056",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 517,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Decisão de contenção",
+      "alt_text": "Escolha ações através de objetivos explícitos, impactos, autoridade e verificação.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "7a2638b3804ab56396a9be5f960bcafd9c12601d8c1a15d7f8d15d5661f892cf",
+        "size_bytes": 60906
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "7a2638b3804ab56396a9be5f960bcafd9c12601d8c1a15d7f8d15d5661f892cf",
+          "size_bytes": 60906
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-057",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 566,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Retorno confiável ao serviço",
+      "alt_text": "Validação de segurança e aceitação de negócios pertencem dentro da recuperação.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "31431192da26cbc4518432531db7d083b1aef20654f6a41ab849b611e221d7da",
+        "size_bytes": 63016
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "31431192da26cbc4518432531db7d083b1aef20654f6a41ab849b611e221d7da",
+          "size_bytes": 63016
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-058",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 657,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Integridade e custódia das provas",
+      "alt_text": "Identidade do documento, preservação, integridade, custódia, análise e limites.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "65ed34d30c5aa3f74c9926bfb8e32f0fc62dd8ec583e47e3a217817fbc0ad4e8",
+        "size_bytes": 58740
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "65ed34d30c5aa3f74c9926bfb8e32f0fc62dd8ec583e47e3a217817fbc0ad4e8",
+          "size_bytes": 58740
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-059",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 782,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Sistema de gestão da continuidade empresarial",
+      "alt_text": "Contexto, liderança, planejamento, suporte, operação, avaliação e trabalho de melhoria como um ciclo.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "f6c0e9b732a91a9b9408aaa72b355190ae97c361ecd3b4dc8fc33543739c5c88",
+        "size_bytes": 57737
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "f6c0e9b732a91a9b9408aaa72b355190ae97c361ecd3b4dc8fc33543739c5c88",
+          "size_bytes": 57737
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-060",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 863,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Garantia de backup para recuperação",
+      "alt_text": "Copy success is not recovery proof; test complete services and data integrity.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "ac25d4bf34c9f339914e2df1470b67a8c7624afee9d4fa4454a7f4141ac3646f",
+        "size_bytes": 59894
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "ac25d4bf34c9f339914e2df1470b67a8c7624afee9d4fa4454a7f4141ac3646f",
+          "size_bytes": 59894
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-061",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 922,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Ciclo de exercício e melhoria",
+      "alt_text": "Definir objetivos e capturar evidências observáveis antes de atribuir a ação corretiva.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "cecb0621e31b622493ac85c971d7d6ed25fb7acb6e6b8c551d3aeba6a4535329",
+        "size_bytes": 59881
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "cecb0621e31b622493ac85c971d7d6ed25fb7acb6e6b8c551d3aeba6a4535329",
+          "size_bytes": 59881
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-062",
+      "manual_family": "Incident Response / BCDR",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 1195,
+      "exact_image_path": "media/image10.png",
+      "figure_number": 10,
+      "caption": "Figura 10. Caminho do analista de resiliência júnior",
+      "alt_text": "Construir práticas seguras desde quadros até evidências, casos, documentos de trabalho e histórias de entrevista.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+        "internal_path": "word/media/image10.png",
+        "sha256": "fb812a63c99a9d2c358fcc3b36600c14c0115b51c08203d27076caee41e1b457",
+        "size_bytes": 57378
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image10.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx",
+          "internal_path": "word/media/image10.png",
+          "sha256": "fb812a63c99a9d2c358fcc3b36600c14c0115b51c08203d27076caee41e1b457",
+          "size_bytes": 57378
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-063",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 316,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Modelo de responsabilidade compartilhada",
+      "alt_text": "Sempre confirmar a documentação e contrato de serviço exato; diagramas são pontos de partida simplificados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "0434f52856cba9a9ed38aac33568ca78f76a70f25af59e4511fc98a466385e38",
+        "size_bytes": 46488
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "0434f52856cba9a9ed38aac33568ca78f76a70f25af59e4511fc98a466385e38",
+          "size_bytes": 46488
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-064",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 392,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Fundação da zona de aterragem",
+      "alt_text": "Hierarquia, identidade, redes, logs centralizados, políticas e separação de carga de trabalho criam guardrails consistentes.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "27669ea0c9698656040949eb973bfafa5f5787bde4599326f6dc958ef2e5018f",
+        "size_bytes": 58086
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "27669ea0c9698656040949eb973bfafa5f5787bde4599326f6dc958ef2e5018f",
+          "size_bytes": 58086
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-065",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 414,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Ciclo de vida da identidade em nuvem",
+      "alt_text": "Fortaleza de prova de identidade, MFA, menos privilégio, controle de sessão, revisão e revogação reduzem o risco de controle-plane.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "20d133f005711bf4b2756e1290f82131432d5419c3d99f1b4b3d4c6082be6f96",
+        "size_bytes": 50629
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "20d133f005711bf4b2756e1290f82131432d5419c3d99f1b4b3d4c6082be6f96",
+          "size_bytes": 50629
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-066",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 462,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Ciclo de vida dos dados em nuvem",
+      "alt_text": "Track data from discovery and purpose through controlled delection, including replicas, logs, backups, and subprocessors.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "e5578a43da4b2e112a3413586ce22a32e0fdfa5786ab2110f21f335022423748",
+        "size_bytes": 54972
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "e5578a43da4b2e112a3413586ce22a32e0fdfa5786ab2110f21f335022423748",
+          "size_bytes": 54972
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-067",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 566,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Fluxo de DevSecOps em nuvem",
+      "alt_text": "Security evidence should follow code from design through build, implantation, and runtime.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "f32826c6c729e1a5ac8e3422c834c7b7973c6934ed0d48c7ca5bdd1c273ec97d",
+        "size_bytes": 54261
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "f32826c6c729e1a5ac8e3422c834c7b7973c6934ed0d48c7ca5bdd1c273ec97d",
+          "size_bytes": 54261
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-068",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 614,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Camadas de segurança Kubernetes",
+      "alt_text": "Managed Kubernetes ainda requer o controle do cliente de cargas de trabalho, acesso, políticas, rede, dados e evidências.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "baee85fa695a83316d8c4f3cf6c0fafdd643cd40157346d42f266aa0f6b15f49",
+        "size_bytes": 59105
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "baee85fa695a83316d8c4f3cf6c0fafdd643cd40157346d42f266aa0f6b15f49",
+          "size_bytes": 59105
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-069",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 703,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Resiliência e recuperação em nuvem",
+      "alt_text": "Características de disponibilidade não provam que o serviço completo do cliente pode atender RTO e RPO.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "d9c12f5230a3a3151af87edd80a15f5f1e041a6ba3fad51109b08c6f196681e7",
+        "size_bytes": 57978
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "d9c12f5230a3a3151af87edd80a15f5f1e041a6ba3fad51109b08c6f196681e7",
+          "size_bytes": 57978
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-070",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 723,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Fluxo de trabalho incidente na nuvem",
+      "alt_text": "Preserve registros de provedores e identidade segura antes de evidências expiram ou mudanças spread.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "5b837502d755baa5dbd133960824df081bfcbf4765dbbd5b47c7d465fa0d423d",
+        "size_bytes": 62019
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "5b837502d755baa5dbd133960824df081bfcbf4765dbbd5b47c7d465fa0d423d",
+          "size_bytes": 62019
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-071",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 831,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Cadeia de teste de evidência em nuvem",
+      "alt_text": "Automated configuration evidence torna-se garantia apenas após escopo, confiabilidade, exceções e risco serem avaliados.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "91270a37f77394dfd7b23c23b5765c1fc8e5189dc5ab41003e2f0641b8e46335",
+        "size_bytes": 57903
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "91270a37f77394dfd7b23c23b5765c1fc8e5189dc5ab41003e2f0641b8e46335",
+          "size_bytes": 57903
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-072",
+      "manual_family": "Cloud Security and Compliance",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 1082,
+      "exact_image_path": "media/image10.png",
+      "figure_number": 10,
+      "caption": "Figura 10. Caminho de analista de segurança de nuvem júnior",
+      "alt_text": "Laboratórios seguros e evidências rastreáveis transformam conceitos de nuvem em prova de portfólio.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+        "internal_path": "word/media/image10.png",
+        "sha256": "9f9b61b3c372f512640ef857d36f21a568d4eb9e64da436f46f30e7b2e7da6ba",
+        "size_bytes": 54224
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/image10.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx",
+          "internal_path": "word/media/image10.png",
+          "sha256": "9f9b61b3c372f512640ef857d36f21a568d4eb9e64da436f46f30e7b2e7da6ba",
+          "size_bytes": 54224
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-073",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 263,
+      "exact_image_path": "media/image1.png",
+      "figure_number": 1,
+      "caption": "Figura 1. Ciclo de vida de risco de terceiros",
+      "alt_text": "O mesmo registro deve seguir o fornecedor do pedido de negócios através de saída segura.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image1.png",
+        "sha256": "51a596b647e540ff5bedff99cdc6e67a71a1e42815108c6eea062e59cf598efd",
+        "size_bytes": 64526
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image1.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image1.png",
+          "sha256": "51a596b647e540ff5bedff99cdc6e67a71a1e42815108c6eea062e59cf598efd",
+          "size_bytes": 64526
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-074",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 313,
+      "exact_image_path": "media/image2.png",
+      "figure_number": 2,
+      "caption": "Figura 2. Listas de fornecedores de exemplo",
+      "alt_text": "Use fatores documentados e permita a escalada quando um fator é especialmente grave.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image2.png",
+        "sha256": "28baa33051c87cf57e6a8c6c1f1925cacb6785659a8d24ed874397410973a0e1",
+        "size_bytes": 83206
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image2.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image2.png",
+          "sha256": "28baa33051c87cf57e6a8c6c1f1925cacb6785659a8d24ed874397410973a0e1",
+          "size_bytes": 83206
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-075",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 366,
+      "exact_image_path": "media/image3.png",
+      "figure_number": 3,
+      "caption": "Figura 3. Fluxo de trabalho de due-diligence",
+      "alt_text": "Pesquisa e solicitações de evidências devem seguir o papel e risco real do fornecedor.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image3.png",
+        "sha256": "624ade63be43a98d720c4dcdac55f4eca2b3b2a94008331428c35837722c9310",
+        "size_bytes": 58605
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image3.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image3.png",
+          "sha256": "624ade63be43a98d720c4dcdac55f4eca2b3b2a94008331428c35837722c9310",
+          "size_bytes": 58605
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-076",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 397,
+      "exact_image_path": "media/image4.png",
+      "figure_number": 4,
+      "caption": "Figura 4. Escada de confiança das evidências",
+      "alt_text": "Fontes de evidência se complementam; nenhum artefato responde a cada pergunta.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image4.png",
+        "sha256": "a6dfd5a9992b92402c115efd3953beb922ef62eb11efa1e49eb7e4ee837761fe",
+        "size_bytes": 65343
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image4.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image4.png",
+          "sha256": "a6dfd5a9992b92402c115efd3953beb922ef62eb11efa1e49eb7e4ee837761fe",
+          "size_bytes": 65343
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-077",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 546,
+      "exact_image_path": "media/image5.png",
+      "figure_number": 5,
+      "caption": "Figura 5. Coordenação incidente do fornecedor",
+      "alt_text": "A linguagem do contrato só ajuda quando contatos e decisões são praticadas.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image5.png",
+        "sha256": "117d624b4a00fb9d25a89d438fed1b6923ba02bc13d00a713cf935542393bea8",
+        "size_bytes": 62844
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image5.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image5.png",
+          "sha256": "117d624b4a00fb9d25a89d438fed1b6923ba02bc13d00a713cf935542393bea8",
+          "size_bytes": 62844
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-078",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 575,
+      "exact_image_path": "media/image6.png",
+      "figure_number": 6,
+      "caption": "Figura 6. Concentração oculta da quarta parte",
+      "alt_text": "Map dependências materiais entre fornecedores, não só dentro de cada questionário.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image6.png",
+        "sha256": "c3a4e0db57a7d88644a6affb290611166ac896c9546c1c5022680c14c6544eb9",
+        "size_bytes": 76675
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image6.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image6.png",
+          "sha256": "c3a4e0db57a7d88644a6affb290611166ac896c9546c1c5022680c14c6544eb9",
+          "size_bytes": 76675
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-079",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 620,
+      "exact_image_path": "media/image7.png",
+      "figure_number": 7,
+      "caption": "Figura 7. Fluxo de evidência da cadeia de fornecimento de software",
+      "alt_text": "Conecte o SBOM e evidência de segurança à versão exata lançada e operada.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image7.png",
+        "sha256": "76470037e623ce6cfb04c6020061e33d7c6f0c668407b2421bc108ba45e2db7b",
+        "size_bytes": 62266
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image7.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image7.png",
+          "sha256": "76470037e623ce6cfb04c6020061e33d7c6f0c668407b2421bc108ba45e2db7b",
+          "size_bytes": 62266
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-080",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 650,
+      "exact_image_path": "media/image8.png",
+      "figure_number": 8,
+      "caption": "Figura 8. Fluxo de trabalho de risco do fornecedor de IA",
+      "alt_text": "Comece com o caso de uso permitido, dados, impacto, cadeia modelo, avaliação e controle humano.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image8.png",
+        "sha256": "11e6b955d86c04b3eca396e4a6424bb12d556b8326b90b084b3455d64a2bf84e",
+        "size_bytes": 68428
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image8.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image8.png",
+          "sha256": "11e6b955d86c04b3eca396e4a6424bb12d556b8326b90b084b3455d64a2bf84e",
+          "size_bytes": 68428
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-081",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 771,
+      "exact_image_path": "media/image9.png",
+      "figure_number": 9,
+      "caption": "Figura 9. Cadeia de testes de evidência",
+      "alt_text": "Toda conclusão deve ser rastreável a partir de critérios exatos através de reteste.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image9.png",
+        "sha256": "e0d32dee80a0a2f9624a6872b4fa5216f6a25e3cbf403a41677da11f157845b8",
+        "size_bytes": 65174
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image9.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image9.png",
+          "sha256": "e0d32dee80a0a2f9624a6872b4fa5216f6a25e3cbf403a41677da11f157845b8",
+          "size_bytes": 65174
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    },
+    {
+      "id": "LEGACY-IMG-082",
+      "manual_family": "Third-Party Risk and Supply Chain Security",
+      "language": "Brazilian Portuguese",
+      "markdown_file": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
+      "markdown_line": 990,
+      "exact_image_path": "media/image10.png",
+      "figure_number": 10,
+      "caption": "Figura 10. Caminho de analista de TPRM júnior",
+      "alt_text": "Trabalho cuidadoso e limitações honestas constroem um portfólio e confiança profissional.",
+      "english_source_image_exists": true,
+      "english_source_evidence": {
+        "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+        "internal_path": "word/media/image10.png",
+        "sha256": "ea871a215a234bb992f4fab07b2b638031be6869ca70434aaac214ee278f9fb2",
+        "size_bytes": 58037
+      },
+      "localized_asset_exists": false,
+      "localized_asset_path_checked": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/image10.png",
+      "spanish_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": false,
+      "same_asset_appears_elsewhere_in_repository": true,
+      "same_asset_locations": [
+        {
+          "container": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx",
+          "internal_path": "word/media/image10.png",
+          "sha256": "ea871a215a234bb992f4fab07b2b638031be6869ca70434aaac214ee278f9fb2",
+          "size_bytes": 58037
+        }
+      ],
+      "duplicate_reference": false,
+      "duplicate_reference_locations": [],
+      "obsolete": false,
+      "recoverable": true,
+      "requires_localization": true,
+      "no_trustworthy_source": false,
+      "primary_classification": "requires_localization",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+    }
+  ]
+}

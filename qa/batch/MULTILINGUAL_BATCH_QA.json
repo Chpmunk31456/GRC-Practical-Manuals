@@ -725,7 +725,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 83615,
+      "characters": 83688,
       "lines": 1342
     },
     {
@@ -778,7 +778,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 80728,
+      "characters": 80736,
       "lines": 1342
     },
     {
@@ -812,7 +812,7 @@
       "malformed_table_line_count": 0,
       "malformed_image_tag_count": 0,
       "missing_image_sources": [],
-      "characters": 80587,
+      "characters": 80674,
       "lines": 1300
     },
     {
@@ -860,7 +860,7 @@
         "media/image9.png",
         "media/image10.png"
       ],
-      "characters": 79579,
+      "characters": 79583,
       "lines": 1300
     }
   ]

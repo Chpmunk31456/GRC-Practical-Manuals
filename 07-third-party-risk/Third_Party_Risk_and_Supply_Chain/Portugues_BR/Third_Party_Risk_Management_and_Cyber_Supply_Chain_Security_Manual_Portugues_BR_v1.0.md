@@ -22,7 +22,7 @@ Este manual ensina um método de ciclo de vida repetitivo. Não é uma opinião 
 Nota de informação actual:** O manual reflete o material oficial verificado em 14 de julho de 2026, incluindo NIST SP 1326 (final de julho 8, 2026), NIST SP 800-18 Rev. 2 (final de junho 30, 2026), NIST SP 800-161 Rev. 1 Atualização 1, NIST SP 1305 e NIST CSF 2.0.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # Como usar este manual
+## Como usar este manual
 
 - Gerentes: comece com Capítulos 2–4, 8–13, 19 e 25.
 
@@ -164,7 +164,7 @@ Este é um índice nativo do Word. No Microsoft Word, clique dentro dele, escolh
 
 [24.16 Agente de política aberta [36](#open-policy-agent)](#open-policy-agent)
 
-[25. Playbook TPRM do gestor [37](#managers-tprm-playbook)](#managers-tprm-playbook)
+[25. Manual de TPRM para gerentes [37](#managers-tprm-playbook)](#managers-tprm-playbook)
 
 [25.1 Ritmo de funcionamento do gestor [37](#manager-operating-rhythm)](#manager-operating-rhythm)
 
@@ -955,7 +955,7 @@ Início rápido seguro: Escreva uma política de laboratório pequena para um at
 
 Evidência para reter: aprovação e escopo, ferramenta/versão, configuração ou comando, data, população alvo, resultado bruto, validação do analista, limitação, achado, ação e reteste. Limitar o acesso porque os resultados podem expor arquitetura sensível ou fraquezas.
 
-# 25. Playbook de TPRM do gerente
+# 25. Manual de TPRM para gerentes
 
 * Os gestores tornam o programa real, definindo prioridades, resolvendo conflitos, financiando tratamento e desafiando evidências.*
 
@@ -970,7 +970,7 @@ Incidentes Podemos entrar em contato e coordenar com fornecedores críticos agor
 • Concentração Onde poderia um evento interromper vários serviços críticos? • A concentração inevitável carece de contingência
 □ Sair □ Podemos recuperar dados e substituir o serviço a tempo? □ Nenhum caminho de exportação, alternativa ou eliminação testado
 
-# # 25.1 Gerenciar ritmo de operação
+## 25.1 Ritmo operacional de gestão
 
 Mensal: revisão de mudanças críticas, achados graves, incidentes, bypass, trabalho atrasado e concentração.
 

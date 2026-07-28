@@ -12,8 +12,8 @@
 
 Primera edición • Julio 2026
 
-Silencio **Inside:** Actual PCI DSS v4.0.1 • todos los 12 requisitos • análisis • SAQs and ROC • e-commerce • evidencia • herramientas • laboratorios • preparación de la carrera
-Silencio.
+| **Inside:** Actual PCI DSS v4.0.1 • todos los 12 requisitos • análisis • SAQs and ROC • e-commerce • evidencia • herramientas • laboratorios • preparación de la carrera |
+|. |
 
 # Publication and Use Notice
 
@@ -52,7 +52,7 @@ Los equipos técnicos deben conectar cada hallazgo al flujo de datos de cuenta, 
 Los comerciantes y proveedores de servicios deben confirmar instrucciones de validación con su comprador, marcas de pago, clientes, evaluador y otras entidades que aceptan el cumplimiento.
 
 Contenido de la palabra:** La guía del capítulo a continuación contendrá números de página verificados para esta edición. El documento también contiene un campo nativo de Word TOC. Después de editar, haz clic con el botón derecho y selecciona Update Field, luego actualiza la tabla completa.
-Silencio.
+|. |
 
 # Tabla de contenidos
 
@@ -86,7 +86,7 @@ Silencio.
 
 [3.2 Validación del alcance [13](#scope-validation)](#scope-validation)
 
-[4. Validación, SAQs, ROC, AOC y Roles [14](#validation-saqs-roc-aoc-and-roles)](#validation-saqs-roc-aoc-and-roles)
+[4. Validación, SAQs, ROC, AOC y Rols [14](#validation-saqs-roc-aoc-and-roles)](#validation-saqs-roc-aoc-and-roles)
 
 [5. Definidos, personalizados, compensatorios y enfoques de riesgo [15](#defined-customized-compensating-and-risk-approaches)](#defined-customized-compensating-and-risk-approaches)
 
@@ -296,10 +296,10 @@ PCI DSS se aplica a entidades que almacenan, procesan o transmiten datos de los 
 
 ## 1.3 Los seis objetivos de control
 
-Silencio ** Objetivo** Silencioso **Requisitos**
-Silencio.
-Silencio Construir y mantener una red y sistemas seguros Silencio 1–2
-Silencio Proteger los datos de la cuenta
+| ** Objetivo** Silencioso **Requisitos** |
+|. |
+| Construir y mantener una red y sistemas seguros | 1–2
+| Proteger los datos de la cuenta |
 Mantener un programa de gestión de la vulnerabilidad
 ← Aplicación de medidas de control de acceso firmes
 tención Monitor y redes de pruebas periódicas
@@ -313,15 +313,15 @@ Mantener una política de seguridad de la información
 
 Cuadro 2
 
-Silencio **Data**
+| **Data** |
 ...--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio Número de Cuenta Primaria (PAN) Silencio Datos de titulares de tarjetas ← Determines PCI DSS aplicabilidad cuando se almacenan, procesan o transmiten
-Silencio Nombre del titular de la tarjeta Silencio Datos del titular de la tarjeta
-Silencio Fecha de publicación Silencio Cardholder data Silencio Protegido con PAN Silencio
-Silencio Código de servicio Silenciosos Datos de los titulares de tarjetas Silencio Protegido
-Silencio Datos completos de seguimiento Silencio Datos de autenticación sensibles Silencio No almacenar después de la autorización excepto expresamente permitido emisor uso Silencio
-Silencio Código de verificación de tarjetas/valor Silencio Datos de autenticación sensibles
-TEN PIN/PIN block TENENCIA Datos de autenticación sensible TEN No almacene después de la autorización excepto expresamente permitido emisor uso TEN
+| Número de Cuenta Primaria (PAN) | Datos de titulares de tarjetas ← Determines PCI DSS aplicabilidad cuando se almacenan, procesan o transmiten
+| Nombre del titular de la tarjeta | Datos del titular de la tarjeta
+| Fecha de publicación | Cardholder data | Protegido con PAN |
+| Código de servicio Silenciosos Datos de los titulares de tarjetas | Protegido
+| Datos completos de seguimiento | Datos de autenticación sensibles | No almacenar después de la autorización excepto expresamente permitido emisor uso |
+| Código de verificación de tarjetas/valor | Datos de autenticación sensibles
+TEN PIN/PIN block TENENCIA Datos de autenticación sensible TEN No almacene después de la autorización excepto expresamente permitido emisor uso |
 
 ## 2.1 Los métodos de protección son diferentes
 
@@ -337,8 +337,8 @@ TEN PIN/PIN block TENENCIA Datos de autenticación sensible TEN No almacene desp
 
 - Redaction elimina la información de una copia o vista; confirma que también se controlan los datos de origen y los metadatos ocultos.
 
-Silencio **Nunca utilice datos reales en el entrenamiento:** Utilice los números de prueba del procesador de pago o valores inventados que no pueden confundirse con las cuentas reales. Nunca retenga SAD real después de la autorización.
-Silencio.
+| **Nunca utilice datos reales en el entrenamiento:** Utilice los números de prueba del procesador de pago o valores inventados que no pueden confundirse con las cuentas reales. Nunca retenga SAD real después de la autorización. |
+|. |
 
 3. Alcance, ECM y Segmentación
 
@@ -372,26 +372,26 @@ Figure 4. Segmentation and scope reduction
 
 Validar el alcance al menos anual y después de un cambio significativo. Los proveedores de servicios realizan la confirmación de alcance documentada al menos una vez cada seis meses y después de un cambio significativo. Las pruebas deben intentar encontrar tiendas de datos desconocidas, caminos alternativos, activos no gestionados, servicios compartidos, dependencias de la nube, conexiones inalámbricas y acceso administrativo.
 
-# 4. Validación, SAQs, ROC, AOC y Roles
+# 4. Validación, SAQs, ROC, AOC y Rols
 
 *Eligiendo el camino correcto de presentación de informes y el entendimiento que lo acepta.*
 
-Silencio **Artifact or role** Silencio **Purpose** Silencio**
-Silencio...
+| **Artifact or role** | **Purpose** |**
+|... |
 TEN SAQ A TENCIÓN Medios comerciales completamente subcontratados con tarjeta no presentes Eligibilidad es estricta; el comerciante sigue administrando el sitio web aplicable, el proveedor de servicios y los deberes de política
-TEN SAQ A-EP TENIDO comerciantes de comercio electrónico elegibles con un sitio web que puede afectar la seguridad de pago TEN Más requisitos se aplican porque la página de comerciante puede afectar a la transacción
-TEN SAQ B / B-IP TENCIÓN EJECUCIÓN EJECUCIONABLE O entornos terminales independientes específicos TENIDO No para el comercio electrónico; elegibilidad debe ser exacto
+TEN SAQ A-EP | comerciantes de comercio electrónico elegibles con un sitio web que puede afectar la seguridad de pago TEN Más requisitos se aplican porque la página de comerciante puede afectar a la transacción
+TEN SAQ B / B-IP TENCIÓN EJECUCIÓN EJECUCIONABLE O entornos terminales independientes específicos | No para el comercio electrónico; elegibilidad debe ser exacto
 TEN SAQ C / C-VT ANTE La aplicación de pago Eligible o entornos virtuales aislados Silencioso y restricciones de almacenamiento se aplican
-TEN SAQ P2PE TENIDO Mercadeos elegibles usando una solución PCI P2PE listada TENIDO Única solución validada uso y elegibilidad calificada
+TEN SAQ P2PE | Mercadeos elegibles usando una solución PCI P2PE listada | Única solución validada uso y elegibilidad calificada
 TEN SAQ D Merchant ANTE Merchants not eligible for a shorter SAQ or directed to use it ← Evaluación amplia de los requisitos aplicables
-Silencio SAQ D Service Provider Silencio Service providers permitted to self-assess where accepted TEN Service-provider requirements and customer responsibilities apply prehensi
-TEN ROC TENIDO Informe de evaluación detallado, generalmente completado por un QSA o ISA cuando sea necesario Silencio requerido basado en el programa de cumplimiento, nivel de validación o solicitud TENIDO
+| SAQ D Service Provider | Service providers permitted to self-assess where accepted TEN Service-provider requirements and customer responsibilities apply prehensi
+TEN ROC | Informe de evaluación detallado, generalmente completado por un QSA o ISA cuando sea necesario | requerido basado en el programa de cumplimiento, nivel de validación o solicitud |
 TEN AOC ANTE Attestation summarizing assessment and compliance status TEN Debe corresponder al SAQ correcto o ROC y el alcance ANTE
 TEN ASV ANTE PCI SSC Aprobado Escáner Vendor para los escaneos de vulnerabilidad externa requeridos TEN El escaneo de código abierto no sustituye un escaneo ASV requerido
-TEN QSA / ISA TENIDO Evaluador calificado o roles de evaluador interno capacitados ANTERI Utilizar las calificaciones actuales y las instrucciones de aceptación de laentidad
+TEN QSA / ISA | Evaluador calificado o roles de evaluador interno capacitados ANTERI Utilizar las calificaciones actuales y las instrucciones de aceptación de laentidad
 
-Silencio **Quién decide la validación:** Las marcas de pago y los compradores establecen niveles de validación mercante y expectativas de presentación de informes. Los clientes y los contratos pueden establecer expectativas de proveedores de servicios. Confirme el método requerido antes de comenzar.
-Silencio.
+| **Quién decide la validación:** Las marcas de pago y los compradores establecen niveles de validación mercante y expectativas de presentación de informes. Los clientes y los contratos pueden establecer expectativas de proveedores de servicios. Confirme el método requerido antes de comenzar. |
+|. |
 
 5. Definidos, personalizados, compensatorios y enfoques de riesgo
 
@@ -401,12 +401,12 @@ Silencio.
 
 Gráfico 5 Enfoques definidos y personalizados
 
-Silencio **Method** Silencio **Cuando se utiliza** Silencio **
-Silencio.
-Silencio Definido acercamiento Silencio Entity implementa el requisito declarado ← Requisitos pruebas y procedimientos oficiales de prueba
-TENIDO Enfoque personalizado TENIDO Entity diseña un control diferente que cumple con el objetivo personalizado de matriz de control Silencioso, análisis de riesgos, diseño, dependencias, pruebas, pruebas de funcionamiento, validación del evaluador
-Silencio Control compensatorio Silencio Una limitación técnica o empresarial legítima impide el requisito declarado TEN Constraint, objetivo, riesgo adicional, control compensatorio, mantenimiento, validación, revisión anual TEN
-Silencio Análisis de riesgo focalizado — frecuencia TENIDO Un requisito permite a la entidad definir con qué frecuencia se produce una actividad TENA, amenazas, probabilidad, impacto, racionalidad, frecuencia, propietario, aprobación, revisión anual TEN
+| **Method** | **Cuando se utiliza** | **
+|. |
+| Definido acercamiento | Entity implementa el requisito declarado ← Requisitos pruebas y procedimientos oficiales de prueba
+| Enfoque personalizado | Entity diseña un control diferente que cumple con el objetivo personalizado de matriz de control Silencioso, análisis de riesgos, diseño, dependencias, pruebas, pruebas de funcionamiento, validación del evaluador
+| Control compensatorio | Una limitación técnica o empresarial legítima impide el requisito declarado TEN Constraint, objetivo, riesgo adicional, control compensatorio, mantenimiento, validación, revisión anual |
+| Análisis de riesgo focalizado — frecuencia | Un requisito permite a la entidad definir con qué frecuencia se produce una actividad TENA, amenazas, probabilidad, impacto, racionalidad, frecuencia, propietario, aprobación, revisión anual |
 tención Análisis de riesgos orientados — personalizado tención apoya el diseño y validación de control personalizado ← Amenazas, suposiciones, objetivo de control, diseño, riesgo residual, pruebas, pruebas latitud
 
 El enfoque personalizado no es compatible en cada SAQ o contexto de requisitos.
@@ -422,15 +422,15 @@ Confirme las expectativas de aceptación y evaluación antes de comprometerse a 
 *Install and Maintain Network Security Controls*
 
 **Propósito de la solicitud:** Instalar y mantener los controles de seguridad de la red
-Silencio...
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio 1.1 Silencio Definir, asignar y documentar los procesos y roles utilizados para cumplir Requisitos 1. Silencio Confirmar alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
-Silencio 1.2 Silencio Configurar los controles de seguridad de la red con reglas, estándares, diagramas, revisiones y control de cambios aprobados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
-tención 1.3 Silencio Restringir el tráfico de entrada y salida al entorno de datos de los titulares de tarjetas a lo que sea necesario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1 | Definir, asignar y documentar los procesos y roles utilizados para cumplir Requisitos 1. | Confirmar alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
+| 1.2 | Configurar los controles de seguridad de la red con reglas, estándares, diagramas, revisiones y control de cambios aprobados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
+tención 1.3 | Restringir el tráfico de entrada y salida al entorno de datos de los titulares de tarjetas a lo que sea necesario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
 TEN 1.4 TENCIÓN Las conexiones de control entre las redes confiables y no confiadas, incluyendo las protecciones contra el soborno y la divulgación. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
-Silencio 1.5 Silencio Protege los dispositivos informáticos que se conectan a las redes no confiadas y al CDE. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
+| 1.5 | Protege los dispositivos informáticos que se conectan a las redes no confiadas y al CDE. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Diagramas de red, flujos de datos, conjuntos de reglas, aprobaciones, exámenes de seis meses, exportaciones de configuración
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -438,14 +438,14 @@ Silencio 1.5 Silencio Protege los dispositivos informáticos que se conectan a l
 
 *Apply Secure Configurations to All System Components*
 
-Silencio **Propósito de solicitud:** Aplicar Configuraciones seguras a todos los componentes del sistema
-Silencio...
+| **Propósito de solicitud:** Aplicar Configuraciones seguras a todos los componentes del sistema |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 2.1 Silencio Definir, asignar y documentar procesos y roles de configuración segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio TEN
-Ø 2.2 tención Desarrollar y aplicar normas de configuración; eliminar defectos, servicios innecesarios y ajustes inseguros. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio TEN
-tención 2.3 ← Ambientes inalámbricos seguros con defectos cambiados, criptografía fuerte y ajustes gestionados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio TEN
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención 2.1 | Definir, asignar y documentar procesos y roles de configuración segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio |
+Ø 2.2 tención Desarrollar y aplicar normas de configuración; eliminar defectos, servicios innecesarios y ajustes inseguros. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio |
+tención 2.3 ← Ambientes inalámbricos seguros con defectos cambiados, criptografía fuerte y ajustes gestionados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. estándares de configuración, inventarios, escaneos de endurecimiento, reseñas de cuenta predeterminada y de servicio |
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -454,34 +454,34 @@ tención 2.3 ← Ambientes inalámbricos seguros con defectos cambiados, criptog
 *Protect Stored Account Data*
 
 **Propósito de la solicitud:** Proteger los datos de la cuenta almacenada
-Silencio...
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 3.1 Silencio Definir, asignar y documentar procesos y roles de protección de datos almacenados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
-Silencio 3.2 Silencio Minimizar el almacenamiento de cuenta-datos mediante retención, eliminación segura y descubrimiento de ubicación de datos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
-tención 3.3 Silencio Nunca retener datos de autenticación sensibles después de la autorización, incluso cuando está encriptado, excepto los casos de emisor permitidos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
-Silencio 3.4 Silencio Limit displays and remote copying or relocation of full PAN to people with a documented need. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención 3.1 | Definir, asignar y documentar procesos y roles de protección de datos almacenados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+| 3.2 | Minimizar el almacenamiento de cuenta-datos mediante retención, eliminación segura y descubrimiento de ubicación de datos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+tención 3.3 | Nunca retener datos de autenticación sensibles después de la autorización, incluso cuando está encriptado, excepto los casos de emisor permitidos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+| 3.4 | Limit displays and remote copying or relocation of full PAN to people with a documented need. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
 TEN 3.5 Ø Render guardó PAN inalcanzable utilizando métodos aprobados y protegiendo cualquier mecanismo relacionado. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
-Silencio 3.6 Silencio Protege las claves criptográficas utilizadas para asegurar los datos de la cuenta almacenada. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
-Silencio 3.7 ← Operar procesos completos de ciclo de vida de gestión clave. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+| 3.6 | Protege las claves criptográficas utilizadas para asegurar los datos de la cuenta almacenada. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave
+| 3.7 ← Operar procesos completos de ciclo de vida de gestión clave. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de datos, calendario de retención, resultados de descubrimiento, cifrado y registros de gestión clave |
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
 *Prohibición crítica* Los datos de autenticación sensibles no deben almacenarse después de la autorización, incluso cuando estén encriptados, salvo cuando PCI DSS permita expresamente el uso de emisor o soporte de emisión.
-Silencio.
+|. |
 
 # 9. Requisement 4 — Transmission Cryptography
 
 *Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks*
 
-Silencio **Propósito de solicitud:** Proteger los datos de los titulares de tarjetas con una fuerte cryptografía durante la transmisión a través de redes públicas
-Silencio...
+| **Propósito de solicitud:** Proteger los datos de los titulares de tarjetas con una fuerte cryptografía durante la transmisión a través de redes públicas |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 4.1 Silencio Definir, asignar y documentar procesos y roles de protección de transmisión. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. flujos de datos, configuración de protocolos y certificados, pruebas de transmisión, inventario de certificados
-TEN 4.2 TENIDO Utilice una criptografía fuerte y claves de confianza o certificados cada vez que el PAN cruza abierto, redes públicas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. flujos de datos, configuración de protocolos y certificados, pruebas de transmisión, inventario de certificados
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+tención 4.1 | Definir, asignar y documentar procesos y roles de protección de transmisión. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. flujos de datos, configuración de protocolos y certificados, pruebas de transmisión, inventario de certificados
+TEN 4.2 | Utilice una criptografía fuerte y claves de confianza o certificados cada vez que el PAN cruza abierto, redes públicas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. flujos de datos, configuración de protocolos y certificados, pruebas de transmisión, inventario de certificados
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -490,14 +490,14 @@ Requisito 5 - Software malicioso
 *Proteger todos los sistemas y redes del software malicioso*
 
 **Propósito de la adquisición:** Proteger todos los sistemas y redes del software malicioso
-Silencio...
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
 La inmortalidad----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio 5.1 Silencio Definir, asignar y documentar procesos y roles antimalware. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
+| 5.1 | Definir, asignar y documentar procesos y roles antimalware. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
 TEN 5.2 TENCIÓN Evitar, detectar y eliminar el malware en sistemas generalmente afectados o evaluados periódicamente como no en riesgo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
-Silencio 5.3 Silencio Mantener mecanismos antimalware activos, actuales, protegidos, conectados, monitoreados y limitados a la desactivación autorizada. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
-TEN 5.4 TENIDO Utilizar mecanismos automatizados y procesos de capacitación para proteger al personal de los ataques de phishing. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
+| 5.3 | Mantener mecanismos antimalware activos, actuales, protegidos, conectados, monitoreados y limitados a la desactivación autorizada. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
+TEN 5.4 | Utilizar mecanismos automatizados y procesos de capacitación para proteger al personal de los ataques de phishing. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Evaluación de riesgo de malware, cobertura de agentes, políticas, alertas, actualizaciones, controles de phishing
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -506,15 +506,15 @@ TEN 5.4 TENIDO Utilizar mecanismos automatizados y procesos de capacitación par
 *Desarrollar y mantener sistemas y software seguros*
 
 **Propósito de la adquisición:** Desarrollar y mantener sistemas y software seguros
-Silencio...
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-tención 6.1 Silencio Definir, asignar y documentar procesos y roles de sistema seguro y software. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
-TEN 6.2 TENIDO Desarrollar software a medida y personalizado de forma segura, con personal capacitado, exámenes, pruebas y prevención de fallas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
-TEN 6.3 TENIDO Identificar, priorizar y abordar vulnerabilidades; mantener inventarios de software y aplicar parches de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
-tención 6.4 Silencio Protege las aplicaciones web orientadas al público y gestiona todos los scripts de página de pago. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
-TEN 6.5 TENIDO Administrar cambios en los sistemas, el software y el entorno de producción de forma segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+tención 6.1 | Definir, asignar y documentar procesos y roles de sistema seguro y software. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
+TEN 6.2 | Desarrollar software a medida y personalizado de forma segura, con personal capacitado, exámenes, pruebas y prevención de fallas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
+TEN 6.3 | Identificar, priorizar y abordar vulnerabilidades; mantener inventarios de software y aplicar parches de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
+tención 6.4 | Protege las aplicaciones web orientadas al público y gestiona todos los scripts de página de pago. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
+TEN 6.5 | Administrar cambios en los sistemas, el software y el entorno de producción de forma segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. inventario de software, registros de SDLC, revisión de códigos, resultados de análisis, parches, scripts, cambio de entradas
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -528,14 +528,14 @@ Las necesidades 6.4.3 y 11.6.1 son ahora eficaces. Mantener un inventario y una 
 
 *Restrict Access to System Components and Cardholder Data by Business Need to Know*
 
-Silencio **Propósito de la adquisición:** Restringir el acceso a los componentes del sistema y los datos de los titulares de tarjetas por parte de las empresas Necesita saber
-Silencio...
+| **Propósito de la adquisición:** Restringir el acceso a los componentes del sistema y los datos de los titulares de tarjetas por parte de las empresas Necesita saber |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio 7.1 Silencio Definir, asignar y documentar procesos y roles de control de acceso. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
-TEN 7.2 TENIDO Definir, aprobar, asignar, hacer cumplir y revisar el acceso según la necesidad de trabajo, menos privilegio, y negar por defecto. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
-TEN 7.3 TENIDO Administrar las cuentas de aplicaciones y sistemas y su acceso de acuerdo a las necesidades empresariales y el riesgo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 7.1 | Definir, asignar y documentar procesos y roles de control de acceso. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
+TEN 7.2 | Definir, aprobar, asignar, hacer cumplir y revisar el acceso según la necesidad de trabajo, menos privilegio, y negar por defecto. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
+TEN 7.3 | Administrar las cuentas de aplicaciones y sistemas y su acceso de acuerdo a las necesidades empresariales y el riesgo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. matriz de funciones, aprobaciones, acceso a exportaciones, exámenes, denegación de pruebas, pruebas de eliminación
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -543,37 +543,37 @@ TEN 7.3 TENIDO Administrar las cuentas de aplicaciones y sistemas y su acceso de
 
 *Identificar a los usuarios y Autentizar el acceso a los componentes del sistema*
 
-Silencio **Propósito de solicitud:** Identificar a los usuarios y Autentizar el acceso a los componentes del sistema
-Silencio...
+| **Propósito de solicitud:** Identificar a los usuarios y Autentizar el acceso a los componentes del sistema |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio 8.1 Silencio Definir, asignar y documentar procesos y roles de identidad y autenticación. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
-TEN 8.2 TENIDO Utilizar identidades únicas y gestionar el ciclo completo de vida de cuenta de usuario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
-Silencio 8.3 Silencio Use factores de autenticación fuertes, reseteos seguros, bloqueos, reglas de contraseña/passphrase y credenciales protegidas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
-Silencio 8.4 Silencio Implementar la autenticación multifactorial para el acceso a CDE y el acceso remoto aplicable. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
-tención 8.5 Silencio Configurar sistemas MFA para resistir el desvío y el mal uso. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
-TEN 8.6 TENIDO Administrar estrictamente los factores de aplicación, sistema y uso compartido de cuentas y autenticación. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 8.1 | Definir, asignar y documentar procesos y roles de identidad y autenticación. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+TEN 8.2 | Utilizar identidades únicas y gestionar el ciclo completo de vida de cuenta de usuario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+| 8.3 | Use factores de autenticación fuertes, reseteos seguros, bloqueos, reglas de contraseña/passphrase y credenciales protegidas. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+| 8.4 | Implementar la autenticación multifactorial para el acceso a CDE y el acceso remoto aplicable. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+tención 8.5 | Configurar sistemas MFA para resistir el desvío y el mal uso. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
+TEN 8.6 | Administrar estrictamente los factores de aplicación, sistema y uso compartido de cuentas y autenticación. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. tención de la población de identidad, registros de cuentas, MFA y configuración de contraseñas, registros de autenticación y pruebas
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
 * Recordatorio de la autenticación* Requirement 8 contiene reglas detalladas para IDs únicos, cuentas inactivas y terminadas, contraseñas fuertes/passphrases, MFA, cuentas de servicio, factores de autenticación y reseteo seguro. Verifique la aplicabilidad exacta en el estándar oficial.
-Silencio.
+|. |
 
 Requisito 9 - Acceso físico
 
 *Restrict Physical Access to Cardholder Data*
 
-Silencio **Propósito de la solicitud:** Restringir el acceso físico a los datos del titular de la tarjeta
-Silencio...
+| **Propósito de la solicitud:** Restringir el acceso físico a los datos del titular de la tarjeta |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 9.1 TENIDO Definir, asignar y documentar procesos y roles de seguridad física. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
-TEN 9.2 TENIDO Utilizar controles de entrada y monitoreo adecuados para instalaciones y áreas sensibles. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
-Silencio 9.3 Silencio Autorizar, identificar, monitorear y revocar rápidamente el acceso de personal y visitantes. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
-Silencio 9.4 Silencio Clasificar, almacenar, mover, copiar, destruir y rastrear los medios que contienen los datos de los titulares de tarjetas de forma segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
-Silencio 9.5 Silencio Proteger dispositivos de punto de interacción de la manipulación y sustitución. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 9.1 | Definir, asignar y documentar procesos y roles de seguridad física. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
+TEN 9.2 | Utilizar controles de entrada y monitoreo adecuados para instalaciones y áreas sensibles. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
+| 9.3 | Autorizar, identificar, monitorear y revocar rápidamente el acceso de personal y visitantes. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
+| 9.4 | Clasificar, almacenar, mover, copiar, destruir y rastrear los medios que contienen los datos de los titulares de tarjetas de forma segura. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
+| 9.5 | Proteger dispositivos de punto de interacción de la manipulación y sustitución. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Registros de visitantes, registros de cámaras, inventario de medios, pruebas de destrucción, inspecciones de POI
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -581,18 +581,18 @@ Silencio 9.5 Silencio Proteger dispositivos de punto de interacción de la manip
 
 *Log and Monitor All Access to System Components and Cardholder Data*
 
-Silencio **Propósito de solicitud:** Iniciar sesión y vigilar todo el acceso a los componentes del sistema y los datos de los titulares de tarjetas
-Silencio...
+| **Propósito de solicitud:** Iniciar sesión y vigilar todo el acceso a los componentes del sistema y los datos de los titulares de tarjetas |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 10.1 TENIDO Definir, asignar y documentar procesos y roles de registro y monitoreo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-TEN 10.2 TER Generar registros de auditoría que apoyen la detección de anomalías, la rendición de cuentas, la investigación y los forenses. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-TEN 10.3 TENIDO Proteger los registros de auditoría de acceso, cambio y eliminación no autorizados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-TEN 10.4 TENIDO Revisar registros y eventos de seguridad en frecuencias requeridas o determinadas por el riesgo, utilizando automatización cuando sea necesario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-TEN 10.5 TENIDO Retener historial de auditoría, con al menos el período reciente requerido inmediatamente disponible. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-TEN 10.6 TENIDO Sincronizar el tiempo del sistema utilizando fuentes de tiempo y ajustes aprobados y protegidos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
-Silencio 10.7 Silencio Detectar, reportar, responder y documentar fallos de sistemas críticos de control de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. Silencio Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 10.1 | Definir, asignar y documentar procesos y roles de registro y monitoreo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+TEN 10.2 TER Generar registros de auditoría que apoyen la detección de anomalías, la rendición de cuentas, la investigación y los forenses. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+TEN 10.3 | Proteger los registros de auditoría de acceso, cambio y eliminación no autorizados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+TEN 10.4 | Revisar registros y eventos de seguridad en frecuencias requeridas o determinadas por el riesgo, utilizando automatización cuando sea necesario. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+TEN 10.5 | Retener historial de auditoría, con al menos el período reciente requerido inmediatamente disponible. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+TEN 10.6 | Sincronizar el tiempo del sistema utilizando fuentes de tiempo y ajustes aprobados y protegidos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
+| 10.7 | Detectar, reportar, responder y documentar fallos de sistemas críticos de control de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. | Registros de registro, registros de auditorías, tickets de revisión, ajustes de retención, configuración del tiempo, alertas de fallos
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -600,42 +600,42 @@ Requisitos 11 - Pruebas de seguridad
 
 *Procesos y sistemas de seguridad ordinarios*
 
-Silencio **Propósito de solicitud:** Sistemas de seguridad de pruebas y procesos regularmente
-Silencio...
+| **Propósito de solicitud:** Sistemas de seguridad de pruebas y procesos regularmente |
+|... |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 11.1 TENIDO Definir, asignar y documentar procesos y roles de prueba de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
-Silencio 11.2 Silencio Detectar y gestionar puntos de acceso inalámbrico autorizados y no autorizados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
-TEN 11.3 TENIDO Realizar, corregir y repetir escaneos de vulnerabilidad interna y externa requeridos, incluyendo escaneos ASV cuando corresponda. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
-TEN 11.4 Silencio Realizar pruebas internas y externas de penetración, pruebas de segmentación, corrección y retesting. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
-Silencio 11.5 Silencio Detectar y responder a intrusiones de red y cambios no autorizados en archivos críticos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 11.1 | Definir, asignar y documentar procesos y roles de prueba de seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
+| 11.2 | Detectar y gestionar puntos de acceso inalámbrico autorizados y no autorizados. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
+TEN 11.3 | Realizar, corregir y repetir escaneos de vulnerabilidad interna y externa requeridos, incluyendo escaneos ASV cuando corresponda. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
+TEN 11.4 | Realizar pruebas internas y externas de penetración, pruebas de segmentación, corrección y retesting. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
+| 11.5 | Detectar y responder a intrusiones de red y cambios no autorizados en archivos críticos. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
 TEN 11.6 Ø Detectar y responder a cambios no autorizados en las páginas de pago y en los encabezados HTTP de impacto en la seguridad. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. TEN resultados inalámbricos, reportes de escaneo, evidencia ASV, pruebas de penetración, alertas IDS/FIM, monitorización del cambio de página
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
-*No sustituyan las herramientas* Los escáneres de vulnerabilidad comunitaria pueden apoyar el trabajo interno pero no sustituir el requisito de pasar escáneres ASV externos. Los escáneres web automatizados no reemplazan las pruebas de penetración requeridas ni la evaluación manual calificada. Silencio
-Silencio.
+*No sustituyan las herramientas* Los escáneres de vulnerabilidad comunitaria pueden apoyar el trabajo interno pero no sustituir el requisito de pasar escáneres ASV externos. Los escáneres web automatizados no reemplazan las pruebas de penetración requeridas ni la evaluación manual calificada. |
+|. |
 
 # 17. Requirement 12 — Policies and Programs
 
 *Apoyo Seguridad de la Información con Políticas y Programas Organizacionales*
 
 **Propósito de solicitud:** Apoyo a la seguridad de la información con las políticas y programas de organización
-Silencio.
+|. |
 
-Silencio **Group** Silencio **Plain meaning** Silencio **Verification focus** Silencio **Example evidence** Silencio
-Silencio----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN 12.1 TENIDO Establecer, publicar, mantener, reconocer y revisar la política y responsabilidades de seguridad de la información. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-tención 12.2 Silencio Mantener políticas de uso aceptable para tecnologías de usuario final. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-TEN 12.3 TENIDO Identificar y gestionar los riesgos PCI DSS mediante análisis específicos y exámenes anuales de la criptografía y la tecnología. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-TEN 12.4 TENIDO Administrar, supervisar e informar sobre las responsabilidades de cumplimiento de PCI DSS, con mayor supervisión de proveedores de servicios. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-TEN 12.5 TENIDO Document, confirme y valide el alcance de PCI DSS al menos anualmente y después de cambios significativos; los proveedores de servicios lo hacen cada 6 meses. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-Silencio 12.6 Silencio Opera un programa de seguridad continuo y consciente de la función con contenido de phishing y uso aceptable. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-TEN 12.7 ANTERIED Screen prospective personnel who will have access to the CDE, subject to law and role risk. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-TEN 12.8 TENIDO Mantener y gobernar relaciones de terceros proveedores de servicios, matrices de responsabilidad, acuerdos y monitoreo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-Silencio 12.9 Silencio Exigir a los proveedores de servicios que reconozcan por escrito su responsabilidad por la seguridad de los datos de la cuenta y para apoyar a los clientes. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
-Silencio 12.10 Silencio Mantener, probar, revisar y mejorar un plan de respuesta a incidentes que aborde los datos de la cuenta de pago. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes TEN
+| **Grupo** | **Significado claro** | **Enfoque de verificación** | **Evidencia de ejemplo** |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+TEN 12.1 | Establecer, publicar, mantener, reconocer y revisar la política y responsabilidades de seguridad de la información. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+tención 12.2 | Mantener políticas de uso aceptable para tecnologías de usuario final. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+TEN 12.3 | Identificar y gestionar los riesgos PCI DSS mediante análisis específicos y exámenes anuales de la criptografía y la tecnología. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+TEN 12.4 | Administrar, supervisar e informar sobre las responsabilidades de cumplimiento de PCI DSS, con mayor supervisión de proveedores de servicios. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+TEN 12.5 | Document, confirme y valide el alcance de PCI DSS al menos anualmente y después de cambios significativos; los proveedores de servicios lo hacen cada 6 meses. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+| 12.6 | Opera un programa de seguridad continuo y consciente de la función con contenido de phishing y uso aceptable. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+TEN 12.7 ANTERIED Screen prospective personnel who will have access to the CDE, subject to law and role risk. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+TEN 12.8 | Mantener y gobernar relaciones de terceros proveedores de servicios, matrices de responsabilidad, acuerdos y monitoreo. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+| 12.9 | Exigir a los proveedores de servicios que reconozcan por escrito su responsabilidad por la seguridad de los datos de la cuenta y para apoyar a los clientes. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
+| 12.10 | Mantener, probar, revisar y mejorar un plan de respuesta a incidentes que aborde los datos de la cuenta de pago. tención Confirme el alcance, propiedad, diseño, implementación, evidencia operativa, excepciones, corrección y retest. políticas, análisis de riesgos, validación de alcances, capacitación, control de personal, archivos TPSP, ejercicios de incidentes |
 
 ** Nota de evaluación** Utilice el texto oficial PCI DSS v4.0.1 y el modelo de presentación de informes aplicable para requisitos exactos, notas de aplicabilidad, procedimientos de prueba, opciones de respuesta y documentación. Este manual explica; no reemplaza el estándar.
 
@@ -669,40 +669,40 @@ Gráfico 8 Corriente de trabajo de respuesta a incidentes de pago
 
 ## 18.1 Pruebas prácticas
 
-Silencio **Area** Silencio **Populación y muestra** Silencio**
-Silencio, silencio.
+| **Area** | **Populación y muestra** |**
+|, silencio. |
 Todas las vías de pago, los sistemas, las tiendas de datos, los proveedores y las trayectorias de segmentación Ø Reconcile diagramas e inventarios a la red, identidad, nube, descubrimiento, adquisición y fuentes de apoyo ANTERI flujos de datos, inventario, resultados de descubrimiento, pruebas de segmentación, alcance firmado
 Reglas de la Red Silencioso Todas las reglas conectadas con CDE; cambios de muestra, reglas temporales y reseñas ← Necesitas negocios de Trace, aprobación, implementación, revisión, expiración y comportamiento de tráfico TEN Regla exportar, ticket, propietario, revisión, prueba y eliminación
 tención, eliminación, renderización del PAN, protección clave, prohibición del SAD y controles remotos de la copia Ø Discovery, muestras, configuración, eliminación y registros clave
-← Acceso Silencio Todos los trabajadores, privilegios, servicios, aplicaciones y cuentas de terceros Necesidades de prueba, aprobación, MFA, autenticación, revisión, cambio, inactividad y rescisión TENRI Población, configuración, registros, aprobaciones, revisiones y entradas ANTERI
+← Acceso | Todos los trabajadores, privilegios, servicios, aplicaciones y cuentas de terceros Necesidades de prueba, aprobación, MFA, autenticación, revisión, cambio, inactividad y rescisión TENRI Población, configuración, registros, aprobaciones, revisiones y entradas ANTERI
 TEN Vulnerabilities TEN Todos los activos y hallazgos del in-scopio ANTE Validar cobertura, escaneo autenticado, clasificación de riesgos, parche, estado ASV, excepción, y rescan ANTE Inventory, ajustes de escaneo, informes, entradas, aprobación de pruebas ASV
-tención Registros Silencio Todas las fuentes, comentarios, alertas, retención y fallos de control requeridos Campos de prueba, protección, tiempo, frecuencia de revisión, automatización, investigación y respuesta a fallos TENIDO Lista de fuentes, configuraciones, alertas, entradas, retención y prueba de tiempo
-← Páginas de pago Silencio Todos los scripts, páginas, encabezados, cambios y alertas Silencio Autorización de prueba, justificación, integridad, inventario, monitoreo, frecuencia, alerta y respuesta TENIS Script inventario, aprobaciones, método de integridad, alerta, ticket y retest
+tención Registros | Todas las fuentes, comentarios, alertas, retención y fallos de control requeridos Campos de prueba, protección, tiempo, frecuencia de revisión, automatización, investigación y respuesta a fallos | Lista de fuentes, configuraciones, alertas, entradas, retención y prueba de tiempo
+← Páginas de pago | Todos los scripts, páginas, encabezados, cambios y alertas | Autorización de prueba, justificación, integridad, inventario, monitoreo, frecuencia, alerta y respuesta TENIS Script inventario, aprobaciones, método de integridad, alerta, ticket y retest
 ← Terceras partes ← Población completa del TPSP; muestra crítica, nueva, cambiada y terminada proveedores Acuerdo de prueba, matriz de responsabilidad, estado, vigilancia, derechos de incidencia, efecto de alcance y salida TEN-Inventario, contratos, AOCs, matriz, revisiones, hallazgos y prueba de eliminación
 
 # 19. Herramientas de código abierto para el trabajo PCI DSS
 
 * Enlaces oficiales, inicios rápidos seguros, pruebas y limitaciones.*
 
-Silencio **Herramienta**
-Silencio----------------------------------------------------------
-TENIDO CISO Assistant TENIDO GRC, requirements, evidence, risks TEN 12, all TEN
-tención Wazuh Silencio Endpoint security, malware, logs, integrity TEN 5, 10, 11 TEN
-Silencioso osquery Silencio Asset, software, cuenta y consultas de configuración
-Silencio OpenSCAP ← Evaluación de la configuración segura de Linux
-Silencio Greenbone Community Edition Silencio La evaluación interna de la vulnerabilidad
-Silencio Nmap Silencio Servicio autorizado y descubrimiento de la segmentación
-tención Trivy Silencio Código, imagen, dependencia, secreto y configuración escaneado TENED 6
-Silencio OWASP ZAP Silencio Evaluación autorizada de la aplicación web
+| **Herramienta** |
+|---------------------------------------------------------- |
+| CISO Assistant | GRC, requirements, evidence, risks TEN 12, all |
+tención Wazuh | Endpoint security, malware, logs, integrity TEN 5, 10, 11 |
+Silencioso osquery | Asset, software, cuenta y consultas de configuración
+| OpenSCAP ← Evaluación de la configuración segura de Linux |
+| Greenbone Community Edition | La evaluación interna de la vulnerabilidad
+| Nmap | Servicio autorizado y descubrimiento de la segmentación
+tención Trivy | Código, imagen, dependencia, secreto y configuración escaneado TENED 6
+| OWASP ZAP | Evaluación autorizada de la aplicación web
 Silencioso ModSecurity + OWASP CRS  durable Controles de firewall de aplicaciones web
-Silencio Suricata Silencioso Red de detección de intrusiones
-TENER Keycloak TENIDO Identidad, acceso, MFA y autenticación
-← DefectDojo Silencio Encontrar la ingesta, la remediación y la retesta Silencio 6, 11, 12
-Silencio AIDE Silencio Monitorización de la integridad de archivos
+| Suricata Silencioso Red de detección de intrusiones |
+TENER Keycloak | Identidad, acceso, MFA y autenticación
+← DefectDojo | Encontrar la ingesta, la remediación y la retesta | 6, 11, 12
+| AIDE | Monitorización de la integridad de archivos
 ← Política Abierta Agente Silencioso Política como código
 
-* Limitación crítica* Estas herramientas pueden apoyar pruebas y operaciones de seguridad. No pueden hacer que una entidad PCI DSS cumpla, reemplazar un juicio QSA/ISA, reemplazar los escaneos ASV requeridos, o reemplazar las pruebas de penetración calificadas. Silencio
-Silencio.
+* Limitación crítica* Estas herramientas pueden apoyar pruebas y operaciones de seguridad. No pueden hacer que una entidad PCI DSS cumpla, reemplazar un juicio QSA/ISA, reemplazar los escaneos ASV requeridos, o reemplazar las pruebas de penetración calificadas. |
+|. |
 
 ## 19.1 validación de herramientas
 
@@ -726,7 +726,7 @@ GRC, requisitos, evidencia, riesgos. Posible apoyo PCI DSS: 12, todos.
 
 **Documentación oficial:** Abra la guía oficial de asistentes CISO(https://intuitem.gitbook.io/ciso-assistant)
 
-### Quick start
+### Inicio rápido
 
 Crear un comerciante ficticio, mapear cinco grupos de requisitos, asignar propietarios, adjuntar evidencia sanitaria, y rastrear una brecha a través de la prueba.
 
@@ -740,7 +740,7 @@ Seguridad Endpoint, malware, registros, integridad. Posible apoyo PCI DSS: 5, 10
 
 **Documentación oficial:** Abra la guía oficial Wazuh realizada/u título](https://documentation.wazuh.com/current/quickstart.html)
 
-### Quick start
+### Inicio rápido
 
 Conectar un endpoint de laboratorio autorizado, generar un evento inofensivo, revisar la alerta y retener el evento, regla, revisión y ticket.
 
@@ -754,7 +754,7 @@ Consultas de activos, software, cuenta y configuración. Posible apoyo PCI DSS: 
 
 **Documentación oficial:** [Seguido]Abre la guía oficial del osquery realizada/u contacto](https://osquery.readthedocs.io/en/stable/)
 
-### Quick start
+### Inicio rápido
 
 Usuarios de laboratorio de consulta, software, servicios, cifrado o procesos; mantener consultas, población de acogida, tiempo, salida y revisión.
 
@@ -768,7 +768,7 @@ Evaluación de configuración segura de Linux. Posible apoyo PCI DSS: 2, 6.
 
 **Documentación oficial:** [Seguido]Abre la guía oficial OpenSCAP efectuada/u contacto](https://www.open-scap.org/getting-started/)
 
-### Quick start
+### Inicio rápido
 
 Evaluar un laboratorio Linux aprobado contra un perfil adecuado, corregir un ajuste aprobado y comparar informes.
 
@@ -782,7 +782,7 @@ Evaluación interna de la vulnerabilidad. Posible apoyo PCI DSS: 6, 11.
 
 **Documentación oficial:** [Seguridad]Abre la guía oficial Greenbone Community Edition realizada/u contacto](https://greenbone.github.io/docs/latest/)
 
-### Quick start
+### Inicio rápido
 
 Escanear sólo un objetivo de laboratorio aprobado, validar un hallazgo, corregirlo, cambiar y documentar cobertura y límites.
 
@@ -796,7 +796,7 @@ Servicio autorizado y descubrimiento de segmentación. Posible apoyo PCI DSS: 1,
 
 **Documentación oficial:** [Seguridad]Abre la guía oficial Nmap realizada/u contacto](https://nmap.org/book/man.html)
 
-### Quick start
+### Inicio rápido
 
 Escanee un pequeño rango de laboratorio autorizado, compare los servicios observados con el inventario, y registro de alcance y aprobación.
 
@@ -810,7 +810,7 @@ Código, imagen, dependencia, secreto y análisis de configuración. Posible apo
 
 **Documentación oficial:** Abra la guía oficial Trivy realizada/u título](https://trivy.dev/latest/)
 
-### Quick start
+### Inicio rápido
 
 Escanee una imagen de laboratorio o un repositorio de prueba, proteja la salida, valide un hallazgo, corrija y escanee de nuevo.
 
@@ -824,7 +824,7 @@ Evaluación autorizada de la aplicación web. Posible apoyo PCI DSS: 6, 11.
 
 **Documentación oficial:** Abra la guía oficial OWASP ZAP efectuada / u fiel](https://www.zaproxy.org/getting-started/)
 
-### Quick start
+### Inicio rápido
 
 Proxy a local training application, start with passive analysis, validate a result, and keep scope and evidence.
 
@@ -838,7 +838,7 @@ Controles de firewall de aplicación web. Posible apoyo PCI DSS: 6.4.2.
 
 **Documentación oficial:** Abrir la guía oficial ModSecurity + OWASP CRS indica/u contacto](https://coreruleset.org/docs/)
 
-### Quick start
+### Inicio rápido
 
 Deplorar sólo en un laboratorio, grabar versión y modo regla, probar una solicitud inofensiva, sintonizar un falso positivo, y preservar la aprobación del cambio.
 
@@ -852,7 +852,7 @@ Detección de intrusión en red. Posible apoyo PCI DSS: 11.5.
 
 **Documentación oficial:** [Seguridad]Abre la guía oficial de Suricata realizada/u contacto](https://docs.suricata.io/)
 
-### Quick start
+### Inicio rápido
 
 Monitorear un segmento de laboratorio aislado, desencadenar una alerta de prueba inofensiva, y regla de documentos, fuente de tráfico, alerta, revisión y respuesta.
 
@@ -866,7 +866,7 @@ Identidad, acceso, MFA y autenticación. Posible apoyo PCI DSS: 7, 8.
 
 **Documentación oficial:** [ obedeció]Abre la guía oficial de Keycloak realizada/u contacto](https://www.keycloak.org/guides)
 
-### Quick start
+### Inicio rápido
 
 Crear un ámbito de laboratorio, roles, usuarios y MFA; probar menos privilegios, acceso fallido, revisión y terminación.
 
@@ -880,7 +880,7 @@ Encontrar la ingesta, la remediación y la retesta. Posible apoyo PCI DSS: 6, 11
 
 **Documentación oficial:** [Seguido]Abre el defecto oficialDojo guía seleccionada/u contacto](https://docs.defectdojo.com/)
 
-### Quick start
+### Inicio rápido
 
 Importar un análisis de laboratorio, validar y asignar un hallazgo, registrar la remediación, retestar y cerrar con evidencia.
 
@@ -894,7 +894,7 @@ Monitoreo de integridad de archivos. Posible apoyo PCI DSS: 11.5.2.
 
 **Documentación oficial:** Abra la guía oficial AIDE realizada/u título](https://aide.github.io/)
 
-### Quick start
+### Inicio rápido
 
 Crear una base de referencia en un host de laboratorio desechable, hacer un cambio de archivo autorizado, revisar la alerta, restaurar y documentar el proceso.
 
@@ -908,7 +908,7 @@ Política como código. Posible apoyo PCI DSS: 2, 6, 7.
 
 **Documentación oficial:** [Seguridad]Abre la guía oficial de Agentes de Políticas Abiertas efectuada/u contacto](https://www.openpolicyagent.org/docs)
 
-### Quick start
+### Inicio rápido
 
 Cree una política de laboratorio que niegue el despliegue sin un propietario, clasificación, una red aprobada y un estado de exploración de seguridad.
 
@@ -940,16 +940,16 @@ Retener autorización, propósito, población objetivo completa, versiones, conf
 
 ## 20.2 Dashboard
 
-**Area** Silencio ** Cuestión del personal**
-Silencio...
+**Area** | ** Cuestión del personal**
+|... |
 ¿Están presentes todos los canales, datos, sistemas, caminos, proveedores y scripts? Verde / Amarillo / Rojo
-Silencio ¿Se minimiza el almacenamiento y el tratamiento PAN/SAD correcto? Verde / Amarillo / Rojo
-Silencio Red/configuración ¿Son reglas, endurecimiento, revisiones y segmentación operando? Verde / Amarillo / Rojo
-TENIDO Acceso ANTE ¿Es necesario, MFA, cuentas, revisiones y control de terminación? Verde / Amarillo / Rojo
+| ¿Se minimiza el almacenamiento y el tratamiento PAN/SAD correcto? Verde / Amarillo / Rojo |
+| Red/configuración ¿Son reglas, endurecimiento, revisiones y segmentación operando? Verde / Amarillo / Rojo |
+| Acceso ANTE ¿Es necesario, MFA, cuentas, revisiones y control de terminación? Verde / Amarillo / Rojo |
 ¿Son parches, escaneos, resultados de ASV, pruebas de penetración y pruebas actualizadas? Verde / Amarillo / Rojo
-← Monitorización Silencio ¿Se revisan registros, alertas, integridad, IDS, fallos de control y páginas de pago? Verde / Amarillo / Rojo
-Silencio Terceras partes   ¿Son controladas las responsabilidades, el estado, la vigilancia, los incidentes y las salidas? Verde / Amarillo / Rojo
-Silencio Respuesta   ¿Se han probado, aumentado, preservado, comunicado y mejorado los incidentes de pago? Verde / Amarillo / Rojo
+← Monitorización | ¿Se revisan registros, alertas, integridad, IDS, fallos de control y páginas de pago? Verde / Amarillo / Rojo
+| Terceras partes   ¿Son controladas las responsabilidades, el estado, la vigilancia, los incidentes y las salidas? Verde / Amarillo / Rojo |
+| Respuesta   ¿Se han probado, aumentado, preservado, comunicado y mejorado los incidentes de pago? Verde / Amarillo / Rojo |
 
 # 21. Desde el principiante hasta el analista Junior PCI
 
@@ -1029,19 +1029,19 @@ Ejecutar una mesa que implica un PAN inesperado y un script de pago cambiado; pr
 
 Prepare scope, status, top gaps, action plan, decisions, and limitations.
 
-*Portfolio ethics:** Etiqueta cada artículo como entrenamiento de ficción. Nunca publique PAN real, SAD, datos de clientes, credenciales, arquitectura de pago, resultados de escaneo, incidentes, contratos o informes de evaluación. Silencio
-Silencio.
+*Portfolio ethics:** Etiqueta cada artículo como entrenamiento de ficción. Nunca publique PAN real, SAD, datos de clientes, credenciales, arquitectura de pago, resultados de escaneo, incidentes, contratos o informes de evaluación. |
+|. |
 
 23. Plan de aprendizaje de 30 días
 
 *Un mes realista de lectura oficial, evidencia práctica y preparación de entrevistas*.
 
-Silencio **Week** Silencio**
+| **Week** |**
 ...----------------------------------------------------------------------------------------------------------------
-Silencio Semana 1 Silencio Fundaciones, datos de cuenta, alcance, segmentación, validación  sometida Scope memo, mapa de datos, inventario, preguntas de decisión SAQ
-Silenciosa Semana 2 1–6 Silencio Network/configuration evidence, data rules, patch and software-security test tención
+| Semana 1 | Fundaciones, datos de cuenta, alcance, segmentación, validación  sometida Scope memo, mapa de datos, inventario, preguntas de decisión SAQ
+Silenciosa Semana 2 1–6 | Network/configuration evidence, data rules, patch and software-security test tención
 Requisitos para la vida cotidiana 7–12 examen de acceso Silencioso, examen de registro, archivo de exploración, matriz de proveedores, tabletop de incidentes
-Silencio Semana 4 Silencio Herramientas, portafolio, reportajes, entrevista Silencio Portafolio Sanitario, dashboard, respuestas practicadas
+| Semana 4 | Herramientas, portafolio, reportajes, entrevista | Portafolio Sanitario, dashboard, respuestas practicadas
 
 24. Preparación de entrevistas
 
@@ -1087,7 +1087,7 @@ Las marcas de pago y los compradores establecen programas de cumplimiento y expe
 
 Los requisitos 6.4.3 y 11.6.1 requieren una mejor gobernanza de los scripts de página de pago y la detección de cambios no autorizados en las páginas y encabezados pertinentes.
 
-Silencio **Respuesta de 60 segundos del administrador:** Empiezo con canales de pago y flujos de datos de cuenta, definir el verdadero CDE y sistemas que pueden afectarlo, confirmar el camino correcto de validación, asignar la propiedad del requisito y exigir pruebas operativas completas. Minimizamos los datos, el acceso de control y los proveedores, protegemos las páginas de pago, escaneamos y probamos de acuerdo con las reglas de PCI, remediamos y retestamos los hallazgos, e intensificamos los incidentes rápidamente. Los instrumentos apoyan la labor, pero el alcance, las pruebas, el juicio del evaluador y la rendición de cuentas de la administración determinan si las conclusiones son fiables. Silencio
+| **Respuesta de 60 segundos del administrador:** Empiezo con canales de pago y flujos de datos de cuenta, definir el verdadero CDE y sistemas que pueden afectarlo, confirmar el camino correcto de validación, asignar la propiedad del requisito y exigir pruebas operativas completas. Minimizamos los datos, el acceso de control y los proveedores, protegemos las páginas de pago, escaneamos y probamos de acuerdo con las reglas de PCI, remediamos y retestamos los hallazgos, e intensificamos los incidentes rápidamente. Los instrumentos apoyan la labor, pero el alcance, las pruebas, el juicio del evaluador y la rendición de cuentas de la administración determinan si las conclusiones son fiables. |
 RespuestaRespuesta
 
 # 25. Plantillas, Glosario e Índice
@@ -1159,18 +1159,18 @@ Control compensador. Una alternativa documentada utilizada cuando una limitació
 ## 25.4 Índice de asunto
 
 **Tema** Silencioso**
-Silencio--------------------------------------------------
+|-------------------------------------------------- |
 ← Datos de la cuenta Silencioso 2, 8–9
-TENIDO ASV TENIDO 4, 16, 18-19 ANTERIOR PAN TENIDO 2, 8 TENIDO
+| ASV | 4, 16, 18-19 ANTERIOR PAN | 2, 8 |
 ← La autenticación Silencioso 13, 18-19
-Silencio CDE Silencio 1–3, 18 Silenciosos SAQ
+| CDE | 1–3, 18 Silenciosos SAQ
 ← Controles compensatorios Silencioso 5 Silencioso
-TENIDO Enfoque personalizado TENIDO 5 ANTE Segmentation TEN 3, 16, 18
-Silencio E-commerce Silencio 11, 16, 18 Silenciosos datos de autenticación sensibles
-← Evidencia Silencio 18–20 proveedores de servicios Silenciosos 3–4, 17–18
-Silencio Respuesta del incidente Silencio 17, 22 Silencio Análisis de riesgos orientados
-Silencioso analista junior Silencioso 21–24 Silencio Vulnerability escanea Silencio 11, 16, 18–19 Silencio
-TENIDO TERRITORIO TENENCIA 15, 18–19 ANTERIOR
+| Enfoque personalizado | 5 ANTE Segmentation TEN 3, 16, 18
+| E-commerce | 11, 16, 18 Silenciosos datos de autenticación sensibles
+← Evidencia | 18–20 proveedores de servicios Silenciosos 3–4, 17–18
+| Respuesta del incidente | 17, 22 | Análisis de riesgos orientados
+Silencioso analista junior Silencioso 21–24 | Vulnerability escanea | 11, 16, 18–19 |
+| TERRITORIO TENENCIA 15, 18–19 ANTERIOR |
 
 # 26. Referencias oficiales y estudio ulterior
 
@@ -1192,5 +1192,5 @@ TENIDO TERRITORIO TENENCIA 15, 18–19 ANTERIOR
 
 [ ]](https://www.pcisecuritystandards.org/assessors_and_solutions/approved_scanning_vendors)
 
-tención **Recordaje final:** Publicaciones PCI SSC, FAQs, formularios, guía, listados de evaluadores, programas de marca de pago, instrucciones de adquisición, contratos, tecnologías y cambios de amenazas. Confirme el estándar oficial actual y la ruta de presentación de informes antes de una evaluación real. Silencio
-Silencio.
+tención **Recordaje final:** Publicaciones PCI SSC, FAQs, formularios, guía, listados de evaluadores, programas de marca de pago, instrucciones de adquisición, contratos, tecnologías y cambios de amenazas. Confirme el estándar oficial actual y la ruta de presentación de informes antes de una evaluación real. |
+|. |

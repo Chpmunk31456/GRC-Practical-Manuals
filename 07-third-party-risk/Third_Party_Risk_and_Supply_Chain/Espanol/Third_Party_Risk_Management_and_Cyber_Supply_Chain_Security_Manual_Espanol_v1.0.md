@@ -6,8 +6,8 @@
 
 Manual de Gestor Práctica y Analista Junior
 
-TEN **Lo que este manual hace:** Explica cómo identificar, evaluar, contratar con, supervisar, responder a los proveedores y salir con seguridad. Combina la gobernanza, las pruebas prácticas, la orientación actual NIST, herramientas de código abierto, plantillas reutilizables y preparación de carreras. Silencio
-Silencio.
+TEN **Lo que este manual hace:** Explica cómo identificar, evaluar, contratar con, supervisar, responder a los proveedores y salir con seguridad. Combina la gobernanza, las pruebas prácticas, la orientación actual NIST, herramientas de código abierto, plantillas reutilizables y preparación de carreras. |
+|. |
 
 **Alberto (Al) Leiva**
 
@@ -19,8 +19,8 @@ Las organizaciones dependen de plataformas de nube, software, procesadores de pa
 
 Este manual enseña un método de ciclo de vida repetible. No es una opinión legal, una garantía o un programa de certificación universal. Los requisitos varían según contrato, ley, regulador, sector, cliente, sistema y país. Utilice profesionales cualificados de derecho, privacidad, adquisiciones, seguridad y auditoría cuando las decisiones las requieran.
 
-Silencio ** Nota de información actual** El manual refleja el material oficial comprobado el 14 de julio de 2026, incluyendo NIST SP 1326 (final julio 8, 2026), NIST SP 800-18 Rev. 2 (final junio 30, 2026), NIST SP 800-161 Rev. 1 Update 1, NIST SP 1305, y ZXPROTECTED4X 2.0Z ZX
-Silencio.
+| ** Nota de información actual** El manual refleja el material oficial comprobado el 14 de julio de 2026, incluyendo NIST SP 1326 (final julio 8, 2026), NIST SP 800-18 Rev. 2 (final junio 30, 2026), NIST SP 800-161 Rev. 1 Update 1, NIST SP 1305, y ZXPROTECTED4X 2.0Z ZX |
+|. |
 
 ## Cómo usar este manual
 
@@ -244,17 +244,17 @@ Realizó la coordinación de incidentes y un plan de salida ejecutable.
 
 ## 1.2 Importantes límites
 
-**Item** Silencio **Lo que no prueba**
-Silencio.
-Silencio Cuestionario Silencio Una afirmación del proveedor no es una prueba independiente.
+**Item** | **Lo que no prueba**
+|. |
+| Cuestionario | Una afirmación del proveedor no es una prueba independiente.
 Silencioso informe SOC 2 Cubre sistemas, criterios, periodo, pruebas y limitaciones, no todos los riesgos.
-TENIDO ISO certificado Se aplica sólo al alcance certificado y los detalles del certificado actual.
-Nota de seguridad Silencio Las señales externas pueden ser útiles pero pueden ser incompletas, estancadas o mal atribuidas. Silencio
-Contrato permanente Una promesa no muestra que un control funciona. Silencio
-← Herramienta resultado Silencio Automatización es compatible con las pruebas; no toma la decisión del negocio. Silencio
+| ISO certificado Se aplica sólo al alcance certificado y los detalles del certificado actual. |
+Nota de seguridad | Las señales externas pueden ser útiles pero pueden ser incompletas, estancadas o mal atribuidas. |
+Contrato permanente Una promesa no muestra que un control funciona. |
+← Herramienta resultado | Automatización es compatible con las pruebas; no toma la decisión del negocio. |
 
-Silencio **Principio del contrato:** Proporcione la actividad, no la responsabilidad. El propietario del negocio sigue siendo responsable de entender y gestionar el impacto.
-Silencio.
+| **Principio del contrato:** Proporcione la actividad, no la responsabilidad. El propietario del negocio sigue siendo responsable de entender y gestionar el impacto. |
+|. |
 
 2. El Ciclo de Vida de Terceros
 
@@ -264,13 +264,13 @@ Silencio.
 
 Figura 1. Ciclo de vida de riesgo de terceros
 
-**Stage** Silencio**
-Silencio--------------------------
-TENCIÓN ANTERIOR ¿Hay una necesidad válida y un propietario responsable? Silencio Solicitud, descripción del servicio, propietario, alternativas
+**Stage** |**
+|-------------------------- |
+TENCIÓN ANTERIOR ¿Hay una necesidad válida y un propietario responsable? | Solicitud, descripción del servicio, propietario, alternativas
 ¿Cuánto daño podría causar el fracaso? ← Datos, acceso, dependencia, disponibilidad, geografía
-Silencio ¿Es aceptable el riesgo residual? Ø Investigación, pruebas, pruebas, hallazgos, tratamiento
+| ¿Es aceptable el riesgo residual? Ø Investigación, pruebas, pruebas, hallazgos, tratamiento |
 ¿Son las obligaciones ejecutables? ← Condiciones de seguridad/privacy/resilience firmadas
-Silencio a bordo ¿El acceso es limitado y aprobado? Configuración, cuenta, flujo de datos, registros de aceptación
+| a bordo ¿El acceso es limitado y aprobado? Configuración, cuenta, flujo de datos, registros de aceptación |
 ¿Ha cambiado el riesgo o el rendimiento? ← Eventos, testimonios, problemas, métricas, reevaluaciones
 ¿Se eliminan los accesos, datos, activos y dependencias? ← Revocación, supresión/retorno, transición, confirmación
 
@@ -292,19 +292,19 @@ Silencio a bordo ¿El acceso es limitado y aprobado? Configuración, cuenta, flu
 
 - métricas, reportajes, retención de registros, revisión de calidad y mejora del programa.
 
-Silencio **Role**
-Silencio.
+| **Rol** |
+|. |
 tención Consejo/ejecutivo Silencioso Supervisión, dirección de riesgos, recursos, desafío de riesgo material
 ← Propietario de negocios ← Necesidad, crítica, rendimiento, propiedad de riesgo residual, disponibilidad de salida
-Silencioso Compras Silencio Flujo de trabajo, términos comerciales, renovación, registro de proveedores
+Silencioso Compras | Flujo de trabajo, términos comerciales, renovación, registro de proveedores
 TEN Legal / privacy TEN Contrato, base legal, regulación, transmisión de datos, asesoramiento de notificación
-TEN Seguridad / TPRM TENIDO Método, diligencia debida, análisis técnico, monitoreo, hallazgos TENIDO
+TEN Seguridad / TPRM | Método, diligencia debida, análisis técnico, monitoreo, hallazgos |
 TEN IT/engineering TEN Arquitectura, configuración, acceso, integración, pruebas, recuperación
 Evaluación independiente del diseño y funcionamiento del programa
-← Proveedor Silencio Información precisa, controles contratados, aviso, corrección, cooperación
+← Proveedor | Información precisa, controles contratados, aviso, corrección, cooperación
 
-Silencio ** Decisión mayor:** Defina quién puede aceptar qué nivel de riesgo residual. Un propietario de riesgos debe tener autoridad, contexto y rendición de cuentas, no sólo una firma conveniente. Silencio
-Silencio.
+| ** Decisión mayor:** Defina quién puede aceptar qué nivel de riesgo residual. Un propietario de riesgos debe tener autoridad, contexto y rendición de cuentas, no sólo una firma conveniente. |
+|. |
 
 # 4. Inventario, Clasificación y Tiering
 
@@ -326,14 +326,14 @@ Figura 2. Ejemplo de fichas de proveedores
 
 ## 4.2 Factores de inclinación
 
-Silencio **Factor** Silencio **Ejemplio estado de alto riesgo**
-Silencio------------------------------
+| **Factor** | **Ejemplio estado de alto riesgo**
+|------------------------------ |
 TENER Datos TENIENTES Personal sensible, salud, pago, secretos o información regulada
-TENIDO Acceso TENIDO Privilegiado, producción, remota, persistente o amplia API acceso ANTE
-TEN Disponibilidad TENIDO Failure detiene un producto crítico, operación o servicio al cliente TEN
-Silencio Cambio Silencio Proveedor puede actualizar el código, firmware, modelos, reglas o infraestructura
+| Acceso | Privilegiado, producción, remota, persistente o amplia API acceso ANTE
+TEN Disponibilidad | Failure detiene un producto crítico, operación o servicio al cliente |
+| Cambio | Proveedor puede actualizar el código, firmware, modelos, reglas o infraestructura
 tención dependencia Silencioso Pocos sustitutos, migración difícil, formato propietario, larga recuperación
-Silencio Reach Silencio Proveedor sirve muchos sistemas críticos, regiones, clientes o subsidiarias TEN
+| Reach | Proveedor sirve muchos sistemas críticos, regiones, clientes o subsidiarias |
 ← Incorporación de materiales, subprocesador, nube, identidad, modelo o dependencia de software
 
 5. Ingestión y Riesgo Inherente
@@ -356,8 +356,8 @@ Silencio Reach Silencio Proveedor sirve muchos sistemas críticos, regiones, cli
 
 8. Asignar la ruta de revisión necesaria y detener la compra o conexión no autorizadas.
 
-* Riesgo hereditario versus riesgo residual* El riesgo inherente es la exposición antes de considerar los controles. El riesgo residual es lo que queda después de controles verificados, términos de contrato, opciones de diseño y otro tratamiento. Silencio
-Silencio.
+* Riesgo hereditario versus riesgo residual* El riesgo inherente es la exposición antes de considerar los controles. El riesgo residual es lo que queda después de controles verificados, términos de contrato, opciones de diseño y otro tratamiento. |
+|. |
 
 6. Due Diligence and Research
 
@@ -369,10 +369,10 @@ Gráfico 3 Corriente de trabajo de diligencia debida
 
 ## 6.1 Componentes de evaluación NIST SP 1326
 
-Silencio **Componente** Silencio **Preguntas para investigar**
-Silencio--------------------------------------------------------------------------------
+| **Componente** | **Preguntas para investigar**
+|-------------------------------------------------------------------------------- |
 ¿Quién posee o influye en el proveedor? ¿Qué jurisdicciones o presiones legales importan?
-Silencio ¿Dónde se originó el producto, código, componentes, hardware y datos? ¿Pueden rastrearse las afirmaciones?
+| ¿Dónde se originó el producto, código, componentes, hardware y datos? ¿Pueden rastrearse las afirmaciones? |
 ¿Puede el proveedor soportar, responder y recuperarse de la perturbación?
 ← Prácticas cibernéticas fundamentales ¿Están presentes la gobernanza básica, el acceso, la vulnerabilidad, la tala, el desarrollo, la respuesta y las prácticas de recuperación?
 ¿Qué organizaciones aguas arriba y aguas abajo afectan materialmente el producto o el servicio?
@@ -387,8 +387,8 @@ Silencio ¿Dónde se originó el producto, código, componentes, hardware y dato
 
 - Entrevistas de arquitectura y flujo de datos con personas que operan el servicio, no sólo personal de ventas.
 
-TEN **Fairness and accuracy:** Verificar identidad, fecha, relevancia, jurisdicción y calidad de fuente. Dar al proveedor una oportunidad razonable para corregir errores de hecho materiales. Siga la ley y la política de selección e información personal. Silencio
-Silencio.
+TEN **Fairness and accuracy:** Verificar identidad, fecha, relevancia, jurisdicción y calidad de fuente. Dar al proveedor una oportunidad razonable para corregir errores de hecho materiales. Siga la ley y la política de selección e información personal. |
+|. |
 
 # 7. Evidencia y confianza
 
@@ -398,15 +398,15 @@ Silencio.
 
 Figura 4. Escalera de confianza en la prueba
 
-Silencio **Artifact** Silencio **Revisión de puntos**
-Silencio------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TEN SOC 2 Tipo 2 TENIDO Entity/system scope, criteria, period, opinion, tests, exceptions, CUECs, subservice organizations, subsequent events ← Aceptar la página de portada o un informe para otro producto TENIDO
-Silencio ISO/IEC 27001 certificado Silencio Certified organization and locations, scope, ISO versión, entidad certificado, acreditación, fechas, status Silencio Assuming certification covers every service and control TEN
-Silencio Penetration-test report tención Tester independence/skill, scope, date, method, exclusions, severidad, remediation, retest
-tención Política / estándar Silencio Aprobación, propietario, versión, alcance, acción requerida, excepciones dura Tratar la política escrita como prueba de funcionamiento ¦
+| **Artifact** | **Revisión de puntos**
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+TEN SOC 2 Tipo 2 | Entity/system scope, criteria, period, opinion, tests, exceptions, CUECs, subservice organizations, subsequent events ← Aceptar la página de portada o un informe para otro producto |
+| ISO/IEC 27001 certificado | Certified organization and locations, scope, ISO versión, entidad certificado, acreditación, fechas, status | Assuming certification covers every service and control |
+| Penetration-test report tención Tester independence/skill, scope, date, method, exclusions, severidad, remediation, retest |
+tención Política / estándar | Aprobación, propietario, versión, alcance, acción requerida, excepciones dura Tratar la política escrita como prueba de funcionamiento ¦
 Respuesta precisa, respuesta precisa, evidencia de apoyo, lagunas no resueltas
-TEN Arquitectura / flujo de datos TENSI Sistemas, límites de confianza, integraciones, ubicaciones, cifrado, administradores, cuartas partes TENIDO Utilizando un viejo diagrama de ventas ANTE
-TEN BC/DR test TENIDO Escenario, alcance, objetivos de recuperación, resultados observados, fallos, corrección, retest TENA Aceptar un plan sin una prueba ANTE
+TEN Arquitectura / flujo de datos TENSI Sistemas, límites de confianza, integraciones, ubicaciones, cifrado, administradores, cuartas partes | Utilizando un viejo diagrama de ventas ANTE
+TEN BC/DR test | Escenario, alcance, objetivos de recuperación, resultados observados, fallos, corrección, retest TENA Aceptar un plan sin una prueba ANTE
 TEN Vulnerability evidence ¦ Asset coverage, credenciales, date, severidad, remediation, exceptions, rescan ¦ Contando la salida del escaneo como tratamiento de riesgo
 
 # 8. Alcanzar riesgos y tratamiento
@@ -427,37 +427,37 @@ TEN Vulnerability evidence ¦ Asset coverage, credenciales, date, severidad, rem
 
 - Exigir la aprobación en el nivel de autoridad correcto y registrar la revisión/expedición.
 
-Silencio **Tratamiento** Silencio **Ejemplo**
-Silencio.
+| **Tratamiento** | **Ejemplo**
+|. |
 tención Evitar la vida Elige otro producto o mantiene la actividad interna tención Decisión y racionalidad
-← Reducir los datos de confidencialidad, eliminar el acceso de administración, añadir MFA, fijar vulnerabilidades TENER Control, propietario, fecha, prueba TENIDO
+← Reducir los datos de confidencialidad, eliminar el acceso de administración, añadir MFA, fijar vulnerabilidades TENER Control, propietario, fecha, prueba |
 Silencioso Transferencia/compartido Silencioso Seguros, indemnizaciones, créditos de servicio, asignación contractual TENCIÓN Exacto plazo y riesgo permanente
-Silencio Aceptar Silencio Autorizado propietario acepta el riesgo residual definido para un período TENIDO Alcance, razón, aprobador, expiración, monitoreo TENIDO
+| Aceptar | Autorizado propietario acepta el riesgo residual definido para un período | Alcance, razón, aprobador, expiración, monitoreo |
 ← Contingencia Silencioso proveedor, proceso manual, exportación de datos, recuperación probada Silencioso Trigger, recursos, resultado de la prueba
 
-Silencio **Advertencia de puntuación:** No promedia un problema catastrófico. Reportar escenarios graves, lagunas de evidencia y concentración separadas de la puntuación general.
-Silencio.
+| **Advertencia de puntuación:** No promedia un problema catastrófico. Reportar escenarios graves, lagunas de evidencia y concentración separadas de la puntuación general. |
+|. |
 
 9. Requisitos contractuales
 
 *Los contratos convierten los requisitos seleccionados en responsabilidades ejecutables.*
 
-Silencio **Área de aislamiento**
-Silencio.
-Programa de seguridad permanente ¿Qué marco, controles, políticas, pruebas, entrenamiento y pruebas de seguridad son necesarias? Silencio
-Silencio Uso de datos ¿Qué datos se pueden utilizar, dónde, para qué propósito, durante cuánto tiempo y para la formación de modelos? Silencio
-Silencio ¿Cómo se manejan menos privilegios, MFA, registro, acceso de apoyo y terminación? Silencio
+| **Área de aislamiento** |
+|. |
+Programa de seguridad permanente ¿Qué marco, controles, políticas, pruebas, entrenamiento y pruebas de seguridad son necesarias? |
+| Uso de datos ¿Qué datos se pueden utilizar, dónde, para qué propósito, durante cuánto tiempo y para la formación de modelos? |
+| ¿Cómo se manejan menos privilegios, MFA, registro, acceso de apoyo y terminación? |
 Vulnerabilidad permanente ¿Qué reglas de escaneo, revelación, parche, severidad, remediación y aviso se aplican?
-Silencio ¿Qué evento activa notar, con qué rapidez, a través de qué canal, con qué actualizaciones y cooperación? Silencio
-Subprocesadores Silencio ¿Se requiere aprobación o aviso? ¿Desbordan derechos equivalentes? ¿Hay una lista actual disponible?
-tención auditiva / evidencia Silencio ¿Qué informes, certificaciones, registros, derechos de prueba y prueba de remediación se pueden solicitar? Silencio
+| ¿Qué evento activa notar, con qué rapidez, a través de qué canal, con qué actualizaciones y cooperación? |
+Subprocesadores | ¿Se requiere aprobación o aviso? ¿Desbordan derechos equivalentes? ¿Hay una lista actual disponible?
+tención auditiva / evidencia | ¿Qué informes, certificaciones, registros, derechos de prueba y prueba de remediación se pueden solicitar? |
 ¿Qué disponibilidad, recuperación, respaldo, pruebas, comunicación de crisis y derechos de continuidad se aplican?
 ¿Qué propiedad, alojamiento, ubicación, característica, modelo AI o cambios de control requieren aviso o aprobación?
-¿Cómo se maneja el acceso, datos, claves, activos, registros, soporte de transición, retención y eliminación? Silencio
+¿Cómo se maneja el acceso, datos, claves, activos, registros, soporte de transición, retención y eliminación? |
 ¿Cómo se alinean las limitaciones, la indemnización, el seguro, los recursos y la cooperación regulatoria con el riesgo?
 
 tención **Revisión legal:** El lenguaje y la aplicabilidad de las cláusulas dependen de la ley, jurisdicción, posición de negociación, hechos y todo el acuerdo. Usar un abogado calificado.
-Silencio.
+|. |
 
 # 10. A bordo seguro
 
@@ -493,16 +493,16 @@ Silencio.
 
 *Monitoring detecta cambios significativos y verifica que el tratamiento continúa funcionando.*
 
-**Signal** Silencio**
-Silencio...
+**Signal** |**
+|... |
 TEN Nueva vulnerabilidad crítica o explotación ANTE Confirme el producto/versión afectado, exposición, mitigación, parche y retest
-Ø Incident, outage, or control failure TEN invoke notification and coordination process; reassess risk TEN
+Ø Incident, outage, or control failure TEN invoke notification and coordination process; reassess risk |
 tención SOC/ISO/pen-test change
 ← Nuevo subprocesador, propietario, ubicación o proveedor de modelos
-Silencio financiero o operativo Silencioso de revisión, escrow/export, alternativas, y disparador de salida
-tención Repetida SLA o la búsqueda de fracaso ← Escalate corrective action and residual-risk decision TEN
+| financiero o operativo Silencioso de revisión, escrow/export, alternativas, y disparador de salida |
+tención Repetida SLA o la búsqueda de fracaso ← Escalate corrective action and residual-risk decision |
 tención Renovación o material característica cambio ← Reassess antes del compromiso; actualización contrato y arquitectura
-Silencio No hay evidencia ni contacto absoluto Silencio Escalar según el nivel y el contrato; no marcar silenciosamente completo
+| No hay evidencia ni contacto absoluto | Escalar según el nivel y el contrato; no marcar silenciosamente completo
 
 ## 11.1 Frecuencia
 
@@ -516,16 +516,16 @@ Silencio No hay evidencia ni contacto absoluto Silencio Escalar según el nivel 
 
 *Un hallazgo es una brecha documentada entre criterios y condición observada.*
 
-Silencio **Encuentro del elemento**
-Silencio...
-tención Criterios Silencio Exactitud, plazo de contrato, política o norma aprobada
-Silencio Silencio Qué evidencia mostró, incluyendo la población afectada y la fecha
-← Riesgo Silencio Credible escenario e impacto empresarial
-Silencio . Por qué se produjo la brecha; evitar las conjeturas no apoyadas
+| **Encuentro del elemento** |
+|... |
+tención Criterios | Exactitud, plazo de contrato, política o norma aprobada
+| | Qué evidencia mostró, incluyendo la población afectada y la fecha
+← Riesgo | Credible escenario e impacto empresarial
+| . Por qué se produjo la brecha; evitar las conjeturas no apoyadas |
 TENCIÓN FORMULADA Corrección específica o control compensatorio
-Silencio Propietario/fecha Fecha límite de responsabilidad y riesgo
-TENCIÓN PROVISIONAL TENIDO Medida a corto plazo mientras que la corrección completa está pendiente
-TEN Retest TENIDO Método, evidencia, resultado, revisor y fecha de cierre
+| Propietario/fecha Fecha límite de responsabilidad y riesgo |
+TENCIÓN PROVISIONAL | Medida a corto plazo mientras que la corrección completa está pendiente
+TEN Retest | Método, evidencia, resultado, revisor y fecha de cierre
 
 ## 12.1 Disciplina de excepción
 
@@ -559,13 +559,13 @@ Gráfico 5 Coordinación de incidentes de proveedores
 
 5. Ejerce escenarios realistas de eliminación de proveedores, incumplimiento, compromiso de software, compromiso de identidad y eliminación de datos.
 
-Silencio **Primeras preguntas**
+| **Primeras preguntas** |
 Silencioso...---------------------------------------------------------------------------------------- La vida------------------------------------------------------
-¿Qué pasó y cuándo? Silencio Establecer plazos y obligaciones de notificación
-¿Qué producto, inquilino, región, versión, cuentas, datos y subprocesadores? Silencio
+¿Qué pasó y cuándo? | Establecer plazos y obligaciones de notificación
+¿Qué producto, inquilino, región, versión, cuentas, datos y subprocesadores? |
 ¿Está contenido el evento? ¿Qué sigue activo? confidencialidad Guía de las decisiones de protección
-¿Qué evidencia apoya la conclusión actual? Silencio Acto separado de la suposición
-¿Qué acciones de los clientes son necesarias? Silencio Coordinar teclas, acceso, parches, configuraciones y comunicación
+¿Qué evidencia apoya la conclusión actual? | Acto separado de la suposición
+¿Qué acciones de los clientes son necesarias? | Coordinar teclas, acceso, parches, configuraciones y comunicación
 ¿Cuándo es la siguiente actualización? Mantener un ritmo de funcionamiento fiable
 
 # 14. Cuartas Partes, concentración y riesgo sistémico
@@ -600,18 +600,18 @@ Figura 6. Concentración oculta de cuarto partido
 
 *El riesgo de Cloud y SaaS depende del modelo de responsabilidad compartida y de la configuración de la organización*.
 
-Silencio**
-Silencio.
+|** |
+|. |
 ← Seguridad del arrendatario   SSO, MFA, roles, cuentas de administración, sesiones, acceso de apoyo, registro de vidas
-← Datos TENIDO Categorías, tenacidad, encriptación, claves, regiones, réplicas, respaldos, retención, eliminación
+← Datos | Categorías, tenacidad, encriptación, claves, regiones, réplicas, respaldos, retención, eliminación
 ← Integración Ø APIs, fichas, webhooks, agentes, redes, secretos, alcances, límites de tarifas
-TENIENDO Aseguramiento TENIDO Servicio en la nube y ubicaciones dentro de informe/certificado alcance TEN
+TENIENDO Aseguramiento | Servicio en la nube y ubicaciones dentro de informe/certificado alcance |
 Ø Operaciones en la vida Vulnerabilidad, cambio, monitoreo, incidente, capacidad, disponibilidad, recuperación
 ← Funciones del cliente ← Configuración, identidades, puntos finales, clasificación de datos, registros, copias de seguridad, respuesta
 ← Exit ← Exportar formato, exhaustividad, tiempo, costo, dependencias, eliminación segura, continuidad
 
-TEN **Responsabilidad compartida:** Un proveedor seguro no crea automáticamente un inquilino seguro. Prueba la configuración, acceso, integraciones, opciones de datos y monitoreo del cliente. Silencio
-Silencio.
+TEN **Responsabilidad compartida:** Un proveedor seguro no crea automáticamente un inquilino seguro. Prueba la configuración, acceso, integraciones, opciones de datos y monitoreo del cliente. |
+|. |
 
 # 16. Software and Open-Source Supply Chains
 
@@ -651,17 +651,17 @@ Gráfico 7 Flujo de evidencia de cadena de suministro de software
 
 Figura 8. Corriente de trabajo de riesgo de los proveedores AI
 
-Silencio**
-Silencio.
-Silencio Caso de uso / impacto ¿Qué decisión o tarea se apoya? ¿Quién puede ser dañado? ¿Es significativa la revisión humana?
-tención de datos Silencio ¿Se mantienen, comparten o utilizan los avisos, subidas, salidas, comentarios y registros para la formación? Silencio
+|** |
+|. |
+| Caso de uso / impacto ¿Qué decisión o tarea se apoya? ¿Quién puede ser dañado? ¿Es significativa la revisión humana? |
+tención de datos | ¿Se mantienen, comparten o utilizan los avisos, subidas, salidas, comentarios y registros para la formación? |
 ¿Qué modelo, alojamiento, plugins, agentes, fuentes de datos y subprocesadores están involucrados?
-¿Cómo se maneja el aislamiento, el acceso, los secretos, los permisos de herramientas, la inyección rápida, el abuso y la vigilancia? Silencio
-TENIDA Privacidad / IP ¿Qué fundamento jurídico, propiedad, licencias, eliminación, ubicación, transferencia y derechos se aplican? TEN
+¿Cómo se maneja el aislamiento, el acceso, los secretos, los permisos de herramientas, la inyección rápida, el abuso y la vigilancia? |
+TENIDA Privacidad / IP ¿Qué fundamento jurídico, propiedad, licencias, eliminación, ubicación, transferencia y derechos se aplican? |
 ¿Cómo se evalúa la exactitud, el sesgo, la robustez, la explicabilidad, la deriva y la producción insegura para este uso?
-Silencio ¿Qué cambios de modelo, política, característica, proveedor o entrenamiento desencadenan aviso y reevaluación? Silencio
-¿Cómo se manejan los productos dañinos, las fugas, el compromiso modelo, los abusos, las interrupciones y las pruebas? Silencio
-¿Pueden exportarse o eliminarse los avisos, archivos, índices, notas finas, registros y datos derivados? Silencio
+| ¿Qué cambios de modelo, política, característica, proveedor o entrenamiento desencadenan aviso y reevaluación? |
+¿Cómo se manejan los productos dañinos, las fugas, el compromiso modelo, los abusos, las interrupciones y las pruebas? |
+¿Pueden exportarse o eliminarse los avisos, archivos, índices, notas finas, registros y datos derivados? |
 
 # 18. Privacidad y Protección de Datos
 
@@ -682,19 +682,19 @@ Silencio ¿Qué cambios de modelo, política, característica, proveedor o entre
 - Reevaluar cuando el propósito, los datos, la formación de modelos, la ubicación, el subprocesador, la propiedad o cambios características.
 
 * minimización de datos* Los datos más sensibles son a menudo los datos que un proveedor nunca recibe. Reducir la recogida y el acceso antes de depender de controles complicados.
-Silencio.
+|. |
 
 19. Resiliencia, continuidad y salida
 
 *Resilience means providing critical outcomes despite provider disruption and leaving safe when necessary.*
 
  Capability** Silencioso **Evidence to test**
-Silencio...
-← Impacto empresarial TENIDO Servicio crítico, máxima perturbación tolerable, RTO/RPO, dependencias
+|... |
+← Impacto empresarial | Servicio crítico, máxima perturbación tolerable, RTO/RPO, dependencias
 ← Respaldo/recuperación ¦ Scope, aislamiento, prueba de restauración, tiempo de observación, pérdida de datos, fallos, retest
-← Continuidad Silencio Personas, instalaciones, tecnología, comunicaciones, recorridos manuales, ejercicios
+← Continuidad | Personas, instalaciones, tecnología, comunicaciones, recorridos manuales, ejercicios
 ← Capacidad/disponibilidad viv Arquitectura, regiones, límites, monitoreo, incidentes, desempeño del SLA
-Silencio Plan de salida Silenciosos, derechos de decisión, alternativa, exportación de datos, eliminación de acceso, secuencia de migración
+| Plan de salida Silenciosos, derechos de decisión, alternativa, exportación de datos, eliminación de acceso, secuencia de migración |
 ← Deletion ¦ Producción, copia de seguridad, registros, dispositivos, datos derivados, artefactos de AI, subprocesadores, evidencia
 tención, retención legal, confidencialidad, vulnerabilidad/incidente, apoyo
 
@@ -712,57 +712,57 @@ tención, retención legal, confidencialidad, vulnerabilidad/incidente, apoyo
 
 *NIST CSF 2.0 coloca la gobernanza de la cadena de suministro en la categoría GV.SC.*
 
-Silencio **Responde** Silencio **Plain meaning **Example evidence**
-Silencio..
-Silencio GV.SC-01 TENIDO Un programa C-SCRM, estrategia, objetivos, políticas y procesos son establecidos y acordados por los interesados de la organización. Silencio Programa aprobado y registro de los interesados
-Silencio GV.SC-02 TENIDO funciones y responsabilidades de ciberseguridad para proveedores, clientes y socios se establecen, comunican y coordinan. Silencio RACI, contactos, acuerdos, ejercicios
-tención GV.SC-03 Silencio C-SCRM se integra en la gestión del riesgo empresarial, evaluación del riesgo de ciberseguridad y procesos de mejora. ← Enlace, registro de riesgos, lecciones y mejoras
+| **Responde** | **Significado claro **Evidencia de ejemplo**
+|.. |
+| GV.SC-01 | Un programa C-SCRM, estrategia, objetivos, políticas y procesos son establecidos y acordados por los interesados de la organización. | Programa aprobado y registro de los interesados
+| GV.SC-02 | funciones y responsabilidades de ciberseguridad para proveedores, clientes y socios se establecen, comunican y coordinan. | RACI, contactos, acuerdos, ejercicios
+tención GV.SC-03 | C-SCRM se integra en la gestión del riesgo empresarial, evaluación del riesgo de ciberseguridad y procesos de mejora. ← Enlace, registro de riesgos, lecciones y mejoras
 Los proveedores son conocidos y priorizados por la crítica. tención Completo inventario de proveedores y método de crítica
 Los requisitos de ciberseguridad de cadena de suministro se establecen, priorizan e incluyen en contratos y acuerdos. biblioteca de requisitos, términos firmados, desviaciones
-Silencio GV.SC-06 ANTE La planificación y la diligencia debida se realizan antes de iniciar relaciones formales con los proveedores. Silencio Toma, investigación, evidencia, análisis, aprobación
-Silencio GV.SC-07 Silencio Los riesgos de los proveedores se entienden, registran, priorizan, evalúan, tratan y supervisan a lo largo de la relación. Silencio Registros de riesgos, monitoreo, hallazgos, tratamiento confidencialidad
+| GV.SC-06 ANTE La planificación y la diligencia debida se realizan antes de iniciar relaciones formales con los proveedores. | Toma, investigación, evidencia, análisis, aprobación
+| GV.SC-07 | Los riesgos de los proveedores se entienden, registran, priorizan, evalúan, tratan y supervisan a lo largo de la relación. | Registros de riesgos, monitoreo, hallazgos, tratamiento confidencialidad
 Los proveedores pertinentes están incluidos en la planificación, respuesta y recuperación de incidentes. Ø Planes, contactos, mesas, registros de incidentes
 Las prácticas de seguridad de cadena de suministro están integradas y supervisadas a lo largo del ciclo de vida útil y de productos tecnológicos. Requisitos para el ciclo de vida, pruebas de productos y servicios
-Los planes de cadena de suministro de Ciberseguridad incluyen actividades que se producen después de que termine un acuerdo de asociación o servicio. Silencio Plan de salida, eliminación de acceso/datos, funciones posteriores a la determinación
+Los planes de cadena de suministro de Ciberseguridad incluyen actividades que se producen después de que termine un acuerdo de asociación o servicio. | Plan de salida, eliminación de acceso/datos, funciones posteriores a la determinación
 
-**Usando GV.SC:** Define un perfil actual de los resultados observados y un perfil de destino de las necesidades empresariales. Priorizar las lagunas, propietarios, recursos y fechas; no tratar un mapeo como aplicación automática. Silencio
-Silencio.
+**Usando GV.SC:** Define un perfil actual de los resultados observados y un perfil de destino de las necesidades empresariales. Priorizar las lagunas, propietarios, recursos y fechas; no tratar un mapeo como aplicación automática. |
+|. |
 
 # 21. NIST C-SCRM Orientación en la práctica
 
 *Las publicaciones actuales NIST proporcionan orientación complementaria sobre programa, evaluación y planificación.*
 
-Silencio **Publicación**
-Silencio.
+| **Publicación** |
+|. |
 tención NIST SP 800-161 Rev. 1 Update 1 TEN integra C-SCRM en la gestión de riesgos a nivel institucional, de misión/empresa y de sistema; incluye estrategia, política, planes, evaluaciones y controles.
-Silencio NIST SP 1305 Silencio Usos NIST CSF 2.0 GV.SC para establecer y operar C-SCRM y comunicar los requisitos de los proveedores.
-Silencio NIST SP 1326 (final julio 8, 2026) Silencio Consideraciones rápidas para evaluaciones de la diligencia debida del proveedor de TIC: FOCI, procedencia, resiliencia, prácticas cibernéticas fundamentales y cadenas de suministro. Silencio
-Silencio NIST SP 800-18 Rev. 2 (final junio 30, 2026) Silencio Define elementos esenciales para los planes de seguridad del sistema, privacidad y C-SCRM, incluyendo propósito, estado de control, responsabilidades y comportamiento esperado.
+| NIST SP 1305 | Usos NIST CSF 2.0 GV.SC para establecer y operar C-SCRM y comunicar los requisitos de los proveedores.
+| NIST SP 1326 (final julio 8, 2026) | Consideraciones rápidas para evaluaciones de la diligencia debida del proveedor de TIC: FOCI, procedencia, resiliencia, prácticas cibernéticas fundamentales y cadenas de suministro. |
+| NIST SP 800-18 Rev. 2 (final junio 30, 2026) | Define elementos esenciales para los planes de seguridad del sistema, privacidad y C-SCRM, incluyendo propósito, estado de control, responsabilidades y comportamiento esperado.
 
 ## 21.1 Pensamiento de tres niveles
 
 **Nivel**
 ...--------------------------------------------------------------------------------------------------------------------------------------------------
 ← Estrategia de empresa, apetito de riesgo, política común, recursos, supervisión  durable Los límites de concentración de proveedores y las métricas del programa
-TEN Misión / proceso de negocios TENIDO Servicios críticos y dependencias
-TEN System TENED producto, servicio, arquitectura, controles y plan TENIDO Plataforma cliente utilizando una nube y proveedor de identidad
+TEN Misión / proceso de negocios | Servicios críticos y dependencias
+TEN System TENED producto, servicio, arquitectura, controles y plan | Plataforma cliente utilizando una nube y proveedor de identidad
 
 * Un plan C-SCRM explica los arreglos previstos y aplicados. Los evaluadores todavía necesitan pruebas fiables de que funcionan los controles pertinentes.
-Silencio.
+|. |
 
 # 22. Compliance and Framework Mappings
 
 *Los ajustes coordinan el trabajo, pero cada obligación debe ser interpretada y probada en sus propios términos*.
 
-Silencioso **Framework / obligation** Silencio **Supplier-risk connection**
-Silencio--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Silencio SOC 2 Silencio Gestión de proveedores, riesgos, compromisos, límites del sistema, organizaciones de subservicio, CUECs Silencioso Revisar el alcance exacto del informe, período, criterios, opinión, pruebas, excepciones
-TEN ISO/IEC 27001:2022 Silencio Partes interesadas, relaciones con los proveedores, cadena de suministro de TIC, uso en la nube, monitoreo y cambio TENIDO El alcance de la certificación y la aplicabilidad del control varían Ø
-Silencio PCI DSS v4.0.1 Silencio Proveedores de servicios de terceros, responsabilidades, acuerdos, monitoreo, soporte de incidentes TENIDO Validar el propio alcance y responsabilidades de la entidad
-Silencio HIPAA Silencio Negocios asociados, acuerdos, salvaguardias, incidentes, subcontratistas  sometidos Estatus y deberes legales dependen de hechos y leyes
-TENCIÓN GDPR TENIDO Procesadores, contratos, subprocesadores, seguridad, transferencias, asistencia, supresión/audit ANTERIOR Papeles, jurisdicción, base legal y mecanismo de transferencia requieren análisis legal ANTE
+Silencioso **Framework / obligation** | **Supplier-risk connection**
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SOC 2 | Gestión de proveedores, riesgos, compromisos, límites del sistema, organizaciones de subservicio, CUECs Silencioso Revisar el alcance exacto del informe, período, criterios, opinión, pruebas, excepciones
+TEN ISO/IEC 27001:2022 | Partes interesadas, relaciones con los proveedores, cadena de suministro de TIC, uso en la nube, monitoreo y cambio | El alcance de la certificación y la aplicabilidad del control varían Ø
+| PCI DSS v4.0.1 | Proveedores de servicios de terceros, responsabilidades, acuerdos, monitoreo, soporte de incidentes | Validar el propio alcance y responsabilidades de la entidad
+| HIPAA | Negocios asociados, acuerdos, salvaguardias, incidentes, subcontratistas  sometidos Estatus y deberes legales dependen de hechos y leyes
+TENCIÓN GDPR | Procesadores, contratos, subprocesadores, seguridad, transferencias, asistencia, supresión/audit ANTERIOR Papeles, jurisdicción, base legal y mecanismo de transferencia requieren análisis legal ANTE
 TEN CIS Controls v8.1 Ø Control 15 inventario de proveedores de servicios, políticas, clasificación, contratos, evaluación, monitoreo, desmantelamiento de las Salvaguardias son una base de referencia priorizada, no cumplimiento legal universal ANTE
-Silencio NIST CSF 2.0 TENIDO GV.SC más organización en todo el Govern, Identificar, Proteger, Detectar, Responder, Recuperar los resultados TENIDOS Los perfiles están adaptados; CSF no es una certificación ANTE
+| NIST CSF 2.0 | GV.SC más organización en todo el Govern, Identificar, Proteger, Detectar, Responder, Recuperar los resultados TENIDOS Los perfiles están adaptados; CSF no es una certificación ANTE
 
 # 23. Pruebas de pruebas y métricas
 
@@ -788,44 +788,44 @@ Describir excepciones con precisión y evaluar controles de frecuencia, gravedad
 
 Realizar una revisión independiente antes del cierre.
 
-Silencio ** Métrico** Silencio **Cálculo del ejemplo** Silencio **Lo que puede revelar** Silencio
-Silencio...------------------------------------------------------------
-Silencio Inventario propiedad Silencio Proveedores con propietario válido ÷ proveedores activos Silencio Relaciones con los huérfanos Silencio
-tención Evaluación cobertura Silencio proveedores In-scope con evaluación completada actual ÷ proveedores in-scope
-← Cobertura de contrato Silencio proveedores de alto nivel con cláusulas requeridas
-Silencio Critical finding age Silencio Días desde encontrar fecha hasta el cierre o hoy Silencio Remediation delay tención
-← Rendimiento de notificación de incidentes Silencio Eventos notificados dentro del tiempo contractual ÷ eventos reportables ¦
+| ** Métrico** | **Cálculo del ejemplo** | **Lo que puede revelar** |
+|...------------------------------------------------------------ |
+| Inventario propiedad | Proveedores con propietario válido ÷ proveedores activos | Relaciones con los huérfanos |
+tención Evaluación cobertura | proveedores In-scope con evaluación completada actual ÷ proveedores in-scope
+← Cobertura de contrato | proveedores de alto nivel con cláusulas requeridas
+| Critical finding age | Días desde encontrar fecha hasta el cierre o hoy | Remediation delay tención
+← Rendimiento de notificación de incidentes | Eventos notificados dentro del tiempo contractual ÷ eventos reportables ¦
 Ø Proveedores críticos con el plan de exportación / salida probados ÷ proveedores críticos TEN Lock-in y la exposición de recuperación
-← Concentración Silencio Servicios críticos dependientes del mismo proveedor/región/tecnología TENCIÓN Fallo relacionado con el cuerpo
+← Concentración | Servicios críticos dependientes del mismo proveedor/región/tecnología TENCIÓN Fallo relacionado con el cuerpo
 
 * Calidad métrica* Siempre mostrar numerador, denominador, fecha, reglas de inclusión, propietario de datos, limitaciones, tendencia y acción. Un porcentaje verde puede ocultar una excepción severa.
-Silencio.
+|. |
 
 24. Herramientas de código abierto
 
 *Las herramientas de código abierto pueden apoyar inventario, pruebas, seguridad de software, pruebas técnicas, monitoreo y remediación.*
 
 # Tool** Silencioso**
-Silencio.
-TENIDO CISO Assistant TENIDO Riesgo, controles, evaluaciones, pruebas y hallazgos
+|. |
+| CISO Assistant | Riesgo, controles, evaluaciones, pruebas y hallazgos
 TENENCIA-Track TEN SBOM análisis y monitoreo del riesgo de componentes
 tención CycloneDX Silencioso Software ley de materiales estándar y herramientas
 tención Syft ← Generación SBOM para imágenes y sistemas de archivos
 TEN Grype TEN Vulnerability escaneado para imágenes y SBOMs
 Repositorio, imagen, dependencia, secreto y cheques de IaC
 ← OpenSSF Scorecard tención Señales sobre las prácticas de seguridad del proyecto de código abierto
-Silencio GUAC tóxico Graphing software supply-chain metadata
-TEN OSV-Scanner TENIDO Comprobaciones de vulnerabilidad conocida para las dependencias
+| GUAC tóxico Graphing software supply-chain metadata |
+TEN OSV-Scanner | Comprobaciones de vulnerabilidad conocida para las dependencias
 ← DefectoDojo tóxico Encontrar la ingesta, la deduplicación, la remediación y la retesta
-TEN Wazuh TENRI Endpoint monitoring, file integrity, log analysis, and alerts TEN
+TEN Wazuh TENRI Endpoint monitoring, file integrity, log analysis, and alerts |
 ← Keycloak ← Identidad, roles, MFA, sesiones y eventos
-Silencio OWASP ZAP Silencio Autorizado de las pruebas de la aplicación web
-Silencio Greenbone Community Edition Silencio Evaluación de vulnerabilidad autorizada
-Silencio Nmap Silencio Servicio autorizado y descubrimiento de activos
-TEN Open Policy Agent TENIDO Decisiones de política como código
+| OWASP ZAP | Autorizado de las pruebas de la aplicación web
+| Greenbone Community Edition | Evaluación de vulnerabilidad autorizada
+| Nmap | Servicio autorizado y descubrimiento de activos
+TEN Open Policy Agent | Decisiones de política como código
 
-**Autorización y límites:** Utilice herramientas sólo en sistemas, repositorios, redes, datos y cuentas que posee o tiene permiso escrito para probar. Protege los resultados. Una herramienta apoya la evidencia; no certifica a un proveedor o reemplaza el juicio legal, empresarial y humano. Silencio
-Silencio.
+**Autorización y límites:** Utilice herramientas sólo en sistemas, repositorios, redes, datos y cuentas que posee o tiene permiso escrito para probar. Protege los resultados. Una herramienta apoya la evidencia; no certifica a un proveedor o reemplaza el juicio legal, empresarial y humano. |
+|. |
 
 ## 24.1 CISO Assistant
 
@@ -959,16 +959,16 @@ Pruebas para retener: aprobación y alcance, herramienta/versión, configuració
 
 *Los administradores hacen que el programa sea real estableciendo prioridades, resolviendo conflictos, financiando tratamiento y desafiando pruebas*.
 
-****Dashboard area** Silencio **Pregunta principal**
+****Dashboard area** | **Pregunta principal**
 La vida... la vida... la vida... la vida... la vida...
-¿Conocemos a todos los proveedores activos, propietarios, servicios, ruta de datos y dependencia? Silencio Servicio crítico desconocido o propietario huérfano
+¿Conocemos a todos los proveedores activos, propietarios, servicios, ruta de datos y dependencia? | Servicio crítico desconocido o propietario huérfano
 ¿Se han completado las decisiones de alto riesgo antes del compromiso? tención Compra, acceso o transferencia de datos revisión pasada
-Silencio Evidencia Silencio ¿Cubre el servicio y el período exactos? TENIDA La brecha material, excepción, alcance débil o informe final
-TENSIONES FORMULADAS ¿Se han firmado requisitos materiales y se han aprobado desviaciones? Silencio Cláusula crítica ausente o inaplicable
-viv Findings Silencio ¿Quién tiene problemas graves y atrasados? tención El riesgo grave carece de protección provisional o decisión
+| Evidencia | ¿Cubre el servicio y el período exactos? TENIDA La brecha material, excepción, alcance débil o informe final
+TENSIONES FORMULADAS ¿Se han firmado requisitos materiales y se han aprobado desviaciones? | Cláusula crítica ausente o inaplicable
+viv Findings | ¿Quién tiene problemas graves y atrasados? tención El riesgo grave carece de protección provisional o decisión
 ¿Podemos contactar y coordinar con proveedores críticos ahora? ← Contactos, relojes o roles no probados
 TENCIÓN TERRITOR ANTE ¿Dónde podría un evento interrumpir varios servicios críticos? La concentración inevitable carece de contingencia
-¿Podemos recuperar datos y reemplazar el servicio a tiempo? Silencio No hay ruta de exportación, alternativa o eliminación probada
+¿Podemos recuperar datos y reemplazar el servicio a tiempo? | No hay ruta de exportación, alternativa o eliminación probada
 
 ## 25.1 Gestor de ritmo operativo
 
@@ -980,8 +980,8 @@ Por lo menos anualmente: estrategia de revisión, apetito, titulación, métodos
 
 Renovación o cambio material: reevaluar antes del nuevo compromiso, no después de la firma.
 
-**Preguntas que importan:** ¿Qué puede fallar? ¿Quién está afectado? ¿Qué evidencia apoya la conclusión? ¿Qué sigue siendo incierto? ¿Quién debe actuar cuando? ¿Cómo sabremos que la solución funcionó? Silencio
-Silencio.
+**Preguntas que importan:** ¿Qué puede fallar? ¿Quién está afectado? ¿Qué evidencia apoya la conclusión? ¿Qué sigue siendo incierto? ¿Quién debe actuar cuando? ¿Cómo sabremos que la solución funcionó? |
+|. |
 
 # 26. Junior Analyst Career Guide
 
@@ -1028,13 +1028,13 @@ Utilizar herramientas autorizadas en laboratorios o entornos aprobados y explica
 Preparar resúmenes claros de gerente sin reclamar certeza más allá de las pruebas.
 
 Silencioso**
-Silencio...
+|... |
 ← Lifecycle ← Registro del proveedor de la ingesta a través de la salida
-← Evidencia Silencio Anotado SOC 2/ISO / lista de verificación de revisión de la prueba mediante hechos sintéticos
-Silencio Tres evaluaciones basadas en escenarios con incertidumbre
-Ø Alfabetización técnica TENIDO SBOM y análisis de la vulnerabilidad de un proyecto de capacitación
+← Evidencia | Anotado SOC 2/ISO / lista de verificación de revisión de la prueba mediante hechos sintéticos
+| Tres evaluaciones basadas en escenarios con incertidumbre |
+Ø Alfabetización técnica | SBOM y análisis de la vulnerabilidad de un proyecto de capacitación
 ¦ Escribir Silencioso Encontrar, resumen del administrador, brecha del contrato, y retest memo
-← Datos TENIDO Dashboard con poblaciones definidas y cálculos
+← Datos | Dashboard con poblaciones definidas y cálculos
 ← Ética ← Autorización escrita, datos sintéticos, redes y limitaciones honestas
 
 # 27. Laboratorio Ficcional y Portfolio
@@ -1064,34 +1064,34 @@ Respuesta
 
 18. Publicar documentos sanitarios, un dashboard, y un informe de gestión de una página claramente etiquetado ficticio y educativo.
 
-Silencio **Artifact** Silencio ** Lo que demuestra** Silencio
-Silencio.
-TENIDO inventario de proveedores y ordenamiento TENIDO Gestión y priorización de la población
-tención Due-diligence memo ANTE Investigación, calidad de la evidencia y decisión razonada TEN
+| **Artifact** | ** Lo que demuestra** |
+|. |
+| inventario de proveedores y ordenamiento | Gestión y priorización de la población
+tención Due-diligence memo ANTE Investigación, calidad de la evidencia y decisión razonada |
 ← Revisión de la Assurance tención Alcance, período, excepciones, CUECs y limitaciones
-tención registro de riesgos / encontrar la vida Escenario, criterios, acción, propietario y retestigo TENIDO
+tención registro de riesgos / encontrar la vida Escenario, criterios, acción, propietario y retestigo |
 Lista de verificación del contrato permanente Traducción del riesgo en requisitos ejecutables
-TEN SBOM laboratorio TENIDO Componente de software y alfabetización de vulnerabilidad
-tención Incident tabletop tención Roles, facts, communication, and improvement
+TEN SBOM laboratorio | Componente de software y alfabetización de vulnerabilidad
+tención Incident tabletop tención Rols, facts, communication, and improvement
 ← Exit test ¦ Resilience, portability, revocation, and deletion
-tención Administrador dashboard Silencio Metrices claras, problemas graves, incertidumbre y acción
+tención Administrador dashboard | Metrices claras, problemas graves, incertidumbre y acción
 
 28. Plan de aprendizaje de 30 días
 
 *Un mes centrado puede crear una capacidad útil de nivel de entrada*.
 
-**Días** Silencio**
-Silencio------------------------------
-TENIDO 1–3 TENIDO TPRM/C-SCRM términos, ciclo de vida, roles TENIDO Concept map and lifecycle record
-Silencio 4–6 Silencio Inventario, crítica, inclinación, riesgo inherente TEN-Supplier inventario y tier memo
-Silencio 7–10 Silencio debida diligencia y NIST SP 1326 Silencio Tres evaluaciones basadas en la investigación
-TEN 11–13 TENIDO SOC 2, ISO, prueba de plumas, política, diagramas ANTERI Evidencia crítica documentos de trabajo ANTE
-TEN 14–16 TENIDO Riesgo, hallazgos, tratamiento, excepciones TENIDO registro de riesgos y dos hallazgos TENIDO
-TEN 17–19 ANTERIENTE Contratos, a bordo, monitoreando TENIDO Cláusulae y listas de verificación a bordo ANTE
-TEN 20–22 TENIDO Incidentes, resiliencia, salida TENIDO Tabletop y prueba de salida TEN
-TEN 23–25 TENIDO Cloud, cadena de suministro de software, AI TENIDO Tres evaluaciones enfocadas
-Silencio 26–27 Silencio Laboratorio de herramientas de código abierto ← SBOM, escaneo, corrección, rescan Silencio
-TEN 28–30 TENIDA Metrics, portafolio, entrevista TENIDO Dashboard, manager memo, cinco historias de STAR
+**Días** |**
+|------------------------------ |
+| 1–3 | TPRM/C-SCRM términos, ciclo de vida, roles | Concept map and lifecycle record
+| 4–6 | Inventario, crítica, inclinación, riesgo inherente TEN-Supplier inventario y tier memo
+| 7–10 | debida diligencia y NIST SP 1326 | Tres evaluaciones basadas en la investigación
+TEN 11–13 | SOC 2, ISO, prueba de plumas, política, diagramas ANTERI Evidencia crítica documentos de trabajo ANTE
+TEN 14–16 | Riesgo, hallazgos, tratamiento, excepciones | registro de riesgos y dos hallazgos |
+TEN 17–19 ANTERIENTE Contratos, a bordo, monitoreando | Cláusulae y listas de verificación a bordo ANTE
+TEN 20–22 | Incidentes, resiliencia, salida | Tabletop y prueba de salida |
+TEN 23–25 | Cloud, cadena de suministro de software, AI | Tres evaluaciones enfocadas
+| 26–27 | Laboratorio de herramientas de código abierto ← SBOM, escaneo, corrección, rescan |
+TEN 28–30 TENIDA Metrics, portafolio, entrevista | Dashboard, manager memo, cinco historias de STAR
 
 29. Preparación de entrevistas
 
@@ -1157,12 +1157,12 @@ Alcance cuidadoso, registros completos, escepticismo de evidencia, escritura cla
 
 ## 30.1 Registro de inventario de proveedores
 
-Silencio**
-Silencio...
-TENIDO Nombre legal / servicio TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \    \                                                                                                                                                                                     
+|** |
+|... |
+| Nombre legal / servicio | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \    \                                                                                                                                                                                     
 Los dueños de negocios y técnicos de la vida siguen adelante.
 "Pripose" y procesos críticos "vivir"
-TENIENDO Datos / ubicaciones / transferencias TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                 
+TENIENDO Datos / ubicaciones / transferencias | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                 
 "Acceso a las integraciones / privilegios"
 "Primeras fiestas / concentración"
 Silencioso Tier / inherente / riesgo residual
@@ -1172,29 +1172,29 @@ Evaluación de la vida / hallazgos / excepciones
 
 ## 30.2 Documento de trabajo sobre diligencia debida
 
-Silencio**
-Silencio.
+|** |
+|. |
 "La decisión y el alcance de la vida"
 Fuentes de la vida / fechas / confiabilidad
-TENIDO FOCI TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                            
+| FOCI | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                            
 "La venganza en la vida"
 "La Resiliencia de la Vida"
 Las prácticas cibernéticas de la Fundación han subido a la vida.
 TENÍAS DE ATENCIÓN DE LA LISTA DE AGUAS TENIDAS
 Evidencias subidas / incertidumbres
-Los escenarios de riesgo de muerte / el tratamiento TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
-TENIDO CONCLUSIÓN / Aprobador / expiración \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \                                                                                                                                                                                              
+Los escenarios de riesgo de muerte / el tratamiento | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+| CONCLUSIÓN / Aprobador / expiración \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \     \                                                                                                                                                                                               |
 
 ## 30.3 Assurance review
 
-Silencio**
-Silencio...
-TENIDO Artifact / issuer / date TEN \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \  \                                                                                                                                                                                             
+|** |
+|... |
+| Artifact / issuer / date TEN \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \  \                                                                                                                                                                                              |
 "Entity / system / location scope"
 Criterios de la vida / período estándar / duración \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \                                                                                                                                                                                             
 "Opinión o estado de vida"
-Tests / excepciones / hallazgos TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
-TENIDOS DE LAS CUESTIONES DEL cliente TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+Tests / excepciones / hallazgos | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+TENIDOS DE LAS CUESTIONES DEL cliente | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 "Las organizaciones de subservicio en la vida"
 Subsequent events / changes  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \   \                                                                                                                                                                                                                 
 "Aplicabilidad a nuestro uso"
@@ -1202,12 +1202,12 @@ Subsequent events / changes  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \   \
 
 ## 30.4 Registro de búsqueda y excepción
 
-Silencio**
-Silencio...
+|** |
+|... |
 "Princes Criteria"
 "Acondicionamiento/población / evidencia"
 El escenario de riesgo de muerte/el impacto de la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \     \ \                                                                                                                                                                                                        
-TENIDO Cause / uncertainty TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \                                                                                                                                                                                            
+| Cause / uncertainty | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \                                                                                                                                                                                            
 "Acción permanente / protección provisional"
 "Prisionista de la vida"
 "Aprudente de la Excepción"
@@ -1225,48 +1225,48 @@ El inventario de salida abarca datos, cuentas, claves, certificados, agentes, ru
 
 ## 30.6 Glosario
 
-Silencio**
-Silencio...
-Silencio Attestation Silencio Una declaración o informe que proporciona seguridad sobre la materia especificada.
+|** |
+|... |
+| Attestation | Una declaración o informe que proporciona seguridad sobre la materia especificada.
 tención C-SCRM Silencioso Ciberseguridad de la gestión del riesgo de cadena de suministro.
-riesgo de concentración TENIDO Exposición creada cuando varios servicios críticos dependen del mismo proveedor, lugar, tecnología o recurso.
-TEN CUEC TENIDO Control complementario de la entidad de usuario: se espera que el cliente realice un control para alcanzar los objetivos del informe. Silencio
-tención debida diligencia Silencio Investigación investigativa de la información pertinente del proveedor o producto para una decisión informada. Silencio
-Silencio Primera parte La organización que gestiona su propio riesgo.
-TEN FOCI TENIDO La propiedad, el control o la influencia extranjeras. TEN
-Silencio Cuarta Parte Silencio Un proveedor o dependencia utilizado por el tercero de la organización. Silencio
-tención Riesgo hereditario tención riesgo antes de considerar controles o tratamiento. Silencio
-← Provenencia Silencio Origen rastreable e historia de un producto, componente, código, datos o proceso.
-TENIDO Riesgo residual TENIDO El riesgo permanece después del tratamiento.
-tención de riesgo TENIDO Cantidad y tipo de riesgo que una organización está dispuesta a perseguir o retener. Silencio
-TEN SBOM TENIDO Proyecto de ley de materiales: un inventario de componentes estructurado.
-Silencio Subprocesador Silencio Una parte comprometida por un procesador para procesar datos personales. Silencio
-Silencio Una organización externa, producto, servicio o persona que apoye a la organización. Silencio
-TENER TPRM TENIDO Gestión del riesgo de terceros a través del ciclo de vida de relación.
+riesgo de concentración | Exposición creada cuando varios servicios críticos dependen del mismo proveedor, lugar, tecnología o recurso.
+TEN CUEC | Control complementario de la entidad de usuario: se espera que el cliente realice un control para alcanzar los objetivos del informe. |
+tención debida diligencia | Investigación investigativa de la información pertinente del proveedor o producto para una decisión informada. |
+| Primera parte La organización que gestiona su propio riesgo. |
+TEN FOCI | La propiedad, el control o la influencia extranjeras. |
+| Cuarta Parte | Un proveedor o dependencia utilizado por el tercero de la organización. |
+tención Riesgo hereditario tención riesgo antes de considerar controles o tratamiento. |
+← Provenencia | Origen rastreable e historia de un producto, componente, código, datos o proceso.
+| Riesgo residual | El riesgo permanece después del tratamiento.
+tención de riesgo | Cantidad y tipo de riesgo que una organización está dispuesta a perseguir o retener. |
+TEN SBOM | Proyecto de ley de materiales: un inventario de componentes estructurado.
+| Subprocesador | Una parte comprometida por un procesador para procesar datos personales. |
+| Una organización externa, producto, servicio o persona que apoye a la organización. |
+TENER TPRM | Gestión del riesgo de terceros a través del ciclo de vida de relación.
 
 ## 30.7 Subject index
 
 Subjeto**
-Silencio...
+|... |
 Silenciosos vendedores de inteligencia artificial
-Silencio Nube / SaaS
+| Nube / SaaS |
 Silencioso Concentración
-TENIDO LOS CONTRATOS TENIDO 9, 30
+| LOS CONTRATOS | 9, 30
 Silencioso
 Evidencia en la vida 7, 23
-← Exit Silencio 19, 30
-Silencio cuartos de las partes
+← Exit | 19, 30
+| cuartos de las partes |
 Silenciosos incidentes
-Silencio Inventario / Tiering Silencio 4
+| Inventario / Tiering | 4
 Silencioso analista junior
-TENCIÓN TERRITORIO TENIDO 23, 25 ANTE
-Silencio NIST CSF GV.SC Silencio 20 Silencio
+TENCIÓN TERRITORIO | 23, 25 ANTE
+| NIST CSF GV.SC | 20 |
 TEN TERRITORIO NIST SP 1326 Silencioso 6, 21
-Silencio Herramientas de código abierto Silencio 24 Silencio
-confidencialidad Silencio 18
-TENIDO ANTERIOR DE PRESUPUESTO
-Silencio SBOM / software Silencio 16, 24 Silencio
-Silencio SOC 2 / ISO evidencia TENIDO 7 Silencio
+| Herramientas de código abierto | 24 |
+confidencialidad | 18
+| ANTERIOR DE PRESUPUESTO |
+| SBOM / software | 16, 24 |
+| SOC 2 / ISO evidencia | 7 |
 Silencioso de la vigilancia de los proveedores
 
 ## 30.8 Referencias oficiales
@@ -1295,5 +1295,5 @@ Silencioso de la vigilancia de los proveedores
 
 [ ]](https://www.bestpractices.dev/)
 
-Silencio **Recuerdo final:** Cambio de marcos, orientaciones, leyes, contratos, proveedores, amenazas, herramientas, productos e interpretaciones oficiales. Confirme la fuente oficial actual y las obligaciones aplicables antes de una decisión o evaluación real. Silencio
-Silencio.
+| **Recuerdo final:** Cambio de marcos, orientaciones, leyes, contratos, proveedores, amenazas, herramientas, productos e interpretaciones oficiales. Confirme la fuente oficial actual y las obligaciones aplicables antes de una decisión o evaluación real. |
+|. |

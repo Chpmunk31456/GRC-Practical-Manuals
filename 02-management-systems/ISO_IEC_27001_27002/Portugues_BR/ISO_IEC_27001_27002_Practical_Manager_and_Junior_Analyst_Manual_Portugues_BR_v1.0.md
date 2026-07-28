@@ -1,6 +1,6 @@
 > **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E COMPLIANÇA
+** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE
 
 **ISO/IEC 27001:2022 & ISO/IEC 27002:2022**
 
@@ -49,7 +49,7 @@ Os auditores internos devem centrar-se em critérios objetivos, independência, 
 
 As organizações que buscam certificação devem confirmar as expectativas de certificação, alteração, escopo de certificação e credenciamento com profissionais competentes.
 
-*Conteúdo verdadeiro da palavra:** Este documento contém um campo nativo da tabela de conteúdos do Word e um guia de capítulo verificado. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
+*Conteúdo:** Este documento contém um campo nativo da tabela de conteúdos do Word e um guia de capítulo verificado. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sumário
@@ -188,7 +188,7 @@ Sumário
 
 Figura 1. Ciclo de melhoria contínua do ISMS
 
-** **Documento** **Role** **Certificação**
+** **Documento** **Função** **Certificação**
 -----------------------------------------------------------------------------------------
 ISO/IEC 27001:2022 □ Requisitos de ISMS Normativos, incluindo os controlos de referência do anexo A
 ISO/IEC 27001:2022/Amd 1:2024 □ Alterações da ação climática que afetam o contexto e a consideração de partes interessadas
@@ -306,7 +306,7 @@ O método de risco e o registo mostram a avaliação e as decisões repetiveis .
 □ ** Finalidade da clausa: ** Contexto da organização
 .-------------------------------------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4.1 Compreender questões internas e externas que podem afetar o ISMS; considerar explicitamente se as alterações climáticas são relevantes. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 4.2 Identificar as partes interessadas relevantes, os seus requisitos e as suas expectativas relacionadas com o clima. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -322,10 +322,10 @@ O que é que se passa?
 
 * Requisitos em linguagem plana, foco de verificação e evidência de exemplo.*
 
-O objetivo da Clause:** Liderança
+O objetivo da Cláusula:** Liderança
 .------------------------------------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 -------------------------------------------------
 A gestão de topo demonstra compromisso, integra o ISMS em processos de negócios, fornece recursos e apoia a melhoria. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 5.2 Estabelecer, comunicar e manter uma política de segurança da informação adequada à organização. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -340,7 +340,7 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 □ ** Finalidade da clausa: ** Planeamento
 --------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 □ 6.1.1 □ Determinar riscos e oportunidades ao nível do ISMS, planejar ações, integrá-los nos processos do ISMS e avaliar a eficácia. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 □ 6.1.2 □ Definir e aplicar critérios de risco de segurança da informação consistentes e métodos de avaliação; identificar proprietários e analisar e avaliar riscos. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -357,7 +357,7 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 □ ** Finalidade da clausa: ** Suporte
 ---------------------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 7.1 Fornecer pessoas, financiamento, tecnologia e outros recursos necessários pelo ISMS. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 Defina necessidades de competência, lacunas próximas, avalie resultados e mantenha evidências. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -374,7 +374,7 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 □ ** Finalidade da clausa: ** Funcionamento
 -----------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 8.1 Planeje e controle processos ISMS, critérios, mudanças, trabalho terceirizado e evidências de operação adequada. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 □ 8.2 □ Realizar avaliações do risco de segurança da informação em intervalos planeados e quando ocorrerem alterações significativas. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -389,7 +389,7 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 □ ** Finalidade da clausa: ** Avaliação do desempenho
 -----------------------
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Defina o que monitorar e medir, como e quando fazê-lo, quem o avalia e como os resultados são retidos e analisados. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 9.2.1 Realizar auditorias internas em intervalos planejados para avaliar a conformidade com os requisitos organizacionais e ISO/IEC 27001 e implementação eficaz. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
@@ -411,7 +411,7 @@ Figura 5. Fluxo de trabalho de auditoria interna
 □ ** Finalidade da clausa: ** Melhoria
 O que é que se passa?
 
-*Clause** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
+*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 □ 10.1 □ Melhorar continuamente a adequação, adequação e eficácia do ISMS. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
 Reagir a não conformidades, corrigi-las, analisar as causas, prevenir a recorrência, verificar a eficácia e manter evidências. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.

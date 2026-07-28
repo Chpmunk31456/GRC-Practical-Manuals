@@ -998,7 +998,7 @@ Como os controles de segurança e privacidade são coordenados? Índice de colab
 
 * Liberar 5.2.0 fortalece a atualização de software, patch, integridade e cobertura de desenvolvimento resistente.*
 
-* **Release 5.2.0 mudança** **Plain meaning**
+* **Release 5.2.0 mudança** **Significado claro**
 □---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 • SA-15(13) — processo de desenvolvimento, melhorias de padrões e ferramentas □ Aumenta a atenção às práticas de desenvolvimento de software resilientes relacionadas com atualizações e patches
 □ SA-24 — Design para a Resistência Cibernética • Novo controle enfatizando o design do sistema/software que pode suportar, recuperar, adaptar e continuar em condições adversas

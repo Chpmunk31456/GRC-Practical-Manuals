@@ -1,6 +1,6 @@
 > **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E COMPLIANÇA
+** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE
 
 **CIS Critical Security Controls v8.1**
 
@@ -49,7 +49,7 @@ Como usar este manual
 
 - Os avaliadores devem usar a especificação oficial de avaliação de controles CIS para entradas exatas, operações, medidas, métricas, pressupostos e revisões de procedimentos.
 
-*Conteúdo verdadeiro da palavra:** Este documento contém um campo nativo da tabela de conteúdos do Word. O guia do capítulo conterá números de página verificados para esta edição. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
+*Conteúdo:** Este documento contém um campo nativo da tabela de conteúdos do Word. O guia do capítulo conterá números de página verificados para esta edição. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
 □----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- (--------------------------------------
 
 Sumário

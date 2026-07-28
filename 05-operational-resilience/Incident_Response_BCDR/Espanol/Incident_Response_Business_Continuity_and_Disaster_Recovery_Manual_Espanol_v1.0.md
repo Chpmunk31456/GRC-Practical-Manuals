@@ -6,8 +6,8 @@ RESPUESTA INCIENTE
 
 Manual de Gestor Práctica y Analista Junior
 
-TEN **Lo que este manual hace:** Muestra cómo prepararse para la perturbación, detectar y gestionar incidentes cibernéticos, continuar servicios críticos, restaurar la tecnología de forma segura, probar pruebas, utilizar herramientas de código abierto y crear habilidades de analista orientadas al trabajo. Silencio
-Silencio.
+TEN **Lo que este manual hace:** Muestra cómo prepararse para la perturbación, detectar y gestionar incidentes cibernéticos, continuar servicios críticos, restaurar la tecnología de forma segura, probar pruebas, utilizar herramientas de código abierto y crear habilidades de analista orientadas al trabajo. |
+|. |
 
 **Alberto (Al) Leiva**
 
@@ -19,8 +19,8 @@ Los incidentes y las interrupciones no siguen un script conveniente. Un ciberata
 
 Este manual utiliza lenguaje simple y productos de trabajo realistas. No es asesoramiento legal ni garantía. Las necesidades varían por organización, sector, contrato, país, regulador, tecnología y evento. Durante una emergencia real, siga la autoridad aprobada, mantenga la seguridad y las pruebas, e involucre a profesionales jurídicos, de privacidad, de recursos humanos, comunicaciones, seguros, encargados de hacer cumplir la ley y técnicos, según proceda.
 
-Silencio ** Nota de información actual** La orientación oficial fue verificada el 14 de julio de 2026. La fundación responsable de incidentes es NIST SP 800-61 Rev. 3, finalizado el 3 de abril de 2025. El contenido de continuidad también utiliza NIST SP 800-34 Rev. 1 Update 1 y ISO 22301:2019 con la enmienda 1:2024.
-Silencio.
+| ** Nota de información actual** La orientación oficial fue verificada el 14 de julio de 2026. La fundación responsable de incidentes es NIST SP 800-61 Rev. 3, finalizado el 3 de abril de 2025. El contenido de continuidad también utiliza NIST SP 800-34 Rev. 1 Update 1 y ISO 22301:2019 con la enmienda 1:2024. |
+|. |
 
 ## Cómo usar este manual
 
@@ -250,38 +250,38 @@ Este documento contiene una tabla de contenidos de Word nativa. La guía del cap
 
 Guía del Capítulo
 
-Silencio **Capítulo**
-Silencio------------------------------------------
+| **Capítulo** |
+|------------------------------------------ |
 ← IR, Business Continuity, and Disaster Recovery Foundations
-TENIDO 2 TENIDO Gobernanza, Política y Roles TENIDO 6
+| 2 | Gobernanza, Política y Rols | 6
 Silencioso 3 Evaluación de Riesgos y Análisis de Impacto Empresarial
-Silencio 4 Silencio actual NIST Respuesta del incidente Modelo Silencio 9 Silencio
-Silencio 5 ← Preparación y Lecturas
-Silencio 6 Silencio Detección y Validación de Eventos
-Silencio 7 ← Triage, Severity, and Escalation
-Silencio 8 Silenciosos de investigación y desarrollo
+| 4 | actual NIST Respuesta del incidente Modelo | 9 |
+| 5 ← Preparación y Lecturas |
+| 6 | Detección y Validación de Eventos
+| 7 ← Triage, Severity, and Escalation |
+| 8 Silenciosos de investigación y desarrollo |
 Silenciosos 9 Silenciosos Estrategia de Contención
 Silenciosos 10 Silenciosos Erradicación y Remediación
-Silencio 11 Silencioso de recuperación y regreso al servicio
+| 11 Silencioso de recuperación y regreso al servicio |
 tención 12 lecciones aprendidas y mejoradas
-Silencio 13 Silencio Comunicación, Coordinación Jurídica y Reguladora
-Silencio 14 Silencio Evidencia Digital y Lecturas Forenses
-Silencio 15 Silencio Ransomware and Destructive Attacks
-Silencio 16 Silencio en la nube y SaaS Respuesta del incidente
-TEN 17 TENIDO Identidad y Acceso Privilegiado Incidentes TENIDO 22 TENIDO
+| 13 | Comunicación, Coordinación Jurídica y Reguladora
+| 14 | Evidencia Digital y Lecturas Forenses
+| 15 | Ransomware and Destructive Attacks
+| 16 | en la nube y SaaS Respuesta del incidente
+TEN 17 | Identidad y Acceso Privilegiado Incidentes | 22 |
 tención 18 Silenciosos Incidentes de Terceros y Cambios de Suministros
-Silencio 19 Silencio Business Continuity Management System
-Silencio 20 Silencio Estrategias y Procedimientos de Continuidad
-Silencio 21 Silencio para la recuperación de desastres
+| 19 | Business Continuity Management System
+| 20 | Estrategias y Procedimientos de Continuidad
+| 21 | para la recuperación de desastres
 Silencios y seguridad de la recuperación
 Silencioso en la gestión de crisis y los factores humanos
-TENIDO 24 TENIDO Ejercicios, Capacitación y Mantenimiento del Plan TENIDO 30
-TENCIÓN 25 TENIDO Cumplimiento de Mapping, Pruebas de Evidencia y métricas
-Silencio 26 Silencio Open-Source Herramientas Silencio 32 Silencio
+| 24 | Ejercicios, Capacitación y Mantenimiento del Plan | 30
+TENCIÓN 25 | Cumplimiento de Mapping, Pruebas de Evidencia y métricas
+| 26 | Open-Source Herramientas | 32 |
 Resilience Playbook de Resilience Manager Silencioso
-Silencio 28 Silencio Junior Analyst Guía de Carreras y Portfolio Lab
-Silencio 29 Silencio Plan de Treinta Días y Preparación de Entrevista
-TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 42 TENIDO
+| 28 | Junior Analyst Guía de Carreras y Portfolio Lab
+| 29 | Plan de Treinta Días y Preparación de Entrevista
+| 30 TENIDOS Plantillas, Glosario, Índice y Referencias | 42 |
 
 # 1. IR, Business Continuity, and Disaster Recovery Foundations
 
@@ -292,14 +292,14 @@ TENIDO 30 TENIDOS Plantillas, Glosario, Índice y Referencias TENIDO 42 TENIDO
 Gráfico 1 Ciclo integrado de resiliencia cibernética
 
 **Capacidad** Silencioso ** Pregunta primaria**
-Silencio------------------------------------------ La vida------------------
-Respuesta del incidente Silencio ¿Cómo detectamos, conteniendo, eliminamos, recuperamos y aprendemos de incidentes cibernéticos? Silencio Seguridad / Comandante del incidente
+|------------------------------------------ La vida------------------ |
+Respuesta del incidente | ¿Cómo detectamos, conteniendo, eliminamos, recuperamos y aprendemos de incidentes cibernéticos? | Seguridad / Comandante del incidente
 ¿Cómo continuarán los productos y servicios críticos durante la interrupción? continuidad de las operaciones / propietarios de procesos
 ¿Cómo se restaurarán la tecnología y los datos a los objetivos aprobados? viv IT / sistema y propietarios de recuperación
 ¿Cómo los líderes tomarán decisiones de alto impacto y coordinarán a los interesados? equipo de crisis ejecutiva
-Silencio de emergencia / seguridad de la vida Silencio ¿Cómo se protegerá a la gente durante el peligro físico? instalaciones / seguridad / autoridades públicas
+| de emergencia / seguridad de la vida | ¿Cómo se protegerá a la gente durante el peligro físico? instalaciones / seguridad / autoridades públicas
 
-No confundan los planes** Deben coordinarse, pero tienen diferentes objetivos, autoridades, desencadenantes, equipos y pruebas. Un documento rara vez sirve a cada necesidad bien. Silencio
+No confundan los planes** Deben coordinarse, pero tienen diferentes objetivos, autoridades, desencadenantes, equipos y pruebas. Un documento rara vez sirve a cada necesidad bien. |
 Respuesta
 
 2. Gobernanza, política y funciones
@@ -318,16 +318,16 @@ Respuesta
 
 - Plan de propiedad, control de versiones, distribución, capacitación, ejercicio, revisión y calendario de mejora.
 
-Silencio **Role**
-Silencio--------------------------------------------------------------------------
-TENIDO Comandante de incidentes TENIDO Objetivos, prioridades, coordinación de tareas, ritmo de estatus, escalada
+| **Rol** |
+|-------------------------------------------------------------------------- |
+| Comandante de incidentes | Objetivos, prioridades, coordinación de tareas, ritmo de estatus, escalada
 TENCIÓN Líder técnico permanente Investigación, alcance, contención, erradicación, criterios de recuperación
-Silencio Propietario de negocios Silencio Impacto operacional, solución de trabajo, prioridad, aceptación de regreso al servicio TEN
-← Continuidad / liderato de la RD Silencio Procesos alternativos/sitio, secuencia de recuperación, conflictos de recursos
+| Propietario de negocios | Impacto operacional, solución de trabajo, prioridad, aceptación de regreso al servicio |
+← Continuidad / liderato de la RD | Procesos alternativos/sitio, secuencia de recuperación, conflictos de recursos
 TEN Legal / privacy TENCIÓN Privilege, preservación, análisis de notificaciones, autoridades, contratos
-Silencio Comunicaciones Silencio Empleados, clientes, socios, publico, medios de comunicación, aprobación de mensajes
+| Comunicaciones | Empleados, clientes, socios, publico, medios de comunicación, aprobación de mensajes
 ← Scribe / evidencia custodia tención Timeline, decisions, evidence identity, custody, action log
-Silencio Equipo de crisis ejecutiva   Seguridad, riesgo material, estrategia, recursos, postura externa
+| Equipo de crisis ejecutiva   Seguridad, riesgo material, estrategia, recursos, postura externa |
 
 # 3. Evaluación de riesgos y análisis de impacto empresarial
 
@@ -353,31 +353,31 @@ Figure 2. BIA reasoning chain
 
 - Use resultados para seleccionar estrategias, niveles de recuperación, pruebas, inversiones y contenido del plan.
 
-Silencio ** Term** Silencio**
-Silencio--------------------------------------
-Silencio MTPD / MAO Silencio La mayor perturbación tolerable antes del daño inaceptable Silencio Autorización de cliente no disponible más allá de 24 horas
-← RTO TENIDO Tiempo de restauración de un proceso o recurso TENIDO Restaurar el servicio dentro de 8 horas
-Silencio RPO Silencio Máxima pérdida tolerable de datos medida atrasada de la perturbación Silencio No más de 30 minutos de transacciones perdidas
-Silencio Nivel mínimo de servicio Silencio Capacidad más aceptable durante el modo de continuidad ← Servir a clientes prioritarios en un 40% de capacidad
-tención dependencia tención Recurso otro proceso necesita para entregar su salida TENSI Identidad, DNS, región de la nube, personas, proveedor TEN
+| ** Term** |**
+|-------------------------------------- |
+| MTPD / MAO | La mayor perturbación tolerable antes del daño inaceptable | Autorización de cliente no disponible más allá de 24 horas
+← RTO | Tiempo de restauración de un proceso o recurso | Restaurar el servicio dentro de 8 horas
+| RPO | Máxima pérdida tolerable de datos medida atrasada de la perturbación | No más de 30 minutos de transacciones perdidas
+| Nivel mínimo de servicio | Capacidad más aceptable durante el modo de continuidad ← Servir a clientes prioritarios en un 40% de capacidad
+tención dependencia tención Recurso otro proceso necesita para entregar su salida TENSI Identidad, DNS, región de la nube, personas, proveedor |
 
-Error común:** RTO y RPO son requisitos de negocio, no ajustes de producto de copia de seguridad. Pruebe si el servicio completo al final puede realmente satisfacerlos. Silencio
-Silencio.
+Error común:** RTO y RPO son requisitos de negocio, no ajustes de producto de copia de seguridad. Pruebe si el servicio completo al final puede realmente satisfacerlos. |
+|. |
 
 # 4. Actual NIST Modelo de respuesta de incidentes
 
 *NIST SP 800-61 Rev. 3 integra la respuesta de incidentes en las seis Funciones CSF 2.0.*
 
-Silencio **CSF Función** Silencio ** Contribución de respuesta a los incidentes**
-Silencio.
+| **CSF Función** | ** Contribución de respuesta a los incidentes**
+|. |
 tención Govern Silencioso política, funciones, autoridades, necesidades legales y contractuales, responsabilidades de proveedores, supervisión, mejora
 tención Identificar activos, servicios, datos, dependencias, riesgos, vulnerabilidades, necesidades de mejora
 Ø Proteger la identidad, configuración, conciencia, seguridad de datos, mantenimiento, resiliencia, tecnología de protección
-← Detectar Silencio Monitorización continua y análisis de eventos adversos
+← Detectar | Monitorización continua y análisis de eventos adversos
 Respuesta a la respuesta Silencioso Gestión de incidentes, análisis, informes/comunicaciones, mitigación
 viv Recuperar la ejecución del plan de recuperación, restauración, verificación y comunicación de recuperación
 
-Lo que cambió de Rev. 2:** El diagrama de preparación, detección/análisis más antiguo–contenimiento/eradicación/recuperación–post-incidente sigue siendo útil operacionalmente, pero el Rev. 3 supera a Rev. 2 y enmarca la respuesta como gestión del riesgo de ciberseguridad en toda la organización. Silencio
+Lo que cambió de Rev. 2:** El diagrama de preparación, detección/análisis más antiguo–contenimiento/eradicación/recuperación–post-incidente sigue siendo útil operacionalmente, pero el Rev. 3 supera a Rev. 2 y enmarca la respuesta como gestión del riesgo de ciberseguridad en toda la organización. |
 Respuesta
 
 ## 4.1 Secuencia operativa práctica
@@ -414,14 +414,14 @@ Respuesta
 
 ## 5.2 Playbook design
 
-Silencio**
-Silencio--------------------------------
-Silencioso Trigger Silencio Condición observable que comienza el libro de juegos
+|** |
+|-------------------------------- |
+Silencioso Trigger | Condición observable que comienza el libro de juegos
 tención de objetivos Lo que debe ser protegido o aprendido
-← Autoridad Silencio Quién puede aprobar acciones disruptivas
+← Autoridad | Quién puede aprobar acciones disruptivas
 tención Pasos Silenciosos Puntos de decisión, acciones, dependencias y alternativas seguras
 ← Evidencia voca Qué capturar antes y después de la acción
-← Comunicación TENIDO Audiencia, canal, cadencia, hechos aprobados
+← Comunicación | Audiencia, canal, cadencia, hechos aprobados
 ← Recuperación Silencioso Criterios de entrada, validación, monitoreo, aceptación
 ← Mejoramiento Silencioso , revisión, propietario, retest
 
@@ -460,11 +460,11 @@ Figura 3. Flujo de trabajo de detección por caso
 * El juicio establece prioridad y inicia las vías correctas de autoridad, evidencia y comunicación.*
 
 Silencioso ** Factor de perseverancia**
-Silencio...
-¿Qué productos, servicios, procesos, personas o resultados de seguridad son afectados? Silencio
+|... |
+¿Qué productos, servicios, procesos, personas o resultados de seguridad son afectados? |
 ← Impacto de la información   ¿Fue acceso a los datos, cambiado, destruido, expuesto, encriptado o no disponible?
-viv Recoverability Silencio ¿Puede el problema ser contenido y restaurado con las personas disponibles, el tiempo y los recursos?
-← Amenaza / persistencia ¿Es el actor activo, privilegiado, destructivo, sofisticado o en movimiento lateralmente? Silencio
+viv Recoverability | ¿Puede el problema ser contenido y restaurado con las personas disponibles, el tiempo y los recursos?
+← Amenaza / persistencia ¿Es el actor activo, privilegiado, destructivo, sofisticado o en movimiento lateralmente? |
 ¿Cuántos sistemas, identidades, ubicaciones, clientes o proveedores pueden compartir la exposición?
 Silencioso Obligación / visibilidad   ¿Se puede aplicar legal, contractual, regulador, asegurador, cliente o aviso público?
 ¿Qué hechos faltan, y podrían aumentar significativamente la gravedad?
@@ -502,8 +502,8 @@ Silencioso Obligación / visibilidad   ¿Se puede aplicar legal, contractual, re
 - Breves tomadores de decisiones con hechos, incertidumbre, efecto empresarial, opciones, y recomendó el próximo paso.
 
 **Pregunta**
-Silencio...
-¿Cómo comenzó el acceso? ← Correo electrónico, identidad, punto final, web, VPN, nube, vulnerabilidad y registros de soporte TEN
+|... |
+¿Cómo comenzó el acceso? ← Correo electrónico, identidad, punto final, web, VPN, nube, vulnerabilidad y registros de soporte |
 ¿Qué hizo el actor? proceso, comando, audit, archivo, registro, memoria, red y actividad en la nube
 ¿Qué fue accedido? tención Aplicación, base de datos, objeto, DLP, consulta, API y registros de acceso a archivos
 ¿Permanece la persistencia? cuentas, fichas, claves, tareas programadas, servicios, aplicaciones OAuth, funciones en la nube
@@ -556,8 +556,8 @@ Figure 4. Containment decision
 
 - Preserve evidence and separate remediation from proof; record every change.
 
-TEN **Causa principal contra punto de entrada:** El punto de entrada explica cómo comenzó este incidente. Las causas raíz pueden incluir procesos, diseño, propiedad, visibilidad, habilidades, incentivos o debilidades de control que le permitieron tener éxito o persistir. Silencio
-Silencio.
+TEN **Causa principal contra punto de entrada:** El punto de entrada explica cómo comenzó este incidente. Las causas raíz pueden incluir procesos, diseño, propiedad, visibilidad, habilidades, incentivos o debilidades de control que le permitieron tener éxito o persistir. |
+|. |
 
 # 11. Recuperación y regreso al servicio
 
@@ -611,12 +611,12 @@ Gráfico 5 Retorno al servicio
 
 - Reprueba la capacidad fallida y las políticas de actualización, arquitectura, detecciones, libros de texto, contratos, capacitación, BIA, continuidad y planes de recuperación.
 
-Silencio ** Acción débil** Silencioso**
-Silencio...
-tención Mejorar la vigilancia Silencio Añadir eventos de administración de proveedores de identidad al SIEM, alertar sobre nuevo papel privilegiado dentro de cinco minutos, y probar mensualmente Silencio
-Silencio Personal de formación Silencio Ejecutar un ejercicio específico para la verificación de la identidad de los usuarios de los servicios y medir el tratamiento de fallos
-Silencio para arreglar copias de seguridad Añadir copia diaria aislada para la base de datos Tier 1 y probar restaurar dentro de cuatro horas RTO trimestral TEN
-tención Plan de actualización Silencio Añadir llamado tomador de decisiones alternativo, contacto fuera de banda, y paso de activación probado
+| ** Acción débil** Silencioso** |
+|... |
+tención Mejorar la vigilancia | Añadir eventos de administración de proveedores de identidad al SIEM, alertar sobre nuevo papel privilegiado dentro de cinco minutos, y probar mensualmente |
+| Personal de formación | Ejecutar un ejercicio específico para la verificación de la identidad de los usuarios de los servicios y medir el tratamiento de fallos
+| para arreglar copias de seguridad Añadir copia diaria aislada para la base de datos Tier 1 y probar restaurar dentro de cuatro horas RTO trimestral |
+tención Plan de actualización | Añadir llamado tomador de decisiones alternativo, contacto fuera de banda, y paso de activación probado
 
 13. Coordinación de las comunicaciones, jurídicas y reglamentarias
 
@@ -639,16 +639,16 @@ tención Plan de actualización Silencio Añadir llamado tomador de decisiones a
 - No especular, ocultar los hechos materiales, destruir los registros, o prometer el tiempo que los equipos no pueden soportar.
 
 **Audiencia**
-Silencio...
+|... |
 Respuestas a las personas detenidas
-Silencio Ejecutivos TENIDO Impacto empresarial, incertidumbre, opciones, recomendación, recursos, siguiente decisión
-Silencio Lo que sucedió, acciones seguras, soporte, canal de reportaje, tiempo de actualización
-Silencio Clientes / partners Silencio Servicio/datos afectados, acción protectora, soporte, actualizaciones verificadas Silencio
-Silencioso Regulador / autoridad Silencio Datos obligatorios, tiempo, alcance, impacto, medidas, cooperación
-Silencio Public / media Silencio Aprobado mensaje preciso, vocero, actualizaciones constantes
+| Ejecutivos | Impacto empresarial, incertidumbre, opciones, recomendación, recursos, siguiente decisión
+| Lo que sucedió, acciones seguras, soporte, canal de reportaje, tiempo de actualización |
+| Clientes / partners | Servicio/datos afectados, acción protectora, soporte, actualizaciones verificadas |
+Silencioso Regulador / autoridad | Datos obligatorios, tiempo, alcance, impacto, medidas, cooperación
+| Public / media | Aprobado mensaje preciso, vocero, actualizaciones constantes
 
-** Nota legal:** Los derechos de notificación y preservación son específicos para los hechos y la jurisdicción. Involucrar a un abogado calificado temprano; no utilice este manual como una determinación legal. Silencio
-Silencio.
+** Nota legal:** Los derechos de notificación y preservación son específicos para los hechos y la jurisdicción. Involucrar a un abogado calificado temprano; no utilice este manual como una determinación legal. |
+|. |
 
 # 14. Evidencia digital y teoría forense
 
@@ -670,8 +670,8 @@ Figure 6. Evidence integrity and custody
 
 - Retención, retención legal, privacidad/minimización, registro de acceso, divulgación y eliminación aprobada.
 
-* La seguridad y la autoridad* No acceda a cuentas personales, intercepte comunicaciones, colecte ampliamente o realice acciones invasivas sin autoridad adecuada. Siga las normas legales, políticas, privacidad, empleo y pruebas. Silencio
-Silencio.
+* La seguridad y la autoridad* No acceda a cuentas personales, intercepte comunicaciones, colecte ampliamente o realice acciones invasivas sin autoridad adecuada. Siga las normas legales, políticas, privacidad, empleo y pruebas. |
+|. |
 
 # 15. Ataques Ransomware y Destructivos
 
@@ -783,32 +783,32 @@ Contención en la nube
 
 Gráfico 7 Sistema de gestión de la continuidad de las operaciones
 
-Silencio **ISO 22301 area** Silencioso ** Actividad práctica**
-Silencio...
-TENIDO Context TENIENDO CUESTIONES internas/externas, partes interesadas, alcance y necesidades de continuidad
+| **ISO 22301 area** Silencioso ** Actividad práctica** |
+|... |
+| Context TENIENDO CUESTIONES internas/externas, partes interesadas, alcance y necesidades de continuidad |
 ← Liderazgo permanente Política, roles, rendición de cuentas, integración y recursos
 ← Planificar los riesgos/oportunidades, objetivos, cambios previstos
 ← Apoyo a las personas, competencia, sensibilización, comunicación, información documentada
-TENIDA Operación TENIDO BIA, evaluación de riesgos, estrategia, procedimientos, ejercicios, evaluación
+TENIDA Operación | BIA, evaluación de riesgos, estrategia, procedimientos, ejercicios, evaluación
 Evaluación de la actuación profesional en la vida útil Vigilancia, medición, análisis, auditoría interna, examen de la gestión
 ← Mejoramiento Ø Noconformidad, acción correctiva y mejora continua
 
-tención **2024 enmienda climática:** ISO 22301:2019/Amd 1:2024 añade texto de acción climática a los requisitos de contexto del sistema de gestión. Las organizaciones deben considerar si el cambio climático es relevante y reconocer que las partes interesadas pueden tener requisitos relacionados con el clima. Silencio
-Silencio.
+tención **2024 enmienda climática:** ISO 22301:2019/Amd 1:2024 añade texto de acción climática a los requisitos de contexto del sistema de gestión. Las organizaciones deben considerar si el cambio climático es relevante y reconocer que las partes interesadas pueden tener requisitos relacionados con el clima. |
+|. |
 
 # 20. Estrategias y procedimientos continuos
 
 *Las estrategias de continuidad mantienen las actividades prioritarias en los niveles de impacto tolerable y mínimo de servicios*.
 
-Silencio **Recurso** Silencio ** Ejemplos de estrategia**
-Silencio------------------------------------------------------------------------------------------
-Silencio Personas ← Entrenamiento cruzado, alternancias, trabajo remoto, equipos divididos, soporte contratado TEN ¿Pueden los suplentes entrenados realizar el proceso? ←
-Silencio instalaciones Silencio Sitio alternativo, espacio recíproco, operación remota, capacidad móvil TEN ¿Puede la gente acceder a una ubicación segura utilizable? Silencio
-← Tecnología Silencio Alta disponibilidad, failover, plataforma alternativa, modo manual Silencio ¿El servicio final a extremo cumple con RTO/RPO?
-← Datos / registros Silencio Copias protegidas, registros fuera de línea, exportación, acceso alternativo ¿La información es completa, actual, segura y utilizable?
-Silencio Proveedores ← Proveedor alternativo, capacidad reservada, inventario, sustitución ¿Puede la entrega alternativa dentro de la tolerancia? Silencio
-Silencio Utilidades / comunicaciones Silencio Poder diverso, red, voz, canal fuera de banda Silencio ¿La infraestructura común crea un fallo? Silencio
-tención Proceso Silencioso Priorización, servicio reducido, plan atrasado, trabajo manual alrededor Silencio ¿Se puede mantener la producción mínima de forma segura?
+| **Recurso** | ** Ejemplos de estrategia**
+|------------------------------------------------------------------------------------------ |
+| Personas ← Entrenamiento cruzado, alternancias, trabajo remoto, equipos divididos, soporte contratado TEN ¿Pueden los suplentes entrenados realizar el proceso? ← |
+| instalaciones | Sitio alternativo, espacio recíproco, operación remota, capacidad móvil TEN ¿Puede la gente acceder a una ubicación segura utilizable? |
+← Tecnología | Alta disponibilidad, failover, plataforma alternativa, modo manual | ¿El servicio final a extremo cumple con RTO/RPO?
+← Datos / registros | Copias protegidas, registros fuera de línea, exportación, acceso alternativo ¿La información es completa, actual, segura y utilizable?
+| Proveedores ← Proveedor alternativo, capacidad reservada, inventario, sustitución ¿Puede la entrega alternativa dentro de la tolerancia? |
+| Utilidades / comunicaciones | Poder diverso, red, voz, canal fuera de banda | ¿La infraestructura común crea un fallo? |
+tención Proceso Silencioso Priorización, servicio reducido, plan atrasado, trabajo manual alrededor | ¿Se puede mantener la producción mínima de forma segura?
 
 ## 20.1 Procedimiento de continuidad
 
@@ -904,16 +904,16 @@ Figure 8. Backup-to-recovery assurance
 
 - Alivio del plan, comida, descanso, transporte, accesibilidad, apoyo mental-salud y respetuosos beneficios.
 
-Silencio **Elemento de sufrimiento**
-Silencio...
+| **Elemento de sufrimiento** |
+|... |
 ¿Qué ha cambiado desde la última actualización?
 ¿Quién o qué es afectado ahora y con el tiempo?
 ¿Qué hecho perdido podría cambiar la decisión?
-tención Objetivos Silencio ¿Qué resultados importan en el próximo período operativo?
+tención Objetivos | ¿Qué resultados importan en el próximo período operativo?
 Silencioso ¿Cuáles son los beneficios, los daños, las dependencias y la reversibilidad?
 TENCIÓN ANTERIOR ¿Quién decide por cuándo?
 ¿Quién hace qué, por cuándo, con qué evidencia?
-← Comunicación Silencio ¿Quién necesita qué mensaje verificado y cuándo? Silencio
+← Comunicación | ¿Quién necesita qué mensaje verificado y cuándo? |
 
 # 24. Ejercicios, entrenamiento y mantenimiento de planes
 
@@ -923,13 +923,13 @@ TENCIÓN ANTERIOR ¿Quién decide por cuándo?
 
 Gráfico 9 Ciclo de ejercicio y mejora
 
-Silencio **Tipo de ejercicio**
-Silencio--------------------------------
+| **Tipo de ejercicio** |
+|-------------------------------- |
 ← Lista de verificación / prueba de acceso ← Validar registros, contactos, acceso y sencillos pasos ←
-tención Tabletop ← Discuss decisions, roles, información y coordinación usando un escenario TEN
-← Simulación Silencio Opera equipos y comunicaciones en un entorno controlado realista
-Silencio Prueba de recuperación técnica Silencio Restaurar, reconstruir, fallar, validar y medir la tecnología
-Silencio Prueba de paralelo Silencio Corre capacidad de recuperación sin reemplazar la producción
+tención Tabletop ← Discuss decisions, roles, información y coordinación usando un escenario |
+← Simulación | Opera equipos y comunicaciones en un entorno controlado realista
+| Prueba de recuperación técnica | Restaurar, reconstruir, fallar, validar y medir la tecnología
+| Prueba de paralelo | Corre capacidad de recuperación sin reemplazar la producción
 tención Interrupción completa ← Cambio de servicio real bajo una autoridad controlada firmemente; mayor riesgo
 ← Ejercicio de equipo púrpura TENENCIA Ataque, detección, respuesta y mejora de forma colaborativa
 
@@ -948,16 +948,16 @@ tención Interrupción completa ← Cambio de servicio real bajo una autoridad c
 *Frameworks superpone, pero la evidencia debe ser probada contra el requisito exacto aplicable.*
 
 **Fuente**
-Silencio.
-Silencio NIST SP 800-61 Rev. 3 Silencio CSF Comunidad Perfil para respuesta a incidentes a nivel de toda la organización
-Silencio NIST SP 800-34 Rev. 1 Update 1 ← Proceso de planificación de contingencias del sistema de información federal TEN Older pero actual NIST final; adaptarse fuera del uso federal TEN
-Silencio ISO 22301:2019 + Amd 1:2024 Silencio Requisitos para un sistema de gestión de la continuidad de las operaciones
-confidencialidad ISO 22313:2020 guía permanente para usar ISO 22301 Silencio no es la certificación
-Silencio SOC 2 Silencio Disponibilidad, seguridad, confidencialidad, privacidad, compromisos de procesamiento y controles Silencio Revisión exacta informe alcance, período, pruebas, excepciones Silencio
-Silencio ISO/IEC 27001:2022 Silencio Gestión de incidentes, preparación de continuidad, copia de seguridad, registro de datos, proveedores
+|. |
+| NIST SP 800-61 Rev. 3 | CSF Comunidad Perfil para respuesta a incidentes a nivel de toda la organización
+| NIST SP 800-34 Rev. 1 Update 1 ← Proceso de planificación de contingencias del sistema de información federal TEN Older pero actual NIST final; adaptarse fuera del uso federal |
+| ISO 22301:2019 + Amd 1:2024 | Requisitos para un sistema de gestión de la continuidad de las operaciones
+confidencialidad ISO 22313:2020 guía permanente para usar ISO 22301 | no es la certificación
+| SOC 2 | Disponibilidad, seguridad, confidencialidad, privacidad, compromisos de procesamiento y controles | Revisión exacta informe alcance, período, pruebas, excepciones |
+| ISO/IEC 27001:2022 | Gestión de incidentes, preparación de continuidad, copia de seguridad, registro de datos, proveedores
 TEN PCI DSS v4.0.1 ANTE Respuesta de incidentes, pruebas, proveedores de servicios, respaldos y controles relacionados con la recuperación TEN Validate exact cardholder-data environment scope ANTE
-Silencio HIPAA Silencio Plan de Contingencia, procedimientos de incidentes, backup, DR, operación de emergencia Silencio La aplicabilidad y la implementación legales requieren análisis específico de hechos
-TEN GDPR TENIDO Seguridad, evaluación de incumplimiento/notificación, cooperación con los procesadores, resiliencia/restoración TENIDOS Funciones legales, riesgo, tiempo, jurisdicción requieren asesoramiento ANTERI
+| HIPAA | Plan de Contingencia, procedimientos de incidentes, backup, DR, operación de emergencia | La aplicabilidad y la implementación legales requieren análisis específico de hechos
+TEN GDPR | Seguridad, evaluación de incumplimiento/notificación, cooperación con los procesadores, resiliencia/restoración TENIDOS Funciones legales, riesgo, tiempo, jurisdicción requieren asesoramiento ANTERI
 
 ## 25.1 Test de evidencia
 
@@ -973,14 +973,14 @@ TEN GDPR TENIDO Seguridad, evaluación de incumplimiento/notificación, cooperac
 
 - Seguimiento de la acción correctiva y prueba independiente antes del cierre.
 
-Silencio** Silencioso**
-Silencio----------------------------------------
+|** Silencioso** |
+|---------------------------------------- |
 tiempo para detectar el tiempo de inactividad desde el inicio del evento/primera evidencia para la detección de tiempo de inicio puede ser incierto
-Silencio Tiempo medio para contener la detección/activación de tóxicos para la contención verificada.
+| Tiempo medio para contener la detección/activación de tóxicos para la contención verificada. |
 ← Recuperación del objetivo logro ← Tests/incidentes reunión RTO y RPO ÷ pruebas/incidentes en el telescopio ← Definir el éxito del servicio completo
 Ø escenarios críticos aprobados ÷ escenarios críticos aprobado ← La discusión no es una prueba técnica
 ← Acción correctiva edad tención Días abiertos por severidad y propietario ← Closure requiere retest
-← Respaldo restaurar el éxito Silencio Exitoso representante restaura ÷ pruebas programadas ← Restauración del archivo puede no probar la recuperación del servicio
+← Respaldo restaurar el éxito | Exitoso representante restaura ÷ pruebas programadas ← Restauración del archivo puede no probar la recuperación del servicio
 Repetición de incidentes de incidir en la vida Repetir incidentes relacionados con la misma causa no corregida
 
 # 26. Open-Source Tools
@@ -988,27 +988,27 @@ Repetición de incidentes de incidir en la vida Repetir incidentes relacionados 
 *Las herramientas de código abierto apoyan la gestión de casos, pruebas, detección, investigación, automatización y presentación de informes*.
 
 # Tool** Silencioso**
-Silencio...
-TEN TheHive Silencio Gestión de casos y colaboración con incidentes
-Silencio Cortex Silencio Acciones de análisis y respuesta
-← MISP Silencio-información compartir y correlación
-TEN Wazuh TENRI Endpoint monitoring, log analysis, file integrity, and alerts TEN
-Silencio Velociraptor Silencio Visibilidad y colección de respuesta a incidentes
+|... |
+TEN TheHive | Gestión de casos y colaboración con incidentes
+| Cortex | Acciones de análisis y respuesta
+← MISP |-información compartir y correlación
+TEN Wazuh TENRI Endpoint monitoring, log analysis, file integrity, and alerts |
+| Velociraptor | Visibilidad y colección de respuesta a incidentes
 ← Volatilidad 3 ← Memoria forense
 Ø Autopsia permanente Disk y análisis forense del sistema de archivos
-Silencio Timesketch
+| Timesketch |
 tención Plaso / log2timeline tención Extracción de Timeline de artefactos forenses
-Osquery Silencio Endpoint estado y amenazas búsquedas
-Silencio Zeek ← Seguridad de la red telemetría y metadatos de protocolo
+Osquery | Endpoint estado y amenazas búsquedas
+| Zeek ← Seguridad de la red telemetría y metadatos de protocolo |
 Suricata Silencioso Red de detección y prevención de intrusiones
-TEN YARA TENIDO Patrón que coincide con los archivos y la memoria
+TEN YARA | Patrón que coincide con los archivos y la memoria
 ← Sigma ← Normas de registro portátiles
-Silencio DFIR-IRIS Silencio Respuesta del incidente y gestión del caso de investigación
+| DFIR-IRIS | Respuesta del incidente y gestión del caso de investigación
 TEN GRR Respuesta Rápida TENIDA Forenses en directo a escala de punta
-Orquestación y automatización de seguridad Silencio
+Orquestación y automatización de seguridad |
 ← OpenSearch ← Búsqueda, análisis, paneles y registros de seguridad
 
-TEN **Authorization and evidence safety:** Utilice herramientas sólo en sistemas, redes, cuentas, repositorios y datos que posee o tiene autoridad escrita para examinar. Laboratorios de aislamiento, proteger evidencia, minimizar datos personales, acciones de registro y nunca dejar que la automatización realice pasos destructivos sin salvaguardias aprobadas. Silencio
+TEN **Authorization and evidence safety:** Utilice herramientas sólo en sistemas, redes, cuentas, repositorios y datos que posee o tiene autoridad escrita para examinar. Laboratorios de aislamiento, proteger evidencia, minimizar datos personales, acciones de registro y nunca dejar que la automatización realice pasos destructivos sin salvaguardias aprobadas. |
 Respuesta
 
 ## 26.1 TheHive
@@ -1159,16 +1159,16 @@ Evidencia: autoridad escrita y alcance, identidad de origen, zona de fecha/hora/
 
 *Los administradores crean resiliencia estableciendo autoridad, preparando financiación, desafiando pruebas y eliminando bloqueadores.*
 
-**Area** Silencio **Pregunta principal**
-Silencio...----------------------------------------------------------------------------------------------------------------------
-← Gobernanza permanente ¿Está claro la autoridad, los suplentes, la gravedad, la escalada, el gasto y los cambios de emergencia? Silencio No toma la decisión después de horas
+**Area** | **Pregunta principal**
+|...---------------------------------------------------------------------------------------------------------------------- |
+← Gobernanza permanente ¿Está claro la autoridad, los suplentes, la gravedad, la escalada, el gasto y los cambios de emergencia? | No toma la decisión después de horas
 ¿Se prueban inventarios, registros, contactos, acceso, herramientas, comunicaciones y recursos de recuperación limpios? tención Plan existe pero el acceso falla
-Silencio Respuesta ¿Se controlan hechos, incertidumbre, objetivos, acciones, pruebas y próxima actualización? ← Equipos conflictivos o decisiones indocumentadas
+| Respuesta ¿Se controlan hechos, incertidumbre, objetivos, acciones, pruebas y próxima actualización? ← Equipos conflictivos o decisiones indocumentadas |
 ¿Puede continuar la producción crítica dentro de un impacto tolerable? ← Workaround ignora seguridad, privacidad o reconciliación
-¿Pueden los servicios completos satisfacer RTO/RPO probados de fuentes de confianza? Silencio Respaldo éxito reportado sin restaurar la prueba
-Silencio Proveedores Silencio ¿Se ejercen contactos críticos, deberes, dependencias y alternativas? Silencio Un proveedor es una dependencia común oculta
+¿Pueden los servicios completos satisfacer RTO/RPO probados de fuentes de confianza? | Respaldo éxito reportado sin restaurar la prueba
+| Proveedores | ¿Se ejercen contactos críticos, deberes, dependencias y alternativas? | Un proveedor es una dependencia común oculta
 TENEDAD ANTE ¿Se gestionan cambios, despidos, descanso, seguridad y tensión psicológica? Respuestas agotadas que toman decisiones críticas
-Ø Mejoras en la vida ¿Se financian, poseen, miden y se prueban acciones severas? Silencio La misma brecha aparece en ejercicios/incidentes posteriores
+Ø Mejoras en la vida ¿Se financian, poseen, miden y se prueban acciones severas? | La misma brecha aparece en ejercicios/incidentes posteriores
 
 ## 27.1 Cuestiones ejecutivas
 
@@ -1250,16 +1250,16 @@ Gráfico 10 Ruta del analista de resiliencia
 
 *Un mes centrado puede crear capacidad de incidencia y resiliencia a nivel de entrada*.
 
-**Días** Silencio**
-Silencio----------------------
-TENIDO 1–3 TENIDOS conceptos de IR/BC/DR/crisis y modelo NIST actual TENIDO mapa conceptual y RACI ANTE
+**Días** |**
+|---------------------- |
+| 1–3 TENIDOS conceptos de IR/BC/DR/crisis y modelo NIST actual | mapa conceptual y RACI ANTE
 tención 4–6 tención de riesgo, BIA, dependencias, RTO/RPO
-Silencio 7–9 Silencio Preparación, registro de datos, contactos, playbooks ANTE Lecciones de lectura y dos playbooks ANTE
-Silencio 10–12 Silencioso Detección, triage, severidad, casos ← Caso de alerta sintético Silencio
-TEN 13–15 TENIDO Investigación, cronología, pruebas TENIDO Timeline y antecedentes de pruebas
+| 7–9 | Preparación, registro de datos, contactos, playbooks ANTE Lecciones de lectura y dos playbooks ANTE
+| 10–12 Silencioso Detección, triage, severidad, casos ← Caso de alerta sintético |
+TEN 13–15 | Investigación, cronología, pruebas | Timeline y antecedentes de pruebas
 tención, erradicación, recuperación permanente Documentos de trabajo sobre la decisión y la recuperación
-Silencio 19–21 Silencio Continuidad, DR, restauración de respaldo Silencioso procedimiento de continuidad y restauración de la prueba
-Silencio 22–24 Silencio Nube, identidad, ransomware, proveedores
+| 19–21 | Continuidad, DR, restauración de respaldo Silencioso procedimiento de continuidad y restauración de la prueba
+| 22–24 | Nube, identidad, ransomware, proveedores
 tención 25–27 Silencioso Ejercicio y revisión después de la acción
 TEN 28–30 TENIDA Metrics, portafolio, entrevistas ANTERI Dashboard y cinco historias de STAR
 
@@ -1315,14 +1315,14 @@ Acceso no autorizado, acción destructiva, conclusiones no apoyadas, cambios de 
 
 ## 30.1 Registro de casos de incidentes
 
-Silencio**
-Silencio.
+|** |
+|. |
 "Principio/comandante/severidad"
 "Prigger" / detectado/known start ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \                                                                                                                                                                                                        
 "Datos/asunciones/hipotheses" sobre la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \                                                                                                                                                                                            
 "Afectados y potenciales alcances"
 "La vida empresarial/data/seguridad" tuvo un impacto sobre la seguridad.
-Evidencia/timeline/custody TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \                                                                                                                                                                                                        
+Evidencia/timeline/custody | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \                                                                                                                                                                                                        
 "Primeros objetivos/decisiones/actions"
 "Contenimiento/eradicación en la vida"
 "La recuperación/validación/acceptancia de la vida"
@@ -1331,12 +1331,12 @@ Lecciones/acción/retestigos sobre la vida
 
 ## 30.2 BIA y registro de continuidad
 
-Silencio**
-Silencio...
-TENIDO Producto/servicio/proceso/procesador TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \   \                                                                                                                                                                                             
+|** |
+|... |
+| Producto/servicio/proceso/procesador | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \   \                                                                                                                                                                                             
 La salida mínima aceptable es válida para siempre.
-Impacto de la vida por el tiempo / MTPD Silencio \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                             
-TENIDO RTO / RPO TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \  \ \                                                                                                                                                                                    
+Impacto de la vida por el tiempo / MTPD | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                             
+| RTO / RPO | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \  \ \                                                                                                                                                                                    
 "Personas/facilidad/tecnología"
 Los datos/dependencias de la seguridad de la vida siguen adelante.
 La estrategia de continuidad y el trabajo en torno a la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \                                                                                                                                                                                                         
@@ -1346,14 +1346,14 @@ Test/result/improvementar la vida
 
 ## 30.3 Evidence and chain-of-custody record
 
-Silencio**
-Silencio...
-TENIDO EL ID/descripción / fuente TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                             
+|** |
+|... |
+| EL ID/descripción / fuente | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                             
 La autoridad y el propósito de la vida han sido incapaces.
-TENIDO RECIBOR/date / time zone TEN \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \                                                                                                                                                                                              
-TENIDO Método/herramienta / versión TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \  \    \                                                                                                                                                                                               
-Silencio Original hash/working copy ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                                       
-TENIDO Almacenamiento/access/privacy TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \                                                                                                                                                                                                 
+| RECIBOR/date / time zone TEN \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \ \                                                                                                                                                                                               |
+| Método/herramienta / versión | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \  \    \                                                                                                                                                                                               
+| Original hash/working copy ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \                                                                                                                                                                                                        |
+| Almacenamiento/access/privacy | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    \                                                                                                                                                                                                 
 "Transferencia de/a/a propósito"
 "Análisis/resulto/limitaciones"
 "Retención de la vida"
@@ -1361,54 +1361,54 @@ Repaso/disposición de la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
 
 ## 30.4 Registro de ejercicio y acción correctiva
 
-Silencio**
-Silencio...
-TENIDO Objetivo/capacidad
+|** |
+|... |
+| Objetivo/capacidad |
 "Scenario/asunciones/seguridad"
 Los participantes/observadores insistieron en la vida \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \    \ \      \                                                                                                                                                                                               
 Los criterios de éxito esperados son válidos.
-TENIENDO el tiempo real/decisiones TENIDO \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+TENIENDO el tiempo real/decisiones | \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
 "Strengths/gaps/evidencia"
-TENIDO Cause/risk / interim control
+| Cause/risk / interim control |
 "Actuación/propietario/ fecha límite"
 Retest/evidence / result  remain \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \     \                                                                                                                                                                                                       
 ⋅ Management review ⋅ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   \ \  \ \ \ \ \                                                                                                                                                                                                        
 
 ## 30.5 Glosario
 
-Silencio**
-Silencio...
-Silencio evento Adverso Silencio Una ocurrencia que puede tener una consecuencia negativa.
-TEN BCMS TENIDO Sistema de gestión de continuidad de las operaciones.
-TEN BIA TENIDO Análisis de impacto empresarial.
+|** |
+|... |
+| evento Adverso | Una ocurrencia que puede tener una consecuencia negativa.
+TEN BCMS | Sistema de gestión de continuidad de las operaciones.
+TEN BIA | Análisis de impacto empresarial.
 TEN continuidad de las operaciones ANTERI Capability to continue delivery of products and services at acceptable capacity during disruption.
-← Cadena de custodia Silencio Control documentado y transferencia de antecedentes de evidencia.
-TENIENDO TENIDO Acción para limitar la propagación o el impacto de incidentes.
-tención Gestión de crisis TENIDO Liderazgo y coordinación de situaciones de alto impacto e incertidumbre. Silencio
-← Recuperación de desastres Silencio Restauración de tecnología, datos y infraestructura de apoyo después de la perturbación. Silencio
-Erradicación de la vida útil Eliminación de causa, persistencia, cambios inseguros y debilidades conexas. Silencio
-tención Incident Silencioso que pone en peligro la confidencialidad, integridad, disponibilidad o viola la política de seguridad; utilice la definición aprobada de la organización. Silencio
-Silencio MTPD / MAO Silencio Período máximo tolerable de perturbación / salida máxima aceptable.
+← Cadena de custodia | Control documentado y transferencia de antecedentes de evidencia.
+TENIENDO | Acción para limitar la propagación o el impacto de incidentes.
+tención Gestión de crisis | Liderazgo y coordinación de situaciones de alto impacto e incertidumbre. |
+← Recuperación de desastres | Restauración de tecnología, datos y infraestructura de apoyo después de la perturbación. |
+Erradicación de la vida útil Eliminación de causa, persistencia, cambios inseguros y debilidades conexas. |
+tención Incident Silencioso que pone en peligro la confidencialidad, integridad, disponibilidad o viola la política de seguridad; utilice la definición aprobada de la organización. |
+| MTPD / MAO | Período máximo tolerable de perturbación / salida máxima aceptable.
 tención Playbook ← Pasos de respuesta centrados en el escenario, decisiones, autoridad y evidencia.
 Silencioso Recuperación Silencioso Restauración y verificación del servicio y los controles.
-Silencio RPO Silencio Pérdida máxima tolerable de datos medida en el tiempo.
-Silencio RTO TENIDO Tiempo para restaurar una actividad o recurso.
-tención Ejercicio en la mesa Silencio Evaluación basada en el debate utilizando un escenario y preguntas de decisión. Silencio
+| RPO | Pérdida máxima tolerable de datos medida en el tiempo.
+| RTO | Tiempo para restaurar una actividad o recurso.
+tención Ejercicio en la mesa | Evaluación basada en el debate utilizando un escenario y preguntas de decisión. |
 
 ## 30.6 Subject index
 
 Subjeto**
-Silencio...
+|... |
 ← Respaldos Silencioso 22
-TENIDO BIA TENIDO 3, 20
-Silencio para la continuidad de las operaciones
+| BIA | 3, 20
+| para la continuidad de las operaciones |
 Silenciosos incidentes en la nube
-Silencio en la comunicación
-Silencio Silencio Silencio Silencio
+| en la comunicación |
+| | | |
 ← Gestión de crisis
-Silencioso Detección/triaje Silencio 6-7
-Silencio Pruebas digitales
-Silencio para la recuperación ante desastres
+Silencioso Detección/triaje | 6-7
+| Pruebas digitales |
+| para la recuperación ante desastres |
 Silencioso Ejercicios
 Silenciosos incidentes de identidad
 Silenciosos en la investigación
@@ -1416,11 +1416,11 @@ Silencioso analista junior
 lecciones aprendidas
 Silencioso Silencioso
 TENIDA métricas/cumplimiento
-tención NIST SP 800-61 Rev. 3 Silencio 4, 25 Silencio
-Silencio Herramientas de código abierto Silencio 26
-Silencio Silencio Silencio .
+tención NIST SP 800-61 Rev. 3 | 4, 25 |
+| Herramientas de código abierto | 26
+| | | .
 Silencioso de recuperación
-TENIDO RTO / RPO TENIDO 3, 21-22
+| RTO / RPO | 3, 21-22
 Silenciosos incidentes ocurridos en los proveedores
 
 ## 30.7 Referencias oficiales
@@ -1453,5 +1453,5 @@ Silenciosos incidentes ocurridos en los proveedores
 
 - [Seguridad de Incidencia de Incidencia de Seguridad Informática] Recursos de la Guía de Manejo de Incidentes obtenidos/u contactos](https://csrc.nist.gov/Projects/incident-response/publications)
 
-Silencio **Recordaje final:** Las amenazas, la tecnología, las leyes, los contratos, las normas, las interpretaciones oficiales, los instrumentos, los contactos y las dependencias orgánicas cambian. Verificar las fuentes autoritativas actuales y los planes aprobados antes de un incidente real o decisión de recuperación. Silencio
-Silencio.
+| **Recordaje final:** Las amenazas, la tecnología, las leyes, los contratos, las normas, las interpretaciones oficiales, los instrumentos, los contactos y las dependencias orgánicas cambian. Verificar las fuentes autoritativas actuales y los planes aprobados antes de un incidente real o decisión de recuperación. |
+|. |

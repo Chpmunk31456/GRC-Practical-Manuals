@@ -1,6 +1,6 @@
 > **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E COMPLIANÇA
+** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE
 
 **PCI DSS v4.0.1**
 
@@ -51,7 +51,7 @@ As equipes técnicas devem conectar cada achado ao fluxo de dados de conta, esco
 
 Os comerciantes e prestadores de serviços devem confirmar as instruções de validação com o adquirente, as marcas de pagamento, os clientes, o avaliador e outras entidades que aceitem a conformidade.
 
-*Conteúdo verdadeiro da palavra:** O guia de capítulo abaixo conterá números de página verificados para esta edição. O documento também contém um campo TOC nativo do Word. Depois de editar, clique com o botão direito e selecione Atualizar Campo e, em seguida, Atualizar tabela inteira.
+*Conteúdo:** O guia de capítulo abaixo conterá números de página verificados para esta edição. O documento também contém um campo TOC nativo do Word. Depois de editar, clique com o botão direito e selecione Atualizar Campo e, em seguida, Atualizar tabela inteira.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sumário

@@ -11,8 +11,8 @@
 ## Findings
 
 - Inventory baseline records: **82**.
-- Restored and localized references: **2** (`LEGACY-IMG-032`, `LEGACY-IMG-033`).
-- Unresolved references: **80**.
+- Restored and localized references: **6** (`LEGACY-IMG-031` through `LEGACY-IMG-036`).
+- Unresolved references: **76**.
 - Unique English-source assets: **80**.
 - Recoverable from an exact asset embedded in the English-source DOCX: **82**.
 - Require localization because the exact English asset contains English text: **82**.
@@ -29,7 +29,7 @@
 | CIS Controls v8.1 | 11 |
 | NIST RMF / SP 800-53 | 10 |
 | ISO/IEC 27001/27002 | 9 |
-| GDPR | 4 |
+| GDPR | 0 |
 | HIPAA | 7 |
 | PCI DSS v4.0.1 | 9 |
 | Incident Response / BCDR | 10 |
@@ -40,15 +40,15 @@
 
 | Language | References |
 |---|---:|
-| Latin American Spanish | 2 |
-| Brazilian Portuguese | 78 |
+| Latin American Spanish | 1 |
+| Brazilian Portuguese | 75 |
 
 ## Classification totals
 
 | Classification or evidence flag | Count |
 |---|---:|
-| Primary: requires localization | 80 |
-| Primary: restored and localized | 2 |
+| Primary: requires localization | 76 |
+| Primary: restored and localized | 6 |
 | Primary: no trustworthy source | 0 |
 | Recoverable | 82 |
 | Requires localization | 82 |
@@ -102,12 +102,12 @@ The JSON inventory is authoritative for structured fields, hashes, source-contai
 | LEGACY-IMG-028 | ISO/IEC 27001/27002 | Brazilian Portuguese | `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:472` | `media/image7.png` | 7 | Figura 7. Gestão de incidentes de segurança | Preparar, avaliar, responder, preservar evidências e aprender com incidentes. | yes | no | no | requires localization |
 | LEGACY-IMG-029 | ISO/IEC 27001/27002 | Brazilian Portuguese | `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:669` | `media/image8.png` | 8 | Figura 8. Caminho de certificação | A disponibilidade é seguida de avaliação de certificação e atividades de vigilância e renovação contínuas. | yes | no | no | requires localization |
 | LEGACY-IMG-030 | ISO/IEC 27001/27002 | Brazilian Portuguese | `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:869` | `media/image9.png` | 9 | Figura 9. Caminho de analista ISO 27001 Júnior | Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto. | yes | no | no | requires localization |
-| LEGACY-IMG-031 | GDPR | Latin American Spanish | `04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Vía de análisis de privacidad junior | El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional. | yes | no | yes | requires localization |
+| LEGACY-IMG-031 | GDPR | Latin American Spanish | `04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Vía de análisis de privacidad junior | El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional. | yes | yes | yes | restored localized |
 | LEGACY-IMG-032 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:314` | `media/image1.png` | 1 | Figura 1. GDPR como um programa prático de gestão | Quatro blocos conectados mostram pessoas, dados, propósito e controle. | yes | yes | no | restored localized |
 | LEGACY-IMG-033 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:379` | `media/image2.png` | 2 | Figura 2. Ciclo de vida dos dados pessoais | O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão. | yes | yes | no | restored localized |
-| LEGACY-IMG-034 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:414` | `media/image3.png` | 3 | Figura 3. Fluxo de trabalho de dados-sujeitos-direitos | Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados. | yes | no | no | requires localization |
-| LEGACY-IMG-035 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:482` | `media/image4.png` | 4 | Figura 4. Fluxo de trabalho de violação de dados pessoais | Conter, avaliar, decidir e melhorar são mostrados como um processo ligado. | yes | no | no | requires localization |
-| LEGACY-IMG-036 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Caminho do analista de privacidade júnior | Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira. | yes | no | yes | requires localization |
+| LEGACY-IMG-034 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:414` | `media/image3.png` | 3 | Figura 3. Fluxo de trabalho de dados-sujeitos-direitos | Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados. | yes | yes | no | restored localized |
+| LEGACY-IMG-035 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:482` | `media/image4.png` | 4 | Figura 4. Fluxo de trabalho de violação de dados pessoais | Conter, avaliar, decidir e melhorar são mostrados como um processo ligado. | yes | yes | no | restored localized |
+| LEGACY-IMG-036 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Caminho do analista de privacidade júnior | Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira. | yes | yes | yes | restored localized |
 | LEGACY-IMG-037 | HIPAA | Brazilian Portuguese | `04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:340` | `media/image1.png` | 1 | Figura 1. As principais áreas de conformidade HIPAA | Privacidade, Segurança, Notificação de Violação e Execução estão conectados. | yes | no | no | requires localization |
 | LEGACY-IMG-038 | HIPAA | Brazilian Portuguese | `04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:367` | `media/image2.png` | 2 | Figura 2. Ciclo de vida da IPH | PHI é criado, usado, compartilhado, armazenado e destruído em todo o seu ciclo de vida. | yes | no | no | requires localization |
 | LEGACY-IMG-039 | HIPAA | Brazilian Portuguese | `04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:481` | `media/image3.png` | 3 | Figura 3. HIPAA Salvaguardas das regras de segurança | As salvaguardas administrativas, físicas e técnicas dependem da análise de risco. | yes | no | no | requires localization |
@@ -159,7 +159,10 @@ The JSON inventory is authoritative for structured fields, hashes, source-contai
 
 - `LEGACY-IMG-032` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image1.png`. Its source provenance remains the exact `word/media/image1.png` asset in the authoritative English GDPR DOCX; the source is pixel-identical to the sole image on English PDF page 9. Technical validation passed, and the repository owner visually approved the localized PNG at 1628×857 with SHA-256 `be1628f0ed88a22ba974a63d9045861d70da257f999e3a917d434230f71b729c`.
 - `LEGACY-IMG-033` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image2.png`. Its source provenance remains the exact `word/media/image2.png` asset in the authoritative English GDPR DOCX; the source is pixel-identical to the sole image on English PDF page 11. Technical and visual validation passed for the localized PNG at 1628×886 with SHA-256 `3bb1bbd4b4081727c145c94f50140b0e307a6d9be787d364e557f6b35b22427c`.
-- This completes 2 of the 13 planned GDPR/HIPAA restoration records. **80 unresolved references remain.** Four GDPR references and seven HIPAA references remain unresolved in this workstream; HIPAA restoration has not begun.
+- `LEGACY-IMG-034` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image3.png`; its exact `word/media/image3.png` source is pixel-identical to the sole image on English PDF page 13. Technical validation and owner visual review passed at 1628×886 with SHA-256 `9874ed83307b4361623f43b7f7eba4fd55b6b47c132994f8d5a5b0c3fd2fc91c`.
+- `LEGACY-IMG-035` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image4.png`; its exact `word/media/image4.png` source is pixel-identical to the sole image on English PDF page 16. Technical validation and owner visual review passed at 1628×915 with SHA-256 `159b1eb07a038fd7bd3f2de35b7e52dabf98e04423b98ffa6f30a554b950d9f7`.
+- `LEGACY-IMG-031` and `LEGACY-IMG-036` were restored as separate Latin American Spanish and Brazilian Portuguese localizations of the shared `word/media/image5.png` source, which is pixel-identical to the sole image on English PDF page 26. Technical validation and owner visual review passed for both 1628×886 outputs with SHA-256 values `51a5de99480b1cf5d773e7447e82a5dbe684c5eddd0174037cae35e75f044c48` and `adeb20bceaae89e1e8ffec2a141131eff0e4a56e3209be77e3f8563a6483655d`.
+- This completes all six planned GDPR restoration records and 6 of the 13 planned GDPR/HIPAA restoration records. **76 unresolved references remain.** No GDPR references remain unresolved; seven HIPAA references remain unresolved, and HIPAA restoration has not begun.
 - Embedded English-source assets are provenance evidence, not authorization to publish them unchanged in localized manuals.
 - Localization, terminology, accessibility, visual, legal/regulatory, and technical/factual review remain required before any image restoration.
 - This audit does not claim that any caption, alt text, label translation, or replacement path is approved.

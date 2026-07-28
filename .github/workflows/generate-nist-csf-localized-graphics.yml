@@ -71,13 +71,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for docx in \
-            01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx \
-            01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx; do
-            count="$(unzip -l "$docx" 'word/media/*' | awk '/word\/media\// {count++} END {print count+0}')"
-            test "$count" -ge 6
-            echo "$docx contains $count embedded media files."
-          done
+          python - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          docx_files = [
+              Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx'),
+              Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx'),
+          ]
+
+          for docx in docx_files:
+              with ZipFile(docx) as archive:
+                  media = [name for name in archive.namelist() if name.startswith('word/media/') and not name.endswith('/')]
+              assert len(media) >= 6, f'{docx} contains only {len(media)} embedded media files: {media}'
+              print(f'{docx} contains {len(media)} embedded media files.')
+          PY
 
       - name: Update graphics QA record
         shell: bash

@@ -219,9 +219,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Refresh only stale, unmodified outputs with trusted workflow checkpoints.",
     )
     parser.add_argument(
-        "--allow-unresolved-existing",
+        "--allow-protected-existing",
         action="store_true",
-        help="Return success after clearly reporting protected or stale existing outputs.",
+        help="Package clearly reported protected legacy/manual outputs without treating them as current.",
     )
     parser.add_argument("--target", choices=sorted(LANGUAGES), action="append", help="Limit target language.")
     parser.add_argument("--source", action="append", help="Limit sources by repository-relative path or filename.")
@@ -345,18 +345,28 @@ def main(argv: list[str] | None = None) -> int:
             atomic_write(metadata_path, json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
             log(f"[complete] output={display_destination} chars={len(translated)}")
             generated += 1
-    unresolved = protected + stale
     log(
         f"[summary] generated={generated} skipped={skipped} protected={protected} stale={stale} "
         f"sources={len(sources)} targets={len(targets)}"
     )
-    if unresolved and not args.allow_unresolved_existing:
+    if stale:
         log(
-            "[action-required] Existing outputs were left unchanged. Review the classifications; "
-            "use --refresh-generated only for trusted stale generated files, or "
-            "--allow-unresolved-existing to acknowledge protected legacy/manual outputs."
+            "[action-required] Trusted workflow-generated outputs remain stale. "
+            "Rerun with --refresh-generated; stale outputs cannot be acknowledged as current."
         )
         return 2
+    if protected and not args.allow_protected_existing:
+        log(
+            "[action-required] Protected legacy/manual outputs were left unchanged. "
+            "Review them, or use --allow-protected-existing to package them explicitly "
+            "without synchronizing or certifying them as current."
+        )
+        return 2
+    if protected:
+        log(
+            "[protected-acknowledged] Protected files will be packaged unchanged. "
+            "They are not synchronized with the English source and are not certified current."
+        )
     return 0
 
 

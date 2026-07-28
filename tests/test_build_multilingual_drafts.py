@@ -86,7 +86,7 @@ class BuildMultilingualDraftsTests(unittest.TestCase):
 
             stdout = io.StringIO()
             with redirect_stdout(stdout):
-                result = module.main(["--target", "es"])
+                result = module.main(["--target", "es", "--allow-protected-existing"])
 
             self.assertEqual(0, result)
             self.assertEqual(generated, destination.read_text(encoding="utf-8"))
@@ -107,13 +107,37 @@ class BuildMultilingualDraftsTests(unittest.TestCase):
 
             stdout = io.StringIO()
             with redirect_stdout(stdout):
-                result = module.main(["--target", "es"])
+                result = module.main(["--target", "es", "--allow-protected-existing"])
 
             self.assertEqual(2, result)
             self.assertEqual(generated, destination.read_text(encoding="utf-8"))
             self.assertEqual([], translator.chunks)
             self.assertIn("[stale]", stdout.getvalue())
             self.assertIn("--refresh-generated", stdout.getvalue())
+            self.assertIn("cannot be acknowledged as current", stdout.getvalue())
+
+    def test_stale_generated_file_passes_only_after_explicit_refresh(self) -> None:
+        translator = FakeTranslator()
+        module = load_script(translator)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source, destination = self.make_source(root)
+            module.ROOT = root
+            self.assertEqual(0, module.main(["--target", "es"]))
+            source.write_text("Changed English source\n", encoding="utf-8")
+
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                result = module.main(
+                    ["--target", "es", "--refresh-generated", "--allow-protected-existing"]
+                )
+
+            self.assertEqual(0, result)
+            self.assertIn("[refresh]", stdout.getvalue())
+            self.assertIn("Changed English source", destination.read_text(encoding="utf-8"))
+            translator.chunks.clear()
+            self.assertEqual(0, module.main(["--target", "es"]))
+            self.assertEqual([], translator.chunks)
 
     def test_reviewed_file_remains_protected_even_when_refresh_requested(self) -> None:
         translator = FakeTranslator()
@@ -129,7 +153,7 @@ class BuildMultilingualDraftsTests(unittest.TestCase):
             stdout = io.StringIO()
             with redirect_stdout(stdout):
                 result = module.main(
-                    ["--target", "es", "--refresh-generated", "--allow-unresolved-existing"]
+                    ["--target", "es", "--refresh-generated", "--allow-protected-existing"]
                 )
 
             self.assertEqual(0, result)
@@ -157,6 +181,13 @@ class BuildMultilingualDraftsTests(unittest.TestCase):
             self.assertEqual([], translator.chunks)
             self.assertIn("reason=no-trusted-checkpoint", stdout.getvalue())
             self.assertIn("[action-required]", stdout.getvalue())
+
+            acknowledged = io.StringIO()
+            with redirect_stdout(acknowledged):
+                result = module.main(["--target", "es", "--allow-protected-existing"])
+            self.assertEqual(0, result)
+            self.assertIn("[protected-acknowledged]", acknowledged.getvalue())
+            self.assertIn("not certified current", acknowledged.getvalue())
 
     def test_translation_error_identifies_exact_context(self) -> None:
         translator = FakeTranslator()

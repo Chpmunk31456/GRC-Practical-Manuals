@@ -23,11 +23,11 @@ Edição: Primeira Edição, Julho 2026
 
 Objetivo: Educação gratuita e prática para gestores, estudantes, mudadores de carreira, analistas júnior, profissionais de privacidade e profissionais de segurança cibernética.
 
-# # Aviso educacional e legal
+## Aviso educacional e legal
 
 Este manual fornece informações educacionais gerais. Não é aconselhamento legal e não substitui aconselhamento de advogados qualificados, oficiais de privacidade, agentes de segurança ou profissionais de informação de saúde. Os deveres do HIPAA dependem de fatos, papéis, contratos, regulamentos federais e orientações atuais, leis estaduais e outras regras de informação sobre saúde.
 
-# # Uso ético e autorizado
+## Uso ético e autorizado
 
 Utilizar ferramentas técnicas e exercícios apenas com autorização escrita e apenas com dados fictícios, sintéticos ou adequadamente desidentificados. Nunca coloque informações reais do paciente em um repositório público, laboratório de treinamento, demonstração, portfólio ou serviço não aprovado. A habilidade técnica não cria permissão.
 
@@ -177,7 +177,7 @@ Sumário
 
 [12.7 Fiabilidade dos elementos de prova [25](#evidence-reliability)](#evidence-reliability)
 
-[13. HIPAA Playbook [26](#managers-hipaa-playbook)](#managers-hipaa-playbook)
+[13. Manual da HIPAA para gerentes [26](#managers-hipaa-playbook)](#managers-hipaa-playbook)
 
 [13.1 Perguntas para cada proprietário [26](#questions-for-every-owner)](#questions-for-every-owner)
 
@@ -589,7 +589,7 @@ O controle de acesso .Use IDs exclusivos, acesso de emergência e controles de l
 
 * Como avaliar incidentes PHI não seguros e cumprir as obrigações de notificação.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.45654in" alt="Discovery, contension, assessment, notification, and improvement form One Process." />
+<img src="media/image4.png" style="largura:6.15in;altura:3.45654in" alt="Descoberta, contenção, avaliação, notificação e melhoria formam um único processo." />
 
 Figura 4. Fluxo de trabalho de violação HIPAA
 
@@ -775,7 +775,7 @@ Atraso de aplicação da lei quando uma declaração de aplicação da lei quali
 Área de Citação** Área de Citação** Foco** Acção de Gestão** Prova**
 "------------------------------------------------------------------------------------------------------------------------------------
 □ 45 CFR Parte 160 Subparte B □ Preempção da lei do Estado
-Parte 160 Subparte C □ Compliance and investigations Cooperar, preservar fatos, evitar retaliação
+Parte 160 Subparte C □ Conformidade e investigações Cooperar, preservar fatos, evitar retaliação
 Parte 160 Subpartes D–E □ Penas e procedimentos em matéria de moeda civil
 
 ## 12.5 Método de verificação de conformidade
@@ -827,7 +827,7 @@ Resultado gerado pelo sistema, além de revisão independente, decisões, ticket
 . ** Regra de verificação:** Um achado de ferramenta é uma entrada, não uma conclusão. Verificação de conformidade requer escopo, dados completos, revisão humana, contexto jurídico e político, ação corretiva e evidência de que o controle funciona ao longo do tempo.
 □-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 13. HIPAA Playbook do gerente
+# 13. Manual da HIPAA para gerentes
 
 *Perguntas, painéis, reuniões e decisões os gestores devem controlar.*
 
@@ -935,7 +935,7 @@ Coordenador do Programa HIPAA
 
 ** **Habilidade** ** item de carteira **
 ------------------------------------------------------------------------------------------------
-• Scoping □ Covered-entity and business-associate role memo
+• Definição do escopo □ Memorando sobre as funções da entidade coberta e do associado comercial
 O mapeamento de dados, o ciclo de vida do ePHI, o inventário do sistema e o diagrama de fluxo de dados
 • Análise de risco e registo de tratamento
 □ Segurança □ matriz de salvaguarda com amostras de evidência
@@ -1185,7 +1185,7 @@ Aprovação de registro, finalidade, proprietário, escopo, sistemas, classifica
 
 # # 15.15 Recursos governamentais livres
 
-**HHS/ONC Security Risk Assessment Tool:** [<u>Open the official SRA Tool page</u>](https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool)
+**Ferramenta de Avaliação de Riscos de Segurança do HHS/ONC:** [<u>Abrir a página oficial da ferramenta SRA</u>](https://www.healthit.gov/topic/privacy-security-and-hipaa/security-risk-assessment-tool)
 
 Este recurso público gratuito pode ajudar as pequenas e médias práticas a iniciar uma avaliação estruturada dos riscos. Não garante conformidade e não substitui uma análise de risco completa, específica da organização.
 
@@ -1498,7 +1498,7 @@ Artigo 1.o
 
 [<u>HHS — Orientação para a Análise de Riscos</u>](https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html)
 
-[<u>HHS — HIPAA Audit Protocol</u>](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/audit/protocol/index.html)
+[<u>HHS — Protocolo de auditoria HIPAA</u>](https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/audit/protocol/index.html)
 
 [<u>HHS — Provisões para acordos associados às empresas</u>](https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html)
 

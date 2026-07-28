@@ -177,7 +177,7 @@ La privacidad y los equipos legales deben verificar la orientación actual del H
 
 [12.7 Confiabilidad de la prueba [25](#evidence-reliability)](#evidence-reliability)
 
-[13. Libro de juegos HIPAA del administrador [26](#managers-hipaa-playbook)](#managers-hipaa-playbook)
+[13. Manual de HIPAA para gerentes [26](#managers-hipaa-playbook)](#managers-hipaa-playbook)
 
 [13.1 Preguntas para cada propietario [26](#questions-for-every-owner)](#questions-for-every-owner)
 
@@ -325,7 +325,7 @@ La privacidad y los equipos legales deben verificar la orientación actual del H
 
 [19.4 Lista de verificación BAA [40](#baa-checklist)](#baa-checklist)
 
-[19.5 Lista de comprobación previa de la auditoría [41](#manager-pre-audit-checklist)](#manager-pre-audit-checklist)
+[19.5 Lista de verificación previa a la auditoría para gerentes [41](#manager-pre-audit-checklist)](#manager-pre-audit-checklist)
 
 [20. Glosario [42](#glossary)](#glossary)
 
@@ -391,7 +391,7 @@ La información sobre la salud protegida es una información de salud individual
 Un experto cualificado determina y documenta que el riesgo de identificación es muy pequeño tención Expert qualifications, método, Hipótesis, reporte  sometida
 | Safe Harbor | Eliminar los identificadores enumerados y no tienen ningún conocimiento real de que la información restante identifica a una persona identificadora lista de verificación, revisión de calidad, aprobación
 
-*Manager checkpoint:** Requiere un análisis por escrito de alcance y función para cada entidad jurídica, servicio, producto, función del empleador, actividad de investigación, proveedor y flujo de datos.
+**Punto de control para gerentes:** Requiere un análisis por escrito de alcance y función para cada entidad jurídica, servicio, producto, función del empleador, actividad de investigación, proveedor y flujo de datos.
 |. |
 
 # 3. Regla de Privacidad: Usos y Divulgaciones
@@ -607,7 +607,7 @@ TEN HHS — 500 o más | Bajo el cronograma de presentación de informes contemp
 
 ## 8.2 Excepciones
 
-La definición de incumplimiento contiene excepciones estrechas que implican cierto acceso a la fuerza de trabajo involuntario o involuntario y creencias de buena fe de que un receptor no autorizado no podría conservar razonablemente la información. Document facts and legal review before relying on an exception.
+La definición de incumplimiento contiene excepciones estrechas que implican cierto acceso a la fuerza de trabajo involuntario o involuntario y creencias de buena fe de que un receptor no autorizado no podría conservar razonablemente la información. Documente los hechos y la revisión jurídica antes de ampararse en una excepción.
 
 # 9. Business Associates and Vendor Oversight
 
@@ -625,7 +625,7 @@ Breach, incidente, y reportajes no asegurados-PHI
 
 Apoyo a los derechos de acceso, enmienda y contabilidad
 
-PHI disponibilidad for HHS compliance review
+Disponibilidad de la PHI para la revisión de cumplimiento del HHS
 
 Devolución o destrucción cuando sea posible
 
@@ -714,7 +714,7 @@ HHS observa que un tribunal abandonó parte de su orientación tecnológica de s
 
 Regla de Seguridad
 
-| **Citación** | **Requisito** | **Manager action** |**
+| **Citación** | **Requisito** | **Acción del gerente** | **Evidencia típica** |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 164.306 | Reglas generales | Protege la confidencialidad, la integridad y la disponibilidad del ePHI; aborda las amenazas anticipadas y los usos inválidos. programa de seguridad, decisiones de riesgo, análisis de flexibilidad
 TEN 164.308(a)(1) | Proceso de gestión de la seguridad | Realizar análisis de riesgos, gestión de riesgos, sanciones y revisión de la actividad del sistema de información. | Análisis de riesgos, plan de tratamiento, sanciones, pruebas de revisión de registros
@@ -794,7 +794,7 @@ Gráfico 6 Ciclo de verificación del cumplimiento
 
 - Inspeccione pruebas y, cuando sea práctico, reperforme o confirme independientemente el resultado de control.
 
-- Record excepciones con el requisito exacto, hechos, causa, EPHI afectado, duración, probabilidad e impacto.
+- Registre las excepciones con el requisito exacto, los hechos, la causa, la ePHI afectada, la duración, la probabilidad y el impacto.
 
 - Assign corrective action, owner, due date, interim protection, and escalation.
 
@@ -827,7 +827,7 @@ TEN UTILIZADO | Informe del sistema Dated ligado al alcance y el período correc
 | **Regla de verificación:** Una búsqueda de herramientas es una entrada, no una conclusión. La verificación del cumplimiento requiere alcance, datos completos, examen humano, contexto jurídico y normativo, medidas correctivas y pruebas de que el control funciona con el tiempo. |
 |. |
 
-# 13. Libro de juegos HIPAA de Manager
+# 13. Manual de HIPAA para gerentes
 
 *Las preguntas, los paneles, las reuniones y los administradores de decisiones deben controlarse*.
 
@@ -1396,7 +1396,7 @@ Derechos de rescisión
 
 Contactos, ubicaciones, cambios y cadencia de revisión
 
-## 19.5 Manager pre-audit checklist
+## 19.5 Lista de verificación previa a la auditoría para gerentes
 
 Alcance y funciones de organización aprobadas
 

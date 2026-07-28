@@ -11,8 +11,8 @@
 ## Findings
 
 - Inventory baseline records: **82**.
-- Restored and localized references: **1** (`LEGACY-IMG-032`).
-- Unresolved references: **81**.
+- Restored and localized references: **2** (`LEGACY-IMG-032`, `LEGACY-IMG-033`).
+- Unresolved references: **80**.
 - Unique English-source assets: **80**.
 - Recoverable from an exact asset embedded in the English-source DOCX: **82**.
 - Require localization because the exact English asset contains English text: **82**.
@@ -29,7 +29,7 @@
 | CIS Controls v8.1 | 11 |
 | NIST RMF / SP 800-53 | 10 |
 | ISO/IEC 27001/27002 | 9 |
-| GDPR | 5 |
+| GDPR | 4 |
 | HIPAA | 7 |
 | PCI DSS v4.0.1 | 9 |
 | Incident Response / BCDR | 10 |
@@ -41,14 +41,14 @@
 | Language | References |
 |---|---:|
 | Latin American Spanish | 2 |
-| Brazilian Portuguese | 79 |
+| Brazilian Portuguese | 78 |
 
 ## Classification totals
 
 | Classification or evidence flag | Count |
 |---|---:|
-| Primary: requires localization | 81 |
-| Primary: restored and localized | 1 |
+| Primary: requires localization | 80 |
+| Primary: restored and localized | 2 |
 | Primary: no trustworthy source | 0 |
 | Recoverable | 82 |
 | Requires localization | 82 |
@@ -104,7 +104,7 @@ The JSON inventory is authoritative for structured fields, hashes, source-contai
 | LEGACY-IMG-030 | ISO/IEC 27001/27002 | Brazilian Portuguese | `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:869` | `media/image9.png` | 9 | Figura 9. Caminho de analista ISO 27001 Júnior | Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto. | yes | no | no | requires localization |
 | LEGACY-IMG-031 | GDPR | Latin American Spanish | `04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Vía de análisis de privacidad junior | El aprendizaje, la práctica, el portafolio, la explicación y la postulación forman una trayectoria profesional. | yes | no | yes | requires localization |
 | LEGACY-IMG-032 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:314` | `media/image1.png` | 1 | Figura 1. GDPR como um programa prático de gestão | Quatro blocos conectados mostram pessoas, dados, propósito e controle. | yes | yes | no | restored localized |
-| LEGACY-IMG-033 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:379` | `media/image2.png` | 2 | Figura 2. Ciclo de vida dos dados pessoais | O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão. | yes | no | no | requires localization |
+| LEGACY-IMG-033 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:379` | `media/image2.png` | 2 | Figura 2. Ciclo de vida dos dados pessoais | O ciclo de vida conecta coleta, uso, compartilhamento, retenção e exclusão. | yes | yes | no | restored localized |
 | LEGACY-IMG-034 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:414` | `media/image3.png` | 3 | Figura 3. Fluxo de trabalho de dados-sujeitos-direitos | Um fluxo de trabalho de cinco passos cobre a ingestão através de resultados registrados. | yes | no | no | requires localization |
 | LEGACY-IMG-035 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:482` | `media/image4.png` | 4 | Figura 4. Fluxo de trabalho de violação de dados pessoais | Conter, avaliar, decidir e melhorar são mostrados como um processo ligado. | yes | no | no | requires localization |
 | LEGACY-IMG-036 | GDPR | Brazilian Portuguese | `04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md:794` | `media/image5.png` | 5 | Figura 5. Caminho do analista de privacidade júnior | Aprender, prática, portfólio, explicação e aplicação formam uma trajetória de carreira. | yes | no | yes | requires localization |
@@ -158,7 +158,8 @@ The JSON inventory is authoritative for structured fields, hashes, source-contai
 ## Limitations and next gate
 
 - `LEGACY-IMG-032` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image1.png`. Its source provenance remains the exact `word/media/image1.png` asset in the authoritative English GDPR DOCX; the source is pixel-identical to the sole image on English PDF page 9. Technical validation passed, and the repository owner visually approved the localized PNG at 1628×857 with SHA-256 `be1628f0ed88a22ba974a63d9045861d70da257f999e3a917d434230f71b729c`.
-- This completes 1 of the 13 planned GDPR/HIPAA restoration records. **81 unresolved references remain.** No other GDPR image was restored, and HIPAA restoration has not begun.
+- `LEGACY-IMG-033` was restored as a Brazilian Portuguese localization at `04-regulatory-compliance/GDPR/Portugues_BR/media/image2.png`. Its source provenance remains the exact `word/media/image2.png` asset in the authoritative English GDPR DOCX; the source is pixel-identical to the sole image on English PDF page 11. Technical and visual validation passed for the localized PNG at 1628×886 with SHA-256 `3bb1bbd4b4081727c145c94f50140b0e307a6d9be787d364e557f6b35b22427c`.
+- This completes 2 of the 13 planned GDPR/HIPAA restoration records. **80 unresolved references remain.** Four GDPR references and seven HIPAA references remain unresolved in this workstream; HIPAA restoration has not begun.
 - Embedded English-source assets are provenance evidence, not authorization to publish them unchanged in localized manuals.
 - Localization, terminology, accessibility, visual, legal/regulatory, and technical/factual review remain required before any image restoration.
 - This audit does not claim that any caption, alt text, label translation, or replacement path is approved.

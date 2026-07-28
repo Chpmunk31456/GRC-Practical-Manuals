@@ -18,6 +18,22 @@
 
 **PASS** - 12 localized PNG files, two regenerated DOCX files with embedded media, two regenerated searchable PDF files, and two fresh corrected figure-page contact sheets.
 
-## Human visual-review boundary
+## Human visual-layout review
 
-The fresh contact sheets are review evidence, not automatic publication approval. A human must inspect them for clipping, overlap, font rendering, contrast, grayscale comprehension, and reading-order/accessibility behavior before the graphics can be marked publication-ready.
+**PASS WITH READABILITY CAVEAT**
+
+The final Spanish and Brazilian Portuguese contact sheets were reviewed for major visual defects. No obvious page-edge clipping, figures outside printable margins, major label collisions, or significant layout inconsistencies were observed. Figures 1, 4, 5, and 6 show material improvement over the earlier versions, and the Spanish and Portuguese layouts are visually consistent.
+
+The contact sheets are compressed review images. They support approval of figure placement and major overlap checks, but they do not provide sufficient resolution to certify very small text readability, grayscale comprehension, or full accessibility behavior at 100% zoom.
+
+## Remaining publication boundary
+
+The NIST CSF graphics placement issue is resolved. Final publication approval still requires:
+
+- 100% zoom readability checks for small figure labels;
+- Spanish language and terminology review;
+- Brazilian Portuguese language and terminology review;
+- technical and factual currency review;
+- full-document DOCX/PDF visual inspection;
+- accessibility review and remediation where needed;
+- link, heading, table, metadata, and package consistency checks.

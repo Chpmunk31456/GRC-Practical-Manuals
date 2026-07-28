@@ -147,26 +147,7 @@ jobs:
             echo
             echo "- Packages built: $count"
             test "$count" -ge 21
-            python - <<'PY'
-            from pathlib import Path
-            from zipfile import ZipFile
-
-            docx_files = [
-                Path("01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx"),
-                Path("01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"),
-            ]
-            for docx in docx_files:
-                with ZipFile(docx) as archive:
-                    media = [
-                        name for name in archive.namelist()
-                        if name.startswith("word/media/") and not name.endswith("/")
-                    ]
-                assert len(media) == 8, (
-                    f"{docx} must contain exactly 8 embedded figures; "
-                    f"found {len(media)}: {media}"
-                )
-                print(f"Embedded-figure check: {docx} contains exactly 8 figures.")
-            PY
+            python scripts/validate_nist_embedded_graphics.py
             echo '- Result: PASS'
           } 2>&1 | tee -a production/MULTILINGUAL_DRAFT_WORKFLOW_LOG.md
 

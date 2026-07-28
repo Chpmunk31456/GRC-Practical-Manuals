@@ -26,19 +26,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils imagemagick
 
-      - name: Render compact figure-page contact sheets
+      - name: Render tiny figure-page thumbnails
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p qa/nist_visual_qa_compact
+          mkdir -p qa/nist_visual_qa_tiny
           process_pdf() {
             lang="$1"
             pdf="$2"
             prefix="$3"
-            work="qa/nist_visual_qa_compact/${prefix}_work"
-            mkdir -p "$work"
-            pages=""
             total=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+            pages=""
             for p in $(seq 1 "$total"); do
               text=$(pdftotext -f "$p" -l "$p" "$pdf" - 2>/dev/null || true)
               if printf '%s' "$text" | grep -Eqi 'Figura[[:space:]]+[1-6][\.:]'; then
@@ -47,20 +45,12 @@ jobs:
             done
             pages=$(printf '%s\n' "$pages" | xargs -n1 | awk '!seen[$0]++' | xargs)
             test -n "$pages"
-            printf '%s\n' "$pages" > "qa/nist_visual_qa_compact/${prefix}_figure_pages.txt"
-            idx=0
+            printf '%s\n' "$pages" > "qa/nist_visual_qa_tiny/${prefix}_pages.txt"
             for p in $pages; do
-              idx=$((idx+1))
-              pdftoppm -f "$p" -l "$p" -jpeg -r 72 -jpegopt quality=50 "$pdf" "$work/page" >/dev/null 2>&1
-              src=$(ls "$work"/page-*.jpg | tail -n1)
-              convert "$src" -resize 360x480\> -gravity north -background white -splice 0x28 \
-                -pointsize 16 -fill black -annotate +0+6 "${lang} p.${p}" \
-                "$work/thumb_${idx}.jpg"
+              pdftoppm -f "$p" -l "$p" -singlefile -jpeg -r 72 -jpegopt quality=45 "$pdf" "qa/nist_visual_qa_tiny/${prefix}_page_${p}" >/dev/null 2>&1
+              convert "qa/nist_visual_qa_tiny/${prefix}_page_${p}.jpg" -resize 320x440\> -quality 35 "qa/nist_visual_qa_tiny/${prefix}_page_${p}.jpg"
             done
-            montage "$work"/thumb_*.jpg -tile 2x -geometry +6+6 -background white \
-              -quality 45 "qa/nist_visual_qa_compact/${prefix}_compact.jpg"
           }
-
           process_pdf "Spanish" \
             "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf" \
             "es"
@@ -68,10 +58,10 @@ jobs:
             "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf" \
             "pt"
 
-      - name: Commit compact QA assets
+      - name: Commit tiny QA assets
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add qa/nist_visual_qa_compact
-          git commit -m 'Add compact NIST visual QA assets'
+          git add qa/nist_visual_qa_tiny
+          git commit -m 'Add tiny NIST visual QA page thumbnails'
           git push origin HEAD:production/multilingual-grc-editions

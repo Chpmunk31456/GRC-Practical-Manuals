@@ -83,7 +83,7 @@ jobs:
 
       - name: Validate promoted images, Markdown, and provenance
         env:
-          APPROVAL_EVIDENCE: Issue #28 owner approval comment 5118508431
+          APPROVAL_EVIDENCE: 'Issue #28 owner approval comment 5118508431'
         run: |
           python - <<'PY'
           import hashlib

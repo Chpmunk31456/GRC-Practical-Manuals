@@ -7,7 +7,6 @@ on:
     paths:
       - scripts/audit_cloud_third_party_localized_figures.py
       - .github/workflows/audit-cloud-third-party-localized-figures.yml
-      - qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
   workflow_dispatch:
 
 permissions:

@@ -184,7 +184,7 @@ Sumário
 
 * Edições atuais, propósito, relacionamento e limitações importantes.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="Contexto e planejamento de unidade de risco, implementação, avaliação e melhoria." />
+![Contexto e planejamento de unidade de risco, implementação, avaliação e melhoria.](media/image1.png)
 
 Figura 1. Ciclo de melhoria contínua do ISMS
 
@@ -233,7 +233,7 @@ Alteração O que desencadeia uma revisão do escopo? Mudar registros, aquisiç�
 
 * Um método repetitivo que conecta o risco de negócios para controlar decisões.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.39605in" alt="Donos de risco avaliam cenários, tratamento e risco residual utilizando critérios definidos." />
+![Donos de risco avaliam cenários, tratamento e risco residual utilizando critérios definidos.](media/image2.png)
 
 Figura 2. Fluxo de trabalho de risco de segurança da informação
 
@@ -255,7 +255,7 @@ O tratamento Modifique o risco através de autenticação mais forte e recupera�
 
 * A ponte entre o tratamento de risco, o anexo A, outros controlos e provas de auditoria.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.39605in" alt="The SoA registra seleção de controle fundamentada e status de implementação." />
+![The SoA registra seleção de controle fundamentada e status de implementação.](media/image3.png)
 
 Figura 3. Declaração de fluxo de trabalho de aplicabilidade
 
@@ -282,7 +282,7 @@ Exclusão de exemplo A tecnologia ou o cenário descrito estão ausentes do âmb
 
 * Como manter informações documentadas úteis sem criar burocracia.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.29079in" alt="A evidência deve sustentar o desenho, a operação, as exceções, a correção e o reteste." />
+![A evidência deve sustentar o desenho, a operação, as exceções, a correção e o reteste.](media/image4.png)
 
 Figura 4. Cadeia de exigência à evidência
 
@@ -400,7 +400,7 @@ Leia os insumos necessários, tais como ações anteriores, mudanças de context
 
 Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. Este manual parafraseia conceitos para a educação e não substitui o padrão.
 
-<img src="media/image5.png" style="width:6.15in;height:3.32973in" alt="Um programa de auditoria segue risco, independência, evidências, relatórios e acompanhamento verificado." />
+![Um programa de auditoria segue risco, independência, evidências, relatórios e acompanhamento verificado.](media/image5.png)
 
 Figura 5. Fluxo de trabalho de auditoria interna
 
@@ -418,7 +418,7 @@ Reagir a não conformidades, corrigi-las, analisar as causas, prevenir a recorr�
 
 Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. Este manual parafraseia conceitos para a educação e não substitui o padrão.
 
-<img src="media/image6.png" style="largura:6.15in;altura:3.27166in" alt="Os 93 controles de referência são agrupados em temas organizacionais, pessoas, físicos e tecnológicos." />
+![Os 93 controles de referência são agrupados em temas organizacionais, pessoas, físicos e tecnológicos.](media/image6.png)
 
 Figura 6. Temas de controlo do anexo A
 
@@ -469,7 +469,7 @@ Manter procedimentos operacionais documentados. Confirmar risco ou obrigação, 
 Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<img src="media/image7.png" estilo="largura:6.15in;altura:3.29657in" alt="Preparar, avaliar, responder, preservar evidências e aprender com incidentes." />
+![Preparar, avaliar, responder, preservar evidências e aprender com incidentes.](media/image7.png)
 
 Figura 7. Gestão de incidentes de segurança
 
@@ -666,7 +666,7 @@ Oportunidades de melhoria Que mudanças a liderança deve aprovar?
 
 * O que a certificação faz, como geralmente procede, e o que não garante.*
 
-<img src="media/image8.png" style="largura:6.15in;altura:3.39605in" alt="A disponibilidade é seguida de avaliação de certificação e atividades de vigilância e renovação contínuas." />
+![A disponibilidade é seguida de avaliação de certificação e atividades de vigilância e renovação contínuas.](media/image8.png)
 
 Figura 8. Caminho de certificação
 
@@ -866,7 +866,7 @@ As auditorias são objetivas e as conclusões corrigidas de forma eficaz? Verde 
 
 * Uma rota prática para ISMS, GRC, trabalho de risco, auditoria e conformidade.*
 
-<img src="media/image9.png" style="largura:6.15in;altura:3.075in" alt="Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto." />
+![Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto.](media/image9.png)
 
 Figura 9. Caminho de analista ISO 27001 Júnior
 

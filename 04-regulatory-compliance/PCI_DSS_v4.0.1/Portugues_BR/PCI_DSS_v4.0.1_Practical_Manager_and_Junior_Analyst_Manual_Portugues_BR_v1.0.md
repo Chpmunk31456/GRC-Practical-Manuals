@@ -274,7 +274,7 @@ Sumário
 
 * O padrão atual, aplicabilidade, objetivos e limitações importantes.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.94164in" alt="Segurança de pagamento combina rede, sistema, dados, identidade, física, monitoramento, testes e controles de governança." />
+![Segurança de pagamento combina rede, sistema, dados, identidade, física, monitoramento, testes e controles de governança.](media/image1.png)
 
 Figura 1. Os doze requisitos PCI DSS
 
@@ -309,7 +309,7 @@ Manter uma política de segurança da informação
 
 *A diferença entre dados do titular do cartão, PAN e dados de autenticação sensíveis.*
 
-<img src="media/image2.png" style="width:6.15in;height:2.9884in" alt="PAN é central para a aplicabilidade; dados de autenticação sensíveis recebem tratamento pós-autorização mais rigoroso." />
+![PAN é central para a aplicabilidade; dados de autenticação sensíveis recebem tratamento pós-autorização mais rigoroso.](media/image2.png)
 
 Figura 2. Categorias de dados de conta
 
@@ -344,7 +344,7 @@ Nunca use dados reais no treinamento:** Use números de teste de pagamento-proce
 
 * Como encontrar cada pessoa, processo, tecnologia e dependência que pertence ao escopo.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:2.99322in" alt="Comece com fluxos de dados de conta e inclui sistemas conectados e de impacto de segurança." />
+![Comece com fluxos de dados de conta e inclui sistemas conectados e de impacto de segurança.](media/image3.png)
 
 Figura 3. Fluxo de scoping PCI DSS
 
@@ -364,7 +364,7 @@ Figura 3. Fluxo de scoping PCI DSS
 
 7. Exclusões de documentos, suposições, diagramas, inventários e resultados de validação.
 
-<img src="media/image4.png" style="largura:6.15in;altura:2.92173in" alt="A segmentação deve ser executada, monitorada e testada antes que os sistemas sejam tratados como fora de alcance." />
+![A segmentação deve ser executada, monitorada e testada antes que os sistemas sejam tratados como fora de alcance.](media/image4.png)
 
 Figura 4. Segmentação e redução de escopo
 
@@ -397,7 +397,7 @@ Varredura aprovada pelo PCI SSC para escaneamento de vulnerabilidade externa nec
 
 * Compreender a flexibilidade sem enfraquecer o objetivo da exigência.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.06328in" alt="Ambos os enfoques devem atender ao objetivo de exigência e ser avaliáveis." />
+![Ambos os enfoques devem atender ao objetivo de exigência e ser avaliáveis.](media/image5.png)
 
 Figura 5. Abordagens definidas e personalizadas
 
@@ -518,7 +518,7 @@ Proteger aplicações web voltadas para o público e gerenciar todos os scripts 
 
 ** Nota de avaliação: ** Use o texto oficial PCI DSS v4.0.1 e o modelo de relatório aplicável para requisitos exatos, notas de aplicabilidade, procedimentos de teste, opções de resposta e documentação. Este manual explica; não substitui o padrão.
 
-<img src="media/image6.png" style="width:6.15in;height:3.05in" alt="Inventário, autorize, valide, monitore e responda ao script de pagamento-página e mudanças de cabeçalho." />
+![Inventário, autorize, valide, monitore e responda ao script de pagamento-página e mudanças de cabeçalho.](media/image6.png)
 
 Figura 6. Protecção da página de pagamento do comércio electrónico
 
@@ -639,7 +639,7 @@ Manter e governar relações de terceiros prestador de serviços, matrizes de re
 
 ** Nota de avaliação: ** Use o texto oficial PCI DSS v4.0.1 e o modelo de relatório aplicável para requisitos exatos, notas de aplicabilidade, procedimentos de teste, opções de resposta e documentação. Este manual explica; não substitui o padrão.
 
-<img src="media/image7.png" style="largura:6.15in;altura:2.70151in" alt="Detect, conter, analisar, notificar, recuperar e melhorar usando responsabilidades e contatos preparados." />
+![Detect, conter, analisar, notificar, recuperar e melhorar usando responsabilidades e contatos preparados.](media/image7.png)
 
 Figura 8. Fluxo de trabalho de resposta incidente de pagamento
 
@@ -647,7 +647,7 @@ Figura 8. Fluxo de trabalho de resposta incidente de pagamento
 
 * Como verificar que os requisitos PCI DSS são implementados e operacionais.*
 
-<img src="media/image8.png" style="largura:6.15in;altura:2.84492in" alt="Uma conclusão defensável conecta critérios, escopo, projeto de controle, evidência completa, teste, correção e reteste." />
+![Uma conclusão defensável conecta critérios, escopo, projeto de controle, evidência completa, teste, correção e reteste.](media/image8.png)
 
 > Figura 7. Cadeia de exigência à prova
 
@@ -955,7 +955,7 @@ O acesso é controlado pela necessidade, MFA, contas, avaliações e terminaçã
 
 * Um caminho seguro e honesto para o trabalho de conformidade pagamento-segurança.*
 
-<img src="media/image9.png" style="width:6.15in;height:3.0599in" alt="Learn escopo e dados, requisitos de mapa, provas de teste, relatórios de lacunas, e construir um portfólio honesto." />
+![Learn escopo e dados, requisitos de mapa, provas de teste, relatórios de lacunas, e construir um portfólio honesto.](media/image9.png)
 
 Figura 9. Caminho de analista de ICP Júnior
 

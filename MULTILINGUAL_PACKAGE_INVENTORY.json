@@ -1,0 +1,497 @@
+[
+  {
+    "manual": "NIST Cybersecurity Framework 2.0",
+    "directory": "01-foundations/NIST_CSF_2",
+    "inventory": {
+      "English": {
+        "md": [
+          "01-foundations/NIST_CSF_2/English_Source_NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_v1.0.md"
+        ],
+        "docx": [
+          "01-foundations/NIST_CSF_2/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "01-foundations/NIST_CSF_2/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "01-foundations/NIST_CSF_2/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "CIS Critical Security Controls v8.1",
+    "directory": "01-foundations/CIS_Controls_v8.1",
+    "inventory": {
+      "English": {
+        "docx": [
+          "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "01-foundations/CIS_Controls_v8.1/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ],
+        "md": [
+          "01-foundations/CIS_Controls_v8.1/English_Source_CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "01-foundations/CIS_Controls_v8.1/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "NIST Risk Management Framework / SP 800-53",
+    "directory": "01-foundations/NIST_RMF_SP_800-53",
+    "inventory": {
+      "English": {
+        "md": [
+          "01-foundations/NIST_RMF_SP_800-53/English_Source_NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.md"
+        ],
+        "docx": [
+          "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "01-foundations/NIST_RMF_SP_800-53/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "01-foundations/NIST_RMF_SP_800-53/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "ISO/IEC 27001 and ISO/IEC 27002",
+    "directory": "02-management-systems/ISO_IEC_27001_27002",
+    "inventory": {
+      "English": {
+        "md": [
+          "02-management-systems/ISO_IEC_27001_27002/English_Source_ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ],
+        "docx": [
+          "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "02-management-systems/ISO_IEC_27001_27002/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "02-management-systems/ISO_IEC_27001_27002/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "SOC 2 Audit Readiness",
+    "directory": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0",
+    "inventory": {
+      "English": {
+        "docx": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/English/How_to_Prepare_for_a_SOC_2_Audit_English_v1.0.docx"
+        ],
+        "md": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/English/How_to_Prepare_for_a_SOC_2_Audit_English_v1.0.md"
+        ],
+        "pdf": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/English/How_to_Prepare_for_a_SOC_2_Audit_English_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "GDPR",
+    "directory": "04-regulatory-compliance/GDPR",
+    "inventory": {
+      "English": {
+        "md": [
+          "04-regulatory-compliance/GDPR/English_Source_GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ],
+        "docx": [
+          "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/GDPR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "04-regulatory-compliance/GDPR/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "HIPAA",
+    "directory": "04-regulatory-compliance/HIPAA",
+    "inventory": {
+      "English": {
+        "md": [
+          "04-regulatory-compliance/HIPAA/English_Source_HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ],
+        "docx": [
+          "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/HIPAA/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "04-regulatory-compliance/HIPAA/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "PCI DSS v4.0.1",
+    "directory": "04-regulatory-compliance/PCI_DSS_v4.0.1",
+    "inventory": {
+      "English": {
+        "md": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/English_Source_PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ],
+        "docx": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "04-regulatory-compliance/PCI_DSS_v4.0.1/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "Incident Response, Business Continuity, and Disaster Recovery",
+    "directory": "05-operational-resilience/Incident_Response_BCDR",
+    "inventory": {
+      "English": {
+        "md": [
+          "05-operational-resilience/Incident_Response_BCDR/English_Source_Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.md"
+        ],
+        "docx": [
+          "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "05-operational-resilience/Incident_Response_BCDR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "05-operational-resilience/Incident_Response_BCDR/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "Cloud Security and Compliance",
+    "directory": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance",
+    "inventory": {
+      "English": {
+        "docx": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.pdf"
+        ],
+        "md": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/English_Source_Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/README.md"
+        ]
+      }
+    },
+    "missing": []
+  },
+  {
+    "manual": "Third-Party Risk and Cyber Supply-Chain Security",
+    "directory": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain",
+    "inventory": {
+      "English": {
+        "md": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/English_Source_Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.md"
+        ],
+        "docx": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx"
+        ],
+        "pdf": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.pdf"
+        ]
+      },
+      "Spanish (Latin America)": {
+        "docx": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.docx"
+        ],
+        "md": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.md"
+        ],
+        "pdf": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.pdf"
+        ]
+      },
+      "Brazilian Portuguese": {
+        "docx": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.docx"
+        ],
+        "md": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md"
+        ],
+        "pdf": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.pdf"
+        ]
+      },
+      "Unclassified": {
+        "md": [
+          "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/README.md"
+        ]
+      }
+    },
+    "missing": []
+  }
+]

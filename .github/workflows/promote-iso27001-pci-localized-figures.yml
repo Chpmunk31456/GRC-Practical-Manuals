@@ -55,9 +55,7 @@ jobs:
           if len(records) != 18 or len(restored) != 18:
               raise SystemExit(f'Expected 18 restored records, found {len(restored)} of {len(records)}')
 
-          markdown_files = {
-              root / r['markdown_file'] for r in restored
-          }
+          markdown_files = {root / r['markdown_file'] for r in restored}
           if len(markdown_files) != 2:
               raise SystemExit(f'Expected exactly two affected Markdown files, found {len(markdown_files)}')
 
@@ -92,18 +90,39 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sources=(
-            '02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
-            '04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+          mapfile -t sources < <(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json').read_text(encoding='utf-8'))
+          families = {'ISO/IEC 27001/27002', 'PCI DSS v4.0.1'}
+          paths = sorted({
+              record['markdown_file']
+              for record in data['references']
+              if record.get('manual_family') in families
+              and record.get('primary_classification') == 'restored_localized'
+          })
+          if len(paths) != 2:
+              raise SystemExit(f'Expected two authoritative Markdown paths, found {len(paths)}')
+          print('\n'.join(paths))
+          PY
           )
+
           for source in "${sources[@]}"; do
+            echo "Rebuilding: $source"
+            test -s "$source"
             stem="${source%.md}"
-            pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
-            libreoffice --headless --convert-to pdf --outdir="$(dirname "$source")" "${stem}.docx" >/dev/null
+            directory="$(dirname "$source")"
+            pandoc "$source" --from=gfm --toc --resource-path="$directory" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir="$directory" "${stem}.docx"
             test -s "${stem}.docx"
             test -s "${stem}.pdf"
             unzip -t "${stem}.docx" >/dev/null
-            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+            text_file="$(mktemp)"
+            pdftotext "${stem}.pdf" "$text_file"
+            grep -q '[[:alnum:]]' "$text_file"
+            rm -f "$text_file"
+            echo "Validated: ${stem}.docx and ${stem}.pdf"
           done
 
       - name: Verify embedded DOCX media

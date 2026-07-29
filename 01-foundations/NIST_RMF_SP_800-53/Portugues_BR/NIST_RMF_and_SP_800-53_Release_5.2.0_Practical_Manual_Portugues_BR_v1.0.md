@@ -299,7 +299,7 @@ Modelos, Glossário, Índice e Referências
 
 *RMF gerencia risco de segurança e privacidade através de decisões de ciclo de vida responsável.
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="Prepare suporta cada passo, e Monitor alimenta novas informações de volta às decisões de risco." />
+![Prepare suporta cada passo, e Monitor alimenta novas informações de volta às decisões de risco.](media/image1.png)
 
 Figura 1. Sete passos RMF
 
@@ -338,7 +338,7 @@ O que é que se passa?
 
 *RMF papéis implementação separada, avaliação, propriedade e aceitação de risco.*
 
-<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Enterprise direction, mission/business needs, and system controls must stay connected." />
+![Enterprise direction, mission/business needs, and system controls must stay connected.](media/image2.png)
 
 Figura 2. Três níveis de gestão de risco
 
@@ -426,7 +426,7 @@ Princípio da eficiência:** Controles comuns reutilizáveis, parâmetros aprova
 
 *Categorização descreve o impacto potencial da perda de confidencialidade, integridade ou disponibilidade.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.39605in" alt="Categorização começa com impacto da informação e produz um nível de impacto do sistema aprovado." />
+![Categorização começa com impacto da informação e produz um nível de impacto do sistema aprovado.](media/image3.png)
 
 Figura 3. Fluxo de trabalho de categorização
 
@@ -515,7 +515,7 @@ A avaliação não é uma análise: ** Resultados automatizados podem testar con
 
 *Autorização é uma decisão de risco senior explícita baseada no pacote e contexto organizacional.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.39605in" alt="O pacote suporta uma decisão responsável com escopo definido, condições, duração e monitoramento." />
+![O pacote suporta uma decisão responsável com escopo definido, condições, duração e monitoramento.](media/image4.png)
 
 Figura 7. Decisão de autorização de risco
 
@@ -569,7 +569,7 @@ Não é uma certificação:** Autorização não significa que o sistema é livr
 
 *Baselines são pontos de partida; a alfaiataria os torna apropriados e defensáveis.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.39605in" alt="Tailoring altera uma linha de base inicial em um conjunto de controle documentado baseado em risco." />
+![Tailoring altera uma linha de base inicial em um conjunto de controle documentado baseado em risco.](media/image5.png)
 
 Figura 4. Personalização de controle
 
@@ -624,7 +624,7 @@ Sistema herdado depende de um provedor de controle autorizado .
 
 * Uma instrução de implementação deve deixar que outra pessoa entenda e teste o controle real.*
 
-<img src="media/image6.png" style="largura:6.15in;altura:3.39605in" alt="Identificadores de controle sozinhos são insuficientes; leitura de requisitos, parâmetros, discussão e melhorias juntos." />
+![Identificadores de controle sozinhos são insuficientes; leitura de requisitos, parâmetros, discussão e melhorias juntos.](media/image6.png)
 
 Figura 5. Anatomia de controle
 
@@ -654,7 +654,7 @@ Os backups são realizados. As operações criam backups diários criptografados
 
 * Os procedimentos SP 800-53A são personalizados em um plano de avaliação aprovado.*
 
-<img src="media/image7.png" style="largura:6.15in;altura:3.39605in" alt="Métodos, objetos, profundidade e cobertura devem se adequar ao objetivo e risco." />
+![Métodos, objetos, profundidade e cobertura devem se adequar ao objetivo e risco.](media/image7.png)
 
 Figura 6. Estrutura do procedimento de avaliação
 
@@ -747,7 +747,7 @@ Os controlos funcionam?</td>
 
 *Uma estratégia de monitoramento define quais evidências são coletadas, quantas vezes, e que decisão segue.*
 
-<img src="media/image8.png" style="largura:6.15in;altura:3.39605in" alt="Monitoramento fecha a alça da mudança e evidências para decisões de risco corrigidas." />
+![Monitoramento fecha a alça da mudança e evidências para decisões de risco corrigidas.](media/image8.png)
 
 Figura 8. Monitoramento contínuo e resposta
 
@@ -766,7 +766,7 @@ Limiar – Condição que requer revisão, escalada, correção, reavaliação o
 
 * OSCAL suporta informações de controle, implementação, avaliação e remediação legíveis por máquina.
 
-<img src="media/image9.png" style="largura:6.15in;altura:3.39605in" alt="Modelos OSCAL conectam o que é necessário, como é implementado, como é avaliado e o que permanece aberto." />
+![Modelos OSCAL conectam o que é necessário, como é implementado, como é avaliado e o que permanece aberto.](media/image9.png)
 
 Figura 9. Fluxo do modelo OSCAL
 
@@ -1217,7 +1217,7 @@ O impacto reflete todos os tipos de informação, dependência, privacidade, seg
 
 *Junior RMF analistas criar valor através de limites precisos, mapeamentos, declarações, evidências, descobertas e rastreamento.*
 
-<img src="media/image10.png" style="width:6.15in;height:3.39605in" alt="Trace cada conclusão da exigência à implementação, evidência, resultado, risco e ação." />
+![Trace cada conclusão da exigência à implementação, evidência, resultado, risco e ação.](media/image10.png)
 
 Figura 10. Caminho de analista RMF júnior
 

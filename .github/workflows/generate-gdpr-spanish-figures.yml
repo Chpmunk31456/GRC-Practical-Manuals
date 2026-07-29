@@ -6,6 +6,7 @@ on:
       - restore/gdpr-spanish-figures-1-4
     paths:
       - scripts/generate_gdpr_spanish_figures.py
+      - scripts/repair_gdpr_spanish_image_refs.py
       - .github/workflows/generate-gdpr-spanish-figures.yml
   workflow_dispatch:
 
@@ -32,7 +33,10 @@ jobs:
       - name: Generate figures
         run: python scripts/generate_gdpr_spanish_figures.py
 
-      - name: Validate PNG files
+      - name: Repair Markdown references
+        run: python scripts/repair_gdpr_spanish_image_refs.py
+
+      - name: Validate PNG files and Markdown references
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -54,20 +58,30 @@ jobs:
               with Image.open(path) as image:
                   if image.format != 'PNG' or image.size != size:
                       raise SystemExit(f'Invalid {path}: format={image.format}, size={image.size}, expected={size}')
-          print('Validated four Spanish GDPR PNG figures.')
+
+          source = Path('04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md').read_text(encoding='utf-8')
+          for index in range(1, 5):
+              token = f'](media/image{index}.png)'
+              if source.count(token) != 1:
+                  raise SystemExit(f'Expected exactly one valid reference for image{index}.png')
+          for malformed in ('יimg src=', '■img src='):
+              if malformed in source:
+                  raise SystemExit(f'Malformed image remnant remains: {malformed}')
+          print('Validated four Spanish GDPR PNG figures and Markdown references.')
           PY
 
-      - name: Commit generated figures
+      - name: Commit generated figures and repaired source
         run: |
           git add 04-regulatory-compliance/GDPR/Espanol/media/image1.png \
             04-regulatory-compliance/GDPR/Espanol/media/image2.png \
             04-regulatory-compliance/GDPR/Espanol/media/image3.png \
-            04-regulatory-compliance/GDPR/Espanol/media/image4.png
+            04-regulatory-compliance/GDPR/Espanol/media/image4.png \
+            04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md
           if git diff --cached --quiet; then
-            echo 'Generated figures are already current.'
+            echo 'Generated figures and references are already current.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Generate Spanish GDPR figures 1-4'
+          git commit -m 'Restore Spanish GDPR figures 1-4 and references'
           git push origin HEAD:restore/gdpr-spanish-figures-1-4

@@ -122,10 +122,27 @@ jobs:
           git add .
           if git diff --cached --quiet; then
             echo 'No generated changes to commit.'
-          else
-            git commit -m 'Generate and verify multilingual GRC draft packages'
-            git push origin HEAD:production/multilingual-grc-editions
+            exit 0
           fi
+
+          git commit -m 'Generate and verify multilingual GRC draft packages'
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:production/multilingual-grc-editions; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Push failed after three attempts.' >&2
+              exit 1
+            fi
+
+            echo "Production advanced during the build; rebasing generated commit before retry ${attempt}."
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            sleep $((attempt * 5))
+          done
 
       - name: Upload production reports
         if: always()

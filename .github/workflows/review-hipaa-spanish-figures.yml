@@ -1,0 +1,71 @@
+name: Review Spanish HIPAA figures
+
+on:
+  push:
+    branches:
+      - restore/hipaa-spanish-figures-1-7
+    paths:
+      - scripts/generate_hipaa_spanish_review_figures.py
+      - .github/workflows/review-hipaa-spanish-figures.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate-review-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out review branch
+        uses: actions/checkout@v4
+        with:
+          ref: restore/hipaa-spanish-figures-1-7
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate review candidates
+        run: python scripts/generate_hipaa_spanish_review_figures.py
+
+      - name: Validate review candidates
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('review/hipaa-spanish-figures')
+          expected = {
+              'image1.png': (1828, 886),
+              'image2.png': (1666, 886),
+              'image3.png': (1635, 886),
+              'image4.png': (1628, 915),
+              'image5.png': (1628, 945),
+              'image6.png': (1646, 886),
+              'image7.png': (1628, 915),
+          }
+          for name, size in expected.items():
+              path = root / name
+              if not path.is_file():
+                  raise SystemExit(f'Missing review candidate: {path}')
+              with Image.open(path) as image:
+                  image.verify()
+              with Image.open(path) as image:
+                  if image.format != 'PNG' or image.size != size:
+                      raise SystemExit(
+                          f'Invalid {path}: format={image.format}, size={image.size}, expected={size}'
+                      )
+          print('Validated seven review-only Spanish HIPAA PNG candidates.')
+          PY
+
+      - name: Upload review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hipaa-spanish-review-candidates
+          path: review/hipaa-spanish-figures/*.png
+          if-no-files-found: error
+          retention-days: 14

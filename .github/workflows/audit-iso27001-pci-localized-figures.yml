@@ -1,0 +1,73 @@
+name: Audit ISO 27001 and PCI localized figures
+
+on:
+  push:
+    branches:
+      - audit/iso27001-pci-dss-localized-figures
+    paths:
+      - scripts/audit_iso27001_pci_localized_figures.py
+      - .github/workflows/audit-iso27001-pci-localized-figures.yml
+      - qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
+      - 02-management-systems/ISO_IEC_27001_27002/Portugues_BR/**
+      - 04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out audit branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/iso27001-pci-dss-localized-figures
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run read-only figure audit
+        run: python scripts/audit_iso27001_pci_localized_figures.py
+
+      - name: Verify report assertions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          report = Path('qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md')
+          text = report.read_text(encoding='utf-8')
+          required = [
+              'Total unresolved reference records: **18**',
+              'ISO/IEC 27001/27002 records: **9**',
+              'PCI DSS v4.0.1 records: **9**',
+              'Unique authoritative English source assets: **18**',
+              'Existing localized destination files: **0**',
+          ]
+          missing = [item for item in required if item not in text]
+          if missing:
+              raise SystemExit(f'Missing audit assertions: {missing}')
+          print('ISO/PCI localized figure audit assertions passed.')
+          PY
+
+      - name: Commit audit report
+        run: |
+          if git diff --quiet -- qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md; then
+            echo 'Audit report unchanged.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md
+          git commit -m 'Record ISO and PCI localized figure audit'
+          git push origin HEAD:audit/iso27001-pci-dss-localized-figures
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: iso27001-pci-localized-figure-audit
+          path: qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md
+          if-no-files-found: error
+          retention-days: 30

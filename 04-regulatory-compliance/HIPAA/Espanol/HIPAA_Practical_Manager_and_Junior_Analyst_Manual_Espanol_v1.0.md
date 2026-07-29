@@ -337,7 +337,7 @@ La privacidad y los equipos legales deben verificar la orientación actual del H
 
 *Lo que HIPAA cubre, lo que no cubre, y cómo sus reglas principales funcionan juntas.*
 
-■img src="media/image1.png" estilo="width:6.15in;height:2.9808in" alt="Privacy, Security, Breach Notification, and Enforcement are connected." /
+![Privacidad, Seguridad, Notificación de Violaciones y Cumplimiento están conectados.](media/image1.png){width=6.15in height=2.9808in}
 
 Figura 1. Las principales áreas de cumplimiento HIPAA
 
@@ -364,7 +364,7 @@ HIPAA se aplica a entidades cubiertas, socios comerciales y ciertos arreglos con
 
 *Cómo identificar entidades reguladas, información protegida, límites y responsabilidades*.
 
-■img src="media/image2.png" estilo="width:6.15in;height:3.27065in" alt="PHI es creado, utilizado, compartido, almacenado y destruido a través de su ciclo de vida." /
+![La PHI se crea, utiliza, comparte, almacena y destruye durante su ciclo de vida.](media/image2.png){width=6.15in height=3.27065in}
 
 Figura 2. Ciclo de vida de la PHI
 
@@ -478,7 +478,7 @@ El derecho de acceso de un individuo bajo 45 CFR 164.524 tiene su propio alcance
 
 *Requisitos generales, flexibilidad, especificaciones requeridas y accesibles y pruebas*.
 
-لimg src="media/image3.png" style="width:6.15in;height:3.33266in" alt="Las salvaguardias administrativas, físicas y técnicas dependen del análisis de riesgos." /
+![Las salvaguardias administrativas, físicas y técnicas dependen del análisis de riesgos.](media/image3.png){width=6.15in height=3.33266in}
 
 Gráfico 3 HIPAA Garantías de seguridad
 
@@ -589,7 +589,7 @@ TEN 164.316 TENRI Políticas, procedimientos y documentación TEN Aplicar polít
 
 *Cómo evaluar los incidentes de PHI no garantizados y cumplir con las obligaciones de notificación*.
 
-■img src="media/image4.png" estilo="Ancho:6.15in; Altura:3.45654in" alt="Descubrimiento, contención, evaluación, notificación y mejora de un proceso." /
+![El descubrimiento, la contención, la evaluación, la notificación y la mejora forman un solo proceso.](media/image4.png){width=6.15in height=3.45654in}
 
 Figura 4. Flujo de trabajo de ruptura HIPAA
 
@@ -782,7 +782,7 @@ tención Parte 160 Subpartes D–E | Penal civil sanciones y procedimientos
 
 Una prueba de verificación debe conectar un requisito a operaciones reales y pruebas fiables. No debe comenzar con una captura de pantalla o un informe de herramienta. Comience con el riesgo, entidad regulada, límite ePHI, requisito y control que la administración dice que está operando.
 
-Altura:3.56987in" alt="Empieza con el requisito y el alcance, prueba el control, las excepciones correctas y la prueba antes de concluir." / Propiedad
+![Comience con el requisito y el alcance, pruebe el control, corrija las excepciones y vuelva a probar antes de concluir.](media/image5.png){width=6.15in height=3.56987in}
 
 Gráfico 6 Ciclo de verificación del cumplimiento
 
@@ -891,7 +891,7 @@ TEN VENTOS ANTERIENTE ¿Son controladas BAAs, diligencia debida, incidentes y sa
 
 *Un camino seguro y honesto a la privacidad, seguridad y cumplimiento.*
 
-■img src="media/image6.png" style="width:6.15in;height:3.31039in" alt="Aprendizaje, mapeo, pruebas, documentación y aplicación de empleo forman una trayectoria profesional". /
+![Aprender, mapear, probar, documentar y aplicar el trabajo forman una trayectoria profesional.](media/image6.png){width=6.15in height=3.31039in}
 
 Figura 5. Vía analista Junior HIPAA
 
@@ -1025,7 +1025,7 @@ TEN Open Policy Agent TEN 164.308(a)(1), 164.312(a) y (c) | Test policy-as-code 
 
 - Limitaciones conocidas y áreas no comprobadas
 
-"Un informe no es prueba, autorización, validación, remediación y retesting crear la cadena de evidencia" (No es una prueba única).
+![Un informe aislado no es prueba; la autorización, la validación, la remediación y una nueva prueba crean la cadena de evidencia.](media/image7.png){width=6.15in height=3.45654in}
 
 Gráfico 7 De la producción de herramientas a la evidencia de cumplimiento
 

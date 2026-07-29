@@ -272,7 +272,7 @@ tención Servicio prestado | Controles, pruebas, incidentes, cambios y soporte d
 
 *Un método repetible para decidir si se aplican salvaguardias*.
 
-<img src="media/image3.png" style="width:6.15in;height:2.87986in" alt="La especificación oficial pasa de los datos definidos a las operaciones, medidas, métricas y revisión de procedimiento." />
+![La especificación oficial pasa de los datos definidos a las operaciones, medidas, métricas y revisión de procedimiento.](media/image3.png)
 
 Gráfico 3 CIS Estructura de medición de salvaguardias
 

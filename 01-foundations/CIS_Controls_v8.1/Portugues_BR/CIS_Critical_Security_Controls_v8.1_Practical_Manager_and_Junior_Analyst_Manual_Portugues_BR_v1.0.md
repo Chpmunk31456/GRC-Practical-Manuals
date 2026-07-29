@@ -190,7 +190,7 @@ Sumário
 
 * A versão atual, estrutura, propósito e limitações.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.94164in" alt="Os controles organizam 153 Salvaguardas em um programa defensivo prático." />
+![Os controles organizam 153 Salvaguardas em um programa defensivo prático.](media/image1.png)
 
 Figura 1. Os 18 controles de segurança críticos CIS
 
@@ -219,7 +219,7 @@ Grupo de Implementação □ Priorização recomendada baseada no perfil de risc
 
 * Como IG1, IG2 e IG3 ajudam as organizações a escolher um ponto de partida realista.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.39605in" alt="Cada grupo constrói sobre o grupo anterior; IG3 contém todas as salvaguardas." />
+![Cada grupo constrói sobre o grupo anterior; IG3 contém todas as salvaguardas.](media/image2.png)
 
 Figura 2. Progressão do Grupo de Implementação
 
@@ -272,7 +272,7 @@ Prestador de serviços □ Controles, evidências, incidentes, mudanças e supor
 
 * Um método repetitivo para decidir se as salvaguardas são implementadas.*
 
-<img src="media/image3.png" style="largura:6,15in;altura:2,87986in" alt= "A especificação oficial passa de entradas de dados definidas para operações, medidas, métricas e revisão de procedimentos." />
+![CIS Controls figure 3](media/image3.png)
 
 Figura 3. CIS Estrutura de medição de salvaguarda
 
@@ -332,7 +332,7 @@ Princípio de implementação:** Um grupo menor de Salvaguardas que é totalment
 
 * Todas as 5 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="Discovery, reconciliation, response, and review keep foundal populations current." />
+![Discovery, reconciliation, response, and review keep foundal populations current.](media/image4.png)
 
 Figura 4. Ciclo de inventário de ativos e software
 
@@ -372,7 +372,7 @@ Use o guia oficial de Controles CIS v8.1 e Especificações de Avaliação de Co
 
 * Todas as 14 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image5.png" style="largura:6.15in;altura:3.39605in" alt="Descobrir, classificar, proteger, reter e eliminar dados de acordo com a sensibilidade e necessidade." />
+![Descobrir, classificar, proteger, reter e eliminar dados de acordo com a sensibilidade e necessidade.](media/image5.png)
 
 Figura 5. Ciclo de vida de proteção de dados
 
@@ -444,7 +444,7 @@ Use o guia oficial de Controles CIS v8.1 e Especificações de Avaliação de Co
 
 * Todas as 8 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image6.png" style="width:6.15in;height:3.03192in" alt="Contas e privilégios exigem criação aprovada, autenticação forte, revisão e revogação oportuna." />
+![Contas e privilégios exigem criação aprovada, autenticação forte, revisão e revogação oportuna.](media/image6.png)
 
 Figura 6. Ciclo de vida de identidade e acesso
 
@@ -468,7 +468,7 @@ Use o guia oficial de Controles CIS v8.1 e Especificações de Avaliação de Co
 
 * Todas as 7 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image7.png" style="width:6.15in;height:3.1454in" alt="Complete coverage and verific remediation matter more than produting scan reports." />
+![Complete coverage and verific remediation matter more than produting scan reports.](media/image7.png)
 
 Figura 7. Gestão contínua da vulnerabilidade
 
@@ -590,7 +590,7 @@ Use o guia oficial de Controles CIS v8.1 e Especificações de Avaliação de Co
 
 * Todas as 11 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image8.png" estilo="largura:6.15in;altura:3.20094in" alt="Contexto centralizado, detecção sintonizada, investigação humana e resposta criam defesa útil." />
+![Contexto centralizado, detecção sintonizada, investigação humana e resposta criam defesa útil.](media/image8.png)
 
 Figura 8. Fluxo de trabalho de monitorização à resposta
 
@@ -683,7 +683,7 @@ Use o guia oficial de Controles CIS v8.1 e Especificações de Avaliação de Co
 
 * Todas as 9 Salvaguardas, significado simples, foco de verificação e evidência de exemplo.*
 
-<img src="media/image9.png" style="width:6.15in;height:3.12625in" alt="Preparados papéis, relatórios, comunicação, exercícios e comentários reduzem o impacto incidente." />
+![Preparados papéis, relatórios, comunicação, exercícios e comentários reduzem o impacto incidente.](media/image9.png)
 
 Figura 9. Disponibilidade para resposta ao incidente
 
@@ -910,7 +910,7 @@ Assegura-te que os testes, as limitações, os resultados e os retestes são sup
 
 *Uma rota prática para controles, vulnerabilidade, garantia, GRC, e operações de segurança funcionam.*
 
-<img src="media/image10.png" style="width:6.15in;height:2.99481in" alt="Learn the framework, map Safeguards, measure evidence, report gaps, and build an honest portfolio." />
+![Learn the framework, map Safeguards, measure evidence, report gaps, and build an honest portfolio.](media/image10.png)
 
 Figura 10. CIS Júnior Controla o caminho do analista
 

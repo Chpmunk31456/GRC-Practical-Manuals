@@ -28,17 +28,30 @@ def convert_img_tags(path: Path, expected: set[int]) -> None:
     text = path.read_text(encoding="utf-8")
     seen: set[int] = set()
 
-    pattern = re.compile(
-        r'<img\s+src="media/image(?P<num>\d+)\.png"[^>]*?alt="(?P<alt>[^"]*)"\s*/>',
-        re.IGNORECASE,
-    )
+    # Match the complete tag first, then inspect attributes independently.
+    # Localized source files contain inconsistent attribute names and ordering.
+    pattern = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
+    src_pattern = re.compile(r"\bsrc=[\"']media/image(?P<num>\d+)\.png[\"']", re.IGNORECASE)
+    alt_pattern = re.compile(r"\balt=[\"'](?P<alt>.*?)[\"']", re.IGNORECASE)
 
     def replace(match: re.Match[str]) -> str:
-        number = int(match.group("num"))
+        tag = match.group(0)
+        src_match = src_pattern.search(tag)
+        if not src_match:
+            return tag
+
+        number = int(src_match.group("num"))
         if number not in expected:
-            return match.group(0)
+            return tag
+
+        if number in seen:
+            raise SystemExit(f"{path}: duplicate HTML image tag for image{number}.png")
         seen.add(number)
-        alt = match.group("alt").strip() or f"CIS Controls figure {number}"
+
+        alt_match = alt_pattern.search(tag)
+        alt = alt_match.group("alt").strip() if alt_match else ""
+        if not alt:
+            alt = f"CIS Controls figure {number}"
         return f"![{alt}](media/image{number}.png)"
 
     updated = pattern.sub(replace, text)
@@ -88,7 +101,10 @@ def main() -> None:
     for record in inventory["references"]:
         if record.get("manual_family") != "CIS Controls v8.1":
             continue
-        key = (record.get("language"), int(record.get("figure_number")))
+        figure_number = record.get("figure_number")
+        if figure_number is None:
+            continue
+        key = (record.get("language"), int(figure_number))
         if key not in promoted:
             continue
         info = promoted[key]

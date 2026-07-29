@@ -287,7 +287,7 @@ Modelos, Glossário, Índice e Referências
 
 * Resiliência conecta resposta cibernética, operações críticas, restauração de tecnologia e liderança.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="Governa, Identificar e Proteger a preparação de suporte; Detectar, Responder e Recuperar incidentes lidar; lições melhorar cada função." />
+![Governa, Identificar e Proteger a preparação de suporte; Detectar, Responder e Recuperar incidentes lidar; lições melhorar cada função.](media/image1.png)
 
 Figura 1. Ciclo integrado de resiliência cibernética
 
@@ -333,7 +333,7 @@ Segurança, risco material, estratégia, recursos, postura externa
 
 *Uma análise de impacto empresarial torna vaga importância em requisitos de recuperação baseados no tempo.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.39605in" alt="Analisar o impacto antes de escolher soluções de tecnologia ou continuidade." />
+![Analisar o impacto antes de escolher soluções de tecnologia ou continuidade.](media/image2.png)
 
 Figura 2. Cadeia de raciocínio BIA
 
@@ -429,7 +429,7 @@ Melhoramento □ Métrica, revisão, proprietário, reteste
 
 *Deteção combina tecnologia, relatórios humanos, aviso externo e contexto.*
 
-<img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="Um sinal torna-se um incidente apenas após validação e classificação sob critérios aprovados." />
+![Um sinal torna-se um incidente apenas após validação e classificação sob critérios aprovados.](media/image3.png)
 
 Figura 3. Fluxo de trabalho de detecção em caso
 
@@ -514,7 +514,7 @@ O que se pode confiar? • Controlos de integridade, linhas de base conhecidas, 
 
 *Contenção limita danos ao preservar a segurança, operações, provas e opções de recuperação.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.39605in" alt="Escolha ações através de objetivos explícitos, impactos, autoridade e verificação." />
+![Escolha ações através de objetivos explícitos, impactos, autoridade e verificação.](media/image4.png)
 
 Figura 4. Decisão de contenção
 
@@ -563,7 +563,7 @@ Figura 4. Decisão de contenção
 
 * Recuperar restaura o serviço crítico através de etapas controladas, verificadas e monitoradas.*
 
-<img src="media/image5.png" style="largura:6.15in;altura:3.39605in" alt="Validação de segurança e aceitação de negócios pertencem dentro da recuperação." />
+![Validação de segurança e aceitação de negócios pertencem dentro da recuperação.](media/image5.png)
 
 Figura 5. Retorno confiável ao serviço
 
@@ -654,7 +654,7 @@ Nota legal:** Os deveres de notificação e preservação são específicos de f
 
 * A prontidão Forense torna a evidência confiável, útil, proporcionada e disponível quando necessário.*
 
-<img src="media/image6.png" style="largura:6.15in;altura:3.39605in" alt="Identidade do documento, preservação, integridade, custódia, análise e limites." />
+![Identidade do documento, preservação, integridade, custódia, análise e limites.](media/image6.png)
 
 Figura 6. Integridade e custódia das provas
 
@@ -779,7 +779,7 @@ Segurança e autoridade: Não acessar contas pessoais, interceptar comunicaçõe
 
 *A BCMS faz da continuidade uma capacidade de gestão governada, medida e melhorada.*
 
-<img src="media/image7.png" style="largura:6.15in;altura:3.39605in" alt="Contexto, liderança, planejamento, suporte, operação, avaliação e trabalho de melhoria como um ciclo." />
+![Contexto, liderança, planejamento, suporte, operação, avaliação e trabalho de melhoria como um ciclo.](media/image7.png)
 
 Figura 7. Sistema de gestão da continuidade empresarial
 
@@ -860,7 +860,7 @@ Os fornecedores podem fornecer alternativa dentro da tolerância? □
 
 * Os backups requerem escopo protegido, separação, monitoramento, testes de restauração e administração confiável.*
 
-<img src="media/image8.png" style="width:6.15in;height:3.39605in" alt="Copy success is not recovery proof; test complete services and data integrity." />
+![Copy success is not recovery proof; test complete services and data integrity.](media/image8.png)
 
 Figura 8. Garantia de backup para recuperação
 
@@ -919,7 +919,7 @@ Comunicação Quem precisa que a mensagem verificada e quando?
 
 * Os exercícios devem avaliar a capacidade, não recompensar um desempenho ensaiado.*
 
-<img src="media/image9.png" style="largura:6.15in;altura:3.39605in" alt="Definir objetivos e capturar evidências observáveis antes de atribuir a ação corretiva." />
+![Definir objetivos e capturar evidências observáveis antes de atribuir a ação corretiva.](media/image9.png)
 
 Figura 9. Ciclo de exercício e melhoria
 
@@ -1192,7 +1192,7 @@ Quais são as próximas duas decisões, quem as possui, e quando são necessári
 
 *Analistas juniores ganham confiança através de registros de casos disciplinados, manipulação de evidências, curiosidade técnica e escrita clara.*
 
-<img src="media/image10.png" style="largura:6.15in;altura:3.39605in" alt="Construir práticas seguras desde quadros até evidências, casos, documentos de trabalho e histórias de entrevista." />
+![Construir práticas seguras desde quadros até evidências, casos, documentos de trabalho e histórias de entrevista.](media/image10.png)
 
 Figura 10. Caminho do analista de resiliência júnior
 

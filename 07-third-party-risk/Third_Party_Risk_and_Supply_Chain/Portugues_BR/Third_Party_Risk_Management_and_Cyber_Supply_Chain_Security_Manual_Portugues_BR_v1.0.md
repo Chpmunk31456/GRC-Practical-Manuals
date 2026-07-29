@@ -260,7 +260,7 @@ Princípio do core:** Terceirizar a atividade, não prestar contas. O proprietá
 
 * Um processo de ciclo de vida impede que a avaliação se torne um questionário único.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="O mesmo registro deve seguir o fornecedor do pedido de negócios através de saída segura." />
+![O mesmo registro deve acompanhar o fornecedor desde a solicitação de negócio até a saída segura.](media/image1.png)
 
 Figura 1. Ciclo de vida de risco de terceiros
 
@@ -310,7 +310,7 @@ Decisão de gestão:** Definir quem pode aceitar que nível de risco residual. U
 
 *Conheça todos os fornecedores e escalas trabalham para provavelmente prejudicar.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:4.02397in" alt="Use fatores documentados e permita a escalada quando um fator é especialmente grave." />
+![Use fatores documentados e permita escalonamento quando um fator for especialmente grave.](media/image2.png)
 
 Figura 2. Listas de fornecedores de exemplo
 
@@ -363,7 +363,7 @@ Risco inerente versus residual: O risco inerente é a exposição antes de consi
 
 *Due diligence reúne informações pertinentes para que a organização possa fazer uma aquisição informada ou decisão de uso contínuo.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.39605in" alt="Pesquisa e solicitações de evidências devem seguir o papel e risco real do fornecedor." />
+![A pesquisa e as solicitações de evidências devem refletir a função e o risco reais do fornecedor.](media/image3.png)
 
 Figura 3. Fluxo de trabalho de due-diligence
 
@@ -394,7 +394,7 @@ Providência Onde se originou o produto, código, componentes, hardware e dados?
 
 * A evidência é útil apenas quando corresponde ao serviço, período, controle e risco de ser avaliado.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.39605in" alt="Fontes de evidência se complementam; nenhum artefato responde a cada pergunta." />
+![As fontes de evidência se complementam; nenhum artefato responde a todas as perguntas.](media/image4.png)
 
 Figura 4. Escada de confiança das evidências
 
@@ -543,7 +543,7 @@ Fecha apenas quando a evidência prova a correção ou o relacionamento afetado 
 
 * Incidentes de fornecedores exigem fatos compartilhados, papéis, relógios, canais e decisões de recuperação.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.39605in" alt="A linguagem do contrato só ajuda quando contatos e decisões são praticadas." />
+![Cláusulas contratuais só ajudam quando contatos e decisões são praticados.](media/image5.png)
 
 Figura 5. Coordenação incidente do fornecedor
 
@@ -572,7 +572,7 @@ O evento está contido? O que continua ativo? • Guia de decisões de proteçã
 
 *Quarto partido e risco de concentração pode transformar muitos registros de fornecedores separados em uma falha compartilhada.*
 
-<img src="media/image6.png" style="largura:6.15in;altura:4.32536in" alt="Map dependências materiais entre fornecedores, não só dentro de cada questionário." />
+![Mapeie dependências materiais entre fornecedores, não apenas dentro de cada questionário.](media/image6.png)
 
 Figura 6. Concentração oculta da quarta parte
 
@@ -617,7 +617,7 @@ Operações Vulnerabilidade, mudança, monitoramento, incidente, capacidade, dis
 
 * Risco de software inclui práticas de fornecedor e cada componente, passo de construção, canal de atualização e dependência.*
 
-<img src="media/image7.png" style="largura:6.15in;altura:3.39605in" alt="Conecte o SBOM e evidência de segurança à versão exata lançada e operada." />
+![Conecte o SBOM e as evidências de segurança à versão exata lançada e operada.](media/image7.png)
 
 Figura 7. Fluxo de evidência da cadeia de fornecimento de software
 
@@ -647,7 +647,7 @@ Figura 7. Fluxo de evidência da cadeia de fornecimento de software
 
 *Fornecedores de IA adicionam modelos, treinamento e dados rápidos, saídas incertas e cadeias de provedores ocultos.*
 
-<img src="media/image8.png" style="largura:6.15in;altura:3.33565in" alt="Comece com o caso de uso permitido, dados, impacto, cadeia modelo, avaliação e controle humano." />
+![Comece pelo caso de uso permitido, dados, impacto, cadeia do modelo, avaliação e controle humano.](media/image8.png)
 
 Figura 8. Fluxo de trabalho de risco do fornecedor de IA
 
@@ -768,7 +768,7 @@ NIST CSF 2.0 □ GV.SC plus organization-wide Govern, Identifique, Proteja, Dete
 
 *Testing pergunta se os controles são corretamente projetados, implementados e operando para o escopo completo.*
 
-<img src="media/image9.png" style="largura:6.15in;altura:3.39605in" alt="Toda conclusão deve ser rastreável a partir de critérios exatos através de reteste." />
+![Toda conclusão deve ser rastreável desde os critérios exatos até o reteste.](media/image9.png)
 
 Figura 9. Cadeia de testes de evidência
 
@@ -987,7 +987,7 @@ Perguntas que importam: O que pode falhar? Quem é afectado? Que evidência apó
 
 * Os analistas juniores criam valor produzindo inventários precisos, revisões de evidências, descobertas e acompanhamento.*
 
-<img src="media/image10.png" style="largura:6.15in;altura:3.39605in" alt="Trabalho cuidadoso e limitações honestas constroem um portfólio e confiança profissional." />
+![Trabalho cuidadoso e limitações honestas constroem um portfólio e confiança profissional.](media/image10.png)
 
 Figura 10. Caminho de analista de TPRM júnior
 

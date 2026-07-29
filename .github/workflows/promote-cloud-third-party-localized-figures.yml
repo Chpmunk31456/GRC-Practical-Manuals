@@ -1,0 +1,239 @@
+name: Validate Batch 5 promotion and rebuild affected packages
+
+on:
+  push:
+    branches:
+      - audit/cloud-third-party-localized-figures
+    paths:
+      - scripts/promote_cloud_third_party_localized_figures.py
+      - .github/workflows/promote-cloud-third-party-localized-figures.yml
+      - qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
+      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/*.md
+      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/**
+      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/*.md
+      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: batch-5-cloud-third-party-promotion
+  cancel-in-progress: false
+
+jobs:
+  validate-rebuild-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out Batch 5 branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install validators and document tools
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check Pillow
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Verify Issue 28 owner approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APPROVAL_COMMENT_ID: '5118508431'
+        run: |
+          set -euo pipefail
+          approval_json="$RUNNER_TEMP/batch-5-approval.json"
+          gh api \
+            "repos/${GITHUB_REPOSITORY}/issues/comments/${APPROVAL_COMMENT_ID}" \
+            > "$approval_json"
+          python - "$approval_json" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          comment = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+          body = comment.get('body', '')
+          lines = [line.strip() for line in body.splitlines() if line.strip()]
+          required = [
+              'Owner visual approval: APPROVED',
+              'Batch 5',
+              '20',
+              'Cloud Security and Compliance',
+              'Third-Party Risk and Supply Chain Security',
+              'bfffee4300c1f37903e1d5c297dbaee83f8bede9',
+          ]
+          if not (
+              comment.get('id') == 5118508431
+              and comment.get('user', {}).get('login') == 'Chpmunk31456'
+              and comment.get('author_association') == 'OWNER'
+              and comment.get('issue_url', '').endswith('/issues/28')
+              and lines
+              and lines[0] == required[0]
+              and all(marker in body for marker in required)
+          ):
+              raise SystemExit('Issue #28 owner approval evidence is invalid')
+          print('Issue #28 owner approval evidence verified.')
+          PY
+
+      - name: Validate promoted images, Markdown, and provenance
+        env:
+          APPROVAL_EVIDENCE: 'Issue #28 owner approval comment 5118508431'
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from collections import Counter
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('.')
+          inventory = json.loads(
+              (root / 'qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json')
+              .read_text(encoding='utf-8')
+          )
+          ids = {f'LEGACY-IMG-{number:03d}' for number in range(63, 83)}
+          records = [
+              record for record in inventory['references']
+              if record.get('id') in ids
+          ]
+          expected_counts = Counter({
+              'Cloud Security and Compliance': 10,
+              'Third-Party Risk and Supply Chain Security': 10,
+          })
+          if len(records) != 20 or Counter(
+              record['manual_family'] for record in records
+          ) != expected_counts:
+              raise SystemExit('Expected exactly 20 promoted Batch 5 records split 10/10')
+          for record in records:
+              if (
+                  record.get('primary_classification') != 'restored_localized'
+                  or record.get('language') != 'Brazilian Portuguese'
+                  or record.get('owner_approval_evidence') != os.environ['APPROVAL_EVIDENCE']
+                  or record.get('restoration_description') !=
+                  'Programmatic localized reconstruction; not an exact visual reproduction.'
+              ):
+                  raise SystemExit(f'Provenance mismatch: {record["id"]}')
+              destination = root / record['restored_destination']
+              if hashlib.sha256(destination.read_bytes()).hexdigest() != (
+                  record['localized_image_sha256']
+              ):
+                  raise SystemExit(f'Hash mismatch: {destination}')
+              with Image.open(destination) as image:
+                  image.verify()
+              with Image.open(destination) as image:
+                  dimensions = record['localized_image_dimensions']
+                  if image.format != 'PNG' or image.size != (
+                      dimensions['width'], dimensions['height']
+                  ):
+                      raise SystemExit(f'PNG validation failed: {destination}')
+              markdown = root / record['markdown_file']
+              text = markdown.read_text(encoding='utf-8')
+              if text.count(f']({record["exact_image_path"]})') != 1:
+                  raise SystemExit(f'Markdown reference count failed: {record["id"]}')
+              if not (markdown.parent / record['exact_image_path']).is_file():
+                  raise SystemExit(f'Markdown resource path failed: {record["id"]}')
+          print('All 20 promoted Batch 5 figures verified.')
+          PY
+          python scripts/validate_provenance_inventory_summary.py
+
+      - name: Rebuild only affected Brazilian Portuguese packages
+        run: |
+          set -euo pipefail
+          workspace="$(pwd)"
+          sources=(
+            '06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+            '07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md'
+          )
+          for source in "${sources[@]}"; do
+            stem="${source%.md}"
+            directory="$(dirname "$source")"
+            pandoc "$source" --resource-path="$directory" -o "${stem}.docx"
+            libreoffice \
+              --headless \
+              --convert-to pdf \
+              --outdir "$workspace/$directory" \
+              "$workspace/${stem}.docx"
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            text_file="$(mktemp)"
+            pdftotext "${stem}.pdf" "$text_file"
+            grep -q '[[:alnum:]]' "$text_file"
+            rm -f "$text_file"
+            echo "Validated: ${stem}.docx and ${stem}.pdf"
+          done
+
+      - name: Validate all localized packages
+        run: |
+          set -euo pipefail
+          python scripts/validate_docx_embedded_media.py
+          python scripts/inventory_multilingual_packages.py
+          test "$(find . -type f \( -path '*/Espanol/*.docx' -o -path '*/Portugues_BR/*.docx' \) | wc -l)" -eq 22
+          git diff --exit-code -- \
+            MULTILINGUAL_PACKAGE_INVENTORY.md \
+            MULTILINGUAL_PACKAGE_INVENTORY.json
+
+      - name: Enforce exact rebuild scope
+        run: |
+          python - <<'PY'
+          import subprocess
+
+          expected = {
+              '06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx',
+              '06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf',
+              '07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.docx',
+              '07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.pdf',
+          }
+          output = subprocess.check_output(
+              ['git', 'status', '--porcelain', '--untracked-files=all'], text=True
+          )
+          changed = {line[3:].replace('\\', '/') for line in output.splitlines()}
+          if changed != expected:
+              raise SystemExit(
+                  f'Package rebuild scope mismatch: expected {sorted(expected)}, '
+                  f'found {sorted(changed)}'
+              )
+          print('Exact two-pair package rebuild scope verified.')
+          PY
+
+      - name: Commit and safely push rebuilt packages
+        run: |
+          set -euo pipefail
+          branch='audit/cloud-third-party-localized-figures'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/*.docx \
+            06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/*.pdf \
+            07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/*.docx \
+            07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/*.pdf
+          git commit -m 'Rebuild Batch 5 localized packages'
+          pushed=false
+          for attempt in 1 2 3; do
+            git fetch origin "$branch"
+            remote_sha="$(git rev-parse FETCH_HEAD)"
+            if ! git merge-base --is-ancestor "$remote_sha" HEAD; then
+              git rebase "$remote_sha" || {
+                git rebase --abort || true
+                echo 'Concurrent branch update conflicts with package commit.' >&2
+                exit 1
+              }
+            fi
+            if git push origin "HEAD:$branch"; then
+              pushed=true
+              break
+            fi
+          done
+          if [ "$pushed" != true ]; then
+            echo 'Failed to push rebuilt packages after three attempts.' >&2
+            exit 1
+          fi

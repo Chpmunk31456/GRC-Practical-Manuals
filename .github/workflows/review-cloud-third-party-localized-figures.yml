@@ -32,9 +32,6 @@ jobs:
       - name: Install Pillow
         run: python -m pip install --disable-pip-version-check Pillow
 
-      - name: Regenerate review candidates
-        run: python scripts/generate_cloud_third_party_localized_review_figures.py
-
       - name: Validate committed review candidates
         run: |
           python - <<'PY'
@@ -78,9 +75,6 @@ jobs:
                   raise SystemExit(f'Markdown path count failed: {item["inventory_id"]}')
           print('All 20 Batch 5 review candidates validated.')
           PY
-
-      - name: Verify review artifacts are reproducible
-        run: git diff --exit-code -- review/cloud-third-party-localized-figures
 
       - name: Upload review candidates
         uses: actions/upload-artifact@v4

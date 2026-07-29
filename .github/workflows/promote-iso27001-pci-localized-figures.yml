@@ -113,7 +113,7 @@ jobs:
             test -s "$source"
             stem="${source%.md}"
             directory="$(dirname "$source")"
-            pandoc "$source" --from=gfm --toc --resource-path="$directory" -o "${stem}.docx"
+            pandoc "$source" --resource-path="$directory" -o "${stem}.docx"
             libreoffice --headless --convert-to pdf --outdir="$directory" "${stem}.docx"
             test -s "${stem}.docx"
             test -s "${stem}.pdf"

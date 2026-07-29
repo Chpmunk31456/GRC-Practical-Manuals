@@ -8,7 +8,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image1.png",
     "width": 1657,
     "height": 915,
-    "sha256": "7d3c0d68c0a7ecac8a932d09a3b84e8c76b1d8e5b6711686a01e1b02fdc761e3",
+    "sha256": "f6ba9434d5bcb0580ed8f9d64c27740f381973f7e123d6a8711d7465d546f318",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -21,7 +21,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image2.png",
     "width": 1657,
     "height": 915,
-    "sha256": "2ab9f256343587e6c7aa5e51c267961a8dba6d12bac84424318c6ed2a164af96",
+    "sha256": "c97f8c671ab7f279fcb04a656ec5acbb5af6d04b94c329e902914859d4b15d1a",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -34,7 +34,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image3.png",
     "width": 1657,
     "height": 915,
-    "sha256": "df56183dcfcdcfc20539f9cb2188e590ae78c6a296b8442759373e02219c613b",
+    "sha256": "792941f4ad46716f24c4b408fb482499867485ddd55e172ae88f1af01ab9fcf4",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -47,7 +47,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image4.png",
     "width": 1657,
     "height": 915,
-    "sha256": "f5e06b4d93f1ba08e31f98a883bd2426b52a7ca07e8425a118e78e62c90d9e8f",
+    "sha256": "927715baabb64b01edc9b8df46d3943004568b0adb8681ca5c99a264fbb14a94",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -60,7 +60,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image5.png",
     "width": 1657,
     "height": 915,
-    "sha256": "b0b1afdcef343eb234eec9fe5d919901cee4a806907cbb8f56ab594460b5f2b7",
+    "sha256": "94c1d227b07d571f6c8040a020df36cd318ed1ad227542199500fd94157c4c57",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -73,7 +73,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image6.png",
     "width": 1657,
     "height": 915,
-    "sha256": "1e16cf8f1a6d6176e12c56804dfd83b13c4aeb97e30f9d97ed2641e8cc936457",
+    "sha256": "ecb15677d750bb2cdf7a2ff9d6200ce8a49c094293cf17b0f74570ca02045e75",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -86,7 +86,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image7.png",
     "width": 1657,
     "height": 915,
-    "sha256": "5f91e98f1e8682f6b1461555d43af15a8d4ab6c34f15da432d700b27f35113b0",
+    "sha256": "95aca3d8f347aa50d120014e6831e5b684796c96a71c1dd12ad5aa30d71b4fdd",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -99,7 +99,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image8.png",
     "width": 1657,
     "height": 915,
-    "sha256": "72647bcc97754d0638b25716f6b0580cb03dc911a6856085f78f83a66b2984d7",
+    "sha256": "bea1e5089ff1e3a96d651fb8ac54e9fdf786166c046960a80030ca705e4af090",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -112,7 +112,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image9.png",
     "width": 1657,
     "height": 915,
-    "sha256": "b5c50156e6006a4ce94461a176d783c2cd3e5b05ffb7970c40ba520298777695",
+    "sha256": "cf30076aec724765d3fd4144db1590fa3c58e510180fd1b81a410925d1f8f6e9",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -125,7 +125,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-nist-rmf-image10.png",
     "width": 1657,
     "height": 915,
-    "sha256": "d0ddd18ee58ea6cd7ab49e485c95dab8974aca4ff156cf82f70ac0ce7ea6b31f",
+    "sha256": "ba6983dfd3886af0543fcfc1df96a5b882c6a8952b9c76b8c8043070f08746ee",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -138,7 +138,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image1.png",
     "width": 1657,
     "height": 915,
-    "sha256": "089cb9a54f4a9e5bab1790d2d39a37c82fa03683a74a81e3c7dedb2529cfb5a5",
+    "sha256": "cc0bf4e1f39cf952d043ffd931e043d989662566e3844323f32ad71214945f0a",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -151,7 +151,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image2.png",
     "width": 1657,
     "height": 915,
-    "sha256": "482a1b1578bdbad82a9776e9ce8fb0364b9b8699e467e45f1e09991d33c486fb",
+    "sha256": "a0ec8aa0550ffd88b92052390bd21db38582698f7f5935912066b12211bd28f0",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -164,7 +164,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image3.png",
     "width": 1657,
     "height": 915,
-    "sha256": "d29707fe402441128ad3a58ae0b64f98393f96c97782a73b2f415bf290026bf3",
+    "sha256": "1970092c69ca8609a5bcbaa623fa46f5f57622a2fad12f83de000d09ec22a44e",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -177,7 +177,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image4.png",
     "width": 1657,
     "height": 915,
-    "sha256": "4d65e1e145ef55a4a352990b113a61816c2f96f10c7cae595a3b9a9e6da0ce7a",
+    "sha256": "48bafcaecedb07645c46579e052fadcb68edd7f01bc504db1e6f45713d270916",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -190,7 +190,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image5.png",
     "width": 1657,
     "height": 915,
-    "sha256": "4d39903074c35f05b355163ea4de91721a5e93d3084552bd8448ed2cc4cab080",
+    "sha256": "f621ed1395841cac160a8657a895e84efe9f1a52644a201d1284d573d6bf0196",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -203,7 +203,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image6.png",
     "width": 1657,
     "height": 915,
-    "sha256": "a6dfca40036fbe383488cd8d58b76b87517caf6493a0552120683f3eac1c05b9",
+    "sha256": "343b6260f378a64a11b2bc61702e44018aa52c0b6517513be2bcb90e86fd2cde",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -216,7 +216,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image7.png",
     "width": 1657,
     "height": 915,
-    "sha256": "2a0eb41f30ccbf13e68438c81f5898108c8869da88b89b91796028eca76f57a3",
+    "sha256": "ea6570f37e1c03aeb305c3927a71c4d6ba8e640cf61062e92a5c7fc2e6aefc27",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -229,7 +229,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image8.png",
     "width": 1657,
     "height": 915,
-    "sha256": "21c929223c2e4511b0bbc139fa42cd122c1663a98cacefa8fa8517d015c71c8a",
+    "sha256": "5bb1b3df4b69548f6c0d58db877356f6c58afe197ec5825f0bd12ce3905d0a44",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -242,7 +242,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image9.png",
     "width": 1657,
     "height": 915,
-    "sha256": "e3eb31b740bc497f3804b23b5f91187db1505a7fdebcfbe2708a752fbccecfb2",
+    "sha256": "c29439f7d75a074e922e00b1a31735dc3e81d6344ed96df1257417b1142d7bb6",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   },
@@ -255,7 +255,7 @@
     "review_file": "review/nist-rmf-incident-response-localized-figures/pt-BR-incident-response-bcdr-image10.png",
     "width": 1657,
     "height": 915,
-    "sha256": "6b1f323c5e40c483880f9d8a5cf764985ae542bcc1c83ff44fe3bf424c42aece",
+    "sha256": "e0d7f3542f0261cc11fe301ae726884eedf62b92d83c3d3672ef6fe0c66b9c51",
     "status": "review_only_pending_owner_approval",
     "description": "Programmatic localized reconstruction; not an exact visual reproduction."
   }

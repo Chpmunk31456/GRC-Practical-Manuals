@@ -1,16 +1,6 @@
 name: Review Cloud and Third-Party Risk localized figures
 
 on:
-  push:
-    branches:
-      - audit/cloud-third-party-localized-figures
-    paths:
-      - scripts/generate_cloud_third_party_localized_review_figures.py
-      - scripts/generate_nist_rmf_incident_response_localized_review_figures.py
-      - scripts/generate_iso27001_pci_localized_review_figures.py
-      - .github/workflows/review-cloud-third-party-localized-figures.yml
-      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_v1.0.docx
-      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_v1.0.docx
   workflow_dispatch:
 
 permissions:

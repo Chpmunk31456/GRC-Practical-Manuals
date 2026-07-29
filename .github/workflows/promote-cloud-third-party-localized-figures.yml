@@ -8,8 +8,10 @@ on:
       - scripts/promote_cloud_third_party_localized_figures.py
       - .github/workflows/promote-cloud-third-party-localized-figures.yml
       - qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
-      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/**
-      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/**
+      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/*.md
+      - 06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/media/**
+      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/*.md
+      - 07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/media/**
   workflow_dispatch:
 
 permissions:

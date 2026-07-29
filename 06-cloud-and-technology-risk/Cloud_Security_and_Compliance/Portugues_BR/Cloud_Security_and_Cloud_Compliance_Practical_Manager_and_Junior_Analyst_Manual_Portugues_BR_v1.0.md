@@ -313,7 +313,7 @@ Modelos, Glossário, Índice e Referências
 
 *O provedor e o cliente dividem a responsabilidade de forma diferente em IaaS, PaaS e SaaS.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:3.39605in" alt="Sempre confirmar a documentação e contrato de serviço exato; diagramas são pontos de partida simplificados." />
+![Sempre confirme a documentação e o contrato exatos do serviço; diagramas são pontos de partida simplificados.](media/image1.png)
 
 Figura 1. Modelo de responsabilidade compartilhada
 
@@ -389,7 +389,7 @@ FinOps, visibilidade de custos, propriedade, desperdício, compromisso e tradeof
 
 *Zonas de terra fornecem bases seguras reutilizáveis antes das cargas de trabalho chegarem.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.39605in" alt="Hierarquia, identidade, redes, logs centralizados, políticas e separação de carga de trabalho criam guardrails consistentes." />
+![Hierarquia, identidade, redes, logs centralizados, políticas e separação de cargas de trabalho criam guardrails consistentes.](media/image2.png)
 
 Figura 2. Fundação da zona de aterragem
 
@@ -411,7 +411,7 @@ Figura 2. Fundação da zona de aterragem
 
 * Planos de controle em nuvem fazem ativos críticos de identidade, tokens, papéis e principais de serviço.*
 
-<img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="Fortaleza de prova de identidade, MFA, menos privilégio, controle de sessão, revisão e revogação reduzem o risco de controle-plane." />
+![Comprovação de identidade robusta, MFA, privilégio mínimo, controle de sessão, revisão e revogação reduzem o risco do plano de controle.](media/image3.png)
 
 Figura 3. Ciclo de vida da identidade em nuvem
 
@@ -459,7 +459,7 @@ Figura 3. Ciclo de vida da identidade em nuvem
 
 * A segurança dos dados em nuvem começa com finalidade, localização, classificação e minimização.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.39605in" alt="Track data from discovery and purpose through controlled delection, including replicas, logs, backups, and subprocessors." />
+![Acompanhe os dados desde a descoberta e a finalidade até a exclusão controlada, incluindo réplicas, logs, backups e subprocessadores.](media/image4.png)
 
 Figura 4. Ciclo de vida dos dados em nuvem
 
@@ -563,7 +563,7 @@ A residência de dados é mais do que um selector de regiões:** Considere armaz
 
 * Aplicações em nuvem herdam risco de design, código, dependências, pipelines, identidades, APIs e serviços gerenciados.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.39605in" alt="Security evidence should follow code from design through build, implantation, and runtime." />
+![As evidências de segurança devem acompanhar o código desde o projeto até a compilação, implantação e execução.](media/image5.png)
 
 Figura 5. Fluxo de DevSecOps em nuvem
 
@@ -611,7 +611,7 @@ Figura 5. Fluxo de DevSecOps em nuvem
 
 * Kubernetes distribui responsabilidade através do plano de controle do provedor, configuração de cluster, nós, imagens, cargas de trabalho, rede e identidade.*
 
-<img src="media/image6.png" style="largura:6.15in;altura:3.39605in" alt="Managed Kubernetes ainda requer o controle do cliente de cargas de trabalho, acesso, políticas, rede, dados e evidências." />
+![Kubernetes gerenciado ainda requer controle do cliente sobre cargas, acesso, políticas, rede, dados e evidências.](media/image6.png)
 
 Figura 6. Camadas de segurança Kubernetes
 
@@ -700,7 +700,7 @@ Ponto cego do SaaS:** A aprovação dos contratos não é uma operação segura.
 
 * A resiliência em nuvem requer metas de negócios, arquitetura, dados de recuperação protegidos e restauração de ponta a ponta testada.*
 
-<img src="media/image7.png" style="largura:6.15in;altura:3.39605in" alt="Características de disponibilidade não provam que o serviço completo do cliente pode atender RTO e RPO." />
+![Recursos de disponibilidade não comprovam que o serviço completo do cliente atende ao RTO e RPO.](media/image7.png)
 
 Figura 7. Resiliência e recuperação em nuvem
 
@@ -720,7 +720,7 @@ Figura 7. Resiliência e recuperação em nuvem
 
 *Resposta ao incidente em nuvem depende de evidências do provedor, identidade do plano de controle, automação segura e deveres compartilhados.*
 
-<img src="media/image8.png" style="width:6.15in;height:3.39605in" alt="Preserve registros de provedores e identidade segura antes de evidências expiram ou mudanças spread." />
+![Preserve com segurança os registros do provedor e de identidade antes que as evidências expirem ou as mudanças se propaguem.](media/image8.png)
 
 Figura 8. Fluxo de trabalho incidente na nuvem
 
@@ -828,7 +828,7 @@ Escada de evidência:** Um questionário é útil para a descoberta. A confianç
 
 * Avaliação em nuvem junta critérios exatos, populações API completas, evidências confiáveis, julgamento humano e reteste.*
 
-<img src="media/image9.png" style="width:6.15in;height:3.39605in" alt="Automated configuration evidence torna-se garantia apenas após escopo, confiabilidade, exceções e risco serem avaliados." />
+![Evidências automatizadas de configuração só se tornam garantia após avaliar escopo, confiabilidade, exceções e risco.](media/image9.png)
 
 Figura 9. Cadeia de teste de evidência em nuvem
 
@@ -1079,7 +1079,7 @@ Resiliência Pode o serviço completo atender cenários testados de RTO/RPO e fa
 
 * Os analistas de segurança da nuvem Júnior criam valor através de inventários precisos, revisão de postura, evidência, remediação e comunicação.*
 
-<img src="media/image10.png" style="largura:6.15in;altura:3.39605in" alt="Laboratórios seguros e evidências rastreáveis transformam conceitos de nuvem em prova de portfólio." />
+![Laboratórios seguros e evidências rastreáveis transformam conceitos de nuvem em comprovação de portfólio.](media/image10.png)
 
 Figura 10. Caminho de analista de segurança de nuvem júnior
 

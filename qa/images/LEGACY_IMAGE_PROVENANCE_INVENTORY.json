@@ -7,10 +7,10 @@
   "classification_note": "Classification flags are evidence properties and may overlap. Primary classification is mutually exclusive. A duplicate count denotes localized references that share the same family/source asset, not duplicate image files.",
   "summary": {
     "total_inventory_records": 82,
-    "total_unresolved_references": 31,
-    "total_restored_localized_references": 51,
+    "total_unresolved_references": 20,
+    "total_restored_localized_references": 62,
     "totals_by_manual": {
-      "CIS Controls v8.1": 11,
+      "CIS Controls v8.1": 0,
       "NIST RMF / SP 800-53": 0,
       "ISO/IEC 27001/27002": 0,
       "GDPR": 0,
@@ -21,12 +21,12 @@
       "Third-Party Risk and Supply Chain Security": 10
     },
     "totals_by_language": {
-      "Latin American Spanish": 1,
-      "Brazilian Portuguese": 30
+      "Latin American Spanish": 0,
+      "Brazilian Portuguese": 20
     },
     "totals_by_primary_classification": {
-      "requires_localization": 31,
-      "restored_localized": 51
+      "requires_localization": 20,
+      "restored_localized": 62
     },
     "classification_flag_totals": {
       "duplicate_reference_records": 4,

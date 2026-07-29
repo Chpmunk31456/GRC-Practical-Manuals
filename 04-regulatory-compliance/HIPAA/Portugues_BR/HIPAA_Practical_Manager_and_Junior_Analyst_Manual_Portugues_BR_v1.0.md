@@ -337,7 +337,7 @@ Sumário
 
 * O que HIPAA cobre, o que não cobre, e como suas principais regras funcionam juntas.*
 
-<img src="media/image1.png" style="largura:6.15in;altura:2.9808in" alt="Privacidade, Segurança, Notificação de Violação e Execução estão conectados." />
+![Privacidade, Segurança, Notificação de Violação e Execução estão conectados.](media/image1.png){width=6.15in height=2.9808in}
 
 Figura 1. As principais áreas de conformidade HIPAA
 
@@ -364,7 +364,7 @@ HIPAA aplica-se a entidades cobertas, associados comerciais e certos acordos rel
 
 * Como identificar entidades regulamentadas, informações protegidas, fronteiras e responsabilidades.*
 
-<img src="media/image2.png" style="largura:6.15in;altura:3.27065in" alt="PHI é criado, usado, compartilhado, armazenado e destruído em todo o seu ciclo de vida." />
+![PHI é criado, usado, compartilhado, armazenado e destruído em todo o seu ciclo de vida.](media/image2.png){width=6.15in height=3.27065in}
 
 Figura 2. Ciclo de vida da IPH
 
@@ -478,7 +478,7 @@ O direito de acesso de uma pessoa ao abrigo de 45 CFR 164,524 tem o seu próprio
 
 * Requisitos gerais, flexibilidade, especificações necessárias e endereçáveis, e provas.*
 
-<img src="media/image3.png" style="largura:6.15in;altura:3.33266in" alt="As salvaguardas administrativas, físicas e técnicas dependem da análise de risco." />
+![As salvaguardas administrativas, físicas e técnicas dependem da análise de risco.](media/image3.png){width=6.15in height=3.33266in}
 
 Figura 3. HIPAA Salvaguardas das regras de segurança
 
@@ -589,7 +589,7 @@ O controle de acesso .Use IDs exclusivos, acesso de emergência e controles de l
 
 * Como avaliar incidentes PHI não seguros e cumprir as obrigações de notificação.*
 
-<img src="media/image4.png" style="largura:6.15in;altura:3.45654in" alt="Descoberta, contenção, avaliação, notificação e melhoria formam um único processo." />
+![Descoberta, contenção, avaliação, notificação e melhoria formam um único processo.](media/image4.png){width=6.15in height=3.45654in}
 
 Figura 4. Fluxo de trabalho de violação HIPAA
 
@@ -782,7 +782,7 @@ Parte 160 Subpartes D–E □ Penas e procedimentos em matéria de moeda civil
 
 Um teste de verificação deve ligar um requisito a operações reais e a provas fiáveis. Não deve começar com uma captura de tela ou um relatório de ferramenta. Comece com o risco, entidade regulamentada, fronteira ePHI, exigência e controle que a gestão diz que está operando.
 
-<img src="media/image5.png" style="width:6.15in;height:3.56987in" alt="Comece com o requisito e escopo, teste o controle, exceções corretas e reteste antes de concluir." />
+![Comece com o requisito e escopo, teste o controle, exceções corretas e reteste antes de concluir.](media/image5.png){width=6.15in height=3.56987in}
 
 Figura 6. Ciclo de verificação da conformidade
 
@@ -891,7 +891,7 @@ Atrasar a escalada do incidente até que todos os factos sejam conhecidos.
 
 * Um caminho seguro e honesto para o trabalho de privacidade, segurança e conformidade.*
 
-<img src="media/image6.png" style="largura:6.15in;altura:3.31039in" alt="Aprender, mapear, testar, documentar e aplicar trabalho formam uma trajetória de carreira." />
+![Aprender, mapear, testar, documentar e aplicar trabalho formam uma trajetória de carreira.](media/image6.png){width=6.15in height=3.31039in}
 
 Figura 5. Caminho de analista HIPAA júnior
 
@@ -1025,7 +1025,7 @@ O Velociraptor (s)(6), 164.312 (b) . . Coleta artefatos aprovados durante uma in
 
 - Limitações conhecidas e áreas não testadas
 
-<img src="media/image7.png" style="width:6.15in;height:3.45654in" alt="Um relatório sozinho não é prova; autorização, validação, remediação, e reteste criar a cadeia de evidências." />
+![Um relatório sozinho não é prova; autorização, validação, remediação, e reteste criar a cadeia de evidências.](media/image7.png){width=6.15in height=3.45654in}
 
 Figura 7. Da saída da ferramenta à evidência de conformidade
 

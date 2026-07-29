@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - production/multilingual-grc-editions
+  pull_request:
+    branches:
+      - production/multilingual-grc-editions
   workflow_dispatch:
 
 permissions:
@@ -21,7 +24,7 @@ jobs:
       - name: Check out production branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python 3.11
@@ -77,7 +80,7 @@ jobs:
           find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0 |
           while IFS= read -r -d '' source; do
             stem="${source%.md}"
-            pandoc "$source" --toc -o "${stem}.docx"
+            pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
             libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
             test -s "${stem}.docx"
             test -s "${stem}.pdf"
@@ -87,6 +90,9 @@ jobs:
 
       - name: Run multilingual inventory
         run: python scripts/inventory_multilingual_packages.py
+
+      - name: Verify embedded DOCX media
+        run: python scripts/validate_docx_embedded_media.py
 
       - name: Write production verification report
         shell: bash

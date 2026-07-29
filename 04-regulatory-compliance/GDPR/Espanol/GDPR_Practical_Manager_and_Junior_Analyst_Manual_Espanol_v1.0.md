@@ -311,7 +311,7 @@ Respuesta
 
 *Lo que la ley protege, lo que significa el cumplimiento, y lo que los administradores poseen.*
 
-יimg src="media/image1.png" style="width:6.15in;height:3.23744in" alt="Cuatro bloques conectados muestran personas, datos, propósito y control." /
+![Cuatro bloques conectados muestran personas, datos, propósito y control.](media/image1.png){width=6.15in height=3.23744in}
 
 Figura 1. GDPR como un programa de gestión práctica
 
@@ -376,7 +376,7 @@ Los datos personales son más amplios que la información que nombre directament
 
 *Las reglas que conforman cada propósito de procesamiento.*
 
-■img src="media/image2.png" estilo="width:6.15in;height:3.34699in" alt="El ciclo de vida conecta la colección, el uso, el compartir, la retención y la eliminación." /
+![El ciclo de vida conecta la recolección, el uso, el intercambio, la retención y la eliminación.](media/image2.png){width=6.15in height=3.34699in}
 
 Gráfico 2 Ciclo de vida de datos personales
 
@@ -411,7 +411,7 @@ El consentimiento debe ser específico, informado, inequívoco, dado libremente 
 
 *Cómo recibir, evaluar, completar y documentar solicitudes*.
 
-■img src="media/image3.png" estilo="Ancho:6.15in; Altura:3.34699in" alt="Un flujo de trabajo de cinco pasos cubre la ingesta a través del resultado registrado." /
+![Un flujo de trabajo de cinco pasos cubre la recepción hasta el resultado registrado.](media/image3.png){width=6.15in height=3.34699in}
 
 Figure 3. Data-subject-rights workflow
 
@@ -479,7 +479,7 @@ tención Derechos legales confidencialidad Operaciones de privacidad | Solicitud
 
 * Salvaguardias basadas en el ruido, hechos de incidentes, decisiones de notificación y pruebas*.
 
-■img src="media/image4.png" style="width:6.15in;height:3.45654in" alt="Contener, evaluar, decidir y mejorar se muestran como un proceso vinculado." /
+![Contener, evaluar, decidir y mejorar se muestran como un proceso conectado.](media/image4.png){width=6.15in height=3.45654in}
 
 Gráfico 4 Flujo de trabajo de los datos personales
 

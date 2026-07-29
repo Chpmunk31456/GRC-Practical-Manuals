@@ -90,6 +90,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          workspace="$(pwd)"
           mapfile -t sources < <(python - <<'PY'
           import json
           from pathlib import Path
@@ -113,8 +114,10 @@ jobs:
             test -s "$source"
             stem="${source%.md}"
             directory="$(dirname "$source")"
+            absolute_directory="$workspace/$directory"
+            absolute_docx="$workspace/${stem}.docx"
             pandoc "$source" --resource-path="$directory" -o "${stem}.docx"
-            libreoffice --headless --convert-to pdf --outdir="$directory" "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$absolute_directory" "$absolute_docx"
             test -s "${stem}.docx"
             test -s "${stem}.pdf"
             unzip -t "${stem}.docx" >/dev/null

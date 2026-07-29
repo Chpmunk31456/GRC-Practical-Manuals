@@ -54,7 +54,7 @@ jobs:
 
       - name: Commit audit report
         run: |
-          if git diff --quiet -- qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md; then
+          if [ -z "$(git status --porcelain -- qa/images/ISO27001_PCI_LOCALIZED_FIGURE_AUDIT.md)" ]; then
             echo 'Audit report unchanged.'
             exit 0
           fi

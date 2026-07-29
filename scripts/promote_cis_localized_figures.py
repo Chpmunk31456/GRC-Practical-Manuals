@@ -7,6 +7,8 @@ import shutil
 from pathlib import Path
 from PIL import Image
 
+from validate_provenance_inventory_summary import reconcile_summary
+
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / "review/cis-controls-v8.1-localized-figures"
 ES_MD = ROOT / "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md"
@@ -129,6 +131,7 @@ def main() -> None:
     if updated_count != 11:
         raise SystemExit(f"Expected 11 CIS inventory updates, got {updated_count}")
 
+    reconcile_summary(inventory)
     INVENTORY.write_text(json.dumps(inventory, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("Promoted 11 approved CIS localized figures and updated Markdown/provenance.")
 

@@ -7,26 +7,26 @@
   "classification_note": "Classification flags are evidence properties and may overlap. Primary classification is mutually exclusive. A duplicate count denotes localized references that share the same family/source asset, not duplicate image files.",
   "summary": {
     "total_inventory_records": 82,
-    "total_unresolved_references": 69,
-    "total_restored_localized_references": 13,
+    "total_unresolved_references": 51,
+    "total_restored_localized_references": 31,
     "totals_by_manual": {
       "CIS Controls v8.1": 11,
       "NIST RMF / SP 800-53": 10,
-      "ISO/IEC 27001/27002": 9,
+      "ISO/IEC 27001/27002": 0,
       "GDPR": 0,
       "HIPAA": 0,
-      "PCI DSS v4.0.1": 9,
+      "PCI DSS v4.0.1": 0,
       "Incident Response / BCDR": 10,
       "Cloud Security and Compliance": 10,
       "Third-Party Risk and Supply Chain Security": 10
     },
     "totals_by_language": {
       "Latin American Spanish": 1,
-      "Brazilian Portuguese": 68
+      "Brazilian Portuguese": 50
     },
     "totals_by_primary_classification": {
-      "requires_localization": 69,
-      "restored_localized": 13
+      "requires_localization": 51,
+      "restored_localized": 31
     },
     "classification_flag_totals": {
       "duplicate_reference_records": 4,
@@ -1028,10 +1028,10 @@
         "sha256": "bd56af707413c873bc9a0e63210a31494066bf08ecd85552d9b5fd8e6e5ae52c",
         "size_bytes": 61541
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image1.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1047,8 +1047,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image1.png",
+      "localized_image_sha256": "c498fc4b6c602bdd373ceeb81d2cced764a44682188004570bcb70288558667d",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1657,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-023",
@@ -1067,10 +1077,10 @@
         "sha256": "b2d65eceaed3e2cb8e06d074bf04f466565020e420dcfb84213d2b5158398856",
         "size_bytes": 64334
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image2.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1086,8 +1096,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image2.png",
+      "localized_image_sha256": "5c346cbd5968ec7b88ec9712ca5326fcf8c832983d68939e0b66ab7f9796903c",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1657,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-024",
@@ -1106,10 +1126,10 @@
         "sha256": "d00bf49d8c57d981aba012718de4af7480c2395c0fad78fd9170291c688dc193",
         "size_bytes": 62013
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image3.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1125,8 +1145,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image3.png",
+      "localized_image_sha256": "ddcbb0af8ef44e593b1ff530e74d068a16726469755fb9c52a5a0488ec2d0658",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1657,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-025",
@@ -1145,10 +1175,10 @@
         "sha256": "fb018f664da63124a33c7729565db163660fc9dbcd1b75f08de182af98624415",
         "size_bytes": 62843
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image4.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1164,8 +1194,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image4.png",
+      "localized_image_sha256": "2124d36f716dbaf707eef3c994bf8d9672f0eae32f5555b36504113accfa4555",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1710,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-026",
@@ -1184,10 +1224,10 @@
         "sha256": "b887c9853701199c64308a86f718d46640f775a8d6b1c1c141d55a72c9703caf",
         "size_bytes": 66114
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image5.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1203,8 +1243,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image5.png",
+      "localized_image_sha256": "f0c3cb20ed15ce5a0c2917766c09a93573df141003621ea7e4370847110477cd",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1690,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-027",
@@ -1223,10 +1273,10 @@
         "sha256": "26374cfeeba69538a022d84a7ba8c75b6ff0b2bcddba3a197e15115e01c4460f",
         "size_bytes": 60995
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image6.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1242,8 +1292,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image6.png",
+      "localized_image_sha256": "da3a6a316f712186274ee35c4b90d362aa633c139d7b83c09b711ac05e42c076",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1720,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-028",
@@ -1262,10 +1322,10 @@
         "sha256": "51dff9a47f04b9ca5a8f4ad6bb0f162bff969ee8576427dd5925f897f3b7b081",
         "size_bytes": 57784
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image7.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1281,8 +1341,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image7.png",
+      "localized_image_sha256": "b7da5638d8c4dbff1c489478bee3e77f92574549564cfd04ea236d4f1e1e1da4",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1707,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-029",
@@ -1301,10 +1371,10 @@
         "sha256": "635b75e26b4951ffb6783ebb58dcf646dfb5b7ce495b4456c5486ccbae005a89",
         "size_bytes": 62436
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image8.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1320,8 +1390,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image8.png",
+      "localized_image_sha256": "374a716e1bce6a3ca8063a7b89bd0714844410b051e5ada6d67565e27a64f180",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1657,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-030",
@@ -1340,10 +1420,10 @@
         "sha256": "6e2af32029850762ca0fb38ed2944eea7853552b61210008a48f49910f36db23",
         "size_bytes": 59619
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image9.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -1359,8 +1439,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image9.png",
+      "localized_image_sha256": "582d6e4cede75a5723116eac5c6cd670d6977b8d0e693ad698e2b2932f9464ec",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1830,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-031",
@@ -2041,10 +2131,10 @@
         "sha256": "3f302548b746cee4b519c05db742679ae819c4376110171a3c1e04823a81e91b",
         "size_bytes": 86256
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image1.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2060,8 +2150,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image1.png",
+      "localized_image_sha256": "dd4f5b7e01e5d9f19cbb19ca764c8d91d67f43376afd628c19dc51a8a1cd98b3",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1657,
+        "height": 1062
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-045",
@@ -2080,10 +2180,10 @@
         "sha256": "3d629799bdc1d4c89157220a68a5ad1fe06ec48b826d05de7435277be1f3306b",
         "size_bytes": 89725
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image2.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2099,8 +2199,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image2.png",
+      "localized_image_sha256": "f37566f3ac9fe718a2aed8b87d3e1b45e01d2c14e240306a6a6d912b9ab2e275",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1883,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-046",
@@ -2119,10 +2229,10 @@
         "sha256": "83e2df7af3a58d29098df5518e0a3900996e31c617c3238c05b964ed466fb121",
         "size_bytes": 76571
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image3.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2138,8 +2248,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image3.png",
+      "localized_image_sha256": "0ccb836d1aa85191fa65431cb2c1e53c06189e9f79cedd43d327628ee3b5a550",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1880,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-047",
@@ -2158,10 +2278,10 @@
         "sha256": "80ab1403158b6dad02c26217b5fb146256ba70cf512ecf3d6b5164efaac6f82b",
         "size_bytes": 66208
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image4.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2177,8 +2297,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image4.png",
+      "localized_image_sha256": "e74e3c9491ba732fff0eecae95151c05550d31e41713043791914e1634343c60",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1926,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-048",
@@ -2197,10 +2327,10 @@
         "sha256": "b7e0c3b0b530cef180129cdfae345e65a742c540f7b10e74d08c6dff5d893f30",
         "size_bytes": 91105
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image5.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2216,8 +2346,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image5.png",
+      "localized_image_sha256": "0ccbb73e0e80d2ae2c7d0c613c461283b567827d7754d2ad34bb792042766928",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1837,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-049",
@@ -2236,10 +2376,10 @@
         "sha256": "9aab2259a2d62e12f82b7aa0843a20b1643b9d89b32896dbcdff2706c848bc6c",
         "size_bytes": 76709
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image6.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2255,8 +2395,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image6.png",
+      "localized_image_sha256": "53358363bbedcceec1efa07c60af3581aa0fd3ef08195e5e6c7e3ea19f20b5bd",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1845,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-050",
@@ -2275,10 +2425,10 @@
         "sha256": "fc2f547b8c21c6c531a3ef1318bde0d702528bb22cb03dbe0d73ebc365a409a1",
         "size_bytes": 73625
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image7.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2294,8 +2444,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image7.png",
+      "localized_image_sha256": "ea3152302ab957abb6971b3e98d234a43c7330b4cb76d10cfb9c08e192b16a1e",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 2083,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-051",
@@ -2314,10 +2474,10 @@
         "sha256": "eb0b827f0ccfa5885aaddb25c3fcdb177c867d5062c30381a69c525a17ae0593",
         "size_bytes": 73247
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image8.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2333,8 +2493,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image8.png",
+      "localized_image_sha256": "386b7b5993068906538721d34ab4306c6ec08313ca217a428aad81896b0c09c4",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1978,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-052",
@@ -2353,10 +2523,10 @@
         "sha256": "15497f4531530e26f0de59f21c8641ed6d27403720dc88cfabd975ebe21fe97b",
         "size_bytes": 60542
       },
-      "localized_asset_exists": false,
+      "localized_asset_exists": true,
       "localized_asset_path_checked": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image9.png",
       "spanish_localized_asset_exists": false,
-      "brazilian_portuguese_localized_asset_exists": false,
+      "brazilian_portuguese_localized_asset_exists": true,
       "same_asset_appears_elsewhere_in_repository": true,
       "same_asset_locations": [
         {
@@ -2372,8 +2542,18 @@
       "recoverable": true,
       "requires_localization": true,
       "no_trustworthy_source": false,
-      "primary_classification": "requires_localization",
-      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path."
+      "primary_classification": "restored_localized",
+      "provenance_basis": "Exact numbered media asset is embedded in the repository's English-source DOCX; visual audit confirms the source graphic contains English text. No localized file exists at either localized media path.",
+      "validation_status": "technical_validation_passed_owner_visual_review_approved",
+      "restored_destination": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image9.png",
+      "localized_image_sha256": "28aad1035c42b0c35661cdd64708d3528b3e082c1ce3632e9b92272ee332c2a4",
+      "localized_image_format": "PNG",
+      "localized_image_dimensions": {
+        "width": 1839,
+        "height": 915
+      },
+      "owner_approval_evidence": "Issue #22 owner approval comment 5112334399",
+      "restoration_description": "Programmatic localized reconstruction; not an exact visual reproduction."
     },
     {
       "id": "LEGACY-IMG-053",

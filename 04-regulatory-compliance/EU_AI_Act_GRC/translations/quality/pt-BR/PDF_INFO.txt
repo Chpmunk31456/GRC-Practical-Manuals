@@ -1,0 +1,19 @@
+Title:           Manual de Conformidade GRC da Lei de Inteligência Artificial da UE
+Author:          Al Leiva, com apoio de redação e revisão assistida por IA
+Creator:         Writer
+Producer:        LibreOffice 24.2
+CreationDate:    Thu Jul 30 21:53:43 2026 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           512
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       7054455 bytes
+Optimized:       no
+PDF version:     1.7

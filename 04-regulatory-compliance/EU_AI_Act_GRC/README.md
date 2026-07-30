@@ -26,10 +26,10 @@ The manual uses a fictional multinational travel-management company, **GlobalWay
 - English editorial and internal-consistency QA register created
 - graphics and accessibility QA register created
 - English publication source map created
-- foundation timeline correction created but direct canonical-source integration remains open
+- corrected canonical foundation created and designated
 - publication graphics remain blocked pending legal and accessibility approval
 - Spanish and Brazilian Portuguese editions remain blocked until the English source is frozen and approved
-- integrated English DOCX and PDF production has not begun because legal, editorial, cross-reference, graphics, and source-consolidation gates remain open
+- integrated English DOCX and PDF production remains blocked by unresolved source migration, cross-reference, graphics, and final source-verification gates
 
 ## Writing model
 
@@ -37,7 +37,7 @@ Major sections use this sequence where appropriate:
 
 > **Requirement → Plain-English explanation → GlobalWay travel-agency example → Control activity → Evidence → Audit test**
 
-Legal requirements, recommended practices, and optional enhancements must be clearly distinguished.
+Legal requirements, recommended practices, organization controls, contractual duties, and optional enhancements must be clearly distinguished.
 
 ## Controlling legal baseline
 
@@ -48,8 +48,9 @@ The binding legal source baseline is:
 3. the current consolidated EUR-Lex text;
 4. official European Commission and EU AI Office guidance, identified as non-binding where applicable.
 
-During publication closure, the following correction packages and registers control over conflicting earlier draft, table, figure, appendix, translation, or timeline language:
+The following canonical foundation and quality controls govern conflicting earlier draft, table, figure, appendix, translation, or timeline language:
 
+- [Corrected Canonical Foundation](./EU_AI_Act_GRC_Manual_Foundation_CORRECTED_MASTER.md)
 - [Binding Legal Corrections — Batch 01](./quality/BINDING_LEGAL_CORRECTIONS_BATCH_01.md)
 - [Foundation Timeline and Source Register Correction — 30 July 2026](./quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION_2026_07_30.md)
 - [Canonical Source Consolidation Register](./quality/CANONICAL_SOURCE_CONSOLIDATION_REGISTER.md)
@@ -59,14 +60,16 @@ During publication closure, the following correction packages and registers cont
 - [Graphics and Accessibility QA Register](./quality/GRAPHICS_AND_ACCESSIBILITY_QA_REGISTER.md)
 - [English Publication Source Map](./quality/ENGLISH_PUBLICATION_SOURCE_MAP.md)
 
-The manual is not legally or editorially cleared for publication until corrections are applied directly to all affected canonical sources, duplicate-content migration is complete, internal references are validated, graphics are approved, and closure evidence is recorded.
+The earlier `EU_AI_Act_GRC_Manual_Foundation.md` remains preserved as research and architecture history. It is not the controlling legal foundation.
+
+The manual is not legally or editorially cleared for publication until corrections are applied to every affected canonical source, duplicate-content migration is complete, internal references are validated, graphics are approved or excluded, integrated outputs are inspected, and closure evidence is recorded.
 
 ## Publication plan
 
 1. Complete canonical-source consolidation and useful-content migration.
-2. Integrate the corrected legal timeline and source hierarchy directly into the canonical foundation.
-3. Complete whole-manual editorial, terminology, modality, and cross-reference correction.
-4. Approve or reject each figure and table through legal and accessibility review.
+2. Complete whole-manual editorial, terminology, modality, and cross-reference correction.
+3. Approve or reject each figure and table through legal and accessibility review.
+4. Reverify the current official legal sources.
 5. Assemble the controlled English master.
 6. Generate and validate DOCX and PDF editions.
 7. Complete page-by-page QA and close every finding.
@@ -75,7 +78,8 @@ The manual is not legally or editorially cleared for publication until correctio
 
 ## Foundation and quality documents
 
-- [Research, architecture, and editorial foundation](./EU_AI_Act_GRC_Manual_Foundation.md)
+- [Corrected canonical foundation](./EU_AI_Act_GRC_Manual_Foundation_CORRECTED_MASTER.md)
+- [Earlier research and architecture foundation](./EU_AI_Act_GRC_Manual_Foundation.md)
 - [Foundation timeline and source-register correction](./quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION_2026_07_30.md)
 - [Legal and citation audit plan](./quality/LEGAL_AND_CITATION_AUDIT_PLAN.md)
 - [Legal audit Batch 01 — Chapters 1–35](./quality/Legal_Citation_Audit_Batch_01_Chapters_1_35.md)
@@ -99,7 +103,7 @@ The manual will not be considered publication-ready until it passes:
 - canonical-source and duplicate-content closure
 - spelling, grammar, punctuation, and style review
 - terminology and internal-consistency review
-- mandatory, recommended, and optional language review
+- mandatory, recommended, contractual, internal-control, and optional language review
 - GlobalWay fact and role consistency review
 - control, evidence, and audit-test review
 - internal-link and cross-reference validation

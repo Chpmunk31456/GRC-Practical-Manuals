@@ -16,32 +16,31 @@
 
 | Item | Canonical source | Superseded or competing files | Action | Verification result | Commit evidence |
 |---|---|---|---|---|---|
-| Chapter 71 | `chapters/71_AI_Vendor_Due_Diligence_CORRECTED_MASTER.md` | `71_AI_Vendor_Due_Diligence.md`; `71_AI_Vendor_Due_Diligence_and_Contractual_Assurance.md` | Preserve detailed drafts until mapped operational content is integrated into Chapters 71–79 and Appendices O/P | Full source comparison completed; canonical identity confirmed; combined draft overlaps Chapters 72–79 | Comparison commit `d8e6927ab1624acf6e939c9f66801ef559b4a50d`; canonical map `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 72 | `chapters/72_Contract_Clauses_CORRECTED_MASTER.md` | `72_AI_Contract_Clauses_and_Allocation_of_Responsibilities.md`; `72_AI_Contracting_and_Compliance_Clauses_CORRECTED_MASTER.md` | Preserve until useful clause, control, evidence, and audit material is integrated into Chapter 72 and Appendices F/P/U/V | Full source comparison completed; canonical identity and legal modality confirmed | Comparison commit `4055dfe809c20b6d6b9fba11d22ce80d424cf7f7`; register commit `e95e2a6de1fa6991e7c2cb84d31b8dc9bbeb98c0` |
-| Chapter 73 | `chapters/73_Provider_Documentation_Review_CORRECTED_MASTER.md` | `73_Provider_Documentation_Review.md`; `73_Ongoing_Supplier_Oversight_CORRECTED_MASTER.md` | Preserve detailed documentation-review draft; remap supplier-oversight file to Chapter 78 comparison | Full source comparison completed; canonical identity confirmed; competing supplier-oversight topic belongs under Chapter 78 | Comparison commit `c567e72cac3e2442cd0645da909363ae38e280a2` |
-| Chapter 74 | `chapters/74_Model_Cards_System_Cards_and_Limitations_CORRECTED_MASTER.md` | `74_Model_Cards_System_Cards_and_Limitations.md`; `74_Audit_Assurance_and_Evidence_Access_CORRECTED_MASTER.md` | Preserve detailed model/system-card draft; compare audit-assurance alternate against Chapter 75 and assurance chapters | Full source comparison of canonical-title sources completed; canonical identity and legal modality confirmed | Comparison commit `c567e72cac3e2442cd0645da909363ae38e280a2` |
-| Chapter 75 | `chapters/75_Audit_Rights_and_Incident_Notification_CORRECTED_MASTER.md` | `75_Audit_Rights_and_Incident_Notification.md`; `75_AI_Supplier_Exit_and_Continuity_CORRECTED_MASTER.md` | Preserve pending content comparison | Canonical topic confirmed as Audit Rights and Incident Notification | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 76 | `chapters/76_Cloud_API_and_Model_Dependency_Risk_CORRECTED_MASTER.md` | `76_Cloud_API_and_Model_Dependency_Risk.md`; `76_Supplier_Change_Notification_and_Reassessment_CORRECTED_MASTER.md` | Preserve pending archive review | Canonical corrected master created and mapped | Commit `010dc2c58174cab23a859fb707084c83bf89bead`; map `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 77 | `chapters/77_Open_Source_and_Component_Governance_CORRECTED_MASTER.md` | `77_Open_Source_and_Component_Governance.md` | Preserve pending archive review | Canonical topic and corrected master confirmed | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 78 | `chapters/78_Ongoing_Vendor_Monitoring_CORRECTED_MASTER.md` | `78_Ongoing_Vendor_Monitoring.md`; `73_Ongoing_Supplier_Oversight_CORRECTED_MASTER.md` | Preserve pending source comparison and migration | Canonical topic confirmed; Chapter 73 alternate supplier-oversight file reassigned here for review | Comparison commit `c567e72cac3e2442cd0645da909363ae38e280a2`; map `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 79 | `chapters/79_Exit_Portability_and_Continuity_Planning_CORRECTED_MASTER.md` | `79_Exit_Portability_and_Continuity_Planning.md` | Preserve pending archive review | Canonical topic and corrected master confirmed | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapters 115–138 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered draft files | Preserve pending archive review | Corrected-master legal pass completed through Chapter 138 | Audit commit `a8dbf8ad282bd3a81a3b5ed90e2e63a0d249ecef` |
-| Appendix C | `appendices/Appendix_C_Applicability_Assessment_CORRECTED_MASTER.md` | `Appendix_C_Applicability_Assessment.md` | Preserve pending archive review | Corrected master exists; appendix legal audit still required | Commit `a8fc2f947582678a625e7d8c590e100f7bbb8f66` |
-| Appendix F | `appendices/Appendix_F_Role_Assessment_Worksheet_CORRECTED_MASTER.md` | `Appendix_F_Role_Assessment_Worksheet.md` | Preserve pending archive review | Corrected master exists; appendix legal audit still required | Commit `6e8850a7893c459d4bdf718db54c92cb0b494817` |
-| Foundation legal timeline | `quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION.md` plus controlling README references | Older timeline statements in `EU_AI_Act_GRC_Manual_Foundation.md` | Direct integration still required | Correction package created; source foundation not yet replaced | Commit `f630fff19cb432d6b60d2d9cbb202093829ba566` |
+| Chapter 71 | `chapters/71_AI_Vendor_Due_Diligence_CORRECTED_MASTER.md` | `71_AI_Vendor_Due_Diligence.md`; `71_AI_Vendor_Due_Diligence_and_Contractual_Assurance.md` | Preserve detailed drafts until mapped operational content is integrated into Chapters 71–79 and Appendices O/P | Full source comparison completed; canonical identity confirmed; combined draft overlaps Chapters 72–79 | Comparison `d8e6927ab1624acf6e939c9f66801ef559b4a50d` |
+| Chapter 72 | `chapters/72_Contract_Clauses_CORRECTED_MASTER.md` | `72_AI_Contract_Clauses_and_Allocation_of_Responsibilities.md`; `72_AI_Contracting_and_Compliance_Clauses_CORRECTED_MASTER.md` | Preserve until useful material is integrated | Full source comparison completed; canonical identity and legal modality confirmed | Comparison `4055dfe809c20b6d6b9fba11d22ce80d424cf7f7` |
+| Chapter 73 | `chapters/73_Provider_Documentation_Review_CORRECTED_MASTER.md` | `73_Provider_Documentation_Review.md`; `73_Ongoing_Supplier_Oversight_CORRECTED_MASTER.md` | Preserve detailed draft; remap supplier oversight to Chapter 78 review | Canonical identity confirmed | Comparison `c567e72cac3e2442cd0645da909363ae38e280a2` |
+| Chapter 74 | `chapters/74_Model_Cards_System_Cards_and_Limitations_CORRECTED_MASTER.md` | `74_Model_Cards_System_Cards_and_Limitations.md`; `74_Audit_Assurance_and_Evidence_Access_CORRECTED_MASTER.md` | Preserve detailed draft; compare assurance alternate against Chapter 75/assurance chapters | Canonical identity confirmed | Comparison `c567e72cac3e2442cd0645da909363ae38e280a2` |
+| Chapters 75–84 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered and alternate drafts | Preserve pending archive and migration review | Canonical batch verified | `4ffec5a66d67e54ef2edfefceb9174b1652b7e7d` |
+| Chapters 85–94 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `775c31a02feb9f5fabc2d8988db5644fa26aaca3` |
+| Chapters 95–104 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `66e2d1b92c4693ebc8194748e4223ef02723f4a0` |
+| Chapters 105–114 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `55c7cec2409bf32d23c8077ece167ef843da9ab8` |
+| Chapters 115–124 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `d2feb572caa757f7f9035ef484f6f79becd1c7dc` |
+| Chapters 125–134 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `7685b35fd1a17a3ee1961611568ab96c02514e21` |
+| Chapters 135–138 | Corresponding `*_CORRECTED_MASTER.md` files | Earlier numbered drafts | Preserve pending archive review | Canonical batch verified | `e7b17ddf3ea7e80f1138fa7f7e2680283fbf9e17` |
+| Appendices A–Z | Corresponding `Appendix_*_CORRECTED_MASTER.md` files | Earlier appendix drafts | Preserve pending draft comparison, archive manifest, and link validation | First-pass legal audit and corrected-master creation completed for all 26 appendices | Audit index `67c981275458e5b6028681b6dc6dd1772e4f6aaf`; audits `faf10f91759e994547a5aa4068d36b591f473a03`, `4d0c09e33390f50d8c07b5b5d1a79adda3fb79c2`, `869eb66ceef1f8efa80a6b41dfffd70fb97cb991` |
+| Foundation legal timeline | `quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION.md` plus controlling README references | Older timeline statements in `EU_AI_Act_GRC_Manual_Foundation.md` | Direct integration still required | Correction package created; source foundation not yet replaced | `f630fff19cb432d6b60d2d9cbb202093829ba566` |
 
 ## Known unresolved consolidation items
 
-1. Compare Chapter 75–76 supplier-governance alternates against canonical files and preserve nonduplicative content in the proper chapter or appendix.
-2. Compare Chapter 77–79 originals and reassigned supplier-oversight content against their corrected masters.
-3. Migrate and verify useful operational content identified in the Chapter 71, Chapter 72, and Chapters 73–74 comparison records.
-4. Review every original chapter file against its corrected master before archive or deletion.
-5. Identify all zero-content and truncated chapter files, including legacy corrected files reported with zero additions.
-6. Reconcile overlapping legal-audit reports, especially the overlapping Chapter 77–91 audit and the separate Batch 05 record.
-7. Repair and verify the Chapter 92–103 legal-audit record if incomplete.
-8. Integrate the foundation legal correction directly into the foundation document after a complete replacement review.
-9. Review Appendices A–Z and establish one canonical file for each appendix.
-10. Create an archive manifest before any deletion batch.
+1. Compare Chapter 75–79 supplier-governance alternates and originals against canonical files and preserve nonduplicative content.
+2. Migrate and verify useful operational content identified in the Chapter 71–74 comparison records.
+3. Review every remaining original chapter and appendix file against its corrected master before archive or deletion.
+4. Identify and resolve all zero-content and truncated legacy files.
+5. Reconcile overlapping legal-audit reports, including Chapter 77–91 and Chapter 92–103 records.
+6. Integrate the foundation legal correction directly into `EU_AI_Act_GRC_Manual_Foundation.md` after complete replacement review.
+7. Validate chapter-to-appendix and appendix-to-chapter cross-references using corrected paths.
+8. Create an archive manifest before any deletion or archival movement.
+9. Conduct whole-English editorial, terminology, graphics, accessibility, and publication-layout review.
 
 ## Deletion gate
 

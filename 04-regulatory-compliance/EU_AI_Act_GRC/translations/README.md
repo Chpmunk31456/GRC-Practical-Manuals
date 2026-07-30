@@ -30,6 +30,7 @@ Produce complete Spanish and Brazilian Portuguese editions from the approved Eng
 - `pt-BR/pdf/` — reviewed PDF edition
 - `terminology/` — controlled bilingual glossary
 - `quality/` — translation manifests, QA findings, and sign-off evidence
+- `tools/` — canonical translation, assembly, and QA automation
 
 ## Translation sequence
 
@@ -45,6 +46,23 @@ Produce complete Spanish and Brazilian Portuguese editions from the approved Eng
 10. Page-by-page visual and linguistic QA
 11. Production pull request and publication
 
+## Autonomous publication pipeline
+
+The workflow `.github/workflows/build-eu-ai-act-spanish-portuguese.yml` now performs the controlled translation and build sequence without routine owner input:
+
+1. selects the same 138 canonical chapters and 26 canonical appendices used by the English publication builder;
+2. translates independent shards into `es-419` and `pt-BR` using controlled Marian translation models;
+3. preserves Markdown, URLs, inline code, numbering, article references, and source hashes;
+4. assembles one integrated Markdown master per language;
+5. generates separate DOCX and PDF editions;
+6. renders every PDF page for inspection;
+7. runs fail-closed structural, terminology, unresolved-English, manifest, DOCX, and PDF checks;
+8. records checksums and translation manifests;
+9. commits only successful generated editions back to this branch;
+10. uploads complete publication-candidate packages.
+
+A failed translation shard or QA gate prevents publication artifacts from being committed.
+
 ## Current state
 
-The translation branch and controls are established. Translation content, build artifacts, and publication approval remain in progress.
+The controlled glossary, translation requirements, canonical source manifest, translation engine, bilingual assembly process, fail-closed QA, and autonomous GitHub Actions publication workflow are established. The workflow has been triggered from this branch. Neither localized edition may be labeled published until generated source files and artifacts exist and all configured gates pass.

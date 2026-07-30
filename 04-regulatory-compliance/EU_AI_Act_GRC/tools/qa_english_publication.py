@@ -12,8 +12,8 @@ import zipfile
 from pathlib import Path
 from xml.etree import ElementTree
 
-CHAPTER_HEADING = re.compile(r"^## Chapter\s+(\d+)\b", re.MULTILINE)
-APPENDIX_HEADING = re.compile(r"^## Appendix\s+([A-Z])\b", re.MULTILINE)
+CHAPTER_HEADING = re.compile(r"^# Chapter\s+(\d+)\b", re.MULTILINE)
+APPENDIX_HEADING = re.compile(r"^# Appendix\s+([A-Z])\b", re.MULTILINE)
 BAD_TOKENS = (
     "turn0search",
     "turn1search",
@@ -82,8 +82,9 @@ def main() -> int:
         text = md.read_text(encoding="utf-8")
         chapters = [int(value) for value in CHAPTER_HEADING.findall(text)]
         appendices = APPENDIX_HEADING.findall(text)
-        require(chapters == list(range(1, 139)), "Chapter sequence is not exactly 1-138", failures)
-        require(appendices == [chr(code) for code in range(ord("A"), ord("Z") + 1)], "Appendix sequence is not exactly A-Z", failures)
+        require(chapters == list(range(1, 139)), "Chapter sequence is not exactly 1-138 at top-level heading depth", failures)
+        require(appendices == [chr(code) for code in range(ord("A"), ord("Z") + 1)], "Appendix sequence is not exactly A-Z at top-level heading depth", failures)
+        require(len(chapters) + len(appendices) == 164, "Top-level chapter and appendix heading count is not 164", failures)
         require(len(text.splitlines()) > 5_000, "Integrated Markdown appears unexpectedly short", failures)
         for token in BAD_TOKENS:
             require(token not in text, f"Forbidden unresolved token found: {token}", failures)

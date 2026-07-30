@@ -704,176 +704,48 @@ TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta
 
 Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
 
-# 23. Control 18 — Penetration Testing
-
-*Las 5 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para las pruebas de penetración. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 18.1 | Establecer y mantener un Programa de Pruebas de Penetración | Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un Programa de Pruebas de Penetración, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-| 18.2 | Realizar exámenes periódicos de penetración externa Poner en marcha un proceso repetible, de propiedad o control técnico para realizar exámenes periódicos de penetración externa, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-| 18.3 ← Búsquedas de Penetración Remediar Ponga un proceso repetible, de propiedad o control técnico en su lugar para remediar Penetration Test Findings, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación |
-| 18.4 Poner en marcha un proceso repetible, de propiedad o control técnico para validar las medidas de seguridad, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación |
-| 18.5 | Realizar exámenes periódicos de penetración interna Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar exámenes periódicos de penetración interna, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-24. Herramientas de código abierto
-
-* Enlaces oficiales, inicios rápidos seguros, pruebas y limitaciones.*
-
-| **Herramienta** |**
-|-------------------------------------------------------- La vida------------------ |
-TEN CIS Controls Navigator TEN Seleccionar IGs y explorar asignaciones oficiales TEN TODO |
-Evaluación de Controles de CIS Especificación ← Orientación oficial de medición
-| CIS-CAT Lite ← Selected CIS Evaluación de parámetros latitud 4 |
-| CISO Asistente | Controles, riesgos, pruebas y hallazgos
-tención Wazuh ← Endpoint monitoring, SIEM, FIM, y alertas
-TEN Osquery TENRI Asset, software, cuenta y consultas de configuración
-TEN OpenSCAP | Evaluación de la configuración segura de Linux TEN 4, 7 |
-| Lynis para la seguridad de Linux auditando | 4, 7 |
-| Nmap | Autorizado activo y descubrimiento de servicios | 1, 12
-| Greenbone Community Edition | Vulnerability assessment | 7
-tención Trivy Silencioso Repositorios, imágenes, dependencias, secretos, y IaC Silencioso 2, 4, 7, 16 |
-| OWASP ZAP | Pruebas autorizadas de seguridad web
-| Suricata | Red detección de intrusiones y visibilidad de tráfico | 8, 13, 17 |
-TENER Keycloak | Identidad, roles, MFA, sesiones y eventos
-← DefectoDojo tóxico Encontrar la ingesta, la deduplicación, la remediación y la retesta | 7, 16, 18
-| Velociraptor | Visibilidad de endpoint y respuesta a los incidentes
-
-* Limitación crítica* Una herramienta puede apoyar una o más Salvaguardias, pero no puede elegir el IG de la organización, definir la tolerancia al riesgo, garantizar la cobertura completa, reemplazar el procedimiento y la revisión humana, autorizar pruebas de penetración, o probar el cumplimiento de otro marco por sí mismo. |
-|. |
-
-## 24.1 CIS Controls Navigator
-
-Propósito: Seleccione IGs y explore mapas oficiales. Proyecto oficial: [ejecutado]CIS Controles Navigator efectuado/u fiel](https://www.cisecurity.org/controls/cis-controls-navigator)
-
-Inicio rápido seguro: Elija v8.1, seleccione un grupo de implementación y mapeo, revise salvaguardias, luego exporte la selección autorizada.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.2 CIS Controls Assessment Specification
-
-Objetivo: Orientación oficial de medición. Proyecto oficial: [Seguido] [Según datos](https://cas.docs.cisecurity.org/en/latest/)
-
-Inicio rápido seguro: Abra una Salvaguardia, identifique los insumos y las suposiciones, siga las operaciones, calcule las medidas y revise el procedimiento de documentos.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.3 CIS-CAT Lite
-
-Propósito: CIS seleccionado Evaluación de parámetros. Proyecto oficial: [Seguido] (https://learn.cisecurity.org/cis-cat-lite)
-
-Inicio rápido seguro: Ejecutar sólo en sistemas autorizados, elegir un punto de referencia y perfil disponibles, preservar el informe, validar las conclusiones, corregir y reevaluar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.4 CISO Assistant
-
-Propósito: Controles, riesgos, pruebas y hallazgos. Proyecto oficial: [Seguido](https://intuitem.github.io/ciso-assistant-community/)
-
-Inicio rápido seguro: Crear un proyecto de alcance, cargar un marco aplicable, asignar propietarios, adjuntar evidencia, resultados de seguimiento y permisos de revisión.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.5 Wazuh
-
-Propósito: Monitoreo de punto final, SIEM, FIM y alertas. Proyecto oficial: [Seguido](https://wazuh.com/)
-
-Inicio rápido seguro: Inscribir un punto final de laboratorio, desencadenar un evento seguro, confirmar la recogida y alerta, investigar, y retener la cobertura y la evidencia de respuesta.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.6 osquery
-
-Propósito: Consultas de activos, software, cuenta y configuración. Proyecto oficial: (https://www.osquery.io/)
-
-Comienzo rápido seguro: Ejecute consultas sólo de lectura en un laboratorio, programe consultas aprobadas, compare resultados a inventarios, y plataforma de documentos y límites de cobertura.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.7 OpenSCAP
-
-Objetivo: Evaluación de la configuración segura de Linux. Proyecto oficial: [Seguido](https://www.open-scap.org/)
-
-Inicio rápido seguro: Elija un perfil apropiado, escanear un sistema de laboratorio, validar resultados, excepciones de documentos, remediar y cambiar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.8 Lynis
-
-Propósito: Auditoría de seguridad de Linux. Proyecto oficial: [Seguido](https://cisofy.com/lynis/)
-
-Comenzar rápido seguro: auditar un host de laboratorio, revisar los hallazgos contra el alcance y las normas, asignar acciones, corregir elementos seleccionados y repetir.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.9 Nmap
-
-Propósito: Activo autorizado y descubrimiento de servicios. Proyecto oficial: [Seguido](https://nmap.org/)
-
-Inicio rápido seguro: Usar un escaneo limitado en rangos escritos, comparar con inventario, investigar servicios desconocidos, y retener el alcance y la evidencia de comando.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.10 Greenbone Community Edition
-
-Objetivo: Evaluación de la vulnerabilidad. Proyecto oficial: [ejecutado]Greenbone Community Edition (10)(https://greenbone.github.io/docs/latest/)
-
-Inicio rápido seguro: Actualizar los alimentos, utilizar los objetivos autorizados y las credenciales, validar la cobertura de activos, revisar las conclusiones, remediar y cambiar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.11 Trivy
-
-Propósito: Repositorios, imágenes, dependencias, secretos e IaC. Proyecto oficial: [ejecutado]Trivy seleccionado/u fiel](https://trivy.dev/)
-
-Inicio rápido seguro: Escanear un repositorio de prueba o imagen, validar hallazgos, documentar excepciones justificadas, fijar y rescan en el oleoducto.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.12 OWASP ZAP
-
-Propósito: Pruebas de seguridad web autorizadas. Proyecto oficial: [Seguido] (https://www.zaproxy.org/)
-
-Comenzar rápido seguro: Proxy una aplicación de entrenamiento, arrastrar pasivamente, utilizar el escaneo activo sólo con aprobación, validar hallazgos, correcto y retest.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.13 Suricata
-
-Propósito: detección de intrusión en red y visibilidad del tráfico. Proyecto oficial: [Seguido] [https://suricata.io/]
-
-Inicio rápido seguro: Use un sensor de laboratorio, confirme la interfaz y las reglas, genere tráfico de prueba aprobado, valide alertas, sintonice cuidadosamente, y preserve la historia del cambio.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.14 Keycloak
-
-Propósito: Identidad, roles, MFA, sesiones y eventos. Proyecto oficial: [Seguido](https://www.keycloak.org/)
-
-Comenzar rápido seguro: Crear un reino de laboratorio, roles y MFA, probar casos de compás, revisar eventos y configuración de documentos y resultados.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.15 DefectoDojo
-
-Propósito: Encontrar ingesta, deduplicación, remediación y retest. Proyecto oficial: [Seguido](https://www.defectdojo.org/)
-
-Comienzo rápido seguro: Importar resultados seguros, validar la deduplicación, asignar propietarios y fechas, adjuntar prueba, y cerrar sólo después de la prueba verificada.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.16 Velociraptor
-
-Finalidad: visibilidad y respuesta a incidentes. Proyecto oficial: [Seguido](https://docs.velociraptor.app/)
-
-Inicio rápido seguro: Despliegue sólo en un laboratorio autorizado aislado, recoja un artefacto estrecho, alcance de documentos y acceso, investigue los resultados y retire los datos del laboratorio con seguridad.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
+# 23. Control 18 — Pruebas de penetración
+
+*Las cinco Salvaguardas, su significado en lenguaje claro, el enfoque de verificación y ejemplos de evidencia.*
+
+| **Objetivo del control:** Fortalecer la organización mediante la implementación y medición de Salvaguardas para las pruebas de penetración. |
+|---|
+
+| **ID** | **Salvaguarda** | **Significado en lenguaje claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 18.1 | Establecer y mantener un programa de pruebas de penetración | Implementar un proceso repetible, con un responsable definido, para establecer y mantener un programa de pruebas de penetración; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.2 | Realizar pruebas periódicas de penetración externa | Implementar un proceso repetible, con un responsable definido, para realizar pruebas periódicas de penetración externa; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.3 | Corregir los hallazgos de las pruebas de penetración | Implementar un proceso repetible, con un responsable definido, para corregir los hallazgos de las pruebas de penetración; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.4 | Validar las medidas de seguridad | Implementar un proceso repetible, con un responsable definido, para validar las medidas de seguridad; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.5 | Realizar pruebas periódicas de penetración interna | Implementar un proceso repetible, con un responsable definido, para realizar pruebas periódicas de penetración interna; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación para la Evaluación de Controles para consultar el lenguaje exacto de cada Salvaguarda, la clase de activo, la función de seguridad, el Grupo de Implementación, las dependencias, las entradas, las operaciones, las medidas, las métricas y la revisión de procedimientos.
+
+# 24. Herramientas de código abierto
+
+*Enlaces oficiales, inicios rápidos seguros, evidencia y limitaciones.*
+
+| **Herramienta** | **Propósito** | **Controles posibles** |
+|---|---|---|
+| CIS Controls Navigator | Seleccionar Grupos de Implementación y explorar correspondencias oficiales | Todos |
+| CIS Controls Assessment Specification | Orientación oficial para la medición | Todos |
+| CIS-CAT Lite | Evaluación de determinados CIS Benchmarks | 4 |
+| CISO Assistant | Controles, riesgos, evidencia y hallazgos | Todos |
+| Wazuh | Monitoreo de endpoints, SIEM, FIM y alertas | 1, 4, 8, 10, 13, 17 |
+| osquery | Consultas sobre activos, software, cuentas y configuración | 1, 2, 4, 5, 8 |
+| OpenSCAP | Evaluación de configuración segura en Linux | 4, 7 |
+| Lynis | Auditoría de seguridad en Linux | 4, 7 |
+| Nmap | Descubrimiento autorizado de activos y servicios | 1, 12 |
+| Greenbone Community Edition | Evaluación de vulnerabilidades | 7 |
+| Trivy | Repositorios, imágenes, dependencias, secretos e infraestructura como código | 2, 4, 7, 16 |
+| OWASP ZAP | Pruebas autorizadas de seguridad web | 16, 18 |
+| Suricata | Detección de intrusiones en red y visibilidad del tráfico | 8, 13, 17 |
+| Keycloak | Identidades, roles, MFA, sesiones y eventos | 5, 6, 8 |
+| DefectDojo | Ingesta de hallazgos, deduplicación, remediación y repetición de pruebas | 7, 16, 18 |
+| Velociraptor | Visibilidad de endpoints y respuesta a incidentes | 1, 8, 13, 17 |
+
+| **Limitación crítica:** Una herramienta puede respaldar una o más Salvaguardas, pero no puede seleccionar por sí sola el Grupo de Implementación de una organización, definir su tolerancia al riesgo, garantizar una cobertura completa, sustituir los procedimientos y la revisión humana, autorizar pruebas de penetración ni demostrar por sí sola el cumplimiento de otro marco. |
+|---|
 
 # 25. Manual de los Controles CIS para gerentes
 

@@ -17,6 +17,7 @@ The manual uses a fictional multinational travel-management company, **GlobalWay
 
 - 138 chapters drafted
 - Appendices A–Z drafted
+- corrected-master pass completed through Chapter 138
 - English legal and citation audit underway
 - publication graphics under correction and accessibility review
 - Spanish and Brazilian Portuguese editions blocked until the affected English legal text is cleared
@@ -39,11 +40,12 @@ The binding legal source baseline is:
 3. the current consolidated EUR-Lex text;
 4. official European Commission and EU AI Office guidance, identified as non-binding where applicable.
 
-During the legal-audit phase, the following correction package controls over any conflicting earlier draft, table, figure, appendix, or translation:
+During the legal-audit phase, the following correction packages control over any conflicting earlier draft, table, figure, appendix, translation, or timeline summary:
 
 - [Binding Legal Corrections — Batch 01](./quality/BINDING_LEGAL_CORRECTIONS_BATCH_01.md)
+- [Foundation Timeline and Source Register Correction — 30 July 2026](./quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION_2026_07_30.md)
 
-The manual is not legally cleared for publication until the correction package is applied directly to all affected chapters, appendices, figures, and translations and closure evidence is recorded.
+The manual is not legally cleared for publication until the correction packages are applied directly to all affected chapters, appendices, figures, translations, and foundation material and closure evidence is recorded.
 
 ## Publication plan
 
@@ -55,6 +57,7 @@ The manual is not legally cleared for publication until the correction package i
 ## Foundation and quality documents
 
 - [Research, architecture, and editorial foundation](./EU_AI_Act_GRC_Manual_Foundation.md)
+- [Foundation timeline and source-register correction](./quality/FOUNDATION_TIMELINE_AND_SOURCE_REGISTER_CORRECTION_2026_07_30.md)
 - [Legal and citation audit plan](./quality/LEGAL_AND_CITATION_AUDIT_PLAN.md)
 - [Legal audit Batch 01 — Chapters 1–35](./quality/Legal_Citation_Audit_Batch_01_Chapters_1_35.md)
 - [Binding Legal Corrections — Batch 01](./quality/BINDING_LEGAL_CORRECTIONS_BATCH_01.md)

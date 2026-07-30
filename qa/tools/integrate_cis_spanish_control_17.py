@@ -11,8 +11,9 @@ TARGET = Path(
 )
 REWRITE = Path("qa/rewrite/CIS_CONTROLS_V8_1_ES_CONTROL_17_REVIEWED.md")
 
-START = "# 22."
-END = "# 23."
+CLEAN_START = re.compile(r"(?m)^# 22\.\s+Control 17\b")
+LEGACY_START = re.compile(r"(?mi)^Control 17\s*[-—]\s*Gestión de la respuesta")
+END = re.compile(r"(?m)^# 23\.\s+Control 18\b")
 
 
 def extract_rewrite(text: str) -> str:
@@ -25,6 +26,13 @@ def extract_rewrite(text: str) -> str:
     return text[start:end].rstrip() + "\n\n"
 
 
+def unique_match(pattern: re.Pattern[str], text: str, label: str) -> re.Match[str] | None:
+    matches = list(pattern.finditer(text))
+    if len(matches) > 1:
+        raise ValueError(f"Ambiguous {label} boundary: {len(matches)} matches")
+    return matches[0] if matches else None
+
+
 def main() -> int:
     if not TARGET.is_file() or not REWRITE.is_file():
         print("Missing target or reviewed rewrite", file=sys.stderr)
@@ -33,15 +41,29 @@ def main() -> int:
     target = TARGET.read_text(encoding="utf-8")
     rewrite = extract_rewrite(REWRITE.read_text(encoding="utf-8"))
 
-    starts = [m.start() for m in re.finditer(r"(?m)^# 22\.", target)]
-    ends = [m.start() for m in re.finditer(r"(?m)^# 23\.", target)]
-    if len(starts) != 1 or len(ends) != 1 or not starts[0] < ends[0]:
-        print(f"Ambiguous section boundaries: starts={len(starts)}, ends={len(ends)}", file=sys.stderr)
+    try:
+        clean_start = unique_match(CLEAN_START, target, "clean Control 17 start")
+        legacy_start = unique_match(LEGACY_START, target, "legacy Control 17 start")
+        end = unique_match(END, target, "Control 18 end")
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
         return 3
 
-    updated = target[: starts[0]] + rewrite + target[ends[0] :]
+    if clean_start and legacy_start:
+        print("Both clean and legacy Control 17 headings exist; refusing replacement", file=sys.stderr)
+        return 3
 
-    section = updated[updated.index("# 22.") : updated.index("# 23.")]
+    start = clean_start or legacy_start
+    if start is None or end is None or start.start() >= end.start():
+        print("Could not resolve one safe Control 17-to-Control 18 boundary", file=sys.stderr)
+        return 3
+
+    updated = target[: start.start()] + rewrite + target[end.start() :]
+
+    new_start = updated.index("# 22. Control 17")
+    new_end = updated.index("# 23. Control 18", new_start)
+    section = updated[new_start:new_end]
+
     for safeguard in range(1, 10):
         marker = f"| 17.{safeguard} |"
         if section.count(marker) != 1:
@@ -57,6 +79,10 @@ def main() -> int:
     if section.count("media/image9.png") != 1 or "<img " not in section:
         print("Control 17 image reference is invalid", file=sys.stderr)
         return 6
+
+    if LEGACY_START.search(section):
+        print("Legacy Control 17 heading remains after replacement", file=sys.stderr)
+        return 7
 
     TARGET.write_text(updated, encoding="utf-8")
     print(f"Integrated reviewed Control 17 into {TARGET}")

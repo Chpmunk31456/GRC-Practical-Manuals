@@ -1,0 +1,200 @@
+name: Build EU AI Act Spanish and Portuguese editions
+
+on:
+  push:
+    branches:
+      - translation/eu-ai-act-es-ptbr
+    paths:
+      - '04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/**'
+      - '04-regulatory-compliance/EU_AI_Act_GRC/translations/terminology/**'
+      - '04-regulatory-compliance/EU_AI_Act_GRC/translations/quality/**'
+      - '.github/workflows/build-eu-ai-act-spanish-portuguese.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eu-ai-act-es-ptbr-publication
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    name: Translate ${{ matrix.language }} ${{ matrix.items }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [es-419, pt-BR]
+        items:
+          - chapters:1-18
+          - chapters:19-35
+          - chapters:36-52
+          - chapters:53-70
+          - chapters:71-87
+          - chapters:88-103
+          - chapters:104-120
+          - chapters:121-138
+          - appendices
+
+    steps:
+      - name: Check out translation branch
+        uses: actions/checkout@v4
+        with:
+          ref: translation/eu-ai-act-es-ptbr
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-marian-${{ runner.os }}-${{ matrix.language }}
+
+      - name: Install translation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'torch>=2.2,<3' 'transformers>=4.44,<5' 'sentencepiece>=0.2,<1' 'sacremoses>=0.1,<1'
+
+      - name: Translate canonical source shard
+        run: |
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/translate_canonical_sources.py \
+            --repo-root . \
+            --language '${{ matrix.language }}' \
+            --items '${{ matrix.items }}' \
+            --batch-size 16
+
+      - name: Upload translated shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: translated-${{ matrix.language }}-${{ strategy.job-index }}
+          path: |
+            04-regulatory-compliance/EU_AI_Act_GRC/translations/${{ matrix.language }}/source/
+            04-regulatory-compliance/EU_AI_Act_GRC/translations/quality/manifests/${{ matrix.language }}/
+          retention-days: 14
+          if-no-files-found: error
+
+  assemble-and-qa:
+    name: Assemble, validate, and commit both editions
+    needs: translate
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Check out translation branch
+        uses: actions/checkout@v4
+        with:
+          ref: translation/eu-ai-act-es-ptbr
+          fetch-depth: 0
+
+      - name: Download all translated shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: translated-*
+          path: .
+          merge-multiple: true
+
+      - name: Install publication dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc libreoffice-writer poppler-utils fonts-dejavu-core fonts-liberation
+
+      - name: Assemble translated Markdown masters
+        run: |
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/build_translated_publication.py \
+            --repo-root . --language es-419 --out-dir build/eu-ai-act-es-419
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/build_translated_publication.py \
+            --repo-root . --language pt-BR --out-dir build/eu-ai-act-pt-BR
+
+      - name: Generate DOCX editions
+        run: |
+          pandoc build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md \
+            --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
+            --metadata lang=es-419 \
+            --output build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx
+          pandoc build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md \
+            --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
+            --metadata lang=pt-BR \
+            --output build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx
+
+      - name: Generate PDFs
+        env:
+          HOME: ${{ runner.temp }}/lo-home
+        run: |
+          mkdir -p "$HOME" build/eu-ai-act-es-419/pdf-output build/eu-ai-act-pt-BR/pdf-output
+          libreoffice --headless --convert-to pdf --outdir build/eu-ai-act-es-419/pdf-output \
+            build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx
+          libreoffice --headless --convert-to pdf --outdir build/eu-ai-act-pt-BR/pdf-output \
+            build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx
+          mv build/eu-ai-act-es-419/pdf-output/*.pdf build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf
+          mv build/eu-ai-act-pt-BR/pdf-output/*.pdf build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf
+
+      - name: Render pages and collect PDF metadata
+        run: |
+          mkdir -p build/eu-ai-act-es-419/rendered-pages build/eu-ai-act-pt-BR/rendered-pages
+          pdftoppm -png -r 96 build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf build/eu-ai-act-es-419/rendered-pages/page
+          pdftoppm -png -r 96 build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf build/eu-ai-act-pt-BR/rendered-pages/page
+          pdfinfo build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf > build/eu-ai-act-es-419/PDF_INFO.txt
+          pdfinfo build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf > build/eu-ai-act-pt-BR/PDF_INFO.txt
+
+      - name: Run fail-closed QA
+        run: |
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/qa_translated_publication.py \
+            --language es-419 --build-dir build/eu-ai-act-es-419
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/qa_translated_publication.py \
+            --language pt-BR --build-dir build/eu-ai-act-pt-BR
+
+      - name: Create checksums
+        run: |
+          (cd build/eu-ai-act-es-419 && sha256sum *.md *.docx *.pdf *.json > SHA256SUMS.txt)
+          (cd build/eu-ai-act-pt-BR && sha256sum *.md *.docx *.pdf *.json > SHA256SUMS.txt)
+
+      - name: Stage publication artifacts
+        run: |
+          mkdir -p 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/docx
+          mkdir -p 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/pdf
+          mkdir -p 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/docx
+          mkdir -p 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/pdf
+          cp build/eu-ai-act-es-419/*.md 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/
+          cp build/eu-ai-act-es-419/*.json build/eu-ai-act-es-419/SHA256SUMS.txt build/eu-ai-act-es-419/PDF_INFO.txt 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/
+          cp build/eu-ai-act-es-419/*.docx 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/docx/
+          cp build/eu-ai-act-es-419/*.pdf 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/pdf/
+          cp build/eu-ai-act-pt-BR/*.md 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/
+          cp build/eu-ai-act-pt-BR/*.json build/eu-ai-act-pt-BR/SHA256SUMS.txt build/eu-ai-act-pt-BR/PDF_INFO.txt 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/
+          cp build/eu-ai-act-pt-BR/*.docx 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/docx/
+          cp build/eu-ai-act-pt-BR/*.pdf 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/pdf/
+
+      - name: Commit generated editions
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419 \
+                  04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR \
+                  04-regulatory-compliance/EU_AI_Act_GRC/translations/quality/manifests
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'Generate controlled Spanish and Portuguese EU AI Act editions'
+            git push origin HEAD:translation/eu-ai-act-es-ptbr
+          fi
+
+      - name: Upload Spanish publication package
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-ai-act-es-419-publication-candidate
+          path: build/eu-ai-act-es-419/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload Portuguese publication package
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-ai-act-pt-BR-publication-candidate
+          path: build/eu-ai-act-pt-BR/
+          retention-days: 30
+          if-no-files-found: error

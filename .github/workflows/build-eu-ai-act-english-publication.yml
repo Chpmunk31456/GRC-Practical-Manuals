@@ -42,6 +42,11 @@ jobs:
             --repo-root . \
             --out-dir build/eu-ai-act
 
+      - name: Normalize publication heading hierarchy
+        run: |
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/normalize_publication_headings.py \
+            --build-dir build/eu-ai-act
+
       - name: Generate DOCX
         run: |
           pandoc \
@@ -49,7 +54,7 @@ jobs:
             --from markdown+raw_tex \
             --to docx \
             --toc \
-            --toc-depth=3 \
+            --toc-depth=1 \
             --number-sections \
             --metadata title='EU Artificial Intelligence Act GRC Compliance Manual' \
             --output build/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx

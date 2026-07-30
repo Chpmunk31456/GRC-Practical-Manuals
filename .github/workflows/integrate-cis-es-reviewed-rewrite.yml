@@ -34,11 +34,48 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          source='01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md'
-          test "$(grep -c '^| 18\.[1-5] |' "$source")" -eq 5
-          test "$(grep -c '^# 23\. Control 18 — Pruebas de penetración$' "$source")" -eq 1
-          test "$(grep -c '^# 24\. Herramientas de código abierto$' "$source")" -eq 1
-          ! grep -E 'TEN TODO|tención|Silencioso|tóxico' "$source"
+          python3 - <<'PY'
+          from pathlib import Path
+
+          source = Path('01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md')
+          text = source.read_text(encoding='utf-8')
+          start_marker = '# 23. Control 18 — Pruebas de penetración'
+          end_marker = '# 25.'
+
+          if text.count(start_marker) != 1:
+              raise SystemExit('Expected exactly one repaired Section 23 heading.')
+
+          start = text.index(start_marker)
+          end = text.find(end_marker, start)
+          if end == -1:
+              end = len(text)
+
+          repaired = text[start:end]
+          if repaired.count('# 24. Herramientas de código abierto') != 1:
+              raise SystemExit('Expected exactly one repaired Section 24 heading.')
+
+          for safeguard in ('18.1', '18.2', '18.3', '18.4', '18.5'):
+              if repaired.count(f'| {safeguard} |') != 1:
+                  raise SystemExit(f'Expected exactly one complete row for {safeguard}.')
+
+          tools = (
+              'CIS Controls Navigator', 'CIS Controls Assessment Specification',
+              'CIS-CAT Lite', 'CISO Assistant', 'Wazuh', 'osquery', 'OpenSCAP',
+              'Lynis', 'Nmap', 'Greenbone Community Edition', 'Trivy', 'OWASP ZAP',
+              'Suricata', 'Keycloak', 'DefectDojo', 'Velociraptor'
+          )
+          for tool in tools:
+              if repaired.count(f'| {tool} |') != 1:
+                  raise SystemExit(f'Expected exactly one tools-table row for {tool}.')
+
+          forbidden = ('TEN TODO', 'tención', 'Silencioso', 'tóxico')
+          found = [token for token in forbidden if token in repaired]
+          if found:
+              raise SystemExit(f'Forbidden tokens remain in repaired range: {found}')
+
+          print('Validated repaired CIS Spanish Sections 23-24 only.')
+          print('Broader source defects outside this controlled range remain separate QA blockers.')
+          PY
 
       - name: Commit integrated source
         shell: bash

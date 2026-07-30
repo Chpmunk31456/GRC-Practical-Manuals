@@ -5,7 +5,7 @@ The script is intentionally conservative:
 - it never edits source chapters or appendices;
 - it prefers corrected masters;
 - it fails on missing numbers, duplicate canonical selections, empty sources, or ambiguity;
-- it converts very wide Markdown tables into readable record blocks for portrait DOCX/PDF;
+- it converts operational Markdown tables with four or more columns into readable record blocks for portrait DOCX/PDF;
 - it writes a machine-readable manifest and one integrated Markdown master.
 """
 
@@ -24,7 +24,7 @@ ROOT_REL = Path("04-regulatory-compliance/EU_AI_Act_GRC")
 CHAPTER_RE = re.compile(r"^(?P<number>\d{1,3})_(?P<title>.+)\.md$")
 APPENDIX_RE = re.compile(r"^Appendix_(?P<letter>[A-Z])_(?P<title>.+)\.md$")
 TABLE_DIVIDER_RE = re.compile(r"^\s*\|?(?:\s*:?-{3,}:?\s*\|)+\s*$")
-WIDE_TABLE_COLUMN_LIMIT = 5
+WIDE_TABLE_COLUMN_LIMIT = 3
 
 
 @dataclass(frozen=True)
@@ -53,11 +53,11 @@ def split_table_row(line: str) -> list[str]:
 
 
 def readable_wide_tables(text: str) -> str:
-    """Convert tables wider than five columns into portrait-friendly record blocks.
+    """Convert tables with four or more columns into portrait-friendly record blocks.
 
     Source Markdown remains unchanged. Empty template rows are retained as blank fields.
-    Narrow tables remain real tables. This avoids unreadable one-word-per-line columns in
-    generated DOCX/PDF while preserving every header and cell value.
+    Compact tables of one to three columns remain real tables. This avoids unreadable
+    narrow columns in generated DOCX/PDF while preserving every header and cell value.
     """
     lines = text.splitlines()
     output: list[str] = []
@@ -293,7 +293,7 @@ Use each chapter to identify the applicable requirement, understand it in plain 
         "source_branch": "manual/eu-ai-act-grc-compliance",
         "chapter_count": len(selected_chapters),
         "appendix_count": len(selected_appendices),
-        "wide_table_publication_policy": "Tables with more than five columns are rendered as readable record blocks; source Markdown is unchanged.",
+        "wide_table_publication_policy": "Tables with four or more columns are rendered as readable record blocks; source Markdown is unchanged.",
         "master_sha256": digest(master),
         "records": [asdict(record) for record in records],
     }

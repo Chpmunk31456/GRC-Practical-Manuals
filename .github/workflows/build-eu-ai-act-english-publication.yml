@@ -31,6 +31,11 @@ jobs:
             fonts-dejavu-core \
             fonts-liberation
 
+      - name: Inventory all English sources
+        run: |
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/inventory_english_sources.py \
+            --repo-root .
+
       - name: Assemble canonical English Markdown
         run: |
           python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/build_english_publication.py \

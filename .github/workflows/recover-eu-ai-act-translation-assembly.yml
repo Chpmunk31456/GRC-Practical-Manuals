@@ -47,6 +47,26 @@ jobs:
           find 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source -type f | sort | head
           find 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source -type f | sort | head
 
+      - name: Normalize recovered Portuguese Appendix Q heading
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_Q_AI_Literacy_Matrix_CORRECTED_MASTER.md')
+          text = path.read_text(encoding='utf-8')
+          lines = text.splitlines()
+          for index, line in enumerate(lines):
+              if line.startswith('# '):
+                  if line.strip() != '# Q AI-Literacia Matriz':
+                      raise SystemExit(f'Unexpected Appendix Q source heading: {line!r}')
+                  lines[index] = '# Apêndice Q Matriz de Literacia em IA'
+                  break
+          else:
+              raise SystemExit('Appendix Q source heading not found')
+          path.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
+          print('Normalized Portuguese Appendix Q heading without retranslating content')
+          PY
+
       - name: Install publication dependencies
         run: |
           sudo apt-get update

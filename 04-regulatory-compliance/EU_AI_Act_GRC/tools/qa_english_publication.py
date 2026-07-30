@@ -10,6 +10,7 @@ import re
 import sys
 import zipfile
 from pathlib import Path
+from xml.etree import ElementTree
 
 CHAPTER_HEADING = re.compile(r"^## Chapter\s+(\d+)\b", re.MULTILINE)
 APPENDIX_HEADING = re.compile(r"^## Appendix\s+([A-Z])\b", re.MULTILINE)
@@ -22,6 +23,7 @@ BAD_TOKENS = (
     "TBD",
     "PLACEHOLDER",
 )
+WORD_NS = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 
 
 def sha256(path: Path) -> str:
@@ -47,12 +49,19 @@ def inspect_docx(path: Path, failures: list[str]) -> None:
             require("word/document.xml" in names, "DOCX lacks word/document.xml", failures)
             require("word/styles.xml" in names, "DOCX lacks word/styles.xml", failures)
             require("docProps/core.xml" in names, "DOCX lacks core properties", failures)
-            document = archive.read("word/document.xml").decode("utf-8", errors="replace")
-            require("EU Artificial Intelligence Act" in document, "DOCX title not found", failures)
-            require("Chapter 138" in document, "DOCX Chapter 138 not found", failures)
-            require("Appendix Z" in document, "DOCX Appendix Z not found", failures)
+            root = ElementTree.fromstring(archive.read("word/document.xml"))
+            visible_text = " ".join(
+                node.text or "" for node in root.iter(f"{WORD_NS}t")
+            )
+            visible_text = re.sub(r"\s+", " ", visible_text)
+            require("EU Artificial Intelligence Act" in visible_text, "DOCX title not found", failures)
+            require("Chapter 138" in visible_text, "DOCX Chapter 138 not found", failures)
+            require("Appendix Z" in visible_text, "DOCX Appendix Z not found", failures)
+            require(len(visible_text) > 100_000, "DOCX visible text appears unexpectedly short", failures)
     except zipfile.BadZipFile:
         failures.append("DOCX is not a valid ZIP/OOXML package")
+    except ElementTree.ParseError:
+        failures.append("DOCX document.xml is not well-formed XML")
 
 
 def main() -> int:

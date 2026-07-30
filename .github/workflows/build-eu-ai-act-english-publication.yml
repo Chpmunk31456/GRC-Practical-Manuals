@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - manual/eu-ai-act-grc-compliance
+      - production/multilingual-grc-editions
     paths:
       - '04-regulatory-compliance/EU_AI_Act_GRC/**'
       - '.github/workflows/build-eu-ai-act-english-publication.yml'

@@ -17,7 +17,7 @@
 | Item | Canonical source | Superseded or competing files | Action | Verification result | Commit evidence |
 |---|---|---|---|---|---|
 | Chapter 71 | `chapters/71_AI_Vendor_Due_Diligence_CORRECTED_MASTER.md` | `71_AI_Vendor_Due_Diligence.md`; `71_AI_Vendor_Due_Diligence_and_Contractual_Assurance.md` | Preserve detailed drafts until mapped operational content is integrated into Chapters 71–79 and Appendices O/P | Full source comparison completed; canonical identity confirmed; combined draft overlaps Chapters 72–79 | Comparison commit `d8e6927ab1624acf6e939c9f66801ef559b4a50d`; canonical map `4fc812089c5c04122f8015d332da739eb2b0bafa` |
-| Chapter 72 | `chapters/72_Contract_Clauses_CORRECTED_MASTER.md` | `72_AI_Contract_Clauses_and_Allocation_of_Responsibilities.md`; `72_AI_Contracting_and_Compliance_Clauses_CORRECTED_MASTER.md` | Preserve pending content comparison | Canonical topic confirmed as Contract Clauses | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
+| Chapter 72 | `chapters/72_Contract_Clauses_CORRECTED_MASTER.md` | `72_AI_Contract_Clauses_and_Allocation_of_Responsibilities.md`; `72_AI_Contracting_and_Compliance_Clauses_CORRECTED_MASTER.md` | Preserve migration sources until detailed clause families, role schedule, controls, evidence, and audit content are integrated into Chapter 72 and Appendices F/P/U/V | Full source comparison completed; canonical identity confirmed; contractual controls distinguished from statutory duties | Comparison commit `4055dfe809c20b6d6b9fba11d22ce80d424cf7f7`; canonical map `4fc812089c5c04122f8015d332da739eb2b0bafa` |
 | Chapter 73 | `chapters/73_Provider_Documentation_Review_CORRECTED_MASTER.md` | `73_Provider_Documentation_Review.md`; `73_Ongoing_Supplier_Oversight_CORRECTED_MASTER.md` | Preserve pending content comparison | Canonical topic confirmed as Provider Documentation Review | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
 | Chapter 74 | `chapters/74_Model_Cards_System_Cards_and_Limitations_CORRECTED_MASTER.md` | `74_Model_Cards_System_Cards_and_Limitations.md`; `74_Audit_Assurance_and_Evidence_Access_CORRECTED_MASTER.md` | Preserve pending content comparison | Canonical topic confirmed as Model Cards, System Cards, and Limitations | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
 | Chapter 75 | `chapters/75_Audit_Rights_and_Incident_Notification_CORRECTED_MASTER.md` | `75_Audit_Rights_and_Incident_Notification.md`; `75_AI_Supplier_Exit_and_Continuity_CORRECTED_MASTER.md` | Preserve pending content comparison | Canonical topic confirmed as Audit Rights and Incident Notification | Canonical map commit `4fc812089c5c04122f8015d332da739eb2b0bafa` |
@@ -32,15 +32,16 @@
 
 ## Known unresolved consolidation items
 
-1. Compare alternate Chapter 72–76 supplier-governance files against the canonical files and preserve nonduplicative content in the proper chapter or appendix.
+1. Compare alternate Chapter 73–76 supplier-governance files against the canonical files and preserve nonduplicative content in the proper chapter or appendix.
 2. Migrate and verify the useful Chapter 71 operational content identified in `quality/CANONICAL_COMPARISON_CHAPTER_71.md`.
-3. Review every original chapter file against its corrected master before archive or deletion.
-4. Identify all zero-content and truncated chapter files, including legacy corrected files reported with zero additions.
-5. Reconcile overlapping legal-audit reports, especially the overlapping Chapter 77–91 audit and the separate Batch 05 record.
-6. Repair and verify the Chapter 92–103 legal-audit record if incomplete.
-7. Integrate the foundation legal correction directly into the foundation document after a complete replacement review.
-8. Review Appendices A–Z and establish one canonical file for each appendix.
-9. Create an archive manifest before any deletion batch.
+3. Migrate and verify the useful Chapter 72 operational content identified in `quality/CANONICAL_COMPARISON_CHAPTER_72.md`.
+4. Review every original chapter file against its corrected master before archive or deletion.
+5. Identify all zero-content and truncated chapter files, including legacy corrected files reported with zero additions.
+6. Reconcile overlapping legal-audit reports, especially the overlapping Chapter 77–91 audit and the separate Batch 05 record.
+7. Repair and verify the Chapter 92–103 legal-audit record if incomplete.
+8. Integrate the foundation legal correction directly into the foundation document after a complete replacement review.
+9. Review Appendices A–Z and establish one canonical file for each appendix.
+10. Create an archive manifest before any deletion batch.
 
 ## Deletion gate
 

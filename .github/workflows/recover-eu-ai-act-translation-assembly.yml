@@ -83,11 +83,11 @@ jobs:
         run: |
           pandoc build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md \
             --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
-            --metadata lang=es-419 \
+            --metadata lang=es-419 --metadata toc-title='Tabla de contenido' \
             --output build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx
           pandoc build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md \
             --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
-            --metadata lang=pt-BR \
+            --metadata lang=pt-BR --metadata toc-title='Sumário' \
             --output build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx
 
       - name: Generate PDFs

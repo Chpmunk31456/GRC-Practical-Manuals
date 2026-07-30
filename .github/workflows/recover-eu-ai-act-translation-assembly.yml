@@ -67,6 +67,43 @@ jobs:
           print('Normalized Portuguese Appendix Q heading without retranslating content')
           PY
 
+      - name: Localize recovered Figure 12-1 process flow
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          source = (
+              'AI system identified → roles and affected people mapped → competence\n'
+              'requirements defined → role-based learning delivered → realistic\n'
+              'competence tested → access approved → performance monitored → change\n'
+              'or incident triggers retraining'
+          )
+          replacements = {
+              'es-419': (
+                  'Sistema de IA identificado → funciones y personas afectadas mapeadas → requisitos de\n'
+                  'competencia definidos → aprendizaje basado en funciones impartido → competencia\n'
+                  'probada en situaciones realistas → acceso aprobado → desempeño supervisado → cambio\n'
+                  'o incidente activa el reentrenamiento'
+              ),
+              'pt-BR': (
+                  'Sistema de IA identificado → funções e pessoas afetadas mapeadas → requisitos de\n'
+                  'competência definidos → aprendizagem baseada em funções ministrada → competência\n'
+                  'testada em situações realistas → acesso aprovado → desempenho monitorado → mudança\n'
+                  'ou incidente aciona novo treinamento'
+              ),
+          }
+          relative = 'source/chapters/12_AI_Literacy_Role_Based_Training_and_Competence_Assurance.md'
+          root = Path('04-regulatory-compliance/EU_AI_Act_GRC/translations')
+          for language, replacement in replacements.items():
+              path = root / language / relative
+              text = path.read_text(encoding='utf-8')
+              count = text.count(source)
+              if count != 1:
+                  raise SystemExit(f'{language}: expected exactly one English Figure 12-1 flow, found {count}')
+              path.write_text(text.replace(source, replacement), encoding='utf-8')
+              print(f'Localized Figure 12-1 process flow for {language}')
+          PY
+
       - name: Install publication dependencies
         run: |
           sudo apt-get update
@@ -116,6 +153,10 @@ jobs:
             --language es-419 --build-dir build/eu-ai-act-es-419
           python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/qa_translated_publication.py \
             --language pt-BR --build-dir build/eu-ai-act-pt-BR
+          ! grep -Fq 'AI system identified' build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md
+          ! grep -Fq 'AI system identified' build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md
+          ! grep -Fq 'Table of Contents' build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md
+          ! grep -Fq 'Table of Contents' build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md
 
       - name: Create checksums
         run: |

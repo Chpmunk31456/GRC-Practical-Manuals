@@ -1,16 +1,16 @@
 # GRC Practical Manuals
 
-Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, and third-party risk.
+Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, and third-party risk.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.1  
+**Repository version:** 1.2  
 **Last updated:** July 2026
 
 ## Start Here
 
 1. Choose a subject area from the catalog below.
 2. Open the manual’s folder and read its `README.md`.
-3. Select the Word or PDF edition.
+3. Select the available source, Word, or PDF edition.
 4. Adapt the guidance to your organization’s actual risks, systems, contracts, and obligations.
 5. Verify requirements against current official sources and retain appropriate evidence.
 
@@ -21,7 +21,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [01 — Foundations](./01-foundations/) | [NIST CSF 2.0](./01-foundations/NIST_CSF_2/), [CIS Controls v8.1](./01-foundations/CIS_Controls_v8.1/), and [NIST RMF / SP 800-53](./01-foundations/NIST_RMF_SP_800-53/) |
 | [02 — Management Systems](./02-management-systems/) | [ISO/IEC 27001 and 27002](./02-management-systems/ISO_IEC_27001_27002/) |
 | [03 — Assurance and Audit](./03-assurance-and-audit/) | [SOC 2 audit readiness in English and Spanish](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/) |
-| [04 — Regulatory Compliance](./04-regulatory-compliance/) | [GDPR](./04-regulatory-compliance/GDPR/), [HIPAA](./04-regulatory-compliance/HIPAA/), and [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/) |
+| [04 — Regulatory Compliance](./04-regulatory-compliance/) | [EU AI Act GRC Compliance Manual](./04-regulatory-compliance/EU_AI_Act_GRC/), [GDPR](./04-regulatory-compliance/GDPR/), [HIPAA](./04-regulatory-compliance/HIPAA/), and [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/) |
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
@@ -29,7 +29,8 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 
 ## Available Formats and Languages
 
-- Most manuals are available in Microsoft Word (`.docx`) and PDF.
+- Most established manuals are available in Microsoft Word (`.docx`) and PDF.
+- The EU AI Act manual includes a controlled English source and an automated DOCX/PDF publication workflow.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 
@@ -37,7 +38,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 
 - Students and people entering GRC or cybersecurity
 - Junior analysts and career changers
-- Security, privacy, compliance, risk, and audit professionals
+- Security, privacy, compliance, risk, audit, and AI-governance professionals
 - Managers, consultants, small businesses, and nonprofit organizations
 - Teams developing or improving formal security and compliance programs
 

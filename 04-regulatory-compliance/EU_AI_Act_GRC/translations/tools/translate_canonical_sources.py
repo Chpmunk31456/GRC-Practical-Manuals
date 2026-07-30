@@ -28,7 +28,7 @@ ROOT_REL = Path("04-regulatory-compliance/EU_AI_Act_GRC")
 TRANSLATIONS_REL = ROOT_REL / "translations"
 MODEL_BY_LANG = {
     "es-419": "Helsinki-NLP/opus-mt-en-es",
-    "pt-BR": "Helsinki-NLP/opus-mt-en-pt",
+    "pt-BR": "Helsinki-NLP/opus-mt-tc-big-en-pt",
 }
 TARGET_LABEL = {"es-419": "Spanish (Latin America)", "pt-BR": "Portuguese (Brazil)"}
 

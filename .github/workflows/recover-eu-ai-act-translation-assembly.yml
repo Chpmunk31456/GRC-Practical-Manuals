@@ -55,16 +55,21 @@ jobs:
           path = Path('04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_Q_AI_Literacy_Matrix_CORRECTED_MASTER.md')
           text = path.read_text(encoding='utf-8')
           lines = text.splitlines()
+          expected = '# Q AI-Literacia Matriz'
+          normalized = '# Apêndice Q Matriz de Literacia em IA'
           for index, line in enumerate(lines):
               if line.startswith('# '):
-                  if line.strip() != '# Q AI-Literacia Matriz':
+                  if line.strip() == expected:
+                      lines[index] = normalized
+                      path.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
+                      print('Normalized Portuguese Appendix Q heading without retranslating content')
+                  elif line.strip() == normalized:
+                      print('Portuguese Appendix Q heading already normalized')
+                  else:
                       raise SystemExit(f'Unexpected Appendix Q source heading: {line!r}')
-                  lines[index] = '# Apêndice Q Matriz de Literacia em IA'
                   break
           else:
               raise SystemExit('Appendix Q source heading not found')
-          path.write_text('\n'.join(lines).rstrip() + '\n', encoding='utf-8')
-          print('Normalized Portuguese Appendix Q heading without retranslating content')
           PY
 
       - name: Localize recovered Figure 12-1 process flow
@@ -97,11 +102,18 @@ jobs:
           for language, replacement in replacements.items():
               path = root / language / relative
               text = path.read_text(encoding='utf-8')
-              count = text.count(source)
-              if count != 1:
-                  raise SystemExit(f'{language}: expected exactly one English Figure 12-1 flow, found {count}')
-              path.write_text(text.replace(source, replacement), encoding='utf-8')
-              print(f'Localized Figure 12-1 process flow for {language}')
+              source_count = text.count(source)
+              localized_count = text.count(replacement)
+              if source_count == 1 and localized_count == 0:
+                  path.write_text(text.replace(source, replacement), encoding='utf-8')
+                  print(f'Localized Figure 12-1 process flow for {language}')
+              elif source_count == 0 and localized_count == 1:
+                  print(f'Figure 12-1 process flow already localized for {language}')
+              else:
+                  raise SystemExit(
+                      f'{language}: ambiguous Figure 12-1 state; '
+                      f'English matches={source_count}, localized matches={localized_count}'
+                  )
           PY
 
       - name: Install publication dependencies

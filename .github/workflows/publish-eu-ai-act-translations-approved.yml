@@ -1,0 +1,154 @@
+name: Publish approved EU AI Act translations
+
+on:
+  push:
+    branches:
+      - translation/eu-ai-act-es-ptbr
+    paths:
+      - '.github/workflows/publish-eu-ai-act-translations-approved.yml'
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: eu-ai-act-approved-publication
+  cancel-in-progress: false
+
+jobs:
+  publish-approved-editions:
+    name: Commit validated Spanish and Portuguese editions
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Check out approved translation branch
+        uses: actions/checkout@v4
+        with:
+          ref: translation/eu-ai-act-es-ptbr
+          fetch-depth: 0
+
+      - name: Download completed translated source shards
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 30574515418
+          github-token: ${{ github.token }}
+          pattern: translated-*
+          path: 04-regulatory-compliance/EU_AI_Act_GRC/translations
+          merge-multiple: true
+
+      - name: Download validated Spanish publication package
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 30585103269
+          github-token: ${{ github.token }}
+          name: eu-ai-act-es-419-publication-candidate-recovered
+          path: build/publish-es-419
+
+      - name: Download validated Portuguese publication package
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 30585103269
+          github-token: ${{ github.token }}
+          name: eu-ai-act-pt-BR-publication-candidate-recovered
+          path: build/publish-pt-BR
+
+      - name: Apply approved recovery normalizations to source shards
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          root = Path('04-regulatory-compliance/EU_AI_Act_GRC/translations')
+
+          appendix_q = root / 'pt-BR/source/appendices/Appendix_Q_AI_Literacy_Matrix_CORRECTED_MASTER.md'
+          text = appendix_q.read_text(encoding='utf-8')
+          text = text.replace('# Q AI-Literacia Matriz', '# Apêndice Q Matriz de Literacia em IA')
+          appendix_q.write_text(text, encoding='utf-8')
+
+          flow_source = '`AI system identified → roles and affected people mapped → competence requirements defined → role-based learning delivered → realistic competence tested → access approved → performance monitored → change or incident triggers retraining`'
+          flows = {
+              'es-419': '`Sistema de IA identificado → funciones y personas afectadas mapeadas → requisitos de competencia definidos → aprendizaje basado en funciones impartido → competencia probada en situaciones realistas → acceso aprobado → desempeño supervisado → cambio o incidente activa el reentrenamiento`',
+              'pt-BR': '`Sistema de IA identificado → funções e pessoas afetadas mapeadas → requisitos de competência definidos → aprendizagem baseada em funções ministrada → competência testada em situações realistas → acesso aprovado → desempenho monitorado → mudança ou incidente aciona novo treinamento`',
+          }
+          chapter12 = 'source/chapters/12_AI_Literacy_Role_Based_Training_and_Competence_Assurance.md'
+          for language, replacement in flows.items():
+              path = root / language / chapter12
+              text = path.read_text(encoding='utf-8').replace(flow_source, replacement)
+              path.write_text(text, encoding='utf-8')
+
+          heading_rules = {
+              'es-419': ('Explicación simple en inglés', 'Explicación en lenguaje sencillo'),
+              'pt-BR': ('Explicação Inglês-Inglês', 'Explicação em linguagem simples'),
+          }
+          for language, (bad, good) in heading_rules.items():
+              source_root = root / language / 'source'
+              for path in source_root.rglob('*.md'):
+                  text = path.read_text(encoding='utf-8')
+                  if bad in text:
+                      path.write_text(text.replace(bad, good), encoding='utf-8')
+          PY
+
+      - name: Install validated publication files
+        run: |
+          base=04-regulatory-compliance/EU_AI_Act_GRC/translations
+          mkdir -p "$base/es-419/docx" "$base/es-419/pdf" "$base/pt-BR/docx" "$base/pt-BR/pdf" "$base/quality/es-419" "$base/quality/pt-BR"
+
+          cp build/publish-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md \
+            "$base/es-419/source/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md"
+          cp build/publish-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx \
+            "$base/es-419/docx/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx"
+          cp build/publish-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf \
+            "$base/es-419/pdf/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf"
+          cp build/publish-es-419/AUTOMATED_QA_REPORT_es-419.json build/publish-es-419/CANONICAL_BUILD_MANIFEST_es-419.json build/publish-es-419/PDF_INFO.txt \
+            "$base/quality/es-419/"
+
+          cp build/publish-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md \
+            "$base/pt-BR/source/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md"
+          cp build/publish-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx \
+            "$base/pt-BR/docx/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx"
+          cp build/publish-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf \
+            "$base/pt-BR/pdf/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf"
+          cp build/publish-pt-BR/AUTOMATED_QA_REPORT_pt-BR.json build/publish-pt-BR/CANONICAL_BUILD_MANIFEST_pt-BR.json build/publish-pt-BR/PDF_INFO.txt \
+            "$base/quality/pt-BR/"
+
+          (
+            cd "$base"
+            sha256sum \
+              es-419/source/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md \
+              es-419/docx/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx \
+              es-419/pdf/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf \
+              quality/es-419/AUTOMATED_QA_REPORT_es-419.json \
+              quality/es-419/CANONICAL_BUILD_MANIFEST_es-419.json \
+              pt-BR/source/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md \
+              pt-BR/docx/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx \
+              pt-BR/pdf/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf \
+              quality/pt-BR/AUTOMATED_QA_REPORT_pt-BR.json \
+              quality/pt-BR/CANONICAL_BUILD_MANIFEST_pt-BR.json \
+              > quality/PUBLICATION_SHA256SUMS.txt
+          )
+
+      - name: Verify publication payload before commit
+        run: |
+          base=04-regulatory-compliance/EU_AI_Act_GRC/translations
+          test "$(find "$base/es-419/source/chapters" -type f -name '*.md' | wc -l)" -ge 138
+          test "$(find "$base/es-419/source/appendices" -type f -name '*.md' | wc -l)" -ge 26
+          test "$(find "$base/pt-BR/source/chapters" -type f -name '*.md' | wc -l)" -ge 138
+          test "$(find "$base/pt-BR/source/appendices" -type f -name '*.md' | wc -l)" -ge 26
+          grep -Fq '"status": "PASS"' "$base/quality/es-419/AUTOMATED_QA_REPORT_es-419.json"
+          grep -Fq '"status": "PASS"' "$base/quality/pt-BR/AUTOMATED_QA_REPORT_pt-BR.json"
+          ! grep -R -Fq 'Explicación simple en inglés' "$base/es-419/source"
+          ! grep -R -Fq 'Explicação Inglês-Inglês' "$base/pt-BR/source"
+          ! grep -R -Fq 'AI system identified' "$base/es-419/source" "$base/pt-BR/source"
+          (cd "$base" && sha256sum -c quality/PUBLICATION_SHA256SUMS.txt)
+
+      - name: Commit approved publication files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 04-regulatory-compliance/EU_AI_Act_GRC/translations
+          if git diff --cached --quiet; then
+            echo 'No publication changes to commit'
+            exit 1
+          fi
+          git commit -m 'publish: add validated EU AI Act Spanish and Portuguese editions'
+          git push origin HEAD:translation/eu-ai-act-es-ptbr

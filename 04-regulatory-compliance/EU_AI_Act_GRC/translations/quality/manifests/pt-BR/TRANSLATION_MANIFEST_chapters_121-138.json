@@ -1,0 +1,188 @@
+{
+  "language": "pt-BR",
+  "target": "Portuguese (Brazil)",
+  "model": "Helsinki-NLP/opus-mt-tc-big-en-pt",
+  "items": "chapters:121-138",
+  "records": [
+    {
+      "item": "Chapter 121",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/121_Findings_Remediation_and_Closure_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/121_Findings_Remediation_and_Closure_CORRECTED_MASTER.md",
+      "source_sha256": "f9090b60e31b844fdfe14d0a4d0611b6404271b8e0bbada0ec2a40dc0a1f9137",
+      "output_sha256": "b78a2ddac8ee8a5ff2e772d6def36c87729d780f5f65a32291831f498394b3ae",
+      "source_bytes": 3606,
+      "output_bytes": 3871,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 122",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/122_AI_Office_and_National_Authorities_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/122_AI_Office_and_National_Authorities_CORRECTED_MASTER.md",
+      "source_sha256": "2bc14d28870d774d96ba2ee7b44587c5a0632fb2054db3eea7b534cbc68e6825",
+      "output_sha256": "180469b2241b914a6e4274c9d474419fc73625d8277d67d5f73605f3fb5cfaf9",
+      "source_bytes": 3453,
+      "output_bytes": 3808,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 123",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/123_Market_Surveillance_Authorities_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/123_Market_Surveillance_Authorities_CORRECTED_MASTER.md",
+      "source_sha256": "4b7c7b5471d764e2efae5119613f936ace3d11c4f23a84a31f4a40d4c7cf99ad",
+      "output_sha256": "f4b7b5238286221c7e04c3e0e2995b3a480861871e0f25e32399d2179c3cba9e",
+      "source_bytes": 3693,
+      "output_bytes": 3841,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 124",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/124_Investigations_and_Information_Requests_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/124_Investigations_and_Information_Requests_CORRECTED_MASTER.md",
+      "source_sha256": "43bf7cbd0a071f075d5ae147126ced5fadd887d613d8bc21d58c33e0b1f570a6",
+      "output_sha256": "e7d58c2b531564f7e8a4d8dc9ba335507c4b274ab56d79bdd263b789e2750e7c",
+      "source_bytes": 3719,
+      "output_bytes": 4095,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 125",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/125_Administrative_Fines_and_Exposure_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/125_Administrative_Fines_and_Exposure_CORRECTED_MASTER.md",
+      "source_sha256": "1ad3f5a81ea129c39e8a2211318ec5ff4a084af13e9331339590e67cfcf9a97c",
+      "output_sha256": "bba0d4069ae9c93539033b2925366d0ae83e459eff115337ac7b86fff45e190a",
+      "source_bytes": 3647,
+      "output_bytes": 4121,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 126",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/126_Executive_Escalation_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/126_Executive_Escalation_CORRECTED_MASTER.md",
+      "source_sha256": "fc487e86c3c0493dd00129f4c3b28fc0c66b6dac85a006ec0c029a74c24ec385",
+      "output_sha256": "c43ea8da6941c29d4611e8ff90ca7af1f4acfe0de402e47735a1dcd6463a0edd",
+      "source_bytes": 10391,
+      "output_bytes": 11663,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 127",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/127_Regulatory_Notification_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/127_Regulatory_Notification_CORRECTED_MASTER.md",
+      "source_sha256": "b7925ffc8adf4bdb9febb620e6cdd8b257aee3a4ea2be6414af5ed94e2fe799a",
+      "output_sha256": "56ee7252cac0500902d8ae5e2a1f7c86929ff7a7ef15c397a6bb58d8ab739b47",
+      "source_bytes": 11152,
+      "output_bytes": 12712,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 128",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/128_Evidence_Preservation_and_Legal_Hold_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/128_Evidence_Preservation_and_Legal_Hold_CORRECTED_MASTER.md",
+      "source_sha256": "fe236a3a96f39deb49f224103b5b8aedddf754dfd084110351b8599157308678",
+      "output_sha256": "45f5dd4ee47e49b94b641a9ad136da785b6a4f83f88aa5801941e43b5a5a80d9",
+      "source_bytes": 10269,
+      "output_bytes": 11653,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 129",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/129_First_30_Days_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/129_First_30_Days_CORRECTED_MASTER.md",
+      "source_sha256": "729dc4e497fc9442d23e737392353b5ea606ab0fc561aebef2c840165b78b7f7",
+      "output_sha256": "1ffbd28fa999fcd1ad311740dedbf3ee18597b2b8e0541e47af3504aa06949d1",
+      "source_bytes": 7612,
+      "output_bytes": 8604,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 130",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/130_Days_31_to_90_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/130_Days_31_to_90_CORRECTED_MASTER.md",
+      "source_sha256": "c02a19bc30a2a381187caed181805c7b1a9bf6bb8b7a6d768e22bd3b85eed361",
+      "output_sha256": "f8bd4a92faa2fe4204ceb76afc80d9959f680aa1376764c495708ca5b1fd7221",
+      "source_bytes": 7279,
+      "output_bytes": 8225,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 131",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/131_Months_4_to_6_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/131_Months_4_to_6_CORRECTED_MASTER.md",
+      "source_sha256": "31b2c11d8db19ff8aca9938c0855def070e91e2ef1bb6cb61de91d2889320547",
+      "output_sha256": "7852654ea265a6b863a548b78c6f950f6ba5bbbdae07638edbe4eaa5d4300d16",
+      "source_bytes": 11141,
+      "output_bytes": 12701,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 132",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/132_Months_7_to_12_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/132_Months_7_to_12_CORRECTED_MASTER.md",
+      "source_sha256": "4d20ef0143f40ca96d5e457e77b88144221088d22d728dee08126505bf89152b",
+      "output_sha256": "085abb897c4f92175c17c3105a95a31f7daa2eeba3ac1594e90a30bdc70e83ab",
+      "source_bytes": 12627,
+      "output_bytes": 14470,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 133",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/133_High_Risk_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/133_High_Risk_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "source_sha256": "5d9be1d37ab884a15d936f2b9f60e71c7859e321a246d032e540abec801f093d",
+      "output_sha256": "7465320e975778ccb45c3c1b7489ea6bb95a6e2b04fc114af6ecd26c78dfacb3",
+      "source_bytes": 14178,
+      "output_bytes": 16354,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 134",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/134_GPAI_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/134_GPAI_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "source_sha256": "80313bc468f59959f6093e7b5accd1f441044df71761aa454c81f15a4ab7dc74",
+      "output_sha256": "4bce2138e57bd026bd3ca674f35b53f67610b6a84f422712a7a6412eac2aef37",
+      "source_bytes": 9453,
+      "output_bytes": 10900,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 135",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/135_Transparency_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/135_Transparency_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "source_sha256": "7cb66d03e6cc7fabb8c8e8c49a591b5323bddc0440d8c23c337cb697fe0547ae",
+      "output_sha256": "047f0b687409d8243214b8db1bc5bf27ef2ca485dd2ae93e309fbc9b02eee41e",
+      "source_bytes": 9355,
+      "output_bytes": 10475,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 136",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/136_Multijurisdictional_Deployment_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/136_Multijurisdictional_Deployment_CORRECTED_MASTER.md",
+      "source_sha256": "c0575d7f2ba2fdba0d1e4b741bc926367289ec85cd73cdf19a3e2ecb3b5028e5",
+      "output_sha256": "28c823b4a0eda6c6464c5ec0a4ed15b08551590ec925dc218252128bfd9f10dd",
+      "source_bytes": 10323,
+      "output_bytes": 11776,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 137",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/137_Maturity_Model_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/137_Maturity_Model_CORRECTED_MASTER.md",
+      "source_sha256": "f16f38bc3c60c9ef3f4be980ea5ddc19f1f58701279035c3a85e436671a6242a",
+      "output_sha256": "8f211ffd1369de3984b3605c7719d61271d1378a4bd0bcc84247b6a079b3373d",
+      "source_bytes": 10660,
+      "output_bytes": 12184,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 138",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/138_Continuous_Improvement_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/138_Continuous_Improvement_CORRECTED_MASTER.md",
+      "source_sha256": "20d2dc70cb50b33925a48cfdff3927a6fe6a3e4950fd6070e54d801149a2bccb",
+      "output_sha256": "c16f83594562b59cffa0871116c97023da0d46486fa3172d743f2619546756c1",
+      "source_bytes": 13874,
+      "output_bytes": 15621,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    }
+  ]
+}

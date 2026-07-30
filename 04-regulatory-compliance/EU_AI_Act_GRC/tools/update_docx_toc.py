@@ -68,7 +68,10 @@ def main() -> int:
             raise RuntimeError("DOCX contains no document index/TOC field to refresh")
         for index in range(count):
             indexes.getByIndex(index).update()
-        document.calculateAll()
+
+        # Writer's text document service does not expose calculateAll() in every
+        # LibreOffice build. Updating each document index is the supported TOC
+        # refresh operation; storing the document persists the generated entries.
         document.store()
         print(f"Updated {count} document index(es) in {path}")
     finally:

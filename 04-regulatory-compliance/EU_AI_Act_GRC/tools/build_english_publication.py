@@ -4,8 +4,8 @@
 The script is intentionally conservative:
 - it never edits source chapters or appendices;
 - it prefers corrected masters;
-- it fails on missing chapter numbers, duplicate canonical selections, empty sources,
-  or unresolved canonical ambiguity;
+- it fails on missing numbers, duplicate canonical selections, empty sources, or ambiguity;
+- it converts operational Markdown tables with four or more columns into readable record blocks for portrait DOCX/PDF;
 - it writes a machine-readable manifest and one integrated Markdown master.
 """
 
@@ -23,6 +23,8 @@ from typing import Iterable
 ROOT_REL = Path("04-regulatory-compliance/EU_AI_Act_GRC")
 CHAPTER_RE = re.compile(r"^(?P<number>\d{1,3})_(?P<title>.+)\.md$")
 APPENDIX_RE = re.compile(r"^Appendix_(?P<letter>[A-Z])_(?P<title>.+)\.md$")
+TABLE_DIVIDER_RE = re.compile(r"^\s*\|?(?:\s*:?-{3,}:?\s*\|)+\s*$")
+WIDE_TABLE_COLUMN_LIMIT = 3
 
 
 @dataclass(frozen=True)
@@ -45,6 +47,64 @@ def digest(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def split_table_row(line: str) -> list[str]:
+    """Split a simple pipe table row while preserving ordinary text."""
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def readable_wide_tables(text: str) -> str:
+    """Convert tables with four or more columns into portrait-friendly record blocks.
+
+    Source Markdown remains unchanged. Empty template rows are retained as blank fields.
+    Compact tables of one to three columns remain real tables. This avoids unreadable
+    narrow columns in generated DOCX/PDF while preserving every header and cell value.
+    """
+    lines = text.splitlines()
+    output: list[str] = []
+    index = 0
+    converted = 0
+
+    while index < len(lines):
+        if (
+            lines[index].lstrip().startswith("|")
+            and index + 1 < len(lines)
+            and TABLE_DIVIDER_RE.match(lines[index + 1])
+        ):
+            block: list[str] = []
+            cursor = index
+            while cursor < len(lines) and lines[cursor].lstrip().startswith("|"):
+                block.append(lines[cursor])
+                cursor += 1
+
+            headers = split_table_row(block[0])
+            if len(headers) > WIDE_TABLE_COLUMN_LIMIT:
+                rows = [split_table_row(row) for row in block[2:]]
+                output.append(f"**Readable record format ({len(headers)} source columns):**")
+                output.append("")
+                if not rows:
+                    rows = [[""] * len(headers)]
+                for row_number, row in enumerate(rows, start=1):
+                    padded = row + [""] * (len(headers) - len(row))
+                    if len(rows) > 1:
+                        output.append(f"**Record {row_number}**")
+                        output.append("")
+                    for header, value in zip(headers, padded):
+                        label = header or "Field"
+                        output.append(f"- **{label}:** {value}")
+                    output.append("")
+                converted += 1
+                index = cursor
+                continue
+
+        output.append(lines[index])
+        index += 1
+
+    if converted:
+        output.append("")
+        output.append(f"<!-- publication-builder: converted {converted} wide table(s) to readable record format -->")
+    return "\n".join(output).strip() + "\n"
+
+
 def choose_chapter(paths: Iterable[Path], number: int) -> Path:
     candidates = list(paths)
     if not candidates:
@@ -54,7 +114,6 @@ def choose_chapter(paths: Iterable[Path], number: int) -> Path:
     corrected = [p for p in candidates if "_CORRECTED" in p.stem and p not in corrected_master]
     originals = [p for p in candidates if "_CORRECTED" not in p.stem]
 
-    # Explicit canonical exceptions established in the consolidation register.
     explicit = {
         6: "06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
         20: "20_High_Risk_Classification_CORRECTED.md",
@@ -196,32 +255,34 @@ Use each chapter to identify the applicable requirement, understand it in plain 
     records: list[SourceRecord] = []
 
     for number, path in enumerate(selected_chapters, start=1):
-        text = read_text(path)
+        source_text = read_text(path)
         records.append(
             SourceRecord(
                 item=f"Chapter {number}",
                 path=str(path.relative_to(repo_root)),
-                sha256=digest(text),
-                bytes=len(text.encode("utf-8")),
-                lines=len(text.splitlines()),
+                sha256=digest(source_text),
+                bytes=len(source_text.encode("utf-8")),
+                lines=len(source_text.splitlines()),
             )
         )
-        parts.append("\n\\newpage\n\n" + demote_top_heading(text))
+        publication_text = readable_wide_tables(source_text)
+        parts.append("\n\\newpage\n\n" + demote_top_heading(publication_text))
 
     parts.append("\n\\newpage\n\n# Appendices\n")
     for code, path in zip(range(ord("A"), ord("Z") + 1), selected_appendices):
         letter = chr(code)
-        text = read_text(path)
+        source_text = read_text(path)
         records.append(
             SourceRecord(
                 item=f"Appendix {letter}",
                 path=str(path.relative_to(repo_root)),
-                sha256=digest(text),
-                bytes=len(text.encode("utf-8")),
-                lines=len(text.splitlines()),
+                sha256=digest(source_text),
+                bytes=len(source_text.encode("utf-8")),
+                lines=len(source_text.splitlines()),
             )
         )
-        parts.append("\n\\newpage\n\n" + demote_top_heading(text))
+        publication_text = readable_wide_tables(source_text)
+        parts.append("\n\\newpage\n\n" + demote_top_heading(publication_text))
 
     master = "\n".join(parts).rstrip() + "\n"
     master_path = out_dir / "EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Master.md"
@@ -232,6 +293,7 @@ Use each chapter to identify the applicable requirement, understand it in plain 
         "source_branch": "manual/eu-ai-act-grc-compliance",
         "chapter_count": len(selected_chapters),
         "appendix_count": len(selected_appendices),
+        "wide_table_publication_policy": "Tables with four or more columns are rendered as readable record blocks; source Markdown is unchanged.",
         "master_sha256": digest(master),
         "records": [asdict(record) for record in records],
     }
@@ -247,6 +309,6 @@ Use each chapter to identify the applicable requirement, understand it in plain 
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except Exception as exc:  # noqa: BLE001 - fail closed with an actionable message
+    except Exception as exc:  # fail closed with an actionable message
         print(f"BUILD ERROR: {exc}", file=sys.stderr)
         raise SystemExit(1)

@@ -28,15 +28,26 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             pandoc \
             libreoffice-writer \
+            python3-uno \
             poppler-utils \
             fonts-dejavu-core \
             fonts-liberation
+
+      - name: Inventory all English sources
+        run: |
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/inventory_english_sources.py \
+            --repo-root .
 
       - name: Assemble canonical English Markdown
         run: |
           python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/build_english_publication.py \
             --repo-root . \
             --out-dir build/eu-ai-act
+
+      - name: Normalize publication heading hierarchy
+        run: |
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/normalize_publication_headings.py \
+            --build-dir build/eu-ai-act
 
       - name: Generate DOCX
         run: |
@@ -45,14 +56,34 @@ jobs:
             --from markdown+raw_tex \
             --to docx \
             --toc \
-            --toc-depth=3 \
+            --toc-depth=1 \
             --number-sections \
             --metadata title='EU Artificial Intelligence Act GRC Compliance Manual' \
             --output build/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx
 
+      - name: Refresh DOCX table of contents
+        env:
+          HOME: ${{ runner.temp }}/lo-toc-home
+        run: |
+          mkdir -p "$HOME"
+          libreoffice \
+            --headless \
+            --accept='socket,host=127.0.0.1,port=2002;urp;StarOffice.ServiceManager' \
+            --norestore \
+            --nofirststartwizard \
+            > "$RUNNER_TEMP/libreoffice-toc.log" 2>&1 &
+          LO_PID=$!
+          trap 'kill "$LO_PID" 2>/dev/null || true' EXIT
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/update_docx_toc.py \
+            build/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx \
+            --port 2002
+          kill "$LO_PID" 2>/dev/null || true
+          wait "$LO_PID" 2>/dev/null || true
+          trap - EXIT
+
       - name: Generate PDF from DOCX
         env:
-          HOME: ${{ runner.temp }}/lo-home
+          HOME: ${{ runner.temp }}/lo-pdf-home
         run: |
           mkdir -p "$HOME" build/eu-ai-act/pdf-output
           libreoffice \

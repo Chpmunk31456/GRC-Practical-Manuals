@@ -1,0 +1,119 @@
+name: Recover EU AI Act translation assembly
+
+on:
+  push:
+    branches:
+      - translation/eu-ai-act-es-ptbr
+    paths:
+      - '.github/workflows/recover-eu-ai-act-translation-assembly.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: eu-ai-act-es-ptbr-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover-assemble-and-qa:
+    name: Recover, assemble, and validate both editions
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Check out translation branch
+        uses: actions/checkout@v4
+        with:
+          ref: translation/eu-ai-act-es-ptbr
+          fetch-depth: 0
+
+      - name: Download completed translated shards from source run
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 30574515418
+          github-token: ${{ github.token }}
+          pattern: translated-*
+          path: 04-regulatory-compliance/EU_AI_Act_GRC/translations
+          merge-multiple: true
+
+      - name: Verify recovered source layout
+        run: |
+          test -f 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/01_Understanding_the_EU_AI_Act_CORRECTED_MASTER.md
+          test -f 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/01_Understanding_the_EU_AI_Act_CORRECTED_MASTER.md
+          test -d 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/appendices
+          test -d 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices
+          find 04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source -type f | sort | head
+          find 04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source -type f | sort | head
+
+      - name: Install publication dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc libreoffice-writer poppler-utils fonts-dejavu-core fonts-liberation
+
+      - name: Assemble translated Markdown masters
+        run: |
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/build_translated_publication.py \
+            --repo-root . --language es-419 --out-dir build/eu-ai-act-es-419
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/build_translated_publication.py \
+            --repo-root . --language pt-BR --out-dir build/eu-ai-act-pt-BR
+
+      - name: Generate DOCX editions
+        run: |
+          pandoc build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Master.md \
+            --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
+            --metadata lang=es-419 \
+            --output build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx
+          pandoc build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Master.md \
+            --from markdown+raw_tex --to docx --toc --toc-depth=3 --number-sections \
+            --metadata lang=pt-BR \
+            --output build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx
+
+      - name: Generate PDFs
+        env:
+          HOME: ${{ runner.temp }}/lo-home
+        run: |
+          mkdir -p "$HOME" build/eu-ai-act-es-419/pdf-output build/eu-ai-act-pt-BR/pdf-output
+          libreoffice --headless --convert-to pdf --outdir build/eu-ai-act-es-419/pdf-output \
+            build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.docx
+          libreoffice --headless --convert-to pdf --outdir build/eu-ai-act-pt-BR/pdf-output \
+            build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.docx
+          mv build/eu-ai-act-es-419/pdf-output/*.pdf build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf
+          mv build/eu-ai-act-pt-BR/pdf-output/*.pdf build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf
+
+      - name: Render pages and collect PDF metadata
+        run: |
+          mkdir -p build/eu-ai-act-es-419/rendered-pages build/eu-ai-act-pt-BR/rendered-pages
+          pdftoppm -png -r 96 build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf build/eu-ai-act-es-419/rendered-pages/page
+          pdftoppm -png -r 96 build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf build/eu-ai-act-pt-BR/rendered-pages/page
+          pdfinfo build/eu-ai-act-es-419/EU_AI_Act_GRC_Compliance_Manual_es-419_Controlled_Review.pdf > build/eu-ai-act-es-419/PDF_INFO.txt
+          pdfinfo build/eu-ai-act-pt-BR/EU_AI_Act_GRC_Compliance_Manual_pt-BR_Controlled_Review.pdf > build/eu-ai-act-pt-BR/PDF_INFO.txt
+
+      - name: Run fail-closed QA
+        run: |
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/qa_translated_publication.py \
+            --language es-419 --build-dir build/eu-ai-act-es-419
+          python 04-regulatory-compliance/EU_AI_Act_GRC/translations/tools/qa_translated_publication.py \
+            --language pt-BR --build-dir build/eu-ai-act-pt-BR
+
+      - name: Create checksums
+        run: |
+          (cd build/eu-ai-act-es-419 && sha256sum *.md *.docx *.pdf *.json > SHA256SUMS.txt)
+          (cd build/eu-ai-act-pt-BR && sha256sum *.md *.docx *.pdf *.json > SHA256SUMS.txt)
+
+      - name: Upload Spanish publication package
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-ai-act-es-419-publication-candidate-recovered
+          path: build/eu-ai-act-es-419/
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload Portuguese publication package
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-ai-act-pt-BR-publication-candidate-recovered
+          path: build/eu-ai-act-pt-BR/
+          retention-days: 30
+          if-no-files-found: error

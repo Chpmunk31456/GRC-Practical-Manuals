@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI-assisted decision and human-control process</title>
+  <desc id="desc">A process showing AI recommendation, qualified human review, approve-correct-reject-escalate options, recorded decision, affected-person notice, and ongoing monitoring.</desc>
+  <rect width="1600" height="900" fill="#F7F9FC"/>
+  <text x="80" y="90" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#17324D">AI assists. A person remains accountable.</text>
+  <text x="80" y="135" font-family="Arial, sans-serif" font-size="24" fill="#40566D">Human oversight must be informed, empowered, documented, and able to stop the process.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="230" rx="24" ry="24" width="250" height="170" fill="#DCEBFF" stroke="#245EA8" stroke-width="4"/>
+    <text x="205" y="285" text-anchor="middle" font-size="28" font-weight="700" fill="#17324D">1. AI output</text>
+    <text x="205" y="330" text-anchor="middle" font-size="22" fill="#17324D">Recommendation, flag,</text>
+    <text x="205" y="360" text-anchor="middle" font-size="22" fill="#17324D">ranking, or draft</text>
+
+    <path d="M330 315 H430" stroke="#17324D" stroke-width="7" marker-end="url(#arrow)"/>
+
+    <rect x="430" y="200" rx="24" ry="24" width="300" height="230" fill="#FFF0C7" stroke="#A66A00" stroke-width="4"/>
+    <text x="580" y="255" text-anchor="middle" font-size="28" font-weight="700" fill="#5B3A00">2. Human review</text>
+    <text x="580" y="300" text-anchor="middle" font-size="21" fill="#5B3A00">Qualified reviewer checks</text>
+    <text x="580" y="332" text-anchor="middle" font-size="21" fill="#5B3A00">context, limits, evidence,</text>
+    <text x="580" y="364" text-anchor="middle" font-size="21" fill="#5B3A00">and possible harm</text>
+    <text x="580" y="405" text-anchor="middle" font-size="20" font-weight="700" fill="#5B3A00">Real authority to intervene</text>
+
+    <path d="M730 315 H830" stroke="#17324D" stroke-width="7" marker-end="url(#arrow)"/>
+
+    <rect x="830" y="180" rx="24" ry="24" width="330" height="270" fill="#E4F5E9" stroke="#2B7A48" stroke-width="4"/>
+    <text x="995" y="235" text-anchor="middle" font-size="28" font-weight="700" fill="#184D2F">3. Human action</text>
+    <text x="995" y="285" text-anchor="middle" font-size="23" fill="#184D2F">Approve</text>
+    <text x="995" y="320" text-anchor="middle" font-size="23" fill="#184D2F">Correct</text>
+    <text x="995" y="355" text-anchor="middle" font-size="23" fill="#184D2F">Reject</text>
+    <text x="995" y="390" text-anchor="middle" font-size="23" fill="#184D2F">Pause or escalate</text>
+    <text x="995" y="425" text-anchor="middle" font-size="20" font-weight="700" fill="#184D2F">AI does not decide alone</text>
+
+    <path d="M1160 315 H1260" stroke="#17324D" stroke-width="7" marker-end="url(#arrow)"/>
+
+    <rect x="1260" y="215" rx="24" ry="24" width="260" height="200" fill="#EDE4FF" stroke="#6842A8" stroke-width="4"/>
+    <text x="1390" y="270" text-anchor="middle" font-size="28" font-weight="700" fill="#3E246D">4. Record</text>
+    <text x="1390" y="315" text-anchor="middle" font-size="21" fill="#3E246D">Decision, rationale,</text>
+    <text x="1390" y="347" text-anchor="middle" font-size="21" fill="#3E246D">reviewer, notice,</text>
+    <text x="1390" y="379" text-anchor="middle" font-size="21" fill="#3E246D">and evidence</text>
+
+    <path d="M1390 415 V560 H300" stroke="#17324D" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="160" y="560" rx="24" ry="24" width="550" height="200" fill="#FFE3E3" stroke="#A83A3A" stroke-width="4"/>
+    <text x="435" y="615" text-anchor="middle" font-size="28" font-weight="700" fill="#6F1F1F">Affected-person protection</text>
+    <text x="435" y="660" text-anchor="middle" font-size="22" fill="#6F1F1F">Inform • explain • correct • challenge • appeal</text>
+    <text x="435" y="705" text-anchor="middle" font-size="21" fill="#6F1F1F">“Will a real person review this before it affects me?”</text>
+
+    <rect x="850" y="560" rx="24" ry="24" width="590" height="200" fill="#DFF4F3" stroke="#25706F" stroke-width="4"/>
+    <text x="1145" y="615" text-anchor="middle" font-size="28" font-weight="700" fill="#174A49">Ongoing monitoring</text>
+    <text x="1145" y="660" text-anchor="middle" font-size="22" fill="#174A49">Overrides • false positives • complaints • incidents • drift</text>
+    <text x="1145" y="705" text-anchor="middle" font-size="21" fill="#174A49">Stop or change the system when oversight is ineffective</text>
+
+    <path d="M850 660 H710" stroke="#17324D" stroke-width="6" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#17324D"/>
+    </marker>
+  </defs>
+</svg>

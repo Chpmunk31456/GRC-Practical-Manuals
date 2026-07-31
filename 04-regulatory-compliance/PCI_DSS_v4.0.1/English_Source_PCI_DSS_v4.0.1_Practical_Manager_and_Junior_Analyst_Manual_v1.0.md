@@ -49,7 +49,7 @@ Technical teams should connect every finding to account-data flow, CDE scope, re
 
 Merchants and service providers should confirm validation instructions with their acquirer, payment brands, customers, assessor, and other compliance-accepting entities.
 
-| **True Word contents:** The chapter guide below will contain verified page numbers for this edition. The document also contains a native Word TOC field. After editing, right-click it and select Update Field, then Update entire table. |
+| **Word table of contents:** The chapter guide below will contain verified page numbers for this edition. The document also contains a native Word TOC field. After editing, right-click it and select Update Field, then Update entire table. |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # Table of Contents

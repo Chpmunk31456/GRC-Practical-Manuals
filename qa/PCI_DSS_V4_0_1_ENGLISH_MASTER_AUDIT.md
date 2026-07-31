@@ -4,20 +4,18 @@ Target: `04-regulatory-compliance/PCI_DSS_v4.0.1/English_Source_PCI_DSS_v4.0.1_P
 
 ## Result
 
-**REVIEW REQUIRED**
+**PASS**
 
 ## Summary
 
-- malformed Word contents label: **1**
+- No configured structural or placeholder markers found.
 - Missing expected numbered sections: **0**
 - Sections not appearing exactly once: **0**
 - Missing required framework facts: **0**
 
 ## Findings
 
-| Category | Line | Excerpt |
-|---|---:|---|
-| malformed Word contents label | 52 | `\| **True Word contents:** The chapter guide below will contain verified page numbers for this edition. The document also contains a native Word TOC field. After editing, right-click it and select Update Field, then Updat` |
+No configured findings.
 
 ## Review boundary
 

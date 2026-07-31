@@ -11,6 +11,8 @@ TARGET = Path(
 )
 REPORT = Path("qa/CIS_CONTROLS_V8_1_PTBR_FULL_MANUAL_AUDIT.md")
 
+# These rules target known conversion and Markdown-corruption signatures only.
+# Valid ordered lists and balanced bold paragraphs are intentionally excluded.
 PATTERNS = {
     "conversion box glyph": re.compile(r"□"),
     "broken image marker": re.compile(r"^[■□]img\b", re.MULTILINE | re.IGNORECASE),
@@ -18,8 +20,6 @@ PATTERNS = {
     "ellipsis-only table row": re.compile(r"^(?:\|\s*)?(?:\.\s*){3,}(?:\|\s*)?$", re.MULTILINE),
     "raw separator line": re.compile(r"^-{20,}$", re.MULTILINE),
     "malformed leading emphasis": re.compile(r"^(?:No interior:|\*Conteúdo:)\*\*", re.MULTILINE | re.IGNORECASE),
-    "unclosed bold heading": re.compile(r"^\*\*[^\n]*[^*]$", re.MULTILINE),
-    "standalone numbered heading without hash": re.compile(r"^(?:[1-9]|[12][0-9]|30)\.\s+[^\n]+$", re.MULTILINE),
     "comma subsection numbering": re.compile(r"^#{0,3}\s*(?:24|29|30),\d+\b", re.MULTILINE),
 }
 

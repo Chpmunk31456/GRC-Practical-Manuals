@@ -15,6 +15,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cis-portuguese-controlled-writes
+  cancel-in-progress: false
+
 jobs:
   integrate:
     runs-on: ubuntu-latest
@@ -32,7 +36,9 @@ jobs:
         run: python3 qa/tools/audit_cis_portuguese_full_manual.py
 
       - name: Commit controlled repair and audit
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
@@ -40,7 +46,20 @@ jobs:
             qa/CIS_CONTROLS_V8_1_PTBR_FULL_MANUAL_AUDIT.md
           if git diff --cached --quiet; then
             echo 'No controlled changes to commit.'
-          else
-            git commit -m 'Integrate reviewed CIS Portuguese opening and Sections 1-5'
-            git push origin HEAD:production/multilingual-grc-editions
+            exit 0
           fi
+          git commit -m 'Integrate reviewed CIS Portuguese opening and Sections 1-5'
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:production/multilingual-grc-editions; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Push failed after three attempts.' >&2
+              exit 1
+            fi
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            sleep $((attempt * 5))
+          done

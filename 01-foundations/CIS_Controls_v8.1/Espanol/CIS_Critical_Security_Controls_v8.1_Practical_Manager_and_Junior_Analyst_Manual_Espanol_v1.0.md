@@ -13,7 +13,7 @@
 Primera edición • Julio 2026
 
 | **Inside:** 18 Controles • 153 Salvaguardias • IG1, IG2, IG3 • medición • evidencia • herramientas • manual de gestión • laboratorios • preparación de la carrera |
-|... |
+|---|
 
 # Publication and Use Notice
 
@@ -932,97 +932,82 @@ Sólo lo que el alcance definido y el soporte de evidencia confiable, con muestr
 
 ¿Cómo revisará el trabajo de los funcionarios superiores?
 
-# 30. Plantillas, Glosario, Índice y Referencias
+# 30. Plantillas, glosario, índice y referencias
 
-* Estructuras de trabajo reutilizables, términos importantes y puntos de partida autorizados.*
+*Estructuras de trabajo reutilizables, términos importantes y puntos de partida autorizados.*
 
-## 30.1 Documentos de trabajo de medición de salvaguardia
+## 30.1 Hoja de trabajo para medir Salvaguardas
 
-|** |
-|. |
-"La Salvaguardia de la Vida" y la IG "Antes"
-"Escopia y clase de activos"
-"Principal y sistemas de vida"
-Las dependencias y las suposiciones de la vida
-Inputs y validación de la vida
-"Operaciones en la vida"
-"Las medidas de la vida"
-"Metric and interpretation |"
-Excepciones y limitaciones de la vida
-La acción, el dueño, la fecha y la prueba de la vida
+| Campo | Contenido esperado |
+|---|---|
+| Salvaguarda e IG | Identificador, nombre y Grupo de Implementación aplicable. |
+| Alcance y clase de activo | Población, sistemas, datos, usuarios o procesos incluidos. |
+| Propietario y sistemas de registro | Responsable, custodios y fuentes autoritativas. |
+| Dependencias y supuestos | Condiciones necesarias, exclusiones y limitaciones. |
+| Entradas y validación | Datos utilizados y controles sobre su integridad. |
+| Operaciones | Pasos ejecutados para implementar o evaluar la Salvaguarda. |
+| Medidas | Conteos, fechas, configuraciones y resultados observados. |
+| Métrica e interpretación | Cálculo, umbral, tendencia y significado del resultado. |
+| Excepciones | Riesgo aceptado, aprobación, vigencia y compensaciones. |
+| Acción correctiva | Acción, propietario, fecha objetivo y evidencia de nueva prueba. |
 
 ## 30.2 Registro de hallazgos y nuevas pruebas
 
-|** |
-|... |
-Los Criterios de la vida siguen adelante.
-"Acondicionamiento y evidencia de vida"
-La población afectada está en peligro.
-"El riesgo y el impacto en la vida"
-| Cause TENED \ \ \ \ \ \ \ \ \ \ \      \ \ \  \ \   \   \                                                                                                                                                                                                            |
-"La protección provisional en la vida"
-Corrección y propietario de la vida
-La fecha de su muerte es la siguiente.
-"El procedimiento de la prueba de mentiras"
-Resultado final de la vida útil
+| Campo | Contenido esperado |
+|---|---|
+| Criterio | Requisito o condición evaluada. |
+| Condición y evidencia | Estado observado y evidencia trazable. |
+| Población afectada | Registros, activos, personas, sistemas o eventos aplicables. |
+| Riesgo e impacto | Consecuencia, probabilidad y prioridad. |
+| Causa | Causa raíz o factor contribuyente. |
+| Protección provisional | Medida temporal para reducir el riesgo. |
+| Corrección y propietario | Acción definitiva y responsable. |
+| Fecha objetivo | Fecha comprometida para completar la corrección. |
+| Procedimiento de nueva prueba | Método, alcance y evidencia requerida. |
+| Resultado final | Cerrado, parcialmente corregido, aceptado o pendiente. |
 
 ## 30.3 Glosario
 
-|** |
-|. |
-| Clase Asset | Categoría afectada por una Salvaguardia, como dispositivos, software, datos, red, usuarios o documentación. |
-| CIS Benchmark ← Recomendaciones de configuración segura para una tecnología específica. |
-tención CIS Control | Una de las 18 amplias áreas defensivas.
-confidencialidad CIS Salvaguardia | Una acción enfocada y implementable dentro de un Control. ←
-TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. |
-| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. |
-| IG2 | IG1 más 74 Salvaguardias adicionales.
-TENIDA IG3 TENIDA IG1 e IG2 más 23 Salvaguardias adicionales; todos 153.
-TENCIÓN | Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. |
-| | Cálculo o interpretación construido a partir de medidas.
-| Población | Completo conjunto de registros, activos, personas, sistemas o eventos aplicables.
-tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. |
-Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía.
+| Término | Definición |
+|---|---|
+| Clase de activo | Categoría afectada por una Salvaguarda, como dispositivos, software, datos, redes, usuarios o documentación. |
+| CIS Benchmark | Recomendaciones de configuración segura para una tecnología específica. |
+| CIS Control | Una de las 18 áreas defensivas de alto nivel de CIS Controls v8.1. |
+| CIS Salvaguarda | Acción enfocada e implementable incluida dentro de un CIS Control. |
+| Cobertura | Proporción de la población aplicable en la que una Salvaguarda está implementada correctamente. |
+| IG1 | Grupo de Implementación 1: 56 Salvaguardas esenciales de higiene cibernética. |
+| IG2 | Grupo de Implementación 2: IG1 más 74 Salvaguardas adicionales. |
+| IG3 | Grupo de Implementación 3: IG1 e IG2 más 23 Salvaguardas adicionales; 153 en total. |
+| Medida | Conteo, lista, fecha, configuración o resultado producido por las operaciones de evaluación. |
+| Métrica | Cálculo o interpretación construido a partir de medidas. |
+| Población | Conjunto completo de registros, activos, personas, sistemas o eventos aplicables. |
+| Revisión de procedimiento | Evaluación manual de si existe un proceso requerido y contiene los elementos necesarios. |
+| Función de seguridad | Categoría de resultado: Gobernar, Identificar, Proteger, Detectar, Responder o Recuperar. |
 
-## 30.4 Índice de asunto
+## 30.4 Índice temático
 
-Subjeto**
-|... |
-Silenciosos Cuentas
-| para la seguridad de la aplicación |
-Silencioso inventario de activos
-Silenciosos registros de auditoría
-| Protección de datos |
-| Evidencia y medición | 4
-Silenciosos Grupos de Aplicación
-| Respuesta del incidente |
-Silencioso analista junior
-| | |
-Silencioso Silencioso
-Silencioso en la Red 17-18
+| Tema | Sección |
+|---|---:|
+| Cuentas | 10 |
+| Seguridad de aplicaciones | 21 |
+| Inventario de activos empresariales | 6 |
+| Registros de auditoría | 13 |
+| Protección de datos | 8 |
+| Evidencia y medición | 4 |
+| Grupos de Implementación | 3 |
+| Respuesta a incidentes | 22 |
+| Analista junior | 5 |
+| Monitoreo y defensa de redes | 18 |
 | Herramientas de código abierto | 24 |
-pruebas de Penetración Silencioso
-Silencioso de recuperación
-proveedores de servicios | 20 |
-Silencioso Inventario de software
-TEN TERRITORIO TERRITORIO TERRITORIO
-TEN TERRITORIO DE Vulnerabilidad ANTE LAS 12
+| Pruebas de penetración | 23 |
+| Recuperación de datos | 16 |
+| Proveedores de servicios | 20 |
+| Inventario de software | 7 |
+| Gestión de vulnerabilidades | 12 |
 
 ## 30.5 Referencias oficiales
 
-[ ]](https://www.cisecurity.org/controls/v8-1 Controles v8.1
-
-[Nota de Controles CIS](https://www.cisecurity.org/controls/cis-controls-list)
-
-[ ]](https://www.cisecurity.org/controls/implementation-groups)
-
-[Seguido](https://www.cisecurity.org/controls/cis-controls-assessment-specification)
-
-[Seguido](https://cas.docs.cisecurity.org/en/latest/)
-
-[Seguido](https://www.cisecurity.org/controls/cis-controls-navigator)
-
-[ ]u]CIS Controles cartografías y cumplimiento efectuados/u título](https://www.cisecurity.org/cybersecurity-tools/mapping-compliance/mapping-and-compliance-with-the-cis-controls)
-
-| **Recuerdo final:** Cambio de marcos, mapas, herramientas, productos, amenazas, leyes, contratos y riesgos organizativos. Confirme los recursos oficiales actuales y las obligaciones aplicables antes de una aplicación o evaluación reales. |
-Respuesta
+- [CIS Controls v8.1](https://www.cisecurity.org/controls/v8-1)
+- [Lista de CIS Controls](https://www.cisecurity.org/controls/cis-controls-list)
+- [Grupos de Implementación](https://www.cisecurity.org/controls/implementation-groups)
+- [Especificación de Evaluación de CIS Controls](https://www.cisecurity.org/controls/cis-controls-assessment-specification)

@@ -1,5 +1,5 @@
-# Trigger CIS English master baseline audit
+# Trigger bounded CIS English master correction
 
-Run the controlled structural and framework-fact baseline audit against the canonical English CIS Controls v8.1 source on `production/multilingual-grc-editions`.
+Apply the verified Word table-of-contents label correction, rerun the structural and framework-fact audit, and require PASS on `production/multilingual-grc-editions`.
 
 This PR exists only to generate an observable `pull_request` workflow event. It modifies no publication content on `main` and must not be merged.

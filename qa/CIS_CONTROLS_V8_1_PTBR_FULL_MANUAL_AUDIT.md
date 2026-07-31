@@ -8,10 +8,10 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 
 ## Summary
 
-- conversion box glyph: **149**
+- conversion box glyph: **107**
 - double heading marker: **20**
 - ellipsis-only table row: **1**
-- raw separator line: **28**
+- raw separator line: **21**
 - standalone numbered heading without hash: **41**
 - unclosed bold heading: **6**
 - Missing expected numbered sections: **0**
@@ -46,55 +46,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 | standalone numbered heading without hash | 174 | `8. Expanda para IG2 ou IG3 conforme o risco, as obrigações, a maturidade e a exposição a ameaças.` |
 | standalone numbered heading without hash | 175 | `9. Utilize mapeamentos oficiais para coordenar outras estruturas sem tratar o mapeamento como comprovação automática de conformidade.` |
 | unclosed bold heading | 177 | `**Princípio de implementação:** Um conjunto menor de Salvaguardas, com escopo completo, operação consistente, medição e melhoria contínua, é mais defensável do que uma lista extensa marcada como concluída sem evidências ` |
-| conversion box glyph | 299 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão do controlo de acesso. □` |
-| raw separator line | 300 | `----------------------------------------------------` |
-| raw separator line | 303 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 305 | `□ 6.2 □ Estabelecer um Processo de Revogação de Acesso □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer um Processo de Revogação de Acesso, em seguida, verificar a cobertura e exceções` |
-| conversion box glyph | 305 | `□ 6.2 □ Estabelecer um Processo de Revogação de Acesso □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer um Processo de Revogação de Acesso, em seguida, verificar a cobertura e exceções` |
-| conversion box glyph | 305 | `□ 6.2 □ Estabelecer um Processo de Revogação de Acesso □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer um Processo de Revogação de Acesso, em seguida, verificar a cobertura e exceções` |
-| conversion box glyph | 306 | `□ 6.3 □ Exigir o MFA para Aplicações Expostas Externamente • Coloque em prática um processo repetível, de propriedade ou controle técnico para exigir o MFA para Aplicações Expostas Externamente e, em seguida, verifique a` |
-| conversion box glyph | 306 | `□ 6.3 □ Exigir o MFA para Aplicações Expostas Externamente • Coloque em prática um processo repetível, de propriedade ou controle técnico para exigir o MFA para Aplicações Expostas Externamente e, em seguida, verifique a` |
-| conversion box glyph | 323 | `. ** Finalidade do controlo: ** Fortalecer a empresa implementando e medindo salvaguardas para a gestão contínua da vulnerabilidade. □` |
-| conversion box glyph | 324 | `□----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 327 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 328 | `□ 7.1 □ Estabeleça e mantenha um Processo de Gestão de Vulnerabilidade □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Gestão de Vulnerabilidade, em` |
-| conversion box glyph | 328 | `□ 7.1 □ Estabeleça e mantenha um Processo de Gestão de Vulnerabilidade □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Gestão de Vulnerabilidade, em` |
-| conversion box glyph | 328 | `□ 7.1 □ Estabeleça e mantenha um Processo de Gestão de Vulnerabilidade □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Gestão de Vulnerabilidade, em` |
-| conversion box glyph | 334 | `□ 7.7 □ Remediar Vulnerabilidades Detectadas □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para corrigir Vulnerabilidades Detectadas, então verifique cobertura e exceções. Confirmar escopo ` |
-| conversion box glyph | 334 | `□ 7.7 □ Remediar Vulnerabilidades Detectadas □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para corrigir Vulnerabilidades Detectadas, então verifique cobertura e exceções. Confirmar escopo ` |
-| conversion box glyph | 334 | `□ 7.7 □ Remediar Vulnerabilidades Detectadas □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para corrigir Vulnerabilidades Detectadas, então verifique cobertura e exceções. Confirmar escopo ` |
-| conversion box glyph | 342 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão de registos de auditoria. □` |
-| conversion box glyph | 343 | `□-------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 346 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 347 | `□ 8.1 □ Estabelecer e manter um processo de gerenciamento de registro de auditoria □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo de gerenciamento de ` |
-| conversion box glyph | 347 | `□ 8.1 □ Estabelecer e manter um processo de gerenciamento de registro de auditoria □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo de gerenciamento de ` |
-| conversion box glyph | 347 | `□ 8.1 □ Estabelecer e manter um processo de gerenciamento de registro de auditoria □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo de gerenciamento de ` |
-| conversion box glyph | 349 | `□ 8.3 □ Assegurar o armazenamento adequado do log de auditoria Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir o armazenamento adequado do registro de auditoria e, em seguida, v` |
-| conversion box glyph | 349 | `□ 8.3 □ Assegurar o armazenamento adequado do log de auditoria Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir o armazenamento adequado do registro de auditoria e, em seguida, v` |
-| conversion box glyph | 350 | `□ 8.4 □ Padronize a Sincronização do Tempo □ Coloque em prática um processo repetível, de propriedade ou controle técnico para padronizar a Sincronização do Tempo, em seguida, verifique a cobertura e exceções. Confirmar ` |
-| conversion box glyph | 350 | `□ 8.4 □ Padronize a Sincronização do Tempo □ Coloque em prática um processo repetível, de propriedade ou controle técnico para padronizar a Sincronização do Tempo, em seguida, verifique a cobertura e exceções. Confirmar ` |
-| conversion box glyph | 350 | `□ 8.4 □ Padronize a Sincronização do Tempo □ Coloque em prática um processo repetível, de propriedade ou controle técnico para padronizar a Sincronização do Tempo, em seguida, verifique a cobertura e exceções. Confirmar ` |
-| conversion box glyph | 355 | `• 8.9 □ Centralizar os Registos de Auditoria Coloque em prática um processo repetível, de propriedade ou controle técnico para centralizar os Logs de Auditoria, em seguida, verifique a cobertura e exceções. Confirmar esc` |
-| conversion box glyph | 366 | `. ** Finalidade do controlo: ** Fortaleça a empresa implementando e medindo salvaguardas para proteção de e-mail e navegador web. □` |
-| raw separator line | 370 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 372 | `□ 9.2 □ Use os Serviços de Filtragem DNS □ Coloque em prática um processo repetível, de propriedade ou controle técnico para usar os Serviços de Filtragem DNS e, em seguida, verifique a cobertura e exceções. Confirmar es` |
-| conversion box glyph | 372 | `□ 9.2 □ Use os Serviços de Filtragem DNS □ Coloque em prática um processo repetível, de propriedade ou controle técnico para usar os Serviços de Filtragem DNS e, em seguida, verifique a cobertura e exceções. Confirmar es` |
-| conversion box glyph | 372 | `□ 9.2 □ Use os Serviços de Filtragem DNS □ Coloque em prática um processo repetível, de propriedade ou controle técnico para usar os Serviços de Filtragem DNS e, em seguida, verifique a cobertura e exceções. Confirmar es` |
-| conversion box glyph | 375 | `□ 9.5 □ Implementar o DMARC □ Colocar em prática um processo repetível, de propriedade ou controle técnico para implementar o DMARC, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, população, pro` |
-| conversion box glyph | 375 | `□ 9.5 □ Implementar o DMARC □ Colocar em prática um processo repetível, de propriedade ou controle técnico para implementar o DMARC, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, população, pro` |
-| conversion box glyph | 375 | `□ 9.5 □ Implementar o DMARC □ Colocar em prática um processo repetível, de propriedade ou controle técnico para implementar o DMARC, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, população, pro` |
-| conversion box glyph | 377 | `□ 9.7 □ Implantar e manter as proteções anti-Malware do servidor de e-mail Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar e manter as proteções anti-Malware do servidor de e-m` |
-| conversion box glyph | 377 | `□ 9.7 □ Implantar e manter as proteções anti-Malware do servidor de e-mail Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar e manter as proteções anti-Malware do servidor de e-m` |
-| conversion box glyph | 385 | `. ** Finalidade do controlo: ** Fortaleça a empresa implementando e medindo salvaguardas para defesas de malware. □` |
-| raw separator line | 386 | `-------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 389 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 390 | `□ 10.1 □ Implantar e manter o software anti-Malware Coloque um processo repetível, de propriedade ou controle técnico no local para implantar e manter o software Anti-Malware, em seguida, verifique a cobertura e exceções` |
-| conversion box glyph | 390 | `□ 10.1 □ Implantar e manter o software anti-Malware Coloque um processo repetível, de propriedade ou controle técnico no local para implantar e manter o software Anti-Malware, em seguida, verifique a cobertura e exceções` |
-| conversion box glyph | 391 | `□ 10.2 □ Configurar atualizações automáticas de assinatura anti-Malware Coloque em prática um processo repetível, de propriedade ou controle técnico para configurar Atualizações de Assinatura Automáticas Anti-Malware, en` |
-| conversion box glyph | 391 | `□ 10.2 □ Configurar atualizações automáticas de assinatura anti-Malware Coloque em prática um processo repetível, de propriedade ou controle técnico para configurar Atualizações de Assinatura Automáticas Anti-Malware, en` |
-| conversion box glyph | 392 | `□ 10.3 □ Desativar Autorun e Autoplay para mídia removível □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para desativar Autorun e Autoplay para mídia removível, então verifique cobertura e ` |
-| conversion box glyph | 392 | `□ 10.3 □ Desativar Autorun e Autoplay para mídia removível □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para desativar Autorun e Autoplay para mídia removível, então verifique cobertura e ` |
-| conversion box glyph | 392 | `□ 10.3 □ Desativar Autorun e Autoplay para mídia removível □ Coloque no lugar um processo repetível, de propriedade ou controle técnico para desativar Autorun e Autoplay para mídia removível, então verifique cobertura e ` |
 | conversion box glyph | 404 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a recuperação de dados. □` |
 | raw separator line | 405 | `-------------------------------------------------------------------------------------------------------------------------` |
 | raw separator line | 408 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |

@@ -1,0 +1,89 @@
+name: Integrate reviewed CIS Spanish opening
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - '.github/workflows/integrate-cis-spanish-opening.yml'
+      - 'qa/tools/integrate_cis_spanish_opening.py'
+      - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: integrate-cis-spanish-opening
+  cancel-in-progress: false
+
+jobs:
+  integrate-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Integrate reviewed opening
+        run: python3 qa/tools/integrate_cis_spanish_opening.py
+
+      - name: Validate opening boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          source = Path('01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md')
+          rewrite = Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md')
+          text = source.read_text(encoding='utf-8')
+          expected = rewrite.read_text(encoding='utf-8').rstrip()
+          marker = '# 1. Fundamentos de CIS Controls v8.1'
+
+          if text.count(marker) != 1:
+              raise SystemExit('Expected exactly one Chapter 1 marker.')
+          actual = text[:text.index(marker)].rstrip()
+          if actual != expected:
+              raise SystemExit('Canonical opening does not exactly match reviewed rewrite.')
+
+          forbidden = (
+              'realineed mappings',
+              'Contenido de la palabra',
+              '|. |',
+              '# Publication and Use Notice',
+              '**Inside:**',
+              '**CYBERSECURITY, PRIVACY &amp; COMPLIANCE SERIES**',
+          )
+          found = [token for token in forbidden if token in actual]
+          if found:
+              raise SystemExit(f'Forbidden opening tokens remain: {found}')
+
+          print('CIS Spanish opening exactly matches the reviewed controlled rewrite.')
+          PY
+
+      - name: Run full-manual Spanish audit
+        run: python3 qa/tools/audit_cis_spanish_full_manual.py
+
+      - name: Commit integrated source and audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            'qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md'
+          if git diff --cached --quiet; then
+            echo 'No source or report change to commit.'
+          else
+            git commit -m 'Integrate reviewed CIS Spanish opening and refresh audit'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi

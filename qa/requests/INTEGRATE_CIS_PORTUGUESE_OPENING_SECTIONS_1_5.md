@@ -2,6 +2,6 @@
 
 Integrate the reviewed front matter and Sections 1–5, preserve the Control 1 boundary, refresh the full-manual audit, and commit the bounded repair.
 
-Retriggered after correcting exact-heading validation so table-of-contents text cannot cause a false failure.
+Retriggered after correcting exact-heading validation and adding retry/rebase handling for concurrent production updates.
 
 Do not modify Controls 1–18 in this batch. Do not merge or publish PR #3.

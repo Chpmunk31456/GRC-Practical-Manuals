@@ -8,6 +8,11 @@ on:
       - '.github/workflows/integrate-cis-spanish-opening.yml'
       - 'qa/tools/integrate_cis_spanish_opening.py'
       - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
   workflow_dispatch:
 
 permissions:

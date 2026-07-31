@@ -8,20 +8,25 @@ REPLACEMENT = Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_SECTION_30_REVIEWED.md')
 text = TARGET.read_text(encoding='utf-8')
 replacement = REPLACEMENT.read_text(encoding='utf-8').rstrip() + '\n'
 
-matches = list(re.finditer(r'^#\s*30\.\s*Plantillas,\s*Glosario,\s*Índice\s*y\s*Referencias\s*$', text, flags=re.MULTILINE | re.IGNORECASE))
+boundary_pattern = r'^#\s*30\.\s*Plantillas,\s*Glosario,\s*Índice\s*y\s*Referencias\s*$'
+matches = list(re.finditer(boundary_pattern, text, flags=re.MULTILINE | re.IGNORECASE))
 if len(matches) != 1:
     raise SystemExit(f'Expected exactly one Section 30 boundary; found {len(matches)}')
 
-# Repair the single malformed cover-summary table delimiter as part of this
-# bounded residual-cleanup batch.
-if text.count('|... |') != 1:
-    raise SystemExit(f'Expected exactly one remaining ellipsis delimiter; found {text.count("|... |")}')
-text = text.replace('|... |', '|---|', 1)
+section_start = matches[0].start()
+prefix = text[:section_start]
+old_section = text[section_start:]
 
-# Recalculate the Section 30 boundary after the bounded front-matter edit.
-matches = list(re.finditer(r'^#\s*30\.\s*Plantillas,\s*Glosario,\s*Índice\s*y\s*Referencias\s*$', text, flags=re.MULTILINE | re.IGNORECASE))
-new_text = text[:matches[0].start()] + replacement
-block = new_text[matches[0].start():]
+# The current residual state must contain one malformed delimiter in the cover
+# and two inside the corrupted Section 30 block that will be replaced.
+if prefix.count('|... |') != 1:
+    raise SystemExit(f'Expected exactly one cover ellipsis delimiter; found {prefix.count("|... |")}')
+if old_section.count('|... |') != 2:
+    raise SystemExit(f'Expected exactly two Section 30 ellipsis delimiters; found {old_section.count("|... |")}')
+
+prefix = prefix.replace('|... |', '|---|', 1)
+new_text = prefix + replacement
+block = replacement
 
 for marker in ['## 30.1', '## 30.2', '## 30.3', '## 30.4', '## 30.5']:
     if block.count(marker) != 1:

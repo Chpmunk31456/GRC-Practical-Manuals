@@ -3,8 +3,8 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, and third-party risk.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.2  
-**Last updated:** July 2026
+**Repository version:** 1.3  
+**Last updated:** 30 July 2026
 
 ## Start Here
 
@@ -30,7 +30,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 ## Available Formats and Languages
 
 - Most established manuals are available in Microsoft Word (`.docx`) and PDF.
-- The EU AI Act manual includes a controlled English source and an automated DOCX/PDF publication workflow.
+- The EU AI Act GRC Compliance Manual is published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 

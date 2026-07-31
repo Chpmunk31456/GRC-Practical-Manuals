@@ -8,16 +8,15 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 
 ## Summary
 
-- ANTER corruption: **2**
-- Silencioso token: **27**
-- TEN token: **245**
-- arrow artifact: **32**
-- broken image marker: **5**
-- ellipsis table delimiter: **21**
-- residual English phrases: **3**
-- tención token: **173**
-- Missing expected numbered sections: **8**
-  - # 1., # 3., # 8., # 10., # 12., # 17., # 21., # 28.
+- ANTER corruption: **1**
+- Silencioso token: **19**
+- TEN token: **231**
+- arrow artifact: **26**
+- broken image marker: **4**
+- ellipsis table delimiter: **19**
+- tención token: **171**
+- Missing expected numbered sections: **7**
+  - # 1., # 3., # 8., # 10., # 12., # 17., # 21.
 
 ## Findings
 
@@ -463,74 +462,37 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 | TEN token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
 | TEN token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
 | tención token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
-| arrow artifact | 773 | `← Inventories \| ¿Están completos los activos, software, datos, cuentas, proveedores, aplicaciones y registros? Verde / Amarillo / Rojo` |
-| TEN token | 774 | `TEN Protection TEN ¿Operan la configuración, el acceso, el parche, el correo electrónico, el malware y los controles de datos? Verde / Amarillo / Rojo` |
-| TEN token | 774 | `TEN Protection TEN ¿Operan la configuración, el acceso, el parche, el correo electrónico, el malware y los controles de datos? Verde / Amarillo / Rojo` |
-| arrow artifact | 776 | `← Recuperación \| ¿Están protegidos copias de seguridad y restauraciones probadas contra las necesidades de negocio? Verde / Amarillo / Rojo` |
-| TEN token | 778 | `TENED ¿Se corrigieron las poblaciones confiables y de excepción? Verde / Amarillo / Rojo` |
-| broken image marker | 785 | `■img src="media/image10.png" style="width:6.15in;height:2.99481in" alt="Aprende el marco, mapa Salvaguardias, mide evidencia, reporte lagunas, y construya un portafolio honesto".` |
-| English phrase: Third-Party Risk Analyst | 801 | `Third-Party Risk Analyst` |
-| English phrase: Cybersecurity Program Analyst | 803 | `Cybersecurity Program Analyst` |
-| Silencioso token | 821 | `Silencioso**` |
-| ellipsis table delimiter | 822 | `\|... \|` |
-| TEN token | 825 | `TENEDO \| Mostrar insumos, operaciones, medidas, métrica, lista de excepciones y conclusión \|` |
-| arrow artifact | 826 | `← Alfabetización técnica \| Interpret configuración, identidad, escaneo, registro, recuperación y evidencia de aplicación` |
-| English phrase: Trace finding to owner | 827 | `TEN Remediation \| Trace finding to owner, due date, correction, and verified retest \|` |
-| TEN token | 827 | `TEN Remediation \| Trace finding to owner, due date, correction, and verified retest \|` |
-| ANTER corruption | 828 | `TEN Comunicación ANTERIGEN Escribe un resumen del administrador de una página y un documento de trabajo detallado` |
-| TEN token | 828 | `TEN Comunicación ANTERIGEN Escribe un resumen del administrador de una página y un documento de trabajo detallado` |
-| arrow artifact | 829 | `← Ética ← Utilizar datos sintéticos, autorización, límites de alcance y afirmaciones honestas` |
-| ellipsis table delimiter | 861 | `\|... \|` |
-| TEN token | 862 | `TEN IG selection memo TEN Prioritization and risk reasoning \|` |
-| TEN token | 862 | `TEN IG selection memo TEN Prioritization and risk reasoning \|` |
-| arrow artifact | 863 | `← Reconciliación de los inventarios` |
-| Silencioso token | 864 | `Silencioso papel de salvaguardia \| Estructura de medición oficial y pruebas` |
-| TEN token | 866 | `TEN Vulnerability report ← Cobertura, priorización, excepción y remediación` |
-| arrow artifact | 866 | `TEN Vulnerability report ← Cobertura, priorización, excepción y remediación` |
-| Silencioso token | 867 | `Silencioso Caso de detección` |
-| Silencioso token | 868 | `\| Restaurar prueba Silencioso Disponibilidad y pruebas de recuperación \|` |
-| TEN token | 869 | `tención Administrador dashboard \| Clear risk and action communication` |
-| tención token | 869 | `tención Administrador dashboard \| Clear risk and action communication` |
-| Silencioso token | 878 | `tención 5–8 Silencioso Activos, software, datos, cuentas, acceso \| Cuatro inventarios reconciliados` |
-| TEN token | 878 | `tención 5–8 Silencioso Activos, software, datos, cuentas, acceso \| Cuatro inventarios reconciliados` |
-| tención token | 878 | `tención 5–8 Silencioso Activos, software, datos, cuentas, acceso \| Cuatro inventarios reconciliados` |
-| TEN token | 879 | `TEN 9–12 \| Configuración, vulnerabilidad, email, malware TEN Lab configuración y papel de trabajo de vulnerabilidad` |
-| TEN token | 879 | `TEN 9–12 \| Configuración, vulnerabilidad, email, malware TEN Lab configuración y papel de trabajo de vulnerabilidad` |
-| Silencioso token | 880 | `\| 13–16 Silenciosos Logs, monitoreo, defensa de la red \| Mapa fuente de registro y seguro caso de alerta` |
-| Silencioso token | 881 | `\| 17–19 Silencioso recuperación y respuesta a incidentes \| Restaurar prueba y registro de mesa` |
-| Silencioso token | 883 | `Silencioso 23–25 Evaluación de la vida Especificación \| Cinco medidas de seguridad completas` |
-| TEN token | 885 | `TEN 29–30 \| Portfolio y entrevistas \| Portafolio Sanitizado y cinco historias de STAR \|` |
-| ellipsis table delimiter | 961 | `\|... \|` |
-| TEN token | 966 | `\| Cause TENED \ \ \ \ \ \ \ \ \ \ \      \ \ \  \ \   \   \                                                                                                                                                                 ` |
-| arrow artifact | 978 | `\| CIS Benchmark ← Recomendaciones de configuración segura para una tecnología específica. \|` |
-| TEN token | 979 | `tención CIS Control \| Una de las 18 amplias áreas defensivas.` |
-| tención token | 979 | `tención CIS Control \| Una de las 18 amplias áreas defensivas.` |
-| arrow artifact | 980 | `confidencialidad CIS Salvaguardia \| Una acción enfocada y implementable dentro de un Control. ←` |
-| TEN token | 981 | `TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. \|` |
-| tención token | 981 | `TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. \|` |
-| TEN token | 982 | `\| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. \|` |
-| tención token | 982 | `\| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. \|` |
-| TEN token | 985 | `TENCIÓN \| Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. \|` |
-| tención token | 985 | `TENCIÓN \| Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. \|` |
-| TEN token | 988 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
-| TEN token | 988 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
-| tención token | 988 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
-| tención token | 988 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
-| arrow artifact | 989 | `Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía.` |
-| ellipsis table delimiter | 994 | `\|... \|` |
-| Silencioso token | 995 | `Silenciosos Cuentas` |
-| Silencioso token | 997 | `Silencioso inventario de activos` |
-| Silencioso token | 998 | `Silenciosos registros de auditoría` |
-| Silencioso token | 1001 | `Silenciosos Grupos de Aplicación` |
-| Silencioso token | 1003 | `Silencioso analista junior` |
-| Silencioso token | 1005 | `Silencioso Silencioso` |
-| Silencioso token | 1005 | `Silencioso Silencioso` |
-| Silencioso token | 1006 | `Silencioso en la Red 17-18` |
-| Silencioso token | 1008 | `pruebas de Penetración Silencioso` |
-| Silencioso token | 1009 | `Silencioso de recuperación` |
-| Silencioso token | 1011 | `Silencioso Inventario de software` |
-| TEN token | 1012 | `TEN TERRITORIO TERRITORIO TERRITORIO` |
-| TEN token | 1013 | `TEN TERRITORIO DE Vulnerabilidad ANTE LAS 12` |
+| ellipsis table delimiter | 957 | `\|... \|` |
+| TEN token | 962 | `\| Cause TENED \ \ \ \ \ \ \ \ \ \ \      \ \ \  \ \   \   \                                                                                                                                                                 ` |
+| arrow artifact | 974 | `\| CIS Benchmark ← Recomendaciones de configuración segura para una tecnología específica. \|` |
+| TEN token | 975 | `tención CIS Control \| Una de las 18 amplias áreas defensivas.` |
+| tención token | 975 | `tención CIS Control \| Una de las 18 amplias áreas defensivas.` |
+| arrow artifact | 976 | `confidencialidad CIS Salvaguardia \| Una acción enfocada y implementable dentro de un Control. ←` |
+| TEN token | 977 | `TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. \|` |
+| tención token | 977 | `TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. \|` |
+| TEN token | 978 | `\| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. \|` |
+| tención token | 978 | `\| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. \|` |
+| TEN token | 981 | `TENCIÓN \| Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. \|` |
+| tención token | 981 | `TENCIÓN \| Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. \|` |
+| TEN token | 984 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
+| TEN token | 984 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
+| tención token | 984 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
+| tención token | 984 | `tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. \|` |
+| arrow artifact | 985 | `Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía.` |
+| ellipsis table delimiter | 990 | `\|... \|` |
+| Silencioso token | 991 | `Silenciosos Cuentas` |
+| Silencioso token | 993 | `Silencioso inventario de activos` |
+| Silencioso token | 994 | `Silenciosos registros de auditoría` |
+| Silencioso token | 997 | `Silenciosos Grupos de Aplicación` |
+| Silencioso token | 999 | `Silencioso analista junior` |
+| Silencioso token | 1001 | `Silencioso Silencioso` |
+| Silencioso token | 1001 | `Silencioso Silencioso` |
+| Silencioso token | 1002 | `Silencioso en la Red 17-18` |
+| Silencioso token | 1004 | `pruebas de Penetración Silencioso` |
+| Silencioso token | 1005 | `Silencioso de recuperación` |
+| Silencioso token | 1007 | `Silencioso Inventario de software` |
+| TEN token | 1008 | `TEN TERRITORIO TERRITORIO TERRITORIO` |
+| TEN token | 1009 | `TEN TERRITORIO DE Vulnerabilidad ANTE LAS 12` |
 
 ## Publication rule
 

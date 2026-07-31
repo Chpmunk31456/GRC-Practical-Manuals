@@ -8,16 +8,16 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 
 ## Summary
 
-- ANTER corruption: **3**
-- Silencioso token: **36**
-- TEN token: **257**
+- ANTER corruption: **2**
+- Silencioso token: **27**
+- TEN token: **245**
 - arrow artifact: **32**
-- broken image marker: **6**
-- ellipsis table delimiter: **22**
-- residual English phrases: **4**
-- tención token: **182**
-- Missing expected numbered sections: **9**
-  - # 1., # 3., # 8., # 10., # 12., # 17., # 21., # 22., # 28.
+- broken image marker: **5**
+- ellipsis table delimiter: **21**
+- residual English phrases: **3**
+- tención token: **173**
+- Missing expected numbered sections: **8**
+  - # 1., # 3., # 8., # 10., # 12., # 17., # 21., # 28.
 
 ## Findings
 
@@ -463,40 +463,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 | TEN token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
 | TEN token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
 | tención token | 678 | `\| 16.14 \| Conduct Threat Modeling \| Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme a` |
-| broken image marker | 686 | `■img src="media/image9.png" estilo="width:6.15in;height:3.12625in" alt="Los roles preparados, reportando, comunicación, ejercicios y reseñas reducen el impacto del incidente." /` |
-| ellipsis table delimiter | 691 | `\|... \|` |
-| Silencioso token | 695 | `\| 17.1 \| Designate Personnel to Manage Incident Handling \| Ponga en marcha un proceso repetible, de propiedad o control técnico para designar Personal a Manage Incident Handling, a continuación, verifique cobertura y exc` |
-| TEN token | 695 | `\| 17.1 \| Designate Personnel to Manage Incident Handling \| Ponga en marcha un proceso repetible, de propiedad o control técnico para designar Personal a Manage Incident Handling, a continuación, verifique cobertura y exc` |
-| tención token | 695 | `\| 17.1 \| Designate Personnel to Manage Incident Handling \| Ponga en marcha un proceso repetible, de propiedad o control técnico para designar Personal a Manage Incident Handling, a continuación, verifique cobertura y exc` |
-| Silencioso token | 696 | `\| 17.2 \| Mantener Información de Contacto para Reportar Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener la Información de Contacto para Reportar Incidentes de Seg` |
-| TEN token | 696 | `\| 17.2 \| Mantener Información de Contacto para Reportar Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener la Información de Contacto para Reportar Incidentes de Seg` |
-| tención token | 696 | `\| 17.2 \| Mantener Información de Contacto para Reportar Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener la Información de Contacto para Reportar Incidentes de Seg` |
-| Silencioso token | 697 | `\| 17.3 \| Mantener un Proceso Empresarial para la Presentación de Informes Incidentes \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener un Proceso Empresarial para la Presentación de Inform` |
-| TEN token | 697 | `\| 17.3 \| Mantener un Proceso Empresarial para la Presentación de Informes Incidentes \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener un Proceso Empresarial para la Presentación de Inform` |
-| tención token | 697 | `\| 17.3 \| Mantener un Proceso Empresarial para la Presentación de Informes Incidentes \| Poner en marcha un proceso repetible, propiedad o control técnico para mantener un Proceso Empresarial para la Presentación de Inform` |
-| Silencioso token | 698 | `TEN 17.4 \| Establecer y mantener un proceso de respuesta de incidentes \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de respuesta de incidentes, a continuac` |
-| TEN token | 698 | `TEN 17.4 \| Establecer y mantener un proceso de respuesta de incidentes \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de respuesta de incidentes, a continuac` |
-| TEN token | 698 | `TEN 17.4 \| Establecer y mantener un proceso de respuesta de incidentes \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de respuesta de incidentes, a continuac` |
-| tención token | 698 | `TEN 17.4 \| Establecer y mantener un proceso de respuesta de incidentes \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de respuesta de incidentes, a continuac` |
-| Silencioso token | 699 | `TEN 17.5 \| Asignar Funciones y responsabilidades clave ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para asignar funciones y responsabilidades clave, a continuación, verificar cobertura y ex` |
-| TEN token | 699 | `TEN 17.5 \| Asignar Funciones y responsabilidades clave ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para asignar funciones y responsabilidades clave, a continuación, verificar cobertura y ex` |
-| TEN token | 699 | `TEN 17.5 \| Asignar Funciones y responsabilidades clave ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para asignar funciones y responsabilidades clave, a continuación, verificar cobertura y ex` |
-| tención token | 699 | `TEN 17.5 \| Asignar Funciones y responsabilidades clave ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para asignar funciones y responsabilidades clave, a continuación, verificar cobertura y ex` |
-| ANTER corruption | 700 | `TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respue` |
-| Silencioso token | 700 | `TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respue` |
-| TEN token | 700 | `TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respue` |
-| TEN token | 700 | `TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respue` |
-| tención token | 700 | `TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respue` |
-| English phrase: Conduct Routine Incident Response | 701 | `\| 17.7 \| Conduct Routine Incident Response Ejercicios Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar ejercicios de respuesta de incidentes de rutina, a continuación, verifique la cober` |
-| Silencioso token | 701 | `\| 17.7 \| Conduct Routine Incident Response Ejercicios Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar ejercicios de respuesta de incidentes de rutina, a continuación, verifique la cober` |
-| TEN token | 701 | `\| 17.7 \| Conduct Routine Incident Response Ejercicios Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar ejercicios de respuesta de incidentes de rutina, a continuación, verifique la cober` |
-| tención token | 701 | `\| 17.7 \| Conduct Routine Incident Response Ejercicios Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar ejercicios de respuesta de incidentes de rutina, a continuación, verifique la cober` |
-| Silencioso token | 702 | `\| 17.8 \| Conducir Reseñas posteriores a incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo revisiones post-incidente, a continuación, verificar cobertura y excepciones. ten` |
-| TEN token | 702 | `\| 17.8 \| Conducir Reseñas posteriores a incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo revisiones post-incidente, a continuación, verificar cobertura y excepciones. ten` |
-| tención token | 702 | `\| 17.8 \| Conducir Reseñas posteriores a incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo revisiones post-incidente, a continuación, verificar cobertura y excepciones. ten` |
-| Silencioso token | 703 | `\| 17.9 \| Establecer y Mantener Umbral de Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener Umbrales de Incidentes de Seguridad, a continuación, verific` |
-| TEN token | 703 | `\| 17.9 \| Establecer y Mantener Umbral de Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener Umbrales de Incidentes de Seguridad, a continuación, verific` |
-| tención token | 703 | `\| 17.9 \| Establecer y Mantener Umbral de Incidentes de Seguridad \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener Umbrales de Incidentes de Seguridad, a continuación, verific` |
 | arrow artifact | 773 | `← Inventories \| ¿Están completos los activos, software, datos, cuentas, proveedores, aplicaciones y registros? Verde / Amarillo / Rojo` |
 | TEN token | 774 | `TEN Protection TEN ¿Operan la configuración, el acceso, el parche, el correo electrónico, el malware y los controles de datos? Verde / Amarillo / Rojo` |
 | TEN token | 774 | `TEN Protection TEN ¿Operan la configuración, el acceso, el parche, el correo electrónico, el malware y los controles de datos? Verde / Amarillo / Rojo` |

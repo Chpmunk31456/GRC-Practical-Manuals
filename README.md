@@ -3,8 +3,8 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, and third-party risk.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.1  
-**Last updated:** July 2026
+**Repository version:** 1.3  
+**Last updated:** 31 July 2026
 
 ## Start Here
 
@@ -21,7 +21,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [01 — Foundations](./01-foundations/) | [NIST CSF 2.0](./01-foundations/NIST_CSF_2/), [CIS Controls v8.1](./01-foundations/CIS_Controls_v8.1/), and [NIST RMF / SP 800-53](./01-foundations/NIST_RMF_SP_800-53/) |
 | [02 — Management Systems](./02-management-systems/) | [ISO/IEC 27001 and 27002](./02-management-systems/ISO_IEC_27001_27002/) |
 | [03 — Assurance and Audit](./03-assurance-and-audit/) | [SOC 2 audit readiness in English and Spanish](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/) |
-| [04 — Regulatory Compliance](./04-regulatory-compliance/) | [GDPR](./04-regulatory-compliance/GDPR/), [HIPAA](./04-regulatory-compliance/HIPAA/), and [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/) |
+| [04 — Regulatory Compliance](./04-regulatory-compliance/) | [EU AI Act GRC Compliance Manual](./04-regulatory-compliance/EU_AI_Act_GRC/), [GDPR](./04-regulatory-compliance/GDPR/), [HIPAA](./04-regulatory-compliance/HIPAA/), and [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/) |
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
@@ -32,6 +32,8 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 The eleven manuals below have English, Latin American Spanish, and Brazilian Portuguese editions. Direct DOCX and PDF downloads are provided for the localized editions.
 
 > **Publication status:** The Spanish and Brazilian Portuguese editions are machine-assisted educational drafts. Package integrity and embedded media have been validated, but human language, legal, technical, accessibility, and final visual review may still be pending. Do not treat availability here as a claim of certification, legal advice, or completed editorial approval.
+
+**EU AI Act exception:** The EU AI Act GRC Compliance Manual has separately validated English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) publication packages containing 138 chapters, Appendices A–Z, controlled Markdown, DOCX, PDF, manifests, automated QA evidence, PDF metadata, and SHA-256 checksums.
 
 | Manual | English | Español (Latinoamérica) | Português (Brasil) |
 |---|---|---|---|

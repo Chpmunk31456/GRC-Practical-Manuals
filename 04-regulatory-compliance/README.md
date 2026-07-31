@@ -1,8 +1,15 @@
 # Regulatory Compliance
 
-This section contains practical guidance for understanding and supporting major privacy, healthcare, and payment-card compliance requirements.
+This section contains practical guidance for understanding and supporting major AI-governance, privacy, healthcare, and payment-card compliance requirements.
 
 ## Included Manuals
+
+### EU Artificial Intelligence Act
+
+- [Open the EU AI Act GRC Compliance Manual](./EU_AI_Act_GRC/)
+- [Open the Spanish and Brazilian Portuguese publication packages](./EU_AI_Act_GRC/translations/)
+
+Published and validated editions are available in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`). Each package contains 138 chapters, Appendices A–Z, controlled Markdown, DOCX, PDF, manifests, QA evidence, PDF metadata, and SHA-256 checksums.
 
 ### GDPR
 
@@ -64,6 +71,7 @@ Topics include:
 - Students
 - Junior GRC analysts
 - Compliance analysts
+- AI-governance professionals
 - Privacy professionals
 - Healthcare security professionals
 - Payment-security professionals
@@ -99,7 +107,7 @@ Organizations should verify current requirements through official publications a
 
 ## Version
 
-Version 1.0 — July 2026
+Version 1.3 — July 2026
 
 ## License
 

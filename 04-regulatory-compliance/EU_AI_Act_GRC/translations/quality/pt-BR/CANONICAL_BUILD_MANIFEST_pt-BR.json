@@ -1,0 +1,1157 @@
+{
+  "language": "pt-BR",
+  "chapter_count": 138,
+  "appendix_count": 26,
+  "record_count": 164,
+  "master_sha256": "e43cba8d0ba91821b5293248943342ed799c978a80627576b603937ab4d8f94f",
+  "records": [
+    {
+      "item": "Chapter 1",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/01_Understanding_the_EU_AI_Act_CORRECTED_MASTER.md",
+      "sha256": "1a3b2016728c12c7e371dbb9db9fa77fd4e411237419fb5b301f0206106c536e",
+      "bytes": 8251,
+      "lines": 114
+    },
+    {
+      "item": "Chapter 2",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/02_Scope_Purpose_and_Regulatory_Approach_CORRECTED_MASTER.md",
+      "sha256": "2650281c768ef7f5a3b29ff6226792119a729683c7e7ccb994056616b1c2d630",
+      "bytes": 4427,
+      "lines": 60
+    },
+    {
+      "item": "Chapter 3",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/03_Territorial_and_Extraterritorial_Applicability_CORRECTED_MASTER.md",
+      "sha256": "e121ff6eb804d19c6152ad4a780e78b4a36845bc4e8889ab4e1fbe8b1dfe64d4",
+      "bytes": 2879,
+      "lines": 51
+    },
+    {
+      "item": "Chapter 4",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/04_Key_Definitions_in_Plain_English_CORRECTED_MASTER.md",
+      "sha256": "7eb3e6fe38b5117cc06ab526283cfad5b757b8e312f6f9cab50b2dee6d6025ac",
+      "bytes": 4541,
+      "lines": 83
+    },
+    {
+      "item": "Chapter 5",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/05_Regulatory_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "sha256": "19b69b68fca9b94bdf2633beceace1bd552a0b890569a2c350ec5a362c6e749c",
+      "bytes": 3409,
+      "lines": 58
+    },
+    {
+      "item": "Chapter 6",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
+      "sha256": "1b8823581f5cc0670be537e595562c196c6a316317debac7446fa65658bf5fde",
+      "bytes": 7901,
+      "lines": 111
+    },
+    {
+      "item": "Chapter 7",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/07_Relationship_to_Other_EU_Laws_and_Frameworks_CORRECTED_MASTER.md",
+      "sha256": "170a265e2ef6a01b20e1589e921e26f56aa9f8a697ee5868eddca861653395eb",
+      "bytes": 2747,
+      "lines": 39
+    },
+    {
+      "item": "Chapter 8",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/08_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "sha256": "f768b42c6353443cf89021a6a1618bab4613a21ac0156a32e96f8db64b029d21",
+      "bytes": 2027,
+      "lines": 35
+    },
+    {
+      "item": "Chapter 9",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/09_Board_and_Executive_Oversight_CORRECTED_MASTER.md",
+      "sha256": "f668c61c2ec37f3575d766e6c3c3be8ce41a8357de96c7d6be6d4403e8dfe705",
+      "bytes": 2055,
+      "lines": 35
+    },
+    {
+      "item": "Chapter 10",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/10_AI_Policy_Framework_CORRECTED_MASTER.md",
+      "sha256": "57d825241a0812f71ef2db7056febf6bf9150f177af83d7c0611eebbba0cef1c",
+      "bytes": 2172,
+      "lines": 35
+    },
+    {
+      "item": "Chapter 11",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/11_Roles_Responsibilities_and_Three_Lines_CORRECTED_MASTER.md",
+      "sha256": "bab5ded60af228ed0604290181b78c4f7cded0cfbdfe9bf3597bd7395e436179",
+      "bytes": 2335,
+      "lines": 35
+    },
+    {
+      "item": "Chapter 12",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/12_AI_Literacy_Role_Based_Training_and_Competence_Assurance.md",
+      "sha256": "51a25c8b15ca22e9f545c4ec577524b57002cdbe4df336616cb93826c30c05ff",
+      "bytes": 13416,
+      "lines": 176
+    },
+    {
+      "item": "Chapter 13",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/13_AI_Policy_and_Standards_CORRECTED_MASTER.md",
+      "sha256": "886857a18d3c179a249aca89f3e4b0a9614a98292da6a59fcc265c2f7e5fc73a",
+      "bytes": 1996,
+      "lines": 31
+    },
+    {
+      "item": "Chapter 14",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/14_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "sha256": "ee19c10c07d59b4f8e1fc9fa14d54c5d10141c12d4a88955900933c4fe2c640b",
+      "bytes": 1893,
+      "lines": 31
+    },
+    {
+      "item": "Chapter 15",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/15_AI_Governance_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "sha256": "8cc2de08a46f535e2f7f308e504960a651ecdcc012838edd4e22b9baab408fd0",
+      "bytes": 1928,
+      "lines": 31
+    },
+    {
+      "item": "Chapter 16",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/16_AI_System_Inventory_CORRECTED_MASTER.md",
+      "sha256": "d67164324f3bfbb02995139008f7c259389e7d9d3f61c7c013725e4d4f3b9c2c",
+      "bytes": 2118,
+      "lines": 31
+    },
+    {
+      "item": "Chapter 17",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/17_AI_Intake_and_Initial_Triage_CORRECTED_MASTER.md",
+      "sha256": "a182ee45e2c1b86252a36e63c5b6d1caa63ff0b8865c189f8d2a75d0631a137f",
+      "bytes": 2153,
+      "lines": 31
+    },
+    {
+      "item": "Chapter 18",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/18_Actor_Role_Assessment_CORRECTED_MASTER.md",
+      "sha256": "6bf2f31fae5b211f193db9089b9d05a82a6b06bcbac84684399ad466a16de64d",
+      "bytes": 3800,
+      "lines": 78
+    },
+    {
+      "item": "Chapter 19",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/19_Classification_Decision_and_Evidence_CORRECTED_MASTER.md",
+      "sha256": "cdd64a6b1deca8fd535dc5aff65116042b39aa39984c5555371ba91fb7134ded",
+      "bytes": 1361,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 20",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/20_High_Risk_Classification_CORRECTED.md",
+      "sha256": "45b9a6cd5b9df1d9fdf9b38cabefb6c7c72ca3a4b6a586c9403bb9f0d16573bd",
+      "bytes": 7507,
+      "lines": 141
+    },
+    {
+      "item": "Chapter 21",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/21_Annex_I_and_Annex_III_Analysis_CORRECTED.md",
+      "sha256": "ffc4190b98ac7215f7dc178a8062508e4784385496c8d5bdc0675cd43c94827f",
+      "bytes": 7770,
+      "lines": 140
+    },
+    {
+      "item": "Chapter 22",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/22_High_Risk_Exception_and_Scoping_Analysis_CORRECTED_MASTER.md",
+      "sha256": "e640e8d9bf0fe7337c51c8639fdd09e8a64eb83635811beb154904320a0760e0",
+      "bytes": 1324,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 23",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/23_Classification_Review_and_Approval_CORRECTED_MASTER.md",
+      "sha256": "4b4e70ba1e28d162f75dc085703d3229e0ed8fb467c0f964960da49b98b95950",
+      "bytes": 975,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 24",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/24_Reclassification_and_Change_Triggers_CORRECTED_MASTER.md",
+      "sha256": "9e3871bdadc379a36b0762bb86ab94163276424c53e6a8b3036d74a6542a9498",
+      "bytes": 1056,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 25",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/25_Classification_Register_and_Reporting_CORRECTED_MASTER.md",
+      "sha256": "fc0c1695df0b82d9f5772b386715d2f69fb350a2781cbe1b8f08872e8e9bee33",
+      "bytes": 937,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 26",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/26_Prohibited_Practices_Overview_CORRECTED_MASTER.md",
+      "sha256": "27cd134e7218da8644b867d00d55ea4fd24a6a69f3db47a057f30e5c0b43782a",
+      "bytes": 1138,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 27",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/27_Manipulation_and_Subliminal_Techniques_CORRECTED_MASTER.md",
+      "sha256": "3e682d7674b67c9d85ca6bb3c7666201a26b4d350600ac88cf3a4f1b2332dd5a",
+      "bytes": 999,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 28",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/28_Exploitation_of_Vulnerabilities_CORRECTED_MASTER.md",
+      "sha256": "5cb75f1ef05464e881dc15acf96748b69768cfd24ac7791fee36ef0342e236c3",
+      "bytes": 1055,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 29",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/29_Social_Scoring_CORRECTED_MASTER.md",
+      "sha256": "1736a3d1c4cceaf8f0e345a3c1dccbb7ae3342bdda89db5172eceb32ec33292b",
+      "bytes": 1089,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 30",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/30_Predictive_Policing_and_Risk_Inference_CORRECTED_MASTER.md",
+      "sha256": "9c4741b8fbc30e3309192f07fc251b72ec3192e081a10f46ae540963ffce93de",
+      "bytes": 1106,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 31",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/31_Facial_Image_Scraping_and_Biometric_Databases_CORRECTED_MASTER.md",
+      "sha256": "c3161fbb6b70925bf32efaa28c894265ee3870253a5471ab8b0238f0416d9082",
+      "bytes": 1099,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 32",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/32_Emotion_Recognition_Restrictions_CORRECTED_MASTER.md",
+      "sha256": "55038fdeb77afb799c262159448ea76f37d365614c4c273a6db0557564b722c5",
+      "bytes": 1142,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 33",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/33_Biometric_Categorisation_Restrictions_CORRECTED_MASTER.md",
+      "sha256": "e4a11a1a706861976c6658cceff7d6cff5f2b1cedeecd9d8077d0c4c0a4c99ca",
+      "bytes": 1191,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 34",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/34_New_Prohibitions_for_Non_Consensual_Intimate_Content_and_Child_Sexual_Abuse_Material_CORRECTED.md",
+      "sha256": "2295ac12f091b369c5b0afe7f2f159ce4450ff9adc37fcc961936ad69889e8f8",
+      "bytes": 8583,
+      "lines": 122
+    },
+    {
+      "item": "Chapter 35",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/35_Prohibited_Practice_Governance_and_Assurance_CORRECTED_MASTER.md",
+      "sha256": "a177cdddc40e69e9238d532d27c472db438fd8b375b4df231a4d5e8c61681e65",
+      "bytes": 1292,
+      "lines": 27
+    },
+    {
+      "item": "Chapter 36",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/36_High_Risk_Quality_Management_System_CORRECTED_MASTER.md",
+      "sha256": "1069efebc695df9b03d2d90697e38825e5a7a00a5fb3fd67a962ab1a60415609",
+      "bytes": 4043,
+      "lines": 63
+    },
+    {
+      "item": "Chapter 37",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/37_Continuous_Risk_Management_CORRECTED_MASTER.md",
+      "sha256": "73d0e7c25b39ee358868f9cb4958fd9c8478e0428dd1c474454975981440df70",
+      "bytes": 3798,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 38",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/38_Data_and_Data_Governance_CORRECTED_MASTER.md",
+      "sha256": "d444676f695c12ebf10fc964b85e8209c810cafab31a27aeb290c98e5a2cd221",
+      "bytes": 4089,
+      "lines": 61
+    },
+    {
+      "item": "Chapter 39",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/39_Technical_Documentation_CORRECTED_MASTER.md",
+      "sha256": "efa59505e3d1df78c280f35a3be1f7dfd723c286f9a1a3dc0f1e3cd999267a0a",
+      "bytes": 4115,
+      "lines": 64
+    },
+    {
+      "item": "Chapter 40",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/40_Logs_and_Recordkeeping_CORRECTED_MASTER.md",
+      "sha256": "6ff12eea9ba5affe3b7d6ef3da2490278582ed2408d57c4af38db83cbb76d5e8",
+      "bytes": 4173,
+      "lines": 63
+    },
+    {
+      "item": "Chapter 41",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/41_Transparency_and_Instructions_for_Use_CORRECTED_MASTER.md",
+      "sha256": "e031fdf4622660987413fc76747c11d1c838f79c34c0152fda55345f7cf4ffd3",
+      "bytes": 3964,
+      "lines": 59
+    },
+    {
+      "item": "Chapter 42",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/42_Human_Oversight_CORRECTED_MASTER.md",
+      "sha256": "d2e37639c88bc9b53cd71a19392de516415ca7ea794e7528050a2c3dc32da4d2",
+      "bytes": 3836,
+      "lines": 63
+    },
+    {
+      "item": "Chapter 43",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/43_Accuracy_Robustness_Cybersecurity_and_Resilience_CORRECTED_MASTER.md",
+      "sha256": "21c368d4bf7b57927b333fe4c1d271782775e51863a7f5aa50a5447d7277dbfd",
+      "bytes": 4073,
+      "lines": 60
+    },
+    {
+      "item": "Chapter 44",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/44_Conformity_Assessment_CORRECTED_MASTER.md",
+      "sha256": "cdfeab9aff660a4f6ed3d27ccdc7ea88f8db2fbffd55b85f44afa52e8c427f74",
+      "bytes": 4000,
+      "lines": 64
+    },
+    {
+      "item": "Chapter 45",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/45_EU_Declaration_of_Conformity_and_CE_Marking_CORRECTED_MASTER.md",
+      "sha256": "959910e0de4500a53e218fb6bf661606ed6bcf6634c06742f52223ee54519a79",
+      "bytes": 3562,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 46",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/46_Registration_CORRECTED_MASTER.md",
+      "sha256": "98b4032383a17ff1ee9f3220d5f485fbda29d95dc7f851e74b420fedf9bf3129",
+      "bytes": 3240,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 47",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/47_Fundamental_Rights_Impact_Assessment_CORRECTED_MASTER.md",
+      "sha256": "8a4b231fce571eb1697ef4e648e20f5bd6a54a6c33708df2ad98e22d81882fae",
+      "bytes": 4276,
+      "lines": 59
+    },
+    {
+      "item": "Chapter 48",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/48_DPIA_Coordination_CORRECTED_MASTER.md",
+      "sha256": "0cecd60fd4ced77ef9fff9e5db4be33149a1fc8550e035bb691bed88f25a9ca1",
+      "bytes": 3754,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 49",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/49_Post_Market_Monitoring_CORRECTED_MASTER.md",
+      "sha256": "f78c21a31a35107ec35f7f0beeba76396879cb4a42754daf7a687b476d81dcf6",
+      "bytes": 3442,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 50",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/50_Serious_Incident_Reporting_CORRECTED_MASTER.md",
+      "sha256": "ca707ee522f03b8ae5f4d67ff48a45886ef0e5cf29a455a3999f6d33762c5411",
+      "bytes": 3961,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 51",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/51_Corrective_Action_Withdrawal_and_Recall_CORRECTED_MASTER.md",
+      "sha256": "6087d96d4eb19a22891a5ece314cd5868974d7e2014e721b223cc0e704530330",
+      "bytes": 3976,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 52",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/52_Change_Management_and_Substantial_Modification_CORRECTED_MASTER.md",
+      "sha256": "099dd56ef9556f9f75fcc1e2d2059094be37c3b7cfd7cce39bcaed4b7a755a09",
+      "bytes": 4517,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 53",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/53_Understanding_GPAI_Roles_CORRECTED_MASTER.md",
+      "sha256": "4dbf36f8ed7442ae75b58fd82c4498117d9e7ee270281bb3f037513e565b0c51",
+      "bytes": 3412,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 54",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/54_GPAI_Documentation_and_Downstream_Information_CORRECTED_MASTER.md",
+      "sha256": "7be9eb5e75e0a8e83181c5c628a1cc2e7b756efb83fc41d3584514f94107aa9e",
+      "bytes": 3427,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 55",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/55_Copyright_Policy_and_Training_Content_Summary_CORRECTED_MASTER.md",
+      "sha256": "7b8cd9724a7ebcff0bf0402630efef3ff118e3c22516a81c2be5c6c27c947dfd",
+      "bytes": 3445,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 56",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/56_GPAI_Models_with_Systemic_Risk_CORRECTED_MASTER.md",
+      "sha256": "ed15aafb6f7461f81651bfd33773faf12bdfef64a34b6bdcd774514e28ddd794",
+      "bytes": 3683,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 57",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/57_Model_Evaluations_and_Adversarial_Testing_CORRECTED_MASTER.md",
+      "sha256": "37950076c7d97a13e414f34f753b186c441de490855fbd514f10446749a88427",
+      "bytes": 3500,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 58",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/58_Systemic_Risk_Assessment_and_Mitigation_CORRECTED_MASTER.md",
+      "sha256": "89f1aef27e13190cf78b5b8df0b41cd7bac81e9dfd0b2d1f44be37c1a1c73afb",
+      "bytes": 3790,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 59",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/59_Cybersecurity_and_Incident_Reporting_for_Systemic_Risk_GPAI_CORRECTED_MASTER.md",
+      "sha256": "1b29ffb9ccb5ae304f01b6e281a9b84cac89f33d5dcfa6183d807fc0ba4fe88c",
+      "bytes": 3987,
+      "lines": 60
+    },
+    {
+      "item": "Chapter 60",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/60_Energy_and_Resource_Reporting_CORRECTED_MASTER.md",
+      "sha256": "a7888041ebf4f1125858ff90752ba9d0c8229455a575359d57f628d9db38b9e5",
+      "bytes": 3436,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 61",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/61_Open_Source_Considerations_CORRECTED_MASTER.md",
+      "sha256": "8195aa4dcce3b830296bfc48dbd1138533c94a360d55091dcd5d5cd3ec2b4c03",
+      "bytes": 3698,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 62",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/62_GPAI_Code_of_Practice_CORRECTED_MASTER.md",
+      "sha256": "26495f225abd004b3125d9c5b3a510dd09fcb48fe924c426d25bb4437ec11358",
+      "bytes": 3489,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 63",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/63_Transparency_Code_for_AI_Generated_Content_CORRECTED_MASTER.md",
+      "sha256": "0b76c790e85a5dbe01bf2bd480ee4276e9ea011f5a47aaf268ee626579744ec0",
+      "bytes": 3756,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 64",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/64_Chatbot_and_Human_Interaction_Disclosure_CORRECTED_MASTER.md",
+      "sha256": "6529cef6bee6c303213983d430c12bf2c0daf19f39e516d648120085915cea89",
+      "bytes": 2273,
+      "lines": 38
+    },
+    {
+      "item": "Chapter 65",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/65_AI_Generated_and_Manipulated_Content_Marking_CORRECTED_MASTER.md",
+      "sha256": "ae066c0e80c6c614cff98fd810e8a383704a5a4a06040e904c6f15f862bf3d5d",
+      "bytes": 2348,
+      "lines": 42
+    },
+    {
+      "item": "Chapter 66",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/66_Deepfake_Disclosure_CORRECTED_MASTER.md",
+      "sha256": "73a9be7ea087068d2a4cb25fb841aadafdfd157cfde9a031c2a55b10c9a3ffe9",
+      "bytes": 2097,
+      "lines": 37
+    },
+    {
+      "item": "Chapter 67",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/67_AI_Generated_Text_Public_Interest_Disclosure_CORRECTED_MASTER.md",
+      "sha256": "41f5342a818b6e8f2399d5e1ba94100fec874cf89bef59e801a058a807bed692",
+      "bytes": 2169,
+      "lines": 37
+    },
+    {
+      "item": "Chapter 68",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/68_Emotion_Recognition_and_Biometric_Categorisation_Disclosure_CORRECTED_MASTER.md",
+      "sha256": "a836ac607b11cc769e1af628ee62c1de1db21c973ba7b730aafa4616d8542f2a",
+      "bytes": 2537,
+      "lines": 38
+    },
+    {
+      "item": "Chapter 69",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/69_Accessibility_and_Understandable_Notices_CORRECTED_MASTER.md",
+      "sha256": "ac4e953f976471a987ffe55f80e28533179e801bc550eaba3d7510890d9f659e",
+      "bytes": 2054,
+      "lines": 38
+    },
+    {
+      "item": "Chapter 70",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/70_Testing_and_Monitoring_Transparency_Disclosures_CORRECTED_MASTER.md",
+      "sha256": "5e23dcaeb016caf371dfc41a8971672b13e3a4e1eb9aff3f52917c4a9774fdea",
+      "bytes": 2660,
+      "lines": 43
+    },
+    {
+      "item": "Chapter 71",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/71_AI_Vendor_Due_Diligence_CORRECTED_MASTER.md",
+      "sha256": "02c3d4cc0ffe772ccbea1f421d202f40d9187733758766c05288c92a56048a1c",
+      "bytes": 3770,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 72",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/72_Contract_Clauses_CORRECTED_MASTER.md",
+      "sha256": "375767d2691817ab93892309ef3bb4acc1a0fe5a0139010b68ecceb26f3fff09",
+      "bytes": 3695,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 73",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/73_Provider_Documentation_Review_CORRECTED_MASTER.md",
+      "sha256": "8ef3ee026916ae94fa198c5c8e4c9363c780792186033bc0bb8973a4ca9b758d",
+      "bytes": 3425,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 74",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/74_Model_Cards_System_Cards_and_Limitations_CORRECTED_MASTER.md",
+      "sha256": "0fe302d89c360f8f4e0b893469ae56dc86a33fff8c41b8cbacf0a7d69c5e8485",
+      "bytes": 3441,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 75",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/75_Audit_Rights_and_Incident_Notification_CORRECTED_MASTER.md",
+      "sha256": "9f4c8c58c1f4215ed6599fce98e8add37341bda562ca244af3ee525b41ba6c8b",
+      "bytes": 3832,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 76",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/76_Cloud_API_and_Model_Dependency_Risk_CORRECTED_MASTER.md",
+      "sha256": "992fa4d8b062f8c243a6450290c76ce5cfa50cdc0f1eaa8b3f3fed8a9f068bc1",
+      "bytes": 5054,
+      "lines": 58
+    },
+    {
+      "item": "Chapter 77",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/77_Open_Source_and_Component_Governance_CORRECTED_MASTER.md",
+      "sha256": "8743875c8829c6ef31b27c5888fe5932b547d90d4e4aa5a99dd91469b7746800",
+      "bytes": 3492,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 78",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/78_Ongoing_Vendor_Monitoring_CORRECTED_MASTER.md",
+      "sha256": "0765f41b8a7c37a15ba3763fdb1cf1d6addb92aa2bff7fb98cd2446765e6f512",
+      "bytes": 3847,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 79",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/79_Exit_Portability_and_Continuity_Planning_CORRECTED_MASTER.md",
+      "sha256": "e0cb79ea50b30f843223f8192c6679b4a2eb312c3bd9631c45a0f27cb062b659",
+      "bytes": 3949,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 80",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/80_GDPR_Integration_CORRECTED_MASTER.md",
+      "sha256": "8f77fc343ad76fed1e5c70bc6c8aee10f7ff0d892541cc2349c657183b4a99f1",
+      "bytes": 4099,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 81",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/81_Privacy_by_Design_and_Data_Minimisation_CORRECTED_MASTER.md",
+      "sha256": "5bce2848ca27074d21f10cd2a03bfa0038fee7984eab82f23d62010ec51879ee",
+      "bytes": 3648,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 82",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/82_Special_Category_Data_CORRECTED_MASTER.md",
+      "sha256": "ac0feb92d93959f71677bc749247d3ae844f97dd0148fa8ed6a6277ec5325477",
+      "bytes": 3731,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 83",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/83_Automated_Decision_Making_CORRECTED_MASTER.md",
+      "sha256": "248652713a034b44e5886b0a05c19d4c751b1553602360cebcbd1d1bc441e34d",
+      "bytes": 3578,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 84",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/84_Secure_AI_Development_Lifecycle_CORRECTED_MASTER.md",
+      "sha256": "124a3f2a8e17a09611fd08975d559fa5a3b128b2cb3db28cf037ea8cd0812c4c",
+      "bytes": 4176,
+      "lines": 59
+    },
+    {
+      "item": "Chapter 85",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/85_Threat_Modelling_CORRECTED_MASTER.md",
+      "sha256": "e1f3d7621f337cf7e0793400fcdb2950dd4c184fdd20e49984f73f71eb96cf7d",
+      "bytes": 3670,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 86",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/86_Prompt_Injection_and_Model_Manipulation_CORRECTED_MASTER.md",
+      "sha256": "ff4e017e6c2704d438f741c2d82c41b3827a7450c1ca57222bfa9b4c9de0815f",
+      "bytes": 3397,
+      "lines": 53
+    },
+    {
+      "item": "Chapter 87",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/87_Data_Poisoning_and_Training_Data_Risk_CORRECTED_MASTER.md",
+      "sha256": "955e92f2b0e027afa6779f1ede50b7559473130b4946d0f502f4137128279cde",
+      "bytes": 3297,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 88",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/88_Model_Extraction_and_Theft_CORRECTED_MASTER.md",
+      "sha256": "86f72ced20db5b89765492cbbb111c0872cab4f9a6e3988b908ea072a493f4fd",
+      "bytes": 3421,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 89",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/89_Logging_Monitoring_and_Vulnerability_Management_CORRECTED_MASTER.md",
+      "sha256": "0cb448d68b3fcc449c15f65928d52810e9b453a3a7a30f942ac2f7b49c566aba",
+      "bytes": 3596,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 90",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/90_Business_Continuity_and_Disaster_Recovery_CORRECTED_MASTER.md",
+      "sha256": "f24c5986ad249d49a4f5e6dbe3521c524f0c63dad8f17a230f63142589e9f985",
+      "bytes": 3619,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 91",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/91_Red_Team_and_Penetration_Testing_Governance_CORRECTED_MASTER.md",
+      "sha256": "62224fe0990c5518b7c2f37dcfd06b36a0a1ee76408e9486e1cad92f6edd7fce",
+      "bytes": 3748,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 92",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/92_Inherent_Risk_Assessment_CORRECTED_MASTER.md",
+      "sha256": "ba8c896533b63d98fad0a79c39247342e1dac9bb14c52db836c7a799ac867957",
+      "bytes": 3684,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 93",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/93_Fundamental_Rights_Risk_CORRECTED_MASTER.md",
+      "sha256": "0d87d60302ecb95415c4ca8a215f2f82b63c34fe1050d2e42cd5fad69cbdace1",
+      "bytes": 3585,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 94",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/94_Safety_Risk_CORRECTED_MASTER.md",
+      "sha256": "cfd4841ef46140a9be6065f85729c54c442b4e998c58099c1e572d1911cdb929",
+      "bytes": 3485,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 95",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/95_Bias_and_Discrimination_Risk_CORRECTED_MASTER.md",
+      "sha256": "e29b977bfcb41740162cfcd83c61b822d1b4b1072b261e48cf82373624b7d6f0",
+      "bytes": 3602,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 96",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/96_Privacy_and_Data_Protection_Risk_CORRECTED_MASTER.md",
+      "sha256": "bd4dbff675f594ada386784f00619aebf7a7ad1647815e928467f93477dc9b67",
+      "bytes": 4118,
+      "lines": 58
+    },
+    {
+      "item": "Chapter 97",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/97_Cybersecurity_Risk_CORRECTED_MASTER.md",
+      "sha256": "165bfcf3084a3b74fc57230062a98169a435a1ea551acf460591c4a9f28a19ba",
+      "bytes": 4358,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 98",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/98_Explainability_and_Transparency_Risk_CORRECTED_MASTER.md",
+      "sha256": "a73a914570e0b18693d20a2d52b9108164a9b47eeef80320da23563c35d52e0c",
+      "bytes": 3810,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 99",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/99_Human_Autonomy_Risk_CORRECTED_MASTER.md",
+      "sha256": "2ee98ad97f2b922dbb024e288dddf2ac68dd9c32ac8bdc316521a76e5fbf244f",
+      "bytes": 3734,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 100",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/100_Operational_and_Resilience_Risk_CORRECTED_MASTER.md",
+      "sha256": "852fd0e7e66690b8ae618b9aa0a5c34c045ba17d41cd89b260e1f25bdc3e3fc8",
+      "bytes": 3749,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 101",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/101_Third_Party_Risk_CORRECTED_MASTER.md",
+      "sha256": "8e1e901c4b1a19c08965914720fcac815c378b7bd47f39c5a51606eba9416c8a",
+      "bytes": 4126,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 102",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/102_Legal_Financial_and_Reputational_Risk_CORRECTED_MASTER.md",
+      "sha256": "dc8bbf54aae6a8910f81f41d1dd95766285838b0398d5b364784b5200b30129a",
+      "bytes": 3975,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 103",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/103_Residual_Risk_Acceptance_and_Exceptions_CORRECTED_MASTER.md",
+      "sha256": "cf6e6b4bd1f9e3b6023dfad309c91a46f5b86fdb7a6ab58ae4e4d3aec94f05a8",
+      "bytes": 3942,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 104",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/104_Control_Library_Design_CORRECTED_MASTER.md",
+      "sha256": "7ab811b3f4014bf2524df1bc08b4094ca34fedaf89d75ade46353ec3bee17a12",
+      "bytes": 3653,
+      "lines": 58
+    },
+    {
+      "item": "Chapter 105",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/105_Article_to_Control_Mapping_CORRECTED_MASTER.md",
+      "sha256": "6cd4844fc8056e23d5d5000e6b72e66cc65ef14350b871ca72fde188ba70c7cc",
+      "bytes": 3250,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 106",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/106_Control_Ownership_and_Frequency_CORRECTED_MASTER.md",
+      "sha256": "f01e9e2dc34b89e441761ee8531cd4cfe7cb2b70461a59cdd3af258259e61596",
+      "bytes": 3620,
+      "lines": 63
+    },
+    {
+      "item": "Chapter 107",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/107_Evidence_Standards_CORRECTED_MASTER.md",
+      "sha256": "2204e88e060ec788e526db99e19e0fa943e4c801952788835784c43cb3649cf4",
+      "bytes": 3396,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 108",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/108_Control_Testing_CORRECTED_MASTER.md",
+      "sha256": "da812fe05fc1e141713e7a6467b0a3edb651cda208f04b677c09d79489397678",
+      "bytes": 3371,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 109",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/109_Deficiency_Classification_CORRECTED_MASTER.md",
+      "sha256": "6a1c39ae965ff08cd9eb9fbf58432e9996f87ab32666b94b089dbe32f290df3a",
+      "bytes": 3869,
+      "lines": 61
+    },
+    {
+      "item": "Chapter 110",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/110_Corrective_Action_Management_CORRECTED_MASTER.md",
+      "sha256": "0a53e30e9ccb5ca768af89927af8c0dcb89bcc4fa9b44ae1227ac4142901e4ab",
+      "bytes": 3724,
+      "lines": 57
+    },
+    {
+      "item": "Chapter 111",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/111_Continuous_Compliance_Monitoring_CORRECTED_MASTER.md",
+      "sha256": "49d6454fee9e6718efbbcfdf59c4cf596679cc4084ec8ad409e0ef9b01aff646",
+      "bytes": 3626,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 112",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/112_Audit_Planning_CORRECTED_MASTER.md",
+      "sha256": "6d4699f7211fcc8d9b7da03455ddbf41a3d5322a4d5eede976504124dfd3b675",
+      "bytes": 3583,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 113",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/113_Design_Effectiveness_Testing_CORRECTED_MASTER.md",
+      "sha256": "de335622822c858937a9385370058efd7da50a9fe88ebde93a0ef5efcdb0ae48",
+      "bytes": 3080,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 114",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/114_Operating_Effectiveness_Testing_CORRECTED_MASTER.md",
+      "sha256": "98ce07d769d9790339ff17b09276b16414959d258b1917ca999de663563dd8a4",
+      "bytes": 3057,
+      "lines": 54
+    },
+    {
+      "item": "Chapter 115",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/115_Sampling_and_Evidence_Evaluation_CORRECTED_MASTER.md",
+      "sha256": "b9f86b3dbdd275a03d84b8c53940da6c21dad58de3d9a82c36e6eeb57e86f240",
+      "bytes": 5696,
+      "lines": 65
+    },
+    {
+      "item": "Chapter 116",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/116_Technical_Validation_CORRECTED_MASTER.md",
+      "sha256": "97468bd7395a35960c5e1ce1a42f8403031906bf7e7ed1ed27d4f8cf951ed572",
+      "bytes": 5333,
+      "lines": 59
+    },
+    {
+      "item": "Chapter 117",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/117_Bias_Oversight_and_Transparency_Testing_CORRECTED_MASTER.md",
+      "sha256": "c32459cd92dcdd131cafc34007809ef2127024416875befc35e61707e8da0d2c",
+      "bytes": 5304,
+      "lines": 59
+    },
+    {
+      "item": "Chapter 118",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/118_Conformity_Readiness_Reviews_CORRECTED_MASTER.md",
+      "sha256": "83b120b60abc108c6a53c1d59a96855efdaaf9225ce09de45cd3c15da4be1530",
+      "bytes": 5771,
+      "lines": 61
+    },
+    {
+      "item": "Chapter 119",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/119_Internal_Audit_CORRECTED_MASTER.md",
+      "sha256": "7005f18beb3f3d25377dd2d4bc42f6f1eb58642704d9eb554adead1cecb1a530",
+      "bytes": 5627,
+      "lines": 61
+    },
+    {
+      "item": "Chapter 120",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/120_Regulatory_Examination_Readiness_CORRECTED_MASTER.md",
+      "sha256": "4e841de558971bf4213662ba71bf65e4e39a9cf09af36a53e1624026639bc68e",
+      "bytes": 4297,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 121",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/121_Findings_Remediation_and_Closure_CORRECTED_MASTER.md",
+      "sha256": "c54d3fe1516697410e9342d902ccf26a97a58fdc5642dd438d14dc1ca5ae0f5f",
+      "bytes": 3876,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 122",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/122_AI_Office_and_National_Authorities_CORRECTED_MASTER.md",
+      "sha256": "b113e61a3bccab81ae29201ebde857eb1f66a25884c458078929a1d3b0984139",
+      "bytes": 3813,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 123",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/123_Market_Surveillance_Authorities_CORRECTED_MASTER.md",
+      "sha256": "3b4b01d0f545d80dae344a6977e561672f14304907d9b08d9a420afca4274cdf",
+      "bytes": 3846,
+      "lines": 55
+    },
+    {
+      "item": "Chapter 124",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/124_Investigations_and_Information_Requests_CORRECTED_MASTER.md",
+      "sha256": "e8e217ab6bf636c092514955cfbde13b0924fca79a4633f6c9271ed8dea74d4e",
+      "bytes": 4100,
+      "lines": 56
+    },
+    {
+      "item": "Chapter 125",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/125_Administrative_Fines_and_Exposure_CORRECTED_MASTER.md",
+      "sha256": "d301783a2f3221e02438c526d56bc8110f8e81f787fb874fa355f9baec07c1e6",
+      "bytes": 4126,
+      "lines": 58
+    },
+    {
+      "item": "Chapter 126",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/126_Executive_Escalation_CORRECTED_MASTER.md",
+      "sha256": "bae4a44f7dc19e987b3e70e86ce8c3169e6a2a86add805bb74c4bbb65180fb4f",
+      "bytes": 11668,
+      "lines": 190
+    },
+    {
+      "item": "Chapter 127",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/127_Regulatory_Notification_CORRECTED_MASTER.md",
+      "sha256": "cdfe897d919c9e38acfd37dc409fd453651ee19874323a2fc8922eaca16ef926",
+      "bytes": 12717,
+      "lines": 188
+    },
+    {
+      "item": "Chapter 128",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/128_Evidence_Preservation_and_Legal_Hold_CORRECTED_MASTER.md",
+      "sha256": "41ee95a9f27a68859a13d88cda67627751692a707e5638e537ee842725e30f0a",
+      "bytes": 11658,
+      "lines": 171
+    },
+    {
+      "item": "Chapter 129",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/129_First_30_Days_CORRECTED_MASTER.md",
+      "sha256": "519cdb7d35b52c9510d02c68c6c1dd0df60504728f48b8ba3dbeaacdf9ee26ec",
+      "bytes": 8609,
+      "lines": 114
+    },
+    {
+      "item": "Chapter 130",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/130_Days_31_to_90_CORRECTED_MASTER.md",
+      "sha256": "df3a529cdfeb715634a854b06cac4cc12dbc220b5ee974623d4471d1e0bf65ba",
+      "bytes": 8230,
+      "lines": 149
+    },
+    {
+      "item": "Chapter 131",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/131_Months_4_to_6_CORRECTED_MASTER.md",
+      "sha256": "3c146e4709336c51b954e402477e6524c4f61c82bfbd519c68f20a27986e9217",
+      "bytes": 12706,
+      "lines": 172
+    },
+    {
+      "item": "Chapter 132",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/132_Months_7_to_12_CORRECTED_MASTER.md",
+      "sha256": "5856b16f6c7912db5cf1fb58b9fdef2f1be5c2e04435cf9daea2143e87bafe88",
+      "bytes": 14475,
+      "lines": 180
+    },
+    {
+      "item": "Chapter 133",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/133_High_Risk_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "sha256": "ba99d94a7ad505bdb3713004ef787a0da73620880f463338081f9d062ef9594e",
+      "bytes": 16359,
+      "lines": 225
+    },
+    {
+      "item": "Chapter 134",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/134_GPAI_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "sha256": "ceaff6cc2a2f1fbe9e5bae4ad7f6c0ecf89bd8bb81780331b19c35e16bd4b70b",
+      "bytes": 10905,
+      "lines": 175
+    },
+    {
+      "item": "Chapter 135",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/135_Transparency_Readiness_Roadmap_CORRECTED_MASTER.md",
+      "sha256": "16adee3433382f171c94a0be78986bb0552d42842c375146e0ecaaf20b10cccf",
+      "bytes": 10480,
+      "lines": 177
+    },
+    {
+      "item": "Chapter 136",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/136_Multijurisdictional_Deployment_CORRECTED_MASTER.md",
+      "sha256": "712b18562f1c1a25bba75e84412d012b26493e74d740aef99faf8a02445124e6",
+      "bytes": 11781,
+      "lines": 179
+    },
+    {
+      "item": "Chapter 137",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/137_Maturity_Model_CORRECTED_MASTER.md",
+      "sha256": "4f402da2917c0641664ded15cb6e88748f8e2c9bcfcf859fbb7333d83487da8c",
+      "bytes": 12189,
+      "lines": 223
+    },
+    {
+      "item": "Chapter 138",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/138_Continuous_Improvement_CORRECTED_MASTER.md",
+      "sha256": "7c2c5ecaf79422ca83c08b31162e10a6b68e559d3cb25fc1574cf1bb0d361140",
+      "bytes": 15626,
+      "lines": 231
+    },
+    {
+      "item": "Appendix A",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_A_AI_Inventory_Template_CORRECTED_MASTER.md",
+      "sha256": "18aeec25341b5f8ed4793bbfda10ba0d26ff71de68deb3d321f7fcc038ef1759",
+      "bytes": 10562,
+      "lines": 111
+    },
+    {
+      "item": "Appendix B",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_B_AI_Intake_Form_CORRECTED_MASTER.md",
+      "sha256": "7b36c945ea4d78cb69e531c1f006216598b85a352e8c065e68189de76035c694",
+      "bytes": 10496,
+      "lines": 185
+    },
+    {
+      "item": "Appendix C",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_C_Applicability_Assessment_CORRECTED_MASTER.md",
+      "sha256": "21af4fb3ea51bb1373c8c170e5695d48e022c20e83b6bef5ee4c893381e9ce12",
+      "bytes": 12106,
+      "lines": 223
+    },
+    {
+      "item": "Appendix D",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_D_Prohibited_Practice_Checklist_CORRECTED_MASTER.md",
+      "sha256": "679fb09c60715e04cab304c9c648e96c97dbf45e4595e6e9d94b67b2ba491a0d",
+      "bytes": 17188,
+      "lines": 259
+    },
+    {
+      "item": "Appendix E",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_E_High_Risk_Classification_Worksheet_CORRECTED_MASTER.md",
+      "sha256": "4ccccf79499d28bfe4cd5e36d37abb3d3fc8ad5bf13c877934db8fe52253c3cf",
+      "bytes": 11755,
+      "lines": 206
+    },
+    {
+      "item": "Appendix F",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_F_Role_Assessment_Worksheet_CORRECTED_MASTER.md",
+      "sha256": "eecec587eed9b553603099e0a6addb7c6c53237bc6108056b6543cf34ac53179",
+      "bytes": 13443,
+      "lines": 257
+    },
+    {
+      "item": "Appendix G",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_G_Fundamental_Rights_Impact_Assessment_CORRECTED_MASTER.md",
+      "sha256": "c0f4f1ddf7c0d1030636a90efbf1afa07a4643bb28c0ca2fc0763bf2590503ce",
+      "bytes": 12941,
+      "lines": 248
+    },
+    {
+      "item": "Appendix H",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_H_AI_Risk_Assessment_CORRECTED_MASTER.md",
+      "sha256": "accf466ef736a5aff9ff93c81c48f3213e78cd14209004136aa2e7e3055887e4",
+      "bytes": 12254,
+      "lines": 257
+    },
+    {
+      "item": "Appendix I",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_I_Data_Governance_Assessment_CORRECTED_MASTER.md",
+      "sha256": "632950cbcfcdc42a8617d0aabd4695d6d2f24b338c1ca5d60d37d7d86d2f347e",
+      "bytes": 11472,
+      "lines": 268
+    },
+    {
+      "item": "Appendix J",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_J_Human_Oversight_Plan_CORRECTED_MASTER.md",
+      "sha256": "d4480e0438b179e5b8f5e35be61609ea482e61990681ccd675afc2d8ce24717f",
+      "bytes": 12992,
+      "lines": 260
+    },
+    {
+      "item": "Appendix K",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_K_Technical_Documentation_Index_CORRECTED_MASTER.md",
+      "sha256": "2619735fe5a44b4a06be4e20672e4e04517e7b06be19c8bb01fc278ca4bcedd5",
+      "bytes": 9025,
+      "lines": 143
+    },
+    {
+      "item": "Appendix L",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_L_Conformity_Readiness_Checklist_CORRECTED_MASTER.md",
+      "sha256": "adc94b8ec1f699165c6129ff9c01c58816bfdc142f2ce0aa1f55ddc10083ff02",
+      "bytes": 13996,
+      "lines": 251
+    },
+    {
+      "item": "Appendix M",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_M_Post_Market_Monitoring_Plan_CORRECTED_MASTER.md",
+      "sha256": "05bfb444f1f7a0855f54a64b767a528c8fdc47cbcf4a795ded652aac9e0fecdc",
+      "bytes": 10117,
+      "lines": 200
+    },
+    {
+      "item": "Appendix N",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_N_Serious_Incident_Report_CORRECTED_MASTER.md",
+      "sha256": "746d389f60ba59ebc61145627ce2a2a27c25bd38d117574c087be930b39029c1",
+      "bytes": 9620,
+      "lines": 199
+    },
+    {
+      "item": "Appendix O",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_O_AI_Vendor_Questionnaire_CORRECTED_MASTER.md",
+      "sha256": "99e50443d180f4a8469a50d6213cbdf1ce22253c1e84994521596dd63c071d3d",
+      "bytes": 11704,
+      "lines": 235
+    },
+    {
+      "item": "Appendix P",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_P_Contract_Clause_Checklist_CORRECTED_MASTER.md",
+      "sha256": "11a9a6de2aff8a8219314b3a353efcbf68f0f3a4ed44c98a0232451bc5edb4ed",
+      "bytes": 14334,
+      "lines": 217
+    },
+    {
+      "item": "Appendix Q",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_Q_AI_Literacy_Matrix_CORRECTED_MASTER.md",
+      "sha256": "a3af4127dfda1d5dfd0febce552cbd984176416597456807ec0740fe71182c48",
+      "bytes": 8191,
+      "lines": 91
+    },
+    {
+      "item": "Appendix R",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_R_Transparency_Notice_CORRECTED_MASTER.md",
+      "sha256": "50235090156b349d278bd20eb78891ba0e024ccde96a31d13b37c97b78e5ab7d",
+      "bytes": 6595,
+      "lines": 148
+    },
+    {
+      "item": "Appendix S",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_S_Model_Change_Assessment_CORRECTED_MASTER.md",
+      "sha256": "70a19bff9c3d3a0eaa8dac5856391d8a0ec473936d76ead8812de2c0542b8341",
+      "bytes": 5297,
+      "lines": 111
+    },
+    {
+      "item": "Appendix T",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_T_Substantial_Modification_Assessment_CORRECTED_MASTER.md",
+      "sha256": "df650f048dd39d099579502689714ca99c6f1b35d8b904150759a7159aa8f664",
+      "bytes": 6145,
+      "lines": 119
+    },
+    {
+      "item": "Appendix U",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_U_Control_Register_CORRECTED_MASTER.md",
+      "sha256": "45e25d5e152c772a005b7d204c265dc84d9afd3f8e75aafa225d446f2d1a7864",
+      "bytes": 4806,
+      "lines": 98
+    },
+    {
+      "item": "Appendix V",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_V_Evidence_Register_CORRECTED_MASTER.md",
+      "sha256": "46e25cb253fdb479bad2653f9010de74a65335c539ee4ca70aadef4f442ca4b0",
+      "bytes": 5393,
+      "lines": 82
+    },
+    {
+      "item": "Appendix W",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_W_Internal_Audit_Programme_CORRECTED_MASTER.md",
+      "sha256": "6e7f6829633867c4ba39e12763932c114d4f9ee9202a3034a5ee2f5801db776b",
+      "bytes": 7621,
+      "lines": 131
+    },
+    {
+      "item": "Appendix X",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_X_Corrective_Action_Plan_CORRECTED_MASTER.md",
+      "sha256": "80bcc73946a8eb99166dfba1f41972b699111d15ee51b35fa2326c1dbb2a80f5",
+      "bytes": 6370,
+      "lines": 127
+    },
+    {
+      "item": "Appendix Y",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_Y_Board_Dashboard_CORRECTED_MASTER.md",
+      "sha256": "b4972d287302aa6e9c36edd961bd4effb7c8d8e20415e9b8ae9066f2e061cbea",
+      "bytes": 7263,
+      "lines": 141
+    },
+    {
+      "item": "Appendix Z",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/appendices/Appendix_Z_Implementation_Roadmap_CORRECTED_MASTER.md",
+      "sha256": "e609677bf9984f486b346ef6e7c593a322d00dcb9fe9515f892ca55cb0d3faa6",
+      "bytes": 10537,
+      "lines": 186
+    }
+  ]
+}

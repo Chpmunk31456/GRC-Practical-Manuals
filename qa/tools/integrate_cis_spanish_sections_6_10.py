@@ -33,9 +33,14 @@ if new_start < 0 or new_end_match is None or new_end_match.start() <= new_start:
     raise SystemExit('Unable to validate replacement boundaries')
 
 block = new_text[new_start:new_end_match.start()]
-for token in ['■img', 'יimg', '|... |', 'TEN ', 'tención', 'Silencioso', '←', 'Ø']:
+for token in ['■img', 'יimg', '|... |', 'TEN ', 'Silencioso', '←', 'Ø']:
     if token in block:
         raise SystemExit(f'Forbidden corruption token remains in replacement block: {token}')
+
+# Detect the known standalone corruption token without rejecting legitimate
+# Spanish words such as "retención".
+if re.search(r'(?<![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])tención(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ])', block, flags=re.IGNORECASE):
+    raise SystemExit('Forbidden corruption token remains in replacement block: tención')
 
 for image in ['media/image4.png', 'media/image5.png']:
     if block.count(image) != 1:

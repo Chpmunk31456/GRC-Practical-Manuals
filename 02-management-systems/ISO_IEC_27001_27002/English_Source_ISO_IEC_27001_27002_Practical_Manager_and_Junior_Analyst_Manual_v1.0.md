@@ -47,7 +47,7 @@ Internal auditors should focus on objective criteria, independence, complete pop
 
 Organizations seeking certification should confirm the licensed standard, amendment, certification scope, and accreditation expectations with competent professionals.
 
-| **True Word contents:** This document contains a native Word table-of-contents field and a verified chapter guide. After editing, right-click the contents and choose Update Field, then Update entire table. |
+| **Word table of contents:** This document contains a native Word table-of-contents field and a verified chapter guide. After editing, right-click the contents and choose Update Field, then Update entire table. |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # Table of Contents

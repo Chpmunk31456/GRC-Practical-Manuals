@@ -4,20 +4,18 @@ Target: `02-management-systems/ISO_IEC_27001_27002/English_Source_ISO_IEC_27001_
 
 ## Result
 
-**REVIEW REQUIRED**
+**PASS**
 
 ## Summary
 
-- malformed Word contents label: **1**
+- No configured structural or placeholder markers found.
 - Missing expected numbered sections: **0**
 - Sections not appearing exactly once: **0**
 - Missing required framework facts: **0**
 
 ## Findings
 
-| Category | Line | Excerpt |
-|---|---:|---|
-| malformed Word contents label | 50 | `\| **True Word contents:** This document contains a native Word table-of-contents field and a verified chapter guide. After editing, right-click the contents and choose Update Field, then Update entire table. \|` |
+No configured findings.
 
 ## Review boundary
 

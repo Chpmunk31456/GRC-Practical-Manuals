@@ -8,11 +8,23 @@ REPLACEMENT = Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_SECTIONS_1_5_REVIEWED.md')
 text = TARGET.read_text(encoding='utf-8')
 replacement = REPLACEMENT.read_text(encoding='utf-8').rstrip() + '\n\n'
 
-# The corrupted source does not consistently preserve the period after the
-# section number. Match a line-level Section 1 heading and the exact bounded
-# Section 6 / Control 1 endpoint. Fail closed if either boundary is ambiguous.
-start_matches = list(re.finditer(r'^#\s*1(?:\.|\s)\s*.*$', text, flags=re.MULTILINE))
-end_matches = list(re.finditer(r'^#\s*6\.\s*Control\s+1\b.*$', text, flags=re.MULTILINE | re.IGNORECASE))
+# The corrupted source may omit the Markdown heading marker and may not
+# preserve the period consistently. Accept only the known Section 1 legacy
+# heading forms, and require one exact Section 6 / Control 1 endpoint.
+start_matches = list(
+    re.finditer(
+        r'^(?:#\s*)?1(?:\.|\s)\s*(?:Controles\s+CIS|CIS\s+Controls)\b.*$',
+        text,
+        flags=re.MULTILINE | re.IGNORECASE,
+    )
+)
+end_matches = list(
+    re.finditer(
+        r'^#\s*6\.\s*Control\s+1\b.*$',
+        text,
+        flags=re.MULTILINE | re.IGNORECASE,
+    )
+)
 
 if len(start_matches) != 1:
     raise SystemExit(f'Expected exactly one Section 1 boundary; found {len(start_matches)}')
@@ -31,12 +43,19 @@ for marker in [f'# {n}.' for n in range(1, 6)]:
         raise SystemExit(f'Expected exactly one marker after replacement: {marker}')
 
 new_start = new_text.find('# 1.')
-new_end = new_text.find('# 6.', new_start + 1)
-if new_start < 0 or new_end < 0 or new_end <= new_start:
+new_end_match = re.search(r'^#\s*6\.\s*Control\s+1\b.*$', new_text, flags=re.MULTILINE | re.IGNORECASE)
+if new_start < 0 or new_end_match is None or new_end_match.start() <= new_start:
     raise SystemExit('Unable to validate replacement boundaries')
 
-block = new_text[new_start:new_end]
-for token in ['■img', '|... |', '← Salvaguardia', 'Silencioso Propietario', 'TEN IT / Engineering', 'tención Auditoría']:
+block = new_text[new_start:new_end_match.start()]
+for token in [
+    '■img',
+    '|... |',
+    '← Salvaguardia',
+    'Silencioso Propietario',
+    'TEN IT / Engineering',
+    'tención Auditoría',
+]:
     if token in block:
         raise SystemExit(f'Forbidden corruption token remains in replacement block: {token}')
 

@@ -1,5 +1,5 @@
-# Trigger final CIS Portuguese structural audit
+# Trigger CIS Portuguese publication-candidate rebuild
 
-Run the exact-source corruption audit against `production/multilingual-grc-editions` after completion of Sections 27–30.
+Rebuild and validate the Portuguese CIS Controls DOCX and PDF from the structurally approved Markdown source on `production/multilingual-grc-editions`.
 
 This PR exists only to generate an observable `pull_request` workflow event. It modifies no publication content on `main` and must not be merged.

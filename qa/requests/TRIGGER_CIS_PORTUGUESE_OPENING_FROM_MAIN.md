@@ -1,5 +1,5 @@
-# Trigger CIS Portuguese Sections 27–30 repair
+# Trigger final CIS Portuguese structural audit
 
-Run the controlled integration job against `production/multilingual-grc-editions` for the laboratory, learning plan, interview preparation, templates, glossary, index, and references.
+Run the exact-source corruption audit against `production/multilingual-grc-editions` after completion of Sections 27–30.
 
 This PR exists only to generate an observable `pull_request` workflow event. It modifies no publication content on `main` and must not be merged.

@@ -1,190 +1,69 @@
-> **Estado de revisión:** Borrador de traducción asistida por máquina. Requiere revisión humana de terminología, significado, enlaces, formato y vigencia técnica antes de marcarse como edición final.
+> **Estado de revisión:** Edición de revisión controlada. Requiere validación humana de terminología, significado, enlaces, formato, accesibilidad y vigencia técnica antes de la publicación final.
 
-**CYBERSECURITY, PRIVACY &amp; COMPLIANCE SERIES**
+**SERIE PRÁCTICA DE CIBERSEGURIDAD, PRIVACIDAD Y CUMPLIMIENTO**
 
-**CIS Controles de Seguridad Crítica v8.1**
+**CIS Critical Security Controls v8.1**
 
-** Aplicación práctica, medición, evidencia y herramientas de código abierto**
+**Implementación práctica, medición, evidencia y herramientas de código abierto**
 
-*Un manual de trabajo para administradores, analistas juniores, estudiantes, cambiadores de carrera, asesores y equipos de seguridad*
+*Manual de trabajo para gestores, analistas júnior, estudiantes, profesionales en transición de carrera, evaluadores y equipos de seguridad*
 
 **Alberto (Al) Leiva**
 
-Primera edición • Julio 2026
+Primera edición • Julio de 2026
 
-| **Inside:** 18 Controles • 153 Salvaguardias • IG1, IG2, IG3 • medición • evidencia • herramientas • manual de gestión • laboratorios • preparación de la carrera |
+| **Contenido:** 18 Controles • 153 Salvaguardas • IG1, IG2 e IG3 • medición • evidencia • herramientas • guía para gestores • laboratorios • preparación profesional |
 |---|
 
-# Publication and Use Notice
+# Aviso de publicación y uso
 
 Autor: Alberto (Al) Leiva
 
-Edición: Primera edición, Julio 2026
+Edición: Primera edición, julio de 2026
 
-Este manual educativo independiente no es un Centro para la publicación, certificación, acreditación, informe de auditoría, opinión legal o garantía de seguridad o cumplimiento. Controles CIS y CIS Los parámetros son marcas comerciales del Centro de Seguridad de Internet. Utilice los recursos oficiales CIS para el contenido exacto y la orientación actual.
+Este manual educativo independiente no es una publicación, certificación, acreditación, informe de auditoría, opinión jurídica ni garantía de seguridad o cumplimiento emitida por el Center for Internet Security. CIS Controls y CIS Benchmarks son marcas del Center for Internet Security. Consulte los recursos oficiales de CIS para obtener el contenido exacto y la orientación vigente.
 
-Los controles CIS son las mejores prácticas de ciberseguridad. No reemplazan las leyes, reglamentos, contratos, requisitos sectoriales, evaluación de riesgos o responsabilidad de gestión aplicables. Un mapeo muestra relaciones; no prueba automáticamente el cumplimiento de otro marco.
+Los CIS Controls representan buenas prácticas de ciberseguridad. No sustituyen las leyes, los reglamentos, los contratos, los requisitos sectoriales, las evaluaciones de riesgo ni las responsabilidades de gestión aplicables. Una correspondencia entre marcos muestra relaciones; no demuestra automáticamente el cumplimiento de otro marco.
 
 ## Uso ético y autorizado
 
-Utilice herramientas técnicas únicamente en activos, redes, aplicaciones, cuentas de nube, repositorios y datos que posee o está específicamente autorizado por escrito para evaluar. Use información sintética y sistemas aislados en laboratorios.
+Utilice herramientas técnicas únicamente en activos, redes, aplicaciones, cuentas de nube, repositorios y datos que posea o para los que haya recibido autorización específica por escrito. En los laboratorios, utilice información sintética y sistemas aislados.
 
 # Prefacio
 
-*Una introducción práctica para priorizar la defensa cibernética y la medición basada en evidencia.*
+*Introducción práctica a la defensa cibernética priorizada y a la medición basada en evidencia.*
 
-Los Controles CIS convierten las necesidades defensivas comunes en salvaguardias focalizadas. Su fuerza es la priorización práctica: saber lo que posee, controlar software y datos, asegurar configuraciones e identidades, gestionar vulnerabilidades y registros, prepararse para perturbaciones y ataques, y probar si las defensas funcionan.
+Los CIS Controls convierten necesidades defensivas comunes en Salvaguardas específicas. Su principal fortaleza es la priorización práctica: conocer los activos, controlar el software y los datos, proteger configuraciones e identidades, gestionar vulnerabilidades y registros, prepararse para interrupciones y ataques, y comprobar si las defensas funcionan.
 
-La versión 8.1 es la edición actual. Se trata de una actualización iterativa al v8 que realineed mappings to NIST CSF 2.0, definiciones ampliadas de plazo reserva, clases de activos revisados y cartografías de Salvaguardia, problemas menores corregidos, aclarar algunas Salvaguardias, e incorporar la función de seguridad de Govern en las cartografías. Los 18 Controles y 153 Salvaguardias siguen siendo la estructura central.
+La versión 8.1 es una actualización iterativa de la versión 8. Realineó las correspondencias con NIST CSF 2.0, amplió definiciones de términos reservados, revisó clases de activos y correspondencias de Salvaguardas, corrigió cuestiones menores, aclaró determinadas Salvaguardas e incorporó la función Gobernar a las correspondencias. Los 18 Controles y las 153 Salvaguardas continúan siendo la estructura central.
 
-Una instalación de herramientas no es la implementación. La aplicación efectiva requiere un alcance definido, poblaciones completas, configuración segura, pruebas operativas, propietarios capacitados, manejo de excepciones, medición, corrección y retesting. Los administradores deciden prioridades y recursos; los analistas hacen que esas decisiones sean fiables mediante inventarios y pruebas precisos.
+La instalación de una herramienta no equivale a la implementación de un control. Una implementación efectiva exige un alcance definido, poblaciones completas, configuración segura, evidencia operativa, responsables capacitados, tratamiento de excepciones, medición, corrección y repetición de pruebas. Los gestores definen prioridades y recursos; los analistas hacen que esas decisiones sean confiables mediante inventarios y evidencia precisos.
 
-Cómo utilizar este manual
+# Cómo utilizar este manual
 
-- Los administradores deben comenzar con los Capítulos 1-5 y 24–25.
+- Los gestores deben comenzar con los capítulos 1–5 y 24–25.
+- Los analistas júnior deben estudiar los 18 capítulos de Controles, el método de medición, las herramientas, el laboratorio y el capítulo de entrevistas.
+- Los equipos técnicos deben relacionar cada Salvaguarda con activos, datos, responsables, procedimientos, configuraciones, monitoreo, excepciones y evidencia.
+- Los evaluadores deben utilizar la especificación oficial de evaluación de CIS Controls para confirmar entradas, operaciones, medidas, métricas, supuestos y revisiones de procedimientos.
 
-- Los analistas juniores deben estudiar los 18 capítulos de Control, método de medición, herramientas, laboratorio y capítulo de entrevista.
-
-- Los equipos técnicos deben conectar cada Salvaguardia a activos, datos, propietarios, procedimientos, configuración, monitoreo, manejo de excepciones y pruebas.
-
-- Los evaluadores deben utilizar la Evaluación oficial de Controles CIS Especificación de insumos, operaciones, medidas, métricas, suposiciones y exámenes de procedimiento.
-
-Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo. La guía del capítulo contendrá números de página verificados para esta edición. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego actualice la tabla completa.
-|. |
+| **Tabla de contenido en Word:** El archivo DOCX puede contener un campo nativo de tabla de contenido. Después de cualquier edición, actualice el campo y seleccione la opción para actualizar toda la tabla. |
+|---|
 
 # Tabla de contenidos
 
-[Notificación de publicación y uso [2](#publication-and-use-notice)](#publication-and-use-notice)
-
-[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)
-
-[Prefacio [3] (#preface)](#preface)
-
-[Cómo utilizar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
-
-[Tabla de contenidos [4](#table-of-contents)](#table-of-contents)
-
-[1. CIS Controls v8.1 Foundations [7](#cis-controls-v8.1-foundations)](#cis-controls-v8.1-foundations)
-
-[2. Grupos de aplicación y prioridades [8](#implementation-groups-and-prioritization)](#implementation-groups-and-prioritization)
-
-[3. Gobernanza, alcance y propiedad [9](#governance-scope-and-ownership)](#governance-scope-and-ownership)
-
-[4. Medición con la Evaluación de CIS Especificación [10](#measurement-with-the-cis-assessment-specification)](#measurement-with-the-cis-assessment-specification)
-
-[5. Implementation Roadmap [11](#implementation-roadmap)](#implementation-roadmap)
-
-[6. Control 1 - Inventario y Control de Activos Empresarios [12](#control-1-inventory-and-control-of-enterprise-assets)](#control-1-inventory-and-control-of-enterprise-assets)
-
-[7. Control 2 — Inventario y control de activos de software [13](#control-2-inventory-and-control-of-software-assets)](#control-2-inventory-and-control-of-software-assets)
-
-[8. Control 3 — Data Protection [14](#control-3-data-protection)](#control-3-data-protection)
-
-[9. Control 4 — Configuración segura de activos y software de la empresa [16](#control-4-secure-configuration-of-enterprise-assets-and-software)](#control-4-secure-configuration-of-enterprise-assets-and-software)
-
-[10. Control 5 — Account Management [18](#control-5-account-management)](#control-5-account-management)
-
-[11. Control 6 — Access Control Management [19](#control-6-access-control-management)](#control-6-access-control-management)
-
-[12. Control 7 - Gestión continua de la vulnerabilidad [21](#control-7-continuous-vulnerability-management)](#control-7-continuous-vulnerability-management)
-
-[13. Control 8 — Audit Log Management [23](#control-8-audit-log-management)](#control-8-audit-log-management)
-
-[14. Control 9 — Email and Web Browser Protections [24](#control-9-email-and-web-browser-protections)](#control-9-email-and-web-browser-protections)
-
-[15. Control 10 — Malware Defenses [25](#control-10-malware-defenses)](#control-10-malware-defenses)
-
-[16. Control 11 — Data Recovery [26](#control-11-data-recovery)](#control-11-data-recovery)
-
-[17. Control 12 — Network Infrastructure Management [27](#control-12-network-infrastructure-management)](#control-12-network-infrastructure-management)
-
-[18. Control 13 — Network Monitoring and Defense [28](#control-13-network-monitoring-and-defense)](#control-13-network-monitoring-and-defense)
-
-[19. Control 14 — Security Awareness and Skills Training [30](#control-14-security-awareness-and-skills-training)](#control-14-security-awareness-and-skills-training)
-
-[20. Control 15 — Service Provider Management [31](#control-15-service-provider-management)](#control-15-service-provider-management)
-
-[21. Control 16 — Application Software Security [32](#control-16-application-software-security)](#control-16-application-software-security)
-
-[22. Control 17 — Gestión de la respuesta de incidentes [34] (#control-17-incident-response-management)](#control-17-incident-response-management)
-
-[23. Control 18 — Penetration Testing [36](#control-18-penetration-testing)](#control-18-penetration-testing)
-
-[24. Open-Source Tools [37](#open-source-tools)](#open-source-tools)
-
-[24.1 CIS Controls Navigator [37](#cis-controls-navigator)](#cis-controls-navigator)
-
-[24.2 CIS Controls Assessment Specification [37](#cis-controls-assessment-specification)](#cis-controls-assessment-specification)
-
-[24.3 CIS-CAT Lite [37](#cis-cat-lite)](#cis-cat-lite)
-
-[24.4 CISO Assistant [38](#ciso-assistant)](#ciso-assistant)
-
-[24.5 Wazuh [38](#wazuh)](#wazuh)
-
-[24.6 osquery [38](#osquery)](#osquery)
-
-[24.7 OpenSCAP [38](#openscap)](#openscap)
-
-[24.8 Lynis [38](#lynis)](#lynis)
-
-[24.9 Nmap [39](#nmap)](#nmap)
-
-[24.10 Greenbone Community Edition [39](#greenbone-community-edition)](#greenbone-community-edition)
-
-[24.11 Trivy [39](#trivy)](#trivy)
-
-[24.12 OWASP ZAP [39](#owasp-zap)](#owasp-zap)
-
-[24.13 Suricata [39](#suricata)](#suricata)
-
-[24.14 Keycloak [39](#keycloak)](#keycloak)
-
-[24.15 DefectDojo [40](#defectdojo)](#defectdojo)
-
-[24.16 Velociraptor [40](#velociraptor)](#velociraptor)
-
-[25. Manual de los Controles CIS para gerentes [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
-
-[26. Guía de la carrera de analista junior [42](#junior-analyst-career-guide)](#junior-analyst-career-guide)
-
-[26.1 Trabajo junior típico [42](#typical-junior-work)](#typical-junior-work)
-
-[27. Laboratorio de Ficción y Cartera [44](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
-
-[28. Plan de aprendizaje de 30 días [45] (#thirty-day-learning-plan)](#thirty-day-learning-plan)
-
-[29. Preparación de entrevistas [46](#interview-preparation)](#interview-preparation)
-
-[29.1 ¿Cuáles son los controles CIS? [46](#what-are-the-cis-controls)](#what-are-the-cis-controls)
-
-[29.2 ¿Qué es IG1? [46](#what-is-ig1)](#what-is-ig1)
-
-[29.3 ¿Se ajusta IG1 a cada requisito? [46](#does-ig1-fit-every-requirement)](#does-ig1-fit-every-requirement)
-
-[29.4 ¿Cómo mide una Salvaguardia? [46](#how-do-you-measure-a-safeguard)](#how-do-you-measure-a-safeguard)
-
-[29.5 ¿Por qué son importantes los inventarios? [46](#why-are-inventories-important)](#why-are-inventories-important)
-
-[29.6 Vulnerability scan versus penetración test? [46](#vulnerability-scan-versus-penetration-test)](#vulnerability-scan-versus-penetration-test)
-
-[29.7 ¿Una asignación marco demuestra el cumplimiento? [46](#does-a-framework-mapping-prove-compliance)](#does-a-framework-mapping-prove-compliance)
-
-[29.8 ¿Qué puede concluir un analista junior? [46](#what-can-a-junior-analyst-conclude)](#what-can-a-junior-analyst-conclude)
-
-[29.9 Preguntas para hacer al empleador [46](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)
-
-[30. Plantillas, Glosario, Índice y Referencias [48](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
-
-[30.1 Documentos de trabajo de medición de seguridad [48](#safeguard-measurement-workpaper)](#safeguard-measurement-workpaper)
-
-[30.2 Registro de hallazgos y nuevas pruebas [48](#finding-and-retest-record)](#finding-and-retest-record)
-
-[30.3 Glosario [48](#glossary)](#glossary)
-
-[30.4 Índice de asunto [49](#subject-index)](#subject-index)
-
-[30.5 Referencias oficiales [49](#official-references)](#official-references)
+1. Fundamentos de CIS Controls v8.1  
+2. Grupos de Implementación y priorización  
+3. Gobernanza, alcance y responsabilidades  
+4. Medición con la Especificación para la Evaluación de Controles de CIS  
+5. Hoja de ruta de implementación  
+6–23. Los 18 CIS Controls  
+24. Herramientas de código abierto  
+25. Guía de CIS Controls para gestores  
+26. Guía profesional para analistas júnior  
+27. Laboratorio ficticio y portafolio  
+28. Plan de aprendizaje de treinta días  
+29. Preparación para entrevistas  
+30. Plantillas, glosario, índice y referencias
 
 # 1. Fundamentos de CIS Controls v8.1
 

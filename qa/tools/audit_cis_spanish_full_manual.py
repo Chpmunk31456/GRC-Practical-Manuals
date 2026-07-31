@@ -17,7 +17,9 @@ CORRUPTION_PATTERNS = {
     "tención token": re.compile(r"\btención\b", re.IGNORECASE),
     "Silencioso token": re.compile(r"\bSilencios[oa]s?\b", re.IGNORECASE),
     "tóxico token": re.compile(r"\btóxic[oa]s?\b", re.IGNORECASE),
-    "ANTER corruption": re.compile(r"\bANTER[A-ZÁÉÍÓÚÑ]*\b", re.IGNORECASE),
+    # Match the uppercase corruption family only. Do not flag legitimate
+    # Spanish words such as "anterior".
+    "ANTER corruption": re.compile(r"\bANTER[A-ZÁÉÍÓÚÑ]*\b"),
     "arrow artifact": re.compile(r"^[^\n]*←", re.MULTILINE),
     "broken image marker": re.compile(r"^[■□]img\b", re.MULTILINE | re.IGNORECASE),
     "ellipsis table delimiter": re.compile(r"^\|\.\.\.\s*\|$", re.MULTILINE),
@@ -33,7 +35,7 @@ ENGLISH_PHRASES = [
     "Trace finding to owner",
 ]
 
-REQUIRED_SECTIONS = [f"# {n}." for n in range(1, 29)]
+REQUIRED_SECTIONS = [f"# {n}." for n in range(1, 31)]
 
 
 def line_number(text: str, offset: int) -> int:

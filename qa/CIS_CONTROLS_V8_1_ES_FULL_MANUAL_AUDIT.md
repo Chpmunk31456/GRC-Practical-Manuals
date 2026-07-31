@@ -9,42 +9,21 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 ## Summary
 
 - ANTER corruption: **1**
-- Silencioso token: **19**
-- TEN token: **231**
-- arrow artifact: **26**
-- broken image marker: **4**
-- ellipsis table delimiter: **19**
-- tención token: **171**
-- Missing expected numbered sections: **7**
-  - # 1., # 3., # 8., # 10., # 12., # 17., # 21.
+- Silencioso token: **15**
+- TEN token: **225**
+- arrow artifact: **23**
+- broken image marker: **3**
+- ellipsis table delimiter: **16**
+- tención token: **167**
+- Missing expected numbered sections: **5**
+  - # 8., # 10., # 12., # 17., # 21.
 
 ## Findings
 
 | Category | Line | Excerpt |
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
-| ellipsis table delimiter | 210 | `\|... \|` |
-| arrow artifact | 212 | `← Salvaguardia \| Acción focalizada que puede ser asignada, implementada y medida` |
-| arrow artifact | 214 | `Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía` |
-| ANTER corruption | 222 | `■img src="media/image2.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Cada grupo se construye sobre el grupo anterior; IG3 contiene todas las Salvaguardias." /` |
-| broken image marker | 222 | `■img src="media/image2.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Cada grupo se construye sobre el grupo anterior; IG3 contiene todas las Salvaguardias." /` |
-| Silencioso token | 226 | `\| **La situación física** Silencioso** \|` |
-| ellipsis table delimiter | 261 | `\|... \|` |
-| Silencioso token | 262 | `← Patrocinador ejecutivo Silencioso Dirección, tolerancia al riesgo, financiación, escalada y rendición de cuentas` |
-| arrow artifact | 262 | `← Patrocinador ejecutivo Silencioso Dirección, tolerancia al riesgo, financiación, escalada y rendición de cuentas` |
-| Silencioso token | 263 | `Silencioso Propietario de control \| Diseño de salvaguardias, alcance, procedimiento, medición, excepciones y mejora` |
-| TEN token | 266 | `TEN IT / Engineering \| Implementación, control de cambio, parche, configuración y recuperación` |
-| TEN token | 267 | `TEN GRC / Analyst ANTE Mapping, evidencia, medición, hallazgos, seguimiento de la acción y reportaje \|` |
-| TEN token | 268 | `tención Auditoría interna / evaluador` |
-| tención token | 268 | `tención Auditoría interna / evaluador` |
-| TEN token | 269 | `tención Servicio prestado \| Controles, pruebas, incidentes, cambios y soporte de salida` |
-| tención token | 269 | `tención Servicio prestado \| Controles, pruebas, incidentes, cambios y soporte de salida` |
-| Silencioso token | 279 | `\|** Element** Silencioso** \|` |
-| ellipsis table delimiter | 280 | `\|... \|` |
-| TEN token | 287 | `TENCIÓN FORMULADA ¿Cómo se calculan e interpretan las medidas?` |
-| tención token | 287 | `TENCIÓN FORMULADA ¿Cómo se calculan e interpretan las medidas?` |
-| TEN token | 328 | `tención **Principio de aplicación:** Un grupo más pequeño de Salvaguardias que es totalmente abarcado, operado, medido y mejorado es más defensible que una larga lista marcada completa sin pruebas fiables. \|` |
-| tención token | 328 | `tención **Principio de aplicación:** Un grupo más pequeño de Salvaguardias que es totalmente abarcado, operado, medido y mejorado es más defensible que una larga lista marcada completa sin pruebas fiables. \|` |
+| ANTER corruption | 222 | `<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas." />` |
 | broken image marker | 335 | `■img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="Descubrimiento, reconciliación, respuesta y revisión mantienen a las poblaciones fundacionales actuales."` |
 | ellipsis table delimiter | 340 | `\|... \|` |
 | TEN token | 344 | `\| 1.1 \| Establecer y Mantener Inventario de Activos Empresarios detallados \| Poner en marcha un proceso de repetibilidad, propiedad o control técnico para establecer y mantener inventario de activos institucionales detal` |

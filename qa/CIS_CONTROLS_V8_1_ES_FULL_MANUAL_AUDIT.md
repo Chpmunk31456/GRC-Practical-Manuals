@@ -10,11 +10,11 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 
 - ANTER corruption: **1**
 - Silencioso token: **12**
-- TEN token: **140**
-- arrow artifact: **13**
+- TEN token: **100**
+- arrow artifact: **10**
 - broken image marker: **1**
-- ellipsis table delimiter: **10**
-- tención token: **97**
+- ellipsis table delimiter: **8**
+- tención token: **69**
 - Missing expected numbered sections: **2**
   - # 17., # 21.
 
@@ -24,79 +24,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
 | ANTER corruption | 222 | `![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)` |
-| ellipsis table delimiter | 495 | `\|... \|` |
-| TEN token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
-| TEN token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
-| arrow artifact | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
-| tención token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
-| tención token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
-| TEN token | 500 | `\| 8.2 \| Recopilar los registros de auditoría Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar los registros de auditoría, a continuación, verifique la cobertura y las excepciones. tenci` |
-| tención token | 500 | `\| 8.2 \| Recopilar los registros de auditoría Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar los registros de auditoría, a continuación, verifique la cobertura y las excepciones. tenci` |
-| TEN token | 501 | `\| 8.3 \| Asegurar Adequate Audit Log Storage Ponga en marcha un proceso repetible, de propiedad o control técnico para garantizar el almacenamiento adecuado de registros de auditoría, a continuación, verifique la cobertur` |
-| tención token | 501 | `\| 8.3 \| Asegurar Adequate Audit Log Storage Ponga en marcha un proceso repetible, de propiedad o control técnico para garantizar el almacenamiento adecuado de registros de auditoría, a continuación, verifique la cobertur` |
-| TEN token | 502 | `\| 8.4 ← Normalizar la sincronización del tiempo ← Poner en marcha un proceso repetible, de propiedad o control técnico para estandarizar la sincronización del tiempo, a continuación, verificar cobertura y excepciones. te` |
-| arrow artifact | 502 | `\| 8.4 ← Normalizar la sincronización del tiempo ← Poner en marcha un proceso repetible, de propiedad o control técnico para estandarizar la sincronización del tiempo, a continuación, verificar cobertura y excepciones. te` |
-| tención token | 502 | `\| 8.4 ← Normalizar la sincronización del tiempo ← Poner en marcha un proceso repetible, de propiedad o control técnico para estandarizar la sincronización del tiempo, a continuación, verificar cobertura y excepciones. te` |
-| TEN token | 503 | `\| 8.5 \| Recopilar Registros de Auditoría detallados \| Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría detallados, a continuación, verifique la cobertura y las ` |
-| tención token | 503 | `\| 8.5 \| Recopilar Registros de Auditoría detallados \| Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría detallados, a continuación, verifique la cobertura y las ` |
-| TEN token | 504 | `\| 8.6 \| Collect DNS Query Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de consultas DNS, a continuación, verifique la cobertura y las excepciones` |
-| tención token | 504 | `\| 8.6 \| Collect DNS Query Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de consultas DNS, a continuación, verifique la cobertura y las excepciones` |
-| TEN token | 505 | `\| 8.7 \| Collect URL Request Audit Logs ← Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar URL Solicitar registros de auditoría, a continuación, verificar cobertura y excepciones. tenció` |
-| arrow artifact | 505 | `\| 8.7 \| Collect URL Request Audit Logs ← Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar URL Solicitar registros de auditoría, a continuación, verificar cobertura y excepciones. tenció` |
-| tención token | 505 | `\| 8.7 \| Collect URL Request Audit Logs ← Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar URL Solicitar registros de auditoría, a continuación, verificar cobertura y excepciones. tenció` |
-| TEN token | 506 | `\| 8.8 \| Coleccion Command-Line Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de Command-Line, a continuación, verifique la cobertura y las excepci` |
-| tención token | 506 | `\| 8.8 \| Coleccion Command-Line Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de Command-Line, a continuación, verifique la cobertura y las excepci` |
-| TEN token | 507 | `\| 8.9 \| Centralizar los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar los registros de auditoría, a continuación, verificar la cobertura y las excepciones. t` |
-| tención token | 507 | `\| 8.9 \| Centralizar los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar los registros de auditoría, a continuación, verificar la cobertura y las excepciones. t` |
-| TEN token | 508 | `\| 8.10 \| Retener los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para retener los registros de auditoría, verificar la cobertura y las excepciones. tención Confirme alcance` |
-| tención token | 508 | `\| 8.10 \| Retener los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para retener los registros de auditoría, verificar la cobertura y las excepciones. tención Confirme alcance` |
-| TEN token | 509 | `\| 8.11 \| Realizar Auditorías Reseñas Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar revisiones de los registros de auditoría, a continuación, verifique cobertura y excepciones. tención` |
-| tención token | 509 | `\| 8.11 \| Realizar Auditorías Reseñas Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar revisiones de los registros de auditoría, a continuación, verifique cobertura y excepciones. tención` |
-| TEN token | 510 | `\| 8.12 \| Collect Service Provider Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger registros de proveedores de servicios, a continuación, verifique cobertura y excepciones. tención C` |
-| tención token | 510 | `\| 8.12 \| Collect Service Provider Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger registros de proveedores de servicios, a continuación, verifique cobertura y excepciones. tención C` |
-| TEN token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| TEN token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| TEN token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| TEN token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| tención token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| tención token | 523 | `TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico \| Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y cl` |
-| TEN token | 524 | `TEN 9.2 \| Utilizar DNS Filtrar Servicios ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para utilizar DNS Filtering Services, a continuación, verifique cobertura y excepciones. tención Confirm` |
-| TEN token | 524 | `TEN 9.2 \| Utilizar DNS Filtrar Servicios ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para utilizar DNS Filtering Services, a continuación, verifique cobertura y excepciones. tención Confirm` |
-| TEN token | 524 | `TEN 9.2 \| Utilizar DNS Filtrar Servicios ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para utilizar DNS Filtering Services, a continuación, verifique cobertura y excepciones. tención Confirm` |
-| tención token | 524 | `TEN 9.2 \| Utilizar DNS Filtrar Servicios ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para utilizar DNS Filtering Services, a continuación, verifique cobertura y excepciones. tención Confirm` |
-| TEN token | 525 | `\| 9.3 \| Mantener y Forzar Filtros de URL basados en la red Ponga en marcha un proceso repetible, de propiedad o control técnico para mantener y ejecutar filtros de URL basados en red, a continuación, verifique cobertura ` |
-| TEN token | 525 | `\| 9.3 \| Mantener y Forzar Filtros de URL basados en la red Ponga en marcha un proceso repetible, de propiedad o control técnico para mantener y ejecutar filtros de URL basados en red, a continuación, verifique cobertura ` |
-| tención token | 525 | `\| 9.3 \| Mantener y Forzar Filtros de URL basados en la red Ponga en marcha un proceso repetible, de propiedad o control técnico para mantener y ejecutar filtros de URL basados en red, a continuación, verifique cobertura ` |
-| TEN token | 526 | `\| 9.4 \| Restringir Extensiones innecesarias o no autorizadas de navegador y correo electrónico de clientes \| Ponga un proceso repetible, propiedad o control técnico en su lugar para restringir Extensiones innecesarias o ` |
-| TEN token | 526 | `\| 9.4 \| Restringir Extensiones innecesarias o no autorizadas de navegador y correo electrónico de clientes \| Ponga un proceso repetible, propiedad o control técnico en su lugar para restringir Extensiones innecesarias o ` |
-| tención token | 526 | `\| 9.4 \| Restringir Extensiones innecesarias o no autorizadas de navegador y correo electrónico de clientes \| Ponga un proceso repetible, propiedad o control técnico en su lugar para restringir Extensiones innecesarias o ` |
-| TEN token | 527 | `TEN 9.5 \| Implement DMARC ANTEPonga un proceso repetible, de propiedad o control técnico en marcha para implementar DMARC, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, ` |
-| TEN token | 527 | `TEN 9.5 \| Implement DMARC ANTEPonga un proceso repetible, de propiedad o control técnico en marcha para implementar DMARC, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, ` |
-| TEN token | 527 | `TEN 9.5 \| Implement DMARC ANTEPonga un proceso repetible, de propiedad o control técnico en marcha para implementar DMARC, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, ` |
-| tención token | 527 | `TEN 9.5 \| Implement DMARC ANTEPonga un proceso repetible, de propiedad o control técnico en marcha para implementar DMARC, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, ` |
-| TEN token | 528 | `TEN 9.6 \| Bloquear Tipos de archivo innecesarios Ponga en marcha un proceso repetible, de propiedad o control técnico para bloquear los tipos de archivos innecesarios, a continuación, verifique la cobertura y excepciones` |
-| TEN token | 528 | `TEN 9.6 \| Bloquear Tipos de archivo innecesarios Ponga en marcha un proceso repetible, de propiedad o control técnico para bloquear los tipos de archivos innecesarios, a continuación, verifique la cobertura y excepciones` |
-| TEN token | 528 | `TEN 9.6 \| Bloquear Tipos de archivo innecesarios Ponga en marcha un proceso repetible, de propiedad o control técnico para bloquear los tipos de archivos innecesarios, a continuación, verifique la cobertura y excepciones` |
-| tención token | 528 | `TEN 9.6 \| Bloquear Tipos de archivo innecesarios Ponga en marcha un proceso repetible, de propiedad o control técnico para bloquear los tipos de archivos innecesarios, a continuación, verifique la cobertura y excepciones` |
-| TEN token | 529 | `\| 9.7 \| Despliegue y Mantenga el Servidor de Email Anti-Malware Protecciones Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar y Mantener Protecciones Anti-Malware del Servidor de Emai` |
-| TEN token | 529 | `\| 9.7 \| Despliegue y Mantenga el Servidor de Email Anti-Malware Protecciones Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar y Mantener Protecciones Anti-Malware del Servidor de Emai` |
-| tención token | 529 | `\| 9.7 \| Despliegue y Mantenga el Servidor de Email Anti-Malware Protecciones Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar y Mantener Protecciones Anti-Malware del Servidor de Emai` |
-| ellipsis table delimiter | 538 | `\|... \|` |
-| TEN token | 542 | `\| 10.1 \| Deploy y Mantener el Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar y mantener el software antimalware, a continuación, verifique la cobertura y las exc` |
-| tención token | 542 | `\| 10.1 \| Deploy y Mantener el Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar y mantener el software antimalware, a continuación, verifique la cobertura y las exc` |
-| TEN token | 543 | `\| 10.2 \| Configure Actualizaciones automáticas de firmas antimalware Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar Actualizaciones automáticas de firmas antimalware, a continuación,` |
-| tención token | 543 | `\| 10.2 \| Configure Actualizaciones automáticas de firmas antimalware Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar Actualizaciones automáticas de firmas antimalware, a continuación,` |
-| TEN token | 544 | `TEN 10.3 \| Autorun deshabilitado y Autoplay para medios extraíbles TENIENDO Poner en marcha un proceso repetible, propiedad o control técnico para desactivar Autorun y Autoplay para medios extraíbles, a continuación, ver` |
-| TEN token | 544 | `TEN 10.3 \| Autorun deshabilitado y Autoplay para medios extraíbles TENIENDO Poner en marcha un proceso repetible, propiedad o control técnico para desactivar Autorun y Autoplay para medios extraíbles, a continuación, ver` |
-| tención token | 544 | `TEN 10.3 \| Autorun deshabilitado y Autoplay para medios extraíbles TENIENDO Poner en marcha un proceso repetible, propiedad o control técnico para desactivar Autorun y Autoplay para medios extraíbles, a continuación, ver` |
-| TEN token | 545 | `\| 10.4 \| Configure Automatic Anti-Malware Scanning of Removable Media Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar el escaneado automático antimalware de medios extraíbles, a conti` |
-| tención token | 545 | `\| 10.4 \| Configure Automatic Anti-Malware Scanning of Removable Media Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar el escaneado automático antimalware de medios extraíbles, a conti` |
-| TEN token | 546 | `\| 10.5 \| Activar las características anti-Explotación Ponga en marcha un proceso repetible, de propiedad o control técnico para habilitar las funciones de antiexplotación, a continuación, verifique la cobertura y las exc` |
-| tención token | 546 | `\| 10.5 \| Activar las características anti-Explotación Ponga en marcha un proceso repetible, de propiedad o control técnico para habilitar las funciones de antiexplotación, a continuación, verifique la cobertura y las exc` |
-| TEN token | 547 | `\| 10.6 \| Gestión Central del Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para administrar centralmente el software antimalware, a continuación, verifique la cobertura y las ` |
-| tención token | 547 | `\| 10.6 \| Gestión Central del Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para administrar centralmente el software antimalware, a continuación, verifique la cobertura y las ` |
-| TEN token | 548 | `\| 10.7 \| Utilizar software antimalware basado en el comportamiento Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar el software antimalware basado en el comportamiento, a continuación, v` |
-| tención token | 548 | `\| 10.7 \| Utilizar software antimalware basado en el comportamiento Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar el software antimalware basado en el comportamiento, a continuación, v` |
 | ellipsis table delimiter | 557 | `\|... \|` |
 | TEN token | 561 | `TEN 11.1 \| Establecer y mantener un proceso de recuperación de datos \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, ` |
 | TEN token | 561 | `TEN 11.1 \| Establecer y mantener un proceso de recuperación de datos \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, ` |

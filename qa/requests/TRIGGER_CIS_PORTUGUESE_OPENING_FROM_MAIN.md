@@ -1,5 +1,5 @@
-# Trigger bounded ISO/IEC 27001 and 27002 English correction
+# Trigger HIPAA English master baseline audit
 
-Apply the verified Word table-of-contents label correction, rerun the ISO English structural and framework-fact audit, and require PASS on `production/multilingual-grc-editions`.
+Run the controlled structural, core-rule, and time-sensitive current-status baseline audit against the canonical HIPAA English source on `production/multilingual-grc-editions`.
 
 This PR exists only to generate an observable `pull_request` workflow event. It modifies no publication content on `main` and must not be merged.

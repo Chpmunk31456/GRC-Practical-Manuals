@@ -8,11 +8,11 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 
 ## Summary
 
-- conversion box glyph: **204**
+- conversion box glyph: **171**
 - double heading marker: **21**
 - ellipsis-only table row: **2**
 - malformed leading emphasis: **2**
-- raw separator line: **40**
+- raw separator line: **33**
 - standalone numbered heading without hash: **30**
 - unclosed bold heading: **5**
 - Missing expected numbered sections: **1**
@@ -67,46 +67,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 | standalone numbered heading without hash | 326 | `9. Use mapeamentos oficiais para coordenar outros frameworks sem tratar mapeamentos como conformidade automática.` |
 | conversion box glyph | 328 | `Princípio de implementação:** Um grupo menor de Salvaguardas que é totalmente escopo, operado, medido e melhorado é mais defensável do que uma longa lista marcada completa sem evidência confiável. □` |
 | conversion box glyph | 329 | `□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 339 | `. ** Finalidade do controlo: ** Fortalecer a empresa através da implementação e medição de salvaguardas para o inventário e controle de ativos empresariais. □` |
-| raw separator line | 340 | `----------------------------------------------------------------------` |
-| raw separator line | 343 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 346 | `□ 1.3 □ Utilizar uma ferramenta de descoberta ativa Coloque no lugar um processo repetível, de propriedade ou controle técnico para utilizar uma ferramenta Active Discovery, então verifique cobertura e exceções. Confirma` |
-| conversion box glyph | 346 | `□ 1.3 □ Utilizar uma ferramenta de descoberta ativa Coloque no lugar um processo repetível, de propriedade ou controle técnico para utilizar uma ferramenta Active Discovery, então verifique cobertura e exceções. Confirma` |
-| conversion box glyph | 356 | `. ** Finalidade do controlo: ** Fortalecer a empresa através da implementação e medição de salvaguardas para o inventário e controle de ativos de software. □` |
-| conversion box glyph | 357 | `□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 360 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 362 | `• 2.2 • Certifique-se de que o Software Autorizado está atualmente suportado □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir que o Software Autorizado esteja atualmente apoiad` |
-| conversion box glyph | 364 | `□ 2.4 □ Utilizar ferramentas de inventário de software automatizadas Coloque um processo repetível, de propriedade ou controle técnico no local para utilizar Ferramentas de Inventário de Software Automatizado, em seguida` |
-| conversion box glyph | 364 | `□ 2.4 □ Utilizar ferramentas de inventário de software automatizadas Coloque um processo repetível, de propriedade ou controle técnico no local para utilizar Ferramentas de Inventário de Software Automatizado, em seguida` |
-| conversion box glyph | 366 | `2.6 □ Allowlist Bibliotecas Autorizadas □ Coloque em prática um processo repetível, de propriedade ou controle técnico para permitir a lista Bibliotecas Autorizadas, então verifique cobertura e exceções. Confirmar escopo` |
-| conversion box glyph | 366 | `2.6 □ Allowlist Bibliotecas Autorizadas □ Coloque em prática um processo repetível, de propriedade ou controle técnico para permitir a lista Bibliotecas Autorizadas, então verifique cobertura e exceções. Confirmar escopo` |
-| conversion box glyph | 379 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a protecção de dados. □` |
-| raw separator line | 380 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 383 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 387 | `□ 3.4 □ Forçar a retenção de dados □ Coloque em prática um processo repetível, de propriedade ou controle técnico para impor a retenção de dados, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, p` |
-| conversion box glyph | 387 | `□ 3.4 □ Forçar a retenção de dados □ Coloque em prática um processo repetível, de propriedade ou controle técnico para impor a retenção de dados, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, p` |
-| conversion box glyph | 387 | `□ 3.4 □ Forçar a retenção de dados □ Coloque em prática um processo repetível, de propriedade ou controle técnico para impor a retenção de dados, em seguida, verificar a cobertura e exceções. Confirmar escopo definido, p` |
-| conversion box glyph | 388 | `3.5 □ Eliminar com segurança os dados Coloque em prática um processo repetível, de propriedade ou controle técnico para eliminar de forma segura os dados, então verifique a cobertura e exceções. Confirmar escopo definido` |
-| conversion box glyph | 389 | `□ 3.6 □ Criptografar Dados em Dispositivos de Usuário Final □ Coloque em prática um processo repetível, de propriedade ou controle técnico para criptografar Dados em Dispositivos de Usuário Final, então verifique cobertu` |
-| conversion box glyph | 389 | `□ 3.6 □ Criptografar Dados em Dispositivos de Usuário Final □ Coloque em prática um processo repetível, de propriedade ou controle técnico para criptografar Dados em Dispositivos de Usuário Final, então verifique cobertu` |
-| conversion box glyph | 389 | `□ 3.6 □ Criptografar Dados em Dispositivos de Usuário Final □ Coloque em prática um processo repetível, de propriedade ou controle técnico para criptografar Dados em Dispositivos de Usuário Final, então verifique cobertu` |
-| conversion box glyph | 390 | `□ 3.7 □ Estabelecer e manter um esquema de classificação de dados □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um esquema de classificação de dados, em seguida,` |
-| conversion box glyph | 390 | `□ 3.7 □ Estabelecer e manter um esquema de classificação de dados □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um esquema de classificação de dados, em seguida,` |
-| conversion box glyph | 390 | `□ 3.7 □ Estabelecer e manter um esquema de classificação de dados □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um esquema de classificação de dados, em seguida,` |
-| conversion box glyph | 405 | `. ** Finalidade do controlo: ** Fortaleça a empresa implementando e medindo salvaguardas para a configuração segura de ativos e software da empresa. □` |
-| conversion box glyph | 406 | `□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 409 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 414 | `□ 4.5 □ Implementar e Gerenciar um Firewall em Dispositivos de Usuário Final □ Coloque em prática um processo ou controle técnico repetível, de propriedade para implementar e gerenciar um Firewall em Dispositivos de Usuá` |
-| conversion box glyph | 414 | `□ 4.5 □ Implementar e Gerenciar um Firewall em Dispositivos de Usuário Final □ Coloque em prática um processo ou controle técnico repetível, de propriedade para implementar e gerenciar um Firewall em Dispositivos de Usuá` |
-| conversion box glyph | 414 | `□ 4.5 □ Implementar e Gerenciar um Firewall em Dispositivos de Usuário Final □ Coloque em prática um processo ou controle técnico repetível, de propriedade para implementar e gerenciar um Firewall em Dispositivos de Usuá` |
-| conversion box glyph | 421 | `□ 4.12 □ Separar os espaços de trabalho empresariais em dispositivos móveis de utilização final □ Coloque em prática um processo repetível, de propriedade ou controlo técnico para separar os espaços de trabalho empresari` |
-| conversion box glyph | 421 | `□ 4.12 □ Separar os espaços de trabalho empresariais em dispositivos móveis de utilização final □ Coloque em prática um processo repetível, de propriedade ou controlo técnico para separar os espaços de trabalho empresari` |
-| conversion box glyph | 421 | `□ 4.12 □ Separar os espaços de trabalho empresariais em dispositivos móveis de utilização final □ Coloque em prática um processo repetível, de propriedade ou controlo técnico para separar os espaços de trabalho empresari` |
-| conversion box glyph | 429 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão de contas. □` |
-| conversion box glyph | 430 | `□--------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 433 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 438 | `5,5 □ Estabelecer e manter um Inventário de Contas de Serviço □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Inventário de Contas de Serviço, em seguida, verif` |
-| conversion box glyph | 438 | `5,5 □ Estabelecer e manter um Inventário de Contas de Serviço □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Inventário de Contas de Serviço, em seguida, verif` |
 | conversion box glyph | 451 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão do controlo de acesso. □` |
 | raw separator line | 452 | `----------------------------------------------------` |
 | raw separator line | 455 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |

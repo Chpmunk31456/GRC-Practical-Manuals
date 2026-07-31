@@ -1,13 +1,7 @@
-name: Integrate CIS Portuguese opening and Sections 1-5
+name: Integrate CIS Portuguese Controls 6-10
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
-      - '.github/workflows/integrate-cis-portuguese-opening-sections-1-5.yml'
   pull_request:
     branches:
       - main
@@ -31,8 +25,8 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Integrate reviewed opening block
-        run: python3 qa/tools/integrate_cis_portuguese_opening_sections_1_5.py
+      - name: Integrate reviewed Controls 6-10
+        run: python3 qa/tools/integrate_cis_portuguese_sections_11_15.py
 
       - name: Refresh Portuguese full-manual audit
         run: python3 qa/tools/audit_cis_portuguese_full_manual.py
@@ -50,7 +44,7 @@ jobs:
             echo 'No controlled changes to commit.'
             exit 0
           fi
-          git commit -m 'Integrate reviewed CIS Portuguese opening and Sections 1-5'
+          git commit -m 'Integrate reviewed CIS Portuguese Controls 6-10'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

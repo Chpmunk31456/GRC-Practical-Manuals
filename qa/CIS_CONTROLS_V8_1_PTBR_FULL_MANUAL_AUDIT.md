@@ -8,10 +8,10 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 
 ## Summary
 
-- conversion box glyph: **82**
+- conversion box glyph: **47**
 - double heading marker: **20**
 - ellipsis-only table row: **1**
-- raw separator line: **15**
+- raw separator line: **8**
 - standalone numbered heading without hash: **41**
 - unclosed bold heading: **6**
 - Missing expected numbered sections: **0**
@@ -46,48 +46,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 | standalone numbered heading without hash | 174 | `8. Expanda para IG2 ou IG3 conforme o risco, as obrigações, a maturidade e a exposição a ameaças.` |
 | standalone numbered heading without hash | 175 | `9. Utilize mapeamentos oficiais para coordenar outras estruturas sem tratar o mapeamento como comprovação automática de conformidade.` |
 | unclosed bold heading | 177 | `**Princípio de implementação:** Um conjunto menor de Salvaguardas, com escopo completo, operação consistente, medição e melhoria contínua, é mais defensável do que uma lista extensa marcada como concluída sem evidências ` |
-| conversion box glyph | 489 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão dos prestadores de serviços. □` |
-| raw separator line | 490 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 493 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 494 | `□ 15.1 □ Estabeleça e mantenha um Inventário de Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Inventário de Prestadores de Serviços, e` |
-| conversion box glyph | 494 | `□ 15.1 □ Estabeleça e mantenha um Inventário de Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Inventário de Prestadores de Serviços, e` |
-| conversion box glyph | 494 | `□ 15.1 □ Estabeleça e mantenha um Inventário de Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Inventário de Prestadores de Serviços, e` |
-| conversion box glyph | 496 | `□ 15.3 □ Classifique prestadores de serviços Coloque em prática um processo repetível, de propriedade ou controle técnico para classificar os provedores de serviços, em seguida, verificar a cobertura e exceções. Confirma` |
-| conversion box glyph | 496 | `□ 15.3 □ Classifique prestadores de serviços Coloque em prática um processo repetível, de propriedade ou controle técnico para classificar os provedores de serviços, em seguida, verificar a cobertura e exceções. Confirma` |
-| conversion box glyph | 497 | `□ 15.4 □ Garanta que os contratos de prestador de serviços incluam requisitos de segurança □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir que os contratos de prestador de ser` |
-| conversion box glyph | 497 | `□ 15.4 □ Garanta que os contratos de prestador de serviços incluam requisitos de segurança □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir que os contratos de prestador de ser` |
-| conversion box glyph | 497 | `□ 15.4 □ Garanta que os contratos de prestador de serviços incluam requisitos de segurança □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir que os contratos de prestador de ser` |
-| conversion box glyph | 498 | `□ 15.5 □ Avaliar Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para avaliar Prestadores de Serviços, em seguida, verificar a cobertura e exceções. Confirmar escopo` |
-| conversion box glyph | 498 | `□ 15.5 □ Avaliar Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para avaliar Prestadores de Serviços, em seguida, verificar a cobertura e exceções. Confirmar escopo` |
-| conversion box glyph | 498 | `□ 15.5 □ Avaliar Prestadores de Serviços □ Coloque em prática um processo repetível, de propriedade ou controle técnico para avaliar Prestadores de Serviços, em seguida, verificar a cobertura e exceções. Confirmar escopo` |
-| conversion box glyph | 508 | `. ** Finalidade do controlo: ** Fortaleça a empresa implementando e medindo salvaguardas para segurança de software de aplicação. □` |
-| raw separator line | 509 | `----------------------------------------------------------------------------` |
-| raw separator line | 512 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 513 | `□ 16.1 □ Estabelecer e manter um processo seguro de desenvolvimento de aplicativos □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo seguro de desenvolvi` |
-| conversion box glyph | 513 | `□ 16.1 □ Estabelecer e manter um processo seguro de desenvolvimento de aplicativos □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo seguro de desenvolvi` |
-| conversion box glyph | 513 | `□ 16.1 □ Estabelecer e manter um processo seguro de desenvolvimento de aplicativos □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um processo seguro de desenvolvi` |
-| conversion box glyph | 516 | `□ 16.4 Criar e Gerenciar um Inventário de Componentes de Software de Terceiros □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e gerenciar um Inventário de Componentes de S` |
-| conversion box glyph | 516 | `□ 16.4 Criar e Gerenciar um Inventário de Componentes de Software de Terceiros □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer e gerenciar um Inventário de Componentes de S` |
-| conversion box glyph | 518 | `□ 16.6 □ Estabeleça um Sistema de Avaliação de Severidade e um Processo para Vulnerabilidades de Aplicações □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer um Sistema de Av` |
-| conversion box glyph | 518 | `□ 16.6 □ Estabeleça um Sistema de Avaliação de Severidade e um Processo para Vulnerabilidades de Aplicações □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer um Sistema de Av` |
-| conversion box glyph | 518 | `□ 16.6 □ Estabeleça um Sistema de Avaliação de Severidade e um Processo para Vulnerabilidades de Aplicações □ Coloque em prática um processo repetível, de propriedade ou controle técnico para estabelecer um Sistema de Av` |
-| conversion box glyph | 519 | `Use Modelos de Endurecimento Padrão para Infraestrutura de Aplicação □ Coloque em prática um processo repetível, de propriedade ou controle técnico para usar Modelos de Endurecimento Padrão para Infraestrutura de Aplicaç` |
-| conversion box glyph | 523 | `Use Módulos ou Serviços Vetted para Componentes de Segurança de Aplicações □ Coloque em prática um processo repetível, de propriedade ou controle técnico para usar Módulos ou Serviços Vetted para Componentes de Segurança` |
-| conversion box glyph | 538 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão da resposta a incidentes. □` |
-| raw separator line | 539 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 542 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 543 | `□ 17.1 □ Designar Pessoal para Gerenciar o Tratamento de Incidentes □ Coloque em prática um processo repetível, de propriedade ou controle técnico para designar Pessoal para Gerenciar o Tratamento de Incidentes e, em seg` |
-| conversion box glyph | 543 | `□ 17.1 □ Designar Pessoal para Gerenciar o Tratamento de Incidentes □ Coloque em prática um processo repetível, de propriedade ou controle técnico para designar Pessoal para Gerenciar o Tratamento de Incidentes e, em seg` |
-| conversion box glyph | 543 | `□ 17.1 □ Designar Pessoal para Gerenciar o Tratamento de Incidentes □ Coloque em prática um processo repetível, de propriedade ou controle técnico para designar Pessoal para Gerenciar o Tratamento de Incidentes e, em seg` |
-| conversion box glyph | 546 | `□ 17.4 □ Estabelecer e manter um Processo de Resposta a Incidentes □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Resposta a Incidentes, em seguida` |
-| conversion box glyph | 546 | `□ 17.4 □ Estabelecer e manter um Processo de Resposta a Incidentes □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Resposta a Incidentes, em seguida` |
-| conversion box glyph | 546 | `□ 17.4 □ Estabelecer e manter um Processo de Resposta a Incidentes □ Colocar em prática um processo repetível, de propriedade ou controle técnico para estabelecer e manter um Processo de Resposta a Incidentes, em seguida` |
-| conversion box glyph | 551 | `□ 17.9 □ Estabelecer e Manter Limiares de Incidente de Segurança □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer e manter Limiares de Incidente de Segurança, em seguida, verificar a c` |
-| conversion box glyph | 551 | `□ 17.9 □ Estabelecer e Manter Limiares de Incidente de Segurança □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer e manter Limiares de Incidente de Segurança, em seguida, verificar a c` |
-| conversion box glyph | 551 | `□ 17.9 □ Estabelecer e Manter Limiares de Incidente de Segurança □ Colocar um processo repetível, de propriedade ou controle técnico para estabelecer e manter Limiares de Incidente de Segurança, em seguida, verificar a c` |
-| conversion box glyph | 559 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para testes de penetração. □` |
-| conversion box glyph | 560 | `□--------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 563 | `--------------------------------------------------------------------------------------------------------` |
 | raw separator line | 577 | `----------------------------------------------------` |
 | conversion box glyph | 581 | `□ CISO Assistant □ Controles, riscos, evidências e achados` |
 | conversion box glyph | 581 | `□ CISO Assistant □ Controles, riscos, evidências e achados` |

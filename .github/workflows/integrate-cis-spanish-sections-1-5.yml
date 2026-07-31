@@ -7,6 +7,9 @@ on:
       - production/multilingual-grc-editions
     paths:
       - 'qa/requests/INTEGRATE_CIS_SPANISH_SECTIONS_1_5.md'
+      - 'qa/tools/integrate_cis_spanish_sections_1_5.py'
+      - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_SECTIONS_1_5_REVIEWED.md'
+      - '.github/workflows/integrate-cis-spanish-sections-1-5.yml'
 
 permissions:
   contents: write

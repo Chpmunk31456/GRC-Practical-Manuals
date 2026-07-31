@@ -10,15 +10,15 @@ REPORT = Path("qa/ISO_IEC_27001_27002_ENGLISH_MASTER_AUDIT.md")
 
 PATTERNS = {
     "conversion box glyph": re.compile(r"□"),
-    "broken image marker": re.compile(r"^[■□]img\\b", re.MULTILINE | re.IGNORECASE),
-    "double heading marker": re.compile(r"^#\\s+#\\s+", re.MULTILINE),
+    "broken image marker": re.compile(r"^[■□]img\b", re.MULTILINE | re.IGNORECASE),
+    "double heading marker": re.compile(r"^#\s+#\s+", re.MULTILINE),
     "raw separator line": re.compile(r"^-{20,}$", re.MULTILINE),
-    "empty markdown link": re.compile(r"\\[[^\\]]+\\]\\(\\s*\\)"),
-    "placeholder token": re.compile(r"\\b(?:TBD|TODO|FIXME|PLACEHOLDER)\\b", re.IGNORECASE),
-    "malformed Word contents label": re.compile(r"\\*\\*True Word contents:\\*\\*", re.IGNORECASE),
+    "empty markdown link": re.compile(r"\[[^\]]+\]\(\s*\)"),
+    "placeholder token": re.compile(r"\b(?:TBD|TODO|FIXME|PLACEHOLDER)\b", re.IGNORECASE),
+    "malformed Word contents label": re.compile(r"\*\*True Word contents:\*\*", re.IGNORECASE),
 }
 
-REQUIRED_SECTIONS = [re.compile(rf"^#\\s+{n}\\.\\s+", re.MULTILINE) for n in range(1, 29)]
+REQUIRED_SECTIONS = [re.compile(rf"^#\s+{n}\.\s+", re.MULTILINE) for n in range(1, 29)]
 REQUIRED_FACTS = {
     "ISO/IEC 27001:2022": "ISO/IEC 27001:2022",
     "ISO/IEC 27002:2022": "ISO/IEC 27002:2022",
@@ -40,7 +40,7 @@ REQUIRED_FACTS = {
 
 
 def line_number(text: str, offset: int) -> int:
-    return text.count("\\n", 0, offset) + 1
+    return text.count("\n", 0, offset) + 1
 
 
 def main() -> int:
@@ -85,7 +85,7 @@ def main() -> int:
     if findings:
         report.extend(["| Category | Line | Excerpt |", "|---|---:|---|"])
         for label, line, excerpt in sorted(findings, key=lambda item: (item[1], item[0])):
-            report.append(f"| {label} | {line} | `{excerpt.replace('|', '\\\\|')}` |")
+            report.append(f"| {label} | {line} | `{excerpt.replace('|', '\\|')}` |")
     else:
         report.append("No configured findings.")
 
@@ -94,7 +94,7 @@ def main() -> int:
     if duplicate_sections:
         report.extend(["", "### Sections not appearing exactly once", "", ", ".join(duplicate_sections)])
     if missing_facts:
-        report.extend(["", "### Missing required framework facts", "", "\\n".join(f"- {item}" for item in missing_facts)])
+        report.extend(["", "### Missing required framework facts", "", "\n".join(f"- {item}" for item in missing_facts)])
 
     report.extend([
         "",
@@ -103,7 +103,7 @@ def main() -> int:
         "This automated baseline checks structural integrity, placeholders, section counts, clauses 4–10, the 93-control total, Annex A theme counts, and current edition markers. It does not replace detailed technical, editorial, copyright, link, visual, accessibility, or standards-currentness review.",
         "",
     ])
-    REPORT.write_text("\\n".join(report), encoding="utf-8")
+    REPORT.write_text("\n".join(report), encoding="utf-8")
     print(f"Wrote {REPORT}: {status}")
     return 0
 

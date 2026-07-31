@@ -8,7 +8,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 
 ## Summary
 
-- ANTER corruption: **1**
 - Silencioso token: **11**
 - TEN token: **9**
 - arrow artifact: **3**
@@ -21,7 +20,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 | Category | Line | Excerpt |
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
-| ANTER corruption | 222 | `![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)` |
 | ellipsis table delimiter | 957 | `\|... \|` |
 | TEN token | 962 | `\| Cause TENED \ \ \ \ \ \ \ \ \ \ \      \ \ \  \ \   \   \                                                                                                                                                                 ` |
 | arrow artifact | 974 | `\| CIS Benchmark ← Recomendaciones de configuración segura para una tecnología específica. \|` |

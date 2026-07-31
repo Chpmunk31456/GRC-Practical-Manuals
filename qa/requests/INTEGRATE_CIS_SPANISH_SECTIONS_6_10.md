@@ -9,3 +9,5 @@ Integration script:
 `qa/tools/integrate_cis_spanish_sections_6_10.py`
 
 After integration, refresh the full-manual corruption audit. Do not merge or publish PR #3.
+
+Explicit retrigger requested on 2026-07-30 at 20:19 Colombia time after confirming the first request did not produce an integration commit.

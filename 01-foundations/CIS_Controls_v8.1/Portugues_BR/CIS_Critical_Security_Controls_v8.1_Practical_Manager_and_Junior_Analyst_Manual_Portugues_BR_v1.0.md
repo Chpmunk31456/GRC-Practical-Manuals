@@ -1,332 +1,180 @@
-> **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
+> **Status da revisão:** Edição de revisão controlada. Requer validação humana de terminologia, significado, links, formatação, acessibilidade e atualidade técnica antes da publicação final.
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE
+**SÉRIE PRÁTICA DE CIBERSEGURANÇA, PRIVACIDADE E CONFORMIDADE**
 
 **CIS Critical Security Controls v8.1**
 
-**Implementação Prática, Medição, Evidência e Ferramentas de Código Aberto
+**Implementação prática, medição, evidências e ferramentas de código aberto**
 
-* Um manual de trabalho para gerentes, analistas júnior, estudantes, profissionais de mudança de carreira, avaliadores e equipes de segurança*
+*Manual de trabalho para gestores, analistas juniores, estudantes, profissionais em transição de carreira, avaliadores e equipes de segurança*
 
-** Alberto (Al) Leiva**
+**Alberto (Al) Leiva**
 
 Primeira edição • Julho de 2026
 
-No interior:** 18 Controlos • 153 Salvaguardas • IG1, IG2, IG3 • medição • evidência • ferramentas • livro de instruções do gestor • laboratórios • preparação para a carreira
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Conteúdo:** 18 Controles • 153 Salvaguardas • IG1, IG2 e IG3 • medição • evidências • ferramentas • guia para gestores • laboratórios • preparação profissional |
+|---|
 
-# Publicação e Aviso de Uso
+# Aviso de publicação e uso
 
 Autor: Alberto (Al) Leiva
 
-Edição: Primeira Edição, Julho 2026
+Edição: Primeira edição, julho de 2026
 
-Este manual educacional independente não é um Centro de Segurança da Internet publicação, certificação, acreditação, relatório de auditoria, opinião jurídica, ou garantia de segurança ou conformidade. CIS Controls e CIS Benchmarks são marcas comerciais do Centro de Segurança da Internet. Use recursos oficiais CIS para o conteúdo exato e orientação atual.
+Este manual educacional independente não é uma publicação, certificação, acreditação, relatório de auditoria, opinião jurídica ou garantia de segurança ou conformidade emitida pelo Center for Internet Security. CIS Controls e CIS Benchmarks são marcas do Center for Internet Security. Consulte os recursos oficiais do CIS para obter o conteúdo exato e a orientação vigente.
 
-Os controles CIS são as melhores práticas de segurança cibernética. Não substituem as leis, regulamentos, contratos, requisitos do setor, avaliação de risco ou responsabilidade de gestão aplicáveis. Um mapeamento mostra relacionamentos; ele não prova automaticamente conformidade com outro framework.
+Os CIS Controls representam boas práticas de cibersegurança. Eles não substituem leis, regulamentos, contratos, requisitos setoriais, avaliações de risco ou responsabilidades de gestão aplicáveis. Um mapeamento demonstra relações entre estruturas; não comprova automaticamente a conformidade com outra estrutura.
 
-# # Uso ético e autorizado
+## Uso ético e autorizado
 
-Use ferramentas técnicas apenas em ativos, redes, aplicativos, contas em nuvem, repositórios e dados que você possui ou estão especificamente autorizados por escrito para avaliar. Use informações sintéticas e sistemas isolados em laboratórios.
+Utilize ferramentas técnicas somente em ativos, redes, aplicações, contas de nuvem, repositórios e dados que você possui ou para os quais recebeu autorização específica por escrito. Em laboratórios, utilize informações sintéticas e sistemas isolados.
 
-Prefácio
+# Prefácio
 
-* Uma introdução prática para a defesa cibernética priorizada e medição baseada em evidências.*
+*Introdução prática à defesa cibernética priorizada e à medição baseada em evidências.*
 
-Os controles CIS transformam as necessidades defensivas comuns em salvaguardas focadas. Sua força é a priorização prática: saiba o que você possui, controle software e dados, configure configurações e identidades seguras, gerencie vulnerabilidades e logs, prepare-se para rupturas e ataques e teste se as defesas funcionam.
+Os CIS Controls transformam necessidades defensivas comuns em Salvaguardas específicas. Sua principal força é a priorização prática: conhecer os ativos, controlar software e dados, proteger configurações e identidades, gerenciar vulnerabilidades e registros, preparar-se para interrupções e ataques e testar se as defesas funcionam.
 
-Versão 8.1 é a edição atual. É uma atualização iterativa para v8 que realinhava mapeamentos para NIST CSF 2.0, expandiu definições de prazo reservado, revisou classes de ativos e mapeamentos de Salvaguarda, corrigiu problemas menores, clarificou algumas Salvaguardas, e incorporou a função de segurança do governo em mapeamentos. Os 18 Controlos e 153 Salvaguardas continuam a ser a estrutura central.
+A versão 8.1 é uma atualização iterativa da versão 8. Ela realinhou os mapeamentos ao NIST CSF 2.0, ampliou definições de termos reservados, revisou classes de ativos e mapeamentos de Salvaguardas, corrigiu questões menores, esclareceu determinadas Salvaguardas e incorporou a função Governar aos mapeamentos. Os 18 Controles e as 153 Salvaguardas permanecem como estrutura central.
 
-Uma instalação de ferramenta não é implementação. A implementação efetiva requer escopo definido, populações completas, configuração segura, evidência operacional, proprietários treinados, manipulação de exceção, medição, correção e reteste. Os gestores decidem prioridades e recursos; os analistas tornam essas decisões confiáveis através de inventários e evidências precisas.
+A instalação de uma ferramenta não equivale à implementação de um controle. Uma implementação efetiva exige escopo definido, populações completas, configuração segura, evidência operacional, responsáveis capacitados, tratamento de exceções, medição, correção e novos testes. Gestores definem prioridades e recursos; analistas tornam essas decisões confiáveis por meio de inventários e evidências precisos.
 
-Como usar este manual
+# Como usar este manual
 
-- Os gestores devem começar pelos capítulos 1–5 e 24–25.
+- Gestores devem começar pelos capítulos 1–5 e 24–25.
+- Analistas juniores devem estudar os 18 capítulos de Controles, o método de medição, as ferramentas, o laboratório e o capítulo de entrevistas.
+- Equipes técnicas devem relacionar cada Salvaguarda a ativos, dados, responsáveis, procedimentos, configurações, monitoramento, exceções e evidências.
+- Avaliadores devem utilizar a especificação oficial de avaliação dos CIS Controls para confirmar entradas, operações, medidas, métricas, premissas e revisões de procedimentos.
 
-- Os analistas júnior devem estudar os 18 capítulos de controle, método de medição, ferramentas, laboratório e capítulo de entrevista.
+| **Sumário no Word:** O arquivo DOCX pode conter um campo nativo de sumário. Após qualquer edição, atualize o campo e selecione a opção para atualizar a tabela inteira. |
+|---|
 
-- Equipes técnicas devem conectar cada Salvaguarda a ativos, dados, proprietários, procedimentos, configuração, monitoramento, manipulação de exceções e evidências.
+# Sumário
 
-- Os avaliadores devem usar a especificação oficial de avaliação de controles CIS para entradas exatas, operações, medidas, métricas, pressupostos e revisões de procedimentos.
+1. Fundamentos dos CIS Controls v8.1  
+2. Grupos de Implementação e priorização  
+3. Governança, escopo e responsabilidades  
+4. Medição com a especificação de avaliação do CIS  
+5. Roteiro de implementação  
+6–23. Os 18 CIS Controls  
+24. Ferramentas de código aberto  
+25. Guia dos CIS Controls para gestores  
+26. Guia profissional para analistas juniores  
+27. Laboratório fictício e portfólio  
+28. Plano de aprendizagem de trinta dias  
+29. Preparação para entrevistas  
+30. Modelos, glossário, índice e referências
 
-*Conteúdo:** Este documento contém um campo nativo da tabela de conteúdos do Word. O guia do capítulo conterá números de página verificados para esta edição. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
-□----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- (--------------------------------------
+# 1. Fundamentos dos CIS Controls v8.1
 
-Sumário
+*A versão atual, sua estrutura, finalidade e limitações.*
 
-[Comunicação de publicação e utilização [2](#publication-and-use-notice)](#publication-and-use-notice)
+<img src="media/image1.png" style="width:6.15in;height:3.94164in" alt="Os Controles organizam 153 Salvaguardas em um programa defensivo prático." />
 
-[Utilização ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)
+Figura 1. Os 18 CIS Critical Security Controls
 
-[Prefácio [3](#preface)](#preface)
+- Os CIS Controls v8.1 foram publicados em junho de 2024.
+- Os Controles são boas práticas priorizadas para defender sistemas e redes contra ataques prevalentes.
+- A estrutura contém 18 Controles e 153 Salvaguardas.
+- As Salvaguardas são relacionadas a classes de ativos, funções de segurança e Grupos de Implementação.
+- A versão 8.1 alinha o mapeamento ao NIST CSF 2.0 e inclui a função Governar.
+- Existem mapeamentos oficiais para várias estruturas, mas cada requisito aplicável deve ser verificado separadamente.
 
-[Como usar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
+| Camada | Finalidade |
+|---|---|
+| Controle | Resultado defensivo amplo, como inventário de ativos ou resposta a incidentes. |
+| Salvaguarda | Ação específica que pode ser atribuída, implementada e medida. |
+| Classe de ativo | Tipo de elemento afetado, como dispositivos, software, dados, redes, usuários ou documentação. |
+| Função de segurança | Mapeamento para Governar, Identificar, Proteger, Detectar, Responder ou Recuperar. |
+| Grupo de Implementação | Priorização recomendada de acordo com o perfil de risco e os recursos. |
+| Medida de avaliação | Entradas, operações, medidas, métricas e revisão de procedimentos usadas para avaliar uma Salvaguarda. |
 
-[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)
+# 2. Grupos de Implementação e priorização
 
-[1. CIS Controls v8.1 Fundações [7](#cis-controls-v8.1-foundations)](#cis-controls-v8.1-foundations)
+*Como IG1, IG2 e IG3 ajudam organizações a escolher um ponto de partida realista.*
 
-[2. Grupos de implementação e priorização [8](#implementation-groups-and-prioritization)](#implementation-groups-and-prioritization)
+<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Cada Grupo de Implementação se apoia no grupo anterior; o IG3 contém todas as Salvaguardas." />
 
-[3. Governança, Âmbito e Propriedade [9](#governance-scope-and-ownership)](#governance-scope-and-ownership)
+Figura 2. Progressão dos Grupos de Implementação
 
-[4. Medição com a especificação de avaliação CIS [10](#measurement-with-the-cis-assessment-specification)](#measurement-with-the-cis-assessment-specification)
+| Grupo | Salvaguardas | Situação típica | Objetivo |
+|---|---:|---|---|
+| IG1 | 56 | Recursos e experiência de segurança limitados; menor sensibilidade; necessidade elevada de continuidade básica. | Higiene cibernética essencial contra ataques comuns. |
+| IG2 | IG1 + 74 | Vários departamentos, maior complexidade, informações sensíveis e maior dependência operacional. | Gerenciar riscos e complexidade operacional crescentes. |
+| IG3 | IG1 + IG2 + 23 = 153 | Especialistas em segurança, dados sensíveis ou regulamentados, serviços críticos e ameaças sofisticadas. | Reduzir o impacto de ataques direcionados e avançados. |
 
-[5. Roteiro de aplicação [11](#implementation-roadmap)](#implementation-roadmap)
+- Toda organização deve considerar o IG1 como ponto de partida, conforme a orientação do CIS.
+- A seleção do grupo deve considerar sensibilidade dos dados, serviços críticos, exposição a ameaças, obrigações legais e contratuais, tolerância do negócio, tecnologia, pessoal e experiência.
+- Um Grupo de Implementação é um mecanismo de priorização; não autoriza ignorar riscos materiais ou requisitos obrigatórios.
+- Documente acréscimos, sequência, exceções, aceitação de risco, responsáveis e datas.
+- Utilize o CIS Controls Navigator oficial para filtrar as Salvaguardas v8.1 e consultar os mapeamentos.
 
-[6. Controlo 1 — Inventário e controlo dos activos empresariais [12](#control-1-inventory-and-control-of-enterprise-assets)](#control-1-inventory-and-control-of-enterprise-assets)
+# 3. Governança, escopo e responsabilidades
 
-[7. Controlo 2 — Inventário e controlo de activos de software [13](#control-2-inventory-and-control-of-software-assets)](#control-2-inventory-and-control-of-software-assets)
+*A base de gestão necessária para operar as Salvaguardas de maneira consistente.*
 
-[8. Controlo 3 — Protecção de dados [14](#control-3-data-protection)](#control-3-data-protection)
-
-[9. Controlo 4 — Configuração segura dos activos empresariais e do software [16](#control-4-secure-configuration-of-enterprise-assets-and-software)](#control-4-secure-configuration-of-enterprise-assets-and-software)
-
-[10. Controlo 5 — Gestão de Contas [18](#control-5-account-management)](#control-5-account-management)
-
-[11. Controlo 6 — Gestão do controlo do acesso [19](#control-6-access-control-management)](#control-6-access-control-management)
-
-[12. Controlo 7 — Gestão contínua da vulnerabilidade [21](#control-7-continuous-vulnerability-management)](#control-7-continuous-vulnerability-management)
-
-[13. Controlo 8 — Gestão do Registo de Auditoria [23](#control-8-audit-log-management)](#control-8-audit-log-management)
-
-[14. Controlo 9 — Proteção por e-mail e navegador Web [24](#control-9-email-and-web-browser-protections)](#control-9-email-and-web-browser-protections)
-
-[15. Controle 10 — Defesas de malware [25](#control-10-malware-defenses)](#control-10-malware-defenses)
-
-[16. Controlo 11 — Recuperação de dados [26](#control-11-data-recovery)](#control-11-data-recovery)
-
-[17. Controlo 12 — Gestão da infra-estrutura da rede [27](#control-12-network-infrastructure-management)](#control-12-network-infrastructure-management)
-
-[18. Controlo 13 — Monitorização e Defesa da Rede [28](#control-13-network-monitoring-and-defense)](#control-13-network-monitoring-and-defense)
-
-[19. Controlo 14 — Formação em matéria de sensibilização e competências para a segurança [30](#control-14-security-awareness-and-skills-training)](#control-14-security-awareness-and-skills-training)
-
-[20. Controlo 15 — Gestão do prestador de serviços [31](#control-15-service-provider-management)](#control-15-service-provider-management)
-
-[21. Controlo 16 — Segurança do software de aplicação [32](#control-16-application-software-security)](#control-16-application-software-security)
-
-[22. Controlo 17 — Gestão da resposta a incidentes [34](#control-17-incident-response-management)](#control-17-incident-response-management)
-
-[23. Controlo 18 — Ensaio de penetração [36](#control-18-penetration-testing)](#control-18-penetration-testing)
-
-[24. Ferramentas de Código Aberto [37](#open-source-tools)](#open-source-tools)
-
-[24,1 CIS Controls Navigator [37](#cis-controls-navigator)](#cis-controls-navigator)
-
-[24,2 CIS Controls Assessment Specification [37](#cis-controls-assessment-specification)](#cis-controls-assessment-specification)
-
-[24,3 CIS-CAT Lite [37](#cis-cat-lite)](#cis-cat-lite)
-
-[24.4 Assistente CISO [38](#ciso-assistant)](#ciso-assistant)
-
-[24.5 Wazuh [38](#wazuh)](#wazuh)
-
-[24.6 osquery [38](#osquery)](#osquery)
-
-[24.7 OpenSCAP [38](#openscap)](#openscap)
-
-[24.8 Lynis [38](#lynis)](#lynis)
-
-[24,9 Nmap [39](#nmap)](#nmap)
-
-[24.10 Greenbone Community Edition [39](#greenbone-community-edition)](#greenbone-community-edition)
-
-[24.11 Trivy [39](#trivy)](#trivy)
-
-[24,12 OWASP ZAP [39](#owasp-zap)](#owasp-zap)
-
-[24.13 Suricata [39](#suricata)](#suricata)
-
-[24.14 Keycloak [39](#keycloak)](#keycloak)
-
-[24.15 DefectDojo [40](#defectdojo)](#defectdojo)
-
-[24.16 Velociraptor [40](#velociraptor)](#velociraptor)
-
-[25. Manual dos Controles CIS para gerentes [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
-
-[26. Guia de carreira do analista júnior [42](#junior-analyst-career-guide)](#junior-analyst-career-guide)
-
-[26.1 Trabalho júnior típico [42](#typical-junior-work)](#typical-junior-work)
-
-[27. Laboratório e Portfólio Fictícios [44](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
-
-[28. Plano de Aprendizagem de Trinta Dias [45](#thirty-day-learning-plan)](#thirty-day-learning-plan)
-
-[29. Preparação da entrevista [46](#interview-preparation)](#interview-preparation)
-
-[29.1 Quais são os controles CIS? [46](#what-are-the-cis-controls)](#what-are-the-cis-controls)
-
-[29.2 O que é IG1? [46](#what-is-ig1)](#what-is-ig1)
-
-[29.3 O IG1 corresponde a todos os requisitos? [46](#does-ig1-fit-every-requirement)](#does-ig1-fit-every-requirement)
-
-[29.4 Como medir uma salvaguarda? [46](#how-do-you-measure-a-safeguard)](#how-do-you-measure-a-safeguard)
-
-[29.5 Por que os inventários são importantes? [46](#why-are-inventories-important)](#why-are-inventories-important)
-
-[29.6 Teste de vulnerabilidade versus penetração? [46](#vulnerability-scan-versus-penetration-test)](#vulnerability-scan-versus-penetration-test)
-
-[29.7 Um mapeamento de framework prova conformidade? [46](#does-a-framework-mapping-prove-compliance)](#does-a-framework-mapping-prove-compliance)
-
-[29,8 O que pode um analista júnior concluir? [46](#what-can-a-junior-analyst-conclude)](#what-can-a-junior-analyst-conclude)
-
-[29.9 Perguntas ao empregador [46](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)
-
-[30. Modelos, Glossário, Índice e Referências [48](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
-
-[30.1 Papel de medição de salvaguarda [48](#safeguard-measurement-workpaper)](#safeguard-measurement-workpaper)
-
-[30.2 Registro de achados e retestes [48](#finding-and-retest-record)](#finding-and-retest-record)
-
-[30,3 Glossário [48](#glossary)](#glossary)
-
-[30,4 Índice de assunto [49](#subject-index)](#subject-index)
-
-[30,5 Referências oficiais [49](#official-references)](#official-references)
-
-# 1. CIS Controls v8.1 Fundações
-
-* A versão atual, estrutura, propósito e limitações.*
-
-![Os controles organizam 153 Salvaguardas em um programa defensivo prático.](media/image1.png)
-
-Figura 1. Os 18 controles de segurança críticos CIS
-
-- CIS Controls v8.1 foi publicado em junho de 2024 e continua a ser a edição atual a partir de julho de 2026.
-
-- Os controles são priorizadas as melhores práticas projetadas para defender sistemas e redes contra ataques prevalentes.
-
-- O quadro contém 18 controlos e 153 salvaguardas.
-
-- Salvaguarda mapas para classes de ativos, funções de segurança e grupos de implementação.
-
-- A versão 8.1 alinha seu mapeamento NIST CSF para CSF 2.0 e inclui mapeamentos Govern.
-
-- Existem mapeamentos oficiais para múltiplos quadros, mas a implementação deve ser verificada separadamente para cada requisito aplicável.
-
-* ** ** ** ** ** **
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• Controlo • Resultado defensivo amplo, como inventário de activos ou resposta a incidentes
-□ Salvaguarda □ Ação focada que pode ser atribuída, implementada e medida
-Tipo de assunto afetado, como dispositivos, software, dados, rede, usuários ou documentação
-Função de segurança □ Govern, Identificar, Proteger, Detectar, Responder, ou Recuperar mapeamento
-Grupo de Implementação □ Priorização recomendada baseada no perfil de risco e nos recursos
-□ Medida de avaliação □ Entradas, operações, medidas, métricas e revisão de procedimentos utilizados para avaliar uma Salvaguarda
-
-2. Grupos de Implementação e Priorização
-
-* Como IG1, IG2 e IG3 ajudam as organizações a escolher um ponto de partida realista.*
-
-![Cada grupo constrói sobre o grupo anterior; IG3 contém todas as salvaguardas.](media/image2.png)
-
-Figura 2. Progressão do Grupo de Implementação
-
-Grupo** Grupo** **Segurança** ** Situação típica** **Objetivo**
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-. . . . . 56 . . recursos de segurança limitados e experiência; menor sensibilidade; alta necessidade de continuidade básica . .
-. . . . . . . . . .
-□ IG3 □ IG1 + IG2 + 23 = 153 □ Especialistas em segurança, dados sensíveis ou regulamentados, serviços críticos e ameaças sofisticadas
-
-- Cada empresa deve começar com IG1 de acordo com a orientação CIS.
-
-- Selecione um IG considerando sensibilidade de dados, serviços críticos, exposição a ameaças, deveres legais e contratuais, tolerância aos negócios, tecnologia, pessoal e experiência.
-
-- Um GI é uma ajuda de priorização, não permissão para ignorar um risco material ou exigência obrigatória.
-
-- Adições sob medida do documento, sequenciamento, exceções, aceitação de risco, proprietários e datas.
-
-- Use o oficial CIS Controls Navigator para filtrar v8.1 Salvaguardas e mapeamentos de revisão.
-
-# 3. Governança, Escopo e Propriedade
-
-* A fundação de gestão necessária para que as Salvaguardas funcionem de forma consistente.*
-
-- Defina objetivos comerciais, serviços críticos, dados sensíveis, obrigações legais e contratuais, perfil de ameaça, tolerância ao risco e Grupo de Implementação escolhido.
-
-- Criar inventários completos para ativos empresariais, software, dados, contas, sistemas de autenticação, infraestrutura de rede, logs, fornecedores, aplicativos e recursos de recuperação.
-
-- Atribuir um proprietário responsável para cada proprietário de Salvaguarda e operacional para cada plataforma ou processo afetado.
-
-- Definir escopo, aplicabilidade, dependências, responsabilidades prestadoras de serviços, exceções permitidas, autoridade de aprovação e gatilhos de revisão.
-
-- Planeje financiamento, pessoas, habilidades, tecnologia, tempo e gestão de mudanças.
-
-- Defina métricas e relatórios antes da implementação para que a cobertura e falha sejam visíveis.
-
-- Operar um ciclo de governança: priorizar, implementar, medir, corrigir, reteste e melhorar.
-
-• ** ** ** ** ** Decisão ou responsabilidade **
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• Patrocinador executivo □ Direção, tolerância ao risco, financiamento, escalada e responsabilização
-□ Controlar o proprietário; Proteger o projeto, o escopo, o procedimento, a medição, as exceções e a melhoria;
-□ Ativo ou proprietário de serviço □ Inventário preciso, uso aprovado, configuração, impacto de negócios e remediação
-• Operações de segurança • Monitoramento, alerta, investigação, resposta e evidência
-Implementação, controle de mudança, patching, configuração e recuperação
-GRC / Analisador
-• Auditoria interna / avaliador
-Prestador de serviços □ Controles, evidências, incidentes, mudanças e suporte de saída contratados
-
-# 4. Medição com a especificação de avaliação CIS
-
-* Um método repetitivo para decidir se as salvaguardas são implementadas.*
-
-![CIS Controls figure 3](media/image3.png)
-
-Figura 3. CIS Estrutura de medição de salvaguarda
-
-* Elemento** ** Pergunta**
-----------------------------------------------------------------------
-□ Proteger metadados Qual é a segurança exata, classe de ativos, função de segurança e IG?
-Dependências Que outras salvaguardas ou populações devem existir primeiro?
-Assunções Qual condição aceita afeta a medição?
-Entradas Que dados completos e confiáveis são necessários? □
-- Operações - Que análise deve ser realizada nas entradas?
-Medidas O que conta, listas, datas, configurações ou resultados resultam?
-Como as medidas são calculadas e interpretadas?
-□ Revisão de procedimentos □ Existe um processo documentado e inclui elementos necessários? □
-
-- Define exactamente a segurança e a população.
-
-- Obter entradas necessárias e validar a completude, precisão, tempo, propriedade e confiabilidade da fonte.
-
-- Siga as operações oficiais de medição ou documento de um método equivalente confiável.
-
-- Manter os cálculos das medidas e a população de excepção subjacente — não apenas uma percentagem.
-
-- Avaliar se a Salvaguarda está implementada e se está funcionando bem.
-
-- Atribuir uma correção por falta de cobertura, má configuração, revisão atrasada, exceções, ou dados não confiáveis.
-
-- Reteste usando os mesmos critérios e população atualizada.
-
-- Denunciar escopo, resultado, exceção, limitação, proprietário, ação e data.
-
-# 5. Roteiro de Implementação
-
-* Uma sequência prática de inventários para resiliência testada.*
-
-1. Escolha e documente o Grupo de Implementação inicial e quaisquer adições necessárias.
-
-2. Construir e conciliar as populações principais: ativos, software, dados, contas, sistemas de autenticação, rede, fornecedores, aplicações e logs.
-
-3. Implementar salvaguardas IG1 com proprietários, procedimentos, métricas de cobertura, exceções e evidências.
-
-4. Identidades seguras, configurações, vulnerabilidades, e-mail, navegadores, defesas de malware, backups e monitoramento essencial.
-
-5. Exercite resposta incidente e recuperação antes de uma emergência real.
-
-6. Medir cada salvaguarda aplicável usando entradas confiáveis e operações repetitivas.
-
-7. Corrigir a cobertura incompleta e repetir falhas; verificar correções através do reteste.
-
-8. Expandir para IG2 ou IG3 com base em risco, obrigações, maturidade e exposição à ameaça.
-
-9. Use mapeamentos oficiais para coordenar outros frameworks sem tratar mapeamentos como conformidade automática.
-
-Princípio de implementação:** Um grupo menor de Salvaguardas que é totalmente escopo, operado, medido e melhorado é mais defensável do que uma longa lista marcada completa sem evidência confiável. □
-□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Defina objetivos de negócio, serviços críticos, dados sensíveis, obrigações legais e contratuais, perfil de ameaças, tolerância ao risco e Grupo de Implementação selecionado.
+- Mantenha inventários completos de ativos empresariais, software, dados, contas, sistemas de autenticação, infraestrutura de rede, registros, fornecedores, aplicações e recursos de recuperação.
+- Designe um responsável principal para cada Salvaguarda e responsáveis operacionais para cada plataforma ou processo afetado.
+- Defina escopo, aplicabilidade, dependências, responsabilidades de prestadores de serviços, exceções permitidas, autoridade de aprovação e gatilhos de revisão.
+- Planeje orçamento, pessoas, competências, tecnologia, tempo e gestão de mudanças.
+- Defina métricas e relatórios antes da implementação para tornar visíveis a cobertura e as falhas.
+- Opere um ciclo de governança: priorizar, implementar, medir, corrigir, testar novamente e melhorar.
+
+| Função | Decisão ou responsabilidade |
+|---|---|
+| Patrocinador executivo | Direção, tolerância ao risco, orçamento, escalonamento e responsabilidade final. |
+| Responsável pelo Controle | Desenho da Salvaguarda, escopo, procedimento, medição, exceções e melhoria. |
+| Responsável pelo ativo ou serviço | Inventário preciso, uso aprovado, configuração, impacto de negócio e remediação. |
+| Operações de segurança | Monitoramento, alertas, investigação, resposta e evidências. |
+| TI e engenharia | Implementação, gestão de mudanças, correções, configuração e recuperação. |
+| GRC ou analista | Mapeamento, evidências, medição, achados, acompanhamento de ações e relatórios. |
+| Auditoria interna ou avaliador | Critérios objetivos, testes, limitações e conclusões. |
+| Prestador de serviços | Controles contratados, evidências, incidentes, mudanças e apoio à saída. |
+
+# 4. Medição com a especificação de avaliação do CIS
+
+*Um método repetível para determinar se as Salvaguardas estão implementadas.*
+
+<img src="media/image3.png" style="width:6.15in;height:2.87986in" alt="A especificação oficial avança de entradas definidas para operações, medidas, métricas e revisão de procedimentos." />
+
+Figura 3. Estrutura de medição das Salvaguardas CIS
+
+| Elemento | Pergunta |
+|---|---|
+| Metadados da Salvaguarda | Qual é a Salvaguarda exata, a classe de ativo, a função de segurança e o IG? |
+| Dependências | Quais outras Salvaguardas ou populações devem existir primeiro? |
+| Premissas | Qual condição aceita afeta a medição? |
+| Entradas | Quais dados completos e confiáveis são necessários? |
+| Operações | Qual análise deve ser realizada sobre as entradas? |
+| Medidas | Quais contagens, listas, datas, configurações ou resultados são produzidos? |
+| Métricas | Como as medidas são calculadas e interpretadas? |
+| Revisão de procedimentos | Existe um processo documentado e ele contém os elementos necessários? |
+
+- Defina com precisão a Salvaguarda e a população aplicável.
+- Obtenha as entradas necessárias e valide completude, precisão, atualidade, propriedade e confiabilidade da fonte.
+- Siga as operações oficiais de medição ou documente um método equivalente e confiável.
+- Preserve os cálculos das medidas e a população de exceções subjacente, não apenas uma porcentagem.
+- Avalie se a Salvaguarda está implementada e opera adequadamente.
+- Atribua correções para cobertura ausente, configuração inadequada, revisão atrasada, exceções ou dados não confiáveis.
+- Execute novos testes utilizando os mesmos critérios e a população atualizada.
+- Relate escopo, resultado, exceções, limitações, responsável, ação e data.
+
+# 5. Roteiro de implementação
+
+*Uma sequência prática que começa com inventários e termina com resiliência testada.*
+
+1. Selecione e documente o Grupo de Implementação inicial e os acréscimos necessários.
+2. Construa e concilie as populações principais: ativos, software, dados, contas, sistemas de autenticação, redes, fornecedores, aplicações e registros.
+3. Implemente as Salvaguardas do IG1 com responsáveis, procedimentos, métricas de cobertura, exceções e evidências.
+4. Proteja identidades e configurações; gerencie vulnerabilidades, e-mail, navegadores, defesas contra malware, cópias de segurança e monitoramento essencial.
+5. Exercite resposta a incidentes e recuperação antes de uma emergência real.
+6. Meça cada Salvaguarda aplicável utilizando entradas confiáveis e operações repetíveis.
+7. Corrija cobertura incompleta e falhas recorrentes; confirme as correções por meio de novos testes.
+8. Expanda para IG2 ou IG3 conforme o risco, as obrigações, a maturidade e a exposição a ameaças.
+9. Utilize mapeamentos oficiais para coordenar outras estruturas sem tratar o mapeamento como comprovação automática de conformidade.
+
+**Princípio de implementação:** Um conjunto menor de Salvaguardas, com escopo completo, operação consistente, medição e melhoria contínua, é mais defensável do que uma lista extensa marcada como concluída sem evidências confiáveis.
 
 # 6. Controle 1 — Inventário e controle de ativos empresariais
 

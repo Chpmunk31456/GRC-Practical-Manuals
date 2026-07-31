@@ -10,13 +10,13 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 
 - ANTER corruption: **1**
 - Silencioso token: **12**
-- TEN token: **100**
-- arrow artifact: **10**
+- TEN token: **82**
+- arrow artifact: **8**
 - broken image marker: **1**
-- ellipsis table delimiter: **8**
-- tención token: **69**
-- Missing expected numbered sections: **2**
-  - # 17., # 21.
+- ellipsis table delimiter: **7**
+- tención token: **56**
+- Missing expected numbered sections: **1**
+  - # 21.
 
 ## Findings
 
@@ -24,40 +24,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
 | ANTER corruption | 222 | `![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)` |
-| ellipsis table delimiter | 557 | `\|... \|` |
-| TEN token | 561 | `TEN 11.1 \| Establecer y mantener un proceso de recuperación de datos \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, ` |
-| TEN token | 561 | `TEN 11.1 \| Establecer y mantener un proceso de recuperación de datos \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, ` |
-| tención token | 561 | `TEN 11.1 \| Establecer y mantener un proceso de recuperación de datos \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, ` |
-| TEN token | 562 | `\| 11.2 \| Perform Automated Backups Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar copias de seguridad automatizadas, a continuación, verifique la cobertura y las excepciones. tención C` |
-| tención token | 562 | `\| 11.2 \| Perform Automated Backups Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar copias de seguridad automatizadas, a continuación, verifique la cobertura y las excepciones. tención C` |
-| TEN token | 563 | `\| 11.3 \| para proteger los datos de recuperación Ponga en marcha un proceso repetible, de propiedad o control técnico para proteger los datos de recuperación, a continuación, verifique cobertura y excepciones. tención Co` |
-| tención token | 563 | `\| 11.3 \| para proteger los datos de recuperación Ponga en marcha un proceso repetible, de propiedad o control técnico para proteger los datos de recuperación, a continuación, verifique cobertura y excepciones. tención Co` |
-| TEN token | 564 | `TEN 11.4 \| Establecer y mantener una instalación aislada de datos de recuperación \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una instalación aislada de datos de recuper` |
-| TEN token | 564 | `TEN 11.4 \| Establecer y mantener una instalación aislada de datos de recuperación \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una instalación aislada de datos de recuper` |
-| tención token | 564 | `TEN 11.4 \| Establecer y mantener una instalación aislada de datos de recuperación \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una instalación aislada de datos de recuper` |
-| TEN token | 565 | `TEN 11.5 \| Recuperar Datos de Prueba \| Poner en marcha un proceso repetible, propiedad o control técnico para probar la recuperación de datos, luego verificar cobertura y excepciones. tención Confirme alcance definido, p` |
-| TEN token | 565 | `TEN 11.5 \| Recuperar Datos de Prueba \| Poner en marcha un proceso repetible, propiedad o control técnico para probar la recuperación de datos, luego verificar cobertura y excepciones. tención Confirme alcance definido, p` |
-| tención token | 565 | `TEN 11.5 \| Recuperar Datos de Prueba \| Poner en marcha un proceso repetible, propiedad o control técnico para probar la recuperación de datos, luego verificar cobertura y excepciones. tención Confirme alcance definido, p` |
-| TEN token | 578 | `\| 12.1 \| Garantizar que la infraestructura de red esté actualizada Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar que la infraestructura de red esté actualizada, a continuación, verifi` |
-| tención token | 578 | `\| 12.1 \| Garantizar que la infraestructura de red esté actualizada Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar que la infraestructura de red esté actualizada, a continuación, verifi` |
-| TEN token | 579 | `\| 12.2 \| Establecer y mantener una arquitectura de red segura ← Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una arquitectura de red segura, a continuación, verificar cober` |
-| arrow artifact | 579 | `\| 12.2 \| Establecer y mantener una arquitectura de red segura ← Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una arquitectura de red segura, a continuación, verificar cober` |
-| tención token | 579 | `\| 12.2 \| Establecer y mantener una arquitectura de red segura ← Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una arquitectura de red segura, a continuación, verificar cober` |
-| TEN token | 580 | `\| 12.3 ← Gestión segura de la infraestructura de red Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar de forma segura la infraestructura de red, a continuación, verifique la cobertura y` |
-| arrow artifact | 580 | `\| 12.3 ← Gestión segura de la infraestructura de red Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar de forma segura la infraestructura de red, a continuación, verifique la cobertura y` |
-| tención token | 580 | `\| 12.3 ← Gestión segura de la infraestructura de red Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar de forma segura la infraestructura de red, a continuación, verifique la cobertura y` |
-| TEN token | 581 | `TEN 12.4 \| Establecer y mantener los diagramas de arquitectura \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener los diagramas de arquitectura, a continuación, verificar cober` |
-| TEN token | 581 | `TEN 12.4 \| Establecer y mantener los diagramas de arquitectura \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener los diagramas de arquitectura, a continuación, verificar cober` |
-| tención token | 581 | `TEN 12.4 \| Establecer y mantener los diagramas de arquitectura \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener los diagramas de arquitectura, a continuación, verificar cober` |
-| TEN token | 582 | `\| 12.5 \| Centralizar Autenticación, Autorización y Auditoría de la Red \| Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar la autenticación, Autorización y Auditoría de la Red, a conti` |
-| tención token | 582 | `\| 12.5 \| Centralizar Autenticación, Autorización y Auditoría de la Red \| Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar la autenticación, Autorización y Auditoría de la Red, a conti` |
-| TEN token | 583 | `TEN 12.6 \| Utilizar protocolos de gestión y comunicación de redes seguras Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar protocolos de gestión y comunicación de redes seguras, a contin` |
-| TEN token | 583 | `TEN 12.6 \| Utilizar protocolos de gestión y comunicación de redes seguras Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar protocolos de gestión y comunicación de redes seguras, a contin` |
-| tención token | 583 | `TEN 12.6 \| Utilizar protocolos de gestión y comunicación de redes seguras Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar protocolos de gestión y comunicación de redes seguras, a contin` |
-| TEN token | 584 | `\| 12.7 \| Garantizar dispositivos remotos Utilice una VPN y Enterprise AAA \| Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar dispositivos remotos Use una VPN y Enterprise AAA, a continua` |
-| tención token | 584 | `\| 12.7 \| Garantizar dispositivos remotos Utilice una VPN y Enterprise AAA \| Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar dispositivos remotos Use una VPN y Enterprise AAA, a continua` |
-| TEN token | 585 | `\| 12.8 \| Mantener los recursos de computación dedicados para el trabajo administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para mantener los Recursos de Computación Dedicada para el Traba` |
-| tención token | 585 | `\| 12.8 \| Mantener los recursos de computación dedicados para el trabajo administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para mantener los Recursos de Computación Dedicada para el Traba` |
 | broken image marker | 593 | `■img src="media/image8.png" estilo="width:6.15in;height:3.20094in" alt="Contexto centralizado, detección sintonizada, investigación humana y respuesta crean defensa útil".` |
 | ellipsis table delimiter | 598 | `\|... \|` |
 | TEN token | 602 | `\| 13.1 \| Centralizar Seguridad Evento Alertar \| Ponga en marcha un proceso repetible, de propiedad o control técnico para centralizar la alerta de eventos de seguridad, a continuación, verifique cobertura y excepciones. ` |

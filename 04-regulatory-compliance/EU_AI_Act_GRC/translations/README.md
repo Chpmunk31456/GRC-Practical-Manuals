@@ -1,68 +1,54 @@
-# EU AI Act GRC Manual — Translation Workstream
+# EU AI Act GRC Manual — Spanish and Brazilian Portuguese Editions
 
-**Branch:** `translation/eu-ai-act-es-ptbr`  
+**Status:** Published and validated  
 **Source:** frozen English production edition  
-**Target languages:** Spanish for Latin America (`es-419`) and Brazilian Portuguese (`pt-BR`)
+**Languages:** Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`)  
+**Publication PR:** #35
 
-## Objective
+## Published scope
 
-Produce complete Spanish and Brazilian Portuguese editions from the approved English source while preserving structure, numbering, legal references, tables, controls, evidence, audit tests, appendices, captions, and accessibility meaning.
+Both localized editions contain:
 
-## Mandatory controls
-
-1. Translate only from the canonical English corrected masters on `production/multilingual-grc-editions`.
-2. Preserve Chapters 1–138 and Appendices A–Z in exactly the same order.
-3. Preserve article, annex, recital, date, deadline, role, control, and evidence references unless the English source is formally corrected.
-4. Keep binding duties, organization controls, recommended practices, and optional enhancements clearly distinguished.
-5. Use neutral Latin American Spanish and natural Brazilian Portuguese.
-6. Reconstruct non-English figures with translated text; do not reuse English-language graphics.
-7. Maintain captions, alt text, accessible contrast, non-colour cues, and written explanations.
-8. Run terminology, legal-reference, unresolved-English-fragment, cross-reference, DOCX, PDF, and page-rendering QA separately for each language.
-9. Do not merge into production until both language editions pass their independent release checklists.
+- Chapters 1–138
+- Appendices A–Z
+- controlled Markdown master
+- DOCX edition
+- PDF edition
+- source and build manifests
+- automated QA report
+- PDF metadata
+- SHA-256 checksums
 
 ## Directory structure
 
-- `es-419/source/` — translated Markdown sources
-- `es-419/docx/` — reviewed Word edition
-- `es-419/pdf/` — reviewed PDF edition
-- `pt-BR/source/` — translated Markdown sources
-- `pt-BR/docx/` — reviewed Word edition
-- `pt-BR/pdf/` — reviewed PDF edition
+- `es-419/source/` — Spanish Markdown sources and controlled master
+- `es-419/docx/` — Spanish Word edition
+- `es-419/pdf/` — Spanish PDF edition
+- `pt-BR/source/` — Brazilian Portuguese Markdown sources and controlled master
+- `pt-BR/docx/` — Brazilian Portuguese Word edition
+- `pt-BR/pdf/` — Brazilian Portuguese PDF edition
 - `terminology/` — controlled bilingual glossary
-- `quality/` — translation manifests, QA findings, and sign-off evidence
-- `tools/` — canonical translation, assembly, and QA automation
+- `quality/` — translation manifests, QA evidence, and publication records
+- `tools/` — translation, assembly, and QA automation
 
-## Translation sequence
+## Publication controls completed
 
-1. Front matter and legal disclaimer
-2. Chapters 1–35
-3. Chapters 36–70
-4. Chapters 71–103
-5. Chapters 104–138
-6. Appendices A–Z
-7. Graphics, captions, and alt text
-8. Integrated Markdown assembly
-9. DOCX and PDF production
-10. Page-by-page visual and linguistic QA
-11. Production pull request and publication
+The approved publication process:
 
-## Autonomous publication pipeline
+1. translated from the canonical English corrected masters;
+2. preserved the 138-chapter and 26-appendix structure;
+3. preserved legal references, numbering, controls, evidence, and audit tests;
+4. generated integrated Markdown, DOCX, and PDF editions;
+5. validated localized headings and tables of contents;
+6. validated Figure 12-1 and Portuguese Appendix Q;
+7. ran fail-closed structural and artifact QA;
+8. generated source/build manifests and SHA-256 checksums;
+9. merged the validated packages into `production/multilingual-grc-editions` through PR #35.
 
-The workflow `.github/workflows/build-eu-ai-act-spanish-portuguese.yml` now performs the controlled translation and build sequence without routine owner input:
+## Maintenance rule
 
-1. selects the same 138 canonical chapters and 26 canonical appendices used by the English publication builder;
-2. translates independent shards into `es-419` and `pt-BR` using controlled Marian translation models;
-3. preserves Markdown, URLs, inline code, numbering, article references, and source hashes;
-4. assembles one integrated Markdown master per language;
-5. generates separate DOCX and PDF editions;
-6. renders every PDF page for inspection;
-7. runs fail-closed structural, terminology, unresolved-English, manifest, DOCX, and PDF checks;
-8. records checksums and translation manifests;
-9. commits only successful generated editions back to this branch;
-10. uploads complete publication-candidate packages.
+Future legal or editorial changes must be applied to the controlled English source first, translated into both localized editions, and revalidated through the same structural, linguistic, document-integrity, PDF, and checksum gates before publication.
 
-A failed translation shard or QA gate prevents publication artifacts from being committed.
+## Important notice
 
-## Current state
-
-The controlled glossary, translation requirements, canonical source manifest, translation engine, bilingual assembly process, fail-closed QA, and autonomous GitHub Actions publication workflow are established. The workflow has been triggered from this branch. Neither localized edition may be labeled published until generated source files and artifacts exist and all configured gates pass.
+These editions are educational and operational guidance. They do not constitute legal advice and do not guarantee compliance, certification, audit success, or protection from every AI, privacy, cybersecurity, or operational risk.

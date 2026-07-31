@@ -10,6 +10,25 @@ This project uses version numbers such as:
 
 ---
 
+## [1.3] — 30 July 2026
+
+### Added
+
+- Published the EU AI Act GRC Compliance Manual in Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`).
+- Added controlled Markdown masters, DOCX editions, PDF editions, manifests, automated QA reports, PDF metadata, and SHA-256 checksums for both localized editions.
+- Added complete localized source sets covering Chapters 1–138 and Appendices A–Z.
+
+### Validated
+
+- Confirmed structural counts, localized chapter and appendix headings, tables of contents, Figure 12-1, Portuguese Appendix Q, automated QA results, and checksum integrity.
+- Merged the validated localized publication packages through pull request #35 into `production/multilingual-grc-editions`.
+
+### Changed
+
+- Updated the root catalog, regulatory-compliance index, EU AI Act manual status, and translation workstream documentation to reflect the published multilingual state.
+
+---
+
 ## [Unreleased]
 
 ### Changed
@@ -34,8 +53,6 @@ Planned or in-progress improvements may include:
 - Updated framework guidance
 - Regulatory updates
 - Accessibility improvements
-- Spanish editions
-- Brazilian Portuguese editions
 - New diagrams and practical examples
 - Link corrections
 - Formatting improvements

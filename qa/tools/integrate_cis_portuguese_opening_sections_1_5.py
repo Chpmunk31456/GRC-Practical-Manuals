@@ -27,9 +27,18 @@ for marker in ['media/image1.png', 'media/image2.png', 'media/image3.png']:
     if opening.count(marker) != 1:
         raise SystemExit(f'Expected exactly one image reference: {marker}')
 
-for token in ['□', '■img', '# # ', 'No interior:**', '*Conteúdo:**']:
+literal_forbidden = ['□', '■img', '# # ']
+for token in literal_forbidden:
     if token in opening:
         raise SystemExit(f'Forbidden opening corruption token remains: {token}')
+
+malformed_lines = [
+    re.compile(r'^No interior:\*\*', re.MULTILINE | re.IGNORECASE),
+    re.compile(r'^\*Conteúdo:\*\*', re.MULTILINE | re.IGNORECASE),
+]
+for pattern in malformed_lines:
+    if pattern.search(opening):
+        raise SystemExit(f'Forbidden malformed opening line remains: {pattern.pattern}')
 
 if len(boundary.findall(new_text)) != 1:
     raise SystemExit('Control 1 boundary was not preserved exactly once')

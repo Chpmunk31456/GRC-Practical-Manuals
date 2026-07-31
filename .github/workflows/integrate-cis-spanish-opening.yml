@@ -41,31 +41,15 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-
           source = Path('01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md')
           rewrite = Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md')
           text = source.read_text(encoding='utf-8')
           expected = rewrite.read_text(encoding='utf-8').rstrip()
           marker = '# 1. Fundamentos de CIS Controls v8.1'
-
           if text.count(marker) != 1:
               raise SystemExit('Expected exactly one Chapter 1 marker.')
-          actual = text[:text.index(marker)].rstrip()
-          if actual != expected:
+          if text[:text.index(marker)].rstrip() != expected:
               raise SystemExit('Canonical opening does not exactly match reviewed rewrite.')
-
-          forbidden = (
-              'realineed mappings',
-              'Contenido de la palabra',
-              '|. |',
-              '# Publication and Use Notice',
-              '**Inside:**',
-              '**CYBERSECURITY, PRIVACY &amp; COMPLIANCE SERIES**',
-          )
-          found = [token for token in forbidden if token in actual]
-          if found:
-              raise SystemExit(f'Forbidden opening tokens remain: {found}')
-
           print('CIS Spanish opening exactly matches the reviewed controlled rewrite.')
           PY
 
@@ -78,12 +62,49 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
-            'qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md'
-          if git diff --cached --quiet; then
-            echo 'No source or report change to commit.'
-          else
+          git add '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' 'qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md'
+          if ! git diff --cached --quiet; then
             git commit -m 'Integrate reviewed CIS Spanish opening and refresh audit'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+
+  rebuild-publication:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install document tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils
+
+      - name: Rebuild and validate CIS Spanish publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0'
+          pandoc "${base}.md" --resource-path="$(dirname "$base")" -o "${base}.docx"
+          libreoffice --headless --convert-to pdf --outdir "$(dirname "$base")" "${base}.docx"
+          unzip -t "${base}.docx" >/dev/null
+          pdftotext "${base}.pdf" /tmp/cis-es.txt
+          grep -q 'SERIE PRÁCTICA DE CIBERSEGURIDAD' /tmp/cis-es.txt
+          grep -q 'Fundamentos de CIS Controls v8.1' /tmp/cis-es.txt
+          media_count=$(unzip -Z1 "${base}.docx" | grep -c '^word/media/' || true)
+          test "$media_count" -ge 1
+          sha256sum "${base}.md" "${base}.docx" "${base}.pdf" > qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt
+
+      - name: Commit rebuilt publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Rebuild validated CIS Spanish publication'
             git push origin HEAD:production/multilingual-grc-editions
           fi

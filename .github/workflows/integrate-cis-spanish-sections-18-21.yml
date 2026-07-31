@@ -1,0 +1,49 @@
+name: Integrate CIS Spanish Sections 18-21
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - 'qa/requests/INTEGRATE_CIS_SPANISH_SECTIONS_18_21.md'
+      - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_SECTIONS_18_21_REVIEWED.md'
+      - 'qa/tools/integrate_cis_spanish_sections_18_21.py'
+      - '.github/workflows/integrate-cis-spanish-sections-18-21.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Integrate reviewed Sections 18 through 21
+        run: python3 qa/tools/integrate_cis_spanish_sections_18_21.py
+
+      - name: Refresh full-manual audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_cis_spanish_full_manual.py
+
+      - name: Commit controlled integration
+        run: |
+          git add \
+            01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md \
+            qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md
+          if git diff --cached --quiet; then
+            echo "No integration changes to commit"
+            exit 0
+          fi
+          git commit -m "Integrate reviewed CIS Spanish Sections 18 through 21"
+          git push origin production/multilingual-grc-editions

@@ -4,26 +4,18 @@ Target: `01-foundations/CIS_Controls_v8.1/English_Source_CIS_Critical_Security_C
 
 ## Result
 
-**REVIEW REQUIRED**
+**PASS**
 
 ## Summary
 
-- malformed Word contents label: **1**
+- No configured structural or placeholder markers found.
 - Missing expected numbered sections: **0**
 - Sections not appearing exactly once: **0**
-- Missing required framework facts: **3**
+- Missing required framework facts: **0**
 
 ## Findings
 
-| Category | Line | Excerpt |
-|---|---:|---|
-| malformed Word contents label | 50 | `\| **True Word contents:** This document contains a native Word table-of-contents field. The chapter guide will contain verified page numbers for this edition. After editing, right-click the contents and choose Update Fie` |
-
-### Missing required framework facts
-
-- IG1 count 56
-- IG2 additional count 74
-- IG3 total 153
+No configured findings.
 
 ## Review boundary
 

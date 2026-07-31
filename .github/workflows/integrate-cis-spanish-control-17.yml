@@ -2,6 +2,11 @@ name: Integrate reviewed CIS Spanish Control 17
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - 'qa/requests/integrate-cis-spanish-control-17.request'
 
 permissions:
   contents: write

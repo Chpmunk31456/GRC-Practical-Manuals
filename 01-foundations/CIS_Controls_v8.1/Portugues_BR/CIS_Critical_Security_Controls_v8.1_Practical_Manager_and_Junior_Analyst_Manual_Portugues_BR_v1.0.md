@@ -569,240 +569,180 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios 
 
 Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios de avaliação.
 
-# 24. Ferramentas de Código Aberto
+# 24. Ferramentas de código aberto
 
-* Links oficiais, inícios rápidos seguros, evidências e limitações.*
+*Links oficiais, inícios seguros, evidências e limitações.*
 
-• **Ferramenta ** **Purpose ** **Controles Possíveis**
-----------------------------------------------------
-CIS Controls Navigator Seleccionar IGs e explorar mapeamentos oficiais
-CIS Controls Assessment Specification (Official Measurement Guideline)
-CIS-CAT Lite . Avaliação do valor de referência
-□ CISO Assistant □ Controles, riscos, evidências e achados
-* Wazuh * Monitoramento de endpoints, SIEM, FIM e alertas * 1, 4, 8, 10, 13, 17
-* Osquery * Activo, software, conta e consultas de configuração * 1, 2, 4, 5, 8 *
-• Avaliação de configuração segura do OpenSCAP
-* Lynis * Auditoria de segurança Linux * 4, 7 *
-O Nmap O activo autorizado e a descoberta do serviço
-Edição da Comunidade Greenbone
-Repositórios, imagens, dependências, segredos e IaC
-OWASP ZAP □ Testes de segurança da web autorizados
-□ Suricata □ Detecção de intrusão de rede e visibilidade de tráfego
-Keycloak, identidade, papéis, MFA, sessões e eventos
-* DefectDojo * Encontrando ingestão, deduplicação, remediação e reteste
-* Velociraptor * Visibilidade e resposta de incidentes * 1, 8, 13, 17 *
+| Ferramenta | Finalidade | Controles que pode apoiar |
+|---|---|---|
+| CIS Controls Navigator | Selecionar Grupos de Implementação e consultar mapeamentos oficiais. | Todos |
+| CIS Controls Assessment Specification | Aplicar a orientação oficial de medição. | Todos |
+| CIS-CAT Lite | Avaliar configurações de benchmarks CIS disponíveis. | 4, 7 |
+| CISO Assistant | Gerenciar controles, riscos, evidências e achados. | Todos |
+| Wazuh | Monitoramento de endpoints, SIEM, FIM e alertas. | 1, 4, 8, 10, 13, 17 |
+| osquery | Consultar ativos, software, contas e configurações. | 1, 2, 4, 5, 8 |
+| OpenSCAP | Avaliar configurações seguras em Linux. | 4, 7 |
+| Lynis | Auditar segurança de sistemas Linux. | 4, 7 |
+| Nmap | Descobrir ativos e serviços autorizados. | 1, 2, 12 |
+| Greenbone Community Edition | Avaliar vulnerabilidades. | 7 |
+| Trivy | Analisar repositórios, imagens, dependências, segredos e IaC. | 2, 7, 16 |
+| OWASP ZAP | Testar aplicações web autorizadas. | 16, 18 |
+| Suricata | Detectar intrusões e observar tráfego de rede. | 13 |
+| Keycloak | Gerenciar identidade, funções, MFA, sessões e eventos. | 5, 6, 8 |
+| DefectDojo | Gerenciar achados, deduplicação, correção e reteste. | 7, 16, 18 |
+| Velociraptor | Obter visibilidade de endpoints e apoiar resposta a incidentes. | 1, 8, 13, 17 |
 
-Limitação crítica: ** Uma ferramenta pode suportar uma ou mais Salvaguardas, mas não pode escolher o GI da organização, definir tolerância ao risco, garantir cobertura completa, substituir procedimento e revisão humana, autorizar testes de penetração ou provar a conformidade de outro framework por si só. □
-□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Limitação crítica:** Uma ferramenta pode apoiar Salvaguardas, mas não escolhe o Grupo de Implementação, não define tolerância ao risco, não garante cobertura completa, não substitui procedimentos ou revisão humana e não comprova conformidade por si só.
 
-# # 24,1 CIS Controla Navegador
+## 24.1 CIS Controls Navigator
 
-Objetivo: Selecione IGs e explore mapeamentos oficiais. Projeto oficial: [<u>CIS Controls Navigator</u>](https://www.cisecurity.org/controls/cis-controls-navigator)
+Projeto oficial: https://www.cisecurity.org/controls/cis-controls-navigator
 
-Início rápido seguro: Escolha v8.1, selecione um Grupo de Implementação e mapeamento, reveja Salvaguardas e, em seguida, exporte a seleção autorizada.
+Use a versão 8.1, selecione o Grupo de Implementação e os mapeamentos necessários e preserve a configuração exportada como evidência.
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+## 24.2 CIS Controls Assessment Specification
 
-# # 24.2 CIS Especificação de Avaliação de Controles
+Documentação oficial: https://cas.docs.cisecurity.org/en/latest/
 
-Objetivo: Orientação oficial de medição. Projecto oficial: [<u>CIS Controls Assessment Specification</u>](https://cas.docs.cisecurity.org/en/latest/)
+Identifique entradas, premissas, operações, medidas, métricas e revisão de procedimentos para cada Salvaguarda avaliada.
 
-Início rápido seguro: Abra uma Salvaguarda, identifique inputs e suposições, siga operações, calcule medidas e revisão do procedimento do documento.
+## 24.3 CIS-CAT Lite
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Projeto oficial: https://learn.cisecurity.org/cis-cat-lite
 
-# # 24,3 CIS-CAT Lite
+Execute somente em sistemas autorizados, preserve o relatório, valide achados, corrija e reavalie.
 
-Objetivo: CIS selecionado Avaliação comparativa. Projecto oficial: [<u>CIS-CAT Lite</u>](https://learn.cisecurity.org/cis-cat-lite)
+## 24.4 CISO Assistant
 
-Início rápido seguro: Execute apenas em sistemas autorizados, escolha um benchmark e perfil disponíveis, preserve o relatório, valide as descobertas, corrija e reavalie.
+Projeto oficial: https://intuitem.github.io/ciso-assistant-community/
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Crie um projeto com escopo definido, atribua responsáveis, anexe evidências e acompanhe achados e ações.
 
-# # 24.4 Assistente CISO
+## 24.5 Wazuh
 
-Objetivo: Controles, riscos, evidências e achados. Projeto oficial: [<u>CISO Assistant</u>](https://intuitem.github.io/ciso-assistant-community/)
+Projeto oficial: https://wazuh.com/
 
-Início rápido seguro: Crie um projeto abrangente, carregue um framework aplicável, atribua proprietários, anexe evidências, rastreie descobertas e reveja permissões.
+Inscreva endpoints autorizados, gere eventos seguros de teste, confirme coleta e alertas e preserve evidências de cobertura e resposta.
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+## 24.6 osquery
 
-# 24.5 Wazuh
+Projeto oficial: https://www.osquery.io/
 
-Objetivo: Monitoramento de pontos finais, SIEM, MIF e alertas. Projecto oficial: [<u>Wazuh</u>](https://wazuh.com/)
+Execute consultas somente leitura em laboratório ou ambiente autorizado e compare resultados com inventários aprovados.
 
-Início rápido e seguro: Inscreva-se em um endpoint de laboratório, desencadeie um evento seguro, confirme coleta e alerta, investigue e mantenha evidências de cobertura e resposta.
+## 24.7 OpenSCAP
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Projeto oficial: https://www.open-scap.org/
 
-# # 24.6 Osquery
-
-Finalidade: Asset, software, conta e consultas de configuração. Projeto oficial: [<u>osquery</u>](https://www.osquery.io/)
-
-Início rápido seguro: Execute consultas somente leitura em um laboratório, agendar consultas aprovadas, comparar resultados com inventários, plataforma de documentos e limites de cobertura.
-
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
-
-# # 24.7 OpenSCAP
-
-Objetivo: Avaliação da configuração segura do Linux. Projeto oficial: [<u>OpenSCAP</u>](https://www.open-scap.org/)
-
-Início rápido seguro: Escolha um perfil apropriado, verifique um sistema de laboratório, valide resultados, exceções de documentos, corrija e reescane.
-
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Selecione um perfil apropriado, avalie sistemas autorizados, valide resultados, documente exceções e repita a avaliação.
 
 ## 24.8 Lynis
 
-Objetivo: Auditoria de segurança Linux. Projeto oficial: [<u>Lynis</u>](https://cisofy.com/lynis/)
+Projeto oficial: https://cisofy.com/lynis/
 
-Início rápido seguro: Audite um host de laboratório, reveja os resultados contra o escopo e os padrões, atribua ações, corrija itens selecionados e reexecute.
+Audite hosts autorizados, compare os resultados com padrões aprovados e documente correções e novos testes.
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+## 24.9 Nmap
 
-# # 24.9 Nmap
+Projeto oficial: https://nmap.org/
 
-Finalidade: Activo autorizado e descoberta de serviços. Projeto oficial: [<u>Nmap</u>](https://nmap.org/)
+Utilize varreduras limitadas a intervalos autorizados por escrito e preserve escopo, comandos, resultados e conciliação.
 
-Início rápido seguro: Use uma varredura limitada em intervalos escritos-autorizados, compare com inventário, investigue serviços desconhecidos e mantenha o escopo e evidência de comando.
+## 24.10 Greenbone Community Edition
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Projeto oficial: https://greenbone.github.io/docs/latest/
 
-# # 24.10 Greenbone Community Edition
+Atualize feeds, utilize alvos autorizados, valide cobertura, corrija achados e execute nova varredura.
 
-Objetivo: Avaliação da vulnerabilidade. Projeto oficial: [<u>Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)
+## 24.11 Trivy
 
-Início rápido e seguro: Atualizar feeds, usar metas e credenciais autorizadas, validar cobertura de ativos, revisar descobertas, corrigir e reescapar.
+Projeto oficial: https://trivy.dev/
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Analise repositórios ou imagens autorizados, valide achados, documente exceções e repita a análise após correções.
 
-# # 24.11 Trivy
+## 24.12 OWASP ZAP
 
-Objetivo: Repositórios, imagens, dependências, segredos e IAC. Projeto oficial: [<u>Trivy</u>](https://trivy.dev/)
+Projeto oficial: https://www.zaproxy.org/
 
-Início rápido e seguro: Analise um repositório de testes ou imagem, valide achados, confira exceções justificadas por documentos e reescane na tubulação.
+Utilize aplicações de treinamento ou aplicações autorizadas; execute testes ativos somente com aprovação explícita.
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+## 24.13 Suricata
 
-# # 24.12 OWASP ZAP
+Projeto oficial: https://suricata.io/
 
-Objetivo: Testes de segurança da web autorizados. Projecto oficial: [<u>OWASP ZAP</u>](https://www.zaproxy.org/)
+Use sensores autorizados, valide interfaces e regras, gere tráfego de teste aprovado e ajuste alertas com controle de mudanças.
 
-Início rápido seguro: Proxy uma aplicação de treinamento, rasteje passivamente, use a varredura ativa apenas com aprovação, valide achados, correto e reteste.
+## 24.14 Keycloak
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Projeto oficial: https://www.keycloak.org/
 
-# # 24.13 Suricata
+Configure um ambiente de laboratório, funções, MFA e eventos e teste cenários de entrada, mudança e saída de usuários.
 
-Objetivo: Detecção de intrusão de rede e visibilidade do tráfego. Projeto oficial: [<u>Suricata</u>](https://suricata.io/)
+## 24.15 DefectDojo
 
-Início rápido seguro: Use um sensor de laboratório, confirme interface e regras, gere tráfego de teste aprovado, valide alertas, afinar cuidadosamente e preservar o histórico de alterações.
+Projeto oficial: https://www.defectdojo.org/
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Importe resultados autorizados, valide deduplicação, atribua responsáveis e encerre achados somente após reteste confirmado.
 
-# # 24.14 Keycloak
+## 24.16 Velociraptor
 
-Objetivo: Identidade, papéis, MFA, sessões e eventos. Projeto oficial: [<u>Keycloak</u>](https://www.keycloak.org/)
+Projeto oficial: https://docs.velociraptor.app/
 
-Início rápido e seguro: Crie um reino de laboratório, papéis e MFA, teste casos de joiner-mover-leaver, reveja eventos e configuração de documentos e resultados.
+Utilize apenas ambientes autorizados, limite a coleta ao necessário e proteja os dados obtidos.
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+# 25. Guia dos CIS Controls para gestores
 
-# # 24.15 DefectDojo
+*Perguntas, indicadores, responsabilidades e decisões que gestores devem controlar.*
 
-Objetivo: Encontrar ingestão, deduplicação, remediação e reteste. Projeto oficial: [<u>DefectDojo</u>](https://www.defectdojo.org/)
+1. O Grupo de Implementação selecionado continua adequado ao risco, aos dados, aos serviços e às obrigações?
+2. Os inventários essenciais são completos, atuais, atribuídos e conciliados?
+3. Quais Salvaguardas apresentam cobertura incompleta, revisão atrasada ou dados não confiáveis?
+4. A exposição de acessos privilegiados, ativos externos, software sem suporte e falhas de recuperação aumentou?
+5. Alertas resultam em investigação e resposta ou apenas em volume de painel?
+6. Responsabilidades de prestadores, incidentes, subcontratados e saída estão claras?
+7. Testes e exercícios são autorizados, adequadamente definidos e acompanhados até o reteste?
+8. Quais decisões de orçamento, pessoal ou prioridade bloqueiam a correção?
 
-Início rápido seguro: Importar resultados seguros, validar deduplicação, atribuir proprietários e datas, anexar prova e fechar apenas após o reteste verificado.
+| Área | Pergunta de gestão | Estado sugerido |
+|---|---|---|
+| Grupo e escopo | Priorização, acréscimos, exclusões e obrigações estão documentados? | Verde, amarelo ou vermelho |
+| Inventários | Ativos, software, dados, contas, fornecedores, aplicações e registros estão completos? | Verde, amarelo ou vermelho |
+| Proteção | Configuração, acesso, correções, e-mail, malware e proteção de dados funcionam? | Verde, amarelo ou vermelho |
+| Detecção | Cobertura de registros e rede é suficiente e alertas são analisados? | Verde, amarelo ou vermelho |
+| Recuperação | Backups estão protegidos e restaurações são testadas? | Verde, amarelo ou vermelho |
+| Resposta | Papéis, contatos, limiares, exercícios e revisões estão atualizados? | Verde, amarelo ou vermelho |
+| Medição | Entradas são confiáveis e exceções são corrigidas? | Verde, amarelo ou vermelho |
+| Garantia | Testes, limitações, resultados e retestes são defensáveis? | Verde, amarelo ou vermelho |
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+# 26. Guia profissional para analistas juniores
 
-# # 24.16 Velociraptor
+*Uma rota prática para funções de controles, vulnerabilidades, garantia, GRC e operações de segurança.*
 
-Objetivo: Visibilidade do ponto final e resposta ao incidente. Projecto oficial: [<u>Velociraptor</u>](https://docs.velociraptor.app/)
+<img src="media/image10.png" style="width:6.15in;height:3.39605in" alt="Aprender a estrutura, mapear Salvaguardas, medir evidências, relatar lacunas e construir um portfólio honesto." />
 
-Início rápido seguro: Implantar apenas em um laboratório autorizado isolado, coletar um artefato estreito, escopo de documentos e acesso, investigar resultados e remover dados do laboratório com segurança.
+Figura 10. Caminho profissional para analistas juniores de CIS Controls
 
-Evidências: escopo aprovado, versão, configuração, cobertura, dados fonte, resultados, revisão humana, exceção, remediação e reteste. Proteger o acesso administrativo e dados recolhidos.
+Funções comuns incluem analista júnior de controles de segurança, analista de GRC, analista de gestão de vulnerabilidades, analista de garantia de segurança, analista de operações de segurança, analista de conformidade de TI, analista de risco de terceiros e analista de programa de cibersegurança.
 
-# 25. Manual dos Controles CIS para gerentes
+## 26.1 Trabalho júnior típico
 
-*Perguntas, painel, propriedade e decisões os gerentes devem controlar.*
+- Manter inventários de ativos, software, dados, contas, redes, fornecedores, aplicações, achados e evidências.
+- Coletar evidências sem alterar registros de origem e validar a completude da população.
+- Relacionar Salvaguardas a responsáveis, sistemas, procedimentos, configurações, métricas, exceções e ações.
+- Executar ferramentas autorizadas sob procedimentos aprovados.
+- Calcular métricas de cobertura e exceção utilizando a estrutura oficial de avaliação.
+- Acompanhar achados até a correção e o reteste.
+- Escrever conclusões claras sem exceder o suporte das evidências.
 
-1. O GI escolhido ainda é adequado para dados sensíveis, serviços críticos, exposição à ameaça, obrigações, escala e habilidades?
-
-2. As populações centrais são completas, atuais, possuídas e reconciliadas com a descoberta independente?
-
-3. Quais salvaguardas IG1 têm cobertura incompleta, revisão atrasada, dados de entrada não confiáveis, ou repetidas exceções?
-
-4. O acesso administrativo, sistemas expostos externamente, software não suportado, vulnerabilidades críticas e falhas de recuperação aumentaram?
-
-5. Os alertas resultam em investigação e resposta, ou apenas no volume do painel?
-
-6. As responsabilidades dos prestadores de serviços, as provas, as obrigações em matéria de incidentes, os subcontratantes e os planos de saída estão entendidos?
-
-7. Os testes de penetração e os exercícios são autorizados de forma segura, adequadamente explorados, realizados independentemente quando necessário, e seguidos através do reteste?
-
-8. Que financiamento, pessoal, tempo de engenharia, ou decisão de negócios está bloqueando correção?
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ GI e escopo □ Priorização, adições, exclusões e obrigações estão documentadas? Verde / Amarelo / Vermelho
-□ Inventários □ Os ativos, software, dados, contas, fornecedores, aplicativos e logs estão completos? Verde / Amarelo / Vermelho
-□ Proteção □ A configuração, o acesso, o patching, o email, o malware e os controles de dados estão funcionando? Verde / Amarelo / Vermelho
-□ Detecção □ A cobertura de log e rede é completa e os alertas são revistos? Verde / Amarelo / Vermelho
-Recuperação , são protegidos backups e restaurações testados contra as necessidades dos negócios? Verde / Amarelo / Vermelho
-□ Resposta □ São atuais os papéis, contatos, limiares, exercícios e revisões? Verde / Amarelo / Vermelho
-□ Medição □ Os insumos são confiáveis e as populações de exceção corrigidas? Verde / Amarelo / Vermelho
-Assegura-te que os testes, as limitações, os resultados e os retestes são suportáveis? Verde / Amarelo / Vermelho
-
-# 26. Guia de Carreira do Analista Júnior
-
-*Uma rota prática para controles, vulnerabilidade, garantia, GRC, e operações de segurança funcionam.*
-
-![Learn the framework, map Safeguards, measure evidence, report gaps, and build an honest portfolio.](media/image10.png)
-
-Figura 10. CIS Júnior Controla o caminho do analista
-
-Analista de Controles de Segurança Júnior
-
-GRC Analisador
-
-Analista de Gestão de Vulnerabilidade
-
-Analista de Garantia de Segurança
-
-Analista de Operações de Segurança
-
-Analisador de conformidade de TI
-
-Analista de Riscos de Terceiros
-
-Analista do Programa de Cibersegurança
-
-# # 26.1 Típico trabalho júnior
-
-- Manter inventários de ativos, software, dados, contas, sistemas de rede, fornecedores, aplicações, descobertas e evidências.
-
-- Recolher provas sem alterar os registos de origem e validar a completude da população.
-
-- Mapa Salvaguardas para proprietários, sistemas, procedimentos, configuração, evidências, métricas, exceções e ações.
-
-- Execute ferramentas autorizadas de descoberta, configuração, vulnerabilidade, registro ou segurança de aplicativos sob procedimentos aprovados.
-
-- Calcular as métricas de cobertura e exceção utilizando a estrutura oficial de avaliação.
-
-- Rastreie software não suportado, ativos não autorizados, problemas de acesso, vulnerabilidades, backups falhados, falhas de alerta e descobertas do fornecedor através do reteste.
-
-- Escreva conclusões claras sem reivindicar autoridade ou certeza além das provas.
-
-Competência** Comprovação de Portfólio**
-----------------------------------------------------------------------------------------------------------------------------
-□ Framework □ Explique os 18 Controles, IGs, classes de ativos e funções
-Inventário Reconcile duas fontes independentes e explique diferenças
-□ Medição □ Mostrar entradas, operações, medidas, métrica, lista de exceções e conclusão □
-□ Alfabetização técnica □ Configuração de intérpretes, identidade, digitalização, log, recuperação e evidência de aplicativos
-• Remediação • Rastrear o dono, data de vencimento, correção e reteste verificado
-• Comunicação – Escreva um resumo do gestor de uma página e um documento de trabalho detalhado
-Ético Use dados sintéticos, autorização, limites de escopo e alegações honestas
+| Competência | Evidência de portfólio |
+|---|---|
+| Estrutura | Explicar os 18 Controles, Grupos de Implementação, classes de ativos e funções. |
+| Inventário | Conciliar duas fontes independentes e explicar diferenças. |
+| Medição | Demonstrar entradas, operações, medidas, métrica, exceções e conclusão. |
+| Alfabetização técnica | Interpretar configuração, identidade, varredura, registros, recuperação e evidências de aplicação. |
+| Correção | Acompanhar responsável, prazo, correção e reteste verificado. |
+| Comunicação | Produzir resumo executivo e papel de trabalho detalhado. |
+| Ética | Utilizar dados sintéticos, autorização, limites de escopo e alegações honestas. |
 
 # 27. Laboratório Fictício e Portfólio
 

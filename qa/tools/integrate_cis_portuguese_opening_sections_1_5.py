@@ -13,12 +13,15 @@ matches = list(boundary.finditer(text))
 if len(matches) != 1:
     raise SystemExit(f'Expected exactly one Control 1 boundary; found {len(matches)}')
 
-new_text = replacement + text[matches[0].start():]
-opening = new_text[:new_text.index(text[matches[0].start():])]
+preserved_boundary = text[matches[0].start():]
+new_text = replacement + preserved_boundary
+opening = replacement
 
-for marker in ['# 1.', '# 2.', '# 3.', '# 4.', '# 5.']:
-    if opening.count(marker) != 1:
-        raise SystemExit(f'Expected exactly one opening marker: {marker}')
+for section in range(1, 6):
+    heading = re.compile(rf'^#\s+{section}\.\s+.+$', re.MULTILINE)
+    found = heading.findall(opening)
+    if len(found) != 1:
+        raise SystemExit(f'Expected exactly one level-one heading for Section {section}; found {len(found)}')
 
 for marker in ['media/image1.png', 'media/image2.png', 'media/image3.png']:
     if opening.count(marker) != 1:
@@ -28,7 +31,7 @@ for token in ['□', '■img', '# # ', 'No interior:**', '*Conteúdo:**']:
     if token in opening:
         raise SystemExit(f'Forbidden opening corruption token remains: {token}')
 
-if new_text.count('# 6. Controle 1') != 1:
+if len(boundary.findall(new_text)) != 1:
     raise SystemExit('Control 1 boundary was not preserved exactly once')
 
 TARGET.write_text(new_text, encoding='utf-8')

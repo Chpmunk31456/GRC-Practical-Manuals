@@ -1,4 +1,4 @@
-name: Correct and audit CIS English master
+name: Audit NIST CSF 2.0 English master baseline
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: cis-english-controlled-review
+  group: nist-csf-english-controlled-review
   cancel-in-progress: false
 
 jobs:
-  correct-and-audit:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch
@@ -25,29 +25,21 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Correct Word table-of-contents label
-        run: python3 qa/tools/correct_cis_english_word_toc_label.py
+      - name: Run NIST CSF English master baseline audit
+        run: python3 qa/tools/audit_nist_csf_2_english_master.py
 
-      - name: Run English master baseline audit
-        run: python3 qa/tools/audit_cis_english_master.py
-
-      - name: Require baseline PASS
-        run: grep -q '^\*\*PASS\*\*$' qa/CIS_CONTROLS_V8_1_ENGLISH_MASTER_AUDIT.md
-
-      - name: Commit bounded correction and audit
+      - name: Commit audit report
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            01-foundations/CIS_Controls_v8.1/English_Source_CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md \
-            qa/CIS_CONTROLS_V8_1_ENGLISH_MASTER_AUDIT.md
+          git add qa/NIST_CSF_2_ENGLISH_MASTER_AUDIT.md
           if git diff --cached --quiet; then
-            echo 'No bounded correction changes to commit.'
+            echo 'No audit report changes to commit.'
             exit 0
           fi
-          git commit -m 'Correct and audit CIS English master baseline'
+          git commit -m 'Audit NIST CSF 2.0 English master baseline'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

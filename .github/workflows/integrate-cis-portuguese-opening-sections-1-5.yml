@@ -1,4 +1,4 @@
-name: Audit HIPAA English master baseline
+name: Audit PCI DSS v4.0.1 English master baseline
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: hipaa-english-controlled-review
+  group: pci-dss-4-0-1-english-controlled-review
   cancel-in-progress: false
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Run HIPAA English master baseline audit
-        run: python3 qa/tools/audit_hipaa_english_master.py
+      - name: Run PCI DSS English master baseline audit
+        run: python3 qa/tools/audit_pci_dss_4_0_1_english_master.py
 
       - name: Commit audit report
         shell: bash
@@ -34,12 +34,12 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add qa/HIPAA_ENGLISH_MASTER_AUDIT.md
+          git add qa/PCI_DSS_V4_0_1_ENGLISH_MASTER_AUDIT.md
           if git diff --cached --quiet; then
             echo 'No audit report changes to commit.'
             exit 0
           fi
-          git commit -m 'Audit HIPAA English master baseline'
+          git commit -m 'Audit PCI DSS v4.0.1 English master baseline'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

@@ -8,6 +8,11 @@ on:
     paths:
       - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
       - '.github/workflows/integrate-cis-portuguese-opening-sections-1-5.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
 
 permissions:
   contents: write

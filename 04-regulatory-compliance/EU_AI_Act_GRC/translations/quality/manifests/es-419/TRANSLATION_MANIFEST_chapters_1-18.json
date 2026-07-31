@@ -1,0 +1,188 @@
+{
+  "language": "es-419",
+  "target": "Spanish (Latin America)",
+  "model": "Helsinki-NLP/opus-mt-en-es",
+  "items": "chapters:1-18",
+  "records": [
+    {
+      "item": "Chapter 1",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/01_Understanding_the_EU_AI_Act_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/01_Understanding_the_EU_AI_Act_CORRECTED_MASTER.md",
+      "source_sha256": "fadc351c13d5dbd999532b20d5f296bc2121647b2d6da605c58f50b890c727a0",
+      "output_sha256": "99cf63a96d6b3912040adbd35c8836bf049f28d406b7eff1fb71068bfcca3086",
+      "source_bytes": 7325,
+      "output_bytes": 8888,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 2",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/02_Scope_Purpose_and_Regulatory_Approach_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/02_Scope_Purpose_and_Regulatory_Approach_CORRECTED_MASTER.md",
+      "source_sha256": "e10233e3173c572e5d92a98381e2d20852bbc1412188bfc572e71ffc7e5160e7",
+      "output_sha256": "e6d44055b61ca3aeab368a71d1369138678b4c483ae90a9fda5a02960d8822e0",
+      "source_bytes": 4131,
+      "output_bytes": 4736,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 3",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/03_Territorial_and_Extraterritorial_Applicability_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/03_Territorial_and_Extraterritorial_Applicability_CORRECTED_MASTER.md",
+      "source_sha256": "aafaa35fbfb7e69d8daf45f2fa72c14290a6ab8ee6b9835eccb7d3011909688b",
+      "output_sha256": "0d987dcfac85186c42fe04003096de367f77d1f92dfa0dc4878c420478573ee7",
+      "source_bytes": 2543,
+      "output_bytes": 2922,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 4",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/04_Key_Definitions_in_Plain_English_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/04_Key_Definitions_in_Plain_English_CORRECTED_MASTER.md",
+      "source_sha256": "a53142740f87518538f2375d6f6d1b06be653c7b102c3311024cc551e4850892",
+      "output_sha256": "10fbd70a92771f9c6b1380b1162e14dad5881495afeceeef2a8826b391d0711e",
+      "source_bytes": 4238,
+      "output_bytes": 4773,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 5",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/05_Regulatory_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/05_Regulatory_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "source_sha256": "5a36aabcac6160feca4c5a10a99cf789a523b66c56a9185e72e378354f1751d1",
+      "output_sha256": "b00cca53845fcc7ed020021d6171cf60910e723ebf7b39194e9d53968c783438",
+      "source_bytes": 2936,
+      "output_bytes": 3429,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 6",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
+      "source_sha256": "01463ca6ac6ef5816ecc8035db85f51dda62d1cf3658e7a37e98f7124938db59",
+      "output_sha256": "1337239a44b3aef3b863c19adb65528bc22fb70a26ad97ac6da8abc59e74277f",
+      "source_bytes": 6873,
+      "output_bytes": 8470,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 7",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/07_Relationship_to_Other_EU_Laws_and_Frameworks_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/07_Relationship_to_Other_EU_Laws_and_Frameworks_CORRECTED_MASTER.md",
+      "source_sha256": "35df0575570b105f0c0f16822eaeb6b419f68ff4a2c46ee7df713e51b8451a58",
+      "output_sha256": "0c34badab152b21c9adc363bdf8108bf4ee4a69cc56421240f3d4043cf38926a",
+      "source_bytes": 2510,
+      "output_bytes": 3085,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 8",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/08_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/08_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "source_sha256": "23467fb48efced1329b9fd6d764c61ac94f2b99dda9c78e5153f95dfd12669b6",
+      "output_sha256": "16d88d128ee0ebc9d09294e68383e7c5d583ea0e9f4749e90a47de12b157a2dd",
+      "source_bytes": 1730,
+      "output_bytes": 2090,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 9",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/09_Board_and_Executive_Oversight_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/09_Board_and_Executive_Oversight_CORRECTED_MASTER.md",
+      "source_sha256": "c7eb38c61e518bd5d740e3e5b801c04434ef3f87e204d3c8309bf09d732737aa",
+      "output_sha256": "99cc01a79b63f7c635f2c4efac57db4e15c1ce0d24e16dd661d80f596ac2eb40",
+      "source_bytes": 1798,
+      "output_bytes": 2167,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 10",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/10_AI_Policy_Framework_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/10_AI_Policy_Framework_CORRECTED_MASTER.md",
+      "source_sha256": "c27de1840411e2cfd7b99636161a66d2d2a44eb0200558277d40bc71ec0cc1bc",
+      "output_sha256": "17ae18fc341729f45d1ee46c0bf83fc4cf4c2bd7afcff7b8f2cefe05724a0015",
+      "source_bytes": 1993,
+      "output_bytes": 2189,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 11",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/11_Roles_Responsibilities_and_Three_Lines_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/11_Roles_Responsibilities_and_Three_Lines_CORRECTED_MASTER.md",
+      "source_sha256": "5edaee773c7b20bc1f4a8ed4cab5478af11b32f30794a20053f2febad49ac569",
+      "output_sha256": "b078cca546fce35352d66110c0cbdd9f536f9fbe88d96405df64e7a7ca3f9051",
+      "source_bytes": 2063,
+      "output_bytes": 2390,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 12",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/12_AI_Literacy_Role_Based_Training_and_Competence_Assurance.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/12_AI_Literacy_Role_Based_Training_and_Competence_Assurance.md",
+      "source_sha256": "5f035aac9cd29408e51ad910391763278e65f4135173fed2c388f15d808188e2",
+      "output_sha256": "65eb345fb33d4b5f536714e50534a66a5f96e18549cfb51e1450ef15794534ac",
+      "source_bytes": 11890,
+      "output_bytes": 14202,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 13",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/13_AI_Policy_and_Standards_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/13_AI_Policy_and_Standards_CORRECTED_MASTER.md",
+      "source_sha256": "d7156bdeffc0f5dfbeb45fa0e26650f6eedc97750ea710c54d5d8b25baa396a4",
+      "output_sha256": "bf910479fd5be6346386c8f0b5c6cf990b64d14a9c4e1d7bb4d07f7096d91dd1",
+      "source_bytes": 1808,
+      "output_bytes": 2175,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 14",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/14_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/14_AI_Governance_Operating_Model_CORRECTED_MASTER.md",
+      "source_sha256": "def707e78918c80a848ab5d41b92b5944cb1a7a41ec4b3d880679a23562cddd6",
+      "output_sha256": "f42b5cbe3a95aa16d6ecf7441df832ff2547ec4ea5cc1bba6658ccb9e9c1aa9a",
+      "source_bytes": 1618,
+      "output_bytes": 1834,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 15",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/15_AI_Governance_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/15_AI_Governance_Roles_and_Accountability_CORRECTED_MASTER.md",
+      "source_sha256": "713a273aa667a3b8c933e2e848c557e8d5c54e64a4fee9f8079cb7b328bd712d",
+      "output_sha256": "34150bf476d5e9961445120750732ff1bdd35fbef09e0f22f142bf480e474295",
+      "source_bytes": 1628,
+      "output_bytes": 1899,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 16",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/16_AI_System_Inventory_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/16_AI_System_Inventory_CORRECTED_MASTER.md",
+      "source_sha256": "619bf0db9e59e1b46182d7ba4ba6d8d64a5e03a34346fd1a234bb49aa8fd48b7",
+      "output_sha256": "d2a5ed0e1d25cbda3389fa881b0d7b72935648eec9557e8e10ad0c0ac55f5d4b",
+      "source_bytes": 1810,
+      "output_bytes": 2162,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 17",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/17_AI_Intake_and_Initial_Triage_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/17_AI_Intake_and_Initial_Triage_CORRECTED_MASTER.md",
+      "source_sha256": "0bdb6a31cd9df4027c6dfd00179572acb67097505a113cc555cd16a6a91af810",
+      "output_sha256": "9b23cd3f54735d4895cd3b76b142d4905ce7cfc200b5b5d0de85e2ce35bc5ff4",
+      "source_bytes": 1857,
+      "output_bytes": 2181,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 18",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/18_Actor_Role_Assessment_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/18_Actor_Role_Assessment_CORRECTED_MASTER.md",
+      "source_sha256": "f459390ba7bd1dafa26817c7ff4543895139b5bcd0dc25ac6a792bb939b1d726",
+      "output_sha256": "d7b20df91facac57b711150767daadbde83def7d75016a0ef6e470e0a5e9832d",
+      "source_bytes": 3380,
+      "output_bytes": 3951,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    }
+  ]
+}

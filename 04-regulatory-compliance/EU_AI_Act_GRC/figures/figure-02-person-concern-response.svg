@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Affected-person concern and organizational response</title>
+  <desc id="desc">A traveller asks whether AI was used and whether the outcome can be corrected. The organization responds with transparency, human review, correction, appeal, and retained evidence.</desc>
+  <rect width="1600" height="900" fill="#F7F9FC"/>
+  <text x="80" y="90" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#17324D">When AI affects a person, the process must remain understandable and challengeable.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="90" y="190" rx="28" ry="28" width="500" height="500" fill="#FFF4D8" stroke="#9A6500" stroke-width="4"/>
+    <circle cx="340" cy="300" r="70" fill="#F2C46D" stroke="#7B4D00" stroke-width="4"/>
+    <path d="M220 510 Q340 400 460 510 V590 H220 Z" fill="#D99934" stroke="#7B4D00" stroke-width="4"/>
+    <text x="340" y="620" text-anchor="middle" font-size="30" font-weight="700" fill="#5D3A00">Traveller concern</text>
+    <text x="340" y="675" text-anchor="middle" font-size="25" fill="#5D3A00">“Was AI used?”</text>
+    <text x="340" y="715" text-anchor="middle" font-size="25" fill="#5D3A00">“Who reviewed it?”</text>
+    <text x="340" y="755" text-anchor="middle" font-size="25" fill="#5D3A00">“Can this be corrected?”</text>
+
+    <path d="M590 440 H720" stroke="#17324D" stroke-width="8" marker-end="url(#arrow)"/>
+
+    <rect x="720" y="160" rx="28" ry="28" width="790" height="570" fill="#EAF2FF" stroke="#245EA8" stroke-width="4"/>
+    <text x="1115" y="220" text-anchor="middle" font-size="32" font-weight="700" fill="#17324D">Organization response</text>
+
+    <rect x="790" y="270" rx="20" ry="20" width="300" height="120" fill="#DCEBFF" stroke="#245EA8" stroke-width="3"/>
+    <text x="940" y="320" text-anchor="middle" font-size="25" font-weight="700" fill="#17324D">1. Transparency</text>
+    <text x="940" y="355" text-anchor="middle" font-size="20" fill="#17324D">Explain when and how AI was used</text>
+
+    <rect x="1140" y="270" rx="20" ry="20" width="300" height="120" fill="#FFF0C7" stroke="#A66A00" stroke-width="3"/>
+    <text x="1290" y="320" text-anchor="middle" font-size="25" font-weight="700" fill="#5B3A00">2. Human review</text>
+    <text x="1290" y="355" text-anchor="middle" font-size="20" fill="#5B3A00">A qualified person examines the case</text>
+
+    <rect x="790" y="440" rx="20" ry="20" width="300" height="120" fill="#E4F5E9" stroke="#2B7A48" stroke-width="3"/>
+    <text x="940" y="490" text-anchor="middle" font-size="25" font-weight="700" fill="#184D2F">3. Correction</text>
+    <text x="940" y="525" text-anchor="middle" font-size="20" fill="#184D2F">Correct data, output, or action</text>
+
+    <rect x="1140" y="440" rx="20" ry="20" width="300" height="120" fill="#FFE3E3" stroke="#A83A3A" stroke-width="3"/>
+    <text x="1290" y="490" text-anchor="middle" font-size="25" font-weight="700" fill="#6F1F1F">4. Challenge or appeal</text>
+    <text x="1290" y="525" text-anchor="middle" font-size="20" fill="#6F1F1F">Escalate unresolved concerns</text>
+
+    <rect x="965" y="610" rx="20" ry="20" width="300" height="90" fill="#EDE4FF" stroke="#6842A8" stroke-width="3"/>
+    <text x="1115" y="650" text-anchor="middle" font-size="25" font-weight="700" fill="#3E246D">5. Evidence</text>
+    <text x="1115" y="682" text-anchor="middle" font-size="20" fill="#3E246D">Record notice, review, action, and outcome</text>
+
+    <path d="M1090 330 H1140" stroke="#17324D" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M1290 390 V440" stroke="#17324D" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M1140 500 H1090" stroke="#17324D" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M940 560 V610 H965" stroke="#17324D" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#17324D"/>
+    </marker>
+  </defs>
+</svg>

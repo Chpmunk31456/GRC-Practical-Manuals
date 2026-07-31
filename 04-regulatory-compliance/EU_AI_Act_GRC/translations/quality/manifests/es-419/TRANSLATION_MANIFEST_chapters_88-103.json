@@ -1,0 +1,168 @@
+{
+  "language": "es-419",
+  "target": "Spanish (Latin America)",
+  "model": "Helsinki-NLP/opus-mt-en-es",
+  "items": "chapters:88-103",
+  "records": [
+    {
+      "item": "Chapter 88",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/88_Model_Extraction_and_Theft_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/88_Model_Extraction_and_Theft_CORRECTED_MASTER.md",
+      "source_sha256": "136e9f5b5124208d4151acbf10b810981d7ca4410dfa741b165be2042be6daf9",
+      "output_sha256": "64fc6f5c8fad1ce04c723c21a4ef7038d4697b0ffdc1a446f8282d4925c5cfa2",
+      "source_bytes": 3040,
+      "output_bytes": 3585,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 89",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/89_Logging_Monitoring_and_Vulnerability_Management_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/89_Logging_Monitoring_and_Vulnerability_Management_CORRECTED_MASTER.md",
+      "source_sha256": "f3a34b70514cc5ecb4c115903f6eb54b7acd9a62a38e0fa6349e2144e1daa003",
+      "output_sha256": "fecb543e36bafde799ae63cff446636aaad1aca8efe6dad7dbc8fbe5cb79872e",
+      "source_bytes": 3097,
+      "output_bytes": 3616,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 90",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/90_Business_Continuity_and_Disaster_Recovery_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/90_Business_Continuity_and_Disaster_Recovery_CORRECTED_MASTER.md",
+      "source_sha256": "5f66831258b70f29c95ade312c376175ed282d26ab0d3b7ff2a0f96857ba6557",
+      "output_sha256": "28d9461440e5527475604d0fdd48deb42f46458615c34755752537a71b8f8be7",
+      "source_bytes": 3121,
+      "output_bytes": 3803,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 91",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/91_Red_Team_and_Penetration_Testing_Governance_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/91_Red_Team_and_Penetration_Testing_Governance_CORRECTED_MASTER.md",
+      "source_sha256": "0a3e73ae38deca5f2a2e73574f0439bfe333b3e3a7d9c26ebed3b4c4f0034d39",
+      "output_sha256": "095d9ab409cd786d46466271245cd6143b4306edb98b85d87e6d4be4b143cd8d",
+      "source_bytes": 3288,
+      "output_bytes": 4008,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 92",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/92_Inherent_Risk_Assessment_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/92_Inherent_Risk_Assessment_CORRECTED_MASTER.md",
+      "source_sha256": "586c89f33dec42a651ac8564751395b0eec4e28987dc14b3f480ca2454bf4b4a",
+      "output_sha256": "3190cad432c28377847dab47f6a274a91dd8af30ab169e50b377cf1d1a6080d1",
+      "source_bytes": 3192,
+      "output_bytes": 3857,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 93",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/93_Fundamental_Rights_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/93_Fundamental_Rights_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "e09790d7123fa45ed3f578110005fdb9a51f7dc3529878acd781f732ac9398d7",
+      "output_sha256": "89c37f33c56ade3cf68e0366034e02985314d0eaf2241169a657ec9242f025ca",
+      "source_bytes": 3135,
+      "output_bytes": 3655,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 94",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/94_Safety_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/94_Safety_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "79bf319ec4e2b14ba518dfdbeb4a2d35392275ea5f1de9c1098c43d6ba8f23e2",
+      "output_sha256": "71db8de1654e6f4b3ac3d3074cc2c2219dd33e2138af17fd2a5a7a162c14df7a",
+      "source_bytes": 3026,
+      "output_bytes": 3430,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 95",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/95_Bias_and_Discrimination_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/95_Bias_and_Discrimination_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "adc73e09708d328b13dcd2357f8fed4fa969599fad5ce1a12e97c1daadb6f165",
+      "output_sha256": "bb89e2627186917d346158caa00a7ea875831ac3c35e7da9817c4cfdae3bbbec",
+      "source_bytes": 3333,
+      "output_bytes": 3905,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 96",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/96_Privacy_and_Data_Protection_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/96_Privacy_and_Data_Protection_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "7779ea70d6e706f4e7f052ce9b642c6108427fc02a50aa5af67fc3b34b28fa30",
+      "output_sha256": "35bdde8c085d685fe5b9ffcfa66699a500c358ccf20d2c530761ee24bef53999",
+      "source_bytes": 3499,
+      "output_bytes": 4087,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 97",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/97_Cybersecurity_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/97_Cybersecurity_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "9a48ffeb5ac23f398d31e8250f88d07c9f3c233f8f683d1483bf8253cddefc45",
+      "output_sha256": "8bcc5b756bc929ac1c6913dea39884d461b4e3a2170214aedaa14ea01070ec29",
+      "source_bytes": 3667,
+      "output_bytes": 4121,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 98",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/98_Explainability_and_Transparency_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/98_Explainability_and_Transparency_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "2fef2fa0a7e9c49cc31273b514458fcd8485aac288efbb77171962f4dfb44a35",
+      "output_sha256": "08a068975cab285800680f9c1a1a61cffe2c996c40520986d79ca20190902479",
+      "source_bytes": 3366,
+      "output_bytes": 4034,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 99",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/99_Human_Autonomy_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/99_Human_Autonomy_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "2685d0e8491bb9cf4c01b69f3755f4f3dd70563a212ba552c24b6076bf51d242",
+      "output_sha256": "3be2f04530d0d923bb00d8dd358e4c40cb55bd8e4639a314739c842b6017e1a9",
+      "source_bytes": 3251,
+      "output_bytes": 3709,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 100",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/100_Operational_and_Resilience_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/100_Operational_and_Resilience_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "09cff0cc3f06587662d80f342fbc25c705aab17db8ed31e0535827a0fc00989c",
+      "output_sha256": "a7356a4cefdf7c4777bd5942fa48c28684c6cdff903f9a716acc94f2598d583e",
+      "source_bytes": 3184,
+      "output_bytes": 3712,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 101",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/101_Third_Party_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/101_Third_Party_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "8a7801660b1c3a35cf07790cf4dc8ebc1d35b40473d09c4d4f8cc782c29ea5be",
+      "output_sha256": "a85d6c5071af1e7cfb844c6883f0080aeccaca5904f4fa8d6c6a135ae7f72272",
+      "source_bytes": 3422,
+      "output_bytes": 3945,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 102",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/102_Legal_Financial_and_Reputational_Risk_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/102_Legal_Financial_and_Reputational_Risk_CORRECTED_MASTER.md",
+      "source_sha256": "b050229412a8fb55f94104d7710e67e1c9fee038305eb52f7f8cc2c0ff8ef511",
+      "output_sha256": "bc5e3cf18608abe883d723fcde878af251b5939b48f45440290309b47cc5ebac",
+      "source_bytes": 3435,
+      "output_bytes": 3948,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    },
+    {
+      "item": "Chapter 103",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/103_Residual_Risk_Acceptance_and_Exceptions_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/es-419/source/chapters/103_Residual_Risk_Acceptance_and_Exceptions_CORRECTED_MASTER.md",
+      "source_sha256": "363d296a8a5b210e231be04507a9a19d5d1814dbc3ee0bae97e23d5600075b3a",
+      "output_sha256": "dc252845d994a95101fcb7bb4f74a8099067d274a82638bbe2a32a172c17752f",
+      "source_bytes": 3435,
+      "output_bytes": 4008,
+      "model": "Helsinki-NLP/opus-mt-en-es"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "language": "pt-BR",
+  "target": "Portuguese (Brazil)",
+  "model": "Helsinki-NLP/opus-mt-tc-big-en-pt",
+  "items": "chapters:19-35",
+  "records": [
+    {
+      "item": "Chapter 19",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/19_Classification_Decision_and_Evidence_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/19_Classification_Decision_and_Evidence_CORRECTED_MASTER.md",
+      "source_sha256": "7830a2bffd8a85d9f8c0b7792d5e003aecaf70babde7d0c3f3ae1819573e3f8a",
+      "output_sha256": "c90f3a0df950128dfb6c2e7b325214d660b03fa08fc9805aa4f9033437733850",
+      "source_bytes": 1237,
+      "output_bytes": 1356,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 20",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/20_High_Risk_Classification_CORRECTED.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/20_High_Risk_Classification_CORRECTED.md",
+      "source_sha256": "93c81cb329146a6379f98275748be040471eb93e7395ef747b322d35ea1ae6a7",
+      "output_sha256": "8a6829d6967a95b536b3d8fc7165ec37a037bf6607273f5e73050a1119bc3c58",
+      "source_bytes": 6638,
+      "output_bytes": 7502,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 21",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/21_Annex_I_and_Annex_III_Analysis_CORRECTED.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/21_Annex_I_and_Annex_III_Analysis_CORRECTED.md",
+      "source_sha256": "0dc169c07c4f9be42c64076fb1e5697d2d13d461b3b43328076088c17014175f",
+      "output_sha256": "c42b096c334c13d947c59a476958cf1dd7804821e04bba0bed5f362a16d94c8a",
+      "source_bytes": 6693,
+      "output_bytes": 7765,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 22",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/22_High_Risk_Exception_and_Scoping_Analysis_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/22_High_Risk_Exception_and_Scoping_Analysis_CORRECTED_MASTER.md",
+      "source_sha256": "6dc9855bcbeaa5c1a3520e6756f9979f1c8deab3201567ffa7b624521c173b65",
+      "output_sha256": "51491e0e368d85b788a57852578b754cf2586f7fca9c4a73b45647be516b953e",
+      "source_bytes": 1168,
+      "output_bytes": 1319,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 23",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/23_Classification_Review_and_Approval_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/23_Classification_Review_and_Approval_CORRECTED_MASTER.md",
+      "source_sha256": "bd6ce099ca88cad99dccd98af2ee9acb10d3f6a39516985b1a188d831703c907",
+      "output_sha256": "4950270e48b894014211317bd12fc1e0d4bf552a60f409d14613ab7aaf18384d",
+      "source_bytes": 860,
+      "output_bytes": 970,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 24",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/24_Reclassification_and_Change_Triggers_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/24_Reclassification_and_Change_Triggers_CORRECTED_MASTER.md",
+      "source_sha256": "35fe22c263ccbe91e3bc59c9e9e9f61dcf30fbe48dfdf00d85abd44f481eb303",
+      "output_sha256": "9fca90ba88e1debafe89e452be86b9d95c25d7c2abf8bb579661dd8e9ac1f8db",
+      "source_bytes": 898,
+      "output_bytes": 1051,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 25",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/25_Classification_Register_and_Reporting_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/25_Classification_Register_and_Reporting_CORRECTED_MASTER.md",
+      "source_sha256": "0c8c75574c9216f13cd12433378b4f7dee6c0157a0186c09dbd7eb19295676c9",
+      "output_sha256": "c71d079ab3017cea63b47b41afd7d3570a899d61e12fb013f674f5974d92cbaa",
+      "source_bytes": 859,
+      "output_bytes": 932,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 26",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/26_Prohibited_Practices_Overview_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/26_Prohibited_Practices_Overview_CORRECTED_MASTER.md",
+      "source_sha256": "c64e850b71c01812d7bc954eb529708406a94e51df4850d79f739ef1009e9a12",
+      "output_sha256": "ec3ab2cd2705e5a634709c4b69308fcf13c0d82266c72be257202d768833748a",
+      "source_bytes": 976,
+      "output_bytes": 1133,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 27",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/27_Manipulation_and_Subliminal_Techniques_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/27_Manipulation_and_Subliminal_Techniques_CORRECTED_MASTER.md",
+      "source_sha256": "c85cde10faa9058c5259533d8b7abf60917d263ade8958855f3fbc3cd3410efa",
+      "output_sha256": "d9ef75a8a493f99f6dd02bebec99c0ddc7d8beefdd4c9e9633a10bd48b811ed8",
+      "source_bytes": 913,
+      "output_bytes": 994,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 28",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/28_Exploitation_of_Vulnerabilities_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/28_Exploitation_of_Vulnerabilities_CORRECTED_MASTER.md",
+      "source_sha256": "e53b1f779b256807c7f2783837050aed0638068b978a2d64c80305093cd8a1c9",
+      "output_sha256": "1742510aa00cb3eedd30bf2842591204f181aa5e42bc66b799843c27df4fd424",
+      "source_bytes": 954,
+      "output_bytes": 1050,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 29",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/29_Social_Scoring_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/29_Social_Scoring_CORRECTED_MASTER.md",
+      "source_sha256": "05005e9576cece9e82cd519b3f58de11240164ae1d411793aa1b12dd93dd3cdf",
+      "output_sha256": "4a052fa4d53808b70cebb8a6600fb110d99aec4ac141e53e05f46d399a45aa80",
+      "source_bytes": 913,
+      "output_bytes": 1084,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 30",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/30_Predictive_Policing_and_Risk_Inference_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/30_Predictive_Policing_and_Risk_Inference_CORRECTED_MASTER.md",
+      "source_sha256": "7577489e41d6ccc21e2d1276dcbb9154212afbb584bc41e3b6a5bd9eafe08033",
+      "output_sha256": "3f1ecf8d176bdb2db17e78dfd55dee318868250009f5663784850cffa3368bd4",
+      "source_bytes": 988,
+      "output_bytes": 1101,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 31",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/31_Facial_Image_Scraping_and_Biometric_Databases_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/31_Facial_Image_Scraping_and_Biometric_Databases_CORRECTED_MASTER.md",
+      "source_sha256": "6092e52aa1c1be08f536a91e8f886266aebc38b30cb546233d2919b3402ee2b0",
+      "output_sha256": "55992313833501cb7dd9739eaacb9bf91fbca210bf805ab5e8ad61ab20c21f73",
+      "source_bytes": 973,
+      "output_bytes": 1094,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 32",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/32_Emotion_Recognition_Restrictions_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/32_Emotion_Recognition_Restrictions_CORRECTED_MASTER.md",
+      "source_sha256": "0643a27d1acf63d6902fe1362b65cca025891ea807041fa76789c6c17ccb4091",
+      "output_sha256": "ff8e9475eebdecd4792998ca5adbc94b46054320af1174ba1d19a54f39273376",
+      "source_bytes": 965,
+      "output_bytes": 1137,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 33",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/33_Biometric_Categorisation_Restrictions_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/33_Biometric_Categorisation_Restrictions_CORRECTED_MASTER.md",
+      "source_sha256": "4a357704ff0e337b5b501422f92b5f9f29f050253fc6435c071891368cc8e02c",
+      "output_sha256": "1e586bac5c535e4697bf63d27e7a9829d35c275b0bfeeb54706aec9139269cd1",
+      "source_bytes": 1065,
+      "output_bytes": 1186,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 34",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/34_New_Prohibitions_for_Non_Consensual_Intimate_Content_and_Child_Sexual_Abuse_Material_CORRECTED.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/34_New_Prohibitions_for_Non_Consensual_Intimate_Content_and_Child_Sexual_Abuse_Material_CORRECTED.md",
+      "source_sha256": "ad8c9c7f461f180d83d22b75c11a71e96a7cb1eac2525a6460c1d433983407e7",
+      "output_sha256": "260aa0cd1ed403f062587219b69acad6ec2e2c713f8406351548c4438d1c01f7",
+      "source_bytes": 7587,
+      "output_bytes": 8578,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    },
+    {
+      "item": "Chapter 35",
+      "source_path": "04-regulatory-compliance/EU_AI_Act_GRC/chapters/35_Prohibited_Practice_Governance_and_Assurance_CORRECTED_MASTER.md",
+      "output_path": "04-regulatory-compliance/EU_AI_Act_GRC/translations/pt-BR/source/chapters/35_Prohibited_Practice_Governance_and_Assurance_CORRECTED_MASTER.md",
+      "source_sha256": "04f9f8b3c94823ae5fa515c115bbd33f2368031dccaea760f76f7ba406dc0c7a",
+      "output_sha256": "0fb2e0b4d6f97756780619d9c8f5fe6b648af334d4e8919f7668bc59ad1508f2",
+      "source_bytes": 1119,
+      "output_bytes": 1287,
+      "model": "Helsinki-NLP/opus-mt-tc-big-en-pt"
+    }
+  ]
+}

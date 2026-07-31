@@ -1,4 +1,4 @@
-name: Rebuild CIS Portuguese publication candidate
+name: Audit CIS English master baseline
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: cis-portuguese-controlled-writes
+  group: cis-english-controlled-review
   cancel-in-progress: false
 
 jobs:
-  build:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch
@@ -25,41 +25,21 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Install document tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice poppler-utils
+      - name: Run English master baseline audit
+        run: python3 qa/tools/audit_cis_english_master.py
 
-      - name: Require structural PASS
-        run: grep -q '^\*\*PASS\*\*$' qa/CIS_CONTROLS_V8_1_PTBR_FULL_MANUAL_AUDIT.md
-
-      - name: Build CIS Portuguese DOCX and PDF
-        shell: bash
-        run: |
-          set -euo pipefail
-          source='01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
-          stem="${source%.md}"
-          pandoc "$source" --resource-path="$(dirname "$source")" -o "${stem}.docx"
-          libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx"
-          test -s "${stem}.docx"
-          test -s "${stem}.pdf"
-          unzip -t "${stem}.docx" >/dev/null
-          pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
-
-      - name: Commit rebuilt candidate
+      - name: Commit audit report
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx \
-            01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf
+          git add qa/CIS_CONTROLS_V8_1_ENGLISH_MASTER_AUDIT.md
           if git diff --cached --quiet; then
-            echo 'No rebuilt binary changes to commit.'
+            echo 'No audit report changes to commit.'
             exit 0
           fi
-          git commit -m 'Rebuild CIS Portuguese DOCX and PDF candidate'
+          git commit -m 'Audit CIS English master baseline'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

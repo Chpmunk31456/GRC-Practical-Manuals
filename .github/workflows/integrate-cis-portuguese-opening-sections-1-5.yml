@@ -1,4 +1,4 @@
-name: Correct and audit PCI DSS v4.0.1 English master
+name: Audit incident response and BCDR English master baseline
 
 on:
   workflow_dispatch:
@@ -12,11 +12,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: pci-dss-4-0-1-english-controlled-review
+  group: incident-response-bcdr-english-controlled-review
   cancel-in-progress: false
 
 jobs:
-  correct-and-audit:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch
@@ -25,29 +25,21 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Correct Word table-of-contents label
-        run: python3 qa/tools/correct_pci_dss_english_word_toc_label.py
+      - name: Run incident response and BCDR English master baseline audit
+        run: python3 qa/tools/audit_incident_response_bcdr_english_master.py
 
-      - name: Run PCI DSS English master baseline audit
-        run: python3 qa/tools/audit_pci_dss_4_0_1_english_master.py
-
-      - name: Require baseline PASS
-        run: grep -q '^\*\*PASS\*\*$' qa/PCI_DSS_V4_0_1_ENGLISH_MASTER_AUDIT.md
-
-      - name: Commit bounded correction and audit
+      - name: Commit audit report
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            04-regulatory-compliance/PCI_DSS_v4.0.1/English_Source_PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md \
-            qa/PCI_DSS_V4_0_1_ENGLISH_MASTER_AUDIT.md
+          git add qa/INCIDENT_RESPONSE_BCDR_ENGLISH_MASTER_AUDIT.md
           if git diff --cached --quiet; then
-            echo 'No bounded correction changes to commit.'
+            echo 'No audit report changes to commit.'
             exit 0
           fi
-          git commit -m 'Correct and audit PCI DSS v4.0.1 English master'
+          git commit -m 'Audit incident response and BCDR English master baseline'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

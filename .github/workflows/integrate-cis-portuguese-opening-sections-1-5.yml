@@ -1,4 +1,4 @@
-name: Integrate CIS Portuguese Controls 15-18
+name: Integrate CIS Portuguese Sections 24-26
 
 on:
   workflow_dispatch:
@@ -25,8 +25,8 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Integrate reviewed Controls 15-18
-        run: python3 qa/tools/integrate_cis_portuguese_controls_15_18.py
+      - name: Integrate reviewed Sections 24-26
+        run: python3 qa/tools/integrate_cis_portuguese_sections_24_26.py
 
       - name: Refresh Portuguese full-manual audit
         run: python3 qa/tools/audit_cis_portuguese_full_manual.py
@@ -44,7 +44,7 @@ jobs:
             echo 'No controlled changes to commit.'
             exit 0
           fi
-          git commit -m 'Integrate reviewed CIS Portuguese Controls 15-18'
+          git commit -m 'Integrate reviewed CIS Portuguese Sections 24-26'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

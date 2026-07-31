@@ -8,10 +8,10 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 
 ## Summary
 
-- conversion box glyph: **107**
+- conversion box glyph: **82**
 - double heading marker: **20**
 - ellipsis-only table row: **1**
-- raw separator line: **21**
+- raw separator line: **15**
 - standalone numbered heading without hash: **41**
 - unclosed bold heading: **6**
 - Missing expected numbered sections: **0**
@@ -46,37 +46,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 | standalone numbered heading without hash | 174 | `8. Expanda para IG2 ou IG3 conforme o risco, as obrigações, a maturidade e a exposição a ameaças.` |
 | standalone numbered heading without hash | 175 | `9. Utilize mapeamentos oficiais para coordenar outras estruturas sem tratar o mapeamento como comprovação automática de conformidade.` |
 | unclosed bold heading | 177 | `**Princípio de implementação:** Um conjunto menor de Salvaguardas, com escopo completo, operação consistente, medição e melhoria contínua, é mais defensável do que uma lista extensa marcada como concluída sem evidências ` |
-| conversion box glyph | 404 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a recuperação de dados. □` |
-| raw separator line | 405 | `-------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 408 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 421 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão das infra-estruturas de rede. □` |
-| raw separator line | 425 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 432 | `□ 12.7 □ Garantir Dispositivos Remotos Use uma VPN e Enterprise AAA □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir Dispositivos Remotos Use uma VPN e Enterprise AAA, então ve` |
-| conversion box glyph | 432 | `□ 12.7 □ Garantir Dispositivos Remotos Use uma VPN e Enterprise AAA □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir Dispositivos Remotos Use uma VPN e Enterprise AAA, então ve` |
-| conversion box glyph | 432 | `□ 12.7 □ Garantir Dispositivos Remotos Use uma VPN e Enterprise AAA □ Coloque em prática um processo repetível, de propriedade ou controle técnico para garantir Dispositivos Remotos Use uma VPN e Enterprise AAA, então ve` |
-| conversion box glyph | 445 | `. ** Finalidade do controlo: ** Fortalecer a empresa implementando e medindo salvaguardas para monitoramento e defesa da rede. □` |
-| raw separator line | 446 | `-----------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 449 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 452 | `□ 13.3 □ Implantar uma solução de detecção de intrusão de rede Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar uma Solução de Detecção de Intrusão de Rede, então verifique cobe` |
-| conversion box glyph | 452 | `□ 13.3 □ Implantar uma solução de detecção de intrusão de rede Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar uma Solução de Detecção de Intrusão de Rede, então verifique cobe` |
-| conversion box glyph | 457 | `□ 13.8 □ Implantar uma solução de prevenção de intrusão de rede □ Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar uma solução de prevenção de intrusão de rede, em seguida, veri` |
-| conversion box glyph | 457 | `□ 13.8 □ Implantar uma solução de prevenção de intrusão de rede □ Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar uma solução de prevenção de intrusão de rede, em seguida, veri` |
-| conversion box glyph | 457 | `□ 13.8 □ Implantar uma solução de prevenção de intrusão de rede □ Coloque em prática um processo repetível, de propriedade ou controle técnico para implantar uma solução de prevenção de intrusão de rede, em seguida, veri` |
-| conversion box glyph | 468 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a sensibilização para a segurança e formação de competências. □` |
-| conversion box glyph | 469 | `□-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| raw separator line | 472 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 476 | `□ 14.4 □ Train Workforce on Data Handling Best Practices □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar Workforce on Data Handling Best Practices, então verifique cobertura e ` |
-| conversion box glyph | 476 | `□ 14.4 □ Train Workforce on Data Handling Best Practices □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar Workforce on Data Handling Best Practices, então verifique cobertura e ` |
-| conversion box glyph | 476 | `□ 14.4 □ Train Workforce on Data Handling Best Practices □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar Workforce on Data Handling Best Practices, então verifique cobertura e ` |
-| conversion box glyph | 479 | `□ 14.7 □ Força de Trabalho do Trem para Identificar e Denunciar Atualizações de Segurança Desaparecidas □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho para` |
-| conversion box glyph | 479 | `□ 14.7 □ Força de Trabalho do Trem para Identificar e Denunciar Atualizações de Segurança Desaparecidas □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho para` |
-| conversion box glyph | 479 | `□ 14.7 □ Força de Trabalho do Trem para Identificar e Denunciar Atualizações de Segurança Desaparecidas □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho para` |
-| conversion box glyph | 480 | `□ 14.8 □ Força de Trabalho do Trem em Riscos de Redes Inseguras □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho em Riscos de Redes Inseguras, em seguida, ve` |
-| conversion box glyph | 480 | `□ 14.8 □ Força de Trabalho do Trem em Riscos de Redes Inseguras □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho em Riscos de Redes Inseguras, em seguida, ve` |
-| conversion box glyph | 480 | `□ 14.8 □ Força de Trabalho do Trem em Riscos de Redes Inseguras □ Coloque em prática um processo repetível, de propriedade ou controle técnico para treinar a Força de Trabalho em Riscos de Redes Inseguras, em seguida, ve` |
-| conversion box glyph | 481 | `□ 14.9 □ Conduzir Conscientização de Segurança Específica e Treinamento de Habilidades □ Coloque em prática um processo repetível, de propriedade ou controle técnico para conduzir a Consciência de Segurança Específica e ` |
-| conversion box glyph | 481 | `□ 14.9 □ Conduzir Conscientização de Segurança Específica e Treinamento de Habilidades □ Coloque em prática um processo repetível, de propriedade ou controle técnico para conduzir a Consciência de Segurança Específica e ` |
-| conversion box glyph | 481 | `□ 14.9 □ Conduzir Conscientização de Segurança Específica e Treinamento de Habilidades □ Coloque em prática um processo repetível, de propriedade ou controle técnico para conduzir a Consciência de Segurança Específica e ` |
 | conversion box glyph | 489 | `. ** Finalidade do controlo: ** Reforçar a empresa através da implementação e medição de salvaguardas para a gestão dos prestadores de serviços. □` |
 | raw separator line | 490 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
 | raw separator line | 493 | `----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |

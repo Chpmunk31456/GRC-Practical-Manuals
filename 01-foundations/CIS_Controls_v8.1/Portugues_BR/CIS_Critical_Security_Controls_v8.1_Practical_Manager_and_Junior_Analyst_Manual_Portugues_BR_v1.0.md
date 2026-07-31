@@ -744,205 +744,154 @@ Funções comuns incluem analista júnior de controles de segurança, analista d
 | Comunicação | Produzir resumo executivo e papel de trabalho detalhado. |
 | Ética | Utilizar dados sintéticos, autorização, limites de escopo e alegações honestas. |
 
-# 27. Laboratório Fictício e Portfólio
+# 27. Laboratório fictício e portfólio
 
-* Um ambiente de prática segura usando dados sintéticos e sistemas de laboratório autorizados.*
+*Um exercício autorizado para demonstrar inventário, medição, correção e reteste sem expor dados reais.*
 
-Regra do laboratório:** Use organizações ficcionais, dados sintéticos, sistemas isolados e autorização escrita. Nunca ataque alvos públicos, use credenciais reais, ou publique saída de ferramenta sensível.
-□--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 27.1 Cenário
 
-1. Crie uma empresa fictícia de 50 pessoas com laptops, servidores, serviços de nuvem, uma aplicação web, pessoal remoto e cinco fornecedores.
+Crie uma organização fictícia de 50 pessoas com laptops, servidores, serviços em nuvem, uma aplicação web, trabalho remoto e cinco prestadores de serviços. Use somente dados sintéticos, ativos de laboratório e sistemas para os quais exista autorização explícita.
 
-2. Selecione IG1 e documentar três adições baseadas em risco do IG2 ou IG3.
+## 27.2 Etapas do laboratório
 
-3. Build Enterprise-asset, software, dados, conta, sistema de autenticação, rede, fornecedor, aplicativo e log-source inventários.
+1. Selecione o IG1 e documente três acréscimos baseados em risco provenientes do IG2 ou IG3.
+2. Construa inventários de ativos empresariais, software, dados, contas, sistemas de autenticação, redes, prestadores de serviços, aplicações e fontes de logs.
+3. Utilize Nmap e osquery em um ambiente isolado para reconciliar inventários de ativos e software.
+4. Utilize OpenSCAP ou Lynis em um host de laboratório e registre achados de configuração, exceções, correções e nova avaliação.
+5. Utilize Greenbone em alvos aprovados; valide cobertura, achados, remediação e nova varredura.
+6. Utilize Wazuh ou Suricata para gerar e investigar um alerta de teste seguro.
+7. Utilize Trivy ou ZAP em um repositório de treinamento ou aplicação de laboratório; registre correção e reteste.
+8. Execute um teste documentado de restauração de backup e um exercício de mesa de resposta a incidentes.
+9. Crie cinco papéis de trabalho alinhados à CIS Controls Assessment Specification, incluindo entradas, operações, medidas, métricas, exceções e conclusões.
+10. Publique somente artefatos higienizados e declare claramente que o projeto é fictício e não constitui uma avaliação formal do CIS.
 
-4. Use Nmap e osquery em um laboratório isolado para conciliar inventários de ativos e software.
+## 27.3 Artefatos de portfólio
 
-5. Use OpenSCAP ou Lynis em um host de laboratório; conclusões de configuração do documento, exceções, correções e reavaliação.
+| Artefato | Evidência demonstrada |
+|---|---|
+| Memorando de seleção do IG | Priorização, contexto e raciocínio de risco. |
+| Inventários reconciliados | Completude, propriedade, fonte, data e exceções. |
+| Papel de trabalho de Salvaguarda | Estrutura oficial de medição e conclusão sustentada. |
+| Registro de achados | Severidade, responsável, prazo, correção e reteste. |
+| Relatório de exercício | Cenário, decisões, lacunas e ações de melhoria. |
+| Resumo executivo | Risco, cobertura, limitações e decisões necessárias. |
 
-6. Use Greenbone em alvos de laboratório aprovados; valide cobertura, achados, remediação e rescan.
+# 28. Plano de aprendizagem de trinta dias
 
-7. Use Wazuh ou Suricata para gerar e investigar um alerta de teste seguro.
+*Uma sequência prática para compreender a estrutura, produzir evidências e explicar resultados.*
 
-8. Use Trivy ou ZAP em um repositório de treinamento ou aplicação e corrigir registro e reteste.
+| Dias | Foco | Entregável |
+|---|---|---|
+| 1–4 | Estrutura dos 18 Controles, 153 Salvaguardas, IGs, classes de ativos e funções de segurança. | Mapa de conceitos e seleção preliminar de IG. |
+| 5–8 | Inventários, escopo, responsáveis, exceções e dependências. | Inventários sintéticos e matriz RACI. |
+| 9–12 | Configurações seguras, vulnerabilidades, identidades e proteção de dados. | Dois papéis de trabalho e um registro de achados. |
+| 13–16 | Logs, monitoramento, malware, e-mail e segurança de rede. | Caso de alerta investigado e evidências de cobertura. |
+| 17–20 | Backup, resposta a incidentes, prestadores e desenvolvimento seguro. | Teste de restauração e exercício de mesa. |
+| 21–24 | CIS Controls Assessment Specification. | Cinco avaliações de Salvaguardas com medidas e métricas. |
+| 25–27 | Correção, reteste, relatórios e comunicação executiva. | Plano de ação e resumo executivo. |
+| 28–30 | Revisão técnica, portfólio e preparação para entrevistas. | Portfólio higienizado e respostas praticadas. |
 
-9. Escreva um teste de backup-restore e incidente registro de mesa.
+# 29. Preparação para entrevistas
 
-10. Crie cinco trabalhos CIS Assessment Specification com entradas, operações, medidas, métricas, listas de exceções e conclusões.
+## 29.1 Como explicar os CIS Controls
 
-11. Publicar apenas artefatos higienizados e afirmar claramente que o projeto é fictício e não uma avaliação formal CIS.
+Os CIS Controls são um conjunto priorizado de boas práticas de cibersegurança organizado em 18 Controles e 153 Salvaguardas. Eles ajudam a transformar objetivos defensivos em ações atribuíveis e mensuráveis, priorizadas pelos Grupos de Implementação.
 
-Artifact** Artifact** Artifact
-----------------------------------------------------------------------------------------------------------------
-Memorando de seleção □ Priorização e raciocínio de risco
-• Reconciliação de inventários
-□ Guardar papel de trabalho ; Estrutura e evidência oficiais de medição
-Reavaliação de configuração
-Relato de vulnerabilidade, cobertura, priorização, exceção e remediação
-Caso de Detecção, validação de alerta, investigação e resposta
-Restaurar teste de disponibilidade e evidência de recuperação
-Painel do gerente ..Limpar a comunicação de risco e ação .
+## 29.2 O que é o IG1?
 
-# 28. Plano de Aprendizagem de Trinta Dias
+O IG1 contém 56 Salvaguardas e representa a higiene cibernética essencial. É o ponto de partida recomendado, mas a organização deve acrescentar Salvaguardas quando risco, obrigações, dados, serviços ou ameaças exigirem proteção adicional.
 
-* Uma programação focada para uma capacidade útil de nível júnior.*
+## 29.3 O IG1 atende a todos os requisitos?
 
-* Dias** * Foco** * Entrega**
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ 1–4 □ Framework, 18 Controlos, 153 Salvaguardas, IGs, classes de activos, funções
-4 inventários reconciliados
-Configuração, vulnerabilidade, e-mail, malware
-• 13–16 • Registros, monitoramento, defesa de rede • Mapa de log-source e caso de alerta seguro
-Recuperação e resposta de incidentes
-• 20–22 • Fornecedores e segurança da aplicação • Avaliação do fornecedor e lista de verificação de desenvolvimento seguro
-• 23–25 • Especificação de Avaliação • Cinco medições completas de salvaguarda
-26–28 Laboratório de ferramentas e remediação Autorizados
-29-30 - Portfólio e entrevistas - Portfólio higiénico e cinco histórias de STAR
+Não. Um Grupo de Implementação é um mecanismo de priorização, não uma autorização para ignorar leis, contratos, requisitos setoriais ou riscos materiais.
 
-29. Preparação da entrevista
+## 29.4 Como medir uma Salvaguarda?
 
-* Respostas claras, cenários práticos e perguntas para o empregador.*
+Defina a população aplicável, valide as entradas, execute operações repetíveis, produza medidas, calcule métricas, examine exceções e revise o procedimento. Preserve a evidência que sustenta a conclusão.
 
-## 29.1 Quais são os controles CIS?
+## 29.5 Qual é a diferença entre ferramenta e controle?
 
-Um conjunto priorizado de melhores práticas defensivas organizadas em 18 Controles e 153 Salvaguardas focadas.
+Uma ferramenta pode apoiar uma Salvaguarda, mas não substitui escopo, processo, responsáveis, configuração, tratamento de exceções, medição, revisão humana ou melhoria contínua.
 
-# # 29,2 O que é o IG1?
+## 29.6 Como tratar uma exceção?
 
-O ponto de partida de higiene cibernética essencial 56-Safeguard que a CIS recomenda a cada empresa que comece.
+Documente o ativo ou população afetada, justificativa, risco, controles compensatórios, responsável, aprovação, prazo e critério de revisão. Exceções não devem desaparecer dentro de uma porcentagem agregada.
 
-# # 29.3 O IG1 se encaixa em todos os requisitos?
+## 29.7 Como apresentar um achado?
 
-É uma linha de base de priorização. Risco material, contratos, leis, clientes ou serviços críticos podem exigir salvaguardas adicionais.
+Explique o critério, a condição observada, a população afetada, o risco, a causa provável, a recomendação, o responsável, o prazo e o método de reteste.
 
-## 29.4 Como mede uma Salvaguarda?
+## 29.8 Como evitar alegações excessivas?
 
-Use critérios oficiais, dependências, suposições, entradas completas, operações definidas, medidas, métricas, revisão de procedimentos, exceções e reteste.
+Diferencie implementação, desenho, operação, teste e conformidade. Declare escopo, período, limitações, fontes e dependências. Um mapeamento ou uma ferramenta não comprova automaticamente conformidade.
 
-## 29.5 Por que os inventários são importantes?
+## 29.9 Perguntas para fazer ao empregador
 
-Eles definem as populações que os controles de configuração, vulnerabilidade, registro, recuperação e resposta devem cobrir.
+- Qual Grupo de Implementação foi selecionado e como a decisão é revista?
+- Quais inventários são fontes oficiais e como a completude é conciliada?
+- Como as exceções são aprovadas, monitoradas e encerradas?
+- Quais Salvaguardas apresentam maior exposição residual?
+- Como são realizados retestes e exercícios de recuperação?
+- Como prestadores de serviços fornecem evidências e notificam incidentes?
 
-## 29.6 Varredura de vulnerabilidade versus teste de penetração?
+# 30. Modelos, glossário, índice e referências
 
-Um scan identifica principalmente fraquezas conhecidas; teste de penetração usa análise humana qualificada e exploração controlada para avaliar o impacto e resiliência.
+## 30.1 Modelo de papel de trabalho
 
-## 29.7 Um mapeamento de framework prova conformidade?
-
-Não. Identifica relações, mas a organização deve testar o requisito e a evidência exatos aplicáveis.
-
-## 29.8 O que pode concluir um analista júnior?
-
-Apenas o que o escopo definido e o suporte de evidência confiável, com amostragem e limitações claramente divulgadas.
-
-# # 29.9 Perguntas para perguntar ao empregador
-
-Que Grupo de Implementação e adições estão no escopo?
-
-Como são criadas e reconciliadas populações de inventário?
-
-Quais salvaguardas têm a cobertura mais incompleta?
-
-Como são revisados os dados e exceções de medição?
-
-Quais ferramentas open-source e comerciais são aprovadas?
-
-Como os resultados são priorizados, financiados e retestados?
-
-Como avaliará o trabalho júnior?
-
-# 30. Modelos, Glossário, Índice e Referências
-
-* Estruturas de trabalho reutilizáveis, termos importantes e pontos de partida autoritários.*
-
-## 30.1 Papel de medição de proteção
-
-* Campo** * Entrada**
-(-------------------------------- (----------------------- (--------------)
-* Salvaguarda e IG \ \ \ \  \ \ \ \  \  \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \ 
-Classe de âmbito e de activo
-• Proprietário e sistemas
-Dependências e pressupostos
-Entradas e validação
-Operações realizadas
-Medidas
-Métrico e interpretação
-Excepções e limitações
-Acção, proprietário, data e novo teste
+| Campo | Conteúdo esperado |
+|---|---|
+| Salvaguarda | Número, título, IG, classe de ativo e função de segurança. |
+| Escopo | Sistemas, unidades, locais, contas, dados e período. |
+| Critério | Texto oficial e procedimento de avaliação aplicável. |
+| Entradas | Populações, fontes, responsáveis, datas e validações. |
+| Operações | Etapas executadas para produzir medidas. |
+| Medidas e métricas | Contagens, listas, cobertura, exceções e interpretação. |
+| Evidências | Arquivos, consultas, capturas, registros e aprovações. |
+| Conclusão | Implementada, parcialmente implementada ou não implementada, com limitações. |
+| Ações | Responsável, prioridade, prazo, correção e reteste. |
 
 ## 30.2 Registro de achados e retestes
 
-* Campo** * Entrada**
---------------------------------------------------------------------------------------------------------------------------------------
-Critérios
-Condição e provas
-População afectada
-Risco e impacto
-Causa:
-Protecção provisória
-Correcção e proprietário
-Data limite
-• Procedimento de repetição
-Resultado final
+| ID | Salvaguarda | Condição | Risco | Responsável | Prazo | Estado | Evidência de reteste |
+|---|---|---|---|---|---|---|---|
+| EX-001 | 7.7 | Exemplo sintético de vulnerabilidade fora do prazo. | Exposição elevada. | Responsável fictício. | AAAA-MM-DD | Aberto | Pendente. |
 
-# # 30.3 Glossário
+## 30.3 Glossário
 
-* ** ** ** ** ** ** **
------------------------------------------------------------------------
-□ Classe de ativos □ Categoria afetada por uma Salvaguarda, como dispositivos, software, dados, rede, usuários ou documentação. □
-□ CIS Benchmark • Recomendações de configuração segura para uma tecnologia específica.
-Controle CIS □ Uma das 18 áreas de defesa amplas.
-CIS Salvaguarda □ Uma ação focada e implementável dentro de um controle.
-. Cobertura .. Parte da população aplicável na qual a Salvaguarda é devidamente implementada. □
-□ IG1 56 Higiene cibernética essencial
-□ IG2 □ IG1 mais 74 salvaguardas adicionais.
-. . . . . .
-□ Medir □ Contagem, lista, data, configuração ou resultado produzidos por operações de avaliação. □
-Cálculo ou interpretação construída a partir de medidas.
-• População – Conjunto completo de registros, ativos, pessoas, sistemas ou eventos aplicáveis.
-• Revisão do procedimento; avaliação manual da existência ou não de um processo necessário e que contenha elementos necessários. □
-Função de segurança .Govern, Identificar, Proteger, Detectar, Responder ou Recuperar mapeamento. .
+| Termo | Definição prática |
+|---|---|
+| Classe de ativo | Categoria afetada por uma Salvaguarda, como dispositivos, software, dados, redes, usuários ou documentação. |
+| CIS Benchmark | Recomendações de configuração segura para uma tecnologia específica. |
+| Controle CIS | Uma das 18 áreas amplas de defesa. |
+| Salvaguarda CIS | Ação específica e implementável dentro de um Controle. |
+| Cobertura | Parte da população aplicável na qual a Salvaguarda está adequadamente implementada. |
+| IG1 | Conjunto de 56 Salvaguardas de higiene cibernética essencial. |
+| IG2 | IG1 acrescido de 74 Salvaguardas para maior complexidade e risco. |
+| IG3 | Todas as 153 Salvaguardas, incluindo 23 adicionais para ambientes de maior risco. |
+| Medida | Contagem, lista, data, configuração ou resultado produzido pelas operações de avaliação. |
+| Métrica | Cálculo ou interpretação derivada de uma ou mais medidas. |
+| Revisão de procedimento | Avaliação manual da existência e suficiência de um processo documentado. |
+| Reteste | Nova avaliação realizada após a correção, utilizando critérios comparáveis e uma população atualizada. |
 
-# # 30.4 Índice de assunto
+## 30.4 Índice de assuntos
 
-**Sujeito** **Capítulo**
----------------------------
-Contas
-• Segurança da aplicação
-Inventário de activos 6
-• Registos de auditoria
-• Proteção de dados
-□ Evidências e medições
-Grupos de Implementação 2
-Resposta ao incidente .. 22 .
-Analistas júnior
-> Malware > 15
-Gestor
-Rede
-• Ferramentas de código aberto
-Testes de penetração
-Recuperação 16
-Os prestadores de serviços
-Inventário de software
-Formação
-Gestão da vulnerabilidade
+- Avaliação e medição: capítulos 4 e 30.
+- Configurações seguras: Controles 4 e 16.
+- Dados: Controle 3.
+- Evidências e métricas: capítulos 4, 27 e 30.
+- Grupos de Implementação: capítulo 2.
+- Identidades e acessos: Controles 5 e 6.
+- Inventários: Controles 1, 2, 3, 5, 12 e 15.
+- Monitoramento e logs: Controles 8 e 13.
+- Prestadores de serviços: Controle 15.
+- Recuperação e incidentes: Controles 11 e 17.
+- Vulnerabilidades: Controle 7.
 
 ## 30.5 Referências oficiais
 
-[<u>CIS Controls v8.1</u>](https://www.cisecurity.org/controls/v8-1)
+- CIS Controls v8.1: https://www.cisecurity.org/controls/v8-1
+- Lista dos CIS Controls: https://www.cisecurity.org/controls/cis-controls-list
+- Grupos de Implementação: https://www.cisecurity.org/controls/implementation-groups
+- CIS Controls Assessment Specification: https://www.cisecurity.org/controls/cis-controls-assessment-specification
 
-[<u>18 Lista de controlos CIS</u>](https://www.cisecurity.org/controls/cis-controls-list)
-
-[<u>Grupos de implementação</u>](https://www.cisecurity.org/controls/implementation-groups)
-
-[<u> Especificação de avaliação dos controlos</u>](https://www.cisecurity.org/controls/cis-controls-assessment-specification)
-
-[<u>Documentação da especificação de avaliação</u>](https://cas.docs.cisecurity.org/en/latest/)
-
-[<u>CIS Controls Navigator</u>](https://www.cisecurity.org/controls/cis-controls-navigator)
-
-[<u>CIS Controla mapeamentos e conformidade</u>](https://www.cisecurity.org/cybersecurity-tools/mapping-compliance/mapping-and-compliance-with-the-cis-controls)
-
-**Lembramento final:** Frameworks, mapeamentos, ferramentas, produtos, ameaças, leis, contratos e riscos organizacionais mudam. Confirmar os recursos atuais oficiais e as obrigações aplicáveis antes de uma implementação ou avaliação reais. □
-O que é que se passa?
+**Lembrete final:** Estruturas, mapeamentos, ferramentas, produtos, ameaças, leis, contratos e riscos organizacionais mudam. Confirme sempre os recursos oficiais atuais e as obrigações aplicáveis antes de implementar, avaliar ou publicar conclusões.

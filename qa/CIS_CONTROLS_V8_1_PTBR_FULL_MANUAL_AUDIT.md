@@ -8,11 +8,7 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 
 ## Summary
 
-- conversion box glyph: **21**
-- double heading marker: **5**
-- ellipsis-only table row: **1**
-- raw separator line: **5**
-- standalone numbered heading without hash: **41**
+- standalone numbered heading without hash: **39**
 - unclosed bold heading: **7**
 - Missing expected numbered sections: **0**
 
@@ -55,51 +51,17 @@ Target: `01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Con
 | standalone numbered heading without hash | 702 | `6. Responsabilidades de prestadores, incidentes, subcontratados e saída estão claras?` |
 | standalone numbered heading without hash | 703 | `7. Testes e exercícios são autorizados, adequadamente definidos e acompanhados até o reteste?` |
 | standalone numbered heading without hash | 704 | `8. Quais decisões de orçamento, pessoal ou prioridade bloqueiam a correção?` |
-| conversion box glyph | 752 | `□---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| standalone numbered heading without hash | 754 | `1. Crie uma empresa fictícia de 50 pessoas com laptops, servidores, serviços de nuvem, uma aplicação web, pessoal remoto e cinco fornecedores.` |
-| standalone numbered heading without hash | 756 | `2. Selecione IG1 e documentar três adições baseadas em risco do IG2 ou IG3.` |
-| standalone numbered heading without hash | 758 | `3. Build Enterprise-asset, software, dados, conta, sistema de autenticação, rede, fornecedor, aplicativo e log-source inventários.` |
-| standalone numbered heading without hash | 760 | `4. Use Nmap e osquery em um laboratório isolado para conciliar inventários de ativos e software.` |
-| standalone numbered heading without hash | 762 | `5. Use OpenSCAP ou Lynis em um host de laboratório; conclusões de configuração do documento, exceções, correções e reavaliação.` |
-| standalone numbered heading without hash | 764 | `6. Use Greenbone em alvos de laboratório aprovados; valide cobertura, achados, remediação e rescan.` |
-| standalone numbered heading without hash | 766 | `7. Use Wazuh ou Suricata para gerar e investigar um alerta de teste seguro.` |
-| standalone numbered heading without hash | 768 | `8. Use Trivy ou ZAP em um repositório de treinamento ou aplicação e corrigir registro e reteste.` |
-| standalone numbered heading without hash | 770 | `9. Escreva um teste de backup-restore e incidente registro de mesa.` |
-| standalone numbered heading without hash | 772 | `10. Crie cinco trabalhos CIS Assessment Specification com entradas, operações, medidas, métricas, listas de exceções e conclusões.` |
-| standalone numbered heading without hash | 774 | `11. Publicar apenas artefatos higienizados e afirmar claramente que o projeto é fictício e não uma avaliação formal CIS.` |
-| raw separator line | 777 | `----------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 778 | `Memorando de seleção □ Priorização e raciocínio de risco` |
-| conversion box glyph | 780 | `□ Guardar papel de trabalho ; Estrutura e evidência oficiais de medição` |
-| raw separator line | 792 | `------------------------------------------------------------------------------------------------------------------------------------------------------------` |
-| conversion box glyph | 793 | `□ 1–4 □ Framework, 18 Controlos, 153 Salvaguardas, IGs, classes de activos, funções` |
-| conversion box glyph | 793 | `□ 1–4 □ Framework, 18 Controlos, 153 Salvaguardas, IGs, classes de activos, funções` |
-| standalone numbered heading without hash | 803 | `29. Preparação da entrevista` |
-| double heading marker | 811 | `# # 29,2 O que é o IG1?` |
-| double heading marker | 815 | `# # 29.3 O IG1 se encaixa em todos os requisitos?` |
-| double heading marker | 839 | `# # 29.9 Perguntas para perguntar ao empregador` |
-| raw separator line | 877 | `--------------------------------------------------------------------------------------------------------------------------------------` |
-| double heading marker | 889 | `# # 30.3 Glossário` |
-| raw separator line | 892 | `-----------------------------------------------------------------------` |
-| conversion box glyph | 893 | `□ Classe de ativos □ Categoria afetada por uma Salvaguarda, como dispositivos, software, dados, rede, usuários ou documentação. □` |
-| conversion box glyph | 893 | `□ Classe de ativos □ Categoria afetada por uma Salvaguarda, como dispositivos, software, dados, rede, usuários ou documentação. □` |
-| conversion box glyph | 893 | `□ Classe de ativos □ Categoria afetada por uma Salvaguarda, como dispositivos, software, dados, rede, usuários ou documentação. □` |
-| conversion box glyph | 894 | `□ CIS Benchmark • Recomendações de configuração segura para uma tecnologia específica.` |
-| conversion box glyph | 895 | `Controle CIS □ Uma das 18 áreas de defesa amplas.` |
-| conversion box glyph | 896 | `CIS Salvaguarda □ Uma ação focada e implementável dentro de um controle.` |
-| conversion box glyph | 897 | `. Cobertura .. Parte da população aplicável na qual a Salvaguarda é devidamente implementada. □` |
-| conversion box glyph | 898 | `□ IG1 56 Higiene cibernética essencial` |
-| conversion box glyph | 899 | `□ IG2 □ IG1 mais 74 salvaguardas adicionais.` |
-| conversion box glyph | 899 | `□ IG2 □ IG1 mais 74 salvaguardas adicionais.` |
-| ellipsis-only table row | 900 | `. . . . . .` |
-| conversion box glyph | 901 | `□ Medir □ Contagem, lista, data, configuração ou resultado produzidos por operações de avaliação. □` |
-| conversion box glyph | 901 | `□ Medir □ Contagem, lista, data, configuração ou resultado produzidos por operações de avaliação. □` |
-| conversion box glyph | 901 | `□ Medir □ Contagem, lista, data, configuração ou resultado produzidos por operações de avaliação. □` |
-| conversion box glyph | 904 | `• Revisão do procedimento; avaliação manual da existência ou não de um processo necessário e que contenha elementos necessários. □` |
-| double heading marker | 907 | `# # 30.4 Índice de assunto` |
-| raw separator line | 910 | `---------------------------` |
-| conversion box glyph | 916 | `□ Evidências e medições` |
-| conversion box glyph | 947 | `**Lembramento final:** Frameworks, mapeamentos, ferramentas, produtos, ameaças, leis, contratos e riscos organizacionais mudam. Confirmar os recursos atuais oficiais e as obrigações aplicáveis antes de uma implementação ` |
-| unclosed bold heading | 947 | `**Lembramento final:** Frameworks, mapeamentos, ferramentas, produtos, ameaças, leis, contratos e riscos organizacionais mudam. Confirmar os recursos atuais oficiais e as obrigações aplicáveis antes de uma implementação ` |
+| standalone numbered heading without hash | 757 | `1. Selecione o IG1 e documente três acréscimos baseados em risco provenientes do IG2 ou IG3.` |
+| standalone numbered heading without hash | 758 | `2. Construa inventários de ativos empresariais, software, dados, contas, sistemas de autenticação, redes, prestadores de serviços, aplicações e fontes de logs.` |
+| standalone numbered heading without hash | 759 | `3. Utilize Nmap e osquery em um ambiente isolado para reconciliar inventários de ativos e software.` |
+| standalone numbered heading without hash | 760 | `4. Utilize OpenSCAP ou Lynis em um host de laboratório e registre achados de configuração, exceções, correções e nova avaliação.` |
+| standalone numbered heading without hash | 761 | `5. Utilize Greenbone em alvos aprovados; valide cobertura, achados, remediação e nova varredura.` |
+| standalone numbered heading without hash | 762 | `6. Utilize Wazuh ou Suricata para gerar e investigar um alerta de teste seguro.` |
+| standalone numbered heading without hash | 763 | `7. Utilize Trivy ou ZAP em um repositório de treinamento ou aplicação de laboratório; registre correção e reteste.` |
+| standalone numbered heading without hash | 764 | `8. Execute um teste documentado de restauração de backup e um exercício de mesa de resposta a incidentes.` |
+| standalone numbered heading without hash | 765 | `9. Crie cinco papéis de trabalho alinhados à CIS Controls Assessment Specification, incluindo entradas, operações, medidas, métricas, exceções e conclusões.` |
+| standalone numbered heading without hash | 766 | `10. Publique somente artefatos higienizados e declare claramente que o projeto é fictício e não constitui uma avaliação formal do CIS.` |
+| unclosed bold heading | 897 | `**Lembrete final:** Estruturas, mapeamentos, ferramentas, produtos, ameaças, leis, contratos e riscos organizacionais mudam. Confirme sempre os recursos oficiais atuais e as obrigações aplicáveis antes de implementar, av` |
 
 ## Publication rule
 

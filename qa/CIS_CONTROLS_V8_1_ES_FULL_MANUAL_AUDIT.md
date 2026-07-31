@@ -9,14 +9,14 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 ## Summary
 
 - ANTER corruption: **1**
-- Silencioso token: **13**
-- TEN token: **164**
-- arrow artifact: **14**
-- broken image marker: **2**
-- ellipsis table delimiter: **12**
-- tención token: **114**
-- Missing expected numbered sections: **3**
-  - # 12., # 17., # 21.
+- Silencioso token: **12**
+- TEN token: **140**
+- arrow artifact: **13**
+- broken image marker: **1**
+- ellipsis table delimiter: **10**
+- tención token: **97**
+- Missing expected numbered sections: **2**
+  - # 17., # 21.
 
 ## Findings
 
@@ -24,52 +24,6 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
 | ANTER corruption | 222 | `![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)` |
-| ellipsis table delimiter | 452 | `\|... \|` |
-| TEN token | 456 | `TEN 6.1 TEN Establezca un proceso de concesión de acceso \| Ponga en marcha un proceso repetible, de propiedad o control técnico para establecer un proceso de concesión de acceso, a continuación, verifique la cobertura y ` |
-| TEN token | 456 | `TEN 6.1 TEN Establezca un proceso de concesión de acceso \| Ponga en marcha un proceso repetible, de propiedad o control técnico para establecer un proceso de concesión de acceso, a continuación, verifique la cobertura y ` |
-| TEN token | 456 | `TEN 6.1 TEN Establezca un proceso de concesión de acceso \| Ponga en marcha un proceso repetible, de propiedad o control técnico para establecer un proceso de concesión de acceso, a continuación, verifique la cobertura y ` |
-| tención token | 456 | `TEN 6.1 TEN Establezca un proceso de concesión de acceso \| Ponga en marcha un proceso repetible, de propiedad o control técnico para establecer un proceso de concesión de acceso, a continuación, verifique la cobertura y ` |
-| TEN token | 457 | `\| 6.2 \| Establezca un proceso de revocación de acceso \| Ponga en marcha un proceso de repetición, propiedad o control técnico para establecer un proceso de revocación de acceso, a continuación, verifique cobertura y exce` |
-| tención token | 457 | `\| 6.2 \| Establezca un proceso de revocación de acceso \| Ponga en marcha un proceso de repetición, propiedad o control técnico para establecer un proceso de revocación de acceso, a continuación, verifique cobertura y exce` |
-| TEN token | 458 | `TEN 6.3 \| Require MFA for Externally-Exposed Applications TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para Aplicaciones Expuestas Externamente, a continuación, verifique cob` |
-| TEN token | 458 | `TEN 6.3 \| Require MFA for Externally-Exposed Applications TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para Aplicaciones Expuestas Externamente, a continuación, verifique cob` |
-| TEN token | 458 | `TEN 6.3 \| Require MFA for Externally-Exposed Applications TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para Aplicaciones Expuestas Externamente, a continuación, verifique cob` |
-| tención token | 458 | `TEN 6.3 \| Require MFA for Externally-Exposed Applications TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para Aplicaciones Expuestas Externamente, a continuación, verifique cob` |
-| TEN token | 459 | `\| 6.4 \| Requiere MFA para el acceso a redes remotas Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para acceso remoto a redes, a continuación, verifique cobertura y excepciones. te` |
-| tención token | 459 | `\| 6.4 \| Requiere MFA para el acceso a redes remotas Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para acceso remoto a redes, a continuación, verifique cobertura y excepciones. te` |
-| Silencioso token | 460 | `tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y e` |
-| TEN token | 460 | `tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y e` |
-| TEN token | 460 | `tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y e` |
-| tención token | 460 | `tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y e` |
-| tención token | 460 | `tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y e` |
-| TEN token | 461 | `\| 6.6 \| Establecer y mantener un inventario de sistemas de autenticación y autorización \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de sistemas de autentic` |
-| tención token | 461 | `\| 6.6 \| Establecer y mantener un inventario de sistemas de autenticación y autorización \| Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de sistemas de autentic` |
-| TEN token | 462 | `\| 6.7 \| Centralizar control de acceso Ponga en marcha un proceso repetible, de propiedad o control técnico para centralizar el control de acceso, a continuación, verifique cobertura y excepciones. tención Confirme alcanc` |
-| tención token | 462 | `\| 6.7 \| Centralizar control de acceso Ponga en marcha un proceso repetible, de propiedad o control técnico para centralizar el control de acceso, a continuación, verifique cobertura y excepciones. tención Confirme alcanc` |
-| TEN token | 463 | `\| 6.8 \| Definir y mantener el control de acceso basado en roles Ponga en marcha un proceso repetible, de propiedad o control técnico para definir y mantener el control de acceso basado en roles, a continuación, verifique` |
-| tención token | 463 | `\| 6.8 \| Definir y mantener el control de acceso basado en roles Ponga en marcha un proceso repetible, de propiedad o control técnico para definir y mantener el control de acceso basado en roles, a continuación, verifique` |
-| broken image marker | 471 | `■img src="media/image7.png" estilo="width:6.15in;height:3.14547in" alt="Cobertura completa y materia de remediación verificada más que producir informes de escaneo." /` |
-| ellipsis table delimiter | 476 | `\|... \|` |
-| TEN token | 480 | `\| 7.1 \| Establecer y mantener un proceso de gestión de vulnerabilidades \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de vulnerabilidades, a conti` |
-| tención token | 480 | `\| 7.1 \| Establecer y mantener un proceso de gestión de vulnerabilidades \| Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de vulnerabilidades, a conti` |
-| TEN token | 481 | `TEN 7.2 \| Establecer y mantener un proceso de rehabilitación \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de rehabilitación, a continuación, verificar cobe` |
-| TEN token | 481 | `TEN 7.2 \| Establecer y mantener un proceso de rehabilitación \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de rehabilitación, a continuación, verificar cobe` |
-| tención token | 481 | `TEN 7.2 \| Establecer y mantener un proceso de rehabilitación \| Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de rehabilitación, a continuación, verificar cobe` |
-| TEN token | 482 | `\| 7.3 \| Perform Automatizado Sistema Operativo Manejo de parche Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Operating System Patch Management, a continuación, verifique co` |
-| tención token | 482 | `\| 7.3 \| Perform Automatizado Sistema Operativo Manejo de parche Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Operating System Patch Management, a continuación, verifique co` |
-| TEN token | 483 | `\| 7.4  Perform Automated Application Patch Management Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Application Patch Management, a continuación, verifique cobertura y exce` |
-| tención token | 483 | `\| 7.4  Perform Automated Application Patch Management Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Application Patch Management, a continuación, verifique cobertura y exce` |
-| TEN token | 484 | `\| 7.5 \| Perform Automated Vulnerability Scans of Internal Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos ` |
-| TEN token | 484 | `\| 7.5 \| Perform Automated Vulnerability Scans of Internal Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos ` |
-| tención token | 484 | `\| 7.5 \| Perform Automated Vulnerability Scans of Internal Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos ` |
-| tención token | 484 | `\| 7.5 \| Perform Automated Vulnerability Scans of Internal Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos ` |
-| TEN token | 485 | `TEN 7.6 ANTE Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados ` |
-| TEN token | 485 | `TEN 7.6 ANTE Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados ` |
-| TEN token | 485 | `TEN 7.6 ANTE Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados ` |
-| tención token | 485 | `TEN 7.6 ANTE Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados ` |
-| TEN token | 486 | `\| 7.7 \| Remediate Detected Vulnerabilities ← Poner en marcha un proceso repetible, de propiedad o control técnico para remediar Vulnerabilidades Detectadas, luego verificar cobertura y excepciones. tención Confirme alcan` |
-| arrow artifact | 486 | `\| 7.7 \| Remediate Detected Vulnerabilities ← Poner en marcha un proceso repetible, de propiedad o control técnico para remediar Vulnerabilidades Detectadas, luego verificar cobertura y excepciones. tención Confirme alcan` |
-| tención token | 486 | `\| 7.7 \| Remediate Detected Vulnerabilities ← Poner en marcha un proceso repetible, de propiedad o control técnico para remediar Vulnerabilidades Detectadas, luego verificar cobertura y excepciones. tención Confirme alcan` |
 | ellipsis table delimiter | 495 | `\|... \|` |
 | TEN token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |
 | TEN token | 499 | `tención 8.1 \| Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los regis` |

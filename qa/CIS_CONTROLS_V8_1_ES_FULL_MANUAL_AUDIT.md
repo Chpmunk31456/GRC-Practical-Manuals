@@ -23,7 +23,7 @@ Target: `01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls
 | Category | Line | Excerpt |
 |---|---:|---|
 | ellipsis table delimiter | 16 | `\|... \|` |
-| ANTER corruption | 222 | `<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas." />` |
+| ANTER corruption | 222 | `![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)` |
 | broken image marker | 335 | `■img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="Descubrimiento, reconciliación, respuesta y revisión mantienen a las poblaciones fundacionales actuales."` |
 | ellipsis table delimiter | 340 | `\|... \|` |
 | TEN token | 344 | `\| 1.1 \| Establecer y Mantener Inventario de Activos Empresarios detallados \| Poner en marcha un proceso de repetibilidad, propiedad o control técnico para establecer y mantener inventario de activos institucionales detal` |

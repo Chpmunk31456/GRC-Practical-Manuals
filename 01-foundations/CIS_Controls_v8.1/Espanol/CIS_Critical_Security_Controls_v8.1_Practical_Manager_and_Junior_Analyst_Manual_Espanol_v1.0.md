@@ -190,7 +190,7 @@ Contenido de la palabra:** Este documento contiene un campo de mesa de contenido
 
 *La versión vigente, su estructura, propósito y limitaciones.*
 
-<img src="media/image1.png" style="width:6.15in;height:3.94164in" alt="Los Controles organizan 153 Salvaguardas en un programa defensivo práctico." />
+![Los Controles organizan 153 Salvaguardas en un programa defensivo práctico.](media/image1.png)
 
 Figura 1. Los 18 Controles Críticos de Seguridad de CIS
 
@@ -219,7 +219,7 @@ Figura 1. Los 18 Controles Críticos de Seguridad de CIS
 
 *Cómo IG1, IG2 e IG3 ayudan a las organizaciones a elegir un punto de partida realista.*
 
-<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas." />
+![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)
 
 Figura 2. Progresión de los Grupos de Implementación
 
@@ -272,7 +272,7 @@ Figura 2. Progresión de los Grupos de Implementación
 
 *Un método repetible para determinar si las Salvaguardas están implementadas.*
 
-<img src="media/image3.png" style="width:6.15in;height:2.87986in" alt="La especificación oficial avanza desde entradas de datos definidas hasta operaciones, medidas, métricas y revisión de procedimientos." />
+![La especificación oficial avanza desde entradas de datos definidas hasta operaciones, medidas, métricas y revisión de procedimientos.](media/image3.png)
 
 Figura 3. Estructura de medición de las Salvaguardas de CIS
 
@@ -683,7 +683,7 @@ Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especifica
 
 *Las nueve Salvaguardas, su significado en lenguaje claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image9.png" style="width:6.15in;height:3.12625in" alt="Los roles preparados, los mecanismos de reporte, la comunicación, los ejercicios y las revisiones reducen el impacto de los incidentes." />
+![Los roles preparados, los mecanismos de reporte, la comunicación, los ejercicios y las revisiones reducen el impacto de los incidentes.](media/image9.png)
 
 Figura 9. Preparación para la respuesta a incidentes
 
@@ -782,7 +782,7 @@ Utilice la guía oficial de CIS Controls v8.1 y la Especificación para la Evalu
 
 *Una ruta práctica hacia trabajos de controles, vulnerabilidades, aseguramiento, GRC y operaciones de seguridad.*
 
-<img src="media/image10.png" style="width:6.15in;height:2.99481in" alt="Aprender el marco, mapear Salvaguardas, medir evidencia, reportar brechas y construir un portafolio honesto." />
+![Aprenda el marco, relacione las Salvaguardas, mida la evidencia, informe las brechas y construya un portafolio honesto.](media/image10.png)
 
 Figura 10. Ruta para analistas junior de Controles CIS
 

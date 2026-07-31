@@ -1,4 +1,4 @@
-name: Audit ISO 27001 and 27002 English master baseline
+name: Correct and audit ISO 27001 and 27002 English master
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  audit:
+  correct-and-audit:
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch
@@ -25,21 +25,29 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
+      - name: Correct Word table-of-contents label
+        run: python3 qa/tools/correct_iso_27001_27002_english_word_toc_label.py
+
       - name: Run ISO English master baseline audit
         run: python3 qa/tools/audit_iso_27001_27002_english_master.py
 
-      - name: Commit audit report
+      - name: Require baseline PASS
+        run: grep -q '^\*\*PASS\*\*$' qa/ISO_IEC_27001_27002_ENGLISH_MASTER_AUDIT.md
+
+      - name: Commit bounded correction and audit
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add qa/ISO_IEC_27001_27002_ENGLISH_MASTER_AUDIT.md
+          git add \
+            02-management-systems/ISO_IEC_27001_27002/English_Source_ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_v1.0.md \
+            qa/ISO_IEC_27001_27002_ENGLISH_MASTER_AUDIT.md
           if git diff --cached --quiet; then
-            echo 'No audit report changes to commit.'
+            echo 'No bounded correction changes to commit.'
             exit 0
           fi
-          git commit -m 'Audit ISO 27001 and 27002 English master baseline'
+          git commit -m 'Correct and audit ISO 27001 and 27002 English master'
           for attempt in 1 2 3; do
             if git push origin HEAD:production/multilingual-grc-editions; then
               exit 0

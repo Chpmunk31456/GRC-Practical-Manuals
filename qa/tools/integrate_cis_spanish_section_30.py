@@ -12,6 +12,14 @@ matches = list(re.finditer(r'^#\s*30\.\s*Plantillas,\s*Glosario,\s*Índice\s*y\s
 if len(matches) != 1:
     raise SystemExit(f'Expected exactly one Section 30 boundary; found {len(matches)}')
 
+# Repair the single malformed cover-summary table delimiter as part of this
+# bounded residual-cleanup batch.
+if text.count('|... |') != 1:
+    raise SystemExit(f'Expected exactly one remaining ellipsis delimiter; found {text.count("|... |")}')
+text = text.replace('|... |', '|---|', 1)
+
+# Recalculate the Section 30 boundary after the bounded front-matter edit.
+matches = list(re.finditer(r'^#\s*30\.\s*Plantillas,\s*Glosario,\s*Índice\s*y\s*Referencias\s*$', text, flags=re.MULTILINE | re.IGNORECASE))
 new_text = text[:matches[0].start()] + replacement
 block = new_text[matches[0].start():]
 
@@ -33,4 +41,4 @@ for url in [
         raise SystemExit(f'Expected exactly one official reference: {url}')
 
 TARGET.write_text(new_text, encoding='utf-8')
-print('Integrated reviewed CIS Spanish Section 30')
+print('Integrated reviewed CIS Spanish Section 30 and repaired cover delimiter')

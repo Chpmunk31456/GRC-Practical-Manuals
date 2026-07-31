@@ -21,11 +21,11 @@ PATTERNS = {
 
 REQUIRED_SECTIONS = [re.compile(rf"^#\s+{n}\.\s+", re.MULTILINE) for n in range(1, 31)]
 REQUIRED_FACTS = {
-    "18 Controls": "18 Controls",
-    "153 Safeguards": "153 Safeguards",
-    "IG1 count 56": "IG1 | 56",
-    "IG2 additional count 74": "IG2 | IG1 + 74",
-    "IG3 total 153": "IG3 | IG1 + IG2 + 23 = 153",
+    "18 Controls": re.compile(r"\b18\s+Controls\b"),
+    "153 Safeguards": re.compile(r"\b153\s+Safeguards\b"),
+    "IG1 count 56": re.compile(r"^\|\s*IG1\s*\|\s*56\s*\|", re.MULTILINE),
+    "IG2 additional count 74": re.compile(r"^\|\s*IG2\s*\|\s*IG1\s*\+\s*74\s*\|", re.MULTILINE),
+    "IG3 total 153": re.compile(r"^\|\s*IG3\s*\|\s*IG1\s*\+\s*IG2\s*\+\s*23\s*=\s*153\s*\|", re.MULTILINE),
 }
 
 
@@ -47,7 +47,7 @@ def main() -> int:
 
     missing_sections = [str(i) for i, pattern in enumerate(REQUIRED_SECTIONS, start=1) if not pattern.search(text)]
     duplicate_sections = [str(i) for i, pattern in enumerate(REQUIRED_SECTIONS, start=1) if len(pattern.findall(text)) != 1]
-    missing_facts = [label for label, marker in REQUIRED_FACTS.items() if marker not in text]
+    missing_facts = [label for label, pattern in REQUIRED_FACTS.items() if not pattern.search(text)]
 
     status = "PASS" if not findings and not missing_sections and not duplicate_sections and not missing_facts else "REVIEW REQUIRED"
     report = [

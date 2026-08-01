@@ -10,12 +10,12 @@
         "english_fragments": 3
       },
       "es-419": {
-        "chars": 1673,
+        "chars": 1652,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 1,
-        "length_ratio": 0.909,
+        "length_ratio": 0.897,
         "blockers": [
           "residual_english"
         ],
@@ -45,14 +45,16 @@
         "english_fragments": 1
       },
       "es-419": {
-        "chars": 1939,
-        "pipe_rows": 2,
+        "chars": 1953,
+        "pipe_rows": 3,
         "images": 0,
-        "bad_hits": 0,
+        "bad_hits": 2,
         "english_fragments": 0,
-        "length_ratio": 0.784,
-        "blockers": [],
-        "status": "PASS"
+        "length_ratio": 0.79,
+        "blockers": [
+          "corruption_tokens"
+        ],
+        "status": "FAIL"
       },
       "pt-BR": {
         "chars": 146,
@@ -111,13 +113,14 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 1825,
-        "pipe_rows": 4,
+        "chars": 1837,
+        "pipe_rows": 5,
         "images": 1,
-        "bad_hits": 0,
-        "english_fragments": 1,
-        "length_ratio": 0.793,
+        "bad_hits": 5,
+        "english_fragments": 2,
+        "length_ratio": 0.798,
         "blockers": [
+          "corruption_tokens",
           "residual_english"
         ],
         "status": "FAIL"
@@ -146,12 +149,12 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 3675,
+        "chars": 3738,
         "pipe_rows": 16,
         "images": 1,
-        "bad_hits": 2,
+        "bad_hits": 11,
         "english_fragments": 1,
-        "length_ratio": 1.754,
+        "length_ratio": 1.784,
         "blockers": [
           "corruption_tokens",
           "residual_english"
@@ -417,12 +420,12 @@
         "english_fragments": 2
       },
       "es-419": {
-        "chars": 11642,
+        "chars": 11636,
         "pipe_rows": 41,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 1,
-        "length_ratio": 1.04,
+        "length_ratio": 1.039,
         "blockers": [
           "residual_english"
         ],
@@ -553,14 +556,15 @@
         "english_fragments": 0
       },
       "es-419": {
-        "chars": 1187,
-        "pipe_rows": 0,
+        "chars": 1193,
+        "pipe_rows": 1,
         "images": 0,
-        "bad_hits": 0,
+        "bad_hits": 1,
         "english_fragments": 0,
-        "length_ratio": 0.919,
+        "length_ratio": 0.924,
         "blockers": [
-          "table_structure_drift"
+          "table_structure_drift",
+          "corruption_tokens"
         ],
         "status": "FAIL"
       },
@@ -814,14 +818,14 @@
         "english_fragments": 2
       },
       "es-419": {
-        "chars": 2266,
-        "pipe_rows": 3,
+        "chars": 2308,
+        "pipe_rows": 4,
         "images": 0,
-        "bad_hits": 0,
+        "bad_hits": 5,
         "english_fragments": 0,
-        "length_ratio": 0.903,
+        "length_ratio": 0.92,
         "blockers": [
-          "table_structure_drift"
+          "corruption_tokens"
         ],
         "status": "FAIL"
       },
@@ -911,12 +915,12 @@
         "english_fragments": 6
       },
       "es-419": {
-        "chars": 3457,
-        "pipe_rows": 24,
+        "chars": 3804,
+        "pipe_rows": 26,
         "images": 0,
-        "bad_hits": 1,
+        "bad_hits": 18,
         "english_fragments": 1,
-        "length_ratio": 0.529,
+        "length_ratio": 0.582,
         "blockers": [
           "corruption_tokens",
           "residual_english"

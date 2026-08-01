@@ -1,10 +1,6 @@
 name: Recover ISO Spanish reviewed baseline
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
   workflow_dispatch:
 
 permissions:
@@ -22,36 +18,7 @@ jobs:
         with:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
-      - name: Fetch reviewed recovery branch
-        run: git fetch origin fix/publication-readiness-batch-1-spanish
-      - name: Quarantine current source and restore exact reviewed baseline
+      - name: Stop obsolete recovery workflow
         run: |
-          set -euo pipefail
-          target='02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md'
-          quarantine='qa/recovery/ISO_IEC_27001_27002_ES_PRE_RECOVERY_2026-08-01.md'
-          mkdir -p qa/recovery
-          cp "$target" "$quarantine"
-          git show origin/fix/publication-readiness-batch-1-spanish:"$target" > "$target"
-          test "$(git hash-object "$target")" = '1dec4df93c0ce5c279d958d56ed23553535c0170'
-      - name: Run strengthened fail-closed localized-source audit
-        id: audit
-        continue-on-error: true
-        run: python3 qa/tools/audit_iso_localized_sources.py
-      - name: Commit recovered source and audit evidence
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            '02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
-            qa/recovery/ISO_IEC_27001_27002_ES_PRE_RECOVERY_2026-08-01.md \
-            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
-            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Recover ISO Spanish source from reviewed baseline'
-            git push origin HEAD:production/multilingual-grc-editions
-          fi
-      - name: Enforce audit result
-        if: steps.audit.outcome != 'success'
-        run: |
-          echo 'Recovered baseline remains fail-closed; see committed audit evidence.'
-          exit 1
+          echo 'This one-time recovery workflow is retained for audit history but disabled from pull-request triggers.'
+          echo 'Do not restore the superseded Spanish baseline over later repairs.'

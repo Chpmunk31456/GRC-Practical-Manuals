@@ -8,7 +8,7 @@
   },
   "docx_zip_integrity": "PASS",
   "pdf_searchable_text": "PASS",
-  "checksummed_files": 9,
+  "checksummed_files": 12,
   "human_review_limitations": [
     "Automated checks do not replace legal, regulatory, standards, or formal audit review.",
     "Automated checks do not replace assistive-technology testing.",

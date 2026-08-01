@@ -1,6 +1,6 @@
 # GRC Templates and Tools
 
-This section contains practical templates, checklists, worksheets, registers, trackers, and control-mapping resources that support governance, risk, compliance, audit readiness, cybersecurity, privacy, resilience, and third-party risk programs.
+This section contains practical templates, checklists, worksheets, registers, trackers, scorecards, and control-mapping resources that support governance, risk, compliance, audit readiness, cybersecurity, privacy, resilience, and third-party risk programs.
 
 ## Published Resources
 
@@ -38,25 +38,15 @@ The publication package includes six controlled English chapters, English Markdo
 
 [Open the completed manual and toolkit](./Compliance_Obligations_and_Regulatory_Change/)
 
-The publication package includes:
-
-- Six controlled English chapters
-- English Markdown, DOCX, and searchable PDF
-- A 48-field compliance obligations register
-- A 42-field regulatory change intake and assessment log
-- A 38-field regulatory change implementation plan
-- A 36-field applicability review record
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Assembly reports, automated QA records, and SHA-256 checksums
-
-The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
-
-## Next Planned Resource
+The publication package includes six controlled English chapters, English Markdown, DOCX and searchable PDF, a 48-field compliance obligations register, a 42-field regulatory change intake and assessment log, a 38-field regulatory change implementation plan, a 36-field applicability review record, Latin American Spanish and Brazilian Portuguese publication candidates, assembly reports, automated QA records, and SHA-256 checksums.
 
 ### GRC Metrics and Executive Reporting Toolkit
 
-Planned resources include metric governance, KPI and KRI definitions, data-quality controls, threshold and trend analysis, executive scorecards, board reporting, narrative interpretation, action tracking, and assurance boundaries.
+[Open the completed manual and toolkit](./GRC_Metrics_and_Executive_Reporting/)
+
+The publication package includes six controlled English chapters, English Markdown, DOCX and searchable PDF, a 40-field metric definition register, a 36-field KPI/KRI review worksheet, a 34-field executive GRC scorecard, a 28-field metrics action and decision tracker, Latin American Spanish and Brazilian Portuguese publication candidates, authoritative-source revalidation records, automated QA reports, and SHA-256 checksums.
+
+The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
 ## Intended Audience
 
@@ -75,7 +65,7 @@ Planned resources include metric governance, KPI and KRI definitions, data-quali
 
 These resources are educational and planning tools. They must be adapted to the organization’s industry, location, systems, data, risk profile, legal obligations, regulatory requirements, contractual commitments, and business objectives.
 
-Templates alone do not establish compliance or prove that controls are designed or operating effectively.
+Templates, metrics, dashboards, and scorecards alone do not establish compliance or prove that controls are designed or operating effectively.
 
 ## Author
 
@@ -83,7 +73,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.6 — August 2026
+Version 1.7 — August 2026
 
 ## License
 
@@ -91,6 +81,6 @@ Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
 
 ## Disclaimer
 
-Use these templates as starting points. They do not replace legal, regulatory, audit, accounting, privacy, compliance, or cybersecurity advice.
+Use these templates as starting points. They do not replace legal, regulatory, audit, accounting, privacy, compliance, cybersecurity, statistical, or data-governance advice.
 
 [Return to the Main Repository](../README.md)

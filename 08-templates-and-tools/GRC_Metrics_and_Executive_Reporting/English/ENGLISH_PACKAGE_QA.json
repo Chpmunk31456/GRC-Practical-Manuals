@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "tool_field_counts": {
+    "Metric_Definition_Register.csv": 40,
+    "KPI_KRI_Review_Worksheet.csv": 36,
+    "Executive_GRC_Scorecard.csv": 34,
+    "Metrics_Action_and_Decision_Tracker.csv": 28
+  },
+  "checksummed_files": 9,
+  "human_review_limitations": [
+    "Automated validation does not establish compliance, security, control effectiveness, audit assurance, or business performance.",
+    "Native-language, legal, regulatory, statistical, accessibility, and page-by-page human review are not represented."
+  ]
+}

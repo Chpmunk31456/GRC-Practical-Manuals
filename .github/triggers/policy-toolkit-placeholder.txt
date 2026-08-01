@@ -1,1 +1,0 @@
-Policy Template Toolkit workstream initialized after release 1.6.

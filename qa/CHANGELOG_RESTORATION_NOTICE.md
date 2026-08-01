@@ -1,0 +1,1 @@
+The version 1.11 release entry is preserved separately while the root changelog is restored to its complete pre-edit blob. The publication PR remains blocked until the entry is safely consolidated without removing prior release history.

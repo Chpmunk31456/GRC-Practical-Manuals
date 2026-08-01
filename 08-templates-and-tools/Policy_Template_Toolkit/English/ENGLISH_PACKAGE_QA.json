@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "policy_templates": 10,
+  "editable_docx_templates": 10,
+  "tool_field_counts": {
+    "Policy_Register.csv": 25,
+    "Policy_Exception_Tracker.csv": 25,
+    "Policy_Adoption_and_Review_Checklist.csv": 33
+  },
+  "template_placeholder_counts": {
+    "01_Information_Security_Policy_Template.md": 18,
+    "02_Access_Control_Policy_Template.md": 12,
+    "03_Acceptable_Use_Policy_Template.md": 12,
+    "04_Incident_Response_Policy_Template.md": 12,
+    "05_Business_Continuity_and_Disaster_Recovery_Policy_Template.md": 11,
+    "06_Third_Party_and_Vendor_Risk_Policy_Template.md": 9,
+    "07_Data_Protection_and_Privacy_Policy_Template.md": 12,
+    "08_Change_Management_Policy_Template.md": 10,
+    "09_Vulnerability_and_Patch_Management_Policy_Template.md": 12,
+    "10_Logging_and_Monitoring_Policy_Template.md": 7
+  },
+  "combined_docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "checksummed_files": 28,
+  "human_review_limitations": [
+    "Templates require organization-specific legal, regulatory, privacy, labor, records, and contractual review.",
+    "Automated checks do not replace native-language editorial review.",
+    "Automated checks do not replace assistive-technology or full page-by-page visual testing."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "chapter_count": 4,
+  "template_count": 10,
+  "source_count": 14,
+  "sources": [
+    {
+      "path": "chapters/01_Policy_Governance_and_Document_Hierarchy.md",
+      "sha256": "f3276d0ef5d8b073b08908a81ca3bfc99184d94b5c9ee5d93e09872fe19d44bf",
+      "words": 516
+    },
+    {
+      "path": "chapters/02_Template_Adaptation_Approval_and_Publication.md",
+      "sha256": "7d5f35a54ae2f0e35698136c5f8e3bdd52067574d70da6f17a752da445f3e95e",
+      "words": 428
+    },
+    {
+      "path": "chapters/03_Implementation_Evidence_Training_and_Monitoring.md",
+      "sha256": "98e31771d9f77814b5b7c00885f931fd5e649e169fe51bf054a489253a3facab",
+      "words": 351
+    },
+    {
+      "path": "chapters/04_Exceptions_Review_Records_and_Lifecycle.md",
+      "sha256": "0fca24de57bcaeb0594e1be8b9028f5d7ac3692e1bbc70923b5726c35e57483b",
+      "words": 429
+    },
+    {
+      "path": "templates/01_Information_Security_Policy_Template.md",
+      "sha256": "33053b7d13d20f79c51fdbac5a975198794fef853526cdf0026b9cdf4ea8fef1",
+      "words": 479
+    },
+    {
+      "path": "templates/02_Access_Control_Policy_Template.md",
+      "sha256": "9ba3d27cc4dd049fc96380bff97489a7b94d6cc667d6869c9081636ec1c71bc4",
+      "words": 412
+    },
+    {
+      "path": "templates/03_Acceptable_Use_Policy_Template.md",
+      "sha256": "d432e168e5b0f64affa3330b10ea1ab9150da96b796cc4bb29299123841e0d25",
+      "words": 433
+    },
+    {
+      "path": "templates/04_Incident_Response_Policy_Template.md",
+      "sha256": "be6c72d4942f5c0743c6eb2ce364bfa960879857d430802371cca5f177c01298",
+      "words": 352
+    },
+    {
+      "path": "templates/05_Business_Continuity_and_Disaster_Recovery_Policy_Template.md",
+      "sha256": "161f4f4bd1222c5d723b513595e22c28e193c033304727ead51a9607beb83eb6",
+      "words": 354
+    },
+    {
+      "path": "templates/06_Third_Party_and_Vendor_Risk_Policy_Template.md",
+      "sha256": "cb2ae5cb9d3117e502d5b4a120da7e069ea31823846b9ee1348cf84410dcd190",
+      "words": 391
+    },
+    {
+      "path": "templates/07_Data_Protection_and_Privacy_Policy_Template.md",
+      "sha256": "ad912eb1459f249a1aa673b84d5a8979cbf10634bb4a36f42d35c52ee910bba4",
+      "words": 489
+    },
+    {
+      "path": "templates/08_Change_Management_Policy_Template.md",
+      "sha256": "082b8d59e6f58a199cd378ced67ac6b49dc58ee5f163396495268e7973e75f2a",
+      "words": 400
+    },
+    {
+      "path": "templates/09_Vulnerability_and_Patch_Management_Policy_Template.md",
+      "sha256": "e3c65016c7882cb43fd974d971a4300a8e3d1cd0f9f78d5009e6c5535ff15d22",
+      "words": 422
+    },
+    {
+      "path": "templates/10_Logging_and_Monitoring_Policy_Template.md",
+      "sha256": "864b981fd3c565a543aa8f7f4a3e586f7196a8e23fc19d03fcf5235f136610b6",
+      "words": 467
+    }
+  ],
+  "master": "English/GRC_Policy_Template_Toolkit_English_v1.0.md",
+  "master_sha256": "c65ab8d6373b3afb4e30b5f508ae7da5295d9147d0bed8ff5af597df06f9080a",
+  "master_words": 6017
+}

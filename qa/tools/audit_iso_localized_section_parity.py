@@ -10,6 +10,7 @@ OUTJ=Path('qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.json')
 OUTM=Path('qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md')
 BAD=re.compile(r'\b(?:Silencioso|TEN(?:CIÓN|ENCIA)?|tención|La inmortalidad)\b|\|\. \||\b(?:Plain signification|Purpose|Shows root cause|Fulfillment of a requirement)\b',re.I)
 HEAD=re.compile(r'^#\s+(\d+)\.\s+(.+)$',re.M)
+ENGLISH_FRAGMENT=re.compile(r'\b(?:Purpose|Evidence|Management Review|Statement of Applicability|People controls|Foundations)\b')
 def split(text):
  m=list(HEAD.finditer(text)); d={}
  for i,x in enumerate(m):
@@ -17,7 +18,7 @@ def split(text):
  return d
 def metrics(s):
  lines=s.splitlines()
- return {'chars':len(s),'pipe_rows':sum(x.count('|')>=2 for x in lines),'images':len(re.findall(r'media/image\d+\.png',s,re.I)),'bad_hits':len(BAD.findall(s)),'english_fragments':sum(bool(re.search(r'\b(?:Purpose|Control|Evidence|Management Review|Statement of Applicability|People controls|Foundations)\b',x)) for x in lines)}
+ return {'chars':len(s),'pipe_rows':sum(x.count('|')>=2 for x in lines),'images':len(re.findall(r'media/image\d+\.png',s,re.I)),'bad_hits':len(BAD.findall(s)),'english_fragments':sum(bool(ENGLISH_FRAGMENT.search(x)) for x in lines)}
 texts={k:p.read_text(encoding='utf-8') for k,p in FILES.items()}; secs={k:split(v) for k,v in texts.items()}; rows=[]
 for n in range(1,29):
  e=metrics(secs['en'].get(n,'')); row={'section':n,'en':e}

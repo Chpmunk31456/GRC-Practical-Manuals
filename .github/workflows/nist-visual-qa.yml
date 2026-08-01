@@ -1,0 +1,67 @@
+name: NIST CSF localized visual QA assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/nist-visual-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render-figure-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install rendering tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Render tiny figure-page thumbnails
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p qa/nist_visual_qa_tiny
+          process_pdf() {
+            lang="$1"
+            pdf="$2"
+            prefix="$3"
+            total=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+            pages=""
+            for p in $(seq 1 "$total"); do
+              text=$(pdftotext -f "$p" -l "$p" "$pdf" - 2>/dev/null || true)
+              if printf '%s' "$text" | grep -Eqi 'Figura[[:space:]]+[1-6][\.:]'; then
+                pages="$pages $p"
+              fi
+            done
+            pages=$(printf '%s\n' "$pages" | xargs -n1 | awk '!seen[$0]++' | xargs)
+            test -n "$pages"
+            printf '%s\n' "$pages" > "qa/nist_visual_qa_tiny/${prefix}_pages.txt"
+            for p in $pages; do
+              pdftoppm -f "$p" -l "$p" -singlefile -jpeg -r 72 -jpegopt quality=45 "$pdf" "qa/nist_visual_qa_tiny/${prefix}_page_${p}" >/dev/null 2>&1
+              convert "qa/nist_visual_qa_tiny/${prefix}_page_${p}.jpg" -resize 320x440\> -quality 35 "qa/nist_visual_qa_tiny/${prefix}_page_${p}.jpg"
+            done
+          }
+          process_pdf "Spanish" \
+            "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf" \
+            "es"
+          process_pdf "Portuguese" \
+            "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf" \
+            "pt"
+
+      - name: Commit tiny QA assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/nist_visual_qa_tiny
+          git commit -m 'Add tiny NIST visual QA page thumbnails'
+          git push origin HEAD:production/multilingual-grc-editions

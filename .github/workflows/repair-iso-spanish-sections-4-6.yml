@@ -1,0 +1,56 @@
+name: Repair ISO Spanish sections 4-6
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'qa/requests/TRIGGER_ISO_SPANISH_SECTIONS_4_6.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-iso-spanish-sections-4-6
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+      - name: Apply bounded Spanish sections 4-6 repair
+        run: python3 qa/tools/repair_iso_spanish_sections_4_6_structural.py
+      - name: Run strengthened localized-source audit
+        id: audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_sources.py
+      - name: Run section-level parity audit
+        id: parity
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_section_parity.py
+      - name: Commit source and evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Repair ISO Spanish sections 4-6 structure'
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+      - name: Enforce remaining blockers
+        if: steps.audit.outcome != 'success' || steps.parity.outcome != 'success'
+        run: |
+          echo 'ISO localized source remains fail-closed; see committed evidence.'
+          exit 1

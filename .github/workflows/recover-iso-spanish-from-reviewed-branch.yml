@@ -1,0 +1,24 @@
+name: Recover ISO Spanish reviewed baseline
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recover-iso-spanish-reviewed-baseline
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+      - name: Stop obsolete recovery workflow
+        run: |
+          echo 'This one-time recovery workflow is retained for audit history but disabled from pull-request triggers.'
+          echo 'Do not restore the superseded Spanish baseline over later repairs.'

@@ -1,0 +1,78 @@
+name: Launch NIST CSF localized graphics production
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/launch-nist-integration.yml'
+      - 'production/NIST_GRAPHICS_LAUNCH.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-commit-graphics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Configure Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install graphics dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
+      - name: Generate localized graphics and update Markdown
+        run: python scripts/generate_nist_csf_localized_graphics.py
+
+      - name: Verify localized graphics
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('01-foundations/NIST_CSF_2')
+          files = (
+              sorted(root.glob('Espanol/media/image[1-6]_es-419.png'))
+              + sorted(root.glob('Portugues_BR/media/image[1-6]_pt-BR.png'))
+          )
+          assert len(files) == 12, f'Expected 12 localized PNGs, found {len(files)}: {files}'
+          for path in files:
+              with Image.open(path) as image:
+                  assert image.size == (1800, 1000), (path, image.size)
+                  assert image.mode == 'RGB', (path, image.mode)
+          print('Verified 12 localized PNG graphics at 1800x1000 RGB.')
+          PY
+
+      - name: Commit graphics to production branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            01-foundations/NIST_CSF_2/Espanol/media \
+            01-foundations/NIST_CSF_2/Portugues_BR/media \
+            01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md \
+            01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md
+          if git diff --cached --quiet; then
+            echo 'No graphics changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Integrate localized NIST CSF graphics'
+          git pull --rebase origin production/multilingual-grc-editions
+          git push origin HEAD:production/multilingual-grc-editions

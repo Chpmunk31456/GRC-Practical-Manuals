@@ -1,0 +1,57 @@
+name: Analyze main-production reconciliation conflicts
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/triggers/analyze-main-production-conflicts.md'
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Analyze merge conflicts without changing branches
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main production/multilingual-grc-editions
+          set +e
+          git merge --no-commit --no-ff origin/main
+          rc=$?
+          set -e
+          echo "merge_exit_code=$rc"
+          echo '--- CONFLICT FILES BEGIN ---'
+          git diff --name-only --diff-filter=U | tee /tmp/conflicts.txt
+          echo '--- CONFLICT FILES END ---'
+          echo "conflict_count=$(wc -l < /tmp/conflicts.txt)"
+          {
+            echo '# Main / Production Conflict Analysis'
+            echo
+            echo "- Production: $(git rev-parse HEAD)"
+            echo "- Main: $(git rev-parse origin/main)"
+            echo "- Merge exit code: $rc"
+            echo "- Conflict count: $(wc -l < /tmp/conflicts.txt)"
+            echo
+            echo '## Conflict files'
+            echo
+            sed 's/^/- `/' /tmp/conflicts.txt | sed 's/$/`/'
+          } > /tmp/main-production-conflicts.md
+          git merge --abort 2>/dev/null || true
+
+      - name: Upload conflict analysis
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: main-production-conflict-analysis
+          path: /tmp/main-production-conflicts.md
+          if-no-files-found: error

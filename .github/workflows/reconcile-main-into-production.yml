@@ -1,0 +1,62 @@
+name: Reconcile main into production
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/triggers/reconcile-main-into-production.md'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reconcile-main-into-production
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Merge main with bounded conflict policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main production/multilingual-grc-editions
+          set +e
+          git merge --no-commit --no-ff origin/main
+          rc=$?
+          set -e
+          if [ "$rc" -ne 0 ]; then
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            echo "Resolving ${#conflicts[@]} conflicts."
+            for path in "${conflicts[@]}"; do
+              case "$path" in
+                .github/workflows/*)
+                  git checkout --theirs -- "$path"
+                  ;;
+                *)
+                  git checkout --ours -- "$path"
+                  ;;
+              esac
+              git add -- "$path"
+            done
+          fi
+          test -z "$(git diff --name-only --diff-filter=U)"
+          git commit -m 'Reconcile main control plane into validated production branch'
+          git push origin HEAD:production/multilingual-grc-editions
+
+      - name: Verify reconciliation ancestry
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor origin/main HEAD
+          git merge-base --is-ancestor origin/production/multilingual-grc-editions HEAD || true
+          echo "reconciled_sha=$(git rev-parse HEAD)"

@@ -1,0 +1,46 @@
+name: Repair ISO Spanish recovered baseline
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-iso-spanish-recovered-baseline
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+      - name: Apply recovered-baseline cleanup batch 01
+        run: python3 qa/tools/repair_iso_spanish_recovered_baseline_batch_01.py
+      - name: Run strengthened fail-closed localized-source audit
+        id: audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_sources.py
+      - name: Commit repaired Spanish source and audit evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Apply ISO Spanish recovered-baseline cleanup batch 01'
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+      - name: Enforce audit result
+        if: steps.audit.outcome != 'success'
+        run: |
+          echo 'ISO localized-source audit remains fail-closed; see committed evidence.'
+          exit 1

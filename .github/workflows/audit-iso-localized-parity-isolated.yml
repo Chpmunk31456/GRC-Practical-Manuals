@@ -1,0 +1,42 @@
+name: Audit ISO localized parity isolated
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'qa/requests/TRIGGER_ISO_PARITY_AUDIT_ISOLATED.md'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+      - name: Run localized source audit
+        id: audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_sources.py
+      - name: Run corrected section parity audit
+        id: parity
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_section_parity.py
+      - name: Commit evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh corrected ISO localized parity evidence'
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+      - name: Enforce result
+        if: steps.audit.outcome != 'success' || steps.parity.outcome != 'success'
+        run: exit 1

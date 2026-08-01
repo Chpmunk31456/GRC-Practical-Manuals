@@ -1,0 +1,130 @@
+name: Build risk register manual package
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - '08-templates-and-tools/GRC_Risk_Register_and_Treatment/**'
+      - '.github/workflows/build-risk-register-manual.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: risk-register-manual-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out manual branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install package tooling
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install 'openpyxl==3.1.5'
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip zip libimage-exiftool-perl
+
+      - name: Build Markdown and workbook
+        run: |
+          set -euo pipefail
+          python 08-templates-and-tools/GRC_Risk_Register_and_Treatment/scripts/build_package.py
+
+      - name: Build DOCX and PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/GRC_Risk_Register_and_Treatment/publication'
+          md="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.md"
+          docx="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.docx"
+          pdf="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.pdf"
+          pandoc "$md" --toc --metadata title='GRC Risk Register and Risk Treatment Practical Manual' --metadata author='Alberto Al Leiva' -o "$docx"
+          libreoffice --headless --convert-to pdf --outdir "$root" "$docx" >/dev/null
+          test -s "$docx"
+          test -s "$pdf"
+          unzip -t "$docx" >/dev/null
+          pdftotext "$pdf" - | grep -q 'Risk Management Foundations'
+          pdfinfo "$pdf" | grep -q '^Pages:'
+          exiftool -overwrite_original -Title='GRC Risk Register and Risk Treatment Practical Manual' -Author='Alberto Al Leiva' "$pdf" >/dev/null
+
+      - name: Run package QA and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/publication'
+          md="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.md"
+          docx="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.docx"
+          pdf="$root/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.pdf"
+          xlsx="$root/GRC_Risk_Register_and_Risk_Treatment_Toolkit_English_v1.0.xlsx"
+          ! grep -q '{{CHAPTER_' "$md"
+          test "$(grep -c '^# [1-6]\\.' "$md")" -eq 6
+          unzip -t "$xlsx" >/dev/null
+          python - <<'PY'
+          from openpyxl import load_workbook
+          from pathlib import Path
+          root = Path('08-templates-and-tools/GRC_Risk_Register_and_Treatment/publication')
+          wb = load_workbook(root / 'GRC_Risk_Register_and_Risk_Treatment_Toolkit_English_v1.0.xlsx', data_only=False)
+          required = {'Instructions', 'Risk Register', 'Treatment Plan', 'Scoring Matrix', 'Validation Lists'}
+          missing = required.difference(wb.sheetnames)
+          if missing:
+              raise SystemExit(f'Missing workbook sheets: {sorted(missing)}')
+          if wb['Risk Register'].max_column < 35:
+              raise SystemExit('Risk Register field count is unexpectedly low')
+          PY
+          pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+          test "$pages" -ge 10
+          words=$(pdftotext "$pdf" - | wc -w)
+          test "$words" -ge 2500
+          sha256sum "$md" "$docx" "$pdf" "$xlsx" > "$root/SHA256SUMS.txt"
+          cat > "$root/QA_REPORT.md" <<EOF
+          # English Package QA Report
+
+          - Controlled chapters: 6
+          - Markdown assembly markers unresolved: 0
+          - DOCX ZIP integrity: PASS
+          - PDF searchable text: PASS
+          - PDF pages: $pages
+          - Extracted PDF words: $words
+          - Workbook ZIP integrity: PASS
+          - Workbook required sheets: PASS
+          - Risk-register field-count threshold: PASS
+          - Automated result: **PASS**
+
+          Automated validation does not replace legal, technical, accessibility, or page-by-page human review.
+          EOF
+
+      - name: Commit generated package
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/publication
+          if git diff --cached --quiet; then
+            echo 'No generated package changes.'
+          else
+            git commit -m 'Build and validate English risk register publication package'
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
+
+      - name: Upload review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: risk-register-english-publication-review
+          path: 08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/publication
+          if-no-files-found: error

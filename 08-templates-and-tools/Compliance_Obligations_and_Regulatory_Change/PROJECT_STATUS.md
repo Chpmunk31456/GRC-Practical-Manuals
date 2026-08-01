@@ -1,6 +1,6 @@
 # Project Status — Compliance Obligations Register and Regulatory Change Management Toolkit
 
-- Status: completed publication package and merge candidate
+- Status: completed publication package and exact-head merge candidate
 - Authorization: repository owner authorized autonomous completion, QA, merge, catalog updates, and workflow cleanup
 - English controlled manual: complete
 - Editable tools: complete

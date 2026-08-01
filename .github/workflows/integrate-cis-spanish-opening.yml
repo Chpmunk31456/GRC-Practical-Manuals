@@ -1,19 +1,9 @@
 name: Integrate reviewed CIS Spanish opening
 
 on:
-  push:
-    branches:
-      - production/multilingual-grc-editions
-    paths:
-      - '.github/workflows/integrate-cis-spanish-opening.yml'
-      - 'qa/tools/integrate_cis_spanish_opening.py'
-      - 'qa/tools/generate_cis_spanish_figures.py'
-      - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md'
   pull_request:
-    branches:
-      - main
-    paths:
-      - 'qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md'
+    branches: [main]
+    paths: ['qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md']
   workflow_dispatch:
 
 permissions:
@@ -27,117 +17,84 @@ jobs:
   integrate-audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out production branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
-
-      - name: Integrate reviewed opening
-        run: python3 qa/tools/integrate_cis_spanish_opening.py
-
-      - name: Validate opening boundary
-        shell: bash
+      - run: python3 qa/tools/integrate_cis_spanish_opening.py
+      - name: Validate opening and audit
         run: |
-          set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          source = Path('01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md')
-          rewrite = Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md')
-          text = source.read_text(encoding='utf-8')
-          expected = rewrite.read_text(encoding='utf-8').rstrip()
-          marker = '# 1. Fundamentos de CIS Controls v8.1'
-          if text.count(marker) != 1:
-              raise SystemExit('Expected exactly one Chapter 1 marker.')
-          if text[:text.index(marker)].rstrip() != expected:
-              raise SystemExit('Canonical opening does not exactly match reviewed rewrite.')
-          print('CIS Spanish opening exactly matches the reviewed controlled rewrite.')
+          source=Path('01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md')
+          rewrite=Path('qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md')
+          text=source.read_text(encoding='utf-8'); expected=rewrite.read_text(encoding='utf-8').rstrip()
+          marker='# 1. Fundamentos de CIS Controls v8.1'
+          assert text.count(marker)==1, 'Expected exactly one Chapter 1 marker.'
+          assert text[:text.index(marker)].rstrip()==expected, 'Opening differs from reviewed rewrite.'
+          print('Reviewed opening boundary PASS')
           PY
-
-      - name: Run full-manual Spanish audit
-        run: python3 qa/tools/audit_cis_spanish_full_manual.py
-
-      - name: Commit integrated source and audit report
-        shell: bash
+          python3 qa/tools/audit_cis_spanish_full_manual.py
+      - name: Commit audit outputs
         run: |
-          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' 'qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md'
-          if ! git diff --cached --quiet; then
-            git commit -m 'Integrate reviewed CIS Spanish opening and refresh audit'
-            git push origin HEAD:production/multilingual-grc-editions
-          fi
+          if ! git diff --cached --quiet; then git commit -m 'Refresh CIS Spanish opening audit' && git push origin HEAD:production/multilingual-grc-editions; fi
 
   rebuild-publication:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out production branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
-
-      - name: Install document and graphics tools
-        run: |
+      - run: |
           sudo apt-get update
           sudo apt-get install -y pandoc libreoffice poppler-utils python3-pil
-
-      - name: Generate complete Spanish figure set
-        run: python3 qa/tools/generate_cis_spanish_figures.py
-
-      - name: Rebuild and validate CIS Spanish publication
+      - run: python3 qa/tools/generate_cis_spanish_figures.py
+      - name: Rebuild with explicit diagnostics
         shell: bash
         run: |
           set -euo pipefail
           base='01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0'
           media_dir="$(dirname "$base")/media"
           for n in $(seq 1 10); do
-            test -s "$media_dir/image${n}.png"
+            [[ -s "$media_dir/image${n}.png" ]] || { echo "ERROR missing image${n}.png"; exit 1; }
           done
           pandoc "${base}.md" --resource-path="$(dirname "$base")" -o "${base}.docx"
           libreoffice --headless --convert-to pdf --outdir "$(dirname "$base")" "${base}.docx"
-          unzip -t "${base}.docx" >/dev/null
+          unzip -t "${base}.docx" >/dev/null || { echo 'ERROR DOCX ZIP integrity'; exit 1; }
           pdftotext "${base}.pdf" /tmp/cis-es.txt
-          grep -q 'SERIE PRÁCTICA DE CIBERSEGURIDAD' /tmp/cis-es.txt
-          grep -q 'Fundamentos de CIS Controls v8.1' /tmp/cis-es.txt
+          grep -Fq 'SERIE PRÁCTICA DE CIBERSEGURIDAD' /tmp/cis-es.txt || { echo 'ERROR missing title'; exit 1; }
+          grep -Fq 'Fundamentos de CIS Controls v8.1' /tmp/cis-es.txt || { echo 'ERROR missing chapter marker'; exit 1; }
           for n in $(seq 1 10); do
-            grep -q "Figura ${n}." /tmp/cis-es.txt
+            grep -Fq "Figura ${n}." /tmp/cis-es.txt || { echo "ERROR missing PDF caption Figura ${n}."; exit 1; }
           done
           media_count=$(unzip -Z1 "${base}.docx" | grep -c '^word/media/' || true)
-          test "$media_count" -ge 10
+          echo "DOCX embedded media count: $media_count"
+          [[ "$media_count" -ge 10 ]] || { echo "ERROR expected at least 10 embedded media files"; unzip -Z1 "${base}.docx" | grep '^word/media/' || true; exit 1; }
           sha256sum "${base}.md" "${base}.docx" "${base}.pdf" "$media_dir"/image*.png > qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt
-
-      - name: Commit rebuilt publication and figures
-        shell: bash
+          echo 'Publication validation PASS'
+      - name: Commit rebuilt publication
         run: |
-          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add '01-foundations/CIS_Controls_v8.1/Espanol/media/' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
-          if ! git diff --cached --quiet; then
-            git commit -m 'Restore complete CIS Spanish figures and rebuild publication'
-            git push origin HEAD:production/multilingual-grc-editions
-          fi
+          if ! git diff --cached --quiet; then git commit -m 'Restore complete CIS Spanish figures and rebuild publication' && git push origin HEAD:production/multilingual-grc-editions; fi
 
   visual-review-package:
     needs: rebuild-publication
     runs-on: ubuntu-latest
     steps:
-      - name: Check out production branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: production/multilingual-grc-editions
-
-      - name: Install rendering tools
-        run: |
+      - run: |
           sudo apt-get update
           sudo apt-get install -y poppler-utils imagemagick
-
-      - name: Render all PDF pages and build contact sheets
-        shell: bash
+      - name: Render page review package
         run: |
-          set -euo pipefail
           pdf='01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf'
           out='cis-spanish-visual-review'
           mkdir -p "$out/pages" "$out/contact-sheets"
@@ -145,25 +102,15 @@ jobs:
           pdftotext -layout "$pdf" "$out/PDF_TEXT_LAYOUT.txt"
           pdftoppm -jpeg -r 110 "$pdf" "$out/pages/page"
           identify "$out"/pages/*.jpg > "$out/PAGE_DIMENSIONS.txt"
-          python3 - <<'PY'
-          from pathlib import Path
-          pages = sorted(Path('cis-spanish-visual-review/pages').glob('*.jpg'))
-          lines = [f'page_count={len(pages)}']
-          for i, page in enumerate(pages, 1):
-              lines.append(f'{i:03d}\t{page.name}')
-          Path('cis-spanish-visual-review/PAGE_INDEX.txt').write_text('\n'.join(lines) + '\n', encoding='utf-8')
-          PY
           mapfile -t pages < <(find "$out/pages" -name '*.jpg' | sort)
+          printf 'page_count=%s\n' "${#pages[@]}" > "$out/PAGE_INDEX.txt"
           batch=0
           for ((i=0; i<${#pages[@]}; i+=12)); do
-            chunk=("${pages[@]:i:12}")
-            montage "${chunk[@]}" -thumbnail '300x390>' -tile 3x4 -geometry +8+8 "$out/contact-sheets/contact-$(printf '%02d' "$batch").jpg"
+            montage "${pages[@]:i:12}" -thumbnail '300x390>' -tile 3x4 -geometry +8+8 "$out/contact-sheets/contact-$(printf '%02d' "$batch").jpg"
             batch=$((batch+1))
           done
           sha256sum "$pdf" "$out"/contact-sheets/*.jpg > "$out/SHA256SUMS.txt"
-
-      - name: Upload visual review package
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: cis-spanish-visual-review
           path: cis-spanish-visual-review

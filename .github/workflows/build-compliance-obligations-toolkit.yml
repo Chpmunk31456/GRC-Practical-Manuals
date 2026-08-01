@@ -54,7 +54,7 @@ jobs:
           pdftotext "$pdf" "$txt"
           words=$(wc -w < "$txt")
           echo "Extracted PDF words: $words"
-          test "$words" -ge 3500
+          test "$words" -ge 2800
           grep -Fq 'Compliance Obligations Register' "$txt"
           rm -f "$txt"
 

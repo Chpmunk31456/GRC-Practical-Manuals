@@ -1,0 +1,141 @@
+name: Build localized risk register editions
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - '08-templates-and-tools/GRC_Risk_Register_and_Treatment/English/**'
+      - '08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations/**'
+      - '08-templates-and-tools/GRC_Risk_Register_and_Treatment/scripts/translate_localized_editions.py'
+      - '.github/workflows/build-risk-register-localized-editions.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: risk-register-localized-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-localized:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Check out exact candidate branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install translation and document tooling
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install 'argostranslate==1.9.6'
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip libimage-exiftool-perl
+
+      - name: Install English translation models
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import argostranslate.package
+          argostranslate.package.update_package_index()
+          available = argostranslate.package.get_available_packages()
+          for target in ('es', 'pt'):
+              matches = [p for p in available if p.from_code == 'en' and p.to_code == target]
+              if not matches:
+                  raise SystemExit(f'No Argos package for en->{target}')
+              path = matches[0].download()
+              argostranslate.package.install_from_path(path)
+              print(f'Installed en->{target}: {matches[0].package_version}')
+          PY
+
+      - name: Generate controlled localized Markdown
+        run: |
+          set -euo pipefail
+          python 08-templates-and-tools/GRC_Risk_Register_and_Treatment/scripts/translate_localized_editions.py
+
+      - name: Build localized DOCX and searchable PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/translations'
+          for locale in es-419 pt-BR; do
+            md=$(find "$root/$locale" -maxdepth 1 -type f -name '*.md' ! -name 'GLOSSARY.md' -print -quit)
+            test -n "$md"
+            stem="${md%.md}"
+            pandoc "$md" --toc --metadata author='Alberto Al Leiva' -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$md")" "${stem}.docx" >/dev/null
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            words=$(pdftotext "${stem}.pdf" - | wc -w)
+            test "$words" -ge 2000
+            exiftool -overwrite_original -Author='Alberto Al Leiva' "${stem}.pdf" >/dev/null
+          done
+
+      - name: Validate localized parity and write evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations'
+          en='08-templates-and-tools/GRC_Risk_Register_and_Treatment/English/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.md'
+          en_h1=$(grep -c '^# ' "$en")
+          en_h2=$(grep -c '^## ' "$en")
+          for locale in es-419 pt-BR; do
+            md=$(find "$root/$locale" -maxdepth 1 -type f -name '*.md' ! -name 'GLOSSARY.md' -print -quit)
+            h1=$(grep -c '^# ' "$md")
+            h2=$(grep -c '^## ' "$md")
+            test "$h1" -eq "$en_h1"
+            test "$h2" -eq "$en_h2"
+            ! grep -q 'ZXQ[0-9][0-9][0-9][0-9]QXZ' "$md"
+            grep -qi 'machine' "$md" || grep -qi 'máquina' "$md"
+            stem="${md%.md}"
+            pages=$(pdfinfo "${stem}.pdf" | awk '/^Pages:/ {print $2}')
+            words=$(pdftotext "${stem}.pdf" - | wc -w)
+            cat > "$root/$locale/LOCALIZED_QA.md" <<EOF
+          # Localized Package QA — $locale
+
+          - Heading level 1 parity: PASS ($h1)
+          - Heading level 2 parity: PASS ($h2)
+          - Protected-token restoration: PASS
+          - DOCX ZIP integrity: PASS
+          - PDF searchable text: PASS
+          - PDF pages: $pages
+          - Extracted PDF words: $words
+          - Translation status: machine-assisted publication candidate
+          - Automated result: **PASS**
+
+          Native-language, legal, technical, accessibility, and page-by-page human review are not represented as completed.
+          EOF
+            sha256sum "$md" "${stem}.docx" "${stem}.pdf" > "$root/$locale/SHA256SUMS.txt"
+          done
+
+      - name: Commit localized candidates
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations
+          if git diff --cached --quiet; then
+            echo 'No localized changes to commit.'
+          else
+            git commit -m 'Build and validate localized risk register editions'
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
+
+      - name: Upload localized review package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: risk-register-localized-publication-review
+          path: 08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations
+          if-no-files-found: error

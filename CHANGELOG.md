@@ -10,6 +10,49 @@ This project uses version numbers such as:
 
 ---
 
+## [1.4] — 1 August 2026
+
+### Added
+
+- Published the GRC Risk Register and Risk Treatment Practical Manual.
+- Added an English controlled Markdown master, Microsoft Word edition, searchable PDF, source assembly records, QA reports, and SHA-256 checksums.
+- Added a 41-field risk-register template, a 27-field risk-treatment plan template, and a formal risk-acceptance record.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF formats.
+
+### Validated
+
+- English assembly and package validation completed successfully.
+- Spanish and Brazilian Portuguese editions passed heading parity, protected-token restoration, DOCX ZIP integrity, searchable-PDF, page-count, extracted-word, metadata, and checksum checks.
+- Spanish package: 17 PDF pages and 4,051 extracted words.
+- Brazilian Portuguese package: 17 PDF pages and 3,964 extracted words.
+
+### Changed
+
+- Updated the root repository catalog and the Templates and Tools roadmap.
+- Identified the Evidence Collection and Audit Support Practical Manual as the next planned Section 08 resource.
+- Removed temporary risk-register build and localization workflows after successful publication.
+
+### Limitations
+
+- Native-language editorial approval, legal or regulatory review, standards certification, assistive-technology testing, and full page-by-page human visual review are not represented as completed.
+
+---
+
+## [1.3] — 31 July 2026
+
+### Added
+
+- Published the EU AI Act GRC Compliance Manual on the default branch in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`).
+- Added 138 chapters and Appendices A–Z per language, controlled Markdown masters, DOCX and PDF editions, manifests, automated QA reports, PDF metadata, and SHA-256 checksums.
+- Added maintainable English and Spanish/Portuguese EU AI Act publication workflows.
+
+### Verified
+
+- Spanish and Brazilian Portuguese automated QA reports have `PASS` status with zero failures.
+- Both localized build manifests record 138 chapters, 26 appendices, and 164 source records.
+
+---
+
 ## [1.3] — 30 July 2026
 
 ### Added
@@ -56,21 +99,6 @@ Planned or in-progress improvements may include:
 - New diagrams and practical examples
 - Link corrections
 - Formatting improvements
-
----
-
-## [1.3] — 31 July 2026
-
-### Added
-
-- Published the EU AI Act GRC Compliance Manual on the default branch in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`).
-- Added 138 chapters and Appendices A–Z per language, controlled Markdown masters, DOCX and PDF editions, manifests, automated QA reports, PDF metadata, and SHA-256 checksums.
-- Added maintainable English and Spanish/Portuguese EU AI Act publication workflows.
-
-### Verified
-
-- Spanish and Brazilian Portuguese automated QA reports have `PASS` status with zero failures.
-- Both localized build manifests record 138 chapters, 26 appendices, and 164 source records.
 
 ---
 
@@ -189,4 +217,4 @@ Please use GitHub Issues and include:
 
 ## Author
 
-**Alberto (Al) Leiva**
+**Alberto “Al” Leiva**

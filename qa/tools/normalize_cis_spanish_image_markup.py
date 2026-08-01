@@ -13,7 +13,7 @@ EXPECTED = {
     5: "Descubrir, clasificar, proteger, conservar y eliminar datos según su sensibilidad y necesidad.",
     6: "Las cuentas y los privilegios requieren creación aprobada, autenticación sólida, revisión y revocación oportuna.",
     7: "La cobertura completa y la remediación verificada importan más que la producción de informes de escaneo.",
-    8: "La telemetría centralizada, el contexto, la investigación humana y la respuesta convierten registros en defensa.",
+    8: "El contexto centralizado, la detección ajustada, la investigación humana y la respuesta crean una defensa útil.",
 }
 
 text = SOURCE.read_text(encoding="utf-8")

@@ -687,16 +687,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 8287,
+        "chars": 8290,
         "pipe_rows": 0,
         "images": 0,
-        "bad_hits": 1,
-        "english_fragments": 1,
-        "length_ratio": 0.945,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.946,
         "blockers": [
-          "table_structure_drift",
-          "corruption_tokens",
-          "residual_english"
+          "table_structure_drift"
         ],
         "status": "FAIL"
       }

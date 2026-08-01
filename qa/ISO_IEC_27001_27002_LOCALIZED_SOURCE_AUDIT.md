@@ -31,15 +31,7 @@ No configured findings.
 
 ### Findings
 
-#### malformed_emphasis
-- Line 3: `** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE`
-
-#### untranslated_english_text
-- Line 638: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
-
-#### known_mistranslations
-- Line 9: `* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*`
-
+No configured findings.
 ## Release implication
 
 Any FAIL blocks localized DOCX/PDF rebuild and publication-readiness claims until the source defects are repaired and this audit passes at the exact candidate SHA.

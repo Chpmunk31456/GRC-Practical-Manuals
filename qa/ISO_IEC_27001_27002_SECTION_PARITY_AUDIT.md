@@ -26,7 +26,7 @@ This audit compares each localized major section with the approved English maste
 - Section 19: table_structure_drift
 - Section 20: table_structure_drift
 - Section 21: table_structure_drift
-- Section 22: table_structure_drift, corruption_tokens, residual_english
+- Section 22: table_structure_drift
 - Section 23: table_structure_drift
 - Section 24: table_structure_drift
 - Section 25: table_structure_drift, length_drift

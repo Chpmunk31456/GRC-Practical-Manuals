@@ -61,29 +61,7 @@
       "language": "pt-BR",
       "source": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
       "status": "FAIL",
-      "findings": {
-        "malformed_emphasis": [
-          {
-            "line": 3,
-            "pattern": "^\\*\\*\\s+[^*]+$",
-            "text": "** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE"
-          }
-        ],
-        "untranslated_english_text": [
-          {
-            "line": 638,
-            "pattern": "\\bPurpose\\b",
-            "text": ". **Ferramenta** . **Purpose** . **Possível suporte** ."
-          }
-        ],
-        "known_mistranslations": [
-          {
-            "line": 9,
-            "pattern": "mudadores de carreira",
-            "text": "* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*"
-          }
-        ]
-      },
+      "findings": {},
       "major_section_counts": {
         "1": 1,
         "2": 1,

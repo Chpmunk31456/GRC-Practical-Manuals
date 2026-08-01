@@ -1,12 +1,12 @@
 > **Status da revisão:** Rascunho de tradução assistida por máquina. Requer revisão humana de terminologia, significado, links, formatação e atualidade técnica antes de ser marcado como edição final.
 
-** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE
+**SÉRIE PRÁTICA DE CIBERSEGURANÇA, PRIVACIDADE E CONFORMIDADE**
 
 **ISO/IEC 27001:2022 & ISO/IEC 27002:2022**
 
 **IsMS prático, risco, auditoria, controles e ferramentas de código aberto
 
-* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*
+*Um manual de trabalho para gerentes, analistas juniores, estudantes, profissionais em transição de carreira, auditores internos e equipes de segurança*
 
 ** Alberto (Al) Leiva**
 
@@ -635,7 +635,7 @@ Emenda □ Relevância climática e requisitos das partes interessadas considera
 
 * Links oficiais, inícios rápidos seguros, evidências e limitações.*
 
-. **Ferramenta** . **Purpose** . **Possível suporte** .
+. **Ferramenta** . **Finalidade** . **Possível suporte** .
 ------------------------------------------------------------------------------------
 □ Ciso Assistant; intuitem.github.io; ISMS, riscos, controles, provas
 SimpleRisk Community www.simplerisk.com

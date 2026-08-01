@@ -3,7 +3,7 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and operational GRC tooling.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.9  
+**Repository version:** 1.10  
 **Last updated:** 1 August 2026
 
 ## Start Here
@@ -25,18 +25,14 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
-| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/), [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/), and [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/) |
+| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/), [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/), [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/), and [GRC Metrics and Executive Reporting](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/) |
 
 ## Available Formats and Languages
 
 - Most established manuals are available in Microsoft Word (`.docx`) and PDF.
 - The EU AI Act GRC Compliance Manual is published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums.
-- The GRC Risk Register and Risk Treatment Practical Manual includes an English controlled master, DOCX, searchable PDF, a 41-field risk register, a 27-field treatment-plan template, a risk-acceptance record, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
-- The Evidence Collection and Audit Support Practical Manual includes an English controlled master, DOCX, searchable PDF, four editable evidence and remediation trackers, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
-- The Audit Readiness and Remediation Management Practical Manual includes six controlled English chapters, DOCX, searchable PDF, four editable readiness and remediation trackers, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
-- The GRC Policy Template Toolkit includes four controlled English chapters, ten editable policy templates in Markdown and DOCX, combined English DOCX and searchable PDF editions, three policy-governance CSV tools, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
-- The Control Mapping and Crosswalk Practical Manual includes six controlled English chapters, four editable mapping and review tools, English DOCX and searchable PDF editions, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
-- The Compliance Obligations Register and Regulatory Change Management Toolkit includes six controlled English chapters, four editable obligations and change-management tools, English DOCX and searchable PDF editions, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
+- The Section 08 practical toolkits include controlled English masters, editable operational tools, DOCX and searchable PDF editions, machine-assisted Spanish and Brazilian Portuguese publication candidates, automated QA evidence, and SHA-256 checksums.
+- The GRC Metrics and Executive Reporting Toolkit includes six controlled English chapters, four editable metrics and reporting tools, English DOCX and searchable PDF editions, current-source revalidation records, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 
@@ -58,7 +54,7 @@ ChatGPT assisted under my direction. I remain responsible for the project’s co
 
 ## Important Notice
 
-These materials are for education and general professional guidance. They do not constitute legal, regulatory, accounting, medical, contractual, or formal audit advice, and they do not guarantee certification, compliance, security, employment, or business outcomes.
+These materials are for education and general professional guidance. They do not constitute legal, regulatory, accounting, medical, contractual, statistical, data-governance, or formal audit advice, and they do not guarantee certification, compliance, security, employment, or business outcomes.
 
 Requirements change and vary by industry, location, contract, system, customer, data, and risk profile. Always verify current requirements through official publications and qualified professionals.
 

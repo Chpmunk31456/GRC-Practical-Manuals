@@ -8,12 +8,19 @@ This section contains practical templates, checklists, worksheets, registers, tr
 
 [Open the completed manual and toolkit](./GRC_Risk_Register_and_Risk_Treatment/)
 
+The publication package includes an English controlled master, DOCX, searchable PDF, a 41-field risk-register template, a 27-field risk-treatment plan template, a formal risk-acceptance record, Latin American Spanish and Brazilian Portuguese publication candidates, QA evidence, and SHA-256 checksums.
+
+### Evidence Collection and Audit Support Practical Manual
+
+[Open the completed manual and toolkit](./Evidence_Collection_and_Audit_Support/)
+
 The publication package includes:
 
 - English controlled Markdown, DOCX, and searchable PDF
-- A 41-field risk-register template
-- A 27-field risk-treatment plan template
-- A formal risk-acceptance record
+- A 38-field evidence request tracker
+- A 36-field evidence quality review checklist
+- A 21-field audit request and response log
+- A 32-field corrective-action tracker
 - Latin American Spanish (`es-419`) publication candidate
 - Brazilian Portuguese (`pt-BR`) publication candidate
 - Assembly evidence, automated QA records, and SHA-256 checksums
@@ -22,31 +29,22 @@ The localized editions are identified as machine-assisted publication candidates
 
 ## Next Planned Resource
 
-### Evidence Collection and Audit Support Practical Manual
+### Policy Template Toolkit
 
-Planned coverage includes:
+Planned starter templates include:
 
-- Evidence requests and ownership
-- Policies and procedures
-- Screenshots and system reports
-- Access-review evidence
-- Training and awareness records
-- Incident and change records
-- Vendor assessments
-- Control-testing evidence
-- Auditor request tracking
-- Evidence quality, freshness, provenance, retention, and secure handling
-- Management responses and corrective-action follow-through
+- Information security
+- Access control
+- Acceptable use
+- Incident response
+- Business continuity
+- Vendor risk
+- Data protection
+- Change management
+- Vulnerability management
+- Logging and monitoring
 
 ## Later Planned Resources
-
-### Audit-Readiness Tools
-
-Resources for control ownership, gap identification, remediation planning, readiness reviews, auditor requests, management responses, and corrective-action tracking.
-
-### Policy Templates
-
-Starter templates for information security, access control, acceptable use, incident response, business continuity, vendor risk, data protection, change management, vulnerability management, and logging and monitoring.
 
 ### Control Mappings
 
@@ -77,7 +75,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.1 — August 2026
+Version 1.2 — August 2026
 
 ## License
 

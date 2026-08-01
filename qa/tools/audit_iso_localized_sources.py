@@ -20,13 +20,15 @@ EXPECTED_IMAGES = list(range(1, 10))
 
 COMMON_PATTERNS = {
     "malformed_html_or_image_markup": [
-        r"لimg\b",
+        r"[لי]img\b",
         r"\bEl estilo [\"']?png",
         r"<img\b[^>]*(?<!/)>$",
     ],
     "placeholder_or_injected_text": [
         r"La vida eterna",
+        r"La inmortalidad",
         r"\bSilencioso\b",
+        r"\bTEN(?:CIÓN|IENDO)?\b",
         r"\|\. \|",
     ],
     "malformed_markdown_links": [
@@ -41,11 +43,20 @@ COMMON_PATTERNS = {
 
 LANGUAGE_PATTERNS = {
     "es-419": {
-        "untranslated_english_headings": [
+        "untranslated_english_headings_or_captions": [
             r"^#?\s*Publication and Use Notice$",
             r"^#?\s*Management Review and Corrective Action$",
             r"^#?\s*ISMS Scope and Interested Parties$",
             r"^#?\s*ISO/IEC 27001 y 27002 Foundations$",
+            r"^#\s+\d+\.\s+Annex A\b",
+            r"^Figure\s+\d+\.",
+        ],
+        "untranslated_english_control_text": [
+            r"\bManage security risk\b",
+            r"\bManage ICT supply-chain security risk\b",
+            r"\bGovern adquisición\b",
+            r"\bConformity\b",
+            r"\bFulfillment of a requirement\b",
         ],
         "known_mistranslations": [
             r"Lectura de certificación",
@@ -61,6 +72,7 @@ LANGUAGE_PATTERNS = {
         "untranslated_english_text": [
             r"\bThe SoA\b",
             r"^#?\s*ISO/IEC 27001 e 27002 Fundações$",
+            r"\bPurpose\b",
         ],
         "non_brazilian_or_mixed_locale_forms": [
             r"\bcontrolos\b",
@@ -114,10 +126,15 @@ def table_signal(text: str) -> dict[str, int]:
     pipe_rows = sum(1 for line in lines if line.count("|") >= 2)
     separator_rows = sum(1 for line in lines if re.match(r"^\s*\|?\s*:?-{3,}", line))
     collapsed_rule_rows = sum(1 for line in lines if re.match(r"^-{20,}$", line))
+    malformed_separator_rows = sum(
+        1 for line in lines
+        if re.match(r"^\s*\|?-{20,}.*[A-Za-zÀ-ÿ]", line)
+    )
     return {
         "pipe_rows": pipe_rows,
         "separator_rows": separator_rows,
         "collapsed_rule_rows": collapsed_rule_rows,
+        "malformed_separator_rows": malformed_separator_rows,
     }
 
 
@@ -138,18 +155,28 @@ def audit_language(language: str, path: Path) -> dict[str, object]:
     duplicate_sections = [n for n, count in sections.items() if count > 1]
     images = image_counts(text)
     missing_images = [n for n, count in images.items() if count == 0]
+    tables = table_signal(text)
+    table_blockers = []
+    if tables["collapsed_rule_rows"]:
+        table_blockers.append(f"collapsed_rule_rows={tables['collapsed_rule_rows']}")
+    if tables["malformed_separator_rows"]:
+        table_blockers.append(f"malformed_separator_rows={tables['malformed_separator_rows']}")
+    if tables["pipe_rows"] == 0:
+        table_blockers.append("pipe_rows=0")
 
+    status = "FAIL" if findings or missing_sections or duplicate_sections or missing_images or table_blockers else "PASS"
     return {
         "language": language,
         "source": str(path),
-        "status": "FAIL" if findings or missing_sections or duplicate_sections or missing_images else "PASS",
+        "status": status,
         "findings": findings,
         "major_section_counts": sections,
         "missing_major_sections": missing_sections,
         "duplicate_major_sections": duplicate_sections,
         "image_reference_counts": images,
         "missing_image_references": missing_images,
-        "table_signals": table_signal(text),
+        "table_signals": tables,
+        "table_blockers": table_blockers,
     }
 
 
@@ -174,6 +201,7 @@ def render_markdown(results: list[dict[str, object]]) -> str:
             f"- Duplicate major sections: {result['duplicate_major_sections'] or 'none'}",
             f"- Missing image references: {result['missing_image_references'] or 'none'}",
             f"- Table signals: `{result['table_signals']}`",
+            f"- Table blockers: {result['table_blockers'] or 'none'}",
             "",
             "### Findings",
             "",
@@ -204,7 +232,7 @@ def main() -> int:
     print(f"ISO localized source audit: {'FAIL' if failed else 'PASS'}")
     for result in results:
         finding_count = sum(len(v) for v in result["findings"].values())
-        print(f"{result['language']}: {result['status']} ({finding_count} configured findings)")
+        print(f"{result['language']}: {result['status']} ({finding_count} configured findings; table blockers={len(result['table_blockers'])})")
     return 1 if failed else 0
 
 

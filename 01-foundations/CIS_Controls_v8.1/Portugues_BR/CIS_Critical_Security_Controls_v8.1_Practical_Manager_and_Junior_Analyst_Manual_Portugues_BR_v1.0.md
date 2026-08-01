@@ -69,7 +69,7 @@ A instalação de uma ferramenta não equivale à implementação de um controle
 
 *A versão atual, sua estrutura, finalidade e limitações.*
 
-<img src="media/image1.png" style="width:6.15in;height:3.94164in" alt="Os Controles organizam 153 Salvaguardas em um programa defensivo prático." />
+![Os Controles organizam 153 Salvaguardas em um programa defensivo prático.](media/image1.png){width=6.15in height=3.94164in}
 
 Figura 1. Os 18 CIS Critical Security Controls
 
@@ -93,7 +93,7 @@ Figura 1. Os 18 CIS Critical Security Controls
 
 *Como IG1, IG2 e IG3 ajudam organizações a escolher um ponto de partida realista.*
 
-<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Cada Grupo de Implementação se apoia no grupo anterior; o IG3 contém todas as Salvaguardas." />
+![Cada Grupo de Implementação se apoia no grupo anterior; o IG3 contém todas as Salvaguardas.](media/image2.png){width=6.15in height=3.39605in}
 
 Figura 2. Progressão dos Grupos de Implementação
 
@@ -136,7 +136,7 @@ Figura 2. Progressão dos Grupos de Implementação
 
 *Um método repetível para determinar se as Salvaguardas estão implementadas.*
 
-<img src="media/image3.png" style="width:6.15in;height:2.87986in" alt="A especificação oficial avança de entradas definidas para operações, medidas, métricas e revisão de procedimentos." />
+![A especificação oficial avança de entradas definidas para operações, medidas, métricas e revisão de procedimentos.](media/image3.png){width=6.15in height=2.87986in}
 
 Figura 3. Estrutura de medição das Salvaguardas CIS
 
@@ -180,7 +180,7 @@ Figura 3. Estrutura de medição das Salvaguardas CIS
 
 *As 5 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="Descoberta, conciliação, resposta e revisão mantêm atualizadas as populações fundamentais." />
+![Descoberta, conciliação, resposta e revisão mantêm atualizadas as populações fundamentais.](media/image4.png){width=6.15in height=3.38991in}
 
 Figura 4. Ciclo de inventário de ativos e software
 
@@ -220,7 +220,7 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios 
 
 *As 14 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.39605in" alt="Descobrir, classificar, proteger, reter e eliminar dados conforme sua sensibilidade e necessidade." />
+![Descobrir, classificar, proteger, reter e eliminar dados conforme sua sensibilidade e necessidade.](media/image5.png){width=6.15in height=3.39605in}
 
 Figura 5. Ciclo de vida da proteção de dados
 
@@ -292,7 +292,7 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios 
 
 *As 8 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image6.png" style="width:6.15in;height:3.38991in" alt="Contas e privilégios exigem concessão aprovada, autenticação forte, revisão e revogação tempestiva." />
+![Contas e privilégios exigem concessão aprovada, autenticação forte, revisão e revogação tempestiva.](media/image6.png){width=6.15in height=3.38991in}
 
 Figura 6. Ciclo de vida de identidade e acesso
 
@@ -316,7 +316,7 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem exata e os crit�
 
 *As 7 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image7.png" style="width:6.15in;height:3.39605in" alt="Cobertura completa e remediação verificada importam mais do que apenas produzir relatórios de varredura." />
+![Cobertura completa e remediação verificada importam mais do que apenas produzir relatórios de varredura.](media/image7.png){width=6.15in height=3.39605in}
 
 Figura 7. Gestão contínua de vulnerabilidades
 
@@ -438,7 +438,7 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios 
 
 *As 11 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image8.png" style="width:6.15in;height:3.39in" alt="Contexto centralizado, detecção ajustada, investigação humana e resposta formam uma defesa útil." />
+![Contexto centralizado, detecção ajustada, investigação humana e resposta formam uma defesa útil.](media/image8.png){width=6.15in height=3.39in}
 
 Figura 8. Fluxo de monitoramento até resposta
 
@@ -531,7 +531,7 @@ Consulte os recursos oficiais do CIS para confirmar a linguagem e os critérios 
 
 *As 9 Salvaguardas, seu significado claro, o enfoque de verificação e exemplos de evidências.*
 
-<img src="media/image9.png" style="width:6.15in;height:3.39605in" alt="Papéis, comunicação, exercícios e revisões mantêm a resposta a incidentes preparada." />
+![Papéis, comunicação, exercícios e revisões mantêm a resposta a incidentes preparada.](media/image9.png){width=6.15in height=3.39605in}
 
 Figura 9. Preparação para resposta a incidentes
 
@@ -718,7 +718,7 @@ Utilize apenas ambientes autorizados, limite a coleta ao necessário e proteja o
 
 *Uma rota prática para funções de controles, vulnerabilidades, garantia, GRC e operações de segurança.*
 
-<img src="media/image10.png" style="width:6.15in;height:3.39605in" alt="Aprender a estrutura, mapear Salvaguardas, medir evidências, relatar lacunas e construir um portfólio honesto." />
+![Aprender a estrutura, mapear Salvaguardas, medir evidências, relatar lacunas e construir um portfólio honesto.](media/image10.png){width=6.15in height=3.39605in}
 
 Figura 10. Caminho profissional para analistas juniores de CIS Controls
 

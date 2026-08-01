@@ -1,0 +1,9 @@
+{
+  "source_image_placements": 10,
+  "unique_media_files": 10,
+  "image_relationships": 10,
+  "embedded_image_occurrences": 10,
+  "unresolved_relationships": [],
+  "status": "PASS",
+  "failures": []
+}

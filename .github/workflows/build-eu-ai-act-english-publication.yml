@@ -13,14 +13,21 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    name: Build English publication
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
     steps:
       - name: Check out controlled branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
 
       - name: Install publication dependencies
         run: |
@@ -123,7 +130,7 @@ jobs:
             > SHA256SUMS.txt
 
       - name: Upload controlled review package
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: eu-ai-act-english-controlled-review
           path: |

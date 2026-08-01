@@ -1,0 +1,163 @@
+name: Repair localized package metadata
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/triggers/repair-localized-package-metadata.md'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-localized-package-metadata
+  cancel-in-progress: false
+
+jobs:
+  repair-validate-and-commit:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out production candidate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install metadata tooling
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y libimage-exiftool-perl poppler-utils unzip
+
+      - name: Add deterministic DOCX and PDF metadata
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import re, shutil, tempfile, zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          CP='http://schemas.openxmlformats.org/package/2006/metadata/core-properties'
+          DC='http://purl.org/dc/elements/1.1/'
+          DCT='http://purl.org/dc/terms/'
+          XSI='http://www.w3.org/2001/XMLSchema-instance'
+          ET.register_namespace('cp',CP); ET.register_namespace('dc',DC); ET.register_namespace('dcterms',DCT); ET.register_namespace('xsi',XSI)
+
+          mds=sorted(p for p in Path('.').rglob('*.md') if any(x in {'Espanol','Portugues_BR'} for x in p.parts) and '/qa/' not in p.as_posix())
+          if len(mds) != 22:
+              raise SystemExit(f'expected exactly 22 localized Markdown editions, found {len(mds)}')
+
+          manifest=[]
+          for md in mds:
+              docx=Path(md.as_posix()[:-3]+'.docx')
+              pdf=Path(md.as_posix()[:-3]+'.pdf')
+              if not docx.exists() or not pdf.exists():
+                  raise SystemExit(f'missing package pair for {md}')
+              language='Spanish (Latin America)' if 'Espanol' in md.parts else 'Portuguese (Brazil)'
+              base=md.stem
+              title=re.sub(r'_v1\.0$','',base).replace('_',' ')
+              title=f'{title} — {language}'
+              creator='Alberto (Al) Leiva'
+
+              with tempfile.TemporaryDirectory() as td:
+                  tmp=Path(td)/docx.name
+                  with zipfile.ZipFile(docx,'r') as zin, zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as zout:
+                      for item in zin.infolist():
+                          data=zin.read(item.filename)
+                          if item.filename=='docProps/core.xml':
+                              root=ET.fromstring(data)
+                              title_node=root.find(f'{{{DC}}}title')
+                              if title_node is None:
+                                  title_node=ET.SubElement(root,f'{{{DC}}}title')
+                              title_node.text=title
+                              creator_node=root.find(f'{{{DC}}}creator')
+                              if creator_node is None:
+                                  creator_node=ET.SubElement(root,f'{{{DC}}}creator')
+                              creator_node.text=creator
+                              last_node=root.find(f'{{{CP}}}lastModifiedBy')
+                              if last_node is None:
+                                  last_node=ET.SubElement(root,f'{{{CP}}}lastModifiedBy')
+                              last_node.text=creator
+                              data=ET.tostring(root,encoding='utf-8',xml_declaration=True)
+                          zout.writestr(item,data)
+                  shutil.move(tmp,docx)
+
+              manifest.append((md,docx,pdf,title,creator))
+
+          Path('/tmp/localized_metadata.tsv').write_text('\n'.join('\t'.join([str(x) for x in row]) for row in manifest)+'\n',encoding='utf-8')
+          print(f'Updated DOCX core metadata for {len(manifest)} localized editions')
+          PY
+
+          while IFS=$'\t' read -r md docx pdf title creator; do
+            exiftool -overwrite_original -Title="$title" -Author="$creator" -Creator="$creator" "$pdf" >/dev/null
+          done < /tmp/localized_metadata.tsv
+
+      - name: Validate metadata and package integrity
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import re, subprocess, zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          DC='http://purl.org/dc/elements/1.1/'
+          failures=[]; rows=[]
+          for line in Path('/tmp/localized_metadata.tsv').read_text(encoding='utf-8').splitlines():
+              md_s,docx_s,pdf_s,title,creator=line.split('\t')
+              docx=Path(docx_s); pdf=Path(pdf_s)
+              with zipfile.ZipFile(docx) as zf:
+                  bad=zf.testzip()
+                  if bad: failures.append(f'{docx}: corrupt member {bad}')
+                  core=ET.fromstring(zf.read('docProps/core.xml'))
+                  actual_title=(core.findtext(f'{{{DC}}}title') or '').strip()
+                  actual_creator=(core.findtext(f'{{{DC}}}creator') or '').strip()
+                  if actual_title != title: failures.append(f'{docx}: title mismatch')
+                  if actual_creator != creator: failures.append(f'{docx}: creator mismatch')
+              info=subprocess.run(['pdfinfo',str(pdf)],check=True,text=True,stdout=subprocess.PIPE).stdout
+              pdf_title=re.search(r'^Title:\s*(.*)$',info,re.M)
+              pdf_author=re.search(r'^Author:\s*(.*)$',info,re.M)
+              if not pdf_title or pdf_title.group(1).strip()!=title: failures.append(f'{pdf}: title metadata mismatch')
+              if not pdf_author or pdf_author.group(1).strip()!=creator: failures.append(f'{pdf}: author metadata mismatch')
+              text=subprocess.run(['pdftotext',str(pdf),'-'],check=True,text=True,stdout=subprocess.PIPE).stdout
+              if len(text.strip())<100: failures.append(f'{pdf}: searchable text failure')
+              rows.append({'docx':docx_s,'pdf':pdf_s,'title':title,'creator':creator,'status':'PASS'})
+          import json
+          report={'editions':len(rows),'failures':failures,'status':'FAIL' if failures else 'PASS','packages':rows}
+          Path('qa/LOCALIZED_PACKAGE_METADATA_REPAIR.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          md=['# Localized Package Metadata Repair','',f'- Editions repaired: {len(rows)}',f"- Result: **{report['status']}**",'', '- DOCX title, creator, and last-modified-by metadata populated.', '- PDF title, author, and creator metadata populated.', '- DOCX ZIP integrity and PDF searchable text revalidated.','']
+          if failures: md += ['## Failures','']+[f'- {x}' for x in failures]+['']
+          Path('qa/LOCALIZED_PACKAGE_METADATA_REPAIR.md').write_text('\n'.join(md),encoding='utf-8')
+          if failures: raise SystemExit('\n'.join(failures))
+          print('Localized package metadata validation: PASS')
+          PY
+          python3 scripts/validate_docx_embedded_media.py
+
+      - name: Write metadata-repaired checksums
+        run: |
+          set -euo pipefail
+          : > qa/LOCALIZED_PACKAGE_METADATA_SHA256SUMS.txt
+          while IFS=$'\t' read -r md docx pdf title creator; do
+            sha256sum "$docx" "$pdf" >> qa/LOCALIZED_PACKAGE_METADATA_SHA256SUMS.txt
+          done < /tmp/localized_metadata.tsv
+          sha256sum qa/LOCALIZED_PACKAGE_METADATA_REPAIR.json qa/LOCALIZED_PACKAGE_METADATA_REPAIR.md >> qa/LOCALIZED_PACKAGE_METADATA_SHA256SUMS.txt
+
+      - name: Commit repaired packages and evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          while IFS=$'\t' read -r md docx pdf title creator; do
+            git add "$docx" "$pdf"
+          done < /tmp/localized_metadata.tsv
+          git add qa/LOCALIZED_PACKAGE_METADATA_REPAIR.json qa/LOCALIZED_PACKAGE_METADATA_REPAIR.md qa/LOCALIZED_PACKAGE_METADATA_SHA256SUMS.txt
+          git commit -m 'Add metadata to localized publication packages'
+          git push origin HEAD:production/multilingual-grc-editions
+
+      - name: Upload metadata evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: localized-package-metadata-repair
+          path: |
+            qa/LOCALIZED_PACKAGE_METADATA_REPAIR.json
+            qa/LOCALIZED_PACKAGE_METADATA_REPAIR.md
+            qa/LOCALIZED_PACKAGE_METADATA_SHA256SUMS.txt
+          if-no-files-found: error

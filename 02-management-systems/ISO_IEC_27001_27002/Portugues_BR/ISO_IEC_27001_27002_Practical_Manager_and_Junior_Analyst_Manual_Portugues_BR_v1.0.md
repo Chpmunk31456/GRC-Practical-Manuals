@@ -54,131 +54,131 @@ As organizações que buscam certificação devem confirmar as expectativas de c
 
 Sumário
 
-[Comunicação de publicação e uso [2](#publication-and-use-notice)](#publication-and-use-notice)
+[Comunicação de publicação e uso [2]](#publication-and-use-notice)
 
-[Uso ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)
+[Uso ética e autorizada [2]](#ethical-and-authorized-use)
 
-[Prefácio [3](#preface)](#preface)
+[Prefácio [3]](#preface)
 
-[Como usar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
+[Como usar este manual [4]](#how-to-use-this-manual)
 
-[Sumário [4](#table-of-contents)](#table-of-contents)
+[Sumário [4]](#table-of-contents)
 
-[1. ISO/IEC 27001 e 27002 Fundações [7](#isoiec-27001-and-27002-foundations)](#isoiec-27001-and-27002-foundations)
+[1. ISO/IEC 27001 e 27002 Fundações [7]](#isoiec-27001-and-27002-foundations)
 
-[2. Âmbito de aplicação do ISMS e partes interessadas [8](#isms-scope-and-interested-parties)](#isms-scope-and-interested-parties)
+[2. Âmbito de aplicação do ISMS e partes interessadas [8]](#isms-scope-and-interested-parties)
 
-[3. Avaliação dos riscos e tratamento dos riscos [9](#risk-assessment-and-risk-treatment)](#risk-assessment-and-risk-treatment)
+[3. Avaliação dos riscos e tratamento dos riscos [9]](#risk-assessment-and-risk-treatment)
 
-[4. Declaração de aplicabilidade [10](#statement-of-applicability)](#statement-of-applicability)
+[4. Declaração de aplicabilidade [10]](#statement-of-applicability)
 
-[5. Documentação e provas [11](#documentation-and-evidence)](#documentation-and-evidence)
+[5. Documentação e provas [11]](#documentation-and-evidence)
 
-[6. Cláusula 4 — Contexto da organização [12](#clause-4-context-of-the-organization)](#clause-4-context-of-the-organization)
+[6. Cláusula 4 — Contexto da organização [12]](#clause-4-context-of-the-organization)
 
-[7. Cláusula 5 — Liderança [13](#clause-5-leadership)](#clause-5-leadership)
+[7. Cláusula 5 — Liderança [13]](#clause-5-leadership)
 
-[8. Cláusula 6 — Planejamento [14](#clause-6-planning)](#clause-6-planning)
+[8. Cláusula 6 — Planejamento [14]](#clause-6-planning)
 
-[9. Cláusula 7 — Apoio [15](#clause-7-support)](#clause-7-support)
+[9. Cláusula 7 — Apoio [15]](#clause-7-support)
 
-[10. Cláusula 8 — Operação [16](#clause-8-operation)](#clause-8-operation)
+[10. Cláusula 8 — Operação [16]](#clause-8-operation)
 
-[11. Cláusula 9 — Avaliação do desempenho [17](#clause-9-performance-evaluation)](#clause-9-performance-evaluation)
+[11. Cláusula 9 — Avaliação do desempenho [17]](#clause-9-performance-evaluation)
 
-[12. Cláusula 10 — Melhoria [18](#clause-10-improvement)](#clause-10-improvement)
+[12. Cláusula 10 — Melhoria [18]](#clause-10-improvement)
 
-[13. Anexo A 5 Controles organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)
+[13. Anexo A 5 Controles organizacionais [19]](#annex-a-5-organizational-controls)
 
-[14) Anexo A 6 Pessoas que controlam [22](#annex-a-6-people-controls)](#annex-a-6-people-controls)
+[14) Anexo A 6 Pessoas que controlam [22]](#annex-a-6-people-controls)
 
-[15. Anexo A 7 Controles físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)
+[15. Anexo A 7 Controles físicos [23]](#annex-a-7-physical-controls)
 
-[16. Anexo A 8 Controles tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)
+[16. Anexo A 8 Controles tecnológicos [24]](#annex-a-8-technological-controls)
 
-[17. Controles de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)
+[17. Controles de execução com ISO/IEC 27002 [26]](#implementing-controls-with-isoiec-27002)
 
-[18. Testes Métricos e de Controlo [27](#metrics-and-control-testing)](#metrics-and-control-testing)
+[18. Testes Métricos e de Controlo [27]](#metrics-and-control-testing)
 
-[19. Auditoria Interna [28](#internal-audit)](#internal-audit)
+[19. Auditoria Interna [28]](#internal-audit)
 
-[20. Revisão de gestão e ação corretiva [29](#management-review-and-corrective-action)](#management-review-and-corrective-action)
+[20. Revisão de gestão e ação corretiva [29]](#management-review-and-corrective-action)
 
-[21. Preparação da certificação [30](#certification-readiness)](#certification-readiness)
+[21. Preparação da certificação [30]](#certification-readiness)
 
-[22. Ferramentas de Código Aberto [31](#open-source-tools)](#open-source-tools)
+[22. Ferramentas de Código Aberto [31]](#open-source-tools)
 
-[22.1 Assistente CISO [31](#ciso-assistant)](#ciso-assistant)
+[22.1 Assistente CISO [31]](#ciso-assistant)
 
-[22.2 Comunidade SimpleRisk [31](#simplerisk-community)](#simplerisk-community)
+[22.2 Comunidade SimpleRisk [31]](#simplerisk-community)
 
-[22.3 Wazuh [31](#wazuh)](#wazuh)
+[22.3 Wazuh [31]](#wazuh)
 
-[22,4 osquery [32](#osquery)](#osquery)
+[22,4 osquery [32]](#osquery)
 
-[22.5 OpenSCAP [32](#openscap)](#openscap)
+[22.5 OpenSCAP [32]](#openscap)
 
-[22.6 Greenbone Community Edition [32](#greenbone-community-edition)](#greenbone-community-edition)
+[22.6 Greenbone Community Edition [32]](#greenbone-community-edition)
 
-[22,7 Nmap [32](#nmap)](#nmap)
+[22,7 Nmap [32]](#nmap)
 
-[22.8 Trivy [32](#trivy)](#trivy)
+[22.8 Trivy [32]](#trivy)
 
-[22,9 OWASP ZAP [33](#owasp-zap)](#owasp-zap)
+[22,9 OWASP ZAP [33]](#owasp-zap)
 
-[22.10 Keycloak [33](#keycloak)](#keycloak)
+[22.10 Keycloak [33]](#keycloak)
 
-[22.11 DefectDojo [33](#defectdojo)](#defectdojo)
+[22.11 DefectDojo [33]](#defectdojo)
 
-[22,12 AIDE [33](#aide)](#aide)
+[22,12 AIDE [33]](#aide)
 
-[22.13 Lynis [33](#lynis)](#lynis)
+[22.13 Lynis [33]](#lynis)
 
-[22.14 Agente de política aberta [33](#open-policy-agent)](#open-policy-agent)
+[22.14 Agente de política aberta [33]](#open-policy-agent)
 
-[23. Manual do SGSI para gerentes [35](#managers-isms-playbook)](#managers-isms-playbook)
+[23. Manual do SGSI para gerentes [35]](#managers-isms-playbook)
 
-[24. Guia de carreira do analista júnior [36](#junior-analyst-career-guide)](#junior-analyst-career-guide)
+[24. Guia de carreira do analista júnior [36]](#junior-analyst-career-guide)
 
-[24,1 Trabalho júnior típico [36](#typical-junior-work)](#typical-junior-work)
+[24,1 Trabalho júnior típico [36]](#typical-junior-work)
 
-[24,2 Valor dos empregadores de competências [37](#skills-employers-value)](#skills-employers-value)
+[24,2 Valor dos empregadores de competências [37]](#skills-employers-value)
 
-[25. Laboratório Fictício e Portfólio [38](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
+[25. Laboratório Fictício e Portfólio [38]](#fictional-laboratory-and-portfolio)
 
-[26. Plano de aprendizagem de trinta dias [39](#thirty-day-learning-plan)](#thirty-day-learning-plan)
+[26. Plano de aprendizagem de trinta dias [39]](#thirty-day-learning-plan)
 
-[27. Preparação da entrevista [40](#interview-preparation)](#interview-preparation)
+[27. Preparação da entrevista [40]](#interview-preparation)
 
-[27.1 O que é um ISMS? [40](#what-is-an-isms)](#what-is-an-isms)
+[27.1 O que é um ISMS? [40]](#what-is-an-isms)
 
-[27,2 ISO 27001 versus 27002? [40](#iso-27001-versus-27002)](#iso-27001-versus-27002)
+[27,2 ISO 27001 versus 27002? [40]](#iso-27001-versus-27002)
 
-[27.3 O que é o SoA? [40] (#what-is-the-soa)] (#what-is-the-soa)
+[27.3 O que é o SoA? [40]](#what-is-the-soa)
 
-[27.4 Todos os controles do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)
+[27.4 Todos os controles do anexo A são obrigatórios? [40]](#are-all-annex-a-controls-mandatory)
 
-[27.5 Como se testa um controlo? [40](#how-do-you-test-a-control)](#how-do-you-test-a-control)
+[27.5 Como se testa um controlo? [40]](#how-do-you-test-a-control)
 
-[27.6 O que é uma não conformidade? [40](#what-is-a-nonconformity)](#what-is-a-nonconformity)
+[27.6 O que é uma não conformidade? [40]](#what-is-a-nonconformity)
 
-[27.7 O que mudou em 2024? [40] (#what-changed-in-2024)] (#what-changed-in-2024)
+[27.7 O que mudou em 2024? [40]](#what-changed-in-2024)
 
-[27.8 O que pode um analista júnior concluir com segurança? [40](#what-can-a-junior-analyst-safely-conclude)](#what-can-a-junior-analyst-safely-conclude)
+[27.8 O que pode um analista júnior concluir com segurança? [40]](#what-can-a-junior-analyst-safely-conclude)
 
-[27.9 Perguntas ao empregador [40](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)
+[27.9 Perguntas ao empregador [40]](#questions-to-ask-the-employer)
 
-[28. Modelos, Glossário, Índice e Referências [42](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
+[28. Modelos, Glossário, Índice e Referências [42]](#templates-glossary-index-and-references)
 
-[28.1 Registro mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)
+[28.1 Registro mínimo de risco [42]](#minimal-risk-record)
 
-[28.2 Papel de trabalho para teste de controle [42](#control-test-workpaper)](#control-test-workpaper)
+[28.2 Papel de trabalho para teste de controle [42]](#control-test-workpaper)
 
-[28.3 Glossário [42](#glossary)](#glossary)
+[28.3 Glossário [42]](#glossary)
 
-[28,4 Índice de assunto [43](#subject-index)](#subject-index)
+[28,4 Índice de assunto [43]](#subject-index)
 
-[28.5 Referências oficiais [43](#official-references)](#official-references)
+[28.5 Referências oficiais [43]](#official-references)
 
 # 1. Fundamentos da ISO/IEC 27001 e 27002
 
@@ -515,7 +515,7 @@ Proteger a energia e o cabeamento de dados. Confirmar risco ou obrigação, desi
 Regra da seleção:** O anexo A é um conjunto de referência utilizado para verificar se os controles necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-16. Anexo A 8 Controles tecnológicos
+# 16. Anexo A 8 Controles tecnológicos
 
 * Resumos originais dos controles de referência, foco de verificação e exemplos de provas.*
 
@@ -563,21 +563,21 @@ Regra da seleção:** O anexo A é um conjunto de referência utilizado para ver
 
 * Como transformar decisões de risco em controles que se encaixam na organização.*
 
-1. Comece com a decisão de tratamento de risco, obrigação e resultado esperado – não com uma ferramenta.
+# 1. Comece com a decisão de tratamento de risco, obrigação e resultado esperado – não com uma ferramenta.
 
-2. Use ISO/IEC 27002 orientações e atributos relevantes para compreender finalidade, considerações de implementação e relações.
+# 2. Use ISO/IEC 27002 orientações e atributos relevantes para compreender finalidade, considerações de implementação e relações.
 
-3. Personalizar o controle às pessoas, processo, tecnologia, ambiente físico, restrições legais, e operações de negócios.
+# 3. Personalizar o controle às pessoas, processo, tecnologia, ambiente físico, restrições legais, e operações de negócios.
 
-4. Defina proprietário, escopo, gatilho, entradas, passos, saídas, registros, frequência, dependências, exceções e escalada.
+# 4. Defina proprietário, escopo, gatilho, entradas, passos, saídas, registros, frequência, dependências, exceções e escalada.
 
-5. Avaliar se o projeto poderia razoavelmente alcançar o resultado pretendido.
+# 5. Avaliar se o projeto poderia razoavelmente alcançar o resultado pretendido.
 
-6. Implementar através de mudanças controladas e treinar pessoas afetadas.
+# 6. Implementar através de mudanças controladas e treinar pessoas afetadas.
 
-7. Medir operação e eficácia, investigar exceções e melhorar.
+# 7. Medir operação e eficácia, investigar exceções e melhorar.
 
-8. Atualizar riscos, plano de tratamento, SoA, procedimentos e evidências quando o controle muda.
+# 8. Atualizar riscos, plano de tratamento, SoA, procedimentos e evidências quando o controle muda.
 
 Distinção importante:** ISO/IEC 27002 fornece orientação. A organização continua a ser responsável por selecionar e projetar controles que tratam seus riscos e atendem aos requisitos aplicáveis. □
 □--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -921,25 +921,25 @@ Os conceitos do ISMS explicam as cláusulas 4–10 e a melhoria contínua
 Regra do laboratório:** Use uma organização fictícia, dados sintéticos, sistemas isolados e ferramentas que você está autorizado a operar. Não afirme que um projeto de portfólio é uma certificação real ou auditoria do cliente. □
 □-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1. Criar uma empresa fictícia com dois produtos, um serviço de nuvem, uma força de trabalho remota, e três fornecedores.
+# 1. Criar uma empresa fictícia com dois produtos, um serviço de nuvem, uma força de trabalho remota, e três fornecedores.
 
-2. Escreva uma análise de contexto de uma página, registro do partido interessado, determinação da relevância do clima e declaração do escopo.
+# 2. Escreva uma análise de contexto de uma página, registro do partido interessado, determinação da relevância do clima e declaração do escopo.
 
-3. Criar critérios de risco e um registro de risco de dez cenários com proprietários e decisões de tratamento.
+# 3. Criar critérios de risco e um registro de risco de dez cenários com proprietários e decisões de tratamento.
 
-4. Criar um plano de tratamento e SoA que aborda todos os 93 controles Anexo A com justificativas concisas e estado de implementação honesto.
+# 4. Criar um plano de tratamento e SoA que aborda todos os 93 controles Anexo A com justificativas concisas e estado de implementação honesto.
 
-5. Construa políticas de amostragem, procedimentos, objetivos, métricas, registros de ativos e fornecedores, registro de treinamento, registro de incidentes e exercício de continuidade.
+# 5. Construa políticas de amostragem, procedimentos, objetivos, métricas, registros de ativos e fornecedores, registro de treinamento, registro de incidentes e exercício de continuidade.
 
-6. Use algumas ferramentas de código aberto em laboratórios isolados e capturar escopo, configuração, resultados, validação, remediação e evidências de reteste.
+# 6. Use algumas ferramentas de código aberto em laboratórios isolados e capturar escopo, configuração, resultados, validação, remediação e evidências de reteste.
 
-7. Projete e execute um plano de auditoria interna contra cláusulas e controles selecionados.
+# 7. Projete e execute um plano de auditoria interna contra cláusulas e controles selecionados.
 
-8. Escreva duas não conformidades, registros de causa raiz, ações corretivas e testes de eficácia.
+# 8. Escreva duas não conformidades, registros de causa raiz, ações corretivas e testes de eficácia.
 
-9. Crie minutos de gerenciamento-revisão mostrando entradas, decisões, proprietários, recursos e prazos.
+# 9. Crie minutos de gerenciamento-revisão mostrando entradas, decisões, proprietários, recursos e prazos.
 
-10. Publique somente artefatos sintéticos e higienizados, com uma declaração clara de limitações.
+# 10. Publique somente artefatos sintéticos e higienizados, com uma declaração clara de limitações.
 
 O artefato de Portfólio** O que demonstra**
 □------------------------------------------------------------------------------------------------------------------

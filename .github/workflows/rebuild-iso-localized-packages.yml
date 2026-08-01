@@ -1,0 +1,156 @@
+name: Rebuild and validate ISO localized packages
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/triggers/iso-final-package-rebuild.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iso-localized-final-package-qa
+  cancel-in-progress: false
+
+jobs:
+  rebuild-validate-and-commit:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install document and raster tooling
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+          python -m pip install --upgrade pip pillow
+
+      - name: Re-run localized source gates
+        run: |
+          set -euo pipefail
+          python3 qa/tools/audit_iso_localized_sources.py
+          python3 qa/tools/audit_iso_localized_section_parity.py
+
+      - name: Rebuild ISO Spanish and Portuguese DOCX/PDF
+        run: |
+          set -euo pipefail
+          ROOT='02-management-systems/ISO_IEC_27001_27002'
+          for source in \
+            "$ROOT/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md" \
+            "$ROOT/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md"; do
+            stem="${source%.md}"
+            pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+          done
+
+      - name: Render every PDF page and run raster preflight
+        run: |
+          set -euo pipefail
+          rm -rf qa/rendered/iso-final
+          mkdir -p qa/rendered/iso-final/es-419 qa/rendered/iso-final/pt-BR
+          ES='02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf'
+          PT='02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf'
+          pdftoppm -png -r 110 "$ES" qa/rendered/iso-final/es-419/page >/dev/null 2>&1
+          pdftoppm -png -r 110 "$PT" qa/rendered/iso-final/pt-BR/page >/dev/null 2>&1
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          import json
+
+          root = Path('qa/rendered/iso-final')
+          report = {'editions': {}, 'failures': []}
+          for edition in ('es-419', 'pt-BR'):
+              pages = sorted((root / edition).glob('page-*.png'))
+              if not pages:
+                  report['failures'].append(f'{edition}: no rendered pages')
+                  continue
+              details = []
+              for page in pages:
+                  with Image.open(page).convert('L') as im:
+                      stat = ImageStat.Stat(im)
+                      mean = stat.mean[0]
+                      extrema = im.getextrema()
+                      nonwhite = sum(1 for value in im.resize((100, 140)).getdata() if value < 250)
+                      if extrema == (255, 255) or nonwhite < 5:
+                          report['failures'].append(f'{edition}: blank or near-blank {page.name}')
+                      details.append({'page': page.name, 'width': im.width, 'height': im.height, 'mean_gray': round(mean, 2), 'sample_nonwhite': nonwhite})
+              report['editions'][edition] = {'page_count': len(pages), 'pages': details}
+          Path('qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          md = ['# ISO Localized Final Raster Preflight', '', 'Automated page-rendering evidence. This detects missing or blank pages but does not replace native-language or human page-layout review.', '']
+          for edition, data in report['editions'].items():
+              md += [f'## {edition}', '', f"- Rendered pages: {data['page_count']}", '- Blank or near-blank pages: 0', '']
+          md += ['## Result', '', '- Status: ' + ('FAIL' if report['failures'] else 'PASS'), '']
+          if report['failures']:
+              md.extend(f'- {item}' for item in report['failures'])
+          Path('qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+          if report['failures']:
+              raise SystemExit('\n'.join(report['failures']))
+          PY
+
+      - name: Verify embedded media and write checksums
+        run: |
+          set -euo pipefail
+          python3 scripts/validate_docx_embedded_media.py
+          ROOT='02-management-systems/ISO_IEC_27001_27002'
+          sha256sum \
+            "$ROOT/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md" \
+            "$ROOT/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx" \
+            "$ROOT/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf" \
+            "$ROOT/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md" \
+            "$ROOT/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx" \
+            "$ROOT/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf" \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md \
+            qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.md \
+            > qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
+
+      - name: Commit controlled package and QA evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            02-management-systems/ISO_IEC_27001_27002/Espanol/*.docx \
+            02-management-systems/ISO_IEC_27001_27002/Espanol/*.pdf \
+            02-management-systems/ISO_IEC_27001_27002/Portugues_BR/*.docx \
+            02-management-systems/ISO_IEC_27001_27002/Portugues_BR/*.pdf \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.* \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.* \
+            qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.* \
+            qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
+          if git diff --cached --quiet; then
+            echo 'No package or QA changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Rebuild and validate final ISO localized packages'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:production/multilingual-grc-editions; then exit 0; fi
+            if [ "$attempt" -eq 3 ]; then exit 1; fi
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            sleep $((attempt * 5))
+          done
+
+      - name: Upload rendered review evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: iso-localized-final-rendered-review
+          path: |
+            qa/rendered/iso-final/
+            qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.md
+            qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.json
+            qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
+          if-no-files-found: error

@@ -1,14 +1,14 @@
-# Trigger strengthened ISO localized-source audit
+# Trigger ISO Spanish reviewed-baseline recovery
 
-Run the audit-only ISO/IEC 27001 and 27002 localized-source workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
+Run the fail-closed ISO Spanish recovery workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
 
 The workflow must:
 
-- inspect the Spanish and Brazilian Portuguese Markdown sources without modifying them;
-- identify missing and duplicate major sections and image references;
-- detect malformed image markup, injected corruption tokens, malformed links and emphasis, untranslated headings, captions and control text, mixed PT-BR terminology, and known mistranslations;
-- treat collapsed or malformed table structures as release blockers;
-- write refreshed Markdown and JSON evidence to the production branch;
-- remain fail-closed while any configured structural, language or table blocker remains;
-- not rebuild DOCX/PDF files or alter graphics, prose or publication metadata; and
+- preserve the current production Spanish source in `qa/recovery/ISO_IEC_27001_27002_ES_PRE_RECOVERY_2026-08-01.md`;
+- restore the exact Spanish Markdown blob `1dec4df93c0ce5c279d958d56ed23553535c0170` from `fix/publication-readiness-batch-1-spanish`;
+- verify the restored blob before committing;
+- rerun the strengthened Spanish and Brazilian Portuguese localized-source audit;
+- commit the recovered Spanish source, quarantine copy, and refreshed Markdown/JSON audit evidence to the production branch;
+- remain fail-closed while any structural, language, image, or table blocker remains;
+- not rebuild DOCX/PDF files or alter graphics and publication metadata; and
 - not merge this trigger-only PR.

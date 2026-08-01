@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "locale": "en",
+  "locale": "pt-BR",
   "markdown_h1": 8,
   "markdown_h2": 42,
   "docx_zip_integrity": "PASS",
   "pdf_searchable_text": "PASS",
   "pdf_pages": 8,
-  "pdf_extracted_words": 1562,
+  "pdf_extracted_words": 1504,
   "tool_field_counts": {
     "GRC_Program_Charter.csv": 22,
     "GRC_Operating_Model_and_RACI.csv": 18,

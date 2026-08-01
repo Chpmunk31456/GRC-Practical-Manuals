@@ -10,6 +10,36 @@ This project uses version numbers such as:
 
 ---
 
+## [1.11] — 1 August 2026
+
+### Added
+
+- Published the GRC Program Management and Operating Model Toolkit.
+- Added controlled English Markdown, DOCX, and searchable PDF editions.
+- Added six editable CSV tools covering the program charter, operating model and RACI, annual plan, initiative portfolio, governance decisions, and maturity assessment.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF.
+- Added official-source records, automated QA, SHA-256 checksums, project status, release notes, and page-by-page PDF visual-QA evidence.
+
+### Validated
+
+- All three editions passed 8 H1 / 42 H2 heading parity, DOCX ZIP integrity, and searchable-PDF checks.
+- English PDF: 8 pages and 1,562 extracted words.
+- Spanish PDF: 8 pages and 1,545 extracted words.
+- Brazilian Portuguese PDF: 8 pages and 1,504 extracted words.
+- All six CSV schemas passed their documented field-count, uniqueness, and nonblank-header checks.
+- Codex rendered and inspected all 24 PDF pages and found no visible layout defects.
+
+### Changed
+
+- Updated the root catalog and the Templates and Tools index.
+- Advanced the repository version from 1.10 to 1.11.
+
+### Limitations
+
+- Native-language editorial approval, organization-specific legal or regulatory review, accessibility and assistive-technology testing, standards certification, formal audit assurance, approval of organization-specific decision rights, and human publication approval are not represented as completed.
+
+---
+
 ## [1.10] — 1 August 2026
 
 ### Added

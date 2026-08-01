@@ -1,20 +1,27 @@
 # GRC Program Management and Operating Model Toolkit
 
-A practical toolkit for establishing the mandate, governance, decision rights, annual plan, delivery portfolio, operating review, and continuous-improvement structure of a GRC program.
+A controlled Section 08 publication workstream for designing and operating an accountable GRC program.
 
-## Publication package
+## Published package
 
-- Six controlled English chapters
-- English Markdown, DOCX, and searchable PDF
-- Six editable CSV tools
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Authoritative-source register, automated QA records, and SHA-256 checksums
+- Controlled English Markdown, DOCX, and searchable PDF
+- Six editable CSV operating-model tools with 22, 18, 19, 24, 20, and 20 fields
+- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF publication candidate
+- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF publication candidate
+- Official-source register and revalidation record
+- Assembly, package, visual-QA, checksum, release, and project-status evidence
 
-## Important assurance boundary
+## Automated validation
 
-The toolkit supports management and governance. It does not establish legal compliance, certify an operating model, replace independent assurance, or prove that governance and controls are effective.
+- All three editions: 8 H1 and 42 H2 headings
+- English PDF: 8 pages and 1,562 extracted words
+- Spanish PDF: 8 pages and 1,545 extracted words
+- Brazilian Portuguese PDF: 8 pages and 1,504 extracted words
+- Six CSV schemas, DOCX ZIP integrity, searchable-PDF text, and SHA-256 generation: PASS
+- Page-by-page Codex visual inspection: 24 of 24 pages inspected; no visible clipping, overlap, missing glyphs, or broken layout found
 
-## Human-only limitations
+## Assurance boundary
 
-Native-language editorial approval, organization-specific legal or regulatory review, professional-standards interpretation, accessibility testing, formal assurance, and page-by-page human visual review are not represented as completed.
+The toolkit supports management decisions and traceability. It does not independently establish compliance, control effectiveness, certification, legal sufficiency, or audit assurance.
+
+Native-language editorial approval, organization-specific legal or regulatory review, accessibility and assistive-technology testing, standards certification, formal audit assurance, and human publication approval are not represented as completed.

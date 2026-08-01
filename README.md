@@ -3,7 +3,7 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and operational GRC tooling.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.11  
+**Repository version:** 1.11
 **Last updated:** 1 August 2026
 
 ## Start Here
@@ -32,7 +32,8 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 - Most established manuals are available in Microsoft Word (`.docx`) and PDF.
 - The EU AI Act GRC Compliance Manual is published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums.
 - The Section 08 practical toolkits include controlled English masters, editable operational tools, DOCX and searchable PDF editions, machine-assisted Spanish and Brazilian Portuguese publication candidates, automated QA evidence, and SHA-256 checksums.
-- The GRC Program Management and Operating Model Toolkit includes six controlled English chapters, six editable operating-model tools, English DOCX and searchable PDF editions, current-source records, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
+- The GRC Metrics and Executive Reporting Toolkit includes six controlled English chapters, four editable metrics and reporting tools, English DOCX and searchable PDF editions, current-source revalidation records, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
+- The GRC Program Management and Operating Model Toolkit includes a controlled English master, six editable operating-model tools, English DOCX and searchable PDF editions, official-source records, automated QA, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 

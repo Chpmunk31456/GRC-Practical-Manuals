@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "repository_release": "1.11",
+  "edition_count": 3,
+  "tool_field_counts": {
+    "GRC_Program_Charter.csv": 22,
+    "GRC_Operating_Model_and_RACI.csv": 18,
+    "Annual_GRC_Plan_and_Calendar.csv": 19,
+    "GRC_Initiative_Portfolio_Tracker.csv": 24,
+    "Governance_Meeting_and_Decision_Log.csv": 20,
+    "GRC_Maturity_Assessment.csv": 20
+  },
+  "editions": [
+    {
+      "status": "PASS",
+      "locale": "en",
+      "markdown_h1": 8,
+      "markdown_h2": 42,
+      "docx_zip_integrity": "PASS",
+      "pdf_searchable_text": "PASS",
+      "pdf_pages": 8,
+      "pdf_extracted_words": 1562,
+      "tool_field_counts": {
+        "GRC_Program_Charter.csv": 22,
+        "GRC_Operating_Model_and_RACI.csv": 18,
+        "Annual_GRC_Plan_and_Calendar.csv": 19,
+        "GRC_Initiative_Portfolio_Tracker.csv": 24,
+        "Governance_Meeting_and_Decision_Log.csv": 20,
+        "GRC_Maturity_Assessment.csv": 20
+      },
+      "human_review_limitations": [
+        "Native-language editorial approval is not represented as completed.",
+        "Organization-specific legal, regulatory, accessibility, certification, and audit review is not represented as completed.",
+        "Automated validation does not prove program or control effectiveness."
+      ]
+    },
+    {
+      "status": "PASS",
+      "locale": "es-419",
+      "markdown_h1": 8,
+      "markdown_h2": 42,
+      "docx_zip_integrity": "PASS",
+      "pdf_searchable_text": "PASS",
+      "pdf_pages": 8,
+      "pdf_extracted_words": 1545,
+      "tool_field_counts": {
+        "GRC_Program_Charter.csv": 22,
+        "GRC_Operating_Model_and_RACI.csv": 18,
+        "Annual_GRC_Plan_and_Calendar.csv": 19,
+        "GRC_Initiative_Portfolio_Tracker.csv": 24,
+        "Governance_Meeting_and_Decision_Log.csv": 20,
+        "GRC_Maturity_Assessment.csv": 20
+      },
+      "human_review_limitations": [
+        "Native-language editorial approval is not represented as completed.",
+        "Organization-specific legal, regulatory, accessibility, certification, and audit review is not represented as completed.",
+        "Automated validation does not prove program or control effectiveness."
+      ]
+    },
+    {
+      "status": "PASS",
+      "locale": "pt-BR",
+      "markdown_h1": 8,
+      "markdown_h2": 42,
+      "docx_zip_integrity": "PASS",
+      "pdf_searchable_text": "PASS",
+      "pdf_pages": 8,
+      "pdf_extracted_words": 1504,
+      "tool_field_counts": {
+        "GRC_Program_Charter.csv": 22,
+        "GRC_Operating_Model_and_RACI.csv": 18,
+        "Annual_GRC_Plan_and_Calendar.csv": 19,
+        "GRC_Initiative_Portfolio_Tracker.csv": 24,
+        "Governance_Meeting_and_Decision_Log.csv": 20,
+        "GRC_Maturity_Assessment.csv": 20
+      },
+      "human_review_limitations": [
+        "Native-language editorial approval is not represented as completed.",
+        "Organization-specific legal, regulatory, accessibility, certification, and audit review is not represented as completed.",
+        "Automated validation does not prove program or control effectiveness."
+      ]
+    }
+  ]
+}

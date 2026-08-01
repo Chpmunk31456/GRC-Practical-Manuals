@@ -1,14 +1,13 @@
-# English Package QA
+# Package QA - en
 
-- Status: **PASS**
-- Chapters: 6
-- H1 headings: 7
-- H2 headings: 33
+- Automated result: **PASS**
+- H1 headings: 8
+- H2 headings: 42
 - DOCX ZIP integrity: PASS
 - PDF searchable text: PASS
-- Six CSV schemas: PASS
-- Full-page visual review: PASS
+- PDF pages: 8
+- Extracted PDF words: 1562
 
 ## Human-review limitations
 
-Automated checks do not replace legal, regulatory, professional, accessibility, editorial, or assurance review.
+Native-language editorial approval, organization-specific legal or regulatory review, accessibility and assistive-technology testing, standards certification, formal audit assurance, and approval of organization-specific decision rights are not represented as completed.

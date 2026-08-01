@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "risk_register_fields": 41,
+  "treatment_plan_fields": 27,
+  "docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "checksummed_files": 9,
+  "human_review_limitations": [
+    "Automated checks do not replace legal or regulatory review.",
+    "Automated checks do not replace assistive-technology testing.",
+    "Automated checks do not replace full page-by-page human review."
+  ]
+}

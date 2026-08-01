@@ -1,0 +1,20 @@
+{
+  "title": "GRC Risk Register and Risk Treatment Practical Manual",
+  "version": "1.0",
+  "language": "en-US",
+  "source_count": 8,
+  "word_count": 3591,
+  "line_count": 684,
+  "sha256": "58bd0ff11de2b6d1f04334382ad06035b42efdfe9714433056aa258d74d5b37a",
+  "sources": [
+    "chapters/01_Risk_Management_Foundations.md",
+    "chapters/02_Risk_Identification_and_Scenario_Writing.md",
+    "chapters/03_Risk_Analysis_and_Scoring.md",
+    "chapters/04_Risk_Response_Treatment_and_Acceptance.md",
+    "chapters/05_Monitoring_Reporting_and_Escalation.md",
+    "chapters/06_Operating_Procedure_and_Worked_Example.md",
+    "templates/Risk_Acceptance_Record.md",
+    "SOURCES.md"
+  ],
+  "status": "PASS"
+}

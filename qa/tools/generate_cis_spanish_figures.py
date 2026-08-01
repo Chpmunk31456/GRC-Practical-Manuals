@@ -54,7 +54,7 @@ def figure1():
     draw = ImageDraw.Draw(image)
     draw.text((55, 38), 'Los 18 CIS Critical Security Controls', font=TITLE, fill=INK)
     draw.text((55, 96), 'Una estructura priorizada de 153 Salvaguardas', font=SMALL, fill=LINE)
-    columns, rows = 6, 3
+    columns = 6
     x0, y0, width, height, gx, gy = 75, 195, 190, 125, 40, 42
     for number in range(1, 19):
         row, column = divmod(number - 1, columns)
@@ -81,15 +81,33 @@ def figure2():
     image.save(OUT / 'image2.png', optimize=True)
 
 
+def figure10():
+    image = Image.new('RGB', (W, H), 'white')
+    draw = ImageDraw.Draw(image)
+    draw.text((55, 38), 'Ruta para analistas junior de Controles CIS', font=TITLE, fill=INK)
+    draw.text((55, 96), 'Aprender, medir, comunicar y construir un portafolio honesto', font=SMALL, fill=LINE)
+    roles = [
+        'Controles\nde seguridad', 'GRC', 'Vulnerabilidades', 'Aseguramiento',
+        'Operaciones\nde seguridad', 'Cumplimiento\nde TI', 'Riesgo de\nterceros', 'Programas de\nciberseguridad'
+    ]
+    columns, x0, y0, width, height, gx, gy = 4, 70, 205, 300, 185, 45, 55
+    for index, role in enumerate(roles):
+        row, column = divmod(index, columns)
+        x1 = x0 + column * (width + gx)
+        y1 = y0 + row * (height + gy)
+        box(draw, (x1, y1, x1 + width, y1 + height), role, BLUE if row == 0 else PALE, SMALL)
+    image.save(OUT / 'image10.png', optimize=True)
+
+
 figure1()
 figure2()
 flow(4, 'Ciclo de inventario de activos y software', 'Descubrimiento, conciliación y actualización continua', ['Descubrir', 'Conciliar', 'Responder', 'Revisar', 'Actualizar'])
 flow(5, 'Ciclo de vida de protección de datos', 'Medidas según sensibilidad y necesidad', ['Descubrir', 'Clasificar', 'Proteger', 'Conservar', 'Eliminar'])
 flow(6, 'Ciclo de vida de identidad y acceso', 'Creación aprobada, autenticación sólida y revocación oportuna', ['Solicitar', 'Aprobar', 'Provisionar', 'Revisar', 'Revocar'])
 flow(7, 'Gestión continua de vulnerabilidades', 'Cobertura completa y remediación verificada', ['Inventariar', 'Evaluar', 'Priorizar', 'Corregir', 'Verificar'])
-flow(8, 'Gestión de registros y monitoreo', 'Registros completos, protegidos y útiles para investigación', ['Recopilar', 'Centralizar', 'Proteger', 'Analizar', 'Responder'])
-flow(9, 'Ciclo de respuesta a incidentes', 'Preparación, coordinación, recuperación y aprendizaje', ['Preparar', 'Detectar', 'Analizar', 'Contener', 'Recuperar', 'Mejorar'])
-flow(10, 'Pruebas de penetración y corrección', 'Pruebas autorizadas, hallazgos trazables y cierre verificado', ['Autorizar', 'Definir alcance', 'Probar', 'Documentar', 'Corregir', 'Repetir prueba'])
+flow(8, 'Monitoreo y defensa de la red', 'Contexto centralizado, investigación humana y respuesta', ['Recopilar', 'Centralizar', 'Detectar', 'Investigar', 'Responder'])
+flow(9, 'Preparación para la respuesta a incidentes', 'Roles, reporte, comunicación, ejercicios y revisión', ['Preparar', 'Reportar', 'Coordinar', 'Ejercitar', 'Revisar', 'Mejorar'])
+figure10()
 
 if not (OUT / 'image3.png').is_file():
     raise SystemExit('Reviewed Figure 3 is missing; refusing to replace it automatically.')

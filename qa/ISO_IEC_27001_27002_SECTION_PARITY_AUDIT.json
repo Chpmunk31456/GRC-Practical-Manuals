@@ -110,17 +110,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 145,
-        "pipe_rows": 0,
-        "images": 0,
+        "chars": 2063,
+        "pipe_rows": 6,
+        "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.063,
-        "blockers": [
-          "table_structure_drift",
-          "length_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.897,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -143,17 +140,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 189,
-        "pipe_rows": 0,
-        "images": 0,
+        "chars": 1665,
+        "pipe_rows": 12,
+        "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.09,
-        "blockers": [
-          "table_structure_drift",
-          "length_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.795,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -176,17 +170,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 164,
-        "pipe_rows": 0,
+        "chars": 2106,
+        "pipe_rows": 10,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.056,
-        "blockers": [
-          "table_structure_drift",
-          "length_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.717,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {

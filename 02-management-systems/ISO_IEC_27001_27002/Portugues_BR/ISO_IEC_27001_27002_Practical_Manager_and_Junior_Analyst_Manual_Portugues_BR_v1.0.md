@@ -251,11 +251,72 @@ Defina os critérios de risco antes da pontuação: método de identificação, 
 | Proprietário e data | Proprietário responsável pelo risco e data-alvo designados |
 | Risco residual | Reavaliar após o tratamento e obter aprovação explícita do proprietário |
 
-# 4. Criar um plano de tratamento e SoA que aborda todos os 93 controles Anexo A com justificativas concisas e estado de implementação honesto.
+# 4. Declaração de Aplicabilidade
 
-# 5. Construa políticas de amostragem, procedimentos, objetivos, métricas, registros de ativos e fornecedores, registro de treinamento, registro de incidentes e exercício de continuidade.
+*A ponte entre o tratamento de riscos, o Anexo A, outros controles e as evidências de auditoria.*
 
-# 6. Use algumas ferramentas de código aberto em laboratórios isolados e capturar escopo, configuração, resultados, validação, remediação e evidências de reteste.
+<img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="A Declaração de Aplicabilidade registra a seleção fundamentada de controles e o status de implementação." />
+
+Figura 3. Fluxo de trabalho da Declaração de Aplicabilidade
+
+- Listar os controles necessários para tratar os riscos de segurança da informação identificados e atender aos requisitos legais, regulatórios, contratuais e de negócio.
+
+- Comparar os controles selecionados com o Anexo A para verificar se controles de referência necessários não foram ignorados.
+
+- Registrar se cada controle do Anexo A é aplicável e justificar sua inclusão ou exclusão.
+
+- Registrar claramente o status de implementação e mantê-lo coerente com o plano de tratamento de riscos e as evidências operacionais.
+
+- Incluir controles específicos da organização quando o Anexo A não tratar completamente determinado risco.
+
+- Controlar a Declaração de Aplicabilidade como informação documentada e atualizá-la após mudanças materiais em riscos, escopo, requisitos legais, fornecedores, tecnologia ou controles.
+
+| **Controle** | **Aplicável?** | **Justificativa** | **Status** | **Responsável / evidência** |
+|---|---|---|---|---|
+| Exemplo 8.15 — registros de eventos | Sim | Necessário para detecção, investigação e obrigações aplicáveis | Implementado com ações em aberto | Operações de Segurança / inventário de fontes e registros de revisão |
+| Exemplo 7.9 — ativos fora das instalações | Sim | Pessoas em trabalho remoto ou viagem utilizam dispositivos corporativos | Implementado | Operações de TI / inventário e evidência de criptografia |
+| Exemplo de controle organizacional | Sim | Risco específico de segurança de produto exige versões assinadas | Parcialmente implementado | Engenharia / registros de pipeline |
+| Exemplo de exclusão | Não | A tecnologia ou o cenário descrito não existe no escopo controlado | Não aplicável | Evidência de escopo e arquitetura |
+
+# 5. Documentação e evidências
+
+*Como manter informações documentadas úteis sem criar burocracia.*
+
+<img src="media/image4.png" style="width:6.15in;height:3.29079in" alt="As evidências devem sustentar o desenho, a operação, as exceções, a correção e o reteste." />
+
+Figura 4. Cadeia de requisitos até evidências
+
+| **Documento ou registro** | **Finalidade** | **Verificações de controle** |
+|---|---|---|
+| Escopo do SGSI | Define limites e interfaces | Aprovado, atual e coerente com a realidade |
+| Política | Estabelece direção e compromissos | Aprovada, comunicada e revisada |
+| Método e registro de riscos | Demonstra avaliação e decisões repetíveis | Critérios aplicados de forma consistente; proprietários aprovam o risco residual |
+| Plano de tratamento de riscos | Acompanha ações, responsáveis, recursos e datas | Alinhado aos riscos e à Declaração de Aplicabilidade |
+| Declaração de Aplicabilidade | Explica a seleção e o status dos controles | Todos os controles do Anexo A tratados; justificativas sustentadas |
+| Objetivos e métricas | Demonstra resultados planejados e avaliação | Mensuráveis, atribuídos, analisados e usados para ação |
+| Registros de competência e conscientização | Sustentam capacidade e entendimento | Baseados em função, avaliados e atualizados |
+| Evidência operacional | Demonstra que os controles realmente operaram | Completa, autêntica, protegida e retida |
+| Registros de auditoria e revisão | Sustentam supervisão e decisões | Objetivos, completos e acompanhados até a conclusão |
+| Registros de ação corretiva | Demonstram causa-raiz e correção eficaz | Causa tratada, recorrência considerada e eficácia verificada |
+
+# 6. Cláusula 4 — Contexto da organização
+
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
+
+| **Finalidade da cláusula:** Contexto da organização |
+|---|
+
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 4.1 | Compreender questões internas e externas que podem afetar o SGSI; considerar explicitamente se a mudança climática é relevante. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 4.2 | Identificar as partes interessadas pertinentes, seus requisitos e se incluem expectativas relacionadas ao clima. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 4.3 | Definir e manter o escopo do SGSI, incluindo limites, interfaces, dependências, localidades, tecnologia e exclusões. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 4.4 | Estabelecer, operar, manter e melhorar continuamente o SGSI e seus processos obrigatórios. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
+
+| **Emenda de 2024:** Determinar explicitamente se a mudança climática é relevante para o contexto do SGSI e reconhecer que as partes interessadas pertinentes podem ter requisitos relacionados ao clima. Manter evidências do raciocínio e de qualquer ação resultante. |
+|---|
 
 # 7. Projete e execute um plano de auditoria interna contra cláusulas e controles selecionados.
 

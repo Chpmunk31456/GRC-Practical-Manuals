@@ -1,6 +1,6 @@
 # Project Status — Compliance Obligations Register and Regulatory Change Management Toolkit
 
-- Status: completed publication package
+- Status: completed publication package and merge candidate
 - Authorization: repository owner authorized autonomous completion, QA, merge, catalog updates, and workflow cleanup
 - English controlled manual: complete
 - Editable tools: complete
@@ -8,6 +8,7 @@
 - Spanish (`es-419`): machine-assisted publication candidate, automated QA PASS
 - Brazilian Portuguese (`pt-BR`): machine-assisted publication candidate, automated QA PASS
 - Checksums and release evidence: complete
+- Root catalog, Section 08 index, and version 1.9 changelog: complete
 - Temporary English workflow: removed after successful build
 - Temporary localization workflow: removed after successful build
 - Temporary changelog workflow: removed after successful release-record update

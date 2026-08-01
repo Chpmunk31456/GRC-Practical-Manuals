@@ -6,18 +6,27 @@ A practical manual and toolkit for preparing organizations for internal and exte
 
 This manual covers readiness governance, control ownership, scope definition, pre-assessment reviews, evidence coordination, gap analysis, finding classification, root-cause analysis, corrective-action planning, risk acceptance, validation, closure, reporting, escalation, and continuous readiness.
 
-## Planned publication package
+## Publication package
 
+- Six controlled English chapters
 - English controlled Markdown master
-- Microsoft Word and searchable PDF editions
-- Audit-readiness assessment workbook templates
-- Gap and finding register
-- Corrective-action plan tracker
-- Remediation validation record
-- Management response template
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Automated QA records and SHA-256 checksums
+- English Microsoft Word edition
+- English searchable PDF edition
+- 42-field audit-readiness assessment tracker
+- 35-field finding and root-cause register
+- 34-field remediation action-plan tracker
+- 29-field closure-validation record
+- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF candidate
+- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF candidate
+- Assembly reports, automated QA records, and SHA-256 checksums
+
+The Spanish and Brazilian Portuguese editions are clearly identified as machine-assisted publication candidates. Automated structural and package validation passed; native-language editorial approval is not represented as completed.
+
+## Quality evidence
+
+Automated checks cover controlled-source assembly, unresolved markers, template field counts, heading parity, protected-token restoration, DOCX ZIP integrity, searchable PDF text, page counts, extracted-word thresholds, metadata, and checksums.
+
+Automated validation does not replace legal or regulatory review, standards certification, a formal audit opinion, assistive-technology testing, or full page-by-page human visual inspection.
 
 ## Author
 

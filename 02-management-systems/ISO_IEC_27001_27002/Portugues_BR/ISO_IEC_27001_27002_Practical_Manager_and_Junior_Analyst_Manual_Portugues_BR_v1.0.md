@@ -680,244 +680,238 @@ Um certificado tem escopo e prazo definidos. Ele não prova que todo produto é 
 
 # 22. Ferramentas de Código Aberto
 
-* Links oficiais, inícios rápidos seguros, evidências e limitações.*
+*Links oficiais, inícios rápidos seguros, evidências e limitações.*
 
-. **Ferramenta** . **Finalidade** . **Possível suporte** .
-------------------------------------------------------------------------------------
-□ Ciso Assistant; intuitem.github.io; ISMS, riscos, controles, provas
-SimpleRisk Community www.simplerisk.com
-• Wazuh – wazuh.com – SIEM, monitorização dos parâmetros de avaliação, MIF
-.osquery , www.osquery.io , Endpoint inventário e consultas ,
-□ OpenSCAP   www.open-scap.org
-- Greenbone Community Edition - Greenbone.github.io - Gestão da vulnerabilidade
-O Nmap nmap.org O Ativo e a descoberta do serviço
-Varredura de código, imagem, dependência, segredo e configuração
-• OWASP ZAP
-□ Keycloak www.keycloak.org
-DefectDojo www.defectdojo.org
-• Monitorização da integridade dos ficheiros □
-Lynis, cisofy.com, auditoria de segurança Linux
-□ Open Policy Agent www.openpolicyagent.org
+| **Ferramenta** | **Finalidade** | **Possível apoio** |
+|---|---|---|
+| CISO Assistant | SGSI, riscos, controles e evidências | Implante em laboratório isolado; configure escopo, riscos, tratamentos, proprietários e evidências. |
+| SimpleRisk Community | Registro e tratamento de riscos | Defina critérios, registre riscos e proprietários, selecione tratamentos e acompanhe prazos. |
+| Wazuh | SIEM, monitoramento de endpoint e FIM | Instale gerente e agente em laboratório, gere evento autorizado e preserve configuração e alerta. |
+| osquery | Inventário e consultas de endpoint | Execute consultas somente leitura em host de laboratório e documente cobertura e resultados. |
+| OpenSCAP | Avaliação de configuração Linux | Selecione perfil apropriado, examine sistema de laboratório, valide achados, corrija e repita. |
+| Greenbone Community Edition | Gestão de vulnerabilidades | Autorize alvos, atualize feeds, execute varredura autenticada, valide e reteste. |
+| Nmap | Descoberta de ativos e serviços | Use apenas em faixas autorizadas; limite a varredura e compare com o inventário. |
+| Trivy | Código, imagem, dependência, segredo e configuração | Examine repositório ou imagem de teste, valide, corrija e reescaneie. |
+| OWASP ZAP | Teste autorizado de aplicações web | Use aplicação de treinamento; mantenha varredura ativa sob aprovação escrita. |
+| Keycloak | Identidade, MFA, funções e logs | Crie ambiente de laboratório, usuários, grupos, menor privilégio e casos de entrada, mudança e saída. |
+| DefectDojo | Ingestão e remediação de achados | Importe resultados seguros, deduplique, atribua responsáveis e encerre somente após reteste. |
+| AIDE | Monitoramento de integridade de arquivos | Crie linha de base, faça mudança autorizada, execute verificação e proteja a linha de base. |
+| Lynis | Auditoria de segurança Linux | Audite host de laboratório, avalie sugestões contra risco, corrija itens e execute novamente. |
+| Open Policy Agent | Política como código | Escreva regra de laboratório, teste entradas permitidas e negadas e preserve resultados. |
 
-Limitação crítica: ** Ferramentas suportam controles e evidências; elas não selecionam tratamento de risco, determinam conformidade, substituem auditores competentes ou certificam uma organização. Validar cobertura, qualidade de dados, configuração, permissões, atualizações e revisão humana.
-(---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Limitação crítica:** Ferramentas apoiam controles e evidências; elas não selecionam tratamento de risco, determinam conformidade, substituem auditores competentes nem certificam uma organização. Valide cobertura, qualidade de dados, configuração, permissões, atualizações e revisão humana. |
+|---|
 
-# # 22.1 Assistente CISO
+## 22.1 CISO Assistant
 
-Objetivo: ISMS, riscos, controles, evidências. Projeto oficial: [<u>CISO Assistant</u>](https://intuitem.github.io/ciso-assistant-community/)
+**Objetivo:** SGSI, riscos, controles e evidências. Projeto oficial: [CISO Assistant](https://intuitem.github.io/ciso-assistant-community/)
 
-Início rápido seguro: Implantar em um ambiente de teste isolado; criar um projeto de framework, escopo, registro de risco, ações de tratamento, proprietários e registros de evidências.
+**Início rápido seguro:** Implante em laboratório isolado; configure escopo, riscos, tratamentos, proprietários e evidências.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22.2 Comunidade de Risco Simples
+## 22.2 SimpleRisk Community
 
-Objetivo: Registro de risco e tratamento. Projecto oficial: [<u>SimpleRisk Community</u>](https://www.simplerisk.com/)
+**Objetivo:** Registro e tratamento de riscos. Projeto oficial: [SimpleRisk Community](https://www.simplerisk.com/)
 
-Início rápido e seguro: Instale com segurança, defina critérios de risco, registre riscos e proprietários, escolha tratamentos, rastreie datas de vencimento e exporte relatórios revisados.
+**Início rápido seguro:** Defina critérios, registre riscos e proprietários, selecione tratamentos e acompanhe prazos.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22,3 Wazuh
+## 22.3 Wazuh
 
-Objetivo: SIEM, monitorização do desfecho, MIF. Projecto oficial: [<u>Wazuh</u>](https://wazuh.com/)
+**Objetivo:** SIEM, monitoramento de endpoint e FIM. Projeto oficial: [Wazuh](https://wazuh.com/)
 
-Início rápido e seguro: Instale um gerente de laboratório e agente, confirme a inscrição, desencadeie um evento de teste autorizado, reveja o alerta e preserve a configuração e a evidência de alerta.
+**Início rápido seguro:** Instale gerente e agente em laboratório, gere evento autorizado e preserve configuração e alerta.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22,4 Osquery
+## 22.4 osquery
 
-Finalidade: Inventário de Endpoint e consultas. Projeto oficial: [<u>osquery</u>](https://www.osquery.io/)
+**Objetivo:** Inventário e consultas de endpoint. Projeto oficial: [osquery](https://www.osquery.io/)
 
-Início rápido seguro: Instale em um host de laboratório, execute consultas somente de leitura para software, usuários, processos ou configurações, agendar consultas aprovadas e cobertura de documentos.
+**Início rápido seguro:** Execute consultas somente leitura em host de laboratório e documente cobertura e resultados.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22.5 OpenSCAP
+## 22.5 OpenSCAP
 
-Objetivo: Avaliação da configuração do Linux. Projeto oficial: [<u>OpenSCAP</u>](https://www.open-scap.org/)
+**Objetivo:** Avaliação de configuração Linux. Projeto oficial: [OpenSCAP](https://www.open-scap.org/)
 
-Início rápido seguro: Selecione um perfil apropriado, escaneie um sistema de laboratório, valide os achados manualmente, registre exceções, corrija e rescan.
+**Início rápido seguro:** Selecione perfil apropriado, examine sistema de laboratório, valide achados, corrija e repita.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
 ## 22.6 Greenbone Community Edition
 
-Objetivo: Gestão da vulnerabilidade. Projeto oficial: [<u>Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)
+**Objetivo:** Gestão de vulnerabilidades. Projeto oficial: [Greenbone Community Edition](https://greenbone.github.io/docs/latest/)
 
-Início rápido e seguro: Autorize alvos, atualize feeds, execute varreduras de laboratório autenticadas, valide cobertura e achados, atribua remediação e rescan.
+**Início rápido seguro:** Autorize alvos, atualize feeds, execute varredura autenticada, valide e reteste.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22,7 Nmap
+## 22.7 Nmap
 
-Objetivo: Descoberta de ativos e serviços. Projeto oficial: [<u>Nmap</u>](https://nmap.org/)
+**Objetivo:** Descoberta de ativos e serviços. Projeto oficial: [Nmap](https://nmap.org/)
 
-Início rápido seguro: Use apenas em intervalos autorizados; comece com uma varredura de serviço limitada, compare resultados com inventário, investigue desconhecidos e mantenha o comando e escopo.
+**Início rápido seguro:** Use apenas em faixas autorizadas; limite a varredura e compare com o inventário.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
 ## 22.8 Trivy
 
-Objetivo: Digitalização de código, imagem, dependência, segredo e configuração. Projeto oficial: [<u>Trivy</u>](https://trivy.dev/)
+**Objetivo:** Código, imagem, dependência, segredo e configuração. Projeto oficial: [Trivy](https://trivy.dev/)
 
-Início rápido seguro: Examine um repositório de testes ou uma imagem de container, valide os achados, suprime apenas com aprovação e razão, corrija e reescane.
+**Início rápido seguro:** Examine repositório ou imagem de teste, valide, corrija e reescaneie.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22,9 OWASP ZAP
+## 22.9 OWASP ZAP
 
-Objetivo: Teste de aplicação na web autorizado. Projecto oficial: [<u>OWASP ZAP</u>](https://www.zaproxy.org/)
+**Objetivo:** Teste autorizado de aplicações web. Projeto oficial: [OWASP ZAP](https://www.zaproxy.org/)
 
-Início rápido seguro: Proxy um aplicativo de treinamento, rasteje passivamente, use a varredura ativa apenas com aprovação escrita, valide resultados e remediação de registros.
+**Início rápido seguro:** Use aplicação de treinamento; mantenha varredura ativa sob aprovação escrita.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
 ## 22.10 Keycloak
 
-Objetivo: Identidade, MFA, papéis e logs. Projeto oficial: [<u>Keycloak</u>](https://www.keycloak.org/)
+**Objetivo:** Identidade, MFA, funções e logs. Projeto oficial: [Keycloak](https://www.keycloak.org/)
 
-Início rápido e seguro: Crie um reino de laboratório, usuários, grupos, papéis menos privilegiados, MFA, configurações de sessão e eventos; teste os casos de joiner, movedor e leaver.
+**Início rápido seguro:** Crie ambiente de laboratório, usuários, grupos, menor privilégio e casos de entrada, mudança e saída.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
 ## 22.11 DefectDojo
 
-Objetivo: Encontrar ingestão e remediação. Projeto oficial: [<u>DefectDojo</u>](https://www.defectdojo.org/)
+**Objetivo:** Ingestão e remediação de achados. Projeto oficial: [DefectDojo](https://www.defectdojo.org/)
 
-Início rápido e seguro: Importar resultados seguros do scanner, desduplicar cuidadosamente, atribuir proprietários, definir prazos baseados no risco, anexar prova e fechar apenas após o reteste.
+**Início rápido seguro:** Importe resultados seguros, deduplique, atribua responsáveis e encerre somente após reteste.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-## 22.12 ADEUS
+## 22.12 AIDE
 
-Objetivo: Monitorização da integridade dos ficheiros. Projecto oficial: [<u>AIDE</u>](https://aide.github.io/)
+**Objetivo:** Monitoramento de integridade de arquivos. Projeto oficial: [AIDE](https://aide.github.io/)
 
-Início rápido seguro: Crie uma linha de base em um host de laboratório, faça uma alteração de arquivo autorizada, execute uma verificação, investigue a diferença e proteja a linha de base.
+**Início rápido seguro:** Crie linha de base, faça mudança autorizada, execute verificação e proteja a linha de base.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22.13 Lynis
+## 22.13 Lynis
 
-Objetivo: Auditoria de segurança Linux. Projeto oficial: [<u>Lynis</u>](https://cisofy.com/lynis/)
+**Objetivo:** Auditoria de segurança Linux. Projeto oficial: [Lynis](https://cisofy.com/lynis/)
 
-Início rápido seguro: Audite um anfitrião de laboratório, reveja sugestões contra o escopo e o risco, documente decisões, corrija itens selecionados e reexecute.
+**Início rápido seguro:** Audite host de laboratório, avalie sugestões contra risco, corrija itens e execute novamente.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# # 22.14 Open Policy Agent
+## 22.14 Open Policy Agent
 
-Objetivo: Política como código. Projeto oficial: [<u>Open Policy Agent</u>](https://www.openpolicyagent.org/)
+**Objetivo:** Política como código. Projeto oficial: [Open Policy Agent](https://www.openpolicyagent.org/)
 
-Início rápido seguro: Escreva uma pequena regra de laboratório, teste de entradas permitidas e negadas, rever a política e testes, e preservar resultados como evidência de suporte.
+**Início rápido seguro:** Escreva regra de laboratório, teste entradas permitidas e negadas e preserve resultados.
 
-Evidência: escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
+**Evidência:** escopo aprovado, configuração, versão, cobertura, resultados, revisão, exceção, remediação e reteste. Proteja credenciais, registros, relatórios e backups.
 
-# 23. Manual do SGSI para gerentes
+# 23. Manual do SGSI para Gestores
 
-*Perguntas, painel, propriedade e decisões os gerentes devem controlar.*
+*Perguntas, painel, propriedade e decisões que os gestores devem controlar.*
 
-O escopo do ISMS ainda está alinhado com estratégia, serviços, locais, fornecedores, uso de nuvem, pessoas e fluxos de dados?
+- O escopo do SGSI continua alinhado à estratégia, aos serviços, locais, fornecedores, nuvem, pessoas e fluxos de dados?
+- O que mudou no contexto, nas partes interessadas, nas obrigações, ameaças, tecnologia ou relevância climática?
+- Os critérios de risco são confiáveis e os proprietários aprovam explicitamente tratamento e risco residual?
+- A Declaração de Aplicabilidade corresponde à implementação real dos controles e às ações abertas?
+- Objetivos e métricas geram decisões, em vez de painéis decorativos?
+- Incidentes, achados, exceções, ações vencidas e falhas recorrentes são escalonados?
+- Auditoria interna e análise crítica têm independência, competência, tempo e evidência suficientes?
+- Alegações de certificação, escopo, acreditação e declarações a clientes são exatas?
 
-O que mudou no contexto, partes interessadas, obrigações legais, ameaças, tecnologia ou relevância climática?
+| **Área** | **Pergunta de controle** | **Estado** |
+|---|---|---|
+| Contexto e escopo | Limites, dependências, partes e mudanças estão atuais? | Verde / Amarelo / Vermelho |
+| Risco | Critérios são consistentes e decisões dos proprietários são oportunas? | Verde / Amarelo / Vermelho |
+| SoA e controles | Seleção, estado e evidência estão alinhados? | Verde / Amarelo / Vermelho |
+| Desempenho | Objetivos, métricas, incidentes e tendências impulsionam ação? | Verde / Amarelo / Vermelho |
+| Fornecedores | Risco, responsabilidade, monitoramento, incidentes e saída são controlados? | Verde / Amarelo / Vermelho |
+| Auditoria | Auditorias são objetivas e achados são corrigidos com eficácia? | Verde / Amarelo / Vermelho |
+| Melhoria | Causas, recorrência e lições são tratadas? | Verde / Amarelo / Vermelho |
+| Certificação | Alegações são verificadas, atuais e sustentáveis? | Verde / Amarelo / Vermelho |
 
-Os critérios de risco são fiáveis e os proprietários aprovam explicitamente o tratamento e o risco residual?
+# 24. Guia de Carreira para Analista Júnior
 
-O SoA corresponde à implementação de controle real e ações abertas?
+*Uma rota prática para trabalho com SGSI, GRC, risco, auditoria e conformidade.*
 
-Os objetivos e as métricas produzem decisões em vez de painéis decorativos?
+![Aprenda o sistema, mapeie requisitos, teste evidências, comunique claramente e construa um portfólio honesto.](media/image9.png)
 
-Incidentes, constatações de auditoria, exceções, ações atrasadas e falhas repetidas são agravados?
+Figura 9. Caminho do analista júnior de ISO 27001
 
-A auditoria interna e a revisão da gestão têm independência, competência, tempo e provas suficientes?
+Funções iniciais comuns incluem analista júnior de GRC, analista de conformidade ISO 27001, analista de controles de segurança, coordenador de SGSI, analista de riscos, associado de auditoria interna, analista de risco de terceiros e analista de garantia de segurança.
 
-As reivindicações de certificação, escopo, acreditação e declarações do cliente são precisas?
+## 24.1 Trabalho júnior típico
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-----------------------------------------------------
-□ Contexto e escopo □ São atuais os limites, dependências, partidos e mudanças? Verde / Amarelo / Vermelho
-Risco Os critérios são consistentes e as decisões do proprietário são oportunas? Verde / Amarelo / Vermelho
-O SoA e os controles estão alinhados entre seleção, status e evidência? Verde / Amarelo / Vermelho
-Performance - Os objetivos, métricas, incidentes e tendências impulsionam a ação? Verde / Amarelo / Vermelho
-Os fornecedores são controlados risco, responsabilidade, monitoramento, incidentes e saídas? Verde / Amarelo / Vermelho
-As auditorias são objetivas e as conclusões corrigidas de forma eficaz? Verde / Amarelo / Vermelho
-• Melhoramento • Causas de raiz, recorrência e lições são abordadas? Verde / Amarelo / Vermelho
-□ Certificação □ As reivindicações são avaliadas, atuais e suportáveis? Verde / Amarelo / Vermelho
-
-# 24. Guia de Carreira do Analista Júnior
-
-* Uma rota prática para ISMS, GRC, trabalho de risco, auditoria e conformidade.*
-
-![Aprenda o sistema, requisitos de mapa, provas de teste, relatório claramente, e construir um portfólio honesto.](media/image9.png)
-
-Figura 9. Caminho de analista ISO 27001 Júnior
-
-GRC Júnior Analisador
-
-Analisador de conformidade ISO 27001
-
-Analista de Controles de Segurança
-
-Coordenador do ISMS
-
-Analista de Risco
-
-Associado à Auditoria Interna
-
-Analista de Riscos de Terceiros
-
-Analista de Garantia de Segurança
-
-# # 24,1 Típico trabalho júnior
-
-- Manter escopo, ativo, obrigação, fornecedor, risco, controle, SoA, evidências, achados e registros de ação.
-
-- Recolha provas sem alterar os registos e valide a integralidade.
-
-- Mapa riscos e requisitos para controles, proprietários, procedimentos, sistemas e provas.
-
-- Teste amostras de acesso, mudança, vulnerabilidade, incidente, backup, fornecedor, consciência, física e controles de continuidade.
-
-- Apoiar auditorias internas, análises de gestão, métricas, ações corretivas e preparação de certificação.
-
-- Escreva conclusões factuais e divulgue limitações de amostragem, escopo e provas.
-
+- Manter registros de escopo, ativos, obrigações, fornecedores, riscos, controles, SoA, evidências, achados e ações.
+- Coletar evidências sem alterar registros e validar sua integridade.
+- Mapear riscos e requisitos para controles, proprietários, procedimentos, sistemas e evidências.
+- Testar amostras de acesso, mudanças, vulnerabilidades, incidentes, backups, fornecedores, conscientização, controles físicos e continuidade.
+- Apoiar auditorias, análise crítica, métricas, ações corretivas e preparação para certificação.
+- Escrever conclusões factuais e divulgar limitações de amostragem, escopo e evidência.
 - Proteger informações confidenciais e permanecer dentro da autorização.
 
-# # 24.2 Valor dos empregadores de competências
+## 24.2 Competências valorizadas
 
-Competência** Prova**
------------------------------------------------------------------------------------------------------------------ (----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Os conceitos do ISMS explicam as cláusulas 4–10 e a melhoria contínua
-• Risco • Criar um plano de registro e tratamento consistente
-(SoA) Justifique seleções, exclusões, status e evidências ,
-• Teste de evidência; Defina populações, amostras, procedimentos, exceções e retestes;
-□ Alfabetização técnica; Interpretar identidade, nuvem, registro, vulnerabilidade, backup e evidência de configuração;
-• Comunicação • Escrever conclusões concisas, acções e resumos de gestão
-Ético Use dados sintéticos, sistemas autorizados e alegações honestas
+| **Competência** | **Prova prática** |
+|---|---|
+| Conceitos de SGSI | Explicar cláusulas 4–10 e melhoria contínua |
+| Risco | Criar registro e plano de tratamento consistentes |
+| Declaração de Aplicabilidade | Justificar seleções, exclusões, estado e evidências |
+| Teste de evidência | Definir população, amostra, procedimento, exceção e reteste |
+| Alfabetização técnica | Interpretar identidade, nuvem, logs, vulnerabilidade, backup e configuração |
+| Comunicação | Escrever conclusões, ações e resumos gerenciais concisos |
+| Ética | Usar dados sintéticos, sistemas autorizados e alegações honestas |
 
 # 25. Laboratório Fictício e Portfólio
 
-* Um ambiente de prática segura usando dados sintéticos e sistemas de laboratório autorizados.*
+*Um ambiente de prática segura com dados sintéticos e sistemas de laboratório autorizados.*
 
-Regra do laboratório:** Use uma organização fictícia, dados sintéticos, sistemas isolados e ferramentas que você está autorizado a operar. Não afirme que um projeto de portfólio é uma certificação real ou auditoria do cliente. □
-□-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Regra do laboratório:** Use organização fictícia, dados sintéticos, sistemas isolados e apenas ferramentas que você está autorizado a operar. Não apresente um projeto de portfólio como certificação real ou auditoria de cliente. |
+|---|
+
+Crie uma organização fictícia com missão, serviços, locais, partes interessadas, ativos, fornecedores, obrigações e limites de SGSI claramente definidos. Registre hipóteses e mantenha todos os dados sem identificação real.
+
+Construa um pacote mínimo de portfólio:
+
+1. declaração de escopo e diagrama simples de dependências;
+2. critérios de risco, registro de riscos e plano de tratamento;
+3. Declaração de Aplicabilidade vinculada a riscos e evidências;
+4. duas políticas e dois procedimentos controlados;
+5. inventário de ativos, identidades e fornecedores;
+6. plano de métricas e pequeno painel;
+7. papel de trabalho de teste de controle com população, amostra, evidência, exceção e reteste;
+8. relatório curto de auditoria interna;
+9. ata de análise crítica pela direção;
+10. registro de não conformidade, causa, correção, ação corretiva e verificação de eficácia.
+
+Use ferramentas somente para apoiar evidência. Preserve comandos, versões, configurações, capturas, resultados e limitações. Remova segredos e dados pessoais antes de publicar qualquer artefato.
+
+Inclua uma nota de honestidade: o projeto demonstra método e capacidade de aprendizagem, não experiência de certificação, autoridade de auditoria nem conformidade de uma organização real.
 
 # 26. Plano de Aprendizagem de Trinta Dias
 
-* Uma programação focada para a construção de capacidade de nível júnior útil.*
+*Um cronograma focado para desenvolver capacidade útil de nível júnior.*
 
-* Dias** * Foco** * Entrega**
---------------------------------------------------------------------------------------
-1–5 ISMS, CIA, cláusulas, ISO 27001/27002 relação, âmbito de aplicação
-• 6–10 • Critérios de risco, cenários, avaliação, tratamento, aceitação
-Os temas do Anexo A e a Declaração de Aplicabilidade
-15–18 Políticas, competência, comunicação, controle de documentos, operações
-□ 19–22 □ Métricas, monitorização, auditoria interna, revisão da gestão
-23–25; Não conformidade, causa raiz, ação corretiva, melhoria; Dois registros de achados e ação corretiva;
-26–28 Laboratórios de ferramentas de código aberto autorizados Dois memorandos de evidência e reteste
-29–30 □ Limpeza e prática de entrevista de carteiras
+| **Dias** | **Foco** | **Entrega** |
+|---|---|---|
+| 1–5 | SGSI, CIA, cláusulas, relação ISO 27001/27002 e escopo | Mapa do SGSI e declaração de escopo |
+| 6–10 | Critérios, cenários, avaliação, tratamento e aceitação de risco | Registro de riscos e plano de tratamento |
+| 11–14 | Temas do Anexo A e Declaração de Aplicabilidade | SoA preliminar vinculada a riscos |
+| 15–18 | Políticas, competência, comunicação, documentos e operação | Política e procedimento controlados |
+| 19–22 | Métricas, monitoramento, auditoria e análise crítica | Plano de métricas e programa de auditoria |
+| 23–25 | Não conformidade, causa raiz, ação corretiva e melhoria | Dois registros de achado e ação corretiva |
+| 26–28 | Laboratórios autorizados com ferramentas abertas | Dois memorandos de evidência e reteste |
+| 29–30 | Limpeza do portfólio e prática de entrevista | Pacote final e respostas ensaiadas |
+
+Ao final de cada bloco, revise exatidão, rastreabilidade, confidencialidade, autorização e limitações. Corrija lacunas antes de adicionar complexidade.
 
 # 27. Preparação da entrevista
 

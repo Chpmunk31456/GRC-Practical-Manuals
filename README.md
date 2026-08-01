@@ -1,16 +1,16 @@
 # GRC Practical Manuals
 
-Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, and third-party risk.
+Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and operational GRC tooling.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.3  
-**Last updated:** 30 July 2026
+**Repository version:** 1.4  
+**Last updated:** 1 August 2026
 
 ## Start Here
 
 1. Choose a subject area from the catalog below.
 2. Open the manual’s folder and read its `README.md`.
-3. Select the available source, Word, or PDF edition.
+3. Select the available source, Word, PDF, or editable-tool edition.
 4. Adapt the guidance to your organization’s actual risks, systems, contracts, and obligations.
 5. Verify requirements against current official sources and retain appropriate evidence.
 
@@ -25,12 +25,13 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
-| [08 — Templates and Tools](./08-templates-and-tools/) | Planned checklists, worksheets, mappings, registers, and trackers |
+| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment Practical Manual](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/) plus planned evidence, audit-readiness, policy, and control-mapping tools |
 
 ## Available Formats and Languages
 
 - Most established manuals are available in Microsoft Word (`.docx`) and PDF.
 - The EU AI Act GRC Compliance Manual is published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums.
+- The GRC Risk Register and Risk Treatment Practical Manual includes an English controlled master, DOCX, searchable PDF, a 41-field risk register, a 27-field treatment-plan template, a risk-acceptance record, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 

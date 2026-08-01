@@ -1,0 +1,230 @@
+name: Rebuild and validate CIS PT-BR package
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['.github/triggers/cis-ptbr-package-rebuild.md']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cis-ptbr-package-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild-validate-and-commit:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install document and raster tooling
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+          python -m pip install --upgrade pip pillow
+
+      - name: Normalize ten CIS PT-BR local image tags
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          from html import unescape
+          import re
+
+          path = Path('01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md')
+          text = path.read_text(encoding='utf-8')
+          tag_re = re.compile(r'<img\b[^>]*>', re.I)
+          converted = 0
+
+          def replace(match):
+              global converted
+              tag = match.group(0)
+              attrs = {k.lower(): unescape(v) for k, v in re.findall(r'([A-Za-z_:][-A-Za-z0-9_:.]*)\s*=\s*["\']([^"\']*)["\']', tag)}
+              src = attrs.get('src', '')
+              if not src or '://' in src or src.startswith('#'):
+                  return tag
+              if not (path.parent / src).is_file():
+                  raise SystemExit(f'unresolvable local image tag: {src}')
+              alt = attrs.get('alt', '').replace('[', '\\[').replace(']', '\\]')
+              style = attrs.get('style', '')
+              dims = []
+              width = re.search(r'width\s*:\s*([^;]+)', style, re.I)
+              height = re.search(r'height\s*:\s*([^;]+)', style, re.I)
+              if width:
+                  dims.append(f'width={width.group(1).strip()}')
+              if height:
+                  dims.append(f'height={height.group(1).strip()}')
+              suffix = '{' + ' '.join(dims) + '}' if dims else ''
+              converted += 1
+              return f'![{alt}]({src}){suffix}'
+
+          text = tag_re.sub(replace, text)
+          if converted != 10:
+              raise SystemExit(f'expected exactly 10 local HTML image tags, converted {converted}')
+          if re.search(r'<img\b[^>]*\bsrc\s*=\s*["\'](?!https?://|#)', text, re.I):
+              raise SystemExit('local HTML image tag remains after conversion')
+          refs = re.findall(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))', text)
+          resolved = [(a or b) for a, b in refs if (path.parent / (a or b)).is_file()]
+          if len(resolved) != 10:
+              raise SystemExit(f'expected 10 resolvable Markdown image placements, found {len(resolved)}')
+          path.write_text(text, encoding='utf-8')
+          print('Normalized 10 CIS PT-BR image placements')
+          PY
+
+      - name: Rebuild CIS PT-BR DOCX and PDF
+        run: |
+          set -euo pipefail
+          SOURCE='01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'
+          STEM="${SOURCE%.md}"
+          pandoc "$SOURCE" --toc --resource-path="$(dirname "$SOURCE")" -o "${STEM}.docx"
+          libreoffice --headless --convert-to pdf --outdir "$(dirname "$SOURCE")" "${STEM}.docx" >/dev/null
+          test -s "${STEM}.docx"
+          test -s "${STEM}.pdf"
+          unzip -t "${STEM}.docx" >/dev/null
+          pdftotext "${STEM}.pdf" - | grep -q '[[:alnum:]]'
+
+      - name: Validate ten DOCX image placements
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree
+          import json, re, zipfile
+
+          source = Path('01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md')
+          docx = source.with_suffix('.docx')
+          refs = re.findall(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))', source.read_text(encoding='utf-8'))
+          targets = [(a or b) for a, b in refs if (source.parent / (a or b)).is_file()]
+          IMAGE_REL = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image'
+          BLIP = '{http://schemas.openxmlformats.org/drawingml/2006/main}blip'
+          EMBED = '{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed'
+          with zipfile.ZipFile(docx) as package:
+              bad = package.testzip()
+              if bad:
+                  raise SystemExit(f'DOCX CRC failure in {bad}')
+              media = [n for n in package.namelist() if n.startswith('word/media/') and not n.endswith('/')]
+              rel_root = ElementTree.fromstring(package.read('word/_rels/document.xml.rels'))
+              rels = {r.attrib.get('Id'): r.attrib.get('Target') for r in rel_root if r.attrib.get('Type') == IMAGE_REL}
+              doc_root = ElementTree.fromstring(package.read('word/document.xml'))
+              embeds = [n.attrib.get(EMBED) for n in doc_root.iter(BLIP) if n.attrib.get(EMBED)]
+          unresolved = [rid for rid in embeds if rid not in rels]
+          failures = []
+          if len(targets) != 10: failures.append(f'source placements={len(targets)}')
+          if len(media) != 10: failures.append(f'media files={len(media)}')
+          if len(rels) != 10: failures.append(f'image relationships={len(rels)}')
+          if len(embeds) != 10: failures.append(f'embedded occurrences={len(embeds)}')
+          if unresolved: failures.append(f'unresolved relationships={unresolved}')
+          report = {
+              'source_image_placements': len(targets),
+              'unique_media_files': len(media),
+              'image_relationships': len(rels),
+              'embedded_image_occurrences': len(embeds),
+              'unresolved_relationships': unresolved,
+              'status': 'FAIL' if failures else 'PASS',
+              'failures': failures,
+          }
+          Path('qa/CIS_PTBR_FINAL_DOCX_MEDIA_AUDIT.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          Path('qa/CIS_PTBR_FINAL_DOCX_MEDIA_AUDIT.md').write_text(
+              '# CIS Controls v8.1 PT-BR Final DOCX Media Audit\n\n'
+              f"- Source image placements: {len(targets)}\n"
+              f"- Unique embedded media files: {len(media)}\n"
+              f"- DOCX image relationships: {len(rels)}\n"
+              f"- Embedded image occurrences: {len(embeds)}\n"
+              f"- Unresolved relationships: {len(unresolved)}\n"
+              f"- Status: **{'FAIL' if failures else 'PASS'}**\n",
+              encoding='utf-8')
+          if failures:
+              raise SystemExit('; '.join(failures))
+          PY
+
+      - name: Render every CIS PT-BR PDF page
+        run: |
+          set -euo pipefail
+          PDF='01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf'
+          rm -rf qa/rendered/cis-ptbr-final
+          mkdir -p qa/rendered/cis-ptbr-final
+          pdftoppm -png -r 110 "$PDF" qa/rendered/cis-ptbr-final/page >/dev/null 2>&1
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageStat
+          import json
+          pages = sorted(Path('qa/rendered/cis-ptbr-final').glob('page-*.png'))
+          failures = []
+          details = []
+          if not pages:
+              failures.append('no rendered pages')
+          for page in pages:
+              with Image.open(page).convert('L') as image:
+                  nonwhite = sum(1 for v in image.resize((100, 140)).getdata() if v < 250)
+                  extrema = image.getextrema()
+                  if extrema == (255, 255) or nonwhite < 5:
+                      failures.append(f'blank or near-blank {page.name}')
+                  details.append({'page': page.name, 'width': image.width, 'height': image.height, 'mean_gray': round(ImageStat.Stat(image).mean[0], 2), 'sample_nonwhite': nonwhite})
+          report = {'page_count': len(pages), 'pages': details, 'failures': failures, 'status': 'FAIL' if failures else 'PASS'}
+          Path('qa/CIS_PTBR_FINAL_RASTER_PREFLIGHT.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          Path('qa/CIS_PTBR_FINAL_RASTER_PREFLIGHT.md').write_text(
+              '# CIS Controls v8.1 PT-BR Final Raster Preflight\n\n'
+              f'- Rendered pages: {len(pages)}\n'
+              f'- Blank or near-blank pages: {len(failures)}\n'
+              f"- Status: **{'FAIL' if failures else 'PASS'}**\n",
+              encoding='utf-8')
+          if failures:
+              raise SystemExit('\n'.join(failures))
+          PY
+
+      - name: Run repository-wide embedded-media validator
+        run: |
+          set -euo pipefail
+          python3 scripts/validate_docx_embedded_media.py | tee qa/LOCALIZED_DOCX_EMBEDDED_MEDIA_VALIDATION.txt
+
+      - name: Write CIS checksums
+        run: |
+          set -euo pipefail
+          STEM='01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0'
+          sha256sum \
+            "${STEM}.md" "${STEM}.docx" "${STEM}.pdf" \
+            qa/CIS_PTBR_FINAL_DOCX_MEDIA_AUDIT.md \
+            qa/CIS_PTBR_FINAL_RASTER_PREFLIGHT.md \
+            qa/LOCALIZED_DOCX_EMBEDDED_MEDIA_VALIDATION.txt \
+            > qa/CIS_PTBR_FINAL_SHA256SUMS.txt
+
+      - name: Commit controlled CIS package and QA evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            01-foundations/CIS_Controls_v8.1/Portugues_BR/*.md \
+            01-foundations/CIS_Controls_v8.1/Portugues_BR/*.docx \
+            01-foundations/CIS_Controls_v8.1/Portugues_BR/*.pdf \
+            qa/CIS_PTBR_FINAL_* \
+            qa/LOCALIZED_DOCX_EMBEDDED_MEDIA_VALIDATION.txt
+          git commit -m 'Rebuild CIS PT-BR package with embedded figures'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:production/multilingual-grc-editions; then exit 0; fi
+            if [ "$attempt" -eq 3 ]; then exit 1; fi
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            sleep $((attempt * 5))
+          done
+
+      - name: Upload CIS rendered evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cis-ptbr-final-rendered-review
+          path: |
+            qa/rendered/cis-ptbr-final/
+            qa/CIS_PTBR_FINAL_DOCX_MEDIA_AUDIT.*
+            qa/CIS_PTBR_FINAL_RASTER_PREFLIGHT.*
+            qa/CIS_PTBR_FINAL_SHA256SUMS.txt
+            qa/LOCALIZED_DOCX_EMBEDDED_MEDIA_VALIDATION.txt
+          if-no-files-found: error

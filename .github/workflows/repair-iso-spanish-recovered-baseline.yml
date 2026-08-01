@@ -30,6 +30,7 @@ jobs:
         run: python3 qa/tools/audit_iso_localized_sources.py
       - name: Commit repaired Spanish source and audit evidence
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
@@ -38,6 +39,8 @@ jobs:
             qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json
           if ! git diff --cached --quiet; then
             git commit -m 'Apply ISO Spanish recovered-baseline cleanup batch 01'
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
             git push origin HEAD:production/multilingual-grc-editions
           fi
       - name: Enforce audit result

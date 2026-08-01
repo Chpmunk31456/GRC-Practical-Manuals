@@ -46,6 +46,8 @@ This toolkit contains educational starter templates. It does not constitute lega
 
 '''
 
+SAFEGUARD_TERMS = ("review", "adapt", "validate", "resolve", "confirm", "consult")
+
 
 def load(path: Path, require_placeholder: bool = False) -> dict[str, object]:
     if not path.is_file():
@@ -58,11 +60,11 @@ def load(path: Path, require_placeholder: bool = False) -> dict[str, object]:
     if require_placeholder:
         if "[" not in text or "]" not in text:
             raise SystemExit(f"Template lacks controlled placeholders: {path.name}")
-        opening_lines = text.splitlines()[1:9]
+        opening_lines = text.splitlines()[1:10]
         warning_lines = [line.strip() for line in opening_lines if line.lstrip().startswith(">")]
         warning = " ".join(warning_lines).lower()
-        if not warning or "before" not in warning:
-            raise SystemExit(f"Template lacks a substantive pre-adoption drafting warning: {path.name}")
+        if not warning or not any(term in warning for term in SAFEGUARD_TERMS):
+            raise SystemExit(f"Template lacks a substantive pre-adoption drafting safeguard: {path.name}")
     return {
         "path": str(path.relative_to(ROOT)),
         "text": text,

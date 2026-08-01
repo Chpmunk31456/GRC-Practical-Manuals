@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-# Final controlled localization generator for the validated English policy toolkit.
+# Release localization generator for the validated English policy toolkit.
 import json
 import re
 from pathlib import Path

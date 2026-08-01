@@ -1,0 +1,50 @@
+name: Extract English GRC sources
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - '.github/workflows/extract-english-sources.yml'
+      - 'production/EXTRACT_ENGLISH_SOURCES.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Extract legacy English DOCX manuals to Markdown
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' docx; do
+            dir="$(dirname "$docx")"
+            base="$(basename "$docx" .docx)"
+            out="$dir/English_Source_${base}.md"
+            pandoc "$docx" --wrap=none -t gfm -o "$out"
+            test -s "$out"
+          done < <(find 01-foundations 02-management-systems 04-regulatory-compliance 05-operational-resilience 06-cloud-and-technology-risk 07-third-party-risk -mindepth 2 -maxdepth 2 -type f -name '*.docx' -print0)
+
+      - name: Commit extracted sources
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '*/**/English_Source_*.md'
+          if git diff --cached --quiet; then
+            echo 'No extracted source changes to commit.'
+          else
+            git commit -m 'Extract English GRC manual sources to Markdown'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi

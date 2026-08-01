@@ -1,0 +1,844 @@
+{
+  "sections": [
+    {
+      "section": 1,
+      "en": {
+        "chars": 1841,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 1,
+        "english_fragments": 2
+      },
+      "es-419": {
+        "chars": 1676,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.91,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1589,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.863,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 2,
+      "en": {
+        "chars": 2472,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 1943,
+        "pipe_rows": 2,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.786,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1997,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.808,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 3,
+      "en": {
+        "chars": 1719,
+        "pipe_rows": 11,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 1710,
+        "pipe_rows": 11,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.995,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1572,
+        "pipe_rows": 11,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.914,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 4,
+      "en": {
+        "chars": 2301,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 2
+      },
+      "es-419": {
+        "chars": 2213,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.962,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2040,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.887,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 5,
+      "en": {
+        "chars": 2095,
+        "pipe_rows": 12,
+        "images": 1,
+        "bad_hits": 2,
+        "english_fragments": 4
+      },
+      "es-419": {
+        "chars": 1788,
+        "pipe_rows": 12,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.853,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1642,
+        "pipe_rows": 12,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.784,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 6,
+      "en": {
+        "chars": 2938,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 2229,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.759,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2106,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.717,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 7,
+      "en": {
+        "chars": 2096,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 1520,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.725,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1440,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.687,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 8,
+      "en": {
+        "chars": 3011,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 2,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 2462,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.818,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2280,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.757,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 9,
+      "en": {
+        "chars": 2581,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 2196,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.851,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2047,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.793,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 10,
+      "en": {
+        "chars": 1954,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 1550,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.793,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1454,
+        "pipe_rows": 7,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.744,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 11,
+      "en": {
+        "chars": 3742,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 3197,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.854,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2908,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.777,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 12,
+      "en": {
+        "chars": 1914,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 1398,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.73,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1304,
+        "pipe_rows": 6,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.681,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 13,
+      "en": {
+        "chars": 11197,
+        "pipe_rows": 41,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 11642,
+        "pipe_rows": 41,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 1.04,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 10017,
+        "pipe_rows": 39,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.895,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 14,
+      "en": {
+        "chars": 3307,
+        "pipe_rows": 12,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 2
+      },
+      "es-419": {
+        "chars": 3018,
+        "pipe_rows": 12,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.913,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2614,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.79,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 15,
+      "en": {
+        "chars": 4717,
+        "pipe_rows": 18,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 4568,
+        "pipe_rows": 18,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.968,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 3960,
+        "pipe_rows": 16,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.84,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 16,
+      "en": {
+        "chars": 9854,
+        "pipe_rows": 38,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 10125,
+        "pipe_rows": 38,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 1.028,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 8708,
+        "pipe_rows": 36,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.884,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 17,
+      "en": {
+        "chars": 1291,
+        "pipe_rows": 2,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 1195,
+        "pipe_rows": 2,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.926,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1249,
+        "pipe_rows": 2,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.967,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 18,
+      "en": {
+        "chars": 2972,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 2710,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.912,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2441,
+        "pipe_rows": 9,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.821,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 19,
+      "en": {
+        "chars": 1872,
+        "pipe_rows": 6,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 1486,
+        "pipe_rows": 6,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.794,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1403,
+        "pipe_rows": 6,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.749,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 20,
+      "en": {
+        "chars": 1495,
+        "pipe_rows": 8,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 1404,
+        "pipe_rows": 8,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.939,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1302,
+        "pipe_rows": 8,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.871,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 21,
+      "en": {
+        "chars": 2217,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 2203,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.994,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2035,
+        "pipe_rows": 10,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.918,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 22,
+      "en": {
+        "chars": 8766,
+        "pipe_rows": 18,
+        "images": 0,
+        "bad_hits": 15,
+        "english_fragments": 29
+      },
+      "es-419": {
+        "chars": 8603,
+        "pipe_rows": 18,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.981,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 8345,
+        "pipe_rows": 18,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.952,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 23,
+      "en": {
+        "chars": 2033,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 2083,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 1.025,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1813,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.892,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 24,
+      "en": {
+        "chars": 2230,
+        "pipe_rows": 9,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 1
+      },
+      "es-419": {
+        "chars": 2045,
+        "pipe_rows": 9,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.917,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1942,
+        "pipe_rows": 9,
+        "images": 1,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.871,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 25,
+      "en": {
+        "chars": 2510,
+        "pipe_rows": 12,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 2
+      },
+      "es-419": {
+        "chars": 2435,
+        "pipe_rows": 12,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.97,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2129,
+        "pipe_rows": 12,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.848,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 26,
+      "en": {
+        "chars": 1360,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 2
+      },
+      "es-419": {
+        "chars": 1152,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.847,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 1167,
+        "pipe_rows": 10,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.858,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 27,
+      "en": {
+        "chars": 1962,
+        "pipe_rows": 0,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0
+      },
+      "es-419": {
+        "chars": 2165,
+        "pipe_rows": 0,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 1.103,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 2105,
+        "pipe_rows": 0,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 1.073,
+        "blockers": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "section": 28,
+      "en": {
+        "chars": 6540,
+        "pipe_rows": 58,
+        "images": 0,
+        "bad_hits": 1,
+        "english_fragments": 4
+      },
+      "es-419": {
+        "chars": 4005,
+        "pipe_rows": 57,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.612,
+        "blockers": [],
+        "status": "PASS"
+      },
+      "pt-BR": {
+        "chars": 3822,
+        "pipe_rows": 58,
+        "images": 0,
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.584,
+        "blockers": [],
+        "status": "PASS"
+      }
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+name: Generate NIST CSF localized graphics
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - 'scripts/generate_nist_csf_localized_graphics.py'
+      - '.github/workflows/generate-nist-csf-localized-graphics.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-build-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install graphics and document dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils fonts-dejavu-core
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
+      - name: Generate localized graphics and normalize Markdown image references
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/generate_nist_csf_localized_graphics.py
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          editions = [
+              (
+                  Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md'),
+                  [f'media/image{i}_es-419.png' for i in range(1, 7)],
+              ),
+              (
+                  Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md'),
+                  [f'media/image{i}_pt-BR.png' for i in range(1, 7)],
+              ),
+          ]
+
+          for path, figure_paths in editions:
+              lines = path.read_text(encoding='utf-8').splitlines()
+              normalized = []
+              replacement_index = 0
+
+              for line in lines:
+                  if 'img src="' in line and replacement_index < 6:
+                      alt_match = re.search(r'alt="([^"]*)"', line)
+                      alt = alt_match.group(1) if alt_match else f'Localized NIST CSF Figure {replacement_index + 1}'
+                      line = f'![{alt}]({figure_paths[replacement_index]})'
+                      replacement_index += 1
+                  normalized.append(line)
+
+              text = '\n'.join(normalized) + '\n'
+              path.write_text(text, encoding='utf-8')
+
+              present = [figure_path for figure_path in figure_paths if f']({figure_path})' in text]
+              assert len(present) == 6, (path, present)
+              for figure_path in figure_paths:
+                  assert (path.parent / figure_path).is_file(), (path, figure_path)
+              print(f'Confirmed six deterministic image references in {path}; repaired {replacement_index}.')
+          PY
+
+      - name: Verify graphics inventory and dimensions
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find 01-foundations/NIST_CSF_2/Espanol/media -maxdepth 1 -type f -name 'image[1-6]_es-419.png' | wc -l)" -eq 6
+          test "$(find 01-foundations/NIST_CSF_2/Portugues_BR/media -maxdepth 1 -type f -name 'image[1-6]_pt-BR.png' | wc -l)" -eq 6
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          root = Path('01-foundations/NIST_CSF_2')
+          files = sorted(root.glob('Espanol/media/image[1-6]_es-419.png')) + sorted(root.glob('Portugues_BR/media/image[1-6]_pt-BR.png'))
+          assert len(files) == 12, files
+          for path in files:
+              with Image.open(path) as image:
+                  assert image.size == (1800, 1000), (path, image.size)
+                  assert image.mode == 'RGB', (path, image.mode)
+          print('Verified 12 localized PNG graphics at 1800x1000 RGB.')
+          PY
+
+      - name: Build NIST CSF localized DOCX and PDF editions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for source in \
+            01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md \
+            01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md; do
+            stem="${source%.md}"
+            pandoc "$source" --resource-path="$(dirname "$source")" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx"
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+          done
+
+      - name: Verify images are embedded in DOCX packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+
+          docx_files = [
+              Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx'),
+              Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx'),
+          ]
+
+          for docx in docx_files:
+              with ZipFile(docx) as archive:
+                  media = [name for name in archive.namelist() if name.startswith('word/media/') and not name.endswith('/')]
+              assert len(media) >= 8, f'{docx} contains only {len(media)} embedded media files: {media}'
+              print(f'{docx} contains {len(media)} embedded media files.')
+          PY
+
+      - name: Render final corrected figure pages for visual QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          from PIL import Image, ImageDraw
+
+          jobs = [
+              ('es', Path('01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf')),
+              ('pt', Path('01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf')),
+          ]
+          out_root = Path('qa/nist_visual_qa_final')
+          out_root.mkdir(parents=True, exist_ok=True)
+
+          for code, pdf in jobs:
+              listing = subprocess.run(['pdfimages', '-list', str(pdf)], check=True, text=True, capture_output=True).stdout
+              pages = []
+              for line in listing.splitlines():
+                  parts = line.split()
+                  if parts and parts[0].isdigit():
+                      page = int(parts[0])
+                      if page not in pages:
+                          pages.append(page)
+              assert pages, f'No image-bearing pages detected in {pdf}'
+
+              rendered = []
+              for page in pages:
+                  prefix = out_root / f'{code}_page_{page}'
+                  subprocess.run([
+                      'pdftoppm', '-f', str(page), '-l', str(page), '-singlefile',
+                      '-jpeg', '-r', '110', str(pdf), str(prefix)
+                  ], check=True)
+                  image_path = prefix.with_suffix('.jpg')
+                  with Image.open(image_path) as source:
+                      image = source.convert('RGB')
+                      image.thumbnail((760, 980))
+                      rendered.append((page, image.copy()))
+
+              margin = 24
+              caption = 30
+              width = max(image.width for _, image in rendered) + margin * 2
+              height = sum(image.height + caption + margin for _, image in rendered) + margin
+              sheet = Image.new('RGB', (width, height), 'white')
+              draw = ImageDraw.Draw(sheet)
+              y = margin
+              for page, image in rendered:
+                  draw.text((margin, y), f'{code.upper()} - PDF page {page}', fill='black')
+                  y += caption
+                  sheet.paste(image, (margin, y))
+                  y += image.height + margin
+              sheet.save(out_root / f'{code}_corrected_contact_sheet.jpg', quality=84, optimize=True)
+              (out_root / f'{code}_image_pages.txt').write_text(','.join(map(str, pages)) + '\n', encoding='utf-8')
+              print(f'Rendered {code} image-bearing PDF pages: {pages}')
+          PY
+
+      - name: Update graphics QA record
+        shell: bash
+        run: |
+          cat > qa/NIST_CSF_2_GRAPHICS_COMPLETION.md <<'EOF'
+          # NIST CSF 2.0 localized graphics completion
+
+          **Branch:** `production/multilingual-grc-editions`
+
+          ## Completed production work
+
+          - Six Latin American Spanish PNG graphics generated.
+          - Six Brazilian Portuguese PNG graphics generated.
+          - Localized labels follow `qa/NIST_CSF_2_GRAPHICS_LOCALIZATION_SPEC.md`.
+          - Markdown image references use language-specific filenames.
+          - Localized captions and alt text are retained in the Markdown editions.
+          - Spanish and Brazilian Portuguese DOCX files regenerated with embedded graphics.
+          - Spanish and Brazilian Portuguese PDF files regenerated from the DOCX editions.
+          - PNG inventory, dimensions, DOCX ZIP integrity, embedded media, and searchable PDF text validated automatically.
+          - Fresh corrected PDF figure-page contact sheets generated in `qa/nist_visual_qa_final/`.
+
+          ## Automated validation result
+
+          **PASS** - 12 localized PNG files, two regenerated DOCX files with embedded media, two regenerated searchable PDF files, and two fresh corrected figure-page contact sheets.
+
+          ## Human visual-review boundary
+
+          The fresh contact sheets are review evidence, not automatic publication approval. A human must inspect them for clipping, overlap, font rendering, contrast, grayscale comprehension, and reading-order/accessibility behavior before the graphics can be marked publication-ready.
+          EOF
+
+      - name: Commit generated graphics rebuilt publications and final QA sheets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            01-foundations/NIST_CSF_2/Espanol \
+            01-foundations/NIST_CSF_2/Portugues_BR \
+            qa/NIST_CSF_2_GRAPHICS_COMPLETION.md \
+            qa/nist_visual_qa_final
+          if git diff --cached --quiet; then
+            echo 'No graphics publication or QA changes to commit.'
+          else
+            git commit -m 'Rebuild localized NIST editions and render final figure QA sheets'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+
+# Controlled trigger: idempotent final corrected NIST graphics rendering and QA evidence.

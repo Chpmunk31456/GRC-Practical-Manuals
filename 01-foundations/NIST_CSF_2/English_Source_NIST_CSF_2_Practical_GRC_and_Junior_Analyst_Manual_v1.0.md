@@ -49,7 +49,7 @@ Technical teams should map findings to assets, risks, CSF outcomes, implementati
 
 Legal, privacy, safety, operational technology, and business teams should review decisions that affect their responsibilities.
 
-| **True Word contents:** The chapter guide below contains edition-specific page numbers after final rendering. The document also contains a native Word TOC field. After editing, right-click it and select Update Field, then Update entire table. |
+| **Word table of contents:** The chapter guide below contains edition-specific page numbers after final rendering. The document also contains a native Word TOC field. After editing, right-click it and select Update Field, then Update entire table. |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # Table of Contents

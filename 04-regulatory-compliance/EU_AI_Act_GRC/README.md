@@ -2,9 +2,8 @@
 
 **Status:** Published and validated in English, Latin American Spanish, and Brazilian Portuguese  
 **Languages:** English, `es-419`, and `pt-BR`  
-**Default publication branch:** `main`  
-**Localized production PR:** #35  
-**Main publication PR:** #38
+**Production branch:** `production/multilingual-grc-editions`  
+**Localized publication PR:** #35
 
 ## Purpose
 
@@ -38,7 +37,7 @@ The Spanish and Brazilian Portuguese packages are available in [translations](./
 
 ## Publication evidence
 
-The localized editions were validated and merged through pull request #35 from `translation/eu-ai-act-es-ptbr` into `production/multilingual-grc-editions`. The focused EU AI Act v1.3 package was then published to the repository default branch, `main`, through pull request #38.
+The localized editions were merged through pull request #35 from `translation/eu-ai-act-es-ptbr` into `production/multilingual-grc-editions`.
 
 The approved publication workflow verified structural counts, localized chapter and appendix headings, tables of contents, Figure 12-1, Portuguese Appendix Q, automated QA results, and checksum integrity before publication.
 

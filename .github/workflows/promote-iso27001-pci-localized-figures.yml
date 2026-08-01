@@ -1,0 +1,156 @@
+name: Promote ISO 27001 and PCI localized figures
+
+on:
+  push:
+    branches:
+      - audit/iso27001-pci-dss-localized-figures
+    paths:
+      - scripts/promote_iso27001_pci_localized_figures.py
+      - .github/workflows/promote-iso27001-pci-localized-figures.yml
+      - review/iso27001-pci-dss-localized-figures/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out restoration branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/iso27001-pci-dss-localized-figures
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install validation and document tools
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check Pillow
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Promote approved figures
+        run: python scripts/promote_iso27001_pci_localized_figures.py
+
+      - name: Verify promoted media, Markdown, and provenance
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('.')
+          inventory_path = root / 'qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json'
+          inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
+          families = {'ISO/IEC 27001/27002', 'PCI DSS v4.0.1'}
+          records = [r for r in inventory['references'] if r.get('manual_family') in families]
+          restored = [r for r in records if r.get('primary_classification') == 'restored_localized']
+          if len(records) != 18 or len(restored) != 18:
+              raise SystemExit(f'Expected 18 restored records, found {len(restored)} of {len(records)}')
+
+          markdown_files = {root / r['markdown_file'] for r in restored}
+          if len(markdown_files) != 2:
+              raise SystemExit(f'Expected exactly two affected Markdown files, found {len(markdown_files)}')
+
+          for record in restored:
+              destination = root / record['restored_destination']
+              if not destination.is_file():
+                  raise SystemExit(f'Missing promoted image: {destination}')
+              with Image.open(destination) as image:
+                  image.verify()
+              with Image.open(destination) as image:
+                  dimensions = record['localized_image_dimensions']
+                  if image.format != 'PNG' or image.size != (dimensions['width'], dimensions['height']):
+                      raise SystemExit(f'Image format/dimension mismatch: {destination}')
+              text = (root / record['markdown_file']).read_text(encoding='utf-8')
+              expected = f"]({record['exact_image_path']})"
+              if text.count(expected) != 1:
+                  raise SystemExit(f'Expected one Markdown image reference for {record["id"]}, found {text.count(expected)}')
+              if '<img' in text and record['exact_image_path'] in text:
+                  raise SystemExit(f'Legacy HTML image reference remains for {record["id"]}')
+              if record.get('owner_approval_evidence') != 'Issue #22 owner approval comment 5112334399':
+                  raise SystemExit(f'Owner approval evidence mismatch for {record["id"]}')
+
+          summary = inventory['summary']
+          if summary['totals_by_manual']['ISO/IEC 27001/27002'] != 0:
+              raise SystemExit('ISO unresolved summary count is not zero')
+          if summary['totals_by_manual']['PCI DSS v4.0.1'] != 0:
+              raise SystemExit('PCI unresolved summary count is not zero')
+          print('All 18 promoted figures, Markdown references, and provenance records verified.')
+          PY
+
+      - name: Rebuild affected Portuguese DOCX and PDF packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          workspace="$(pwd)"
+          mapfile -t sources < <(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json').read_text(encoding='utf-8'))
+          families = {'ISO/IEC 27001/27002', 'PCI DSS v4.0.1'}
+          paths = sorted({
+              record['markdown_file']
+              for record in data['references']
+              if record.get('manual_family') in families
+              and record.get('primary_classification') == 'restored_localized'
+          })
+          if len(paths) != 2:
+              raise SystemExit(f'Expected two authoritative Markdown paths, found {len(paths)}')
+          print('\n'.join(paths))
+          PY
+          )
+
+          for source in "${sources[@]}"; do
+            echo "Rebuilding: $source"
+            test -s "$source"
+            stem="${source%.md}"
+            directory="$(dirname "$source")"
+            absolute_directory="$workspace/$directory"
+            absolute_docx="$workspace/${stem}.docx"
+            pandoc "$source" --resource-path="$directory" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$absolute_directory" "$absolute_docx"
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            text_file="$(mktemp)"
+            pdftotext "${stem}.pdf" "$text_file"
+            grep -q '[[:alnum:]]' "$text_file"
+            rm -f "$text_file"
+            echo "Validated: ${stem}.docx and ${stem}.pdf"
+          done
+
+      - name: Verify embedded DOCX media
+        run: python scripts/validate_docx_embedded_media.py
+
+      - name: Commit promoted restoration and rebuilt packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git status --short | grep -q .; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add -f \
+              02-management-systems/ISO_IEC_27001_27002/Portugues_BR/media/image*.png \
+              04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/media/image*.png
+            git add \
+              02-management-systems/ISO_IEC_27001_27002/Portugues_BR/*.md \
+              02-management-systems/ISO_IEC_27001_27002/Portugues_BR/*.docx \
+              02-management-systems/ISO_IEC_27001_27002/Portugues_BR/*.pdf \
+              04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/*.md \
+              04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/*.docx \
+              04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/*.pdf \
+              qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
+            git commit -m 'Promote approved ISO and PCI localized figures'
+            git push origin HEAD:audit/iso27001-pci-dss-localized-figures
+          else
+            echo 'Promoted ISO and PCI restoration unchanged.'
+          fi

@@ -47,7 +47,7 @@ A tool installation is not implementation. Effective implementation requires def
 
 - Assessors should use the official CIS Controls Assessment Specification for exact inputs, operations, measures, metrics, assumptions, and procedure reviews.
 
-| **True Word contents:** This document contains a native Word table-of-contents field. The chapter guide will contain verified page numbers for this edition. After editing, right-click the contents and choose Update Field, then Update entire table. |
+| **Word table of contents:** This document contains a native Word table-of-contents field. The chapter guide will contain verified page numbers for this edition. After editing, right-click the contents and choose Update Field, then Update entire table. |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # Table of Contents

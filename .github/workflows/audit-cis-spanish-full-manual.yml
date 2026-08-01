@@ -1,0 +1,57 @@
+name: Audit CIS Spanish full manual
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - '01-foundations/CIS_Controls_v8.1/Espanol/*.md'
+      - 'qa/tools/audit_cis_spanish_full_manual.py'
+      - '.github/workflows/audit-cis-spanish-full-manual.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Run full-manual corruption audit
+        id: audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_cis_spanish_full_manual.py
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cis-spanish-full-manual-audit
+          path: qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md
+          retention-days: 30
+
+      - name: Commit audit report
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md
+          if git diff --cached --quiet; then
+            echo 'Audit report unchanged.'
+          else
+            git commit -m 'Record CIS Spanish full-manual audit findings'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+
+      - name: Enforce fail-closed result
+        if: steps.audit.outcome != 'success'
+        run: |
+          echo 'CIS Spanish full-manual audit failed. Review the committed and uploaded report.'
+          exit 1

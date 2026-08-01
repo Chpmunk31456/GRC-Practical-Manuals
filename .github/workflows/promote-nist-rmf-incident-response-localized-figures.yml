@@ -1,0 +1,429 @@
+name: Promote NIST RMF and Incident Response localized figures
+
+on:
+  push:
+    branches:
+      - audit/nist-rmf-incident-response-localized-figures
+    paths:
+      - scripts/promote_nist_rmf_incident_response_localized_figures.py
+      - .github/workflows/promote-nist-rmf-incident-response-localized-figures.yml
+      - review/nist-rmf-incident-response-localized-figures/**
+  workflow_dispatch:
+    inputs:
+      approval_comment_id:
+        description: Issue #24 owner comment containing "Owner visual approval: APPROVED"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: write
+
+concurrency:
+  group: batch-4-nist-rmf-incident-response-promotion
+  cancel-in-progress: false
+
+jobs:
+  promote-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out Batch 4 branch
+        uses: actions/checkout@v4
+        with:
+          ref: audit/nist-rmf-incident-response-localized-figures
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check Pillow
+
+      - name: Validate Batch 4 review inputs
+        run: |
+          python scripts/promote_nist_rmf_incident_response_localized_figures.py \
+            --validate-review-only
+
+      - name: Verify owner visual approval in Issue 24
+        id: approval
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APPROVAL_COMMENT_ID: ${{ inputs.approval_comment_id }}
+        run: |
+          set -euo pipefail
+          approval_json="$RUNNER_TEMP/batch-4-approval.json"
+          if [ -n "$APPROVAL_COMMENT_ID" ]; then
+            if [[ ! "$APPROVAL_COMMENT_ID" =~ ^[1-9][0-9]*$ ]]; then
+              echo 'Approval comment ID must be numeric.' >&2
+              exit 1
+            fi
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/issues/comments/${APPROVAL_COMMENT_ID}" \
+              > "$approval_json"
+          else
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/issues/24/comments?per_page=100" \
+              > "$approval_json"
+          fi
+          verified_id="$(
+            python - "$approval_json" "$APPROVAL_COMMENT_ID" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          payload = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+          supplied_id = sys.argv[2]
+          comments = payload if isinstance(payload, list) else [payload]
+          required_markers = [
+              'Owner visual approval: APPROVED',
+              'Batch 4',
+              '20',
+              'NIST RMF',
+              'Incident Response',
+          ]
+          approved = []
+          for comment in comments:
+              body = comment.get('body', '')
+              nonempty_lines = [
+                  line.strip() for line in body.splitlines() if line.strip()
+              ]
+              if (
+                  comment.get('user', {}).get('login') == 'Chpmunk31456'
+                  and comment.get('author_association') == 'OWNER'
+                  and comment.get('issue_url', '').endswith('/issues/24')
+                  and nonempty_lines
+                  and nonempty_lines[0] == required_markers[0]
+                  and all(marker in body for marker in required_markers)
+              ):
+                  approved.append(comment)
+          if not approved:
+              if supplied_id:
+                  raise SystemExit(
+                      'Supplied Issue #24 comment does not contain explicit '
+                      'owner visual approval for all 20 Batch 4 figures.'
+                  )
+              raise SystemExit(3)
+          print(approved[-1]['id'])
+          PY
+            )" || approval_status=$?
+          approval_status="${approval_status:-0}"
+          if [ "$approval_status" -eq 3 ] && [ -z "$APPROVAL_COMMENT_ID" ]; then
+            echo 'No Issue #24 owner visual approval recorded; promotion skipped.'
+            echo 'approved=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$approval_status" -ne 0 ]; then
+            exit "$approval_status"
+          fi
+          echo 'Issue #24 owner visual approval verified.'
+          echo 'approved=true' >> "$GITHUB_OUTPUT"
+          echo "evidence=Issue #24 owner approval comment ${verified_id}" >> "$GITHUB_OUTPUT"
+
+      - name: Install document tools
+        if: steps.approval.outputs.approved == 'true'
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Promote approved Batch 4 figures
+        if: steps.approval.outputs.approved == 'true'
+        env:
+          APPROVAL_EVIDENCE: ${{ steps.approval.outputs.evidence }}
+        run: |
+          python scripts/promote_nist_rmf_incident_response_localized_figures.py \
+            --approval-evidence "$APPROVAL_EVIDENCE"
+
+      - name: Verify promoted media, Markdown, and provenance
+        if: steps.approval.outputs.approved == 'true'
+        env:
+          APPROVAL_EVIDENCE: ${{ steps.approval.outputs.evidence }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from collections import Counter
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('.')
+          inventory = json.loads(
+              (root / 'qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json')
+              .read_text(encoding='utf-8')
+          )
+          families = {'NIST RMF / SP 800-53', 'Incident Response / BCDR'}
+          records = [
+              record for record in inventory['references']
+              if record.get('manual_family') in families
+          ]
+          restored = [
+              record for record in records
+              if record.get('primary_classification') == 'restored_localized'
+          ]
+          counts = Counter(record['manual_family'] for record in restored)
+          if len(records) != 20 or len(restored) != 20:
+              raise SystemExit(
+                  f'Expected 20 restored records, found {len(restored)} of {len(records)}'
+              )
+          if counts != {
+              'NIST RMF / SP 800-53': 10,
+              'Incident Response / BCDR': 10,
+          }:
+              raise SystemExit(f'Unexpected restored family counts: {counts}')
+
+          markdown_files = {root / record['markdown_file'] for record in restored}
+          if len(markdown_files) != 2:
+              raise SystemExit(
+                  f'Expected exactly two affected Markdown files, found {len(markdown_files)}'
+              )
+
+          for record in restored:
+              if record.get('language') != 'Brazilian Portuguese':
+                  raise SystemExit(f'Unexpected language for {record["id"]}')
+              destination = root / record['restored_destination']
+              if not destination.is_file():
+                  raise SystemExit(f'Missing promoted image: {destination}')
+              if hashlib.sha256(destination.read_bytes()).hexdigest() != (
+                  record['localized_image_sha256']
+              ):
+                  raise SystemExit(f'Promoted SHA-256 mismatch: {destination}')
+              with Image.open(destination) as image:
+                  image.verify()
+              with Image.open(destination) as image:
+                  dimensions = record['localized_image_dimensions']
+                  if image.format != 'PNG' or image.size != (
+                      dimensions['width'], dimensions['height']
+                  ):
+                      raise SystemExit(f'PNG validation failed: {destination}')
+              text = (root / record['markdown_file']).read_text(encoding='utf-8')
+              expected = f"]({record['exact_image_path']})"
+              if text.count(expected) != 1:
+                  raise SystemExit(
+                      f'Expected one Markdown reference for {record["id"]}, '
+                      f'found {text.count(expected)}'
+                  )
+              if record.get('owner_approval_evidence') != os.environ[
+                  'APPROVAL_EVIDENCE'
+              ]:
+                  raise SystemExit(f'Approval evidence mismatch for {record["id"]}')
+              if record.get('restoration_description') != (
+                  'Programmatic localized reconstruction; '
+                  'not an exact visual reproduction.'
+              ):
+                  raise SystemExit(f'Reconstruction wording mismatch for {record["id"]}')
+
+          summary = inventory['summary']
+          for family in families:
+              if summary['totals_by_manual'][family] != 0:
+                  raise SystemExit(f'Unresolved summary count is not zero for {family}')
+          print('All 20 promoted Batch 4 figures and provenance records verified.')
+          PY
+
+      - name: Rebuild only affected Brazilian Portuguese packages
+        if: steps.approval.outputs.approved == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          workspace="$(pwd)"
+          sources=(
+            '01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md'
+            '05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md'
+          )
+          for source in "${sources[@]}"; do
+            stem="${source%.md}"
+            directory="$(dirname "$source")"
+            pandoc "$source" --resource-path="$directory" -o "${stem}.docx"
+            libreoffice \
+              --headless \
+              --convert-to pdf \
+              --outdir "$workspace/$directory" \
+              "$workspace/${stem}.docx"
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            text_file="$(mktemp)"
+            pdftotext "${stem}.pdf" "$text_file"
+            grep -q '[[:alnum:]]' "$text_file"
+            rm -f "$text_file"
+            echo "Validated: ${stem}.docx and ${stem}.pdf"
+          done
+
+      - name: Run repository package validators
+        if: steps.approval.outputs.approved == 'true'
+        run: |
+          set -euo pipefail
+          python scripts/validate_docx_embedded_media.py
+          python scripts/inventory_multilingual_packages.py
+          test "$(find . -type f \( -path '*/Espanol/*.docx' -o -path '*/Portugues_BR/*.docx' \) | wc -l)" -eq 22
+          git diff --exit-code -- \
+            MULTILINGUAL_PACKAGE_INVENTORY.md \
+            MULTILINGUAL_PACKAGE_INVENTORY.json
+
+      - name: Verify Markdown resource paths
+        if: steps.approval.outputs.approved == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          inventory = json.loads(
+              (root / 'qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json')
+              .read_text(encoding='utf-8')
+          )
+          families = {'NIST RMF / SP 800-53', 'Incident Response / BCDR'}
+          records = [
+              record for record in inventory['references']
+              if record.get('manual_family') in families
+              and record.get('primary_classification') == 'restored_localized'
+          ]
+          if len(records) != 20:
+              raise SystemExit(f'Expected 20 restored records, found {len(records)}')
+          for record in records:
+              markdown = root / record['markdown_file']
+              target = markdown.parent / record['exact_image_path']
+              if not target.is_file():
+                  raise SystemExit(f'Unresolved Markdown image path: {target}')
+              text = markdown.read_text(encoding='utf-8')
+              if text.count(f"]({record['exact_image_path']})") != 1:
+                  raise SystemExit(f'Markdown reference count failed: {record["id"]}')
+          print('All 20 Batch 4 Markdown resource paths resolve exactly once.')
+          PY
+
+      - name: Enforce exact change scope
+        if: steps.approval.outputs.approved == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          inventory = json.loads(
+              Path('qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json')
+              .read_text(encoding='utf-8')
+          )
+          families = {'NIST RMF / SP 800-53', 'Incident Response / BCDR'}
+          records = [
+              record for record in inventory['references']
+              if record.get('manual_family') in families
+              and record.get('primary_classification') == 'restored_localized'
+          ]
+          allowed = {'qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json'}
+          for record in records:
+              markdown = Path(record['markdown_file'])
+              allowed.update({
+                  markdown.as_posix(),
+                  markdown.with_suffix('.docx').as_posix(),
+                  markdown.with_suffix('.pdf').as_posix(),
+                  record['restored_destination'],
+              })
+          output = subprocess.check_output(
+              ['git', 'status', '--porcelain', '--untracked-files=all'], text=True
+          )
+          changed = {
+              line[3:].replace('\\', '/')
+              for line in output.splitlines()
+              if line.strip()
+          }
+          unexpected = sorted(changed - allowed)
+          if unexpected:
+              raise SystemExit(f'Out-of-scope changes detected: {unexpected}')
+          if changed != allowed:
+              missing = sorted(allowed - changed)
+              raise SystemExit(f'Expected promotion changes are missing: {missing}')
+          print(f'Exact Batch 4 change scope verified: {len(changed)} files.')
+          PY
+
+      - name: Commit and safely push promoted restoration
+        if: steps.approval.outputs.approved == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch='audit/nist-rmf-incident-response-localized-figures'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f \
+            01-foundations/NIST_RMF_SP_800-53/Portugues_BR/media/image*.png \
+            05-operational-resilience/Incident_Response_BCDR/Portugues_BR/media/image*.png
+          git add \
+            01-foundations/NIST_RMF_SP_800-53/Portugues_BR/*.md \
+            01-foundations/NIST_RMF_SP_800-53/Portugues_BR/*.docx \
+            01-foundations/NIST_RMF_SP_800-53/Portugues_BR/*.pdf \
+            05-operational-resilience/Incident_Response_BCDR/Portugues_BR/*.md \
+            05-operational-resilience/Incident_Response_BCDR/Portugues_BR/*.docx \
+            05-operational-resilience/Incident_Response_BCDR/Portugues_BR/*.pdf \
+            qa/images/LEGACY_IMAGE_PROVENANCE_INVENTORY.json
+          git commit -m 'Promote approved Batch 4 localized figures'
+
+          pushed=false
+          for attempt in 1 2 3; do
+            git fetch origin "$branch"
+            remote_sha="$(git rev-parse FETCH_HEAD)"
+            if ! git merge-base --is-ancestor "$remote_sha" HEAD; then
+              if ! git rebase "$remote_sha"; then
+                git rebase --abort || true
+                echo "Concurrent branch update conflicts with promotion commit." >&2
+                exit 1
+              fi
+            fi
+            if git push origin "HEAD:$branch"; then
+              pushed=true
+              break
+            fi
+            echo "Push attempt $attempt failed; retrying from latest branch state." >&2
+          done
+          if [ "$pushed" != true ]; then
+            echo 'Failed to push promotion after three bounded attempts.' >&2
+            exit 1
+          fi
+
+      - name: Open or report draft pull request
+        if: steps.approval.outputs.approved == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          branch='audit/nist-rmf-incident-response-localized-figures'
+          existing="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --head "$branch" \
+              --base production/multilingual-grc-editions \
+              --state open \
+              --json url \
+              --jq '.[0].url // empty'
+          )"
+          if [ -n "$existing" ]; then
+            echo "Draft PR already exists: $existing"
+            exit 0
+          fi
+          body="$RUNNER_TEMP/batch-4-pr.md"
+          cat > "$body" <<'EOF'
+          ## Batch 4 localized figure promotion
+
+          Promotes exactly 20 owner-approved Brazilian Portuguese figures:
+
+          - NIST RMF / SP 800-53: 10 figures
+          - Incident Response / BCDR: 10 figures
+
+          These figures are programmatic localized reconstructions, not exact visual reproductions.
+
+          Validation includes manifest and provenance reconciliation, review and destination SHA-256 checks, PNG integrity and authoritative dimensions, Markdown resource paths, DOCX ZIP/media validation, PDF existence and searchable text, package inventory validation, and exactly 22 localized DOCX packages.
+
+          Only the two approved manual families were modified. `main` and PR #3 were untouched. No release was created.
+
+          Closes #24 after merge.
+          EOF
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --draft \
+            --base production/multilingual-grc-editions \
+            --head "$branch" \
+            --title 'Promote approved NIST RMF and Incident Response localized figures' \
+            --body-file "$body"

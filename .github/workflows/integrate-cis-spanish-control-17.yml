@@ -1,0 +1,48 @@
+name: Integrate reviewed CIS Spanish Control 17
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+    paths:
+      - 'qa/requests/integrate-cis-spanish-control-17.request'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Integrate reviewed Control 17
+        run: python3 qa/tools/integrate_cis_spanish_control_17.py
+
+      - name: Run full-manual corruption audit
+        id: audit
+        continue-on-error: true
+        run: python3 qa/tools/audit_cis_spanish_full_manual.py
+
+      - name: Commit corrected source and refreshed audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' \
+            'qa/CIS_CONTROLS_V8_1_ES_FULL_MANUAL_AUDIT.md'
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+          else
+            git commit -m 'Integrate reviewed CIS Spanish Control 17'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+
+      - name: Report remaining audit status
+        if: steps.audit.outcome != 'success'
+        run: echo 'Control 17 was integrated; other full-manual defects remain and are recorded in the refreshed audit.'

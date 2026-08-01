@@ -1,0 +1,156 @@
+name: Multilingual GRC production pipeline
+
+on:
+  push:
+    branches:
+      - production/multilingual-grc-editions
+  pull_request:
+    branches:
+      - production/multilingual-grc-editions
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: multilingual-production-writes
+  cancel-in-progress: false
+
+jobs:
+  produce-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Check out production branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install translation and document tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install argostranslate
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Install English to Spanish and Portuguese models
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import time
+          import argostranslate.package
+
+          for attempt in range(1, 4):
+              try:
+                  argostranslate.package.update_package_index()
+                  available = argostranslate.package.get_available_packages()
+                  for target in ('es', 'pt'):
+                      matches = [p for p in available if p.from_code == 'en' and p.to_code == target]
+                      if not matches:
+                          raise RuntimeError(f'No Argos package available for en->{target}')
+                      path = matches[0].download()
+                      argostranslate.package.install_from_path(path)
+                  break
+              except Exception:
+                  if attempt == 3:
+                      raise
+                  time.sleep(20 * attempt)
+          PY
+
+      - name: Generate Spanish and Brazilian Portuguese Markdown drafts
+        timeout-minutes: 45
+        run: >-
+          python scripts/build_multilingual_drafts.py
+          --refresh-generated
+          --allow-protected-existing
+
+      - name: Build DOCX and searchable PDF editions
+        shell: bash
+        run: |
+          set -euo pipefail
+          find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) -print0 |
+          while IFS= read -r -d '' source; do
+            stem="${source%.md}"
+            pandoc "$source" --toc --resource-path="$(dirname "$source")" -o "${stem}.docx"
+            libreoffice --headless --convert-to pdf --outdir "$(dirname "$source")" "${stem}.docx" >/dev/null
+            test -s "${stem}.docx"
+            test -s "${stem}.pdf"
+            unzip -t "${stem}.docx" >/dev/null
+            pdftotext "${stem}.pdf" - | grep -q '[[:alnum:]]'
+          done
+
+      - name: Run multilingual inventory
+        run: python scripts/inventory_multilingual_packages.py
+
+      - name: Verify embedded DOCX media
+        run: python scripts/validate_docx_embedded_media.py
+
+      - name: Write production verification report
+        shell: bash
+        run: |
+          set -euo pipefail
+          md_count=$(find . -type f \( -path '*/Espanol/*.md' -o -path '*/Portugues_BR/*.md' \) | wc -l)
+          docx_count=$(find . -type f \( -path '*/Espanol/*.docx' -o -path '*/Portugues_BR/*.docx' \) | wc -l)
+          pdf_count=$(find . -type f \( -path '*/Espanol/*.pdf' -o -path '*/Portugues_BR/*.pdf' \) | wc -l)
+          cat > MULTILINGUAL_BUILD_VERIFICATION.md <<EOF
+          # Multilingual Build Verification
+
+          - Multilingual Markdown files: ${md_count}
+          - Multilingual DOCX files: ${docx_count}
+          - Multilingual PDF files: ${pdf_count}
+          - DOCX ZIP integrity: validated during build
+          - PDF searchable text: validated with pdftotext during build
+          - Translation status: machine-assisted drafts pending documented human language and technical review
+          EOF
+
+      - name: Commit generated packages and reports
+        if: github.ref_name == 'production/multilingual-grc-editions'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+            exit 0
+          fi
+
+          git commit -m 'Generate and verify multilingual GRC draft packages'
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:production/multilingual-grc-editions; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo 'Push failed after three attempts.' >&2
+              exit 1
+            fi
+
+            echo "Production advanced during the build; rebasing generated commit before retry ${attempt}."
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
+            sleep $((attempt * 5))
+          done
+
+      - name: Upload production reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multilingual-grc-production-reports
+          path: |
+            MULTILINGUAL_PACKAGE_INVENTORY.md
+            MULTILINGUAL_PACKAGE_INVENTORY.json
+            MULTILINGUAL_BUILD_VERIFICATION.md
+          if-no-files-found: warn

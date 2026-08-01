@@ -1,0 +1,74 @@
+name: Review Cloud and Third-Party Risk localized figures
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  generate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Batch 5 audit branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check Pillow
+
+      - name: Validate committed review candidates
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from collections import Counter
+          from pathlib import Path
+          from PIL import Image
+
+          out = Path('review/cloud-third-party-localized-figures')
+          manifest = json.loads((out / 'manifest.json').read_text(encoding='utf-8'))
+          expected = {
+              'Cloud Security and Compliance': 10,
+              'Third-Party Risk and Supply Chain Security': 10,
+          }
+          if len(manifest) != 20:
+              raise SystemExit(f'Expected 20 manifest records, found {len(manifest)}')
+          if Counter(item['manual_family'] for item in manifest) != Counter(expected):
+              raise SystemExit('Unexpected family counts')
+          for field in ('inventory_id', 'review_file', 'localized_destination'):
+              if len({item[field] for item in manifest}) != 20:
+                  raise SystemExit(f'{field} values are not unique')
+          for item in manifest:
+              if item['language'] != 'Brazilian Portuguese':
+                  raise SystemExit(f'Unexpected language: {item["inventory_id"]}')
+              if item['status'] != 'review_only_pending_owner_approval':
+                  raise SystemExit(f'Unexpected status: {item["inventory_id"]}')
+              if item['description'] != 'Programmatic localized reconstruction; not an exact visual reproduction.':
+                  raise SystemExit(f'Unexpected description: {item["inventory_id"]}')
+              path = Path(item['review_file'])
+              if hashlib.sha256(path.read_bytes()).hexdigest() != item['sha256']:
+                  raise SystemExit(f'SHA-256 mismatch: {path}')
+              with Image.open(path) as image:
+                  image.verify()
+              with Image.open(path) as image:
+                  if image.format != 'PNG' or image.size != (item['width'], item['height']):
+                      raise SystemExit(f'PNG validation failed: {path}')
+              if Path(item['localized_destination']).exists():
+                  raise SystemExit(f'Review workflow must not promote: {item["localized_destination"]}')
+              if Path(item['markdown_file']).read_text(encoding='utf-8').count(item['exact_image_path']) != 1:
+                  raise SystemExit(f'Markdown path count failed: {item["inventory_id"]}')
+          print('All 20 Batch 5 review candidates validated.')
+          PY
+
+      - name: Upload review candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloud-third-party-localized-review-candidates
+          path: review/cloud-third-party-localized-figures
+          if-no-files-found: error
+          retention-days: 30

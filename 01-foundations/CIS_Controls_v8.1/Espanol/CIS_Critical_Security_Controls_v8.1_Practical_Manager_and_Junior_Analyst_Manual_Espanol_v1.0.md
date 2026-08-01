@@ -1,1022 +1,769 @@
-> **Estado de revisión:** Borrador de traducción asistida por máquina. Requiere revisión humana de terminología, significado, enlaces, formato y vigencia técnica antes de marcarse como edición final.
+> **Estado de revisión:** Edición de revisión controlada. Requiere validación humana de terminología, significado, enlaces, formato, accesibilidad y vigencia técnica antes de la publicación final.
 
-**CYBERSECURITY, PRIVACY &amp; COMPLIANCE SERIES**
+**SERIE PRÁCTICA DE CIBERSEGURIDAD, PRIVACIDAD Y CUMPLIMIENTO**
 
-**CIS Controles de Seguridad Crítica v8.1**
+**CIS Critical Security Controls v8.1**
 
-** Aplicación práctica, medición, evidencia y herramientas de código abierto**
+**Implementación práctica, medición, evidencia y herramientas de código abierto**
 
-*Un manual de trabajo para administradores, analistas juniores, estudiantes, cambiadores de carrera, asesores y equipos de seguridad*
+*Manual de trabajo para gestores, analistas júnior, estudiantes, profesionales en transición de carrera, evaluadores y equipos de seguridad*
 
 **Alberto (Al) Leiva**
 
-Primera edición • Julio 2026
+Primera edición • Julio de 2026
 
-| **Inside:** 18 Controles • 153 Salvaguardias • IG1, IG2, IG3 • medición • evidencia • herramientas • manual de gestión • laboratorios • preparación de la carrera |
-|... |
+| **Contenido:** 18 Controles • 153 Salvaguardas • IG1, IG2 e IG3 • medición • evidencia • herramientas • guía para gestores • laboratorios • preparación profesional |
+|---|
 
-# Publication and Use Notice
+# Aviso de publicación y uso
 
 Autor: Alberto (Al) Leiva
 
-Edición: Primera edición, Julio 2026
+Edición: Primera edición, julio de 2026
 
-Este manual educativo independiente no es un Centro para la publicación, certificación, acreditación, informe de auditoría, opinión legal o garantía de seguridad o cumplimiento. Controles CIS y CIS Los parámetros son marcas comerciales del Centro de Seguridad de Internet. Utilice los recursos oficiales CIS para el contenido exacto y la orientación actual.
+Este manual educativo independiente no es una publicación, certificación, acreditación, informe de auditoría, opinión jurídica ni garantía de seguridad o cumplimiento emitida por el Center for Internet Security. CIS Controls y CIS Benchmarks son marcas del Center for Internet Security. Consulte los recursos oficiales de CIS para obtener el contenido exacto y la orientación vigente.
 
-Los controles CIS son las mejores prácticas de ciberseguridad. No reemplazan las leyes, reglamentos, contratos, requisitos sectoriales, evaluación de riesgos o responsabilidad de gestión aplicables. Un mapeo muestra relaciones; no prueba automáticamente el cumplimiento de otro marco.
+Los CIS Controls representan buenas prácticas de ciberseguridad. No sustituyen las leyes, los reglamentos, los contratos, los requisitos sectoriales, las evaluaciones de riesgo ni las responsabilidades de gestión aplicables. Una correspondencia entre marcos muestra relaciones; no demuestra automáticamente el cumplimiento de otro marco.
 
 ## Uso ético y autorizado
 
-Utilice herramientas técnicas únicamente en activos, redes, aplicaciones, cuentas de nube, repositorios y datos que posee o está específicamente autorizado por escrito para evaluar. Use información sintética y sistemas aislados en laboratorios.
+Utilice herramientas técnicas únicamente en activos, redes, aplicaciones, cuentas de nube, repositorios y datos que posea o para los que haya recibido autorización específica por escrito. En los laboratorios, utilice información sintética y sistemas aislados.
 
 # Prefacio
 
-*Una introducción práctica para priorizar la defensa cibernética y la medición basada en evidencia.*
+*Introducción práctica a la defensa cibernética priorizada y a la medición basada en evidencia.*
 
-Los Controles CIS convierten las necesidades defensivas comunes en salvaguardias focalizadas. Su fuerza es la priorización práctica: saber lo que posee, controlar software y datos, asegurar configuraciones e identidades, gestionar vulnerabilidades y registros, prepararse para perturbaciones y ataques, y probar si las defensas funcionan.
+Los CIS Controls convierten necesidades defensivas comunes en Salvaguardas específicas. Su principal fortaleza es la priorización práctica: conocer los activos, controlar el software y los datos, proteger configuraciones e identidades, gestionar vulnerabilidades y registros, prepararse para interrupciones y ataques, y comprobar si las defensas funcionan.
 
-La versión 8.1 es la edición actual. Se trata de una actualización iterativa al v8 que realineed mappings to NIST CSF 2.0, definiciones ampliadas de plazo reserva, clases de activos revisados y cartografías de Salvaguardia, problemas menores corregidos, aclarar algunas Salvaguardias, e incorporar la función de seguridad de Govern en las cartografías. Los 18 Controles y 153 Salvaguardias siguen siendo la estructura central.
+La versión 8.1 es una actualización iterativa de la versión 8. Realineó las correspondencias con NIST CSF 2.0, amplió definiciones de términos reservados, revisó clases de activos y correspondencias de Salvaguardas, corrigió cuestiones menores, aclaró determinadas Salvaguardas e incorporó la función Gobernar a las correspondencias. Los 18 Controles y las 153 Salvaguardas continúan siendo la estructura central.
 
-Una instalación de herramientas no es la implementación. La aplicación efectiva requiere un alcance definido, poblaciones completas, configuración segura, pruebas operativas, propietarios capacitados, manejo de excepciones, medición, corrección y retesting. Los administradores deciden prioridades y recursos; los analistas hacen que esas decisiones sean fiables mediante inventarios y pruebas precisos.
+La instalación de una herramienta no equivale a la implementación de un control. Una implementación efectiva exige un alcance definido, poblaciones completas, configuración segura, evidencia operativa, responsables capacitados, tratamiento de excepciones, medición, corrección y repetición de pruebas. Los gestores definen prioridades y recursos; los analistas hacen que esas decisiones sean confiables mediante inventarios y evidencia precisos.
 
-Cómo utilizar este manual
+# Cómo utilizar este manual
 
-- Los administradores deben comenzar con los Capítulos 1-5 y 24–25.
+- Los gestores deben comenzar con los capítulos 1–5 y 24–25.
+- Los analistas júnior deben estudiar los 18 capítulos de Controles, el método de medición, las herramientas, el laboratorio y el capítulo de entrevistas.
+- Los equipos técnicos deben relacionar cada Salvaguarda con activos, datos, responsables, procedimientos, configuraciones, monitoreo, excepciones y evidencia.
+- Los evaluadores deben utilizar la especificación oficial de evaluación de CIS Controls para confirmar entradas, operaciones, medidas, métricas, supuestos y revisiones de procedimientos.
 
-- Los analistas juniores deben estudiar los 18 capítulos de Control, método de medición, herramientas, laboratorio y capítulo de entrevista.
-
-- Los equipos técnicos deben conectar cada Salvaguardia a activos, datos, propietarios, procedimientos, configuración, monitoreo, manejo de excepciones y pruebas.
-
-- Los evaluadores deben utilizar la Evaluación oficial de Controles CIS Especificación de insumos, operaciones, medidas, métricas, suposiciones y exámenes de procedimiento.
-
-Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo. La guía del capítulo contendrá números de página verificados para esta edición. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego actualice la tabla completa.
-|. |
+| **Tabla de contenido en Word:** El archivo DOCX puede contener un campo nativo de tabla de contenido. Después de cualquier edición, actualice el campo y seleccione la opción para actualizar toda la tabla. |
+|---|
 
 # Tabla de contenidos
 
-[Notificación de publicación y uso [2](#publication-and-use-notice)](#publication-and-use-notice)
+1. Fundamentos de CIS Controls v8.1  
+2. Grupos de Implementación y priorización  
+3. Gobernanza, alcance y responsabilidades  
+4. Medición con la Especificación para la Evaluación de Controles de CIS  
+5. Hoja de ruta de implementación  
+6–23. Los 18 CIS Controls  
+24. Herramientas de código abierto  
+25. Guía de CIS Controls para gestores  
+26. Guía profesional para analistas júnior  
+27. Laboratorio ficticio y portafolio  
+28. Plan de aprendizaje de treinta días  
+29. Preparación para entrevistas  
+30. Plantillas, glosario, índice y referencias
 
-[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)
+# 1. Fundamentos de CIS Controls v8.1
 
-[Prefacio [3] (#preface)](#preface)
+*La versión vigente, su estructura, propósito y limitaciones.*
 
-[Cómo utilizar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
+![Los Controles organizan 153 Salvaguardas en un programa defensivo práctico.](media/image1.png)
 
-[Tabla de contenidos [4](#table-of-contents)](#table-of-contents)
+Figura 1. Los 18 Controles Críticos de Seguridad de CIS
 
-[1. CIS Controls v8.1 Foundations [7](#cis-controls-v8.1-foundations)](#cis-controls-v8.1-foundations)
+- CIS Controls v8.1 se publicó en junio de 2024 y continúa siendo la edición vigente en julio de 2026.
 
-[2. Grupos de aplicación y prioridades [8](#implementation-groups-and-prioritization)](#implementation-groups-and-prioritization)
+- Los Controles son buenas prácticas priorizadas diseñadas para defender sistemas y redes frente a ataques frecuentes.
 
-[3. Gobernanza, alcance y propiedad [9](#governance-scope-and-ownership)](#governance-scope-and-ownership)
+- El marco contiene 18 Controles y 153 Salvaguardas.
 
-[4. Medición con la Evaluación de CIS Especificación [10](#measurement-with-the-cis-assessment-specification)](#measurement-with-the-cis-assessment-specification)
+- Las Salvaguardas se relacionan con clases de activos, funciones de seguridad y Grupos de Implementación.
 
-[5. Implementation Roadmap [11](#implementation-roadmap)](#implementation-roadmap)
+- La versión 8.1 alinea su correspondencia con NIST CSF 2.0 e incorpora la función Gobernar.
 
-[6. Control 1 - Inventario y Control de Activos Empresarios [12](#control-1-inventory-and-control-of-enterprise-assets)](#control-1-inventory-and-control-of-enterprise-assets)
+- Existen correspondencias oficiales con diversos marcos, pero la implementación debe verificarse por separado para cada requisito aplicable.
 
-[7. Control 2 — Inventario y control de activos de software [13](#control-2-inventory-and-control-of-software-assets)](#control-2-inventory-and-control-of-software-assets)
+| **Capa** | **Propósito** |
+|---|---|
+| Control | Resultado defensivo amplio, como el inventario de activos o la respuesta a incidentes |
+| Salvaguarda | Acción específica que puede asignarse, implementarse y medirse |
+| Clase de activo | Tipo de elemento afectado, como dispositivos, software, datos, red, usuarios o documentación |
+| Función de seguridad | Correspondencia con Gobernar, Identificar, Proteger, Detectar, Responder o Recuperar |
+| Grupo de Implementación | Priorización recomendada según el perfil de riesgo y los recursos |
+| Medida de evaluación | Entradas, operaciones, medidas, métricas y revisión de procedimientos utilizadas para evaluar una Salvaguarda |
 
-[8. Control 3 — Data Protection [14](#control-3-data-protection)](#control-3-data-protection)
+# 2. Grupos de Implementación y priorización
 
-[9. Control 4 — Configuración segura de activos y software de la empresa [16](#control-4-secure-configuration-of-enterprise-assets-and-software)](#control-4-secure-configuration-of-enterprise-assets-and-software)
+*Cómo IG1, IG2 e IG3 ayudan a las organizaciones a elegir un punto de partida realista.*
 
-[10. Control 5 — Account Management [18](#control-5-account-management)](#control-5-account-management)
+![Cada Grupo de Implementación se apoya en el anterior; IG3 contiene todas las Salvaguardas.](media/image2.png)
 
-[11. Control 6 — Access Control Management [19](#control-6-access-control-management)](#control-6-access-control-management)
+Figura 2. Progresión de los Grupos de Implementación
 
-[12. Control 7 - Gestión continua de la vulnerabilidad [21](#control-7-continuous-vulnerability-management)](#control-7-continuous-vulnerability-management)
+| **Grupo** | **Salvaguardas** | **Situación habitual** | **Objetivo** |
+|---|---:|---|---|
+| IG1 | 56 | Recursos y experiencia de seguridad limitados, menor sensibilidad y alta necesidad de continuidad básica | Higiene cibernética esencial frente a ataques comunes |
+| IG2 | IG1 + 74 | Varias áreas, mayor complejidad, información sensible y mayor dependencia operativa | Gestionar el aumento del riesgo y de la complejidad operativa |
+| IG3 | IG1 + IG2 + 23 = 153 | Especialistas en seguridad, datos sensibles o regulados, servicios críticos y amenazas sofisticadas | Reducir el impacto de ataques dirigidos y avanzados |
 
-[13. Control 8 — Audit Log Management [23](#control-8-audit-log-management)](#control-8-audit-log-management)
+- Según la orientación de CIS, toda organización debe comenzar con IG1.
 
-[14. Control 9 — Email and Web Browser Protections [24](#control-9-email-and-web-browser-protections)](#control-9-email-and-web-browser-protections)
+- Seleccione un Grupo de Implementación considerando la sensibilidad de los datos, los servicios críticos, la exposición a amenazas, las obligaciones legales y contractuales, la tolerancia empresarial, la tecnología, el personal y la experiencia.
 
-[15. Control 10 — Malware Defenses [25](#control-10-malware-defenses)](#control-10-malware-defenses)
+- Un Grupo de Implementación es una ayuda de priorización, no una autorización para ignorar un riesgo material o un requisito obligatorio.
 
-[16. Control 11 — Data Recovery [26](#control-11-data-recovery)](#control-11-data-recovery)
+- Documente las adiciones adaptadas, la secuencia, las excepciones, la aceptación del riesgo, los responsables y las fechas.
 
-[17. Control 12 — Network Infrastructure Management [27](#control-12-network-infrastructure-management)](#control-12-network-infrastructure-management)
+- Utilice CIS Controls Navigator para filtrar las Salvaguardas de v8.1 y revisar las correspondencias oficiales.
 
-[18. Control 13 — Network Monitoring and Defense [28](#control-13-network-monitoring-and-defense)](#control-13-network-monitoring-and-defense)
+# 3. Gobernanza, alcance y responsabilidades
 
-[19. Control 14 — Security Awareness and Skills Training [30](#control-14-security-awareness-and-skills-training)](#control-14-security-awareness-and-skills-training)
+*La base de gestión necesaria para que las Salvaguardas funcionen de manera consistente.*
 
-[20. Control 15 — Service Provider Management [31](#control-15-service-provider-management)](#control-15-service-provider-management)
+- Defina los objetivos empresariales, los servicios críticos, los datos sensibles, las obligaciones legales y contractuales, el perfil de amenazas, la tolerancia al riesgo y el Grupo de Implementación elegido.
 
-[21. Control 16 — Application Software Security [32](#control-16-application-software-security)](#control-16-application-software-security)
+- Cree inventarios completos de activos empresariales, software, datos, cuentas, sistemas de autenticación, infraestructura de red, registros, proveedores, aplicaciones y recursos de recuperación.
 
-[22. Control 17 — Gestión de la respuesta de incidentes [34] (#control-17-incident-response-management)](#control-17-incident-response-management)
+- Asigne una persona responsable de rendir cuentas por cada Salvaguarda y responsables operativos para cada plataforma o proceso afectado.
 
-[23. Control 18 — Penetration Testing [36](#control-18-penetration-testing)](#control-18-penetration-testing)
+- Defina alcance, aplicabilidad, dependencias, responsabilidades de proveedores, excepciones permitidas, autoridad de aprobación y factores que activan una revisión.
 
-[24. Open-Source Tools [37](#open-source-tools)](#open-source-tools)
+- Planifique financiación, personal, competencias, tecnología, tiempo y gestión del cambio.
 
-[24.1 CIS Controls Navigator [37](#cis-controls-navigator)](#cis-controls-navigator)
+- Defina métricas e informes antes de la implementación para que la cobertura y los fallos sean visibles.
 
-[24.2 CIS Controls Assessment Specification [37](#cis-controls-assessment-specification)](#cis-controls-assessment-specification)
+- Mantenga un ciclo de gobernanza: priorizar, implementar, medir, corregir, repetir pruebas y mejorar.
 
-[24.3 CIS-CAT Lite [37](#cis-cat-lite)](#cis-cat-lite)
+| **Rol** | **Decisión o responsabilidad** |
+|---|---|
+| Patrocinador ejecutivo | Dirección, tolerancia al riesgo, financiación, escalamiento y rendición de cuentas |
+| Responsable del control | Diseño de la Salvaguarda, alcance, procedimiento, medición, excepciones y mejora |
+| Responsable del activo o servicio | Inventario exacto, uso aprobado, configuración, impacto empresarial y remediación |
+| Operaciones de seguridad | Monitoreo, alertas, investigación, respuesta y evidencia |
+| TI / Ingeniería | Implementación, control de cambios, aplicación de parches, configuración y recuperación |
+| GRC / Analista | Correspondencias, evidencia, medición, hallazgos, seguimiento de acciones e informes |
+| Auditoría interna / evaluador | Criterios objetivos, pruebas, limitaciones y conclusiones |
+| Proveedor de servicios | Controles contratados, evidencia, incidentes, cambios y apoyo para la salida |
 
-[24.4 CISO Assistant [38](#ciso-assistant)](#ciso-assistant)
+# 4. Medición con la Especificación para la Evaluación de Controles de CIS
 
-[24.5 Wazuh [38](#wazuh)](#wazuh)
+*Un método repetible para determinar si las Salvaguardas están implementadas.*
 
-[24.6 osquery [38](#osquery)](#osquery)
+![La especificación oficial avanza desde entradas de datos definidas hasta operaciones, medidas, métricas y revisión de procedimientos.](media/image3.png)
 
-[24.7 OpenSCAP [38](#openscap)](#openscap)
+Figura 3. Estructura de medición de las Salvaguardas de CIS
 
-[24.8 Lynis [38](#lynis)](#lynis)
+| **Elemento** | **Pregunta** |
+|---|---|
+| Metadatos de la Salvaguarda | ¿Cuál es la Salvaguarda exacta, la clase de activo, la función de seguridad y el Grupo de Implementación? |
+| Dependencias | ¿Qué otras Salvaguardas o poblaciones deben existir primero? |
+| Supuestos | ¿Qué condición aceptada afecta la medición? |
+| Entradas | ¿Qué datos completos y fiables se requieren? |
+| Operaciones | ¿Qué análisis debe realizarse sobre las entradas? |
+| Medidas | ¿Qué conteos, listas, fechas, configuraciones o resultados se obtienen? |
+| Métricas | ¿Cómo se calculan e interpretan las medidas? |
+| Revisión del procedimiento | ¿Existe un proceso documentado y contiene los elementos requeridos? |
 
-[24.9 Nmap [39](#nmap)](#nmap)
+- Defina la Salvaguarda exacta y la población incluida en el alcance.
 
-[24.10 Greenbone Community Edition [39](#greenbone-community-edition)](#greenbone-community-edition)
+- Obtenga las entradas requeridas y valide su integridad, exactitud, oportunidad, responsabilidad y fiabilidad de la fuente.
 
-[24.11 Trivy [39](#trivy)](#trivy)
+- Siga las operaciones oficiales de medición o documente un método equivalente y fiable.
 
-[24.12 OWASP ZAP [39](#owasp-zap)](#owasp-zap)
+- Conserve los cálculos de las medidas y la población subyacente de excepciones, no solo un porcentaje.
 
-[24.13 Suricata [39](#suricata)](#suricata)
+- Evalúe si la Salvaguarda está implementada y qué tan bien funciona.
 
-[24.14 Keycloak [39](#keycloak)](#keycloak)
+- Asigne una acción correctiva para la cobertura faltante, la configuración incorrecta, la revisión vencida, las excepciones o los datos poco fiables.
 
-[24.15 DefectDojo [40](#defectdojo)](#defectdojo)
+- Repita las pruebas con los mismos criterios y una población actualizada.
 
-[24.16 Velociraptor [40](#velociraptor)](#velociraptor)
+- Informe alcance, resultado, excepción, limitación, responsable, acción y fecha.
 
-[25. Manual de los Controles CIS para gerentes [41](#managers-cis-controls-playbook)](#managers-cis-controls-playbook)
+# 5. Hoja de ruta de implementación
 
-[26. Guía de la carrera de analista junior [42](#junior-analyst-career-guide)](#junior-analyst-career-guide)
+*Una secuencia práctica desde los inventarios hasta una resiliencia comprobada.*
 
-[26.1 Trabajo junior típico [42](#typical-junior-work)](#typical-junior-work)
+1. Elija y documente el Grupo de Implementación inicial y cualquier adición requerida.
 
-[27. Laboratorio de Ficción y Cartera [44](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
+2. Construya y concilie las poblaciones principales: activos, software, datos, cuentas, sistemas de autenticación, red, proveedores, aplicaciones y registros.
 
-[28. Plan de aprendizaje de 30 días [45] (#thirty-day-learning-plan)](#thirty-day-learning-plan)
+3. Implemente las Salvaguardas de IG1 con responsables, procedimientos, métricas de cobertura, excepciones y evidencia.
 
-[29. Preparación de entrevistas [46](#interview-preparation)](#interview-preparation)
+4. Proteja identidades, configuraciones, vulnerabilidades, correo electrónico, navegadores, defensas contra malware, copias de seguridad y monitoreo esencial.
 
-[29.1 ¿Cuáles son los controles CIS? [46](#what-are-the-cis-controls)](#what-are-the-cis-controls)
+5. Ejercite la respuesta a incidentes y la recuperación antes de una emergencia real.
 
-[29.2 ¿Qué es IG1? [46](#what-is-ig1)](#what-is-ig1)
+6. Mida cada Salvaguarda aplicable mediante entradas fiables y operaciones repetibles.
 
-[29.3 ¿Se ajusta IG1 a cada requisito? [46](#does-ig1-fit-every-requirement)](#does-ig1-fit-every-requirement)
+7. Corrija la cobertura incompleta y los fallos repetidos; verifique las correcciones mediante nuevas pruebas.
 
-[29.4 ¿Cómo mide una Salvaguardia? [46](#how-do-you-measure-a-safeguard)](#how-do-you-measure-a-safeguard)
+8. Avance hacia IG2 o IG3 según el riesgo, las obligaciones, la madurez y la exposición a amenazas.
 
-[29.5 ¿Por qué son importantes los inventarios? [46](#why-are-inventories-important)](#why-are-inventories-important)
+9. Utilice las correspondencias oficiales para coordinar otros marcos sin tratarlas como cumplimiento automático.
 
-[29.6 Vulnerability scan versus penetración test? [46](#vulnerability-scan-versus-penetration-test)](#vulnerability-scan-versus-penetration-test)
+| **Principio de implementación:** Un grupo más pequeño de Salvaguardas totalmente definido, operado, medido y mejorado es más defendible que una lista extensa marcada como completa sin evidencia fiable. |
+|---|
 
-[29.7 ¿Una asignación marco demuestra el cumplimiento? [46](#does-a-framework-mapping-prove-compliance)](#does-a-framework-mapping-prove-compliance)
+# 6. Control 1 — Inventario y control de activos empresariales
 
-[29.8 ¿Qué puede concluir un analista junior? [46](#what-can-a-junior-analyst-conclude)](#what-can-a-junior-analyst-conclude)
+*Las 5 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-[29.9 Preguntas para hacer al empleador [46](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)
+![El descubrimiento, la conciliación, la respuesta y la revisión mantienen actualizadas las poblaciones fundamentales.](media/image4.png)
 
-[30. Plantillas, Glosario, Índice y Referencias [48](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
+Figura 4. Ciclo de inventario de activos y software
 
-[30.1 Documentos de trabajo de medición de seguridad [48](#safeguard-measurement-workpaper)](#safeguard-measurement-workpaper)
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para el inventario y control de activos empresariales. |
+|---|
 
-[30.2 Registro de hallazgos y nuevas pruebas [48](#finding-and-retest-record)](#finding-and-retest-record)
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 1.1 | Establecer y mantener un inventario detallado de activos empresariales | Establecer un proceso repetible y con responsable definido para mantener un inventario detallado de activos y verificar su cobertura y excepciones. | Confirmar alcance, población, propietario, frecuencia, cobertura, excepciones, corrección y nueva prueba. | Inventario de activos, propietarios, estado de aprobación, descubrimiento activo y pasivo, registros DHCP/IPAM y tickets de activos no autorizados. |
+| 1.2 | Abordar los activos no autorizados | Detectar, investigar y retirar, aislar o autorizar formalmente los activos no autorizados. | Verificar que las alertas generan acciones trazables y oportunas. | Alertas, tickets, registros de aislamiento, autorizaciones y evidencia de cierre. |
+| 1.3 | Utilizar una herramienta de descubrimiento activo | Ejecutar descubrimiento activo para identificar activos conectados y conciliar los resultados con el inventario. | Confirmar cobertura, programación, exclusiones y conciliación. | Configuración de escaneo, resultados, inventario actualizado y excepciones aprobadas. |
+| 1.4 | Utilizar registros DHCP para actualizar el inventario de activos empresariales | Integrar registros DHCP con el proceso de actualización y conciliación del inventario. | Verificar ingestión, frecuencia, cobertura y tratamiento de discrepancias. | Registros DHCP, integraciones, reportes de conciliación y tickets. |
+| 1.5 | Utilizar una herramienta de descubrimiento pasivo de activos | Supervisar tráfico o telemetría para identificar activos sin generar exploración activa. | Confirmar sensores, segmentos cubiertos, alertas y conciliación. | Configuración de sensores, resultados, cobertura de red y actualizaciones del inventario. |
 
-[30.3 Glosario [48](#glossary)](#glossary)
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto, la clase de activo, la función de seguridad, el Grupo de Implementación, las dependencias, las entradas, las operaciones, las medidas, las métricas y la revisión de procedimientos.
 
-[30.4 Índice de asunto [49](#subject-index)](#subject-index)
+# 7. Control 2 — Inventario y control de activos de software
 
-[30.5 Referencias oficiales [49](#official-references)](#official-references)
+*Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-1. Controles CIS v8.1 Fundaciones
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para el inventario y control de activos de software. |
+|---|
 
-*La versión actual, estructura, propósito y limitaciones.*
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 2.1 | Establecer y mantener un inventario de software | Mantener un inventario autorizado, actualizado y con responsables definidos. | Confirmar alcance, propietario, frecuencia, cobertura y excepciones. | Inventario, versiones, propietarios, estado de soporte y resultados de descubrimiento. |
+| 2.2 | Asegurar que el software autorizado tenga soporte vigente | Identificar software sin soporte y actualizarlo, reemplazarlo o gestionarlo mediante una excepción aprobada. | Verificar fechas de fin de soporte y acciones correctivas. | Inventario, boletines de proveedor, planes de actualización y excepciones. |
+| 2.3 | Abordar el software no autorizado | Detectar y retirar, bloquear o aprobar formalmente el software no autorizado. | Confirmar que los hallazgos generan acciones trazables. | Alertas, tickets, registros de desinstalación, bloqueos y aprobaciones. |
+| 2.4 | Utilizar herramientas automatizadas de inventario de software | Automatizar la detección de software instalado y conciliarla con el inventario autorizado. | Verificar cobertura, frecuencia y tratamiento de discrepancias. | Configuración de herramientas, resultados y reportes de conciliación. |
+| 2.5 | Crear una lista de software autorizado | Permitir la ejecución únicamente del software aprobado conforme al riesgo y la necesidad empresarial. | Confirmar política, cobertura, excepciones y eventos de bloqueo. | Política de allowlisting, reglas, excepciones y registros de eventos. |
+| 2.6 | Crear una lista de bibliotecas autorizadas | Restringir bibliotecas y componentes cargados a versiones aprobadas. | Verificar reglas, cobertura y excepciones. | Configuración, inventario de bibliotecas, eventos y aprobaciones. |
+| 2.7 | Crear una lista de scripts autorizados | Restringir la ejecución de scripts a los aprobados y controlados. | Confirmar firma, reglas, cobertura y excepciones. | Repositorio aprobado, firmas, reglas de ejecución y eventos. |
 
-"El control organiza 153 Salvaguardias en un programa defensivo práctico" (Nota: 3.94164in" alt="Los controles organizan 153 Salvaguardias en un programa defensivo práctico." /
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-Figura 1. Los 18 controles de seguridad críticos CIS
+# 8. Control 3 — Protección de datos
 
-- CIS Controls v8.1 fue publicado en junio de 2024 y sigue siendo la edición actual a partir de julio de 2026.
+*Las 14 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-- Los Controles se priorizan las mejores prácticas diseñadas para defender sistemas y redes contra ataques frecuentes.
+![Descubrir, clasificar, proteger, conservar y eliminar datos según su sensibilidad y necesidad.](media/image5.png)
 
-- El marco contiene 18 Controles y 153 Salvaguardias.
+Figura 5. Ciclo de vida de protección de datos
 
-- Las salvaguardias se refieren a las clases de activos, las funciones de seguridad y los grupos de aplicación.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la protección de datos. |
+|---|
 
-- La versión 8.1 alinea su cartografía NIST CSF a CSF 2.0 e incluye cartografías Govern.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 3.1 | Establecer y mantener un proceso de gestión de datos | Definir cómo se identifican, clasifican, protegen, conservan y eliminan los datos. | Confirmar alcance, propietario, revisión y aplicación. | Política, procedimientos, responsables y registros de revisión. |
+| 3.2 | Establecer y mantener un inventario de datos | Mantener un inventario de conjuntos de datos, ubicación, propietario, sensibilidad y uso. | Verificar cobertura, actualidad y conciliación. | Inventario, catálogos, propietarios y resultados de descubrimiento. |
+| 3.3 | Configurar listas de control de acceso a datos | Limitar el acceso a datos conforme a necesidad y autorización. | Revisar permisos, roles, excepciones y recertificaciones. | ACL, roles, aprobaciones y revisiones de acceso. |
+| 3.4 | Aplicar la retención de datos | Conservar los datos durante el período aprobado y exigido. | Comparar reglas, sistemas y resultados. | Calendario de retención, configuraciones y registros. |
+| 3.5 | Eliminar datos de forma segura | Destruir o borrar datos de manera verificable cuando ya no sean necesarios. | Confirmar método, cobertura y evidencia de eliminación. | Certificados, registros, tickets y pruebas de borrado. |
+| 3.6 | Cifrar datos en dispositivos de usuario final | Proteger datos almacenados en dispositivos mediante cifrado administrado. | Verificar cobertura, claves, excepciones y estado. | Consola de cifrado, inventario, políticas y excepciones. |
+| 3.7 | Establecer y mantener un esquema de clasificación de datos | Definir niveles de sensibilidad y reglas de manejo. | Confirmar criterios, aprobación, comunicación y uso. | Esquema, etiquetas, procedimientos y capacitación. |
+| 3.8 | Documentar los flujos de datos | Mantener diagramas y registros de cómo se recopilan, procesan, almacenan y transfieren los datos. | Verificar integridad, actualidad y propietarios. | Diagramas, registros de tratamiento e interfaces. |
+| 3.9 | Cifrar datos en medios extraíbles | Exigir cifrado para datos almacenados en medios removibles. | Confirmar política, configuración y excepciones. | Configuración, inventario de medios y registros. |
+| 3.10 | Cifrar datos sensibles en tránsito | Proteger comunicaciones que transportan datos sensibles. | Revisar protocolos, certificados, cobertura y excepciones. | Configuración TLS/VPN, certificados y resultados de pruebas. |
+| 3.11 | Cifrar datos sensibles en reposo | Proteger datos sensibles almacenados en bases, archivos y respaldos. | Confirmar algoritmos, claves, cobertura y excepciones. | Configuración, KMS/HSM, inventarios y pruebas. |
+| 3.12 | Segmentar el procesamiento y almacenamiento de datos según su sensibilidad | Separar entornos y repositorios según clasificación y riesgo. | Revisar arquitectura, reglas y flujos permitidos. | Diagramas, segmentación, reglas y resultados de pruebas. |
+| 3.13 | Implementar una solución de prevención de pérdida de datos | Detectar y controlar transferencias no autorizadas de datos sensibles. | Verificar cobertura, reglas, alertas, excepciones y respuesta. | Políticas DLP, eventos, tickets y métricas. |
+| 3.14 | Registrar el acceso a datos sensibles | Mantener registros suficientes para identificar quién accedió a datos sensibles y qué acción realizó. | Confirmar fuentes, detalle, retención y revisión. | Registros de acceso, SIEM, alertas y revisiones. |
 
-- Existen mapas oficiales para múltiples marcos, pero la aplicación debe verificarse por separado para cada requisito aplicable.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-| **Layer** |
-|... |
-| Control | Resultado defensivo amplio, como inventario de activos o respuesta a incidentes
-← Salvaguardia | Acción focalizada que puede ser asignada, implementada y medida
-| Clase de activos | Tipo de tema afectado, tales como dispositivos, software, datos, red, usuarios o documentación
-Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía
-| Grupo de Aplicación | Priorización recomendada basada en el perfil de riesgo y los recursos
-Medida de evaluación de la vida útil Entradas, operaciones, medidas, métricas y revisión de procedimientos utilizados para evaluar una salvaguardia  sometida
+# 9. Control 4 — Configuración segura de activos empresariales y software
 
-# 2. Grupos de aplicación y prioridades
+*Las 12 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-*Cómo IG1, IG2, y las organizaciones de ayuda IG3 eligen un punto de partida realista.*
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la configuración segura de activos empresariales y software. |
+|---|
 
-■img src="media/image2.png" estilo="Ancho:6.15in; Altura:3.39605in" alt="Cada grupo se construye sobre el grupo anterior; IG3 contiene todas las Salvaguardias." /
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 4.1 | Establecer y mantener un proceso de configuración segura | Definir, aprobar, implementar y revisar configuraciones seguras para activos y software. | Confirmar estándares, responsables, frecuencia, cobertura y excepciones. | Estándares, líneas base, resultados de evaluación y excepciones. |
+| 4.2 | Establecer y mantener un proceso de configuración segura para la infraestructura de red | Aplicar líneas base seguras a dispositivos y servicios de red. | Revisar cobertura, cambios, desviaciones y correcciones. | Configuraciones, respaldos, comparaciones y tickets. |
+| 4.3 | Configurar el bloqueo automático de sesión en activos empresariales | Bloquear sesiones inactivas después del período aprobado. | Verificar política, configuración y cobertura. | GPO/MDM, resultados de consulta y excepciones. |
+| 4.4 | Implementar y administrar un firewall en servidores | Habilitar y gestionar reglas de firewall en servidores. | Revisar cobertura, reglas, cambios y excepciones. | Configuración, inventario, reglas y registros. |
+| 4.5 | Implementar y administrar un firewall en dispositivos de usuario final | Habilitar y gestionar el firewall local en endpoints. | Confirmar cobertura y estado centralizado. | Consola, políticas y reportes de cumplimiento. |
+| 4.6 | Administrar de forma segura los activos empresariales y el software | Utilizar protocolos y canales administrativos seguros. | Revisar métodos de administración, autenticación y registros. | Configuración, listas de administradores y registros. |
+| 4.7 | Administrar cuentas predeterminadas en activos empresariales y software | Deshabilitar, cambiar o controlar cuentas predeterminadas. | Confirmar inventario, estado y excepciones. | Resultados de escaneo, configuración y tickets. |
+| 4.8 | Desinstalar o deshabilitar servicios innecesarios | Reducir superficie de ataque retirando servicios no requeridos. | Comparar líneas base, servicios activos y excepciones. | Inventario de servicios, configuración y aprobaciones. |
+| 4.9 | Configurar servidores DNS de confianza en activos empresariales | Forzar el uso de resolutores DNS aprobados. | Verificar configuración, cobertura y desvíos. | GPO/MDM, configuración de red y registros DNS. |
+| 4.10 | Aplicar bloqueo automático del dispositivo en equipos portátiles de usuario final | Bloquear dispositivos portátiles tras inactividad o intentos fallidos. | Confirmar política, configuración y cobertura. | MDM, políticas y reportes. |
+| 4.11 | Aplicar capacidad de borrado remoto en dispositivos portátiles de usuario final | Permitir borrado remoto administrado cuando el riesgo lo requiera. | Verificar cobertura, autorización y pruebas. | Consola MDM, procedimientos y registros de prueba. |
+| 4.12 | Separar espacios de trabajo empresariales en dispositivos móviles de usuario final | Separar datos y aplicaciones empresariales de los personales. | Revisar perfiles, políticas y cobertura. | Configuración MDM/MAM, inventario y reportes. |
 
-Gráfico 2 Progresión del Grupo de Aplicación
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-| **La situación física** Silencioso** |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IG1 | 56 | Recursos de seguridad limitados y experiencia; menor sensibilidad; alta necesidad de continuidad básica | Esencial de la higiene cibernética contra ataques comunes
-| IG2 | IG1 + 74 | Múltiples departamentos, mayor complejidad, información sensible y dependencia más operativa | Gestionar mayor riesgo y complejidad operacional
-| IG3 | IG1 + IG2 + 23 = 153 | Especialistas en seguridad, datos confidenciales o regulados, servicios críticos y amenazas sofisticadas | Reducir el impacto de ataque apuntado y avanzado
+# 10. Control 5 — Gestión de cuentas
 
-- Cada empresa debe comenzar con IG1 según la orientación CIS.
+*Las 6 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-- Seleccione un IG considerando la sensibilidad de los datos, los servicios críticos, la exposición a amenazas, las obligaciones jurídicas y contractuales, la tolerancia empresarial, la tecnología, la dotación de personal y los conocimientos especializados.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión de cuentas. |
+|---|
 
-- Un IG es una ayuda de priorización, no permiso para ignorar un riesgo material o requisito obligatorio.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 5.1 | Establecer y mantener un inventario de cuentas | Mantener una población completa de cuentas con propietario, tipo, estado y fechas relevantes. | Confirmar cobertura, actualidad, responsables y conciliación. | Inventarios, directorios, reportes y revisiones. |
+| 5.2 | Utilizar contraseñas únicas | Impedir la reutilización de contraseñas entre cuentas administradas. | Revisar política, configuración, excepciones y pruebas. | Política, configuración de identidad y resultados de auditoría. |
+| 5.3 | Deshabilitar cuentas inactivas | Deshabilitar oportunamente cuentas que superen el período de inactividad aprobado. | Confirmar umbral, ejecución, excepciones y seguimiento. | Reportes, tickets, registros y aprobaciones. |
+| 5.4 | Restringir privilegios administrativos a cuentas administrativas dedicadas | Separar las actividades administrativas de las cuentas de uso normal. | Revisar asignaciones, uso, excepciones y registros. | Inventario de administradores, roles y registros de acceso. |
+| 5.5 | Establecer y mantener un inventario de cuentas de servicio | Identificar cuentas de servicio, propietarios, propósito, privilegios y ciclo de vida. | Verificar cobertura, revisión y credenciales. | Inventario, propietarios, rotación y revisiones. |
+| 5.6 | Centralizar la gestión de cuentas | Administrar cuentas mediante servicios centralizados cuando sea viable. | Confirmar sistemas cubiertos, sincronización, excepciones y monitoreo. | Arquitectura, configuración, directorios y reportes. |
 
-- Adiciones, secuencias, excepciones, aceptación de riesgos, propietarios y fechas.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-- Utilice el navegador oficial de control CIS para filtrar v8.1 Salvaguardias y mapas de revisión.
+# 11. Control 6 — Gestión del control de acceso
 
-3. Gobernanza, alcance y propiedad
+*Las 8 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-*La base de gestión necesaria para que las Salvaguardias funcionen de forma sistemática*.
+![Las cuentas y los privilegios requieren creación aprobada, autenticación sólida, revisión y revocación oportuna.](media/image6.png)
 
-- Definir los objetivos institucionales, los servicios críticos, los datos confidenciales, las obligaciones jurídicas y contractuales, el perfil de amenazas, la tolerancia al riesgo y el Grupo de Aplicación elegido.
+Figura 6. Ciclo de vida de identidad y acceso
 
-- Crear inventarios completos para activos empresariales, software, datos, cuentas, sistemas de autenticación, infraestructura de red, registros, proveedores, aplicaciones y recursos de recuperación.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión del control de acceso. |
+|---|
 
-- Assign one accountable owner for each Safeguard and operational owners for each affected platform or process.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 6.1 | Establecer un proceso de concesión de acceso | Definir un proceso aprobado, trazable y basado en necesidad para otorgar acceso. | Confirmar solicitud, aprobación, implementación, plazo y excepciones. | Solicitudes, aprobaciones, tickets, registros y revisiones. |
+| 6.2 | Establecer un proceso de revocación de acceso | Retirar acceso oportunamente cuando cambien las funciones o termine la relación. | Verificar disparadores, tiempos, cobertura y seguimiento. | Tickets de baja, registros de directorio, listas de terminación y pruebas. |
+| 6.3 | Exigir MFA para aplicaciones expuestas externamente | Proteger aplicaciones accesibles desde Internet mediante autenticación multifactor. | Confirmar cobertura, métodos, excepciones y pruebas. | Configuración de identidad, reportes de cobertura y excepciones. |
+| 6.4 | Exigir MFA para acceso remoto a la red | Aplicar MFA a conexiones remotas hacia recursos empresariales. | Revisar VPN, ZTNA, cobertura, excepciones y registros. | Configuración, registros de autenticación y reportes. |
+| 6.5 | Exigir MFA para acceso administrativo | Aplicar MFA a toda actividad con privilegios administrativos. | Confirmar población, sistemas, métodos y excepciones. | Inventario de administradores, políticas y registros. |
+| 6.6 | Establecer y mantener un inventario de sistemas de autenticación y autorización | Mantener una lista completa de sistemas que gestionan identidades, autenticación y autorización. | Verificar propietario, alcance, actualidad y conciliación. | Inventario, diagramas, responsables y revisiones. |
+| 6.7 | Centralizar el control de acceso | Gestionar identidades y autorizaciones mediante plataformas centralizadas cuando sea viable. | Confirmar integración, cobertura y cuentas locales excepcionales. | Directorios, IAM, SSO, integraciones y excepciones. |
+| 6.8 | Definir y mantener control de acceso basado en roles | Asignar permisos mediante roles aprobados y revisados periódicamente. | Revisar diseño, propietarios, asignaciones, recertificación y separación de funciones. | Catálogo de roles, matrices, aprobaciones y revisiones. |
 
-- Definir el alcance, la aplicabilidad, las dependencias, las responsabilidades del proveedor de servicios, las excepciones permitidas, la autoridad de aprobación y los desencadenantes de revisión.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-- Planificar financiación, personas, habilidades, tecnología, tiempo y gestión del cambio.
+# 12. Control 7 — Gestión continua de vulnerabilidades
 
-- Definir las métricas y la presentación de informes antes de la aplicación para que la cobertura y el fracaso sean visibles.
+*Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-- Operar un ciclo de gobernanza: priorizar, implementar, medir, corregir, retestar y mejorar.
+![La cobertura completa y la remediación verificada importan más que la producción de informes de escaneo.](media/image7.png)
 
-| **Rol** | **Decisión o responsabilidad**
-|... |
-← Patrocinador ejecutivo Silencioso Dirección, tolerancia al riesgo, financiación, escalada y rendición de cuentas
-Silencioso Propietario de control | Diseño de salvaguardias, alcance, procedimiento, medición, excepciones y mejora
-| Asset o propietario de servicio | Inventario exacto, uso aprobado, configuración, impacto de negocios y remediación
-TENAS Operaciones de seguridad | Monitoreo, alerta, investigación, respuesta y evidencia
-TEN IT / Engineering | Implementación, control de cambio, parche, configuración y recuperación
-TEN GRC / Analyst ANTE Mapping, evidencia, medición, hallazgos, seguimiento de la acción y reportaje |
-tención Auditoría interna / evaluador
-tención Servicio prestado | Controles, pruebas, incidentes, cambios y soporte de salida
+Figura 7. Gestión continua de vulnerabilidades
 
-# 4. Medición con la especificación de evaluación CIS
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión continua de vulnerabilidades. |
+|---|
 
-*Un método repetible para decidir si se aplican salvaguardias*.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 7.1 | Establecer y mantener un proceso de gestión de vulnerabilidades | Definir alcance, responsabilidades, frecuencia, priorización y seguimiento de vulnerabilidades. | Confirmar aprobación, cobertura, métricas, excepciones y revisión. | Política, procedimientos, responsables, métricas y registros. |
+| 7.2 | Establecer y mantener un proceso de remediación | Corregir vulnerabilidades según riesgo y verificar el cierre. | Revisar plazos, prioridades, excepciones, nuevas pruebas y escalamiento. | Tickets, planes, excepciones, resultados de nuevas pruebas y métricas. |
+| 7.3 | Realizar gestión automatizada de parches del sistema operativo | Identificar, probar y desplegar parches del sistema operativo mediante un proceso administrado. | Confirmar cobertura, frecuencia, fallos, excepciones y cumplimiento. | Consolas, inventarios, reportes de despliegue y tickets. |
+| 7.4 | Realizar gestión automatizada de parches de aplicaciones | Identificar, probar y desplegar actualizaciones de aplicaciones. | Verificar cobertura, versiones, fallos y excepciones. | Inventarios, consolas, resultados y planes correctivos. |
+| 7.5 | Realizar escaneos automatizados de vulnerabilidades de activos empresariales internos | Escanear activos internos con cobertura y credenciales adecuadas. | Confirmar alcance, autenticación, frecuencia, exclusiones y resultados. | Configuración de escáner, resultados, cobertura y excepciones. |
+| 7.6 | Realizar escaneos automatizados de vulnerabilidades de activos empresariales expuestos externamente | Evaluar de forma periódica los activos accesibles desde Internet. | Verificar inventario, alcance, frecuencia, hallazgos y seguimiento. | Inventario externo, resultados, tickets y nuevas pruebas. |
+| 7.7 | Corregir las vulnerabilidades detectadas | Priorizar, corregir y volver a probar vulnerabilidades identificadas. | Confirmar riesgo, plazo, propietario, evidencia de cierre y excepciones. | Tickets, cambios, resultados de nueva prueba y aprobaciones. |
 
-![La especificación oficial pasa de los datos definidos a las operaciones, medidas, métricas y revisión de procedimiento.](media/image3.png)
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-Gráfico 3 CIS Estructura de medición de salvaguardias
+# 13. Control 8 — Gestión de registros de auditoría
 
-|** Element** Silencioso** |
-|... |
-metadatos de salvaguardia permanente ¿Cuál es la salvaguardia exacta, clase de activos, función de seguridad y IG?
-TENIENTES DE LAS CUOTAS ¿Qué otras Salvaguardias o poblaciones deben existir primero?
-¦ Asunciones | ¿Qué condición aceptada afecta la medición?
-| ¿Qué datos completos y fiables se requieren? |
-¿Qué análisis se debe realizar en las entradas? |
-| ¿Qué cuentas, listas, fechas, configuraciones o resultados resultan? |
-TENCIÓN FORMULADA ¿Cómo se calculan e interpretan las medidas?
-¿Existe un proceso documentado e incluye elementos necesarios? |
+*Las 12 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-- Definir la salvaguardia exacta y la población abarcada.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión de registros de auditoría. |
+|---|
 
-- Obtenga los insumos necesarios y valide la integridad, precisión, tiempo, propiedad y fiabilidad de la fuente.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 8.1 | Establecer y mantener un proceso de gestión de registros de auditoría | Definir alcance, responsables, fuentes, almacenamiento, revisión y conservación de registros. | Confirmar aprobación, cobertura, frecuencia, excepciones y mejora. | Política, procedimientos, responsables, inventario de fuentes y métricas. |
+| 8.2 | Recopilar registros de auditoría | Recopilar los registros necesarios de activos, aplicaciones, servicios e infraestructura. | Verificar fuentes, cobertura, integridad, frecuencia y fallos de ingestión. | Configuración, inventario de fuentes, registros recibidos y alertas de fallos. |
+| 8.3 | Garantizar almacenamiento adecuado de registros de auditoría | Dimensionar y proteger el almacenamiento para cumplir los períodos de conservación. | Revisar capacidad, crecimiento, disponibilidad, protección y alertas. | Métricas de capacidad, configuración, alertas y planes de ampliación. |
+| 8.4 | Estandarizar la sincronización horaria | Utilizar fuentes horarias autorizadas y consistentes en los sistemas. | Confirmar servidores, configuración, cobertura, desviaciones y excepciones. | Configuración NTP, inventario, alertas y resultados de consulta. |
+| 8.5 | Recopilar registros de auditoría detallados | Registrar eventos con suficiente detalle para investigación y trazabilidad. | Verificar campos, identidades, marcas de tiempo, acciones y resultados. | Muestras de registros, esquema, configuración y resultados de prueba. |
+| 8.6 | Recopilar registros de consultas DNS | Registrar consultas DNS relevantes para detección e investigación. | Confirmar fuentes, cobertura, detalle, conservación y revisión. | Registros DNS, configuración, SIEM y alertas. |
+| 8.7 | Recopilar registros de solicitudes URL | Registrar solicitudes web relevantes conforme al riesgo y la privacidad. | Verificar cobertura, detalle, conservación, acceso y uso analítico. | Registros proxy/SWG, configuración, SIEM y casos de uso. |
+| 8.8 | Recopilar registros de línea de comandos | Registrar la ejecución de comandos donde el riesgo lo justifique. | Confirmar sistemas cubiertos, detalle, protección y revisión. | Registros EDR, auditoría del sistema, SIEM y alertas. |
+| 8.9 | Centralizar los registros de auditoría | Consolidar registros en una plataforma administrada para análisis y protección. | Verificar fuentes, ingestión, normalización, disponibilidad y excepciones. | Arquitectura, conectores, paneles, alertas y reportes de cobertura. |
+| 8.10 | Conservar los registros de auditoría | Mantener registros durante períodos definidos por riesgo, operación y obligaciones. | Comparar requisitos, configuración y evidencia de eliminación. | Calendario de conservación, configuración y reportes. |
+| 8.11 | Realizar revisiones de registros de auditoría | Revisar registros y alertas con frecuencia definida y seguimiento documentado. | Confirmar responsables, frecuencia, criterios, hallazgos y cierre. | Procedimientos, tickets, reportes de revisión y métricas. |
+| 8.12 | Recopilar registros de proveedores de servicios | Obtener registros relevantes de servicios externos y plataformas administradas. | Verificar contratos, acceso, cobertura, formato, conservación y fallos. | Contratos, configuraciones, registros recibidos y tickets. |
 
-- Siga las operaciones oficiales de medición o documente un método fiable equivalente.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-- Retener cálculos de medida y la población de excepción subyacente, no sólo un porcentaje.
+# 14. Control 9 — Protecciones de correo electrónico y navegador web
 
-- Evaluar si se implementa la Salvaguardia y qué tan bien funciona.
+*Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-- Asignar una corrección para la cobertura perdida, mala configuración, revisión atrasada, excepciones o datos poco fiables.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para las protecciones de correo electrónico y navegador web. |
+|---|
 
-- Retesta utilizando los mismos criterios y la población refrescante.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 9.1 | Asegurar el uso de navegadores y clientes de correo con soporte vigente | Permitir únicamente productos y versiones que reciben soporte de seguridad. | Revisar inventario, versiones, fechas de soporte, excepciones y corrección. | Inventario, versiones, boletines de proveedor y tickets. |
+| 9.2 | Utilizar servicios de filtrado DNS | Bloquear dominios maliciosos o no permitidos mediante resolutores y políticas administradas. | Confirmar cobertura, reglas, registros, excepciones y pruebas. | Configuración DNS, políticas, eventos y resultados de prueba. |
+| 9.3 | Mantener y aplicar filtros URL basados en red | Controlar el acceso web conforme al riesgo y la política. | Verificar cobertura, categorías, reglas, excepciones y eventos. | Configuración SWG/proxy, políticas, registros y tickets. |
+| 9.4 | Restringir extensiones innecesarias o no autorizadas de navegador y correo | Permitir solo extensiones aprobadas y administradas. | Confirmar listas, despliegue, cobertura, excepciones y bloqueos. | Políticas, inventarios, eventos y aprobaciones. |
+| 9.5 | Implementar DMARC | Configurar SPF, DKIM y DMARC para reducir la suplantación de dominios. | Revisar registros DNS, alineación, política, reportes y evolución. | Registros DNS, reportes DMARC, tickets y métricas. |
+| 9.6 | Bloquear tipos de archivo innecesarios | Impedir archivos adjuntos o descargas de alto riesgo no requeridos. | Confirmar política, cobertura, excepciones, eventos y pruebas. | Reglas, registros de bloqueo, excepciones y resultados de prueba. |
+| 9.7 | Implementar y mantener protección antimalware del servidor de correo | Analizar mensajes y archivos mediante controles administrados y actualizados. | Verificar cobertura, configuración, actualizaciones, alertas y respuesta. | Consola, políticas, eventos, tickets y métricas. |
 
-- Report scope, result, exception, limitation, owner, action, and date.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-# 5. Aplicación de la hoja de ruta
+# 15. Control 10 — Defensas contra malware
 
-*Una secuencia práctica de los inventarios a la resiliencia probada*.
+*Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-1. Elija y documente el Grupo de Aplicación inicial y cualquier adición necesaria.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para las defensas contra malware. |
+|---|
 
-2. Construir y reconciliar las poblaciones principales: activos, software, datos, cuentas, sistemas de autenticación, red, proveedores, aplicaciones y registros.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 10.1 | Implementar y mantener software antimalware | Proteger los activos aplicables mediante soluciones antimalware administradas. | Confirmar cobertura, estado, configuración, excepciones y respuesta. | Consola, inventario, políticas, alertas y tickets. |
+| 10.2 | Configurar actualizaciones automáticas de firmas antimalware | Mantener firmas, motores y componentes actualizados automáticamente. | Verificar frecuencia, éxito, fallos, cobertura y excepciones. | Reportes de actualización, configuración, alertas y tickets. |
+| 10.3 | Deshabilitar Autorun y Autoplay para medios extraíbles | Impedir la ejecución automática de contenido desde medios removibles. | Confirmar política, configuración, cobertura y excepciones. | GPO/MDM, resultados de consulta y reportes. |
+| 10.4 | Configurar análisis antimalware automático de medios extraíbles | Analizar medios removibles al conectarse o antes de su uso. | Verificar configuración, cobertura, eventos y tratamiento de fallos. | Consola, políticas, registros y tickets. |
+| 10.5 | Habilitar funciones contra explotación | Activar controles que dificulten la explotación de vulnerabilidades. | Confirmar configuración, cobertura, compatibilidad, excepciones y alertas. | Políticas, consola, inventario y resultados de prueba. |
+| 10.6 | Administrar centralmente el software antimalware | Utilizar una plataforma central para configuración, supervisión y respuesta. | Verificar cobertura, comunicación, permisos, alertas y métricas. | Consola, roles, paneles, reportes y tickets. |
+| 10.7 | Utilizar software antimalware basado en comportamiento | Detectar actividad maliciosa mediante análisis de comportamiento, no solo firmas. | Confirmar cobertura, reglas, alertas, ajustes y respuesta. | Configuración EDR, eventos, casos, tickets y métricas. |
 
-3. Aplicar las salvaguardias IG1 con los propietarios, procedimientos, métricas de cobertura, excepciones y pruebas.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-4. Identidades seguras, configuraciones, vulnerabilidades, correo electrónico, navegadores, defensas de malware, respaldos y monitoreo esencial.
+# 16. Control 11 — Recuperación de datos
 
-5. Respuesta y recuperación de incidentes de ejercicio antes de una emergencia real.
+*Las 5 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-6. Medir todas las salvaguardias aplicables utilizando insumos fiables y operaciones repetibles.
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la recuperación de datos. |
+|---|
 
-7. Cobertura incompleta y fallos repetidos; verificar las correcciones mediante el replanteamiento.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 11.1 | Establecer y mantener un proceso de recuperación de datos | Definir alcance, responsabilidades, prioridades, objetivos de recuperación y procedimientos de restauración. | Confirmar aprobación, cobertura, revisión, pruebas y tratamiento de excepciones. | Plan de recuperación, procedimientos, responsables, inventario de sistemas y registros de revisión. |
+| 11.2 | Realizar copias de seguridad automatizadas | Ejecutar respaldos automatizados de los datos y sistemas incluidos en el alcance. | Verificar programación, éxito, cobertura, alertas y seguimiento de fallos. | Consola de respaldos, reportes de ejecución, alertas y tickets. |
+| 11.3 | Proteger los datos de recuperación | Proteger respaldos contra acceso no autorizado, modificación, eliminación y cifrado malicioso. | Revisar cifrado, acceso, inmutabilidad, segregación y monitoreo. | Configuración, controles de acceso, registros, almacenamiento inmutable y alertas. |
+| 11.4 | Establecer y mantener una instancia aislada de los datos de recuperación | Mantener al menos una copia separada lógica o físicamente del entorno de producción. | Confirmar aislamiento, actualización, acceso restringido y resistencia a fallos del entorno principal. | Arquitectura, configuración, inventario de copias y pruebas de aislamiento. |
+| 11.5 | Probar la recuperación de datos | Restaurar datos y sistemas de manera periódica para confirmar que los respaldos son utilizables. | Verificar alcance, frecuencia, resultados, deficiencias, correcciones y nuevas pruebas. | Planes de prueba, resultados de restauración, tickets, métricas y aprobaciones. |
 
-8. Ampliar hacia IG2 o IG3 sobre la base de riesgos, obligaciones, madurez y exposición a amenazas.
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-9. Utilizar mapas oficiales para coordinar otros marcos sin tratar las asignaciones como cumplimiento automático.
+# 17. Control 12 — Gestión de la infraestructura de red
 
-tención **Principio de aplicación:** Un grupo más pequeño de Salvaguardias que es totalmente abarcado, operado, medido y mejorado es más defensible que una larga lista marcada completa sin pruebas fiables. |
-|. |
+*Las 8 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-# 6. Control 1 - Inventario y Control de Activos Empresarios
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión de la infraestructura de red. |
+|---|
 
-*Las 5 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 12.1 | Asegurar que la infraestructura de red esté actualizada | Mantener dispositivos, software y firmware de red en versiones compatibles y corregidas. | Confirmar inventario, versiones, soporte, vulnerabilidades, excepciones y remediación. | Inventario, versiones, boletines, planes de actualización y tickets. |
+| 12.2 | Establecer y mantener una arquitectura de red segura | Diseñar y mantener una arquitectura alineada con riesgo, segmentación, resiliencia y mínimo privilegio. | Revisar aprobación, diagramas, zonas, flujos, dependencias y cambios. | Arquitectura, diagramas, reglas, revisiones y registros de cambios. |
+| 12.3 | Administrar de forma segura la infraestructura de red | Utilizar canales, protocolos, autenticación y estaciones administrativas protegidas. | Verificar métodos de administración, MFA, cifrado, registros y restricciones. | Configuración, listas de administradores, registros y resultados de pruebas. |
+| 12.4 | Establecer y mantener diagramas de arquitectura | Documentar componentes, conexiones, zonas de confianza, servicios y flujos relevantes. | Confirmar integridad, actualidad, responsables, aprobación y control de cambios. | Diagramas, repositorio, historial de cambios y revisiones. |
+| 12.5 | Centralizar la autenticación, autorización y auditoría de red | Utilizar servicios centralizados para controlar y registrar el acceso administrativo. | Confirmar cobertura, integración, disponibilidad, roles y registros. | Configuración AAA, inventario de dispositivos, roles, registros y alertas. |
+| 12.6 | Utilizar protocolos seguros de administración y comunicación de red | Deshabilitar protocolos inseguros y exigir alternativas cifradas y autenticadas. | Revisar configuración, cobertura, excepciones y resultados de escaneo. | Líneas base, configuraciones, escaneos y excepciones aprobadas. |
+| 12.7 | Asegurar que los dispositivos remotos utilicen VPN y AAA empresarial | Proteger el acceso remoto mediante túneles administrados y autenticación centralizada. | Verificar cobertura, MFA, configuración, registros y excepciones. | Configuración VPN, AAA, inventario, registros y reportes de cumplimiento. |
+| 12.8 | Mantener recursos informáticos dedicados para tareas administrativas | Separar las actividades privilegiadas del uso cotidiano mediante estaciones o entornos dedicados. | Confirmar población, configuración, restricciones, monitoreo y excepciones. | Inventario, líneas base, políticas, registros y resultados de revisión. |
 
-■img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="Descubrimiento, reconciliación, respuesta y revisión mantienen a las poblaciones fundacionales actuales."
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-Figure 4. Asset and software inventory cycle
+# 18. Control 13 — Monitoreo y defensa de la red
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para el inventario y el control de los activos institucionales. |
-|... |
+*Las 11 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.1 | Establecer y Mantener Inventario de Activos Empresarios detallados | Poner en marcha un proceso de repetibilidad, propiedad o control técnico para establecer y mantener inventario de activos institucionales detallados, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de activos, propietarios, estado de aprobación, descubrimiento activo/pasivo, registros DHCP/IPAM, entradas de activos no autorizados |
-| 1.2 | Dirección Activos no autorizados Ponga en marcha un proceso repetible, de propiedad o control técnico para abordar los activos no autorizados, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de activos, propietarios, estado de aprobación, descubrimiento activo/pasivo, registros DHCP/IPAM, entradas de activos no autorizados |
-| 1.3 | Utilizar una herramienta de descubrimiento activo Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar una herramienta Active Discovery, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de activos, propietarios, estado de aprobación, descubrimiento activo/pasivo, registros DHCP/IPAM, entradas de activos no autorizados |
-| 1.4 | Uso DHCP Iniciar sesión para actualizar Inventario de Activos Empresarios | Ponga en marcha un proceso repetible, propiedad o control técnico para utilizar DHCP Logging para actualizar Inventario de Activos Empresarios, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de activos, propietarios, estado de aprobación, descubrimiento activo/pasivo, registros DHCP/IPAM, entradas de activos no autorizados |
-Ø 1.5 Ø Utilizar una herramienta de descubrimiento de activos pasivos Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar una herramienta Passive Asset Discovery Tool, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de activos, propietarios, estado de aprobación, descubrimiento activo/pasivo, registros DHCP/IPAM, entradas de activos no autorizados |
+![El contexto centralizado, la detección ajustada, la investigación humana y la respuesta crean una defensa útil.](media/image8.png)
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+Figura 8. Monitoreo y defensa de la red
 
-# 7. Control 2 - Inventario y control de activos de software
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para el monitoreo y la defensa de la red. |
+|---|
 
-*Las 7 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 13.1 | Centralizar las alertas de eventos de seguridad | Consolidar alertas relevantes en una capacidad central para su análisis y respuesta. | Confirmar fuentes, cobertura, responsables, priorización, retención y seguimiento. | Inventario de fuentes, configuración SIEM, alertas, tickets y métricas. |
+| 13.2 | Implementar una solución de detección de intrusiones basada en host | Detectar actividad sospechosa en activos empresariales mediante sensores administrados. | Verificar cobertura, estado, reglas, excepciones y respuesta. | Consola HIDS/EDR, inventario, políticas, alertas y tickets. |
+| 13.3 | Implementar una solución de detección de intrusiones de red | Supervisar tráfico de red para identificar actividad maliciosa o anómala. | Revisar ubicación de sensores, cobertura, reglas, alertas y excepciones. | Diagramas, configuración NIDS, registros, alertas y casos. |
+| 13.4 | Realizar filtrado de tráfico entre segmentos de red | Restringir comunicaciones entre segmentos conforme al riesgo y la necesidad empresarial. | Confirmar arquitectura, reglas, cambios, pruebas y excepciones. | Diagramas, reglas, resultados de pruebas y tickets de cambio. |
+| 13.5 | Administrar el control de acceso para activos remotos | Aplicar controles de acceso, autenticación y monitoreo a conexiones remotas. | Verificar población, métodos, MFA, registros y excepciones. | Configuración VPN/ZTNA, inventario, registros y revisiones. |
+| 13.6 | Recopilar registros de flujo de tráfico de red | Conservar telemetría de flujo suficiente para investigación y análisis. | Confirmar fuentes, campos, cobertura, sincronización, retención y acceso. | NetFlow/IPFIX, inventario de fuentes, almacenamiento y consultas. |
+| 13.7 | Implementar una solución de prevención de intrusiones basada en host | Bloquear o contener actividad maliciosa en activos empresariales. | Verificar modo de prevención, cobertura, reglas, excepciones y eventos. | Configuración HIPS/EDR, eventos de bloqueo, tickets y excepciones. |
+| 13.8 | Implementar una solución de prevención de intrusiones de red | Detectar y bloquear tráfico malicioso en puntos de control de red. | Confirmar ubicación, cobertura, políticas, pruebas y respuesta. | Configuración NIPS, reglas, alertas, bloqueos y métricas. |
+| 13.9 | Implementar control de acceso a nivel de puerto | Restringir el acceso a la red mediante autenticación o políticas de puerto. | Verificar alcance, configuración, excepciones y eventos de denegación. | Configuración 802.1X/NAC, inventario, registros y tickets. |
+| 13.10 | Realizar filtrado de capa de aplicación | Inspeccionar y controlar tráfico según aplicaciones, protocolos y riesgo. | Revisar políticas, cobertura, excepciones, eventos y pruebas. | Reglas de firewall/proxy, registros, alertas y aprobaciones. |
+| 13.11 | Ajustar los umbrales de alerta de eventos de seguridad | Revisar y ajustar reglas para reducir ruido sin perder detecciones relevantes. | Confirmar frecuencia, responsables, métricas, cambios y validación. | Historial de ajustes, casos de uso, métricas y aprobaciones. |
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para el inventario y el control de los activos informáticos. |
-|... |
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-TEN 2.1 | Establecer y mantener un inventario de software | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de software, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
-| 2.2 | Garantizar que el Software Autorizado está actualmente respaldado | Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar que el Software Autorizado esté actualmente respaldado, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
-| 2.3 | Dirección Software no autorizado Ponga en marcha un proceso repetible, de propiedad o control técnico para abordar el software no autorizado, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
-| 2.4 | Utilizar herramientas de inventario de software automatizado Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar las herramientas de inventario de software automatizadas, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
-| 2.5 Silencioso Software autorizado Ponga en marcha un proceso repetible, de propiedad o control técnico para permitir el Software Autorizado, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos |
-| 2.6 | Allowlist Bibliotecas Autorizadas | Poner en marcha un proceso de repetibilidad, propiedad o control técnico para permitir Bibliotecas Autorizadas, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
-| 2.7 | Autorizado Scripts Ponga en marcha un proceso repetible, de propiedad o control técnico para permitirlistas scripts autorizados, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de software, estado de apoyo, lista aprobada, resultados de descubrimientos, excepciones, políticas de habilitación y eventos
+# 19. Control 14 — Concienciación y capacitación en habilidades de seguridad
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+*Las 9 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-8. Control 3 - Protección de datos
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la concienciación y capacitación en habilidades de seguridad. |
+|---|
 
-*Todas las 14 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 14.1 | Establecer y mantener un programa de concienciación sobre seguridad | Mantener un programa aprobado, periódico y basado en riesgos para toda la fuerza laboral. | Confirmar alcance, responsables, frecuencia, finalización, excepciones y mejora. | Plan, contenidos, calendario, registros de finalización y métricas. |
+| 14.2 | Capacitar para reconocer ataques de ingeniería social | Enseñar a identificar y reportar phishing, suplantación y otras tácticas sociales. | Verificar contenidos, población, simulaciones, resultados y seguimiento. | Materiales, campañas, resultados, reportes y acciones correctivas. |
+| 14.3 | Capacitar sobre mejores prácticas de autenticación | Explicar contraseñas, MFA, protección de credenciales y reporte de anomalías. | Confirmar cobertura, comprensión, frecuencia y excepciones. | Contenido, evaluaciones, registros y métricas. |
+| 14.4 | Capacitar sobre mejores prácticas de manejo de datos | Enseñar clasificación, almacenamiento, transferencia, retención y eliminación segura. | Revisar alineación con políticas, población, evaluación y seguimiento. | Materiales, políticas, evaluaciones y registros. |
+| 14.5 | Capacitar sobre causas de exposición involuntaria de datos | Explicar errores comunes y controles preventivos para reducir divulgaciones accidentales. | Verificar escenarios, población, evaluación y lecciones aprendidas. | Casos, contenidos, resultados y acciones de mejora. |
+| 14.6 | Capacitar para reconocer y reportar incidentes de seguridad | Enseñar indicadores, canales de reporte y acciones iniciales. | Confirmar claridad, disponibilidad, pruebas y tiempos de reporte. | Procedimientos, ejercicios, registros y métricas. |
+| 14.7 | Capacitar para identificar y reportar actualizaciones de seguridad faltantes | Enseñar a reconocer activos o aplicaciones desactualizados y reportarlos. | Verificar contenidos, canales, población y seguimiento. | Materiales, reportes, tickets y métricas. |
+| 14.8 | Capacitar sobre los riesgos de redes inseguras | Explicar riesgos de redes públicas, acceso remoto y medidas de protección. | Confirmar cobertura, escenarios, evaluación y excepciones. | Contenidos, evaluaciones y registros. |
+| 14.9 | Realizar capacitación específica por función | Proporcionar formación adicional según responsabilidades y exposición al riesgo. | Verificar perfiles, requisitos, frecuencia, finalización y eficacia. | Matriz de funciones, rutas formativas, registros y evaluaciones. |
 
-יimg src="media/image5.png" style="width:6.15in;height:3.39605in" alt="Descubrir, clasificar, proteger, retener y disponer de datos de acuerdo a la sensibilidad y la necesidad."
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-Gráfico 5 Ciclo de vida de protección de datos
+# 20. Control 15 — Gestión de proveedores de servicios
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de salvaguardias para la protección de datos. |
-|... |
+*Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-TEN 3.1 | Establecer y mantener un proceso de gestión de datos | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un proceso de gestión de datos, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-TEN 3.2 | Establecer y mantener un inventario de datos ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un inventario de datos, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.3 | Configurar Listas de control de acceso de datos Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar listas de control de acceso de datos, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-TEN 3.4 TENCIÓN DE LOS RECURSOS DE EJECUCIÓN DE LOS Datos TENIENTES Ponga en marcha un proceso repetible, de propiedad o control técnico para hacer cumplir la Retención de Datos, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-TENCIÓN 3.5 TENIENDO EL DISPONIBLE DE LOS Datos Ponga en marcha un proceso repetible, de propiedad o control técnico para disponer de datos de forma segura, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-tención 3.6 ← Encrypt Data on End-User Devices tención Ponga en marcha un proceso repetible, de propiedad o control técnico para cifrar datos sobre dispositivos de usuario final, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.7 | Establecer y mantener un plan de clasificación de datos | Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un plan de clasificación de datos, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.8 | Document Data Flows | Ponga en marcha un proceso repetible, de propiedad o control técnico para documentar los flujos de datos, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-TEN 3.9 | Datos de cifrado en medios extraíbles ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para cifrar datos en medios extraíbles, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.10 | Encrypt Sensitive Data in Transit ← Ponga en marcha un proceso repetible, de propiedad o control técnico para cifrar datos sensibles en tránsito, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.11 | Encrypt Sensitive Data At Rest Ponga en marcha un proceso repetible, de propiedad o control técnico para cifrar datos sensibles en reposo, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.12 | Segment Data Processing and Storage Based on Sensitivity TEN Poner en marcha un proceso repetible, de propiedad o control técnico para segmentar el procesamiento de datos y almacenamiento basado en la sensibilidad, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.13 | Implementar una solución de prevención de la pérdida de datos Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar una solución de prevención de la pérdida de datos, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
-| 3.14 | Log Sensitive Data Access Ponga en marcha un proceso repetible, de propiedad o control técnico para registrar el acceso de datos sensibles, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de datos, clasificación, flujos, LCA, retención, eliminación, encriptación, DLP y registros de acceso
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la gestión de proveedores de servicios. |
+|---|
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 15.1 | Establecer y mantener un inventario de proveedores de servicios | Mantener una población completa de proveedores, propietarios, servicios, datos y criticidad. | Confirmar cobertura, actualidad, responsables y conciliación. | Inventario, contratos, propietarios, clasificaciones y revisiones. |
+| 15.2 | Establecer y mantener una política de gestión de proveedores de servicios | Definir requisitos de selección, evaluación, contratación, monitoreo y terminación. | Verificar aprobación, alcance, responsabilidades, revisión y aplicación. | Política, procedimientos, RACI y registros de revisión. |
+| 15.3 | Clasificar a los proveedores de servicios | Asignar niveles de riesgo y criticidad mediante criterios documentados. | Confirmar metodología, datos de entrada, aprobación y actualización. | Metodología, evaluaciones, clasificaciones y aprobaciones. |
+| 15.4 | Asegurar que los contratos incluyan requisitos de seguridad | Incorporar obligaciones proporcionales al riesgo, incluidos incidentes, auditoría y terminación. | Revisar cláusulas, excepciones, aprobaciones y cobertura contractual. | Plantillas, contratos, anexos, excepciones y revisiones legales. |
+| 15.5 | Evaluar a los proveedores de servicios | Evaluar controles y riesgos antes y durante la relación. | Confirmar alcance, evidencia, hallazgos, planes y aceptación de riesgo. | Cuestionarios, informes, certificaciones, hallazgos y planes. |
+| 15.6 | Monitorear a los proveedores de servicios | Supervisar cambios, desempeño, incidentes y exposición durante la relación. | Verificar frecuencia, fuentes, umbrales, escalamiento y seguimiento. | Paneles, alertas, revisiones, tickets y métricas. |
+| 15.7 | Retirar proveedores de servicios de forma segura | Revocar accesos, recuperar activos, transferir o eliminar datos y cerrar obligaciones. | Confirmar lista de cierre, responsables, evidencia y excepciones. | Tickets, revocaciones, certificados, actas y aprobaciones. |
 
-# 9. Control 4 — Configuración segura de activos y software empresarial
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-*Las 12 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+# 21. Control 16 — Seguridad del software de aplicaciones
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la configuración segura de los activos y programas institucionales. |
-|... |
+*Las 14 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-Ø 4.1 tención Establecer y mantener un proceso de configuración segura ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de configuración segura, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-Ø 4.2 tención Establecer y mantener un proceso de configuración segura para infraestructura de red ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de configuración segura para infraestructura de red, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.3 | Configure Automatic Session Locking on Enterprise Assets ← Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar el bloqueo automático de sesión en activos empresariales, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.4 ← Implementar y administrar un cortafuegos en servidores ← Poner en marcha un proceso repetible, de propiedad o control técnico para implementar y administrar un cortafuegos en servidores, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil |
-| 4.5 ← Implementar y administrar un cortafuegos en dispositivos de usuario final ← Poner en marcha un proceso repetible, de propiedad o control técnico para implementar y administrar un cortafuegos en dispositivos de usuario final, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil |
-| 4.6 | Gestionar de forma segura los activos y el software de la empresa ← Poner en marcha un proceso repetible, propiedad o control técnico para gestionar de forma segura los activos y software de la empresa, a continuación, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.7 | Manage Default Accounts on Enterprise Assets and Software tención Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar Cuentas Predeterminadas en Activos y Software Empresarial, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.8 | Desinstalar o desactivar servicios innecesarios en activos y software de la empresa | Ponga un proceso repetible, propiedad o control técnico en su lugar para desinstalar o desactivar servicios innecesarios en activos y software de la empresa, a continuación, verifique la cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.9 | Configure Trusted DNS Servers on Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar Trusted DNS Servers on Enterprise Assets, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.10 Ø Enforce Automatic Device Lockout on Portable End-User Devices Ponga en marcha un proceso repetible, de propiedad o control técnico para hacer cumplir el bloqueo automático de dispositivos en dispositivos portátiles de usuario final, a continuación, verifique la cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil |
-| 4.11 | Enforce Remote Wipe Capability on Portable End-User Devices Ponga en marcha un proceso repetible, de propiedad o control técnico para hacer cumplir la Capacidad de Wipe remota en dispositivos portátiles de usuario final, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil
-| 4.12 ← Espacios de trabajo para empresas separadas en dispositivos móviles de usuario final TENIENDO un proceso repetible, de propiedad o control técnico en el lugar para separar espacios de trabajo empresariales en dispositivos móviles de usuario final, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. estándares de configuración, resultados de referencia, cortafuegos, cerraduras de sesión, protocolos de administración, predeterminados, servicios y configuración móvil |
+| **Propósito del control:** Fortalecer la empresa mediante la implementación y medición de Salvaguardas para la seguridad del software de aplicaciones. |
+|---|
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+| **ID** | **Salvaguarda** | **Significado claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 16.1 | Establecer y mantener un proceso seguro de desarrollo de aplicaciones | Integrar requisitos, responsabilidades, revisiones y controles de seguridad en el ciclo de vida. | Confirmar aprobación, cobertura, funciones, puertas de control y excepciones. | SDLC, estándares, RACI, listas de control y registros. |
+| 16.2 | Establecer y mantener un proceso para aceptar y abordar vulnerabilidades de software | Recibir, priorizar, corregir y comunicar vulnerabilidades reportadas. | Verificar canales, SLA, propietarios, seguimiento y divulgación. | Política, buzón o portal, tickets, métricas y comunicaciones. |
+| 16.3 | Realizar análisis de causa raíz de vulnerabilidades de seguridad | Identificar causas sistémicas y prevenir recurrencias. | Confirmar criterios, profundidad, acciones, propietarios y cierre. | Informes RCA, acciones correctivas, tickets y nuevas pruebas. |
+| 16.4 | Establecer y administrar un inventario de componentes de software de terceros | Mantener componentes, versiones, dependencias, licencias y estado de soporte. | Verificar cobertura, actualización, propietarios y conciliación. | SBOM, inventarios, escaneos y registros de revisión. |
+| 16.5 | Utilizar componentes de software de terceros actualizados y confiables | Seleccionar y mantener componentes compatibles, aprobados y con riesgo aceptable. | Confirmar criterios, versiones, fuentes, excepciones y actualización. | Repositorios, listas aprobadas, escaneos y excepciones. |
+| 16.6 | Establecer y mantener un sistema de clasificación de gravedad y un proceso de tratamiento | Clasificar vulnerabilidades y definir plazos y acciones según riesgo. | Revisar metodología, SLA, excepciones, métricas y escalamiento. | Matriz, tickets, métricas y aprobaciones. |
+| 16.7 | Utilizar plantillas de configuración segura para infraestructura de aplicaciones | Aplicar configuraciones aprobadas y repetibles a plataformas de aplicación. | Verificar plantillas, cobertura, desviaciones, cambios y pruebas. | IaC, imágenes, líneas base, resultados y tickets. |
+| 16.8 | Separar sistemas de producción y no producción | Aislar entornos, datos, credenciales y accesos para reducir exposición. | Confirmar arquitectura, controles, excepciones y pruebas. | Diagramas, reglas, cuentas, resultados y aprobaciones. |
+| 16.9 | Capacitar a desarrolladores en conceptos de desarrollo seguro | Proporcionar formación pertinente a tecnologías y riesgos utilizados. | Verificar población, contenidos, frecuencia, finalización y eficacia. | Rutas formativas, registros, evaluaciones y métricas. |
+| 16.10 | Aplicar principios de diseño seguro en arquitecturas de aplicaciones | Incorporar mínimo privilegio, defensa en profundidad, validación y manejo seguro de fallos. | Revisar decisiones, modelos de amenaza, excepciones y aprobaciones. | Diseños, ADR, modelos de amenaza y revisiones. |
+| 16.11 | Utilizar módulos o servicios examinados para componentes de seguridad | Preferir componentes aprobados para identidad, cifrado, registro y otras funciones críticas. | Confirmar catálogo, uso, excepciones y revisión. | Bibliotecas aprobadas, servicios, dependencias y pruebas. |
+| 16.12 | Implementar comprobaciones de seguridad a nivel de código | Integrar análisis estático, revisión y controles equivalentes en el flujo de desarrollo. | Verificar cobertura, reglas, puertas, hallazgos y excepciones. | SAST, revisiones, resultados de CI/CD y tickets. |
+| 16.13 | Realizar pruebas de penetración de aplicaciones | Evaluar aplicaciones según riesgo antes y durante su operación. | Confirmar alcance, metodología, independencia, hallazgos y nuevas pruebas. | Planes, informes, tickets, excepciones y resultados de cierre. |
+| 16.14 | Realizar modelado de amenazas de aplicaciones | Identificar activos, límites de confianza, amenazas y mitigaciones durante el diseño. | Verificar alcance, participantes, actualización y seguimiento. | Modelos, diagramas, registros de riesgos y acciones. |
 
-Control 5 - Gestión de Cuentas
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluación de Controles para el lenguaje exacto y los criterios de evaluación.
 
-*Todas las 6 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+# 22. Control 17 — Gestión de la respuesta a incidentes
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la gestión de las cuentas. |
-|. |
+*Las nueve Salvaguardas, su significado en lenguaje claro, el enfoque de verificación y ejemplos de evidencia.*
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 5.1 | Establecer y mantener un inventario de cuentas | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de cuentas, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
-TEN 5.2 | Use Contraseñas Únicas ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para usar Contraseñas Únicas, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
-| 5.3 | Cuentas de Dormant Desactivados Ponga en marcha un proceso repetible, de propiedad o control técnico para deshabilitar Cuentas Dormant, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
-tención 5.4 Silencioso Administrador de Restricciones Privilegios a Cuentas Administradoras Dedicadas Poner en marcha un proceso repetible, de propiedad o control técnico para restringir los privilegios del Administrador a las Cuentas de Administrador Dedicado, a continuación, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
-TEN 5.5 | Establecer y mantener un inventario de cuentas de servicio | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de cuentas de servicio, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
-| 5.6 | Centralizar Gestión de Cuentas Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar la gestión de cuentas, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. poblaciones, propietarios, fechas, política de contraseñas, acciones de cuenta inactiva, inventarios de administración y de cuenta de servicios
+![Los roles preparados, los mecanismos de reporte, la comunicación, los ejercicios y las revisiones reducen el impacto de los incidentes.](media/image9.png)
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+Figura 9. Preparación para la respuesta a incidentes
 
-# 11. Control 6 — Access Control Management
+| **Objetivo del control:** Fortalecer la organización mediante la implementación y medición de Salvaguardas para la gestión de la respuesta a incidentes. |
+|---|
 
-*Las 8 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+| **ID** | **Salvaguarda** | **Significado en lenguaje claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 17.1 | Designar al personal responsable de gestionar los incidentes | Implementar un proceso repetible, con un responsable definido, para designar al personal encargado de gestionar los incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.2 | Mantener información de contacto para reportar incidentes de seguridad | Implementar un proceso repetible, con un responsable definido, para mantener la información de contacto utilizada para reportar incidentes de seguridad; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.3 | Mantener un proceso organizacional para reportar incidentes | Implementar un proceso repetible, con un responsable definido, para mantener un proceso organizacional de reporte de incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.4 | Establecer y mantener un proceso de respuesta a incidentes | Implementar un proceso repetible, con un responsable definido, para establecer y mantener un proceso de respuesta a incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.5 | Asignar roles y responsabilidades clave | Implementar un proceso repetible, con un responsable definido, para asignar roles y responsabilidades clave; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.6 | Definir mecanismos de comunicación durante la respuesta a incidentes | Implementar un proceso repetible, con un responsable definido, para definir mecanismos de comunicación durante la respuesta a incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.7 | Realizar ejercicios periódicos de respuesta a incidentes | Implementar un proceso repetible, con un responsable definido, para realizar ejercicios periódicos de respuesta a incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.8 | Realizar revisiones posteriores a los incidentes | Implementar un proceso repetible, con un responsable definido, para realizar revisiones posteriores a los incidentes; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
+| 17.9 | Establecer y mantener umbrales para los incidentes de seguridad | Implementar un proceso repetible, con un responsable definido, para establecer y mantener umbrales para los incidentes de seguridad; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | responsables de incidentes, contactos, mecanismos de reporte, plan, roles, comunicaciones, ejercicios, revisiones y umbrales |
 
-יimg src="media/image6.png" style="width:6.15in;height:3.03192in" alt="Las cuentas y privilegios requieren la creación aprobada, la autenticación fuerte, la revisión y la revocación oportuna".
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación para la Evaluación de Controles para consultar el lenguaje exacto de cada Salvaguarda, la clase de activo, la función de seguridad, el Grupo de Implementación, las dependencias, las entradas, las operaciones, las medidas, las métricas y la revisión de procedimientos.
 
-Gráfico 6 Identidad y acceso ciclo de vida
+# 23. Control 18 — Pruebas de penetración
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la gestión del control del acceso. |
-|... |
+*Las cinco Salvaguardas, su significado en lenguaje claro, el enfoque de verificación y ejemplos de evidencia.*
 
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-TEN 6.1 TEN Establezca un proceso de concesión de acceso | Ponga en marcha un proceso repetible, de propiedad o control técnico para establecer un proceso de concesión de acceso, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-| 6.2 | Establezca un proceso de revocación de acceso | Ponga en marcha un proceso de repetición, propiedad o control técnico para establecer un proceso de revocación de acceso, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-TEN 6.3 | Require MFA for Externally-Exposed Applications TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para Aplicaciones Expuestas Externamente, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-| 6.4 | Requiere MFA para el acceso a redes remotas Ponga en marcha un proceso repetible, de propiedad o control técnico para requerir MFA para acceso remoto a redes, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-tención 6.5 Silencioso Consultar MFA para el acceso administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para exigir el MFA de Acceso Administrativo, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-| 6.6 | Establecer y mantener un inventario de sistemas de autenticación y autorización | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de sistemas de autenticación y autorización, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-| 6.7 | Centralizar control de acceso Ponga en marcha un proceso repetible, de propiedad o control técnico para centralizar el control de acceso, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
-| 6.8 | Definir y mantener el control de acceso basado en roles Ponga en marcha un proceso repetible, de propiedad o control técnico para definir y mantener el control de acceso basado en roles, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Entradas de subvención/revocación, cobertura del MFA, inventario del sistema de autenticación, funciones, derechos y exámenes de acceso
+| **Objetivo del control:** Fortalecer la organización mediante la implementación y medición de Salvaguardas para las pruebas de penetración. |
+|---|
 
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
+| **ID** | **Salvaguarda** | **Significado en lenguaje claro** | **Enfoque de verificación** | **Ejemplos de evidencia** |
+|---|---|---|---|---|
+| 18.1 | Establecer y mantener un programa de pruebas de penetración | Implementar un proceso repetible, con un responsable definido, para establecer y mantener un programa de pruebas de penetración; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.2 | Realizar pruebas periódicas de penetración externa | Implementar un proceso repetible, con un responsable definido, para realizar pruebas periódicas de penetración externa; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.3 | Corregir los hallazgos de las pruebas de penetración | Implementar un proceso repetible, con un responsable definido, para corregir los hallazgos de las pruebas de penetración; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.4 | Validar las medidas de seguridad | Implementar un proceso repetible, con un responsable definido, para validar las medidas de seguridad; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
+| 18.5 | Realizar pruebas periódicas de penetración interna | Implementar un proceso repetible, con un responsable definido, para realizar pruebas periódicas de penetración interna; después, verificar su cobertura y sus excepciones. | Confirmar alcance, población, responsabilidad, implementación, frecuencia, cobertura, excepciones, corrección y repetición de pruebas. | reglas de compromiso aprobadas, alcance, evaluadores cualificados, informes, remediación, repetición de pruebas y evidencia de validación |
 
-Control 7 - Gestión continua de la vulnerabilidad
+Utilice la guía oficial de CIS Controls v8.1 y la Especificación para la Evaluación de Controles para consultar el lenguaje exacto de cada Salvaguarda, la clase de activo, la función de seguridad, el Grupo de Implementación, las dependencias, las entradas, las operaciones, las medidas, las métricas y la revisión de procedimientos.
 
-*Las 7 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
+# 24. Herramientas de código abierto
 
-■img src="media/image7.png" estilo="width:6.15in;height:3.14547in" alt="Cobertura completa y materia de remediación verificada más que producir informes de escaneo." /
+*Enlaces oficiales, inicios rápidos seguros, evidencia y limitaciones.*
 
-Gráfico 7 Gestión continua de la vulnerabilidad
+| **Herramienta** | **Propósito** | **Controles posibles** |
+|---|---|---|
+| CIS Controls Navigator | Seleccionar Grupos de Implementación y explorar correspondencias oficiales | Todos |
+| CIS Controls Assessment Specification | Orientación oficial para la medición | Todos |
+| CIS-CAT Lite | Evaluación de determinados CIS Benchmarks | 4 |
+| CISO Assistant | Controles, riesgos, evidencia y hallazgos | Todos |
+| Wazuh | Monitoreo de endpoints, SIEM, FIM y alertas | 1, 4, 8, 10, 13, 17 |
+| osquery | Consultas sobre activos, software, cuentas y configuración | 1, 2, 4, 5, 8 |
+| OpenSCAP | Evaluación de configuración segura en Linux | 4, 7 |
+| Lynis | Auditoría de seguridad en Linux | 4, 7 |
+| Nmap | Descubrimiento autorizado de activos y servicios | 1, 12 |
+| Greenbone Community Edition | Evaluación de vulnerabilidades | 7 |
+| Trivy | Repositorios, imágenes, dependencias, secretos e infraestructura como código | 2, 4, 7, 16 |
+| OWASP ZAP | Pruebas autorizadas de seguridad web | 16, 18 |
+| Suricata | Detección de intrusiones en red y visibilidad del tráfico | 8, 13, 17 |
+| Keycloak | Identidades, roles, MFA, sesiones y eventos | 5, 6, 8 |
+| DefectDojo | Ingesta de hallazgos, deduplicación, remediación y repetición de pruebas | 7, 16, 18 |
+| Velociraptor | Visibilidad de endpoints y respuesta a incidentes | 1, 8, 13, 17 |
 
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la gestión continua de la vulnerabilidad. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 7.1 | Establecer y mantener un proceso de gestión de vulnerabilidades | Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de vulnerabilidades, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-TEN 7.2 | Establecer y mantener un proceso de rehabilitación | Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de rehabilitación, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-| 7.3 | Perform Automatizado Sistema Operativo Manejo de parche Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Operating System Patch Management, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-| 7.4  Perform Automated Application Patch Management Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar Automated Application Patch Management, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans |
-| 7.5 | Perform Automated Vulnerability Scans of Internal Enterprise Assets tención Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos de empresa interna, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-TEN 7.6 ANTE Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets TEN Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar escáneres de vulnerabilidad automatizados de activos de empresas externamente expuestas, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-| 7.7 | Remediate Detected Vulnerabilities ← Poner en marcha un proceso repetible, de propiedad o control técnico para remediar Vulnerabilidades Detectadas, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. procesos, alimentaciones, cobertura de activos, escaneos autenticados, resultados de parches, excepciones, boletos de remediación y rescans
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 13. Control 8 — Audit Log Management
-
-*Las 12 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de salvaguardias para la gestión de registros de auditoría. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-tención 8.1 | Establecer y mantener un proceso de gestión de los registros de auditoría ← Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de gestión de los registros de auditoría, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.2 | Recopilar los registros de auditoría Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar los registros de auditoría, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.3 | Asegurar Adequate Audit Log Storage Ponga en marcha un proceso repetible, de propiedad o control técnico para garantizar el almacenamiento adecuado de registros de auditoría, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.4 ← Normalizar la sincronización del tiempo ← Poner en marcha un proceso repetible, de propiedad o control técnico para estandarizar la sincronización del tiempo, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención |
-| 8.5 | Recopilar Registros de Auditoría detallados | Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría detallados, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.6 | Collect DNS Query Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de consultas DNS, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.7 | Collect URL Request Audit Logs ← Ponga en marcha un proceso repetible, de propiedad o control técnico para recopilar URL Solicitar registros de auditoría, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.8 | Coleccion Command-Line Audit Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los registros de auditoría de Command-Line, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.9 | Centralizar los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar los registros de auditoría, a continuación, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.10 | Retener los registros de auditoría Poner en marcha un proceso repetible, de propiedad o control técnico para retener los registros de auditoría, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.11 | Realizar Auditorías Reseñas Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar revisiones de los registros de auditoría, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-| 8.12 | Collect Service Provider Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger registros de proveedores de servicios, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. requisitos de registro, inventario de fuentes, almacenamiento, configuración del tiempo, registros detallados, plataforma central, revisiones y retención
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 14. Control 9 - Protección de correo electrónico y navegador web
-
-*Las 7 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la implementación y medición de salvaguardias para las protecciones de correo electrónico y navegador web. |
-Respuesta
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-TEN 9.1 TENCIÓN Asegurar el uso de sólo navegadores completos y clientes de correo electrónico | Poner en marcha un proceso repetible, propiedad o control técnico para garantizar el uso de sólo navegadores completos y clientes de correo electrónico, a continuación, verificar la cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-TEN 9.2 | Utilizar DNS Filtrar Servicios ANTEPóngase en marcha un proceso repetible, de propiedad o control técnico para utilizar DNS Filtering Services, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-| 9.3 | Mantener y Forzar Filtros de URL basados en la red Ponga en marcha un proceso repetible, de propiedad o control técnico para mantener y ejecutar filtros de URL basados en red, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-| 9.4 | Restringir Extensiones innecesarias o no autorizadas de navegador y correo electrónico de clientes | Ponga un proceso repetible, propiedad o control técnico en su lugar para restringir Extensiones innecesarias o no autorizadas de navegador y cliente de correo electrónico, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-TEN 9.5 | Implement DMARC ANTEPonga un proceso repetible, de propiedad o control técnico en marcha para implementar DMARC, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-TEN 9.6 | Bloquear Tipos de archivo innecesarios Ponga en marcha un proceso repetible, de propiedad o control técnico para bloquear los tipos de archivos innecesarios, a continuación, verifique la cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-| 9.7 | Despliegue y Mantenga el Servidor de Email Anti-Malware Protecciones Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar y Mantener Protecciones Anti-Malware del Servidor de Email, a continuación, verifique la cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN navegador e inventarios de correo electrónico, estado de soporte, filtrado DNS/URL, política de extensión, DMARC y controles de apego
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 15. Control 10 — Malware Defenses
-
-*Las 7 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la implementación y medición de salvaguardias para defensas de malware. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10.1 | Deploy y Mantener el Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar y mantener el software antimalware, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-| 10.2 | Configure Actualizaciones automáticas de firmas antimalware Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar Actualizaciones automáticas de firmas antimalware, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-TEN 10.3 | Autorun deshabilitado y Autoplay para medios extraíbles TENIENDO Poner en marcha un proceso repetible, propiedad o control técnico para desactivar Autorun y Autoplay para medios extraíbles, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-| 10.4 | Configure Automatic Anti-Malware Scanning of Removable Media Ponga en marcha un proceso repetible, de propiedad o control técnico para configurar el escaneado automático antimalware de medios extraíbles, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-| 10.5 | Activar las características anti-Explotación Ponga en marcha un proceso repetible, de propiedad o control técnico para habilitar las funciones de antiexplotación, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-| 10.6 | Gestión Central del Software Anti-Malware Ponga en marcha un proceso repetible, de propiedad o control técnico para administrar centralmente el software antimalware, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-| 10.7 | Utilizar software antimalware basado en el comportamiento Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar el software antimalware basado en el comportamiento, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura de endpoint, configuración anti-malware, actualizaciones, controles de medios extraíbles, alertas de comportamiento y tickets de respuesta
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 16. Control 11 — Data Recovery
-
-*Las 5 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de salvaguardias para la recuperación de datos. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-TEN 11.1 | Establecer y mantener un proceso de recuperación de datos | Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un proceso de recuperación de datos, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Plan de recuperación, cobertura de copia de seguridad, copias protegidas y aisladas, pruebas de restauración, resultados, brechas y retests |
-| 11.2 | Perform Automated Backups Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar copias de seguridad automatizadas, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Plan de recuperación, cobertura de copia de seguridad, copias protegidas y aisladas, pruebas de restauración, resultados, brechas y retests |
-| 11.3 | para proteger los datos de recuperación Ponga en marcha un proceso repetible, de propiedad o control técnico para proteger los datos de recuperación, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Plan de recuperación, cobertura de copia de seguridad, copias protegidas y aisladas, pruebas de restauración, resultados, brechas y retests |
-TEN 11.4 | Establecer y mantener una instalación aislada de datos de recuperación | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una instalación aislada de datos de recuperación, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Plan de recuperación, cobertura de copia de seguridad, copias protegidas y aisladas, pruebas de restauración, resultados, brechas y retests |
-TEN 11.5 | Recuperar Datos de Prueba | Poner en marcha un proceso repetible, propiedad o control técnico para probar la recuperación de datos, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Plan de recuperación, cobertura de copia de seguridad, copias protegidas y aisladas, pruebas de restauración, resultados, brechas y retests |
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-Control 12 - Gestión de la infraestructura de red
-
-*Las 8 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la gestión de la infraestructura de red. |
-Respuesta
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Enviado |
-| 12.1 | Garantizar que la infraestructura de red esté actualizada Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar que la infraestructura de red esté actualizada, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-| 12.2 | Establecer y mantener una arquitectura de red segura ← Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una arquitectura de red segura, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-| 12.3 ← Gestión segura de la infraestructura de red Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar de forma segura la infraestructura de red, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración |
-TEN 12.4 | Establecer y mantener los diagramas de arquitectura | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener los diagramas de arquitectura, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-| 12.5 | Centralizar Autenticación, Autorización y Auditoría de la Red | Poner en marcha un proceso repetible, de propiedad o control técnico para centralizar la autenticación, Autorización y Auditoría de la Red, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-TEN 12.6 | Utilizar protocolos de gestión y comunicación de redes seguras Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar protocolos de gestión y comunicación de redes seguras, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-| 12.7 | Garantizar dispositivos remotos Utilice una VPN y Enterprise AAA | Ponga en marcha un proceso repetible, de propiedad o control técnico para asegurar dispositivos remotos Use una VPN y Enterprise AAA, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-| 12.8 | Mantener los recursos de computación dedicados para el trabajo administrativo Poner en marcha un proceso repetible, de propiedad o control técnico para mantener los Recursos de Computación Dedicada para el Trabajo Administrativo, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario de red, versiones, arquitectura, diagramas, vías de administración, AAA, protocolos seguros, VPN y estaciones de trabajo de administración
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 18. Control 13 — Network Monitoring and Defense
-
-*Todas las 11 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-■img src="media/image8.png" estilo="width:6.15in;height:3.20094in" alt="Contexto centralizado, detección sintonizada, investigación humana y respuesta crean defensa útil".
-
-Figure 8. Monitoring-to-response workflow
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la implementación y medición de salvaguardias para el monitoreo y defensa de redes. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 13.1 | Centralizar Seguridad Evento Alertar | Ponga en marcha un proceso repetible, de propiedad o control técnico para centralizar la alerta de eventos de seguridad, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.2 | Despliegue una Solución de Detección de Intrusión Basada en Host Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar una Solución de Detección de Intrusión Basada en Host, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.3 | Despliegue una Solución de detección de intrusiones de red Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar una Solución de Detección de Intrusión de Red, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.4 | Realizar filtración de tráfico entre Segmentos de red Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar el Filtro de tráfico entre segmentos de red, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.5 | Manage Access Control for Remote Assets Ponga en marcha un proceso repetible, de propiedad o control técnico para gestionar el control de acceso para activos remotos, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.6  Collect Network Traffic Flow Logs Ponga en marcha un proceso repetible, de propiedad o control técnico para recoger los Logs de flujo de tráfico de red, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación |
-| 13.7 | Despliegue una solución de prevención de la intrusión basada en el hogar Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar una solución de prevención de la intrusión basada en el host, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.8 | Despliegue una Solución de Prevención de Intrusiones de Redes | Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar una Solución de Prevención de Intrusiones de Red, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.9 Ponga en marcha un proceso repetible, de propiedad o control técnico para desplegar Port-Level Access Control, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación |
-| 13.10 | Perform Application Layer Filtering Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar el Filtro de capa de aplicaciones, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-| 13.11 | Seguridad de la Tune Alerta de eventos Ubica un proceso repetible, de propiedad o control técnico en su lugar para sintonizar Security Event Alerting Thresholds, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. cobertura SIEM, detección de host/network, segmentación, mandos remotos, registros de flujo, sistemas de prevención y alerta de afinación
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 19. Control 14 - Capacitación en conciencia de seguridad y habilidades
-
-*Las 9 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la sensibilización en materia de seguridad y la capacitación en aptitudes. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-TEN 14.1 | Establecer y mantener un programa de conciencia de seguridad | Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un programa de conciencia de seguridad, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-| 14.2 | Entrenar a los miembros de la fuerza de trabajo para reconocer ataques de ingeniería social ← Poner en marcha un proceso repetible, propiedad o control técnico para capacitar a los miembros de la fuerza de trabajo para reconocer ataques de ingeniería social, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-TEN 14.3 | Entrenar a los miembros de la fuerza de trabajo sobre la autenticación Buenas Prácticas | Poner en marcha un proceso repetible, de propiedad o control técnico para capacitar a los miembros de la fuerza de trabajo sobre las mejores prácticas de autenticación, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-| 14.4 | Train Workforce on Data Handling Best Practices TEN Poner en marcha un proceso repetible, propiedad o control técnico para capacitar a Workforce en Data Handling Best Practices, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-| 14.5 | Entrenar a los miembros de la fuerza de trabajo sobre las causas de la exposición de datos no intencionales ¦ Ponga en marcha un proceso repetible, de propiedad o control técnico para capacitar a los miembros de la fuerza de trabajo sobre las causas de la exposición de datos no intencionales, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-| 14.6 | Entrenar a los miembros de la fuerza de trabajo para reconocer y denunciar incidentes de seguridad ← Poner en marcha un proceso repetible, de propiedad o control técnico para capacitar a los miembros de la fuerza de trabajo en reconocer y denunciar incidentes de seguridad, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-| 14.7 | Train Workforce para identificar e informar Actualizaciones de Seguridad Desaparecidas | Ponga en marcha un proceso repetible, de propiedad o control técnico para capacitar a Workforce para identificar y reportar actualizaciones de seguridad desaparecidas, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-TEN 14.8 | Capacitación Fuerza de Trabajo sobre Riesgos de Redes Inseguras | Poner en marcha un proceso repetible, de propiedad o control técnico para capacitar a Workforce en Riesgos de Redes Inseguras, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-TEN 14.9 | Conduct Rol-Specific Security Awareness and Skills Training TENGA un proceso repetible, de propiedad o control técnico en su lugar para llevar a cabo el entrenamiento de conciencia y habilidades de seguridad del papel-espejo, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. programa tención, población laboral, programa de trabajo, finalización, simulaciones, evaluación, excepciones y seguimiento
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 20. Control 15 — Service Provider Management
-
-*Las 7 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la gestión de proveedores de servicios. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-TEN 15.1 | Establecer y mantener un inventario de proveedores de servicios | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un inventario de proveedores de servicios, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición
-| 15.2 | Establecer y mantener una Política de Gestión de Proveedores de Servicios ← Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener una Política de Gestión de Proveedores de Servicios, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición
-| 15.3 Ponga en marcha un proceso repetible, de propiedad o control técnico para clasificar a los proveedores de servicios, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición |
-| 15.4 | Garantizar Contratos de Proveedor de Servicios Incluir Requisitos de Seguridad | Poner en marcha un proceso de repetibilidad, propiedad o control técnico para garantizar contratos de Proveedor de Servicios Incluir Requisitos de Seguridad, luego verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición
-| 15.5 Silenciosos Proveedores de Servicios | Ponga en marcha un proceso repetible, de propiedad o control técnico para evaluar a los Proveedores de Servicios, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición
-| 15.6 Poner en marcha un proceso repetible, de propiedad o control técnico para supervisar a los proveedores de servicios, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición |
-| 15.7 | Proveedores de Servicio de Decomiso Seguro Ponga en marcha un proceso repetible, de propiedad o control técnico para desactivar de forma segura los proveedores de servicios, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. inventario, clasificaciones, políticas, contratos, evaluaciones, vigilancia, incidentes y pruebas de descomposición
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-Control 16 - Seguridad del Software de Aplicación
-
-*Todas las 14 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para la seguridad de los programas de aplicación. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 16.1 | Establecer y mantener un proceso de desarrollo de aplicaciones seguras ← Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de desarrollo de aplicaciones seguras, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.2 | Establecer y mantener un proceso para aceptar y abordar Vulnerabilidades de Software | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener un proceso para aceptar y abordar vulnerabilidades de software, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.3 | Realizar análisis de causa raíz sobre vulnerabilidades de seguridad | Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar análisis de causa raíz sobre vulnerabilidades de seguridad, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.4 | Establecer y administrar un inventario de componentes de software de terceros ¦Ponga un proceso repetible, propiedad o control técnico en su lugar para establecer y administrar un inventario de componentes de software de terceros, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.5 ← Utilizar componentes de software de terceros actualizados y confiados Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar componentes de software de terceros actualizados y confiados, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.6 | Establecer un sistema de puntuación de la gravedad y proceso para aplicaciones Vulnerabilidades | Poner en marcha un proceso repetible, de propiedad o control técnico para establecer un sistema de puntuación de la gravedad y el proceso para aplicaciones Vulnerabilidades, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-TEN 16.7 | Use Plantillas de endurecimiento estándar para infraestructura de aplicaciones | Ponga en marcha un proceso repetible, de propiedad o control técnico para utilizar plantillas de endurecimiento estándar para infraestructura de aplicaciones, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.8 | Sistemas de Producción Separada y No Producción Poner en marcha un proceso repetible, de propiedad o control técnico para separar los sistemas de producción y no producción, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.9 | Desarrolladores de Tren en Seguridad de Aplicaciones y Codificación Asegunda Ponga en marcha un proceso repetible, propiedad o control técnico para capacitar a Desarrolladores en Seguridad de Aplicaciones y Codificación Aseguida, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.10 | Aplicar Principios de Diseño Seguro en Arquitecturas de Aplicaciones | Ponga en marcha un proceso repetible, de propiedad o control técnico para aplicar Principios de Diseño Seguro en Arquitecturas de Aplicaciones, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-TEN 16.11 | Utilizar Módulos o Servicios Vetted para componentes de seguridad de aplicaciones TEN Poner en marcha un proceso repetible, de propiedad o control técnico para utilizar módulos o servicios para componentes de seguridad de aplicaciones, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.12 | Implementar Controles de Seguridad del Code-Level Ponga en marcha un proceso repetible, de propiedad o control técnico para implementar los controles de seguridad de Code-Level, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.13 | Conducir Aplicación Pruebas de Penetración Ponga en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo pruebas de penetración de aplicaciones, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-| 16.14 | Conduct Threat Modeling | Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo la Modelación de Amenazas, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN seguro SDLC, proceso de divulgación, causa raíz, inventario de componentes, severidad, endurecimiento, entrenamiento, pruebas y modelos de amenaza |
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-Control 17 - Gestión de la respuesta por incidentes
-
-*Las 9 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-■img src="media/image9.png" estilo="width:6.15in;height:3.12625in" alt="Los roles preparados, reportando, comunicación, ejercicios y reseñas reducen el impacto del incidente." /
-
-Gráfico 9. Preparación para respuesta a incidentes
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de salvaguardias para la gestión de la respuesta a incidentes. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 17.1 | Designate Personnel to Manage Incident Handling | Ponga en marcha un proceso repetible, de propiedad o control técnico para designar Personal a Manage Incident Handling, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-| 17.2 | Mantener Información de Contacto para Reportar Incidentes de Seguridad | Poner en marcha un proceso repetible, propiedad o control técnico para mantener la Información de Contacto para Reportar Incidentes de Seguridad, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-| 17.3 | Mantener un Proceso Empresarial para la Presentación de Informes Incidentes | Poner en marcha un proceso repetible, propiedad o control técnico para mantener un Proceso Empresarial para la Presentación de Informes Incidentes, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-TEN 17.4 | Establecer y mantener un proceso de respuesta de incidentes | Poner en marcha un proceso de repetición, propiedad o control técnico para establecer y mantener un proceso de respuesta de incidentes, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-TEN 17.5 | Asignar Funciones y responsabilidades clave ANTEPonga un proceso repetible, de propiedad o control técnico en su lugar para asignar funciones y responsabilidades clave, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-TEN 17.6 ANTERIENTE Definir los mecanismos de comunicación durante la respuesta de incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para definir mecanismos de comunicación durante la respuesta de incidentes, a continuación, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-| 17.7 | Conduct Routine Incident Response Ejercicios Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar ejercicios de respuesta de incidentes de rutina, a continuación, verifique la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-| 17.8 | Conducir Reseñas posteriores a incidentes Poner en marcha un proceso repetible, de propiedad o control técnico para llevar a cabo revisiones post-incidente, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-| 17.9 | Establecer y Mantener Umbral de Incidentes de Seguridad | Poner en marcha un proceso repetible, propiedad o control técnico para establecer y mantener Umbrales de Incidentes de Seguridad, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. Silenciosos líderes, contactos, informes, plan, roles, comunicaciones, ejercicios, revisiones y umbrales
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-# 23. Control 18 — Penetration Testing
-
-*Las 5 Salvaguardias, significado claro, enfoque de verificación y evidencia de ejemplo*.
-
-| ** Objetivo de control:** Fortalecer la empresa mediante la aplicación y medición de las salvaguardias para las pruebas de penetración. |
-|... |
-
-| **** | ** Salvaguardia** | **Significado claro** | ** Enfoque de la verificación**
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 18.1 | Establecer y mantener un Programa de Pruebas de Penetración | Poner en marcha un proceso repetible, de propiedad o control técnico para establecer y mantener un Programa de Pruebas de Penetración, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-| 18.2 | Realizar exámenes periódicos de penetración externa Poner en marcha un proceso repetible, de propiedad o control técnico para realizar exámenes periódicos de penetración externa, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-| 18.3 ← Búsquedas de Penetración Remediar Ponga un proceso repetible, de propiedad o control técnico en su lugar para remediar Penetration Test Findings, a continuación, verificar cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación |
-| 18.4 Poner en marcha un proceso repetible, de propiedad o control técnico para validar las medidas de seguridad, verificar la cobertura y las excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación |
-| 18.5 | Realizar exámenes periódicos de penetración interna Ponga en marcha un proceso repetible, de propiedad o control técnico para realizar exámenes periódicos de penetración interna, a continuación, verifique cobertura y excepciones. tención Confirme alcance definido, población, propiedad, implementación, frecuencia, cobertura, excepciones, corrección y retest. TEN aprobó reglas de compromiso, alcance, testadores cualificados, informes, remediación, pruebas de retest y validación
-
-Utilice la guía oficial CIS Controls v8.1 y Evaluación de Controles Especificación para el lenguaje exacto de Salvaguardia, clase de activos, función de seguridad, Grupo de Implementación, dependencias, insumos, operaciones, medidas, métricas y revisión procesal.
-
-24. Herramientas de código abierto
-
-* Enlaces oficiales, inicios rápidos seguros, pruebas y limitaciones.*
-
-| **Herramienta** |**
-|-------------------------------------------------------- La vida------------------ |
-TEN CIS Controls Navigator TEN Seleccionar IGs y explorar asignaciones oficiales TEN TODO |
-Evaluación de Controles de CIS Especificación ← Orientación oficial de medición
-| CIS-CAT Lite ← Selected CIS Evaluación de parámetros latitud 4 |
-| CISO Asistente | Controles, riesgos, pruebas y hallazgos
-tención Wazuh ← Endpoint monitoring, SIEM, FIM, y alertas
-TEN Osquery TENRI Asset, software, cuenta y consultas de configuración
-TEN OpenSCAP | Evaluación de la configuración segura de Linux TEN 4, 7 |
-| Lynis para la seguridad de Linux auditando | 4, 7 |
-| Nmap | Autorizado activo y descubrimiento de servicios | 1, 12
-| Greenbone Community Edition | Vulnerability assessment | 7
-tención Trivy Silencioso Repositorios, imágenes, dependencias, secretos, y IaC Silencioso 2, 4, 7, 16 |
-| OWASP ZAP | Pruebas autorizadas de seguridad web
-| Suricata | Red detección de intrusiones y visibilidad de tráfico | 8, 13, 17 |
-TENER Keycloak | Identidad, roles, MFA, sesiones y eventos
-← DefectoDojo tóxico Encontrar la ingesta, la deduplicación, la remediación y la retesta | 7, 16, 18
-| Velociraptor | Visibilidad de endpoint y respuesta a los incidentes
-
-* Limitación crítica* Una herramienta puede apoyar una o más Salvaguardias, pero no puede elegir el IG de la organización, definir la tolerancia al riesgo, garantizar la cobertura completa, reemplazar el procedimiento y la revisión humana, autorizar pruebas de penetración, o probar el cumplimiento de otro marco por sí mismo. |
-|. |
-
-## 24.1 CIS Controls Navigator
-
-Propósito: Seleccione IGs y explore mapas oficiales. Proyecto oficial: [ejecutado]CIS Controles Navigator efectuado/u fiel](https://www.cisecurity.org/controls/cis-controls-navigator)
-
-Inicio rápido seguro: Elija v8.1, seleccione un grupo de implementación y mapeo, revise salvaguardias, luego exporte la selección autorizada.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.2 CIS Controls Assessment Specification
-
-Objetivo: Orientación oficial de medición. Proyecto oficial: [Seguido] [Según datos](https://cas.docs.cisecurity.org/en/latest/)
-
-Inicio rápido seguro: Abra una Salvaguardia, identifique los insumos y las suposiciones, siga las operaciones, calcule las medidas y revise el procedimiento de documentos.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.3 CIS-CAT Lite
-
-Propósito: CIS seleccionado Evaluación de parámetros. Proyecto oficial: [Seguido] (https://learn.cisecurity.org/cis-cat-lite)
-
-Inicio rápido seguro: Ejecutar sólo en sistemas autorizados, elegir un punto de referencia y perfil disponibles, preservar el informe, validar las conclusiones, corregir y reevaluar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.4 CISO Assistant
-
-Propósito: Controles, riesgos, pruebas y hallazgos. Proyecto oficial: [Seguido](https://intuitem.github.io/ciso-assistant-community/)
-
-Inicio rápido seguro: Crear un proyecto de alcance, cargar un marco aplicable, asignar propietarios, adjuntar evidencia, resultados de seguimiento y permisos de revisión.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.5 Wazuh
-
-Propósito: Monitoreo de punto final, SIEM, FIM y alertas. Proyecto oficial: [Seguido](https://wazuh.com/)
-
-Inicio rápido seguro: Inscribir un punto final de laboratorio, desencadenar un evento seguro, confirmar la recogida y alerta, investigar, y retener la cobertura y la evidencia de respuesta.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.6 osquery
-
-Propósito: Consultas de activos, software, cuenta y configuración. Proyecto oficial: (https://www.osquery.io/)
-
-Comienzo rápido seguro: Ejecute consultas sólo de lectura en un laboratorio, programe consultas aprobadas, compare resultados a inventarios, y plataforma de documentos y límites de cobertura.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.7 OpenSCAP
-
-Objetivo: Evaluación de la configuración segura de Linux. Proyecto oficial: [Seguido](https://www.open-scap.org/)
-
-Inicio rápido seguro: Elija un perfil apropiado, escanear un sistema de laboratorio, validar resultados, excepciones de documentos, remediar y cambiar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.8 Lynis
-
-Propósito: Auditoría de seguridad de Linux. Proyecto oficial: [Seguido](https://cisofy.com/lynis/)
-
-Comenzar rápido seguro: auditar un host de laboratorio, revisar los hallazgos contra el alcance y las normas, asignar acciones, corregir elementos seleccionados y repetir.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.9 Nmap
-
-Propósito: Activo autorizado y descubrimiento de servicios. Proyecto oficial: [Seguido](https://nmap.org/)
-
-Inicio rápido seguro: Usar un escaneo limitado en rangos escritos, comparar con inventario, investigar servicios desconocidos, y retener el alcance y la evidencia de comando.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.10 Greenbone Community Edition
-
-Objetivo: Evaluación de la vulnerabilidad. Proyecto oficial: [ejecutado]Greenbone Community Edition (10)(https://greenbone.github.io/docs/latest/)
-
-Inicio rápido seguro: Actualizar los alimentos, utilizar los objetivos autorizados y las credenciales, validar la cobertura de activos, revisar las conclusiones, remediar y cambiar.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.11 Trivy
-
-Propósito: Repositorios, imágenes, dependencias, secretos e IaC. Proyecto oficial: [ejecutado]Trivy seleccionado/u fiel](https://trivy.dev/)
-
-Inicio rápido seguro: Escanear un repositorio de prueba o imagen, validar hallazgos, documentar excepciones justificadas, fijar y rescan en el oleoducto.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.12 OWASP ZAP
-
-Propósito: Pruebas de seguridad web autorizadas. Proyecto oficial: [Seguido] (https://www.zaproxy.org/)
-
-Comenzar rápido seguro: Proxy una aplicación de entrenamiento, arrastrar pasivamente, utilizar el escaneo activo sólo con aprobación, validar hallazgos, correcto y retest.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.13 Suricata
-
-Propósito: detección de intrusión en red y visibilidad del tráfico. Proyecto oficial: [Seguido] [https://suricata.io/]
-
-Inicio rápido seguro: Use un sensor de laboratorio, confirme la interfaz y las reglas, genere tráfico de prueba aprobado, valide alertas, sintonice cuidadosamente, y preserve la historia del cambio.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.14 Keycloak
-
-Propósito: Identidad, roles, MFA, sesiones y eventos. Proyecto oficial: [Seguido](https://www.keycloak.org/)
-
-Comenzar rápido seguro: Crear un reino de laboratorio, roles y MFA, probar casos de compás, revisar eventos y configuración de documentos y resultados.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.15 DefectoDojo
-
-Propósito: Encontrar ingesta, deduplicación, remediación y retest. Proyecto oficial: [Seguido](https://www.defectdojo.org/)
-
-Comienzo rápido seguro: Importar resultados seguros, validar la deduplicación, asignar propietarios y fechas, adjuntar prueba, y cerrar sólo después de la prueba verificada.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
-
-## 24.16 Velociraptor
-
-Finalidad: visibilidad y respuesta a incidentes. Proyecto oficial: [Seguido](https://docs.velociraptor.app/)
-
-Inicio rápido seguro: Despliegue sólo en un laboratorio autorizado aislado, recoja un artefacto estrecho, alcance de documentos y acceso, investigue los resultados y retire los datos del laboratorio con seguridad.
-
-Pruebas: alcance aprobado, versión, configuración, cobertura, datos fuente, resultados, examen humano, excepción, remediación y retest. Proteger el acceso administrativo y los datos recogidos.
+| **Limitación crítica:** Una herramienta puede respaldar una o más Salvaguardas, pero no puede seleccionar por sí sola el Grupo de Implementación de una organización, definir su tolerancia al riesgo, garantizar una cobertura completa, sustituir los procedimientos y la revisión humana, autorizar pruebas de penetración ni demostrar por sí sola el cumplimiento de otro marco. |
+|---|
 
 # 25. Manual de los Controles CIS para gerentes
 
-*Las preguntas, el tablero, la propiedad y los administradores de decisiones deben controlar.*
+*Preguntas, tablero, responsabilidades y decisiones que la dirección debe controlar.*
 
-1. ¿El IG elegido sigue siendo apropiado para datos sensibles, servicios críticos, exposición a amenazas, obligaciones, escala y habilidades?
+1. ¿El Grupo de Implementación seleccionado sigue siendo apropiado para los datos sensibles, los servicios críticos, la exposición a amenazas, las obligaciones, la escala y las capacidades disponibles?
 
-2. ¿Están las poblaciones centrales completas, actuales, de propiedad y reconciliadas con el descubrimiento independiente?
+2. ¿Las poblaciones fundamentales están completas, actualizadas, tienen un responsable y se concilian con fuentes independientes de descubrimiento?
 
-3. ¿Qué Salvaguardias IG1 tienen cobertura incompleta, revisión atrasada, datos de entrada no fiables o excepciones de repetición?
+3. ¿Qué Salvaguardas de IG1 presentan cobertura incompleta, revisiones vencidas, datos de entrada poco fiables o excepciones recurrentes?
 
-4. ¿Se han intensificado los accesos administrativos, los sistemas expuestos externamente, los programas informáticos no respaldados, las vulnerabilidades críticas y los fallos de recuperación?
+4. ¿Se escalan el acceso administrativo, los sistemas expuestos externamente, el software sin soporte, las vulnerabilidades críticas y los fallos de recuperación?
 
-5. ¿Las alertas resultan en investigación y respuesta, o sólo en el volumen de panel?
+5. ¿Las alertas generan investigación y respuesta, o solo volumen en los tableros?
 
-6. ¿Se entienden las responsabilidades de los proveedores de servicios, las pruebas, las obligaciones de incidentes, los subcontratistas y los planes de salida?
+6. ¿Se comprenden las responsabilidades de los proveedores de servicios, la evidencia, las obligaciones ante incidentes, los subcontratistas y los planes de salida?
 
-7. ¿Se autorizan pruebas de penetración y ejercicios de forma segura, con un alcance adecuado, realizados independientemente cuando sea necesario y seguidos a través de la prueba?
+7. ¿Las pruebas de penetración y los ejercicios están autorizados de forma segura, tienen un alcance adecuado, se realizan con independencia cuando corresponde y se siguen hasta la repetición de pruebas?
 
 8. ¿Qué financiación, personal, tiempo de ingeniería o decisión empresarial está bloqueando la corrección?
 
-**Area** | ** Cuestión del personal**
-|---------------------------------- |
-| IG y alcance | ¿Se documentan las prioridades, adiciones, exclusiones y obligaciones? Verde / Amarillo / Rojo
-← Inventories | ¿Están completos los activos, software, datos, cuentas, proveedores, aplicaciones y registros? Verde / Amarillo / Rojo
-TEN Protection TEN ¿Operan la configuración, el acceso, el parche, el correo electrónico, el malware y los controles de datos? Verde / Amarillo / Rojo
-| Detección | ¿Se ha completado la cobertura de registro y red y se han revisado las alertas? Verde / Amarillo / Rojo
-← Recuperación | ¿Están protegidos copias de seguridad y restauraciones probadas contra las necesidades de negocio? Verde / Amarillo / Rojo
-| Respuesta | ¿Son los roles, contactos, umbrales, ejercicios y revisiones actuales? Verde / Amarillo / Rojo
-TENED ¿Se corrigieron las poblaciones confiables y de excepción? Verde / Amarillo / Rojo
-¿Son compatibles las pruebas, limitaciones, hallazgos y pruebas? Verde / Amarillo / Rojo
+| **Área** | **Pregunta para la dirección** | **Estado** |
+|---|---|---|
+| IG y alcance | ¿Están documentadas la priorización, las adiciones, las exclusiones y las obligaciones? | Verde / Amarillo / Rojo |
+| Inventarios | ¿Están completos los activos, el software, los datos, las cuentas, los proveedores, las aplicaciones y los registros? | Verde / Amarillo / Rojo |
+| Protección | ¿Funcionan los controles de configuración, acceso, parches, correo electrónico, malware y datos? | Verde / Amarillo / Rojo |
+| Detección | ¿La cobertura de registros y red está completa y se revisan las alertas? | Verde / Amarillo / Rojo |
+| Recuperación | ¿Las copias de seguridad protegidas y las restauraciones se prueban frente a las necesidades del negocio? | Verde / Amarillo / Rojo |
+| Respuesta | ¿Están actualizados los roles, contactos, umbrales, ejercicios y revisiones? | Verde / Amarillo / Rojo |
+| Medición | ¿Los datos de entrada son fiables y se corrigen las poblaciones con excepciones? | Verde / Amarillo / Rojo |
+| Aseguramiento | ¿Las pruebas, limitaciones, hallazgos y repeticiones de pruebas son sustentables? | Verde / Amarillo / Rojo |
 
-# 26. Junior Analyst Career Guide
+# 26. Guía profesional para analistas junior
 
-*Una ruta práctica en controles, vulnerabilidad, seguridad, GRC y operaciones de seguridad funcionan.*
+*Una ruta práctica hacia trabajos de controles, vulnerabilidades, aseguramiento, GRC y operaciones de seguridad.*
 
-■img src="media/image10.png" style="width:6.15in;height:2.99481in" alt="Aprende el marco, mapa Salvaguardias, mide evidencia, reporte lagunas, y construya un portafolio honesto".
+![Aprenda el marco, relacione las Salvaguardas, mida la evidencia, informe las brechas y construya un portafolio honesto.](media/image10.png)
 
-Gráfico 10 Junior CIS Controles vía analista
+Figura 10. Ruta para analistas junior de Controles CIS
 
-Controles de Seguridad Junior Analista
+Analista junior de controles de seguridad
 
-GRC Analista
+Analista de GRC
 
-Analista de Gestión de Vulnerabilidad
+Analista de gestión de vulnerabilidades
 
-Análisis de la seguridad
+Analista de aseguramiento de seguridad
 
-Análisis de las operaciones de seguridad
+Analista de operaciones de seguridad
 
-Analista de Cumplimiento de TI
+Analista de cumplimiento de TI
 
-Third-Party Risk Analyst
+Analista de riesgos de terceros
 
-Cybersecurity Program Analyst
+Analista de programas de ciberseguridad
 
-## 26.1 Típico trabajo junior
+## 26.1 Trabajo típico de nivel junior
 
-- Mantener inventarios de activos, software, datos, cuentas, sistemas de red, proveedores, aplicaciones, hallazgos y pruebas.
+- Mantener inventarios de activos, software, datos, cuentas, sistemas de red, proveedores, aplicaciones, hallazgos y evidencia.
 
-- Reunir pruebas sin cambiar los registros de fuentes y validar la integridad de la población.
+- Recopilar evidencia sin alterar los registros fuente y validar la integridad de las poblaciones.
 
-- Mapa Salvaguardias a propietarios, sistemas, procedimientos, configuración, evidencia, métricas, excepciones y acciones.
+- Mapear Salvaguardas con responsables, sistemas, procedimientos, configuraciones, evidencia, métricas, excepciones y acciones.
 
-- Ejecute las herramientas autorizadas de descubrimiento, configuración, vulnerabilidad, registro o seguridad de aplicaciones bajo procedimientos aprobados.
+- Ejecutar herramientas autorizadas de descubrimiento, configuración, vulnerabilidades, registros o seguridad de aplicaciones conforme a procedimientos aprobados.
 
-- Calcular la cobertura y las métricas de excepción utilizando la estructura de evaluación oficial.
+- Calcular métricas de cobertura y excepciones mediante la estructura oficial de evaluación.
 
-- Seguimiento de software no compatible, activos no autorizados, problemas de acceso, vulnerabilidades, copias de seguridad fallidas, lagunas de alerta y hallazgos de proveedores a través de la prueba.
+- Dar seguimiento al software sin soporte, activos no autorizados, problemas de acceso, vulnerabilidades, copias de seguridad fallidas, brechas de alertas y hallazgos de proveedores hasta la repetición de pruebas.
 
-- Escribir conclusiones claras sin reclamar autoridad o certeza más allá de las pruebas.
+- Redactar conclusiones claras sin afirmar autoridad ni certeza más allá de lo que respalda la evidencia.
 
-Silencioso**
-|... |
-| Marco | Explicar los 18 Controles, IGs, clases de activos y funciones |
-| Inventario | Reconcile dos fuentes independientes y explicar las diferencias
-TENEDO | Mostrar insumos, operaciones, medidas, métrica, lista de excepciones y conclusión |
-← Alfabetización técnica | Interpret configuración, identidad, escaneo, registro, recuperación y evidencia de aplicación
-TEN Remediation | Trace finding to owner, due date, correction, and verified retest |
-TEN Comunicación ANTERIGEN Escribe un resumen del administrador de una página y un documento de trabajo detallado
-← Ética ← Utilizar datos sintéticos, autorización, límites de alcance y afirmaciones honestas
+| **Competencia** | **Evidencia para el portafolio** |
+|---|---|
+| Marco | Explicar los 18 Controles, los IG, las clases de activos y las funciones |
+| Inventarios | Conciliar dos fuentes independientes y explicar las diferencias |
+| Medición | Mostrar entradas, operaciones, medidas, métrica, lista de excepciones y conclusión |
+| Conocimientos técnicos | Interpretar evidencia de configuración, identidad, escaneo, registros, recuperación y aplicaciones |
+| Remediación | Relacionar el hallazgo con el responsable, la fecha límite, la corrección y la repetición de pruebas verificada |
+| Comunicación | Redactar un resumen de una página para la dirección y un documento de trabajo detallado |
+| Ética | Utilizar datos sintéticos, autorización, límites de alcance y afirmaciones honestas |
 
-# 27. Laboratorio Ficcional y Portfolio
+# 27. Laboratorio y portafolio ficticios
 
-*Un entorno de prácticas seguras utilizando datos sintéticos y sistemas de laboratorio autorizados*.
+*Un entorno seguro de práctica con datos sintéticos y sistemas de laboratorio autorizados.*
 
-* La regla del laboratorio* Utilizar organizaciones ficticias, datos sintéticos, sistemas aislados y autorización escrita. Nunca ataque objetivos públicos, utilice credenciales reales o publique la producción de herramientas sensibles.
-|. |
+| **Regla del laboratorio:** Utilice organizaciones ficticias, datos sintéticos, sistemas aislados y autorización escrita. Nunca ataque objetivos públicos, use credenciales reales ni publique resultados sensibles de herramientas. |
+|---|
 
-1. Crear una compañía ficticia de 50 personas con laptops, servidores, servicios en la nube, una aplicación web, personal remoto y cinco proveedores.
+1. Cree una empresa ficticia de 50 personas con portátiles, servidores, servicios en la nube, una aplicación web, personal remoto y cinco proveedores.
 
-2. Seleccione IG1 y documente tres adiciones basadas en el riesgo de IG2 o IG3.
+2. Seleccione IG1 y documente tres adiciones basadas en riesgos provenientes de IG2 o IG3.
 
-3. Construir inventarios de activos, software, datos, cuenta, sistema de autenticación, red, proveedor, aplicación y fuente de registro.
+3. Cree inventarios de activos empresariales, software, datos, cuentas, sistemas de autenticación, red, proveedores, aplicaciones y fuentes de registros.
 
-4. Use Nmap y osquery en un laboratorio aislado para conciliar los inventarios de activos y software.
+4. Utilice Nmap y osquery en un laboratorio aislado para conciliar los inventarios de activos y software.
 
-5. Utiliza OpenSCAP o Lynis en un host de laboratorio; conclusiones de configuración de documentos, excepciones, correcciones y reevaluación.
+5. Utilice OpenSCAP o Lynis en un equipo de laboratorio; documente hallazgos de configuración, excepciones, correcciones y reevaluación.
 
-6. Use Greenbone en los objetivos de laboratorio aprobados; valide la cobertura, los hallazgos, la remediación y la reutilización.
+6. Utilice Greenbone en objetivos de laboratorio aprobados; valide la cobertura, los hallazgos, la remediación y el nuevo escaneo.
 
-7. Use Wazuh o Suricata para generar e investigar una alerta de prueba segura.
+7. Utilice Wazuh o Suricata para generar e investigar una alerta de prueba segura.
 
-8. Use Trivy o ZAP en un repositorio de entrenamiento o aplicación y registre y repita.
+8. Utilice Trivy o ZAP sobre un repositorio o una aplicación de capacitación y registre la corrección y la repetición de pruebas.
 
-9. Escriba un registro de prueba de copia de seguridad y una tabla de incidentes.
+9. Redacte una prueba de restauración de copias de seguridad y un registro de ejercicio de mesa para incidentes.
 
-10. Crear cinco documentos de trabajo de evaluación de CIS con insumos, operaciones, medidas, métricas, listas de excepciones y conclusiones.
+10. Cree cinco documentos de trabajo basados en la Especificación para la Evaluación de Controles CIS, con entradas, operaciones, medidas, métricas, listas de excepciones y conclusiones.
 
-11. Publicar sólo artefactos sanitarios y afirmar claramente que el proyecto es ficticio y no una evaluación formal CIS.
+11. Publique únicamente artefactos depurados e indique claramente que el proyecto es ficticio y no constituye una evaluación formal de CIS.
 
-| **Artifact** | **Lo que prueba** |
-|... |
-TEN IG selection memo TEN Prioritization and risk reasoning |
-← Reconciliación de los inventarios
-Silencioso papel de salvaguardia | Estructura de medición oficial y pruebas
-Reevaluación de la configuración | Búsqueda técnica, corrección y retestigo
-TEN Vulnerability report ← Cobertura, priorización, excepción y remediación
-Silencioso Caso de detección
-| Restaurar prueba Silencioso Disponibilidad y pruebas de recuperación |
-tención Administrador dashboard | Clear risk and action communication
+| **Artefacto** | **Qué demuestra** |
+|---|---|
+| Memorando de selección del IG | Priorización y razonamiento basado en riesgos |
+| Conciliación de inventarios | Integridad de la población y capacidad analítica |
+| Documento de trabajo de una Salvaguarda | Estructura oficial de medición y evidencia |
+| Reevaluación de configuración | Hallazgo técnico, corrección y repetición de pruebas |
+| Informe de vulnerabilidades | Cobertura, priorización, excepción y remediación |
+| Caso de detección | Validación, investigación y respuesta ante alertas |
+| Prueba de restauración | Evidencia de disponibilidad y recuperación |
+| Tablero para la dirección | Comunicación clara de riesgos y acciones |
 
-28. Plan de aprendizaje de 30 días
+# 28. Plan de aprendizaje de treinta días
 
-*Un calendario centrado para la capacidad útil de nivel inferior*.
+*Un cronograma concentrado para desarrollar capacidades útiles de nivel junior.*
 
-**Días** |**
-|-------------------------------------------------------- |
-| 1–4 | Marco, 18 Controles, 153 Salvaguardias, IGs, clases de activos, funciones | Marco concepto mapa y IG memo ANTE
-tención 5–8 Silencioso Activos, software, datos, cuentas, acceso | Cuatro inventarios reconciliados
-TEN 9–12 | Configuración, vulnerabilidad, email, malware TEN Lab configuración y papel de trabajo de vulnerabilidad
-| 13–16 Silenciosos Logs, monitoreo, defensa de la red | Mapa fuente de registro y seguro caso de alerta
-| 17–19 Silencioso recuperación y respuesta a incidentes | Restaurar prueba y registro de mesa
-| 20–22 | Proveedores y seguridad de aplicaciones | Evaluación del Proveedor y lista de verificación para el desarrollo seguro
-Silencioso 23–25 Evaluación de la vida Especificación | Cinco medidas de seguridad completas
-| 26–28 | Laboratorios autorizados de herramientas y remediación
-TEN 29–30 | Portfolio y entrevistas | Portafolio Sanitizado y cinco historias de STAR |
+| **Días** | **Enfoque** | **Entregable** |
+|---|---|---|
+| 1–4 | Marco, 18 Controles, 153 Salvaguardas, IG, clases de activos y funciones | Mapa conceptual del marco y memorando del IG |
+| 5–8 | Activos, software, datos, cuentas y acceso | Cuatro inventarios conciliados |
+| 9–12 | Configuración, vulnerabilidades, correo electrónico y malware | Documento de trabajo de configuración y vulnerabilidades del laboratorio |
+| 13–16 | Registros, monitoreo y defensa de red | Mapa de fuentes de registros y caso de alerta segura |
+| 17–19 | Recuperación y respuesta a incidentes | Prueba de restauración y registro de ejercicio de mesa |
+| 20–22 | Proveedores y seguridad de aplicaciones | Evaluación de proveedor y lista de comprobación de desarrollo seguro |
+| 23–25 | Especificación para la Evaluación de Controles | Cinco mediciones completas de Salvaguardas |
+| 26–28 | Laboratorios autorizados con herramientas y remediación | Dos memorandos de corrección y repetición de pruebas |
+| 29–30 | Portafolio y entrevistas | Portafolio depurado y cinco historias STAR |
 
-29. Preparación de entrevistas
-
-* Respuestas claras, escenarios prácticos y preguntas para el empleador.*
-
-## 29.1 ¿Cuáles son los Controles CIS?
+# 29.1 ¿Cuáles son los Controles CIS?
 
 Un conjunto priorizado de mejores prácticas defensivas organizadas en 18 Controles y 153 Salvaguardias enfocadas.
 
@@ -1064,97 +811,82 @@ Sólo lo que el alcance definido y el soporte de evidencia confiable, con muestr
 
 ¿Cómo revisará el trabajo de los funcionarios superiores?
 
-# 30. Plantillas, Glosario, Índice y Referencias
+# 30. Plantillas, glosario, índice y referencias
 
-* Estructuras de trabajo reutilizables, términos importantes y puntos de partida autorizados.*
+*Estructuras de trabajo reutilizables, términos importantes y puntos de partida autorizados.*
 
-## 30.1 Documentos de trabajo de medición de salvaguardia
+## 30.1 Hoja de trabajo para medir Salvaguardas
 
-|** |
-|. |
-"La Salvaguardia de la Vida" y la IG "Antes"
-"Escopia y clase de activos"
-"Principal y sistemas de vida"
-Las dependencias y las suposiciones de la vida
-Inputs y validación de la vida
-"Operaciones en la vida"
-"Las medidas de la vida"
-"Metric and interpretation |"
-Excepciones y limitaciones de la vida
-La acción, el dueño, la fecha y la prueba de la vida
+| Campo | Contenido esperado |
+|---|---|
+| Salvaguarda e IG | Identificador, nombre y Grupo de Implementación aplicable. |
+| Alcance y clase de activo | Población, sistemas, datos, usuarios o procesos incluidos. |
+| Propietario y sistemas de registro | Responsable, custodios y fuentes autoritativas. |
+| Dependencias y supuestos | Condiciones necesarias, exclusiones y limitaciones. |
+| Entradas y validación | Datos utilizados y controles sobre su integridad. |
+| Operaciones | Pasos ejecutados para implementar o evaluar la Salvaguarda. |
+| Medidas | Conteos, fechas, configuraciones y resultados observados. |
+| Métrica e interpretación | Cálculo, umbral, tendencia y significado del resultado. |
+| Excepciones | Riesgo aceptado, aprobación, vigencia y compensaciones. |
+| Acción correctiva | Acción, propietario, fecha objetivo y evidencia de nueva prueba. |
 
 ## 30.2 Registro de hallazgos y nuevas pruebas
 
-|** |
-|... |
-Los Criterios de la vida siguen adelante.
-"Acondicionamiento y evidencia de vida"
-La población afectada está en peligro.
-"El riesgo y el impacto en la vida"
-| Cause TENED \ \ \ \ \ \ \ \ \ \ \      \ \ \  \ \   \   \                                                                                                                                                                                                            |
-"La protección provisional en la vida"
-Corrección y propietario de la vida
-La fecha de su muerte es la siguiente.
-"El procedimiento de la prueba de mentiras"
-Resultado final de la vida útil
+| Campo | Contenido esperado |
+|---|---|
+| Criterio | Requisito o condición evaluada. |
+| Condición y evidencia | Estado observado y evidencia trazable. |
+| Población afectada | Registros, activos, personas, sistemas o eventos aplicables. |
+| Riesgo e impacto | Consecuencia, probabilidad y prioridad. |
+| Causa | Causa raíz o factor contribuyente. |
+| Protección provisional | Medida temporal para reducir el riesgo. |
+| Corrección y propietario | Acción definitiva y responsable. |
+| Fecha objetivo | Fecha comprometida para completar la corrección. |
+| Procedimiento de nueva prueba | Método, alcance y evidencia requerida. |
+| Resultado final | Cerrado, parcialmente corregido, aceptado o pendiente. |
 
 ## 30.3 Glosario
 
-|** |
-|. |
-| Clase Asset | Categoría afectada por una Salvaguardia, como dispositivos, software, datos, red, usuarios o documentación. |
-| CIS Benchmark ← Recomendaciones de configuración segura para una tecnología específica. |
-tención CIS Control | Una de las 18 amplias áreas defensivas.
-confidencialidad CIS Salvaguardia | Una acción enfocada y implementable dentro de un Control. ←
-TENCIÓN TENIDA Compartir de la población aplicable en la que se implementa adecuadamente la Salvaguardia. |
-| IG1 tención 56 salvaguardas esenciales de la higiene cibernética. |
-| IG2 | IG1 más 74 Salvaguardias adicionales.
-TENIDA IG3 TENIDA IG1 e IG2 más 23 Salvaguardias adicionales; todos 153.
-TENCIÓN | Una cuenta, lista, fecha, configuración o resultado producido por operaciones de evaluación. |
-| | Cálculo o interpretación construido a partir de medidas.
-| Población | Completo conjunto de registros, activos, personas, sistemas o eventos aplicables.
-tención Revisión de procedimiento tención Evaluación manual de si existe un proceso necesario y contiene los elementos necesarios. |
-Función de seguridad permanente ← Govern, Identificar, Proteger, Detectar, Responder o Recuperar la cartografía.
+| Término | Definición |
+|---|---|
+| Clase de activo | Categoría afectada por una Salvaguarda, como dispositivos, software, datos, redes, usuarios o documentación. |
+| CIS Benchmark | Recomendaciones de configuración segura para una tecnología específica. |
+| CIS Control | Una de las 18 áreas defensivas de alto nivel de CIS Controls v8.1. |
+| CIS Salvaguarda | Acción enfocada e implementable incluida dentro de un CIS Control. |
+| Cobertura | Proporción de la población aplicable en la que una Salvaguarda está implementada correctamente. |
+| IG1 | Grupo de Implementación 1: 56 Salvaguardas esenciales de higiene cibernética. |
+| IG2 | Grupo de Implementación 2: IG1 más 74 Salvaguardas adicionales. |
+| IG3 | Grupo de Implementación 3: IG1 e IG2 más 23 Salvaguardas adicionales; 153 en total. |
+| Medida | Conteo, lista, fecha, configuración o resultado producido por las operaciones de evaluación. |
+| Métrica | Cálculo o interpretación construido a partir de medidas. |
+| Población | Conjunto completo de registros, activos, personas, sistemas o eventos aplicables. |
+| Revisión de procedimiento | Evaluación manual de si existe un proceso requerido y contiene los elementos necesarios. |
+| Función de seguridad | Categoría de resultado: Gobernar, Identificar, Proteger, Detectar, Responder o Recuperar. |
 
-## 30.4 Índice de asunto
+## 30.4 Índice temático
 
-Subjeto**
-|... |
-Silenciosos Cuentas
-| para la seguridad de la aplicación |
-Silencioso inventario de activos
-Silenciosos registros de auditoría
-| Protección de datos |
-| Evidencia y medición | 4
-Silenciosos Grupos de Aplicación
-| Respuesta del incidente |
-Silencioso analista junior
-| | |
-Silencioso Silencioso
-Silencioso en la Red 17-18
+| Tema | Sección |
+|---|---:|
+| Cuentas | 10 |
+| Seguridad de aplicaciones | 21 |
+| Inventario de activos empresariales | 6 |
+| Registros de auditoría | 13 |
+| Protección de datos | 8 |
+| Evidencia y medición | 4 |
+| Grupos de Implementación | 3 |
+| Respuesta a incidentes | 22 |
+| Analista junior | 5 |
+| Monitoreo y defensa de redes | 18 |
 | Herramientas de código abierto | 24 |
-pruebas de Penetración Silencioso
-Silencioso de recuperación
-proveedores de servicios | 20 |
-Silencioso Inventario de software
-TEN TERRITORIO TERRITORIO TERRITORIO
-TEN TERRITORIO DE Vulnerabilidad ANTE LAS 12
+| Pruebas de penetración | 23 |
+| Recuperación de datos | 16 |
+| Proveedores de servicios | 20 |
+| Inventario de software | 7 |
+| Gestión de vulnerabilidades | 12 |
 
 ## 30.5 Referencias oficiales
 
-[ ]](https://www.cisecurity.org/controls/v8-1 Controles v8.1
-
-[Nota de Controles CIS](https://www.cisecurity.org/controls/cis-controls-list)
-
-[ ]](https://www.cisecurity.org/controls/implementation-groups)
-
-[Seguido](https://www.cisecurity.org/controls/cis-controls-assessment-specification)
-
-[Seguido](https://cas.docs.cisecurity.org/en/latest/)
-
-[Seguido](https://www.cisecurity.org/controls/cis-controls-navigator)
-
-[ ]u]CIS Controles cartografías y cumplimiento efectuados/u título](https://www.cisecurity.org/cybersecurity-tools/mapping-compliance/mapping-and-compliance-with-the-cis-controls)
-
-| **Recuerdo final:** Cambio de marcos, mapas, herramientas, productos, amenazas, leyes, contratos y riesgos organizativos. Confirme los recursos oficiales actuales y las obligaciones aplicables antes de una aplicación o evaluación reales. |
-Respuesta
+- [CIS Controls v8.1](https://www.cisecurity.org/controls/v8-1)
+- [Lista de CIS Controls](https://www.cisecurity.org/controls/cis-controls-list)
+- [Grupos de Implementación](https://www.cisecurity.org/controls/implementation-groups)
+- [Especificación de Evaluación de CIS Controls](https://www.cisecurity.org/controls/cis-controls-assessment-specification)

@@ -3,8 +3,7 @@
 **Status:** Published and validated  
 **Source:** frozen English production edition  
 **Languages:** Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`)  
-**Localized production PR:** #35  
-**Main publication PR:** #38
+**Publication PR:** #35
 
 ## Published scope
 
@@ -44,8 +43,7 @@ The approved publication process:
 6. validated Figure 12-1 and Portuguese Appendix Q;
 7. ran fail-closed structural and artifact QA;
 8. generated source/build manifests and SHA-256 checksums;
-9. merged the validated packages into `production/multilingual-grc-editions` through PR #35;
-10. published the focused EU AI Act v1.3 package to the default `main` branch through PR #38.
+9. merged the validated packages into `production/multilingual-grc-editions` through PR #35.
 
 ## Maintenance rule
 

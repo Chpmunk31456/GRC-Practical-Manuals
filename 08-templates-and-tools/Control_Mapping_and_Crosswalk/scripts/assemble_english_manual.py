@@ -66,6 +66,23 @@ def validate_tools() -> dict[str, int]:
     return counts
 
 
+def validate_safeguards(assembled: str) -> None:
+    lowered = assembled.lower()
+    required = [
+        "a mapping is not proof of compliance",
+        "do not reproduce proprietary standards text without authorization",
+        "do not present a percentage of mapped requirements as a compliance percentage",
+        "automation can verify field counts",
+    ]
+    for phrase in required:
+        if phrase not in lowered:
+            raise SystemExit(f"Required safeguard missing: {phrase}")
+    unresolved = ["[TBD]", "[TODO]", "ZXQ0000QXZ"]
+    for token in unresolved:
+        if token.lower() in lowered:
+            raise SystemExit(f"Unresolved placeholder detected: {token}")
+
+
 def main() -> None:
     for path in CHAPTERS:
         if not path.is_file():
@@ -86,15 +103,7 @@ def main() -> None:
         })
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     assembled = "\n\n".join(parts).strip() + "\n"
-    prohibited = [
-        "automatically establishes compliance",
-        "proves compliance",
-        "guarantees certification",
-    ]
-    lowered = assembled.lower()
-    for phrase in prohibited:
-        if phrase in lowered:
-            raise SystemExit(f"Prohibited claim detected: {phrase}")
+    validate_safeguards(assembled)
     OUT_MD.write_text(assembled, encoding="utf-8")
     report = {
         "status": "PASS",

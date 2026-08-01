@@ -32,7 +32,7 @@ def repair_es(text: str) -> str:
             'ES image2 markup',
         ),
         ('# Publication and Use Notice', '# Aviso de publicación y uso', 'ES publication heading'),
-        ('2. ISMS Scope and Interested Parties', '# 2. Alcance del SGSI y partes interesadas', 'ES section 2 heading'),
+        ('\n2. ISMS Scope and Interested Parties\n', '\n# 2. Alcance del SGSI y partes interesadas\n', 'ES section 2 body heading'),
         ('# 1. ISO/IEC 27001 y 27002 Foundations', '# 1. Fundamentos de ISO/IEC 27001 y 27002', 'ES section 1 heading'),
         ('Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo y una guía de capítulo verificada. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego actualice la tabla completa.',
          '| **Tabla de contenido de Word:** Este documento contiene un campo nativo de tabla de contenido de Word y una guía de capítulos verificada. Después de editar, haga clic con el botón derecho en la tabla de contenido, seleccione **Actualizar campo** y luego **Actualizar toda la tabla**. |',
@@ -56,7 +56,7 @@ def repair_es(text: str) -> str:
 
 def repair_pt(text: str) -> str:
     exact = [
-        ('2. Âmbito de aplicação do ISMS e partes interessadas', '# 2. Escopo do SGSI e partes interessadas', 'PT section 2 heading'),
+        ('\n2. Âmbito de aplicação do ISMS e partes interessadas\n', '\n# 2. Escopo do SGSI e partes interessadas\n', 'PT section 2 body heading'),
         ('# 1. ISO/IEC 27001 e 27002 Fundações', '# 1. Fundamentos da ISO/IEC 27001 e 27002', 'PT section 1 heading'),
         ('[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)', '[Sumário [4](#table-of-contents)](#table-of-contents)', 'PT TOC label'),
         ('[28.2 Papel de ensaio de controlo [42](#control-test-workpaper)](#control-test-workpaper)', '[28.2 Papel de trabalho para teste de controle [42](#control-test-workpaper)](#control-test-workpaper)', 'PT workpaper label'),
@@ -70,7 +70,6 @@ def repair_pt(text: str) -> str:
     for old, new, label in exact:
         text = replace_once(text, old, new, label)
 
-    # High-confidence Brazilian Portuguese terminology normalization.
     substitutions = {
         r'\bcontrolos\b': 'controles',
         r'\bControlos\b': 'Controles',

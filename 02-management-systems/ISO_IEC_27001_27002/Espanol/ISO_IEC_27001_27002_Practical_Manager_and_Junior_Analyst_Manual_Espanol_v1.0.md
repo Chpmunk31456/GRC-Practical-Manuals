@@ -13,6 +13,8 @@
 Primera edición • Julio 2026
 
 | **Inside:** Cláusulas 4–10 • todos los 93 controles del Anexo A • riesgo • Declaración de aplicabilidad • auditoría • certificación • evidencia • herramientas • laboratorios • preparación de la carrera |
+|. |
+
 # Aviso de publicación y uso
 
 Autor: Alberto (Al) Leiva
@@ -48,133 +50,136 @@ Los auditores internos deben centrarse en criterios objetivos, independencia, po
 Las organizaciones que solicitan la certificación deben confirmar las normas, enmiendas, alcance de certificación y expectativas de acreditación con los profesionales competentes.
 
 Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo y una guía de capítulo verificada. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego actualice la tabla completa.
+|. |
+
 # Tabla de contenidos
 
-[Notificación de publicación y uso [2]](#aviso-de-publicación-y-uso)
+[Notificación de publicación y uso [2](#aviso-de-publicación-y-uso)](#aviso-de-publicación-y-uso)
 
-[Uso ético y autorizado [2]](#uso-ético-y-autorizado)
+[Uso electrónico y autorizado [2] (#uso-ético-y-autorizado)](#uso-ético-y-autorizado)
 
-[Prefacio [3]](#prefacio)
+[Prefacio [3] (#prefacio)](#prefacio)
 
-[Cómo utilizar este manual [4]](#cómo-utilizar-este-manual)
+[Cómo utilizar este manual [4](#cómo-utilizar-este-manual)](#cómo-utilizar-este-manual)
 
-[Tabla de contenidos [4]](#tabla-de-contenidos)
+[Tabla de contenidos [4](#tabla-de-contenidos)](#tabla-de-contenidos)
 
-[1. ISO/IEC 27001 y 27002 Foundations [7]](#isoiec-27001-and-27002-foundations)
+[1. ISO/IEC 27001 y 27002 Foundations [7](#isoiec-27001-and-27002-foundations)](#isoiec-27001-and-27002-foundations)
 
-[2. ISMS Scope and Interested Parties [8]](#isms-scope-and-interested-parties)
+[2. ISMS Scope and Interested Parties [8](#isms-scope-and-interested-parties)](#isms-scope-and-interested-parties)
 
-[3. Evaluación del riesgo y tratamiento del riesgo [9]](#risk-assessment-and-risk-treatment)
+[3. Evaluación del riesgo y tratamiento del riesgo [9](#risk-assessment-and-risk-treatment)](#risk-assessment-and-risk-treatment)
 
-[4. Declaración de aplicabilidad [10]](#statement-of-applicability)
+[4. Declaración de aplicabilidad [10](#statement-of-applicability)](#statement-of-applicability)
 
-[5. Documentación y pruebas [11]](#documentation-and-evidence)
+[5. Documentación y pruebas [11](#documentation-and-evidence)](#documentation-and-evidence)
 
-[6. Cláusula 4 — Contexto de la organización [12]](#clause-4-context-of-the-organization)
+[6. Cláusula 4 — Contexto de la organización [12](#clause-4-context-of-the-organization)](#clause-4-context-of-the-organization)
 
-[7. Cláusula 5 — Liderazgo [13]](#clause-5-leadership)
+[7. Cláusula 5 — Liderazgo [13](#clause-5-leadership)](#clause-5-leadership)
 
-[8. Cláusula 6 — Planificación [14]](#clause-6-planning)
+[8. Cláusula 6 — Planificación [14] (#clause-6-planning)] (#clause-6-planning)
 
-[9. Cláusula 7 - Apoyo [15]](#clause-7-support)
+[9. Cláusula 7 - Apoyo [15](#clause-7-support)](#clause-7-support)
 
-[10. Cláusula 8 — Operación [16]](#clause-8-operation)
+[10. Cláusula 8 — Operación [16] (#clause-8-operation)] (#clause-8-operation)
 
-[11. Cláusula 9 — Evaluación del desempeño [17]](#clause-9-performance-evaluation)
+[11. Cláusula 9 — Evaluación del desempeño [17](#clause-9-performance-evaluation)](#clause-9-performance-evaluation)
 
-[12. Cláusula 10 — Mejora [18]](#clause-10-improvement)
+[12. Cláusula 10 — Mejora [18](#clause-10-improvement)](#clause-10-improvement)
 
-[13. Anexo A 5 Controles de organización [19]](#annex-a-5-organizational-controls)
+[13. Anexo A 5 Controles de organización [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)
 
-[14. Anexo A 6 Controles de personas [22]](#annex-a-6-people-controls)
+[14. Anexo A 6 Controles de personas [22](#annex-a-6-people-controls)](#annex-a-6-people-controls)
 
-[15. Anexo A 7 Controles físicos [23]](#annex-a-7-physical-controls)
+[15. Anexo A 7 Controles físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)
 
-[16. Anexo A 8 Controles tecnológicos [24]](#annex-a-8-technological-controls)
+[16. Anexo A 8 Controles tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)
 
-[17. Implementing Controls with ISO/IEC 27002 [26]](#implementing-controls-with-isoiec-27002)
+[17. Implementing Controls with ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)
 
-[18. Pruebas de medición y control [27]](#metrics-and-control-testing)
+[18. Pruebas de medición y control [27](#metrics-and-control-testing)](#metrics-and-control-testing)
 
-[19. Auditoría interna [28]](#internal-audit)
+[19. Auditoría interna [28](#internal-audit)](#internal-audit)
 
-[20. Revisión por la dirección y acción correctiva [29]](#20-revisión-por-la-dirección-y-acción-correctiva)
+[20. Revisión por la dirección y acción correctiva [29](#20-revisión-por-la-dirección-y-acción-correctiva)](#20-revisión-por-la-dirección-y-acción-correctiva)
 
-[21. Preparación para la certificación [30]](#certification-readiness)
+[21. Lectura de certificación [30](#certification-readiness)](#certification-readiness)
 
-[22. Herramientas de código abierto [31]](#open-source-tools)
+[22. Herramientas de código abierto [31](#open-source-tools)](#open-source-tools)
 
-[22.1 Auxiliar de CISO [31]](#ciso-assistant)
+[22.1 Auxiliar de CISO [31](#ciso-assistant)](#ciso-assistant)
 
-[22.2 Comunidad SimpleRisk [31]](#simplerisk-community)
+[22.2 Comunidad SimpleRisk [31](#simplerisk-community)](#simplerisk-community)
 
-[22.3 Wazuh [31]](#wazuh)
+[22.3 Wazuh [31](#wazuh)](#wazuh)
 
-[22.4 osquery [32]](#osquery)
+[22.4 osquery [32](#osquery)](#osquery)
 
-[22.5 OpenSCAP [32]](#openscap)
+[22.5 OpenSCAP [32](#openscap)](#openscap)
 
-[22.6 Greenbone Community Edition [32]](#greenbone-community-edition)
+[22.6 Greenbone Community Edition [32](#greenbone-community-edition)](#greenbone-community-edition)
 
-[22.7 Nmap [32]](#nmap)
+[22.7 Nmap [32](#nmap)](#nmap)
 
-[22.8 Trivy [32]](#trivy)
+[22.8 Trivy [32](#trivy)](#trivy)
 
-[22.9 OWASP ZAP [33]](#owasp-zap)
+[22.9 OWASP ZAP [33](#owasp-zap)](#owasp-zap)
 
-[22.10 Keycloak [33]](#keycloak)
+[22.10 Keycloak [33](#keycloak)](#keycloak)
 
-[22.11 DefectDojo [33]](#defectdojo)
+[22.11 DefectDojo [33](#defectdojo)](#defectdojo)
 
-[22.12 AIDE [33]](#aide)
+[22.12 AIDE [33](#aide)](#aide)
 
-[22.13 Lynis [33]](#lynis)
+[22.13 Lynis [33](#lynis)](#lynis)
 
-[22.14 Agente de política abierta [33]](#open-policy-agent)
+[22.14 Agente de política abierta [33](#open-policy-agent)](#open-policy-agent)
 
-[23. Manual del SGSI para gerentes [35]](#managers-isms-playbook)
+[23. Manual del SGSI para gerentes [35](#managers-isms-playbook)](#managers-isms-playbook)
 
-[24. Guía de la carrera de analista junior [36]](#junior-analyst-career-guide)
+[24. Guía de la carrera de analista junior [36](#junior-analyst-career-guide)](#junior-analyst-career-guide)
 
-[24.1 Trabajo junior típico [36]](#typical-junior-work)
+[24.1 Trabajo junior típico [36](#typical-junior-work)](#typical-junior-work)
 
-[24.2 Habilidades que valoran los empleadores [37]](#skills-employers-value)
+[24.2 Valor de los empleadores de habilidades [37](#skills-employers-value)](#skills-employers-value)
 
-[25. Laboratorio ficticio y portafolio [38]](#fictional-laboratory-and-portfolio)
+[25. Laboratorio de Ficción y Cartera [38](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)
 
-[26. Plan de aprendizaje de 30 días [39]](#thirty-day-learning-plan)
+[26. Plan de aprendizaje de 30 días [39] (#thirty-day-learning-plan)](#thirty-day-learning-plan)
 
-[27. Preparación de entrevistas [40]](#interview-preparation)
+[27. Preparación de entrevistas [40](#interview-preparation)](#interview-preparation)
 
-[27.1 ¿Qué es un ISMS? [40]](#what-is-an-isms)
+[27.1 ¿Qué es un ISMS? [40](#what-is-an-isms)](#what-is-an-isms)
 
-[27.2 ISO 27001 versus 27002? [40]](#iso-27001-versus-27002)
+[27.2 ISO 27001 versus 27002? [40](#iso-27001-versus-27002)](#iso-27001-versus-27002)
 
-[27.3 ¿Cuál es el SoA? [40]](#what-is-the-soa)
+[27.3 ¿Cuál es el SoA? [40](#what-is-the-soa)](#what-is-the-soa)
 
-[27.4 ¿Todos los controles del anexo A son obligatorios? [40]](#are-all-annex-a-controls-mandatory)
+[27.4 ¿Todos los controles del anexo A son obligatorios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)
 
-[27.5 ¿Cómo se prueba un control? [40]](#how-do-you-test-a-control)
+[27.5 ¿Cómo se prueba un control? [40](#how-do-you-test-a-control)](#how-do-you-test-a-control)
 
-[27.6 ¿Qué es una no conformidad? [40]](#what-is-a-nonconformity)
+[27.6 ¿Qué es una no conformidad? [40](#what-is-a-nonconformity)](#what-is-a-nonconformity)
 
-[27.7 ¿Qué cambió en 2024? [40]](#what-changed-in-2024)
+[27.7 ¿Qué cambió en 2024? [40](#what-changed-in-2024)](#what-changed-in-2024)
 
-[27.8 ¿Qué puede concluir un analista junior con seguridad? [40]](#what-can-a-junior-analyst-safely-conclude)
+[27.8 ¿Qué puede concluir un analista junior con seguridad? [40](#what-can-a-junior-analyst-safely-conclude)](#what-can-a-junior-analyst-safely-conclude)
 
-[27.9 Preguntas para hacer al empleador [40]](#questions-to-ask-the-employer)
+[27.9 Preguntas para hacer al empleador [40](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)
 
-[28. Plantillas, Glosario, Índice y Referencias [42]](#templates-glossary-index-and-references)
+[28. Plantillas, Glosario, Índice y Referencias [42](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
 
-[28.1 Registro mínimo de riesgo [42]](#minimal-risk-record)
+[28.1 Registro mínimo de riesgo [42](#minimal-risk-record)](#minimal-risk-record)
 
-[28.2 Documentos de prueba de control [42]](#control-test-workpaper)
+[28.2 Documentos de prueba de control [42](#control-test-workpaper)](#control-test-workpaper)
 
-[28.3 Glosario [42]](#glossary)
+[28.3 Glosario [42](#glossary)](#glossary)
 
-[28.4 Índice de asunto [43]](#subject-index)
+[28.4 Índice de asunto [43](#subject-index)](#subject-index)
 
-[28.5 Referencias oficiales [43]](#official-references)
+[28.5 Referencias oficiales [43](#official-references)](#official-references)
+
 # 1. ISO/IEC 27001 y 27002 Foundations
 
 *Ediciones actuales, propósito, relación y limitaciones importantes.*
@@ -192,7 +197,7 @@ Gráfico 1 Ciclo de mejora continua de los ISMS
 
 - Las cláusulas 4-10 contienen requisitos que una organización debe abordar para su conformidad.
 
-- En el Anexo A se enumeran 93 controles de referencia en cuatro temas: 37 organizativos, 8 relacionados con personas, 14 físicos y 34 tecnológicos.
+- En el anexo A se enumeran 93 controles de referencia en cuatro temas: 37 orgánicos, 8 personas, 14 físicos y 34 tecnológicos.
 
 - La selección de control sigue el tratamiento de riesgos y las obligaciones aplicables; el anexo A no es una lista de verificación universal en la que siempre debe aplicarse cada control.
 
@@ -210,13 +215,14 @@ Gráfico 1 Ciclo de mejora continua de los ISMS
 
 - Determinar las partes interesadas y los requisitos pertinentes, incluidos los clientes, reguladores, trabajadores, propietarios, proveedores, comunidades y partes interesadas en la certificación.
 
-- Considerar si el cambio climático es relevante para la eficacia del SGSI y si las partes interesadas tienen requisitos relacionados con el clima; documentar el razonamiento.
+- Considerar si el cambio climático es relevante para la eficacia del SIV y si las partes interesadas tienen requisitos relacionados con el clima; documentar el razonamiento.
 
 - Definir límites de alcance, interfaces, exclusiones, dependencias y justificación en lenguaje que pueda ser auditado.
 
 - Mantenga el alcance alineado con los inventarios de activos, procesos, red, nube, proveedor y flujo de datos.
 
- ** Prueba de la encuesta**
+Silencioso ** Prueba de la encuesta**
+|. |
 ¿Qué entidades jurídicas, sitios, servicios, procesos y tecnología están incluidas? | Declaración y mapas aprobados del alcance
 | INTERCAMBIO | ¿Qué conecta el alcance con otros equipos, sistemas, proveedores y ubicaciones? flujos de datos, arquitectura, contratos, matriz de responsabilidad
 ¿Podría ocultarse información importante o riesgo fuera del límite establecido? | Reconocimiento de inventarios y descubrimientos
@@ -251,7 +257,7 @@ Definir los criterios de riesgo antes de anotar: método de identificación de r
 
 <!-- REVISIÓN HUMANA: falta el recurso localizado media/image3.png; texto alternativo conservado: The SoA records reasoned control selection and implementation status. -->
 
-Figura 3. Flujo de trabajo de la Declaración de Aplicabilidad
+Figure 3. Statement of Applicability workflow
 
 - List the controls necessary to treat identified information-security risks and meet legal, regulatory, contractual, and business requirements.
 
@@ -265,11 +271,12 @@ Figura 3. Flujo de trabajo de la Declaración de Aplicabilidad
 
 - Controlar el SoA como información documentada y actualizarla después de cambios de riesgo, alcance, legal, proveedor, tecnología o control.
 
-| **Control** ** Aplicable** |
-| Ejemplo 8.15 logging | Sí | Necesitado para la detección, la investigación y las obligaciones Aplicado con acciones abiertas Operaciones de Seguridad / inventario de fuentes y registros de revisión
+| **Control** Silencioso ** Aplicable** |
+|. |
+| Ejemplo 8.15 logging | Sí | Necesitado para la detección, la investigación y las obligaciones TEN Aplicado con acciones abiertas TEN Operaciones de Seguridad / inventario de fuentes y registros de revisión
 ← Ejemplo 7.9 activos fuera de locales | Sí | Personal remoto y de viaje utilizan dispositivos de empresa ← Operaciones de TI aplicadas / inventario y prueba de encriptación
 Por ejemplo, control de la organización | Sí | El riesgo específico de seguridad de productos requiere versiones firmadas | Implementado parcialmente | Ingeniería / archivos de tuberías
-Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente del alcance controlado No aplicable ANTES Ámbito de estudio y evidencia de arquitectura
+Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente del alcance controlado TEN No aplicable ANTES Ámbito de estudio y evidencia de arquitectura
 
 # 5. Documentación y evidencia
 
@@ -277,20 +284,20 @@ Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente 
 
 <!-- REVISIÓN HUMANA: falta el recurso localizado media/image4.png; texto alternativo conservado: La evidencia debe apoyar el diseño, operación, excepciones, corrección, y retest. -->
 
-Figura 4. Cadena de requisitos a evidencia
+Figure 4. Requirement-to-evidence chain
 
 | **Documento o registro** | **Purpose** | ** Controles de control**
 La vida... la vida... la vida... la vida... la vida...
- ISMS scope | Define los límites e interfaces | Aprobado, actual, coherente con la realidad |
- | Establece dirección y compromisos
- método de riesgo y registro | Muestra evaluación y decisiones repetibles ← Criterios aplicados consistentemente; los propietarios aprueban el riesgo residual
+tención ISMS scope | Define los límites e interfaces | Aprobado, actual, coherente con la realidad |
+Silencioso | Establece dirección y compromisos
+tención método de riesgo y registro | Muestra evaluación y decisiones repetibles ← Criterios aplicados consistentemente; los propietarios aprueban el riesgo residual
 Plan de tratamiento de riesgo | Pistas acciones, propietarios, recursos y fechas | SONAL a riesgos y SoA |
- Declaración de aplicabilidad | Explica selección de control y estatus | Todos los controles del Anexo A abordados; justificaciones apoyadas
- Objetivos y métricas Mostrar resultados planificados y evaluación
+tención Declaración de aplicabilidad | Explica selección de control y estatus | Todos los controles del Anexo A abordados; justificaciones apoyadas
+TENCIÓN Objetivos y métricas TENENCIA Mostrar resultados planificados y evaluación
 ← Competencia y registros de conciencia | Apoyo a la capacidad y la comprensión
 | Pruebas operativas | Shows controles realmente operados | Completa, auténtica, protegida, retenida
- auditiva y registros de revisión apoya la supervisión y las decisiones
-| Correctiva-action records | Shows root cause and effective correction Cause addressed, recurrence considered, effectiveness verified |
+tención auditiva y registros de revisión tención apoya la supervisión y las decisiones
+| Correctiva-action records | Shows root cause and effective correction TEN Cause addressed, recurrence considered, effectiveness verified |
 
 # Cláusula 4 - Contexto de la organización
 
@@ -464,7 +471,7 @@ Gráfico 6 Temas de control del anexo A
 
 <!-- REVISIÓN HUMANA: falta el recurso localizado media/image7.png; texto alternativo conservado: Prepárese, evalúe, responda, preserve la evidencia y aprenda de los incidentes. -->
 
-Figura 7. Gestión de incidentes de seguridad
+Figure 7. Security-incident management
 
 # 14. Anexo A 6 Controles de personas
 
@@ -573,6 +580,8 @@ Figura 7. Gestión de incidentes de seguridad
 8. Actualizar riesgos, plan de tratamiento, SoA, procedimientos y evidencia cuando el control cambia.
 
 **Distinción importante:** ISO/IEC 27002 proporciona orientación. La organización sigue siendo responsable de seleccionar y diseñar controles que traten sus riesgos y cumplan los requisitos aplicables. |
+|. |
+
 # 18. Pruebas de medición y control
 
 *Cómo verificar si el ISMS y sus controles funcionan.*
@@ -893,7 +902,7 @@ Análisis de la seguridad
 
 - Proteger información confidencial y permanecer dentro de la autorización.
 
-## 24.2 Habilidades que valoran los empleadores
+## 24.2 Valor de los empleadores de habilidades
 
 | **Habilidad** | **Evidencia** |
 |---|---|
@@ -910,6 +919,8 @@ Análisis de la seguridad
 *Un entorno de prácticas seguras utilizando datos sintéticos y sistemas de laboratorio autorizados*.
 
 * La regla del laboratorio* Utilice una organización ficticia, datos sintéticos, sistemas aislados y herramientas que está autorizado para operar. No pretenda que un proyecto de cartera sea una certificación real o una auditoría cliente. |
+|. |
+
 1. Crear una empresa ficticia con dos productos, un servicio en la nube, una fuerza de trabajo remota y tres proveedores.
 
 2. Escribir un análisis de contexto de una página, registro de partes interesadas, determinación de la relación climática y declaración de alcance.
@@ -930,11 +941,11 @@ Análisis de la seguridad
 
 10. Publicar sólo artefactos sintéticos y sanitarios con una clara declaración de limitaciones.
 
-| **Portfolio artifact** | **Lo que demuestra**
+| **Portfolio artifact** | **Lo que demuestra** tención
 |... |
 ← Contexto, partes, alcance | Cláusula 4 razonamiento y límites
- método de riesgo, registro, tratamiento confidencialidad Cláusula 6 y responsabilidad de riesgo
- Declaración de aplicabilidad
+tención método de riesgo, registro, tratamiento confidencialidad Cláusula 6 y responsabilidad de riesgo
+Silencioso Declaración de aplicabilidad Silencioso
 documento de trabajo de la prueba de control | Evidencia, muestreo, excepción y conclusión
 ← Programa de auditoría interna, plan, criterios, informe, y seguimiento
 ← Gestión-revisión minutos | Evaluación y decisiones Liderazgo
@@ -1030,10 +1041,11 @@ El dueño de la acción y el tratamiento de la vida ha estado en la vida.
 ## 28.2 Documentos de prueba de control
 
 |** |
+|. |
 Criterios y control de la vida
 "Escopia y período de vida"
 "Principal y sistemas de vida"
-⋅ Population and completeness check Н \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+⋅ Population and completeness check Н \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \ \ \  \                                                                                                                                                                                                    
 "Sensacionalidad y racionalidad"
 El procedimiento de detención se llevó a cabo en la vida.
 Evidencia inspeccionada, inspeccionada.
@@ -1045,38 +1057,38 @@ Corrección y prueba de vida
 
 |** |
 |... |
-| ANEXO A Conjunto de referencia de 93 controles de seguridad de la información en ISO/IEC 27001:2022. |
- CIA | Confidencialidad, integridad y disponibilidad.
- Conformity | Fulfillment of a requirement.
+| ANEXO A TENCIÓN Conjunto de referencia de 93 controles de seguridad de la información en ISO/IEC 27001:2022. |
+TEN CIA | Confidencialidad, integridad y disponibilidad.
+Silencioso Conformity | Fulfillment of a requirement.
 | Control | Medición que modifica o mantiene el riesgo.
 | Acción Correctiva | Acción frente a la causa de una no conformidad para prevenir la recurrencia.
 | Información documentada | Información que la organización debe controlar y mantener o retener.
 | Parte interesada | Persona u organización que puede afectar, ser afectada por, o percibirse afectada por una decisión o actividad. |
 | ISMS | Sistema de gestión de la seguridad de la información.
-| Noconformidad para cumplir con un requisito. |
+| Noconformidad Silencioso para cumplir con un requisito. |
 | Riesgo residual | El riesgo permanece después del tratamiento.
- propietario | Persona o entidad responsable y autorizado para gestionar un riesgo.
-| SoA Declaración de Aplicabilidad. |
- Gestión superior | Persona o grupo dirigiendo y controlando la organización al más alto nivel dentro del alcance. ←
+Silencioso propietario | Persona o entidad responsable y autorizado para gestionar un riesgo.
+| SoA Silencioso Declaración de Aplicabilidad. |
+tención Gestión superior | Persona o grupo dirigiendo y controlando la organización al más alto nivel dentro del alcance. ←
 
 ## 28.4 Índice de asunto
 
 Subjeto**
 |---------------------------- |
 | ANEXO A controls | 13-16
- en la auditoría
- Certificación | 21 |
+Silencioso en la auditoría
+Silencioso Certificación | 21 |
 | Cambio climático |
 | Acción correctiva |
 | Evidencia | 5, 18
 Silenciosas partes interesadas
- analista junior
- examen de la gestión
-TENIDA Metrics 11, 18
+Silencioso analista junior
+Silencioso examen de la gestión
+TENIDA Metrics TENENCIA 11, 18
 | Herramientas de código abierto | 22 |
- evaluación y tratamiento de los riesgos
- en la vida útil 2, 6
- Declaración de aplicabilidad
+Silencioso evaluación y tratamiento de los riesgos
+Silencioso en la vida útil 2, 6
+Silencioso Declaración de aplicabilidad
 Silenciosos Proveedores | 13, 18, 23 |
 
 ## 28.5 Referencias oficiales
@@ -1094,3 +1106,4 @@ Silenciosos Proveedores | 13, 18, 23 |
 [ISO/IEC 27000 family](https://www.iso.org/standard/iso-iec-27000-family)
 
 | **Recuerdo final:** Adquirir o acceder legalmente a las normas oficiales antes de su aplicación o evaluación. Confirme las ediciones, enmiendas, acreditación, alcance de certificación, requisitos legales, contratos, tecnología, amenazas y cambio organizativo. |
+|. |

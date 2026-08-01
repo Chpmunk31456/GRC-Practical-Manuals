@@ -265,11 +265,12 @@ Figura 3. Flujo de trabajo de la Declaración de Aplicabilidad
 
 - Controlar la Declaración de Aplicabilidad como información documentada y actualizarla después de cambios materiales en el riesgo, el alcance, los requisitos legales, los proveedores, la tecnología o los controles.
 
-| **Control** ** Aplicable** |
-| Ejemplo 8.15 logging | Sí | Necesitado para la detección, la investigación y las obligaciones Aplicado con acciones abiertas Operaciones de Seguridad / inventario de fuentes y registros de revisión
-← Ejemplo 7.9 activos fuera de locales | Sí | Personal remoto y de viaje utilizan dispositivos de empresa ← Operaciones de TI aplicadas / inventario y prueba de encriptación
-Por ejemplo, control de la organización | Sí | El riesgo específico de seguridad de productos requiere versiones firmadas | Implementado parcialmente | Ingeniería / archivos de tuberías
-Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente del alcance controlado No aplicable ANTES Ámbito de estudio y evidencia de arquitectura
+| **Control** | **¿Aplicable?** | **Justificación** | **Estado** | **Responsable / evidencia** |
+|---|---|---|---|---|
+| Ejemplo 8.15: registro de eventos | Sí | Necesario para la detección, la investigación y el cumplimiento de obligaciones | Implementado con acciones abiertas | Operaciones de Seguridad / inventario de fuentes y registros de revisión |
+| Ejemplo 7.9: activos fuera de las instalaciones | Sí | El personal remoto y en viaje utiliza dispositivos de la organización | Implementado | Operaciones de TI / inventario y evidencia de cifrado |
+| Ejemplo de control específico de la organización | Sí | Un riesgo específico de seguridad del producto exige versiones firmadas | Parcialmente implementado | Ingeniería / registros de la canalización |
+| Ejemplo de exclusión | No | La tecnología o el escenario descritos no existen dentro del alcance controlado | No aplicable | Evidencia del alcance y de la arquitectura |
 
 # 5. Documentación y evidencia
 
@@ -279,20 +280,20 @@ Por ejemplo, la exclusión La tecnología descrita o el escenario está ausente 
 
 Figura 4. Cadena de requisitos a evidencia
 
-| **Documento o registro** | **Purpose** | ** Controles de control**
-La vida... la vida... la vida... la vida... la vida...
- ISMS scope | Define los límites e interfaces | Aprobado, actual, coherente con la realidad |
- | Establece dirección y compromisos
- método de riesgo y registro | Muestra evaluación y decisiones repetibles ← Criterios aplicados consistentemente; los propietarios aprueban el riesgo residual
-Plan de tratamiento de riesgo | Pistas acciones, propietarios, recursos y fechas | SONAL a riesgos y SoA |
- Declaración de aplicabilidad | Explica selección de control y estatus | Todos los controles del Anexo A abordados; justificaciones apoyadas
- Objetivos y métricas Mostrar resultados planificados y evaluación
-← Competencia y registros de conciencia | Apoyo a la capacidad y la comprensión
-| Pruebas operativas | Shows controles realmente operados | Completa, auténtica, protegida, retenida
- auditiva y registros de revisión apoya la supervisión y las decisiones
-| Correctiva-action records | Shows root cause and effective correction Cause addressed, recurrence considered, effectiveness verified |
+| **Documento o registro** | **Propósito** | **Comprobaciones de control** |
+|---|---|---|
+| Alcance del SGSI | Define los límites y las interfaces | Aprobado, vigente y coherente con la realidad |
+| Política | Establece la dirección y los compromisos | Aprobada, comunicada y revisada |
+| Método y registro de riesgos | Demuestra una evaluación y unas decisiones repetibles | Criterios aplicados de forma coherente; los propietarios aprueban el riesgo residual |
+| Plan de tratamiento de riesgos | Registra acciones, responsables, recursos y fechas | Alineado con los riesgos y la Declaración de Aplicabilidad |
+| Declaración de Aplicabilidad | Explica la selección y el estado de los controles | Todos los controles del Anexo A están abordados y las justificaciones están sustentadas |
+| Objetivos y métricas | Muestra los resultados previstos y su evaluación | Medibles, con responsables, analizados y sujetos a acciones |
+| Registros de competencia y concientización | Sustentan la capacidad y la comprensión | Basados en funciones, evaluados y vigentes |
+| Evidencia operativa | Demuestra que los controles funcionaron realmente | Completa, auténtica, protegida y conservada |
+| Registros de auditoría y revisión | Sustentan la supervisión y las decisiones | Objetivos, completos y con seguimiento |
+| Registros de acciones correctivas | Demuestran la causa raíz y una corrección eficaz | Causa abordada, recurrencia considerada y eficacia verificada |
 
-# Cláusula 4 - Contexto de la organización
+# 6. Cláusula 4 - Contexto de la organización
 
 *Requisitos de idiomas, enfoque de verificación y pruebas de ejemplo*.
 

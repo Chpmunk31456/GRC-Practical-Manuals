@@ -7,12 +7,12 @@
       "findings": {
         "untranslated_english_control_text": [
           {
-            "line": 1050,
+            "line": 1051,
             "pattern": "\\bConformity\\b",
             "text": " Conformity | Fulfillment of a requirement."
           },
           {
-            "line": 1050,
+            "line": 1051,
             "pattern": "\\bFulfillment of a requirement\\b",
             "text": " Conformity | Fulfillment of a requirement."
           }
@@ -31,7 +31,7 @@
         "3": 1,
         "4": 1,
         "5": 1,
-        "6": 0,
+        "6": 1,
         "7": 1,
         "8": 1,
         "9": 1,
@@ -55,9 +55,7 @@
         "27": 1,
         "28": 1
       },
-      "missing_major_sections": [
-        6
-      ],
+      "missing_major_sections": [],
       "duplicate_major_sections": [],
       "image_reference_counts": {
         "1": 1,
@@ -72,8 +70,8 @@
       },
       "missing_image_references": [],
       "table_signals": {
-        "pipe_rows": 304,
-        "separator_rows": 36,
+        "pipe_rows": 312,
+        "separator_rows": 38,
         "collapsed_rule_rows": 0,
         "malformed_separator_rows": 0
       },

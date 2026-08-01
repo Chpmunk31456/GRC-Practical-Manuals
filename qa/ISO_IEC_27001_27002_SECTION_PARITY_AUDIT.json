@@ -111,12 +111,12 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 2037,
-        "pipe_rows": 4,
+        "chars": 2213,
+        "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 1,
-        "length_ratio": 0.885,
+        "length_ratio": 0.962,
         "blockers": [
           "residual_english"
         ],
@@ -146,17 +146,14 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 3675,
-        "pipe_rows": 16,
+        "chars": 1788,
+        "pipe_rows": 12,
         "images": 1,
-        "bad_hits": 2,
-        "english_fragments": 1,
-        "length_ratio": 1.754,
-        "blockers": [
-          "corruption_tokens",
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "bad_hits": 0,
+        "english_fragments": 0,
+        "length_ratio": 0.853,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 189,
@@ -182,18 +179,14 @@
         "english_fragments": 0
       },
       "es-419": {
-        "chars": 0,
-        "pipe_rows": 0,
+        "chars": 2229,
+        "pipe_rows": 10,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.0,
-        "blockers": [
-          "missing_heading",
-          "table_structure_drift",
-          "length_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.759,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 164,

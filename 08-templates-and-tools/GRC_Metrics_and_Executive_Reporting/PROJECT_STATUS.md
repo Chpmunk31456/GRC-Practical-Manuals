@@ -1,24 +1,30 @@
 # Project Status — GRC Metrics and Executive Reporting Toolkit
 
 - Branch: `manual/grc-metrics-and-executive-reporting`
-- Status: active controlled development
-- Authorization: repository owner authorized autonomous completion, QA, merge, catalog updates, and workflow cleanup
-- English manual: in development
-- Editable tools: in development
-- English DOCX/PDF: planned after controlled source assembly
-- Spanish (`es-419`): planned after English baseline
-- Brazilian Portuguese (`pt-BR`): planned after English baseline
-- Automated QA and checksums: planned
+- Status: completed publication candidate; final repository integration and independent merge review
+- English manual: complete — six controlled chapters
+- Editable tools: complete — 40, 36, 34, and 28 fields
+- English Markdown/DOCX/searchable PDF: automated QA PASS
+- Spanish (`es-419`): machine-assisted publication candidate; automated QA PASS
+- Brazilian Portuguese (`pt-BR`): machine-assisted publication candidate; automated QA PASS
+- Automated QA and SHA-256 checksums: complete
+- Core official-source revalidation: complete and recorded in `SOURCES.md`
+
+## Validation evidence
+
+- English PDF: 9 pages; 2,353 extracted words
+- Spanish PDF: 9 pages; 2,848 extracted words; 7 H1 / 45 H2 parity
+- Brazilian Portuguese PDF: 9 pages; 2,782 extracted words; 7 H1 / 45 H2 parity
+- DOCX ZIP integrity, searchable PDF text, protected-token restoration, heading parity, and tool schemas: PASS
 
 ## Release safeguards
 
-- Metrics will retain decision purpose, formula, scope, owner, source, frequency, threshold rationale, limitations, and review date.
-- Data-quality status will remain visible rather than being hidden by a score or color.
-- Targets, thresholds, benchmarks, and trends will be distinguished.
-- Aggregated scores will retain underlying component traceability.
-- Metrics will not be represented as proof of compliance, control effectiveness, security, audit assurance, or business performance.
-- Native-language, statistical, legal, regulatory, accessibility, and full page-by-page human review limitations will remain explicit.
+- Metrics retain decision purpose, formula, scope, owner, source, frequency, threshold rationale, limitations, and review date.
+- Data-quality status remains visible rather than hidden by a score or color.
+- Targets, thresholds, benchmarks, and trends are distinguished.
+- Aggregated scores retain underlying component traceability.
+- Metrics are not represented as proof of compliance, control effectiveness, security, audit assurance, or business performance.
 
-## Source-verification status
+## Human-only limitations
 
-Official-source revalidation is pending because the public search service was unavailable during initialization. No external publication is treated as current until its official page and version are verified and recorded in `SOURCES.md`.
+Native-language editorial approval, legal or regulatory review, statistical validation, accessibility testing, formal audit assurance, and full page-by-page human visual review are not represented as completed.

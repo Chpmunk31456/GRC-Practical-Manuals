@@ -10,16 +10,14 @@
         "english_fragments": 2
       },
       "es-419": {
-        "chars": 1673,
+        "chars": 1676,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
-        "english_fragments": 1,
-        "length_ratio": 0.909,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "english_fragments": 0,
+        "length_ratio": 0.91,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 124,
@@ -536,16 +534,14 @@
         "english_fragments": 0
       },
       "es-419": {
-        "chars": 1187,
-        "pipe_rows": 0,
+        "chars": 1195,
+        "pipe_rows": 2,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.919,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.926,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 136,
@@ -797,16 +793,14 @@
         "english_fragments": 2
       },
       "es-419": {
-        "chars": 2266,
-        "pipe_rows": 3,
+        "chars": 2435,
+        "pipe_rows": 12,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.903,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.97,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 674,
@@ -894,16 +888,14 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 3457,
-        "pipe_rows": 24,
+        "chars": 4005,
+        "pipe_rows": 57,
         "images": 0,
-        "bad_hits": 1,
+        "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.529,
-        "blockers": [
-          "corruption_tokens"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.612,
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 3722,

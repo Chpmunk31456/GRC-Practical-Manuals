@@ -9,22 +9,16 @@ This deterministic audit identifies structural and known localization defects. I
 ## es-419
 
 - Source: `02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md`
-- Status: **FAIL**
+- Status: **PASS**
 - Missing major sections: none
 - Duplicate major sections: none
 - Missing image references: none
-- Table signals: `{'pipe_rows': 312, 'separator_rows': 38, 'collapsed_rule_rows': 0, 'malformed_separator_rows': 0}`
+- Table signals: `{'pipe_rows': 356, 'separator_rows': 43, 'collapsed_rule_rows': 0, 'malformed_separator_rows': 0}`
 - Table blockers: none
 
 ### Findings
 
-#### untranslated_english_control_text
-- Line 1051: ` Conformity | Fulfillment of a requirement.`
-- Line 1051: ` Conformity | Fulfillment of a requirement.`
-
-#### known_mistranslations
-- Line 50: `Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo y una guía de capítulo verificada. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego ac`
-
+No configured findings.
 ## pt-BR
 
 - Source: `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md`

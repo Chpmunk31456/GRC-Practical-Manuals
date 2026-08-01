@@ -6,15 +6,25 @@ A practical, plain-language manual for establishing, operating, reviewing, and r
 
 This manual covers governance, risk statements, risk ownership, likelihood and impact, inherent and residual risk, control linkage, treatment planning, exceptions, escalation, reporting, review cycles, and evidence.
 
-## Planned publication package
+## Publication package
 
 - English controlled Markdown master
-- Editable risk-register templates
-- Microsoft Word edition
-- Searchable PDF edition
-- Latin American Spanish edition (`es-419`)
-- Brazilian Portuguese edition (`pt-BR`)
-- QA reports, manifests, and checksums
+- English Microsoft Word edition
+- English searchable PDF edition
+- Editable 41-field risk-register template
+- Editable 27-field risk-treatment plan template
+- Risk-acceptance record
+- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF candidate
+- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF candidate
+- Assembly reports, QA records, and SHA-256 checksums
+
+The Spanish and Brazilian Portuguese editions are clearly identified as machine-assisted publication candidates. Their automated structural and package checks passed, but native-language editorial approval is not represented as completed.
+
+## Quality evidence
+
+English and localized package evidence is stored alongside each edition. Automated checks cover source assembly, heading parity, protected-token restoration, DOCX ZIP integrity, searchable PDF text, field counts, page counts, extracted-word thresholds, and checksums.
+
+Automated validation does not replace legal or regulatory review, standards certification, assistive-technology testing, or full page-by-page human visual inspection.
 
 ## Author
 

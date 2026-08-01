@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "template_field_counts": {
+    "Evidence_Request_Tracker.csv": 38,
+    "Evidence_Quality_Review_Checklist.csv": 36,
+    "Audit_Request_and_Response_Log.csv": 21,
+    "Corrective_Action_Tracker.csv": 32
+  },
+  "docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "checksummed_files": 9,
+  "human_review_limitations": [
+    "Automated checks do not replace legal or regulatory review.",
+    "Automated checks do not replace assistive-technology testing.",
+    "Automated checks do not replace full page-by-page human visual review."
+  ]
+}

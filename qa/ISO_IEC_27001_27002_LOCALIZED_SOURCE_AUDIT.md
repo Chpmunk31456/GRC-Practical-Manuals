@@ -2,7 +2,7 @@
 
 ## Result
 
-**FAIL-CLOSED**
+**PASS**
 
 This deterministic audit identifies structural and known localization defects. It does not replace native-language, standards, legal, accessibility, or page-level review.
 
@@ -22,12 +22,12 @@ No configured findings.
 ## pt-BR
 
 - Source: `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md`
-- Status: **FAIL**
+- Status: **PASS**
 - Missing major sections: none
 - Duplicate major sections: none
 - Missing image references: none
-- Table signals: `{'pipe_rows': 353, 'separator_rows': 43, 'collapsed_rule_rows': 2, 'malformed_separator_rows': 0}`
-- Table blockers: ['collapsed_rule_rows=2']
+- Table signals: `{'pipe_rows': 353, 'separator_rows': 41, 'collapsed_rule_rows': 0, 'malformed_separator_rows': 0}`
+- Table blockers: none
 
 ### Findings
 

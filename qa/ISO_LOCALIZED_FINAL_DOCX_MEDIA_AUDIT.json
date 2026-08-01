@@ -1,0 +1,21 @@
+{
+  "editions": {
+    "es-419": {
+      "source_image_placements": 0,
+      "unique_media_files": 0,
+      "image_relationships": 0,
+      "embedded_image_occurrences": 0,
+      "unresolved_embeds": [],
+      "status": "PASS"
+    },
+    "pt-BR": {
+      "source_image_placements": 9,
+      "unique_media_files": 9,
+      "image_relationships": 9,
+      "embedded_image_occurrences": 9,
+      "unresolved_embeds": [],
+      "status": "PASS"
+    }
+  },
+  "failures": []
+}

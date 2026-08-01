@@ -13,7 +13,6 @@
 Primeira edição • Julho de 2026
 
 • todos os 93 controles do Anexo A • risco • declaração de aplicabilidade • auditoria • certificação • provas • ferramentas • laboratórios • preparação para a carreira
--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Publicação e Aviso de Uso
 
@@ -50,7 +49,6 @@ Os auditores internos devem centrar-se em critérios objetivos, independência, 
 As organizações que buscam certificação devem confirmar as expectativas de certificação, alteração, escopo de certificação e credenciamento com profissionais competentes.
 
 *Conteúdo:** Este documento contém um campo nativo da tabela de conteúdos do Word e um guia de capítulo verificado. Depois de editar, clique com o botão direito do mouse no conteúdo e escolha o Campo de Atualização e, em seguida, atualize a tabela inteira.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Sumário
 
@@ -184,7 +182,7 @@ Sumário
 
 *Edições atuais, finalidade, relação entre as normas e limitações importantes.*
 
-<img src="media/image1.png" style="width:6.15in;height:3.39605in" alt="O contexto e o risco orientam o planejamento, a implementação, a avaliação e a melhoria." />
+![O contexto e o risco orientam o planejamento, a implementação, a avaliação e a melhoria.](media/image1.png){width=6.15in height=3.39605in}
 
 Figura 1. Ciclo de melhoria contínua do SGSI
 
@@ -233,7 +231,7 @@ Figura 1. Ciclo de melhoria contínua do SGSI
 
 *Um método repetível que conecta o risco de negócio às decisões sobre controles.*
 
-<img src="media/image2.png" style="width:6.15in;height:3.39605in" alt="Os proprietários de riscos avaliam cenários, tratamento e risco residual usando critérios definidos." />
+![Os proprietários de riscos avaliam cenários, tratamento e risco residual usando critérios definidos.](media/image2.png){width=6.15in height=3.39605in}
 
 Figura 2. Fluxo de trabalho de riscos de segurança da informação
 
@@ -255,7 +253,7 @@ Defina os critérios de risco antes da pontuação: método de identificação, 
 
 *A ponte entre o tratamento de riscos, o Anexo A, outros controles e as evidências de auditoria.*
 
-<img src="media/image3.png" style="width:6.15in;height:3.39605in" alt="A Declaração de Aplicabilidade registra a seleção fundamentada de controles e o status de implementação." />
+![A Declaração de Aplicabilidade registra a seleção fundamentada de controles e o status de implementação.](media/image3.png){width=6.15in height=3.39605in}
 
 Figura 3. Fluxo de trabalho da Declaração de Aplicabilidade
 
@@ -282,7 +280,7 @@ Figura 3. Fluxo de trabalho da Declaração de Aplicabilidade
 
 *Como manter informações documentadas úteis sem criar burocracia.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.29079in" alt="As evidências devem sustentar o desenho, a operação, as exceções, a correção e o reteste." />
+![As evidências devem sustentar o desenho, a operação, as exceções, a correção e o reteste.](media/image4.png){width=6.15in height=3.29079in}
 
 Figura 4. Cadeia de requisitos até evidências
 
@@ -400,7 +398,7 @@ Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos nor
 
 Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
 
-<img src="media/image5.png" style="width:6.15in;height:3.32973in" alt="Um programa de auditoria considera riscos, independência, evidências, reporte e acompanhamento verificado." />
+![Um programa de auditoria considera riscos, independência, evidências, reporte e acompanhamento verificado.](media/image5.png){width=6.15in height=3.32973in}
 
 Figura 5. Fluxo de trabalho da auditoria interna
 
@@ -418,7 +416,7 @@ Figura 5. Fluxo de trabalho da auditoria interna
 
 Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
 
-<img src="media/image6.png" style="width:6.15in;height:3.27166in" alt="Os 93 controles de referência estão agrupados em temas organizacionais, de pessoas, físicos e tecnológicos." />
+![Os 93 controles de referência estão agrupados em temas organizacionais, de pessoas, físicos e tecnológicos.](media/image6.png){width=6.15in height=3.27166in}
 
 Figura 6. Temas dos controles do Anexo A
 

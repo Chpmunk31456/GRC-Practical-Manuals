@@ -20,12 +20,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1612,
+        "chars": 1589,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.876,
+        "length_ratio": 0.863,
         "blockers": [],
         "status": "PASS"
       }
@@ -80,12 +80,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1595,
+        "chars": 1572,
         "pipe_rows": 11,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.928,
+        "length_ratio": 0.914,
         "blockers": [],
         "status": "PASS"
       }
@@ -110,12 +110,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 2063,
+        "chars": 2040,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.897,
+        "length_ratio": 0.887,
         "blockers": [],
         "status": "PASS"
       }
@@ -140,12 +140,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1665,
+        "chars": 1642,
         "pipe_rows": 12,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.795,
+        "length_ratio": 0.784,
         "blockers": [],
         "status": "PASS"
       }
@@ -320,12 +320,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 2931,
+        "chars": 2908,
         "pipe_rows": 10,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.783,
+        "length_ratio": 0.777,
         "blockers": [],
         "status": "PASS"
       }
@@ -350,12 +350,12 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1327,
+        "chars": 1304,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.693,
+        "length_ratio": 0.681,
         "blockers": [],
         "status": "PASS"
       }

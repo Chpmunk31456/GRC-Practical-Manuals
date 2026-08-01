@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "output": "English/Compliance_Obligations_and_Regulatory_Change_Toolkit_English_v1.0.md",
+  "sources": [
+    {
+      "path": "chapters/01_Governance_Source_Authority_and_Obligation_Inventory.md",
+      "sha256": "7812afb754dc0e0bcf19c682e17960474d4fa7e629bdc6e546034d7a6a66f5b9",
+      "words": 551,
+      "lines": 81
+    },
+    {
+      "path": "chapters/02_Applicability_Decomposition_and_Interpretation.md",
+      "sha256": "0e45106226c9c53957c91a12f6323c72a991dc101c0aca1ee7c21db562c69f7f",
+      "words": 471,
+      "lines": 65
+    },
+    {
+      "path": "chapters/03_Ownership_Implementation_Controls_and_Evidence.md",
+      "sha256": "e8e7fa50f49b1a72249a7ae7756eca2e52b95afe9c48a650f5bc1476b66ec13b",
+      "words": 422,
+      "lines": 43
+    },
+    {
+      "path": "chapters/04_Regulatory_Horizon_Scanning_and_Change_Intake.md",
+      "sha256": "dbf54d9c8a3f65498e5fd814490061814ea37d7f0df8c9a3ea9c2f1bad630db9",
+      "words": 436,
+      "lines": 60
+    },
+    {
+      "path": "chapters/05_Impact_Assessment_Implementation_and_Escalation.md",
+      "sha256": "1d9f22554d525da289de1f134848f9b0ebb269b8726562f3cb6da06b7e917c22",
+      "words": 413,
+      "lines": 51
+    },
+    {
+      "path": "chapters/06_Review_Supersession_Retirement_and_Assurance_Boundaries.md",
+      "sha256": "9d3a0ce1112e6e02b7225ea016883283b00880d123cbf41dbc0c7d914b79658c",
+      "words": 383,
+      "lines": 47
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "df068194da46ec3aa2b876c7a92b7d333f1ea8b5d6730f4e6386dc8d08d4dac3",
+      "words": 317,
+      "lines": 50
+    }
+  ],
+  "tool_field_counts": {
+    "Compliance_Obligations_Register.csv": 48,
+    "Regulatory_Change_Intake_and_Assessment_Log.csv": 42,
+    "Regulatory_Change_Implementation_Plan.csv": 38,
+    "Applicability_Review_Record.csv": 36
+  },
+  "assembled_sha256": "3cb6e1cc21c23775a0b6328795195de619dce57f23c7a302430d3e9afe5bf191",
+  "assembled_words": 3107,
+  "assembled_lines": 433,
+  "human_review_limitations": [
+    "No legal or regulatory opinion or applicability determination is represented.",
+    "No compliance certification, audit opinion or control-effectiveness conclusion is represented.",
+    "No native-language editorial, assistive-technology or page-by-page visual approval is represented."
+  ]
+}

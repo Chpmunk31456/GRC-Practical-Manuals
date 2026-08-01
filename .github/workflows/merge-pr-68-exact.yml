@@ -1,0 +1,37 @@
+name: Merge PR 68 exact candidate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/triggers/merge-pr-68.txt'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge-exact-candidate:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Merge verified PR head and remove one-time automation
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected='a4851a14c6eaa49de055e09751387782980d07a1'
+          branch='manual/grc-risk-register-and-treatment'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$branch"
+          actual=$(git rev-parse "origin/$branch")
+          test "$actual" = "$expected"
+          git merge --no-ff "$expected" -m 'Merge GRC risk register and risk treatment manual'
+          git rm .github/workflows/merge-pr-68-exact.yml .github/triggers/merge-pr-68.txt
+          git commit --amend --no-edit
+          git push origin HEAD:main

@@ -1,15 +1,20 @@
 # GRC Program Management and Operating Model Toolkit
 
-A controlled Section 08 publication workstream for designing and operating an accountable GRC program.
+A practical toolkit for establishing the mandate, governance, decision rights, annual plan, delivery portfolio, operating review, and continuous-improvement structure of a GRC program.
 
-## Planned package
+## Publication package
 
-- Six controlled English implementation chapters
+- Six controlled English chapters
 - English Markdown, DOCX, and searchable PDF
-- Six editable CSV operating-model tools
-- Latin American Spanish and Brazilian Portuguese machine-assisted publication candidates
-- Source register, QA records, checksums, release notes, and project status
+- Six editable CSV tools
+- Latin American Spanish (`es-419`) publication candidate
+- Brazilian Portuguese (`pt-BR`) publication candidate
+- Authoritative-source register, automated QA records, and SHA-256 checksums
 
-## Assurance boundary
+## Important assurance boundary
 
-The toolkit supports management decisions and traceability. It does not independently establish compliance, control effectiveness, certification, legal sufficiency, or audit assurance.
+The toolkit supports management and governance. It does not establish legal compliance, certify an operating model, replace independent assurance, or prove that governance and controls are effective.
+
+## Human-only limitations
+
+Native-language editorial approval, organization-specific legal or regulatory review, professional-standards interpretation, accessibility testing, formal assurance, and page-by-page human visual review are not represented as completed.

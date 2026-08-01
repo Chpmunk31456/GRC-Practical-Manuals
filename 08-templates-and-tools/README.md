@@ -20,47 +20,32 @@ The publication package includes an English controlled master, DOCX, searchable 
 
 [Open the completed manual and toolkit](./Audit_Readiness_and_Remediation_Management/)
 
-The publication package includes:
-
-- Six controlled English chapters
-- English Markdown, DOCX, and searchable PDF
-- A 42-field audit-readiness assessment tracker
-- A 35-field finding and root-cause register
-- A 34-field remediation action-plan tracker
-- A 29-field closure-validation record
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Assembly reports, automated QA records, and SHA-256 checksums
+The publication package includes six controlled English chapters, English Markdown, DOCX and searchable PDF, four editable readiness and remediation trackers, Latin American Spanish and Brazilian Portuguese publication candidates, assembly reports, automated QA records, and SHA-256 checksums.
 
 ### GRC Policy Template Toolkit
 
 [Open the completed manual and toolkit](./Policy_Template_Toolkit/)
 
-The publication package includes:
-
-- Four controlled English implementation chapters
-- Ten controlled policy templates in Markdown
-- Ten editable English policy-template DOCX files
-- Combined English Markdown, DOCX, and searchable PDF editions
-- A 25-field policy register
-- A 25-field policy exception tracker
-- A 33-field policy adoption and review checklist
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Assembly reports, automated QA records, and SHA-256 checksums
+The publication package includes four controlled English implementation chapters, ten controlled policy templates in Markdown, ten editable policy-template DOCX files, combined English Markdown, DOCX and searchable PDF editions, three policy-governance CSV tools, Latin American Spanish and Brazilian Portuguese publication candidates, and release evidence.
 
 ### Control Mapping and Crosswalk Practical Manual
 
 [Open the completed manual and toolkit](./Control_Mapping_and_Crosswalk/)
 
+The publication package includes six controlled English chapters, English Markdown, DOCX and searchable PDF, a 40-field control-mapping register, a 30-field requirement-decomposition worksheet, a 38-field mapping-review checklist, a 32-field gap, overlap and conflict register, Latin American Spanish and Brazilian Portuguese publication candidates, and release evidence.
+
+### Compliance Obligations Register and Regulatory Change Management Toolkit
+
+[Open the completed manual and toolkit](./Compliance_Obligations_and_Regulatory_Change/)
+
 The publication package includes:
 
 - Six controlled English chapters
 - English Markdown, DOCX, and searchable PDF
-- A 40-field control-mapping register
-- A 30-field requirement-decomposition worksheet
-- A 38-field mapping-review checklist
-- A 32-field gap, overlap, and conflict register
+- A 48-field compliance obligations register
+- A 42-field regulatory change intake and assessment log
+- A 38-field regulatory change implementation plan
+- A 36-field applicability review record
 - Latin American Spanish (`es-419`) publication candidate
 - Brazilian Portuguese (`pt-BR`) publication candidate
 - Assembly reports, automated QA records, and SHA-256 checksums
@@ -69,9 +54,9 @@ The localized editions are identified as machine-assisted publication candidates
 
 ## Next Planned Resource
 
-### Compliance Obligations Register and Regulatory Change Management Toolkit
+### GRC Metrics and Executive Reporting Toolkit
 
-Planned resources include a controlled obligations inventory, applicability and ownership model, regulatory-change intake and impact assessment, implementation tracking, evidence linkage, executive reporting, and review controls.
+Planned resources include metric governance, KPI and KRI definitions, data-quality controls, threshold and trend analysis, executive scorecards, board reporting, narrative interpretation, action tracking, and assurance boundaries.
 
 ## Intended Audience
 
@@ -98,7 +83,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.5 — August 2026
+Version 1.6 — August 2026
 
 ## License
 

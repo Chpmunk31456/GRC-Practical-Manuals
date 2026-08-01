@@ -1,9 +1,6 @@
 name: Integrate reviewed CIS Spanish opening
 
 on:
-  pull_request:
-    branches: [main]
-    paths: ['qa/requests/TRIGGER_CIS_PORTUGUESE_OPENING_FROM_MAIN.md']
   workflow_dispatch:
 
 permissions:

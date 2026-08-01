@@ -10,6 +10,36 @@ This project uses version numbers such as:
 
 ---
 
+## [1.9] — 1 August 2026
+
+### Added
+
+- Published the Compliance Obligations Register and Regulatory Change Management Toolkit.
+- Added six controlled English chapters, an English Markdown master, Microsoft Word edition, searchable PDF, source assembly records, automated QA reports, and SHA-256 checksums.
+- Added a 48-field compliance obligations register, a 42-field regulatory change intake and assessment log, a 38-field regulatory change implementation plan, and a 36-field applicability review record.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF formats.
+
+### Validated
+
+- English controlled assembly, safeguard notices, all four CSV schemas, DOCX ZIP integrity, searchable-PDF text, and checksums passed automated validation.
+- English package: 2,998 extracted PDF words.
+- Both localized editions passed level-one and level-two heading parity, protected-token restoration, DOCX ZIP integrity, searchable-PDF, page-count, extracted-word, and checksum checks.
+- Spanish package: 13 PDF pages and 3,646 extracted words.
+- Brazilian Portuguese package: 13 PDF pages and 3,543 extracted words.
+
+### Changed
+
+- Updated the root repository catalog and the Templates and Tools index.
+- Advanced the repository version from 1.8 to 1.9.
+- Identified the GRC Metrics and Executive Reporting Toolkit as the next planned Section 08 workstream.
+- Removed temporary English and localized compliance-obligations workflows after successful publication.
+
+### Limitations
+
+- Native-language editorial approval, legal or regulatory interpretation, privacy, labor, tax, sector and jurisdictional review, standards certification, formal audit assurance, assistive-technology testing, and full page-by-page human visual review are not represented as completed.
+
+---
+
 ## [1.8] — 1 August 2026
 
 ### Added

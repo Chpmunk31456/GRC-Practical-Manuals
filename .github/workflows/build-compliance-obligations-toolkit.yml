@@ -46,13 +46,17 @@ jobs:
           md="$root/English/$stem.md"
           docx="$root/English/$stem.docx"
           pdf="$root/English/$stem.pdf"
+          txt="$root/English/$stem.extracted.txt"
           pandoc "$md" --toc --toc-depth=3 --metadata author='Alberto Al Leiva' -o "$docx"
           libreoffice --headless --convert-to pdf --outdir "$root/English" "$docx" >/dev/null
           test -s "$md" && test -s "$docx" && test -s "$pdf"
           unzip -t "$docx" >/dev/null
-          words=$(pdftotext "$pdf" - | wc -w)
+          pdftotext "$pdf" "$txt"
+          words=$(wc -w < "$txt")
+          echo "Extracted PDF words: $words"
           test "$words" -ge 3500
-          pdftotext "$pdf" - | grep -q 'Compliance Obligations Register'
+          grep -Fq 'Compliance Obligations Register' "$txt"
+          rm -f "$txt"
 
       - name: Validate and checksum release evidence
         run: |

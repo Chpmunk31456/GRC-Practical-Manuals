@@ -1,0 +1,280 @@
+name: Repository localized release audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/triggers/repository-localized-release-audit.md'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repository-localized-release-audit
+  cancel-in-progress: false
+
+jobs:
+  audit-and-record:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out production candidate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: production/multilingual-grc-editions
+          fetch-depth: 0
+
+      - name: Install audit tooling
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils unzip
+          python -m pip install --upgrade pip pillow
+
+      - name: Run repository-wide localized package audit
+        id: audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from __future__ import annotations
+
+          import json
+          import re
+          import shutil
+          import subprocess
+          import tempfile
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          from PIL import Image, ImageStat
+
+          ROOT = Path('.')
+          QA = ROOT / 'qa'
+          QA.mkdir(exist_ok=True)
+          REPORT_JSON = QA / 'REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.json'
+          REPORT_MD = QA / 'REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.md'
+
+          NS = {
+              'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',
+              'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships',
+              'a': 'http://schemas.openxmlformats.org/drawingml/2006/main',
+              'wp': 'http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing',
+              'cp': 'http://schemas.openxmlformats.org/package/2006/metadata/core-properties',
+              'dc': 'http://purl.org/dc/elements/1.1/',
+          }
+
+          localized_md = sorted(
+              p for p in ROOT.rglob('*.md')
+              if any(part in {'Espanol', 'Portugues_BR'} for part in p.parts)
+              and '/qa/' not in p.as_posix()
+          )
+
+          editions = []
+          failures = []
+          warnings = []
+
+          def add_failure(path: Path, message: str) -> None:
+              failures.append(f'{path.as_posix()}: {message}')
+
+          def add_warning(path: Path, message: str) -> None:
+              warnings.append(f'{path.as_posix()}: {message}')
+
+          def run_text(args: list[str]) -> str:
+              return subprocess.run(args, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
+
+          for md in localized_md:
+              stem = md.with_suffix('')
+              docx = stem.with_suffix('.docx')
+              pdf = stem.with_suffix('.pdf')
+              language = 'es-419' if 'Espanol' in md.parts else 'pt-BR'
+              entry = {
+                  'language': language,
+                  'markdown': md.as_posix(),
+                  'docx': docx.as_posix(),
+                  'pdf': pdf.as_posix(),
+                  'status': 'PASS',
+                  'checks': {},
+              }
+
+              text = md.read_text(encoding='utf-8', errors='replace')
+              local_images = []
+              for target in re.findall(r'!\[[^\]]*\]\(([^)\s]+)', text):
+                  if not re.match(r'^[a-z]+://', target, flags=re.I):
+                      local_images.append(target)
+              for target in re.findall(r'<img\b[^>]*\bsrc=["\']([^"\']+)', text, flags=re.I):
+                  if not re.match(r'^[a-z]+://', target, flags=re.I):
+                      local_images.append(target)
+              missing_images = [target for target in local_images if not (md.parent / target).exists()]
+              entry['checks']['source_local_image_references'] = len(local_images)
+              entry['checks']['missing_local_images'] = missing_images
+              if missing_images:
+                  add_failure(md, f'missing local image references: {missing_images}')
+
+              if not docx.exists() or docx.stat().st_size == 0:
+                  add_failure(docx, 'missing or empty DOCX')
+              else:
+                  try:
+                      with zipfile.ZipFile(docx) as zf:
+                          bad = zf.testzip()
+                          if bad:
+                              add_failure(docx, f'corrupt ZIP member {bad}')
+                          names = set(zf.namelist())
+                          required = {'word/document.xml', 'word/_rels/document.xml.rels', 'docProps/core.xml'}
+                          missing_members = sorted(required - names)
+                          if missing_members:
+                              add_failure(docx, f'missing required OOXML members: {missing_members}')
+                          if 'word/document.xml' in names:
+                              document = ET.fromstring(zf.read('word/document.xml'))
+                              headings = document.findall('.//w:pStyle', NS)
+                              tables = document.findall('.//w:tbl', NS)
+                              embeds = [node.attrib.get(f'{{{NS["r"]}}}embed') for node in document.findall('.//a:blip', NS)]
+                              docpr = document.findall('.//wp:docPr', NS)
+                              alt_missing = [node.attrib.get('id') for node in docpr if not (node.attrib.get('descr') or '').strip()]
+                              entry['checks']['docx_heading_style_occurrences'] = len(headings)
+                              entry['checks']['docx_tables'] = len(tables)
+                              entry['checks']['docx_embedded_image_occurrences'] = len([x for x in embeds if x])
+                              entry['checks']['docx_images_missing_alt_text'] = len(alt_missing)
+                              if not headings:
+                                  add_warning(docx, 'no explicit heading-style occurrences detected')
+                              if alt_missing:
+                                  add_failure(docx, f'{len(alt_missing)} embedded image object(s) lack alternative text')
+                          if 'docProps/core.xml' in names:
+                              core = ET.fromstring(zf.read('docProps/core.xml'))
+                              title = ''.join(core.findtext('dc:title', default='', namespaces=NS)).strip()
+                              creator = ''.join(core.findtext('dc:creator', default='', namespaces=NS)).strip()
+                              entry['checks']['docx_core_title_present'] = bool(title)
+                              entry['checks']['docx_core_creator_present'] = bool(creator)
+                              if not title:
+                                  add_warning(docx, 'core metadata title is empty')
+                              if not creator:
+                                  add_warning(docx, 'core metadata creator is empty')
+                  except (zipfile.BadZipFile, ET.ParseError) as exc:
+                      add_failure(docx, f'OOXML parse failure: {exc}')
+
+              if not pdf.exists() or pdf.stat().st_size == 0:
+                  add_failure(pdf, 'missing or empty PDF')
+              else:
+                  try:
+                      info = run_text(['pdfinfo', str(pdf)])
+                      pages_match = re.search(r'^Pages:\s+(\d+)', info, flags=re.M)
+                      pages = int(pages_match.group(1)) if pages_match else 0
+                      entry['checks']['pdf_pages'] = pages
+                      title_match = re.search(r'^Title:\s*(.*)$', info, flags=re.M)
+                      entry['checks']['pdf_title_present'] = bool(title_match and title_match.group(1).strip())
+                      if pages < 1:
+                          add_failure(pdf, 'PDF page count is zero or unavailable')
+                      full_text = run_text(['pdftotext', str(pdf), '-'])
+                      entry['checks']['pdf_searchable_characters'] = len(full_text.strip())
+                      if len(full_text.strip()) < 100:
+                          add_failure(pdf, 'insufficient searchable text')
+                      if not entry['checks']['pdf_title_present']:
+                          add_warning(pdf, 'PDF title metadata is empty')
+
+                      if pages:
+                          sample_pages = sorted(set([1, max(1, (pages + 1) // 2), pages]))
+                          render_results = []
+                          with tempfile.TemporaryDirectory() as td:
+                              tdir = Path(td)
+                              for page_num in sample_pages:
+                                  prefix = tdir / f'page-{page_num}'
+                                  subprocess.run([
+                                      'pdftoppm', '-f', str(page_num), '-l', str(page_num),
+                                      '-singlefile', '-png', '-r', '96', str(pdf), str(prefix)
+                                  ], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                                  png = prefix.with_suffix('.png')
+                                  with Image.open(png).convert('L') as image:
+                                      mean = ImageStat.Stat(image).mean[0]
+                                      nonwhite = sum(1 for value in image.resize((100, 140)).getdata() if value < 250)
+                                      blank = nonwhite < 5
+                                      render_results.append({'page': page_num, 'mean_gray': round(mean, 2), 'sample_nonwhite': nonwhite, 'blank': blank})
+                                      if blank:
+                                          add_failure(pdf, f'sampled page {page_num} is blank or near-blank')
+                          entry['checks']['pdf_sampled_raster_pages'] = render_results
+                  except (subprocess.CalledProcessError, ValueError) as exc:
+                      add_failure(pdf, f'PDF audit failure: {exc}')
+
+              related_failures = [item for item in failures if item.startswith(md.as_posix()) or item.startswith(docx.as_posix()) or item.startswith(pdf.as_posix())]
+              if related_failures:
+                  entry['status'] = 'FAIL'
+              editions.append(entry)
+
+          expected_minimum = 22
+          if len(editions) < expected_minimum:
+              failures.append(f'repository inventory: expected at least {expected_minimum} localized Markdown editions, found {len(editions)}')
+
+          report = {
+              'candidate_sha': subprocess.run(['git', 'rev-parse', 'HEAD'], check=True, text=True, stdout=subprocess.PIPE).stdout.strip(),
+              'localized_editions': len(editions),
+              'failures': failures,
+              'warnings': warnings,
+              'status': 'FAIL' if failures else 'PASS',
+              'editions': editions,
+              'limitations': [
+                  'Automated checks do not constitute native-language approval.',
+                  'Automated checks do not constitute legal, regulatory, standards-currency, or technical approval.',
+                  'Raster sampling covers first, middle, and final pages; it is not a human page-by-page visual review.',
+                  'Assistive-technology behavior and reading order require human testing in native applications.',
+              ],
+          }
+          REPORT_JSON.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          lines = [
+              '# Repository Localized Automated Release Audit', '',
+              f"- Candidate SHA: `{report['candidate_sha']}`",
+              f"- Localized editions inspected: {len(editions)}",
+              f"- Automated result: **{report['status']}**",
+              f"- Failures: {len(failures)}",
+              f"- Warnings: {len(warnings)}", '',
+              '## Automated scope', '',
+              '- Markdown/DOCX/PDF triplet inventory',
+              '- Local image-reference resolution',
+              '- DOCX ZIP/XML integrity, heading signals, tables, embedded images, alternative text, and core metadata',
+              '- PDF page count, searchable text, title metadata, and first/middle/final raster sampling',
+              '- Exact candidate-SHA evidence', '',
+          ]
+          if failures:
+              lines += ['## Failures', ''] + [f'- {item}' for item in failures] + ['']
+          if warnings:
+              lines += ['## Warnings', ''] + [f'- {item}' for item in warnings] + ['']
+          lines += ['## Human gates not replaced', ''] + [f'- {item}' for item in report['limitations']] + ['']
+          REPORT_MD.write_text('\n'.join(lines), encoding='utf-8')
+
+          with open('/tmp/audit_status.txt', 'w', encoding='utf-8') as handle:
+              handle.write(report['status'])
+          print(f"Localized release audit: {report['status']} ({len(failures)} failures, {len(warnings)} warnings)")
+          PY
+          echo "status=$(cat /tmp/audit_status.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Run repository embedded-media validator
+        run: |
+          set -euo pipefail
+          python3 scripts/validate_docx_embedded_media.py
+
+      - name: Commit exact-candidate audit evidence
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add qa/REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.json qa/REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.md
+          if git diff --cached --quiet; then
+            echo 'Audit evidence unchanged.'
+          else
+            git commit -m 'Record repository localized automated release audit'
+            git push origin HEAD:production/multilingual-grc-editions
+          fi
+
+      - name: Upload audit evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: repository-localized-automated-release-audit
+          path: |
+            qa/REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.json
+            qa/REPOSITORY_LOCALIZED_AUTOMATED_RELEASE_AUDIT.md
+          if-no-files-found: error
+
+      - name: Enforce automated gate
+        if: always()
+        run: |
+          set -euo pipefail
+          test '${{ steps.audit.outputs.status }}' = 'PASS'

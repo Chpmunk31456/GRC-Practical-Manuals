@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "chapters": [
+    "01_Metric_Governance_and_Decision_Purpose.md",
+    "02_Definitions_Formulas_Scope_and_Normalization.md",
+    "03_Data_Lineage_Quality_and_Validation.md",
+    "04_Baselines_Targets_Thresholds_Trends_and_Benchmarks.md",
+    "05_Executive_and_Board_Reporting.md",
+    "06_Lifecycle_Review_Actions_and_Assurance_Boundaries.md"
+  ],
+  "chapter_count": 6,
+  "tool_field_counts": {
+    "Metric_Definition_Register.csv": 40,
+    "KPI_KRI_Review_Worksheet.csv": 36,
+    "Executive_GRC_Scorecard.csv": 34,
+    "Metrics_Action_and_Decision_Tracker.csv": 28
+  },
+  "h1_count": 7,
+  "h2_count": 45,
+  "sha256": "89ce03888586a8bb1ac3d74ad33f992a923ca9a12e5d1b2df9fffc62cacca296",
+  "limitations": [
+    "Automated validation does not establish compliance, security, control effectiveness, audit assurance, or business performance.",
+    "Qualified legal, regulatory, statistical, data-governance, accessibility, and professional review remains required."
+  ]
+}

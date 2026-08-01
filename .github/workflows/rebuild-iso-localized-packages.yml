@@ -121,10 +121,105 @@ jobs:
               raise SystemExit('\n'.join(report['failures']))
           PY
 
-      - name: Verify embedded media and write checksums
+      - name: Validate ISO DOCX embedded media and write checksums
         run: |
           set -euo pipefail
-          python3 scripts/validate_docx_embedded_media.py
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.parse import unquote, urlparse
+          from xml.etree import ElementTree
+          import json
+          import re
+          import zipfile
+
+          ROOT = Path('02-management-systems/ISO_IEC_27001_27002')
+          EDITIONS = {
+              'es-419': ROOT / 'Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md',
+              'pt-BR': ROOT / 'Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md',
+          }
+          MARKDOWN_IMAGE_RE = re.compile(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))(?:[ \t]+[^)]*)?\)')
+          HTML_IMAGE_RE = re.compile(r'<img\b[^>]*\bsrc\s*=\s*["\']([^"\']+)["\'][^>]*>', re.I)
+          IMAGE_REL = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image'
+          BLIP = '{http://schemas.openxmlformats.org/drawingml/2006/main}blip'
+          EMBED = '{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed'
+          report = {'editions': {}, 'failures': []}
+
+          def local_targets(source: Path):
+              text = source.read_text(encoding='utf-8')
+              refs = [m.group(1) or m.group(2) for m in MARKDOWN_IMAGE_RE.finditer(text)]
+              refs.extend(m.group(1) for m in HTML_IMAGE_RE.finditer(text))
+              targets = []
+              for ref in refs:
+                  parsed = urlparse(ref)
+                  if parsed.scheme or parsed.netloc or ref.startswith('#'):
+                      continue
+                  target = source.parent / unquote(parsed.path)
+                  if target.is_file():
+                      targets.append(target.resolve())
+              return targets
+
+          for edition, source in EDITIONS.items():
+              docx = source.with_suffix('.docx')
+              targets = local_targets(source)
+              try:
+                  with zipfile.ZipFile(docx) as package:
+                      bad = package.testzip()
+                      if bad:
+                          raise ValueError(f'CRC failure in {bad}')
+                      media = [n for n in package.namelist() if n.startswith('word/media/') and not n.endswith('/')]
+                      rel_root = ElementTree.fromstring(package.read('word/_rels/document.xml.rels'))
+                      image_rels = {
+                          rel.attrib.get('Id'): rel.attrib.get('Target')
+                          for rel in rel_root
+                          if rel.attrib.get('Type') == IMAGE_REL and rel.attrib.get('Target', '').startswith('media/')
+                      }
+                      doc_root = ElementTree.fromstring(package.read('word/document.xml'))
+                      embeds = [node.attrib.get(EMBED) for node in doc_root.iter(BLIP) if node.attrib.get(EMBED)]
+              except Exception as exc:
+                  report['failures'].append(f'{edition}: invalid DOCX package: {exc}')
+                  continue
+
+              unresolved_embeds = [rid for rid in embeds if rid not in image_rels]
+              if targets and not media:
+                  report['failures'].append(f'{edition}: source has {len(targets)} local image placements but DOCX has no media')
+              if targets and not image_rels:
+                  report['failures'].append(f'{edition}: source has local image placements but DOCX has no image relationships')
+              if len(embeds) < len(targets):
+                  report['failures'].append(f'{edition}: source has {len(targets)} image placements but DOCX has only {len(embeds)} embedded image occurrences')
+              if unresolved_embeds:
+                  report['failures'].append(f'{edition}: unresolved embedded relationship IDs: {sorted(set(unresolved_embeds))}')
+              if edition == 'pt-BR' and len(targets) != 9:
+                  report['failures'].append(f'pt-BR: expected 9 resolvable source image placements, found {len(targets)}')
+
+              report['editions'][edition] = {
+                  'source_image_placements': len(targets),
+                  'unique_media_files': len(media),
+                  'image_relationships': len(image_rels),
+                  'embedded_image_occurrences': len(embeds),
+                  'unresolved_embeds': unresolved_embeds,
+                  'status': 'FAIL' if any(item.startswith(f'{edition}:') for item in report['failures']) else 'PASS',
+              }
+
+          Path('qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          md = ['# ISO Localized Final DOCX Media Audit', '', 'This audit is scoped only to the rebuilt ISO/IEC 27001/27002 localized packages.', '']
+          for edition, data in report['editions'].items():
+              md += [
+                  f'## {edition}', '',
+                  f"- Source image placements: {data['source_image_placements']}",
+                  f"- Unique embedded media files: {data['unique_media_files']}",
+                  f"- DOCX image relationships: {data['image_relationships']}",
+                  f"- Embedded image occurrences: {data['embedded_image_occurrences']}",
+                  f"- Unresolved embedded relationships: {len(data['unresolved_embeds'])}",
+                  f"- Status: **{data['status']}**", '',
+              ]
+          md += ['## Result', '', '- Status: **' + ('FAIL' if report['failures'] else 'PASS') + '**', '']
+          if report['failures']:
+              md.extend(f'- {item}' for item in report['failures'])
+          Path('qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
+          if report['failures']:
+              raise SystemExit('\n'.join(report['failures']))
+          PY
+
           ROOT='02-management-systems/ISO_IEC_27001_27002'
           sha256sum \
             "$ROOT/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md" \
@@ -136,6 +231,7 @@ jobs:
             qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
             qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md \
             qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.md \
+            qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.md \
             > qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
 
       - name: Commit controlled package and QA evidence
@@ -152,6 +248,7 @@ jobs:
             qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.* \
             qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.* \
             qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.* \
+            qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.* \
             qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
           if git diff --cached --quiet; then
             echo 'No package or QA changes to commit.'
@@ -174,5 +271,7 @@ jobs:
             qa/rendered/iso-final/
             qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.md
             qa/ISO_LOCALIZED_FINAL_RASTER_PREFLIGHT.json
+            qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.md
+            qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.json
             qa/ISO_LOCALIZED_FINAL_SHA256SUMS.txt
           if-no-files-found: error

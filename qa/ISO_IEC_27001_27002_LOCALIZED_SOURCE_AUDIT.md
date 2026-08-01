@@ -26,8 +26,8 @@ No configured findings.
 - Missing major sections: none
 - Duplicate major sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 - Missing image references: none
-- Table signals: `{'pipe_rows': 0, 'separator_rows': 36, 'collapsed_rule_rows': 35, 'malformed_separator_rows': 0}`
-- Table blockers: ['collapsed_rule_rows=35', 'pipe_rows=0']
+- Table signals: `{'pipe_rows': 42, 'separator_rows': 36, 'collapsed_rule_rows': 30, 'malformed_separator_rows': 0}`
+- Table blockers: ['collapsed_rule_rows=30']
 
 ### Findings
 
@@ -35,8 +35,6 @@ No configured findings.
 - Line 3: `** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE`
 
 #### untranslated_english_text
-- Line 258: `![The SoA registra seleção de controle fundamentada e status de implementação.](media/image3.png)`
-- Line 289: `**Documento ou registro** **Purpose** **Controle**`
 - Line 702: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
 
 #### known_mistranslations

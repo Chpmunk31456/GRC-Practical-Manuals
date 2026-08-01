@@ -71,16 +71,6 @@
         ],
         "untranslated_english_text": [
           {
-            "line": 258,
-            "pattern": "\\bThe SoA\\b",
-            "text": "![The SoA registra seleção de controle fundamentada e status de implementação.](media/image3.png)"
-          },
-          {
-            "line": 289,
-            "pattern": "\\bPurpose\\b",
-            "text": "**Documento ou registro** **Purpose** **Controle**"
-          },
-          {
             "line": 702,
             "pattern": "\\bPurpose\\b",
             "text": ". **Ferramenta** . **Purpose** . **Possível suporte** ."
@@ -150,14 +140,13 @@
       },
       "missing_image_references": [],
       "table_signals": {
-        "pipe_rows": 0,
+        "pipe_rows": 42,
         "separator_rows": 36,
-        "collapsed_rule_rows": 35,
+        "collapsed_rule_rows": 30,
         "malformed_separator_rows": 0
       },
       "table_blockers": [
-        "collapsed_rule_rows=35",
-        "pipe_rows=0"
+        "collapsed_rule_rows=30"
       ]
     }
   ]

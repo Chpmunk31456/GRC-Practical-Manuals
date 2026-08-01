@@ -22,8 +22,8 @@ jobs:
         with:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
-      - name: Apply structural repair batch 01
-        run: python3 qa/tools/repair_iso_localized_structural_batch_01.py
+      - name: Apply structural repair batch 02
+        run: python3 qa/tools/repair_iso_localized_structural_batch_02.py
       - name: Run fail-closed localized-source audit
         id: audit
         continue-on-error: true
@@ -38,7 +38,7 @@ jobs:
             qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
             qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Apply ISO localized structural repair batch 01'
+            git commit -m 'Apply ISO localized structural repair batch 02'
             git push origin HEAD:production/multilingual-grc-editions
           fi
       - name: Enforce audit result

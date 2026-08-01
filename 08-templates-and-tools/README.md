@@ -32,26 +32,26 @@ The publication package includes:
 - Brazilian Portuguese (`pt-BR`) publication candidate
 - Assembly reports, automated QA records, and SHA-256 checksums
 
+### GRC Policy Template Toolkit
+
+[Open the completed manual and toolkit](./Policy_Template_Toolkit/)
+
+The publication package includes:
+
+- Four controlled English implementation chapters
+- Ten controlled policy templates in Markdown
+- Ten editable English policy-template DOCX files
+- Combined English Markdown, DOCX, and searchable PDF editions
+- A 25-field policy register
+- A 25-field policy exception tracker
+- A 33-field policy adoption and review checklist
+- Latin American Spanish (`es-419`) publication candidate
+- Brazilian Portuguese (`pt-BR`) publication candidate
+- Assembly reports, automated QA records, and SHA-256 checksums
+
 The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
 ## Next Planned Resource
-
-### Policy Template Toolkit
-
-Planned starter templates include:
-
-- Information security
-- Access control
-- Acceptable use
-- Incident response
-- Business continuity
-- Vendor risk
-- Data protection
-- Change management
-- Vulnerability management
-- Logging and monitoring
-
-## Later Planned Resources
 
 ### Control Mappings
 
@@ -82,7 +82,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.3 — August 2026
+Version 1.4 — August 2026
 
 ## License
 

@@ -4,7 +4,7 @@
   "treatment_plan_fields": 27,
   "docx_zip_integrity": "PASS",
   "pdf_searchable_text": "PASS",
-  "checksummed_files": 9,
+  "checksummed_files": 13,
   "human_review_limitations": [
     "Automated checks do not replace legal or regulatory review.",
     "Automated checks do not replace assistive-technology testing.",

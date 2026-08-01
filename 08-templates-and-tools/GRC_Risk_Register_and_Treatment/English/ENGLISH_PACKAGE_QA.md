@@ -5,7 +5,7 @@
 - Treatment-plan fields: 27
 - DOCX ZIP integrity: PASS
 - PDF searchable text: PASS
-- Checksummed files: 9
+- Checksummed files: 13
 
 ## Human-review limitations
 

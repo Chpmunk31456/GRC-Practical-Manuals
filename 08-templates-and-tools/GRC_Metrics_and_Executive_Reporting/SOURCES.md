@@ -1,34 +1,58 @@
 # Authoritative Source Register
 
-**Initialized:** 1 August 2026  
-**Status:** official-source revalidation pending
+**Validated:** 1 August 2026  
+**Status:** core baseline verified against official publisher pages
 
-The public search service was unavailable during workstream initialization. This register therefore records candidate primary sources only. No edition, revision, publication status, or effective date below may be represented as current until the official publisher page is retrieved and reviewed.
+## Approved primary sources
 
-## Candidate primary sources for verification
+### NIST SP 800-55 Volume 1
 
-- NIST publications on information-security measurement, performance measurement, cybersecurity risk, and Cybersecurity Framework 2.0 profiles and outcomes
-- NIST SP 800-53 Rev. 5 and assessment guidance for control, assessment, and evidence concepts
-- ISO 31000 risk-management guidance
-- ISO 37301 compliance-management-system requirements and guidance
-- ISO/IEC 27004 information-security measurement guidance
-- COSO enterprise risk management and internal control guidance
-- Global Internal Audit Standards for governance, performance, communication, and quality concepts
-- Applicable legal, regulatory, contractual, sector, customer, and board-reporting requirements
+- Publisher: National Institute of Standards and Technology
+- Title: *Measurement Guide for Information Security: Volume 1 — Identifying and Selecting Measures*
+- Identifier: NIST SP 800-55 Vol. 1
+- Status: Final
+- Publication date: December 2024
+- Supersedes: NIST SP 800-55 Rev. 1
+- Intended use: measure definition, selection, prioritization, qualitative and quantitative analysis, and evaluation of measure usefulness
+- Official location: NIST Computer Security Resource Center publication page
+- Accessed: 1 August 2026
+
+### NIST SP 800-55 Volume 2
+
+- Publisher: National Institute of Standards and Technology
+- Title: *Measurement Guide for Information Security: Volume 2 — Developing an Information Security Measurement Program*
+- Identifier: NIST SP 800-55 Vol. 2
+- Status: Final
+- Publication date: December 2024
+- Supersedes: NIST SP 800-55 Rev. 1
+- Intended use: governance, implementation, aggregation, communication, and lifecycle management for an information-security measurement program
+- Official location: NIST Computer Security Resource Center publication page
+- Accessed: 1 August 2026
+
+### ISO 31000:2018
+
+- Publisher: International Organization for Standardization
+- Title: *Risk management — Guidelines*
+- Identifier: ISO 31000:2018, Edition 2
+- Status: Published; last reviewed and confirmed in 2023 and identified by ISO as current on 1 August 2026
+- Development note: ISO/CD 31000 Edition 3 is under development and is expected to replace ISO 31000:2018 when published; it is not treated as the current standard
+- Intended use: risk context, decision-making, monitoring, communication, and integration of risk management into governance and reporting
+- Official location: ISO publication pages
+- Accessed: 1 August 2026
+
+## Supporting source categories requiring use-case validation
+
+The following may be added only after official-page verification and copyright review:
+
+- NIST Cybersecurity Framework 2.0 and current profiles or implementation examples;
+- NIST SP 800-53 and SP 800-53A for control and assessment terminology;
+- ISO/IEC 27004 for information-security monitoring, measurement, analysis, and evaluation;
+- ISO 37301 for compliance-management-system requirements and guidance;
+- Global Internal Audit Standards for governance, performance, communication, and quality concepts;
+- applicable legal, regulatory, contractual, sector, customer, and board-reporting requirements.
 
 ## Source-control requirements
 
-Each approved source record must retain:
+Each source record must retain official publisher, title and identifier, edition or revision, publication and effective dates where applicable, official URL or licensed location, access date, intended use, copyright constraints, supersession status, reviewer, and approval decision.
 
-- official publisher;
-- publication title and identifier;
-- edition, revision, amendment, or release;
-- publication and effective dates where applicable;
-- official URL or licensed location;
-- access date;
-- scope and intended use;
-- copyright and licensing constraints;
-- supersession or withdrawal status;
-- reviewer and approval decision.
-
-Secondary summaries may support discovery but must not replace authoritative source verification.
+Secondary summaries may support discovery but must not replace authoritative-source verification. No source establishes that a specific metric, threshold, score, dashboard, or report proves compliance, security, control effectiveness, audit assurance, or business performance.

@@ -7,7 +7,7 @@
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 1,
-        "english_fragments": 3
+        "english_fragments": 2
       },
       "es-419": {
         "chars": 1673,
@@ -108,19 +108,17 @@
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
-        "english_fragments": 4
+        "english_fragments": 2
       },
       "es-419": {
         "chars": 2213,
         "pipe_rows": 6,
         "images": 1,
         "bad_hits": 0,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 0.962,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 145,
@@ -407,19 +405,17 @@
         "pipe_rows": 41,
         "images": 1,
         "bad_hits": 0,
-        "english_fragments": 2
+        "english_fragments": 1
       },
       "es-419": {
         "chars": 11642,
         "pipe_rows": 41,
         "images": 1,
         "bad_hits": 0,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 1.04,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 10479,
@@ -441,19 +437,17 @@
         "pipe_rows": 12,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 3
+        "english_fragments": 2
       },
       "es-419": {
         "chars": 3018,
         "pipe_rows": 12,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 0.913,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 3281,
@@ -475,19 +469,17 @@
         "pipe_rows": 18,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 3
+        "english_fragments": 1
       },
       "es-419": {
         "chars": 4568,
         "pipe_rows": 18,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 0.968,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 4604,
@@ -509,19 +501,17 @@
         "pipe_rows": 38,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 8
+        "english_fragments": 1
       },
       "es-419": {
         "chars": 10125,
         "pipe_rows": 38,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 1.028,
-        "blockers": [
-          "residual_english"
-        ],
-        "status": "FAIL"
+        "blockers": [],
+        "status": "PASS"
       },
       "pt-BR": {
         "chars": 9315,
@@ -578,7 +568,7 @@
         "pipe_rows": 9,
         "images": 0,
         "bad_hits": 0,
-        "english_fragments": 2
+        "english_fragments": 1
       },
       "es-419": {
         "chars": 2710,
@@ -901,18 +891,17 @@
         "pipe_rows": 58,
         "images": 0,
         "bad_hits": 1,
-        "english_fragments": 6
+        "english_fragments": 4
       },
       "es-419": {
         "chars": 3457,
         "pipe_rows": 24,
         "images": 0,
         "bad_hits": 1,
-        "english_fragments": 1,
+        "english_fragments": 0,
         "length_ratio": 0.529,
         "blockers": [
-          "corruption_tokens",
-          "residual_english"
+          "corruption_tokens"
         ],
         "status": "FAIL"
       },

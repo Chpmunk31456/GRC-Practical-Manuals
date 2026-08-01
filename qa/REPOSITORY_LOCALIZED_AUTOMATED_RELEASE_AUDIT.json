@@ -1,296 +1,956 @@
 {
-  "candidate_sha": "08e53803af0b4c4b16576611ba46c8041958ffa7",
+  "candidate_sha": "7e5a23300a9439bb146abfed9382436d83beaea2",
   "localized_editions": 22,
-  "failures": [
-    "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.docx: missing or empty DOCX",
-    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.pdf: missing or empty PDF",
-    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.docx: missing or empty DOCX",
-    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf: missing or empty PDF",
-    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.docx: missing or empty DOCX",
-    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.pdf: missing or empty PDF",
-    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.docx: missing or empty DOCX",
-    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.pdf: missing or empty PDF"
+  "status": "PASS",
+  "failures": [],
+  "warnings": [
+    "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.docx: core metadata title is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.docx: core metadata creator is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.docx: core metadata title is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.docx: core metadata creator is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.pdf: PDF title metadata is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.docx: core metadata title is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.docx: core metadata creator is empty",
+    "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.pdf: PDF title metadata is empty"
   ],
-  "warnings": [],
-  "status": "FAIL",
   "editions": [
     {
       "language": "es-419",
       "markdown": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1377,
+        "docx_tables": 54,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 54,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 85204,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 243.48,
+            "sample_nonwhite": 3621,
+            "blank": false
+          },
+          {
+            "page": 27,
+            "mean_gray": 244.18,
+            "sample_nonwhite": 3515,
+            "blank": false
+          },
+          {
+            "page": 54,
+            "mean_gray": 251.25,
+            "sample_nonwhite": 1504,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "01-foundations/CIS_Controls_v8.1/Portugues_BR/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1442,
+        "docx_tables": 50,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 50,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 78236,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.16,
+            "sample_nonwhite": 3406,
+            "blank": false
+          },
+          {
+            "page": 25,
+            "mean_gray": 246.09,
+            "sample_nonwhite": 3031,
+            "blank": false
+          },
+          {
+            "page": 50,
+            "mean_gray": 247.31,
+            "sample_nonwhite": 2645,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "01-foundations/NIST_CSF_2/Espanol/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 8,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1119,
+        "docx_tables": 44,
+        "docx_embedded_image_occurrences": 8,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 43,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 80361,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 245.79,
+            "sample_nonwhite": 3135,
+            "blank": false
+          },
+          {
+            "page": 22,
+            "mean_gray": 243.11,
+            "sample_nonwhite": 3737,
+            "blank": false
+          },
+          {
+            "page": 43,
+            "mean_gray": 248.65,
+            "sample_nonwhite": 2202,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "01-foundations/NIST_CSF_2/Portugues_BR/NIST_CSF_2_Practical_GRC_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 8,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1119,
+        "docx_tables": 44,
+        "docx_embedded_image_occurrences": 8,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 43,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 76974,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 245.64,
+            "sample_nonwhite": 3165,
+            "blank": false
+          },
+          {
+            "page": 22,
+            "mean_gray": 243.03,
+            "sample_nonwhite": 3809,
+            "blank": false
+          },
+          {
+            "page": 43,
+            "mean_gray": 248.17,
+            "sample_nonwhite": 2386,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.md",
-      "docx": "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.docx",
-      "pdf": "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx",
+      "pdf": "01-foundations/NIST_RMF_SP_800-53/Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 496,
+        "docx_tables": 22,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 36,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 72790,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 243.81,
+            "sample_nonwhite": 3576,
+            "blank": false
+          },
+          {
+            "page": 18,
+            "mean_gray": 240.43,
+            "sample_nonwhite": 4685,
+            "blank": false
+          },
+          {
+            "page": 36,
+            "mean_gray": 250.92,
+            "sample_nonwhite": 1401,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.md",
-      "docx": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.docx",
-      "pdf": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "01-foundations/NIST_RMF_SP_800-53/Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 506,
+        "docx_tables": 8,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 43,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 71967,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 243.71,
+            "sample_nonwhite": 3987,
+            "blank": false
+          },
+          {
+            "page": 22,
+            "mean_gray": 239.23,
+            "sample_nonwhite": 5018,
+            "blank": false
+          },
+          {
+            "page": 43,
+            "mean_gray": 253.16,
+            "sample_nonwhite": 701,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1231,
+        "docx_tables": 43,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 50,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 86996,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.84,
+            "sample_nonwhite": 3221,
+            "blank": false
+          },
+          {
+            "page": 25,
+            "mean_gray": 245.48,
+            "sample_nonwhite": 3091,
+            "blank": false
+          },
+          {
+            "page": 50,
+            "mean_gray": 249.86,
+            "sample_nonwhite": 1945,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 9,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 1294,
+        "docx_tables": 41,
+        "docx_embedded_image_occurrences": 9,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 51,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 80364,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.42,
+            "sample_nonwhite": 3332,
+            "blank": false
+          },
+          {
+            "page": 26,
+            "mean_gray": 244.88,
+            "sample_nonwhite": 3244,
+            "blank": false
+          },
+          {
+            "page": 51,
+            "mean_gray": 253.42,
+            "sample_nonwhite": 566,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.md",
-      "docx": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.docx",
-      "pdf": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.docx",
+      "pdf": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Espanol/Como_Prepararse_para_una_Auditoria_SOC_2_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 152,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 6,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 10749,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 249.54,
+            "sample_nonwhite": 2323,
+            "blank": false
+          },
+          {
+            "page": 3,
+            "mean_gray": 244.55,
+            "sample_nonwhite": 3506,
+            "blank": false
+          },
+          {
+            "page": 6,
+            "mean_gray": 247.87,
+            "sample_nonwhite": 2556,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.md",
-      "docx": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.docx",
-      "pdf": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.docx",
+      "pdf": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/Portugues_BR/Como_se_Preparar_para_uma_Auditoria_SOC_2_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 152,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 7,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 13090,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 248.89,
+            "sample_nonwhite": 2635,
+            "blank": false
+          },
+          {
+            "page": 4,
+            "mean_gray": 243.46,
+            "sample_nonwhite": 3856,
+            "blank": false
+          },
+          {
+            "page": 7,
+            "mean_gray": 254.52,
+            "sample_nonwhite": 253,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "04-regulatory-compliance/GDPR/Espanol/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 5,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 526,
+        "docx_tables": 10,
+        "docx_embedded_image_occurrences": 5,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 38,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 74240,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 245.3,
+            "sample_nonwhite": 3066,
+            "blank": false
+          },
+          {
+            "page": 19,
+            "mean_gray": 233.43,
+            "sample_nonwhite": 7087,
+            "blank": false
+          },
+          {
+            "page": 38,
+            "mean_gray": 252.79,
+            "sample_nonwhite": 769,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "04-regulatory-compliance/GDPR/Portugues_BR/GDPR_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 5,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 499,
+        "docx_tables": 1,
+        "docx_embedded_image_occurrences": 5,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 40,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 78751,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 246.46,
+            "sample_nonwhite": 2836,
+            "blank": false
+          },
+          {
+            "page": 20,
+            "mean_gray": 236.26,
+            "sample_nonwhite": 6029,
+            "blank": false
+          },
+          {
+            "page": 40,
+            "mean_gray": 251.08,
+            "sample_nonwhite": 1816,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "04-regulatory-compliance/HIPAA/Espanol/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 7,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 650,
+        "docx_tables": 10,
+        "docx_embedded_image_occurrences": 7,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 41,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 74614,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.69,
+            "sample_nonwhite": 3257,
+            "blank": false
+          },
+          {
+            "page": 21,
+            "mean_gray": 243.48,
+            "sample_nonwhite": 3876,
+            "blank": false
+          },
+          {
+            "page": 41,
+            "mean_gray": 250.21,
+            "sample_nonwhite": 1696,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "04-regulatory-compliance/HIPAA/Portugues_BR/HIPAA_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 7,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 606,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 7,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 43,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 80097,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.62,
+            "sample_nonwhite": 3339,
+            "blank": false
+          },
+          {
+            "page": 22,
+            "mean_gray": 239.41,
+            "sample_nonwhite": 5159,
+            "blank": false
+          },
+          {
+            "page": 43,
+            "mean_gray": 251.4,
+            "sample_nonwhite": 1670,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1/Espanol/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 538,
+        "docx_tables": 12,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 31,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 61367,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.65,
+            "sample_nonwhite": 3356,
+            "blank": false
+          },
+          {
+            "page": 16,
+            "mean_gray": 244.84,
+            "sample_nonwhite": 3418,
+            "blank": false
+          },
+          {
+            "page": 31,
+            "mean_gray": 246.36,
+            "sample_nonwhite": 2902,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1/Portugues_BR/PCI_DSS_v4.0.1_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 9,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 484,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 9,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 38,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 73978,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.53,
+            "sample_nonwhite": 3366,
+            "blank": false
+          },
+          {
+            "page": 19,
+            "mean_gray": 236.67,
+            "sample_nonwhite": 6024,
+            "blank": false
+          },
+          {
+            "page": 38,
+            "mean_gray": 247.55,
+            "sample_nonwhite": 2786,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.md",
-      "docx": "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.docx",
-      "pdf": "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.docx",
+      "pdf": "05-operational-resilience/Incident_Response_BCDR/Espanol/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 395,
+        "docx_tables": 8,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 35,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 73771,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.4,
+            "sample_nonwhite": 3456,
+            "blank": false
+          },
+          {
+            "page": 18,
+            "mean_gray": 244.63,
+            "sample_nonwhite": 3485,
+            "blank": false
+          },
+          {
+            "page": 35,
+            "mean_gray": 249.75,
+            "sample_nonwhite": 1798,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.md",
-      "docx": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.docx",
-      "pdf": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "05-operational-resilience/Incident_Response_BCDR/Portugues_BR/Incident_Response_Business_Continuity_and_Disaster_Recovery_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 413,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 41,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 70326,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 243.7,
+            "sample_nonwhite": 3985,
+            "blank": false
+          },
+          {
+            "page": 21,
+            "mean_gray": 243.08,
+            "sample_nonwhite": 3919,
+            "blank": false
+          },
+          {
+            "page": 41,
+            "mean_gray": 253.22,
+            "sample_nonwhite": 717,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
-      "docx": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.docx",
-      "pdf": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx",
+      "pdf": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Espanol/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 387,
+        "docx_tables": 3,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 34,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 72950,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 243.88,
+            "sample_nonwhite": 3617,
+            "blank": false
+          },
+          {
+            "page": 17,
+            "mean_gray": 244.55,
+            "sample_nonwhite": 3483,
+            "blank": false
+          },
+          {
+            "page": 34,
+            "mean_gray": 249.34,
+            "sample_nonwhite": 2107,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md",
-      "docx": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.docx",
-      "pdf": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance/Portugues_BR/Cloud_Security_and_Cloud_Compliance_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 398,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 39,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 70017,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.06,
+            "sample_nonwhite": 3856,
+            "blank": false
+          },
+          {
+            "page": 20,
+            "mean_gray": 244.36,
+            "sample_nonwhite": 3595,
+            "blank": false
+          },
+          {
+            "page": 39,
+            "mean_gray": 248.43,
+            "sample_nonwhite": 2570,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "es-419",
       "markdown": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.md",
-      "docx": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.docx",
-      "pdf": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.pdf",
-      "status": "FAIL",
+      "docx": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.docx",
+      "pdf": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Espanol/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Espanol_v1.0.pdf",
       "checks": {
         "source_local_image_references": 0,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 446,
+        "docx_tables": 6,
+        "docx_embedded_image_occurrences": 0,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 32,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 70196,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.65,
+            "sample_nonwhite": 3469,
+            "blank": false
+          },
+          {
+            "page": 16,
+            "mean_gray": 241.66,
+            "sample_nonwhite": 4353,
+            "blank": false
+          },
+          {
+            "page": 32,
+            "mean_gray": 253.22,
+            "sample_nonwhite": 617,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     },
     {
       "language": "pt-BR",
       "markdown": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.md",
-      "docx": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.docx",
-      "pdf": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.pdf",
-      "status": "FAIL",
+      "docx": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.docx",
+      "pdf": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain/Portugues_BR/Third_Party_Risk_Management_and_Cyber_Supply_Chain_Security_Manual_Portugues_BR_v1.0.pdf",
       "checks": {
         "source_local_image_references": 10,
-        "missing_local_images": []
-      }
+        "missing_local_images": [],
+        "docx_heading_style_occurrences": 448,
+        "docx_tables": 0,
+        "docx_embedded_image_occurrences": 10,
+        "docx_images_missing_alt_text": 0,
+        "docx_core_title_present": false,
+        "docx_core_creator_present": false,
+        "pdf_pages": 36,
+        "pdf_title_present": false,
+        "pdf_searchable_characters": 66671,
+        "pdf_sampled_raster_pages": [
+          {
+            "page": 1,
+            "mean_gray": 244.67,
+            "sample_nonwhite": 3618,
+            "blank": false
+          },
+          {
+            "page": 18,
+            "mean_gray": 239.35,
+            "sample_nonwhite": 5128,
+            "blank": false
+          },
+          {
+            "page": 36,
+            "mean_gray": 247.4,
+            "sample_nonwhite": 3094,
+            "blank": false
+          }
+        ]
+      },
+      "status": "PASS"
     }
   ],
   "limitations": [

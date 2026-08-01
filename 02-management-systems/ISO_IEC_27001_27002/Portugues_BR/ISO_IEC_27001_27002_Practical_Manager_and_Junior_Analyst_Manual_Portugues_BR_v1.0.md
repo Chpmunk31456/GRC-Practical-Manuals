@@ -877,24 +877,27 @@ Funções iniciais comuns incluem analista júnior de GRC, analista de conformid
 | **Regra do laboratório:** Use organização fictícia, dados sintéticos, sistemas isolados e apenas ferramentas que você está autorizado a operar. Não apresente um projeto de portfólio como certificação real ou auditoria de cliente. |
 |---|
 
-Crie uma organização fictícia com missão, serviços, locais, partes interessadas, ativos, fornecedores, obrigações e limites de SGSI claramente definidos. Registre hipóteses e mantenha todos os dados sem identificação real.
+1. Crie uma empresa fictícia com dois produtos, um serviço em nuvem, força de trabalho remota e três fornecedores.
+2. Produza análise de contexto, registro de partes interessadas, avaliação de relevância climática e declaração de escopo.
+3. Defina critérios e um registro com dez cenários de risco, proprietários e decisões de tratamento.
+4. Crie plano de tratamento e Declaração de Aplicabilidade cobrindo os 93 controles do Anexo A com justificativas e estado honesto.
+5. Desenvolva políticas, procedimentos, objetivos, métricas, registros de ativos e fornecedores, treinamento, incidente e exercício de continuidade.
+6. Use poucas ferramentas abertas em laboratório isolado e preserve escopo, configuração, resultados, validação, remediação e reteste.
+7. Planeje e execute auditoria interna limitada contra cláusulas e controles selecionados.
+8. Escreva duas não conformidades, análises de causa, ações corretivas e testes de eficácia.
+9. Produza ata de análise crítica com entradas, decisões, responsáveis, recursos e prazos.
+10. Publique apenas artefatos sanitizados e sintéticos, com declaração clara de limitações.
 
-Construa um pacote mínimo de portfólio:
-
-1. declaração de escopo e diagrama simples de dependências;
-2. critérios de risco, registro de riscos e plano de tratamento;
-3. Declaração de Aplicabilidade vinculada a riscos e evidências;
-4. duas políticas e dois procedimentos controlados;
-5. inventário de ativos, identidades e fornecedores;
-6. plano de métricas e pequeno painel;
-7. papel de trabalho de teste de controle com população, amostra, evidência, exceção e reteste;
-8. relatório curto de auditoria interna;
-9. ata de análise crítica pela direção;
-10. registro de não conformidade, causa, correção, ação corretiva e verificação de eficácia.
-
-Use ferramentas somente para apoiar evidência. Preserve comandos, versões, configurações, capturas, resultados e limitações. Remova segredos e dados pessoais antes de publicar qualquer artefato.
-
-Inclua uma nota de honestidade: o projeto demonstra método e capacidade de aprendizagem, não experiência de certificação, autoridade de auditoria nem conformidade de uma organização real.
+| **Artefato do portfólio** | **O que demonstra** |
+|---|---|
+| Contexto, partes e escopo | Raciocínio e limites da cláusula 4 |
+| Método, registro e tratamento de risco | Cláusula 6 e propriedade do risco |
+| Declaração de Aplicabilidade | Decisões de controle rastreáveis |
+| Papel de trabalho de teste | Evidência, amostragem, exceção e conclusão |
+| Pacote de auditoria interna | Programa, plano, critérios, relatório e acompanhamento |
+| Ata de análise crítica | Avaliação e decisões da liderança |
+| Registro de ação corretiva | Causa raiz e eficácia |
+| Memorando de evidência técnica | Alfabetização técnica e limitações |
 
 # 26. Plano de Aprendizagem de Trinta Dias
 
@@ -967,89 +970,90 @@ Factos estatais apoiados por elementos de prova e âmbito definidos, divulgar li
 
 # 28. Modelos, Glossário, Índice e Referências
 
-* Estruturas de trabalho reutilizáveis, termos importantes e pontos de partida autoritários.*
+*Estruturas reutilizáveis, termos importantes e pontos de partida autoritários.*
 
-# # 28.1 Registro de risco mínimo
+## 28.1 Registro mínimo de risco
 
-* Campo** * Entrada**
-----------------------------------------------------------------------------------------------------------------------
-ID de risco e proprietário
-Objetivo / ativo
-"Evento e condição de ameaça"
-Consequências
-Controles existentes
-* Litígio e impacto
-O risco actual
-O titular do tratamento e da acção □ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \  \ \ \  \  \ \ \ \ \ \ \ \ \ 
-Risco residual e aceitação
-Data de revisão
+| **Campo** | **Entrada** |
+|---|---|
+| ID do risco e proprietário | ____________________________ |
+| Objetivo / ativo | ____________________________ |
+| Evento de ameaça e condição | ____________________________ |
+| Consequência | ____________________________ |
+| Controles existentes | ____________________________ |
+| Probabilidade e impacto | ____________________________ |
+| Risco atual | ____________________________ |
+| Tratamento e responsável pela ação | ____________________________ |
+| Risco residual e aceitação | ____________________________ |
+| Data de revisão | ____________________________ |
 
-# # 28.2 Papel de teste de controle
+## 28.2 Papel de trabalho de teste de controle
 
-* Campo** * Entrada**
----------------------------------------------------------
-• Critérios e controlo
-Âmbito de aplicação e período
-• Proprietário e sistemas
-• Verificação da população e da completude
-Exemplo e justificação
-Procedimento realizado
-• Provas inspeccionadas
-Excepções
-Conclusão e limitação
-* Correcção e reteste
+| **Campo** | **Entrada** |
+|---|---|
+| Critérios e controle | ____________________________ |
+| Escopo e período | ____________________________ |
+| Proprietário e sistemas | ____________________________ |
+| População e verificação de integridade | ____________________________ |
+| Amostra e justificativa | ____________________________ |
+| Procedimento executado | ____________________________ |
+| Evidência inspecionada | ____________________________ |
+| Exceções | ____________________________ |
+| Conclusão e limitação | ____________________________ |
+| Correção e reteste | ____________________________ |
 
-# # 28.3 Glossário
+## 28.3 Glossário
 
-* ** ** ** ** ** ** **
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• Anexo A • Conjunto de referência de 93 controles de segurança da informação em ISO/IEC 27001:2022.
-. CIA . . Confidencialidade, integridade e disponibilidade.
-O cumprimento de uma exigência.
-□ Controle □ Medida que modifica ou mantém o risco.
-- Acção correctiva - Acção que aborda a causa de uma não conformidade para prevenir a recorrência.
-Informações documentadas A organização deve controlar e manter ou reter.
-□ Parte interessada; Pessoa ou organização que pode afetar, ser afetada ou perceber-se afetada por uma decisão ou atividade. □
-Sistema de gestão da segurança da informação.
-Não-conformidade Não-conformidade
-Risco residual . Risco remanescente após o tratamento.
-O proprietário do risco é uma pessoa ou entidade responsável e autorizada a gerir um risco.
-(SoA ) Declaração de Aplicabilidade.
-Gestão de topo □ Pessoa ou grupo que dirige e controla a organização no mais alto nível dentro do escopo.
+| **Termo** | **Significado** |
+|---|---|
+| Anexo A | Conjunto de referência de 93 controles de segurança da informação na ISO/IEC 27001:2022. |
+| CIA | Confidencialidade, integridade e disponibilidade. |
+| Conformidade | Atendimento a um requisito. |
+| Controle | Medida que modifica ou mantém o risco. |
+| Ação corretiva | Ação sobre a causa de uma não conformidade para evitar recorrência. |
+| Informação documentada | Informação que a organização deve controlar, manter ou reter. |
+| Parte interessada | Pessoa ou organização que pode afetar, ser afetada ou perceber-se afetada por decisão ou atividade. |
+| SGSI | Sistema de gestão de segurança da informação. |
+| Não conformidade | Falha no atendimento a um requisito. |
+| Risco residual | Risco remanescente após o tratamento. |
+| Proprietário do risco | Pessoa ou entidade responsável e autorizada a gerir um risco. |
+| SoA | Declaração de Aplicabilidade. |
+| Alta direção | Pessoa ou grupo que dirige e controla a organização no nível mais alto dentro do escopo. |
 
-# # 28.4 Índice de assuntos
+## 28.4 Índice de assuntos
 
-**Sujeito** **Capítulo**
-----------------------------------
-□ Controles do anexo A
-Auditoria
-□ Certificação
-Emenda Climática 1, 2, 6, 21
-• Acção correctiva
-□ Evidências
-□ Partes interessadas
-Analistas júnior
-Revisão de gestão , 11, 20 ,
-□ Métricas 11, 18
-• Ferramentas de código aberto
-• Avaliação e tratamento de riscos
-Âmbito de aplicação
-Declaração de Aplicabilidade
-Fornecedores 13, 18, 23
+| **Assunto** | **Capítulo** |
+|---|---|
+| Controles do Anexo A | 13–16 |
+| Auditoria | 19 |
+| Certificação | 21 |
+| Emenda climática | 1, 2, 6, 21 |
+| Ação corretiva | 12, 20 |
+| Evidência | 5, 18 |
+| Partes interessadas | 2, 6 |
+| Analista júnior | 24–27 |
+| Análise crítica pela direção | 11, 20 |
+| Métricas | 11, 18 |
+| Ferramentas abertas | 22 |
+| Avaliação e tratamento de risco | 3, 8, 10 |
+| Escopo | 2, 6 |
+| Declaração de Aplicabilidade | 4 |
+| Fornecedores | 13, 18, 23 |
 
-# # 28.5 Referências oficiais
+## 28.5 Referências oficiais
 
-[<u>ISO/IEC 27001:2022 visão geral</u>](https://www.iso.org/standard/27001)
+[ISO/IEC 27001:2022 — visão geral](https://www.iso.org/standard/27001)
 
-[<u>ISO/IEC 27001:2022/Amd 1:2024</u>](https://www.iso.org/standard/88435.html)
+[ISO/IEC 27001:2022/Amd 1:2024](https://www.iso.org/standard/88435.html)
 
-[<u>ISO/IEC 27002:2022 visão geral</u>](https://www.iso.org/standard/75652.html)
+[ISO/IEC 27002:2022 — visão geral](https://www.iso.org/standard/75652.html)
 
-[<u>ISO/IAF comunicação sobre alterações climáticas</u>](https://iaf.nu/iaf_system/uploads/documents/Joint_ISO-IAF_Communique_re_Climate_Change_Amds_to_ISO_MSS_Feb_2024_Final.pdf)
+[Comunicado ISO/IAF sobre mudança climática](https://iaf.nu/iaf_system/uploads/documents/Joint_ISO-IAF_Communique_re_Climate_Change_Amds_to_ISO_MSS_Feb_2024_Final.pdf)
 
-[<u>ISO certification overview</u>](https://www.iso.org/certification.html)
+[Visão geral de certificação da ISO](https://www.iso.org/certification.html)
 
-[<u>ISO/IEC 27000 family</u>](https://www.iso.org/standard/iso-iec-27000-family)
+[Família ISO/IEC 27000](https://www.iso.org/standard/iso-iec-27000-family)
 
-**Lembramento final:** Compra ou acesso legal às normas oficiais antes da implementação ou avaliação. Confirme edições atuais, emendas, acreditação, escopo de certificação, requisitos legais, contratos, tecnologia, ameaças e mudança organizacional.
-□--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Lembrete final:** Adquira ou acesse legalmente as normas oficiais antes da implementação ou avaliação. Confirme edições, emendas, acreditação, escopo de certificação, requisitos legais, contratos, tecnologia, ameaças e mudanças organizacionais. |
+|---|
+

@@ -2,10 +2,8 @@ name: Rebuild and validate ISO localized packages
 
 on:
   pull_request:
-    branches:
-      - main
-    paths:
-      - '.github/triggers/iso-final-package-rebuild.md'
+    branches: [main]
+    paths: ['.github/triggers/iso-final-package-rebuild.md']
 
 permissions:
   contents: read
@@ -34,25 +32,70 @@ jobs:
           sudo apt-get install -y pandoc libreoffice poppler-utils unzip
           python -m pip install --upgrade pip pillow
 
-      - name: Remove exactly two PT-BR collapsed rule remnants
+      - name: Normalize bounded PT-BR structural remnants and image markup
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          from html import unescape
           import re
+
           path = Path('02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md')
           text = path.read_text(encoding='utf-8')
+
           lines = text.splitlines()
-          indexes = [i for i, line in enumerate(lines) if re.fullmatch(r'-{20,}', line)]
-          if len(indexes) != 2:
-              raise SystemExit(f'expected exactly 2 standalone collapsed rule rows, found {len(indexes)}')
-          for i in reversed(indexes):
+          rule_indexes = [i for i, line in enumerate(lines) if re.fullmatch(r'-{20,}', line)]
+          if len(rule_indexes) != 2:
+              raise SystemExit(f'expected exactly 2 standalone collapsed rule rows, found {len(rule_indexes)}')
+          for i in reversed(rule_indexes):
               del lines[i]
-          updated = '\n'.join(lines) + ('\n' if text.endswith('\n') else '')
-          if re.search(r'(?m)^-{20,}$', updated):
-              raise SystemExit('collapsed rule row remains after bounded cleanup')
-          path.write_text(updated, encoding='utf-8')
-          print('Removed exactly two standalone ISO PT-BR collapsed rule rows')
+          text = '\n'.join(lines) + ('\n' if text.endswith('\n') else '')
+
+          image_tag = re.compile(r'<img\b[^>]*>', re.I)
+          local_html_count = 0
+
+          def convert(match):
+              global local_html_count
+              tag = match.group(0)
+              attrs = {k.lower(): unescape(v) for k, v in re.findall(r'([A-Za-z_:][-A-Za-z0-9_:.]*)\s*=\s*["\']([^"\']*)["\']', tag)}
+              src = attrs.get('src', '')
+              if not src or '://' in src or src.startswith('#'):
+                  return tag
+              target = path.parent / src
+              if not target.is_file():
+                  raise SystemExit(f'unresolvable local image in HTML tag: {src}')
+              alt = attrs.get('alt', '').replace('[', '\\[').replace(']', '\\]')
+              style = attrs.get('style', '')
+              width_match = re.search(r'width\s*:\s*([^;]+)', style, re.I)
+              height_match = re.search(r'height\s*:\s*([^;]+)', style, re.I)
+              dimensions = []
+              if width_match:
+                  dimensions.append(f'width={width_match.group(1).strip()}')
+              if height_match:
+                  dimensions.append(f'height={height_match.group(1).strip()}')
+              suffix = '{' + ' '.join(dimensions) + '}' if dimensions else ''
+              local_html_count += 1
+              return f'![{alt}]({src}){suffix}'
+
+          text = image_tag.sub(convert, text)
+          if local_html_count == 0:
+              raise SystemExit('expected at least one local HTML image tag to normalize')
+          if re.search(r'<img\b[^>]*\bsrc\s*=\s*["\'](?!https?://|#)', text, re.I):
+              raise SystemExit('local HTML image tag remains after normalization')
+
+          markdown_refs = re.findall(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))', text)
+          resolvable = []
+          for a, b in markdown_refs:
+              ref = a or b
+              if '://' in ref or ref.startswith('#'):
+                  continue
+              if (path.parent / ref).is_file():
+                  resolvable.append(ref)
+          if len(resolvable) != 9:
+              raise SystemExit(f'expected 9 resolvable PT-BR image placements after normalization, found {len(resolvable)}')
+
+          path.write_text(text, encoding='utf-8')
+          print(f'Removed 2 collapsed rule rows and normalized {local_html_count} local HTML image tags; 9 placements resolve')
           PY
 
       - name: Re-run localized source gates
@@ -90,7 +133,6 @@ jobs:
           from pathlib import Path
           from PIL import Image, ImageStat
           import json
-
           root = Path('qa/rendered/iso-final')
           report = {'editions': {}, 'failures': []}
           for edition in ('es-419', 'pt-BR'):
@@ -101,8 +143,7 @@ jobs:
               details = []
               for page in pages:
                   with Image.open(page).convert('L') as im:
-                      stat = ImageStat.Stat(im)
-                      mean = stat.mean[0]
+                      mean = ImageStat.Stat(im).mean[0]
                       extrema = im.getextrema()
                       nonwhite = sum(1 for value in im.resize((100, 140)).getdata() if value < 250)
                       if extrema == (255, 255) or nonwhite < 5:
@@ -128,39 +169,36 @@ jobs:
           from pathlib import Path
           from urllib.parse import unquote, urlparse
           from xml.etree import ElementTree
-          import json
-          import re
-          import zipfile
+          import json, re, zipfile
 
           ROOT = Path('02-management-systems/ISO_IEC_27001_27002')
           EDITIONS = {
               'es-419': ROOT / 'Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md',
               'pt-BR': ROOT / 'Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md',
           }
-          MARKDOWN_IMAGE_RE = re.compile(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))(?:[ \t]+[^)]*)?\)')
-          HTML_IMAGE_RE = re.compile(r'<img\b[^>]*\bsrc\s*=\s*["\']([^"\']+)["\'][^>]*>', re.I)
+          MD_RE = re.compile(r'!\[[^\]]*]\((?:<([^>]+)>|([^) \t]+))(?:[ \t]+[^)]*)?\)')
+          HTML_RE = re.compile(r'<img\b[^>]*\bsrc\s*=\s*["\']([^"\']+)["\'][^>]*>', re.I)
           IMAGE_REL = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image'
           BLIP = '{http://schemas.openxmlformats.org/drawingml/2006/main}blip'
           EMBED = '{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed'
           report = {'editions': {}, 'failures': []}
 
-          def local_targets(source: Path):
+          def local_targets(source):
               text = source.read_text(encoding='utf-8')
-              refs = [m.group(1) or m.group(2) for m in MARKDOWN_IMAGE_RE.finditer(text)]
-              refs.extend(m.group(1) for m in HTML_IMAGE_RE.finditer(text))
+              refs = [m.group(1) or m.group(2) for m in MD_RE.finditer(text)]
+              refs.extend(m.group(1) for m in HTML_RE.finditer(text))
               targets = []
               for ref in refs:
                   parsed = urlparse(ref)
                   if parsed.scheme or parsed.netloc or ref.startswith('#'):
                       continue
-                  target = source.parent / unquote(parsed.path)
-                  if target.is_file():
-                      targets.append(target.resolve())
+                  if (source.parent / unquote(parsed.path)).is_file():
+                      targets.append(ref)
               return targets
 
           for edition, source in EDITIONS.items():
-              docx = source.with_suffix('.docx')
               targets = local_targets(source)
+              docx = source.with_suffix('.docx')
               try:
                   with zipfile.ZipFile(docx) as package:
                       bad = package.testzip()
@@ -168,50 +206,35 @@ jobs:
                           raise ValueError(f'CRC failure in {bad}')
                       media = [n for n in package.namelist() if n.startswith('word/media/') and not n.endswith('/')]
                       rel_root = ElementTree.fromstring(package.read('word/_rels/document.xml.rels'))
-                      image_rels = {
-                          rel.attrib.get('Id'): rel.attrib.get('Target')
-                          for rel in rel_root
-                          if rel.attrib.get('Type') == IMAGE_REL and rel.attrib.get('Target', '').startswith('media/')
-                      }
+                      image_rels = {r.attrib.get('Id'): r.attrib.get('Target') for r in rel_root if r.attrib.get('Type') == IMAGE_REL and r.attrib.get('Target', '').startswith('media/')}
                       doc_root = ElementTree.fromstring(package.read('word/document.xml'))
-                      embeds = [node.attrib.get(EMBED) for node in doc_root.iter(BLIP) if node.attrib.get(EMBED)]
+                      embeds = [n.attrib.get(EMBED) for n in doc_root.iter(BLIP) if n.attrib.get(EMBED)]
               except Exception as exc:
                   report['failures'].append(f'{edition}: invalid DOCX package: {exc}')
                   continue
-
-              unresolved_embeds = [rid for rid in embeds if rid not in image_rels]
+              unresolved = [rid for rid in embeds if rid not in image_rels]
               if targets and not media:
                   report['failures'].append(f'{edition}: source has {len(targets)} local image placements but DOCX has no media')
-              if targets and not image_rels:
-                  report['failures'].append(f'{edition}: source has local image placements but DOCX has no image relationships')
-              if len(embeds) < len(targets):
+              if targets and len(embeds) < len(targets):
                   report['failures'].append(f'{edition}: source has {len(targets)} image placements but DOCX has only {len(embeds)} embedded image occurrences')
-              if unresolved_embeds:
-                  report['failures'].append(f'{edition}: unresolved embedded relationship IDs: {sorted(set(unresolved_embeds))}')
+              if unresolved:
+                  report['failures'].append(f'{edition}: unresolved embedded relationship IDs: {sorted(set(unresolved))}')
               if edition == 'pt-BR' and len(targets) != 9:
                   report['failures'].append(f'pt-BR: expected 9 resolvable source image placements, found {len(targets)}')
-
+              edition_failed = any(item.startswith(f'{edition}:') for item in report['failures'])
               report['editions'][edition] = {
                   'source_image_placements': len(targets),
                   'unique_media_files': len(media),
                   'image_relationships': len(image_rels),
                   'embedded_image_occurrences': len(embeds),
-                  'unresolved_embeds': unresolved_embeds,
-                  'status': 'FAIL' if any(item.startswith(f'{edition}:') for item in report['failures']) else 'PASS',
+                  'unresolved_embeds': unresolved,
+                  'status': 'FAIL' if edition_failed else 'PASS',
               }
 
           Path('qa/ISO_LOCALIZED_FINAL_DOCX_MEDIA_AUDIT.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
           md = ['# ISO Localized Final DOCX Media Audit', '', 'This audit is scoped only to the rebuilt ISO/IEC 27001/27002 localized packages.', '']
           for edition, data in report['editions'].items():
-              md += [
-                  f'## {edition}', '',
-                  f"- Source image placements: {data['source_image_placements']}",
-                  f"- Unique embedded media files: {data['unique_media_files']}",
-                  f"- DOCX image relationships: {data['image_relationships']}",
-                  f"- Embedded image occurrences: {data['embedded_image_occurrences']}",
-                  f"- Unresolved embedded relationships: {len(data['unresolved_embeds'])}",
-                  f"- Status: **{data['status']}**", '',
-              ]
+              md += [f'## {edition}', '', f"- Source image placements: {data['source_image_placements']}", f"- Unique embedded media files: {data['unique_media_files']}", f"- DOCX image relationships: {data['image_relationships']}", f"- Embedded image occurrences: {data['embedded_image_occurrences']}", f"- Unresolved embedded relationships: {len(data['unresolved_embeds'])}", f"- Status: **{data['status']}**", '']
           md += ['## Result', '', '- Status: **' + ('FAIL' if report['failures'] else 'PASS') + '**', '']
           if report['failures']:
               md.extend(f'- {item}' for item in report['failures'])

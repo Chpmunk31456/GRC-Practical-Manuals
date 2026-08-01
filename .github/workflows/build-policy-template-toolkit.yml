@@ -86,14 +86,17 @@ jobs:
           templates = sorted((root / 'templates').glob('*.md'))
           if len(templates) != 10:
               raise SystemExit(f'Expected 10 policy templates, found {len(templates)}')
+          safeguard_terms = ('review', 'adapt', 'validate', 'resolve', 'confirm', 'consult')
           placeholder_counts = {}
           for template in templates:
               text = template.read_text(encoding='utf-8')
               count = len(re.findall(r'\[[A-Z][A-Z0-9 _/.-]*\]', text))
               if count < 5:
                   raise SystemExit(f'{template.name}: insufficient controlled placeholders ({count})')
-              if 'notice' not in text.lower() and 'resolve' not in text.lower():
-                  raise SystemExit(f'{template.name}: missing drafting notice')
+              opening = text.splitlines()[1:10]
+              warning = ' '.join(line.strip() for line in opening if line.lstrip().startswith('>')).lower()
+              if not warning or not any(term in warning for term in safeguard_terms):
+                  raise SystemExit(f'{template.name}: missing substantive drafting safeguard')
               placeholder_counts[template.name] = count
           files = sorted((root / 'English').rglob('*')) + sorted((root / 'tools').glob('*.csv')) + templates
           sums = []

@@ -1,17 +1,14 @@
-# Trigger CIS Spanish figure-markup normalization and rebuild
+# Trigger ISO localized-source fail-closed audit
 
-Run the controlled CIS Controls v8.1 Spanish publication workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
+Run the bounded ISO/IEC 27001 and 27002 localized-source audit against `production/multilingual-grc-editions` using the current workflow definition on `main`.
 
 The workflow must:
 
-- preserve the reviewed Spanish language content;
-- normalize only Figures 4–8 from raw HTML image tags to equivalent Markdown image syntax;
-- preserve each figure filename, alt text, caption, and surrounding prose;
-- generate deterministic Spanish Figures 1, 2, and 4–10 while retaining reviewed Figure 3;
-- require all ten source figure files and at least ten embedded DOCX media objects;
-- require all ten figure captions in searchable PDF text;
-- rebuild only the CIS Spanish DOCX and PDF;
-- commit the normalized Markdown, figures, rebuilt files, and updated SHA-256 record to the production branch; and
-- render every rebuilt PDF page for a new visual-review artifact.
+- inspect the Spanish and Brazilian Portuguese Markdown sources;
+- compare expected major-section and image-reference structure;
+- identify configured corrupted markup, malformed links and emphasis, collapsed table signals, untranslated headings, known mistranslations, and mixed-locale terminology;
+- write detailed Markdown and JSON audit evidence to the production branch;
+- fail closed while any configured defect remains; and
+- make no changes to localized prose, DOCX, PDF, graphics, or publication metadata.
 
 This PR is trigger-only, modifies no publication content on `main`, and must not be merged.

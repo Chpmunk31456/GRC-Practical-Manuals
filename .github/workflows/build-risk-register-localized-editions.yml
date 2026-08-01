@@ -122,6 +122,7 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           set -euo pipefail
+          branch='${{ github.event.pull_request.head.ref }}'
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add 08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations
@@ -129,7 +130,9 @@ jobs:
             echo 'No localized changes to commit.'
           else
             git commit -m 'Build and validate localized risk register editions'
-            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+            git fetch origin "$branch"
+            git rebase "origin/$branch"
+            git push origin "HEAD:$branch"
           fi
 
       - name: Upload localized review package

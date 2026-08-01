@@ -26,17 +26,27 @@ jobs:
         id: audit
         continue-on-error: true
         run: python3 qa/tools/audit_iso_localized_sources.py
+      - name: Run section-level parity audit
+        id: parity
+        continue-on-error: true
+        run: python3 qa/tools/audit_iso_localized_section_parity.py
       - name: Commit refreshed audit evidence
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json
+          git add \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.md \
+            qa/ISO_IEC_27001_27002_LOCALIZED_SOURCE_AUDIT.json \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.md \
+            qa/ISO_IEC_27001_27002_SECTION_PARITY_AUDIT.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Refresh strengthened ISO localized-source audit evidence'
+            git commit -m 'Refresh ISO localized source and section-parity evidence'
+            git fetch origin production/multilingual-grc-editions
+            git rebase origin/production/multilingual-grc-editions
             git push origin HEAD:production/multilingual-grc-editions
           fi
       - name: Enforce audit result
-        if: steps.audit.outcome != 'success'
+        if: steps.audit.outcome != 'success' || steps.parity.outcome != 'success'
         run: |
           echo 'ISO localized-source audit remains fail-closed; see committed reports.'
           exit 1

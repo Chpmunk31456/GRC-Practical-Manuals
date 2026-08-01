@@ -1,14 +1,16 @@
-# Trigger ISO Spanish reviewed-baseline recovery
+# Trigger ISO Spanish recovered-baseline cleanup batch 01
 
-Run the fail-closed ISO Spanish recovery workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
+Run the bounded ISO Spanish cleanup-and-audit workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
 
 The workflow must:
 
-- preserve the current production Spanish source in `qa/recovery/ISO_IEC_27001_27002_ES_PRE_RECOVERY_2026-08-01.md`;
-- restore the exact Spanish Markdown blob `1dec4df93c0ce5c279d958d56ed23553535c0170` from `fix/publication-readiness-batch-1-spanish`;
-- verify the restored blob before committing;
+- apply only `qa/tools/repair_iso_spanish_recovered_baseline_batch_01.py`;
+- normalize malformed nested links only inside the Spanish table-of-contents boundary;
+- remove verified conversion-artifact tokens and placeholder rows;
+- restore the missing section 6 heading;
+- correct the verified Word-TOC instruction, three English figure captions, and a small set of unambiguous terminology errors;
 - rerun the strengthened Spanish and Brazilian Portuguese localized-source audit;
-- commit the recovered Spanish source, quarantine copy, and refreshed Markdown/JSON audit evidence to the production branch;
+- commit only the repaired Spanish Markdown source and refreshed Markdown/JSON audit evidence;
 - remain fail-closed while any structural, language, image, or table blocker remains;
 - not rebuild DOCX/PDF files or alter graphics and publication metadata; and
 - not merge this trigger-only PR.

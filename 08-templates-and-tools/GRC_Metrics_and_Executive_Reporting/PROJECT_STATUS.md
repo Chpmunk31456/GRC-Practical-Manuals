@@ -1,7 +1,10 @@
 # Project Status — GRC Metrics and Executive Reporting Toolkit
 
-- Branch: `manual/grc-metrics-and-executive-reporting`
-- Status: completed publication candidate; repository integration substantially complete; final changelog consolidation and independent exact-head merge review remain
+- Original development branch: `manual/grc-metrics-and-executive-reporting`
+- Status: published and merged into `main`
+- Pull request: #74
+- Merge commit: `adc143fda26280ea7c293d4a6d76118e56aa8f85`
+- Repository release: version 1.10 — 1 August 2026
 - English manual: complete — six controlled chapters
 - Editable tools: complete — 40, 36, 34, and 28 fields
 - English Markdown/DOCX/searchable PDF: automated QA PASS
@@ -10,8 +13,8 @@
 - Automated QA and SHA-256 checksums: complete
 - Core official-source revalidation: complete and recorded in `SOURCES.md` and `OFFICIAL_SOURCE_REVALIDATION.md`
 - Root repository catalog: updated to version 1.10
-- Section 08 index: toolkit promoted to published status
-- Version 1.10 release record: complete in `RELEASE_NOTES_v1.10.md`
+- Section 08 index: toolkit published
+- Version 1.10 release record: `RELEASE_NOTES_v1.10.md`
 
 ## Validation evidence
 
@@ -27,13 +30,6 @@
 - Targets, thresholds, benchmarks, and trends are distinguished.
 - Aggregated scores retain underlying component traceability.
 - Metrics are not represented as proof of compliance, control effectiveness, security, audit assurance, or business performance.
-
-## Remaining release gates
-
-- Consolidate the version 1.10 release entry into the repository-level `CHANGELOG.md` without disturbing prior release history.
-- Reconfirm the final PR head and changed-file inventory.
-- Mark the PR ready only after all release records are consistent.
-- Merge using the exact reviewed head SHA.
 
 ## Human-only limitations
 

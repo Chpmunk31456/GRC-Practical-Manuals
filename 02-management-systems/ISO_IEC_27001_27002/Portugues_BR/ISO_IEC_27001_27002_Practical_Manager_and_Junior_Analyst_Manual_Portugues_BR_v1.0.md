@@ -12,7 +12,7 @@
 
 Primeira edição • Julho de 2026
 
-• todos os 93 controlos do Anexo A • risco • declaração de aplicabilidade • auditoria • certificação • provas • ferramentas • laboratórios • preparação para a carreira
+• todos os 93 controles do Anexo A • risco • declaração de aplicabilidade • auditoria • certificação • provas • ferramentas • laboratórios • preparação para a carreira
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Publicação e Aviso de Uso
@@ -54,15 +54,15 @@ As organizações que buscam certificação devem confirmar as expectativas de c
 
 Sumário
 
-[Comunicação de publicação e utilização [2](#publication-and-use-notice)](#publication-and-use-notice)
+[Comunicação de publicação e uso [2](#publication-and-use-notice)](#publication-and-use-notice)
 
-[Utilização ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)
+[Uso ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)
 
 [Prefácio [3](#preface)](#preface)
 
 [Como usar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)
 
-[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)
+[Sumário [4](#table-of-contents)](#table-of-contents)
 
 [1. ISO/IEC 27001 e 27002 Fundações [7](#isoiec-27001-and-27002-foundations)](#isoiec-27001-and-27002-foundations)
 
@@ -78,7 +78,7 @@ Sumário
 
 [7. Cláusula 5 — Liderança [13](#clause-5-leadership)](#clause-5-leadership)
 
-[8. Cláusula 6 — Planeamento [14](#clause-6-planning)](#clause-6-planning)
+[8. Cláusula 6 — Planejamento [14](#clause-6-planning)](#clause-6-planning)
 
 [9. Cláusula 7 — Apoio [15](#clause-7-support)](#clause-7-support)
 
@@ -88,15 +88,15 @@ Sumário
 
 [12. Cláusula 10 — Melhoria [18](#clause-10-improvement)](#clause-10-improvement)
 
-[13. Anexo A 5 Controlos organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)
+[13. Anexo A 5 Controles organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)
 
 [14) Anexo A 6 Pessoas que controlam [22](#annex-a-6-people-controls)](#annex-a-6-people-controls)
 
-[15. Anexo A 7 Controlos físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)
+[15. Anexo A 7 Controles físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)
 
-[16. Anexo A 8 Controlos tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)
+[16. Anexo A 8 Controles tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)
 
-[17. Controlos de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)
+[17. Controles de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)
 
 [18. Testes Métricos e de Controlo [27](#metrics-and-control-testing)](#metrics-and-control-testing)
 
@@ -156,7 +156,7 @@ Sumário
 
 [27.3 O que é o SoA? [40] (#what-is-the-soa)] (#what-is-the-soa)
 
-[27.4 Todos os controlos do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)
+[27.4 Todos os controles do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)
 
 [27.5 Como se testa um controlo? [40](#how-do-you-test-a-control)](#how-do-you-test-a-control)
 
@@ -170,9 +170,9 @@ Sumário
 
 [28. Modelos, Glossário, Índice e Referências [42](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)
 
-[28.1 Registo mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)
+[28.1 Registro mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)
 
-[28.2 Papel de ensaio de controlo [42](#control-test-workpaper)](#control-test-workpaper)
+[28.2 Papel de trabalho para teste de controle [42](#control-test-workpaper)](#control-test-workpaper)
 
 [28.3 Glossário [42](#glossary)](#glossary)
 
@@ -180,7 +180,7 @@ Sumário
 
 [28.5 Referências oficiais [43](#official-references)](#official-references)
 
-# 1. ISO/IEC 27001 e 27002 Fundações
+# 1. Fundamentos da ISO/IEC 27001 e 27002
 
 * Edições atuais, propósito, relacionamento e limitações importantes.*
 
@@ -190,20 +190,20 @@ Figura 1. Ciclo de melhoria contínua do ISMS
 
 ** **Documento** **Função** **Certificação**
 -----------------------------------------------------------------------------------------
-ISO/IEC 27001:2022 □ Requisitos de ISMS Normativos, incluindo os controlos de referência do anexo A
-ISO/IEC 27001:2022/Amd 1:2024 □ Alterações da ação climática que afetam o contexto e a consideração de partes interessadas
-ISO/IEC 27002:2022 □ Orientações de implementação para os controlos de segurança da informação
+ISO/IEC 27001:2022 □ Requisitos de ISMS Normativos, incluindo os controles de referência do anexo A
+ISO/IEC 27001:2022/Amd 1:2024 □ Consideração das mudanças climáticas no contexto da organização e nos requisitos das partes interessadas
+ISO/IEC 27002:2022 □ Orientações de implementação para os controles de segurança da informação
 ISO/IEC 27005:2022 □ Orientação para a gestão dos riscos de segurança da informação
 
 - As cláusulas 4-10 contêm requisitos que uma organização deve tratar para conformidade.
 
-- O Anexo A enumera 93 controlos de referência em quatro temas: 37 organizativos, 8 pessoas, 14 físicos e 34 tecnológicos.
+- O Anexo A enumera 93 controles de referência em quatro temas: 37 organizativos, 8 pessoas, 14 físicos e 34 tecnológicos.
 
-- A selecção dos controlos segue o tratamento de risco e as obrigações aplicáveis; o anexo A não é uma lista de verificação universal onde cada controlo deve ser sempre aplicado.
+- A seleção dos controles segue o tratamento de risco e as obrigações aplicáveis; o anexo A não é uma lista de verificação universal onde cada controlo deve ser sempre aplicado.
 
-- A declaração de aplicabilidade regista os controlos necessários, a justificação, o estado de execução e as exclusões justificadas do anexo A.
+- A declaração de aplicabilidade regista os controles necessários, a justificação, o estado de execução e as exclusões justificadas do anexo A.
 
-2. Âmbito de aplicação do ISMS e partes interessadas
+# 2. Escopo do SGSI e partes interessadas
 
 * Como definir um limite defensável para o sistema de gestão.*
 
@@ -226,7 +226,7 @@ ISO/IEC 27005:2022 □ Orientação para a gestão dos riscos de segurança da i
 □ Limite □ Quais entidades jurídicas, sites, serviços, processos e tecnologia estão incluídos? □ Declaração de âmbito e mapas aprovados
 Interfaces O que conecta o escopo a outras equipes, sistemas, fornecedores e locais? • Fluxos de dados, arquitetura, contratos, matriz de responsabilidade
 • Completude; Poderia informação importante ou risco ser escondido fora do limite declarado? □ Inventários e descobertas reconciliados
-Alteração O que desencadeia uma revisão do escopo? Mudar registros, aquisição e portas do produto
+Mudança O que desencadeia uma revisão do escopo? Registros de mudanças, aquisições e marcos de aprovação do produto
 • Relevância climática • Os efeitos climáticos ou as expectativas das partes interessadas podem afetar a disponibilidade, fornecedores, instalações, pessoas ou obrigações? • Análise de contexto, decisão, ações quando relevante
 
 # 3. Avaliação de Risco e Tratamento de Risco
@@ -241,7 +241,7 @@ Definir critérios de risco antes da pontuação: método de identificação de 
 
 * ** Campo** **Exemplo de conteúdo**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ Activo ou objectivo □ Portal do cliente e disponibilidade contratualmente exigida
+□ Ativo ou objetivo □ Portal do cliente e disponibilidade contratualmente exigida
 Ameaça evento, roubo de credenciais seguido de acesso administrativo não autorizado ,
 □ Vulnerabilidade ou condição □ Inscrição fraca e sem MFA resistente a phishing
 Consequências □ Divulgação de dados, falha, violação contratual, custo de resposta
@@ -253,21 +253,21 @@ O tratamento Modifique o risco através de autenticação mais forte e recupera�
 
 # 4. Declaração de Aplicabilidade
 
-* A ponte entre o tratamento de risco, o anexo A, outros controlos e provas de auditoria.*
+* A ponte entre o tratamento de risco, o anexo A, outros controles e provas de auditoria.*
 
 ![The SoA registra seleção de controle fundamentada e status de implementação.](media/image3.png)
 
 Figura 3. Declaração de fluxo de trabalho de aplicabilidade
 
-- Listar os controlos necessários para tratar os riscos identificados de segurança da informação e cumprir os requisitos legais, regulamentares, contratuais e comerciais.
+- Listar os controles necessários para tratar os riscos identificados de segurança da informação e cumprir os requisitos legais, regulamentares, contratuais e comerciais.
 
-- Compare os controlos seleccionados com o anexo A, pelo que os controlos de referência necessários não são ignorados.
+- Compare os controles seleccionados com o anexo A, pelo que os controles de referência necessários não são ignorados.
 
 - Registar se cada controlo do anexo A é aplicável e justificar a inclusão ou exclusão.
 
 - Registar claramente o estado de execução e mantê-lo em conformidade com o plano de tratamento de risco e as provas operacionais.
 
-- Inclua controlos específicos da organização quando o anexo A não abordar totalmente um risco.
+- Inclua controles específicos da organização quando o anexo A não abordar totalmente um risco.
 
 - Controlar o SoA como informação documentada e atualizá-lo após mudanças de risco, escopo, legal, fornecedor, tecnologia ou controle de material.
 
@@ -286,13 +286,13 @@ Exclusão de exemplo A tecnologia ou o cenário descrito estão ausentes do âmb
 
 Figura 4. Cadeia de exigência à evidência
 
-**Documento ou registo** **Purpose** **Controle**
+**Documento ou registro** **Purpose** **Controle**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 O escopo do ISMS define contornos e interfaces . Aprovado, atual, consistente com a realidade .
 Aprovado, comunicado, revisto
-O método de risco e o registo mostram a avaliação e as decisões repetiveis . Critérios aplicados de forma consistente; os proprietários aprovam o risco residual .
+O método de risco e o registro mostram a avaliação e as decisões repetiveis . Critérios aplicados de forma consistente; os proprietários aprovam o risco residual .
 • Plano de tratamento de risco • Rastreia ações, proprietários, recursos e datas
-□ Declaração de Aplicabilidade • Explica a selecção e o estado de controlo • Todos os controlos do anexo A abordados; justificações suportadas
+□ Declaração de Aplicabilidade • Explica a seleção e o estado de controlo • Todos os controles do anexo A abordados; justificações suportadas
 • Objetivos e métricas • Mostra resultados e avaliação planejados
 □ Registros de competência e consciência □ Suportes de capacidade e compreensão
 • Evidência operacional □ Mostra controles realmente operados □ Completo, autêntico, protegido, retido
@@ -337,7 +337,7 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 
 * Requisitos em linguagem plana, foco de verificação e evidência de exemplo.*
 
-□ ** Finalidade da clausa: ** Planeamento
+□ ** Finalidade da clausa: ** Planejamento
 --------------------
 
 *Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
@@ -422,9 +422,9 @@ Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. 
 
 Figura 6. Temas de controlo do anexo A
 
-# 13. Anexo A 5 Controlos organizacionais
+# 13. Anexo A 5 Controles organizacionais
 
-* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*
+* Resumos originais dos controles de referência, foco de verificação e exemplos de provas.*
 
 Controle** Controle** Significado prático** Foco de verificação**Exemplo de evidência**
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -466,7 +466,7 @@ Responder a incidentes de segurança. Confirmar risco ou obrigação, design, pr
 • 5.36 • Verificar o cumprimento das políticas de segurança, regras e normas. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 Manter procedimentos operacionais documentados. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 
-Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
+Regra da seleção:** O anexo A é um conjunto de referência utilizado para verificar se os controles necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Preparar, avaliar, responder, preservar evidências e aprender com incidentes.](media/image7.png)
@@ -475,7 +475,7 @@ Figura 7. Gestão de incidentes de segurança
 
 # 14. Anexo A 6 As pessoas controlam
 
-* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*
+* Resumos originais dos controles de referência, foco de verificação e exemplos de provas.*
 
 Controle** Controle** Significado prático** Foco de verificação**Exemplo de evidência**
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -488,12 +488,12 @@ Controle** Controle** Significado prático** Foco de verificação**Exemplo de e
 6.7 Proteger a informação durante o trabalho remoto. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 6.8 Tornar a comunicação de eventos de segurança fácil e oportuna. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 
-Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
+Regra da seleção:** O anexo A é um conjunto de referência utilizado para verificar se os controles necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 15. Anexo A 7 Controlos físicos
+# 15. Anexo A 7 Controles físicos
 
-* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*
+* Resumos originais dos controles de referência, foco de verificação e exemplos de provas.*
 
 Controle** Controle** Significado prático** Foco de verificação**Exemplo de evidência**
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -512,12 +512,12 @@ Proteger a energia e o cabeamento de dados. Confirmar risco ou obrigação, desi
 7,13 h Mantenha o equipamento com segurança. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 □ 7.14 □ Eliminar ou reutilizar equipamentos com segurança. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 
-Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
+Regra da seleção:** O anexo A é um conjunto de referência utilizado para verificar se os controles necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-16. Anexo A 8 Controlos tecnológicos
+16. Anexo A 8 Controles tecnológicos
 
-* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*
+* Resumos originais dos controles de referência, foco de verificação e exemplos de provas.*
 
 Controle** Controle** Significado prático** Foco de verificação**Exemplo de evidência**
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -556,7 +556,7 @@ Opere um ciclo de vida de desenvolvimento seguro. Confirmar risco ou obrigação
 8.33 . Proteger a informação do teste. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 8.34 . Proteger os sistemas operacionais durante os testes de auditoria. Confirmar risco ou obrigação, design, proprietário, implementação, operação, exceções e medição. □ Procedimento, configuração, registro, registro, ticket, revisão, teste ou observação. □
 
-Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
+Regra da seleção:** O anexo A é um conjunto de referência utilizado para verificar se os controles necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através de tratamento de risco e registada na Declaração de Aplicabilidade. □
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 17. Controles de implementação com ISO/IEC 27002
@@ -687,7 +687,7 @@ Um certificado tem alcance e tempo limite. Ele não prova que cada produto é se
 Área de preparação** Verificação de aceitação**
 ---------------------------------------------------------------------------------------------------------------------------------
 • Escopo • Claro, suportável, refletido em operações reais e intenção de certificado
-Método utilizado de forma consistente; registo completo; os proprietários aceitam risco residual
+Método utilizado de forma consistente; registro completo; os proprietários aceitam risco residual
 Todos os controles do Anexo A abordados; seleções, exclusões e status suportados
 • Controles Implementados, operados tempo suficiente para produzir evidências confiáveis, e medidos
 • Auditoria interna • Programa e auditoria completa concluídas com provas objectivas e seguimento
@@ -701,13 +701,13 @@ Emenda □ Relevância climática e requisitos das partes interessadas considera
 
 . **Ferramenta** . **Purpose** . **Possível suporte** .
 ------------------------------------------------------------------------------------
-□ Ciso Assistant; intuitem.github.io; ISMS, riscos, controlos, provas
+□ Ciso Assistant; intuitem.github.io; ISMS, riscos, controles, provas
 SimpleRisk Community www.simplerisk.com
 • Wazuh – wazuh.com – SIEM, monitorização dos parâmetros de avaliação, MIF
 .osquery , www.osquery.io , Endpoint inventário e consultas ,
 □ OpenSCAP   www.open-scap.org
 - Greenbone Community Edition - Greenbone.github.io - Gestão da vulnerabilidade
-O Nmap nmap.org O Activo e a descoberta do serviço
+O Nmap nmap.org O Ativo e a descoberta do serviço
 Varredura de código, imagem, dependência, segredo e configuração
 • OWASP ZAP
 □ Keycloak www.keycloak.org
@@ -761,7 +761,7 @@ Evidência: escopo aprovado, configuração, versão, cobertura, resultados, rev
 
 ## 22.6 Greenbone Community Edition
 
-Objectivo: Gestão da vulnerabilidade. Projeto oficial: [<u>Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)
+Objetivo: Gestão da vulnerabilidade. Projeto oficial: [<u>Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)
 
 Início rápido e seguro: Autorize alvos, atualize feeds, execute varreduras de laboratório autenticadas, valide cobertura e achados, atribua remediação e rescan.
 
@@ -809,7 +809,7 @@ Evidência: escopo aprovado, configuração, versão, cobertura, resultados, rev
 
 ## 22.12 ADEUS
 
-Objectivo: Monitorização da integridade dos ficheiros. Projecto oficial: [<u>AIDE</u>](https://aide.github.io/)
+Objetivo: Monitorização da integridade dos ficheiros. Projecto oficial: [<u>AIDE</u>](https://aide.github.io/)
 
 Início rápido seguro: Crie uma linha de base em um host de laboratório, faça uma alteração de arquivo autorizada, execute uma verificação, investigue a diferença e proteja a linha de base.
 
@@ -907,7 +907,7 @@ Analista de Garantia de Segurança
 Competência** Prova**
 ----------------------------------------------------------------------------------------------------------------- (----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Os conceitos do ISMS explicam as cláusulas 4–10 e a melhoria contínua
-• Risco • Criar um plano de registo e tratamento consistente
+• Risco • Criar um plano de registro e tratamento consistente
 (SoA) Justifique seleções, exclusões, status e evidências ,
 • Teste de evidência; Defina populações, amostras, procedimentos, exceções e retestes;
 □ Alfabetização técnica; Interpretar identidade, nuvem, registro, vulnerabilidade, backup e evidência de configuração;
@@ -944,12 +944,12 @@ Regra do laboratório:** Use uma organização fictícia, dados sintéticos, sis
 O artefato de Portfólio** O que demonstra**
 □------------------------------------------------------------------------------------------------------------------
 Contexto, partidos, escopo . Cláusula 4 raciocínio e limites .
-• Método de risco, registo, tratamento
+• Método de risco, registro, tratamento
 □ Declaração de aplicabilidade
 □ Controle papel de teste □ Evidência, amostragem, exceção e conclusão
 Programa, plano, critérios, relatório e acompanhamento
 □ Minutos de análise de gestão
-• Registo de acção correctiva
+• Registro de acção correctiva
 O Memorando de evidência da ferramenta O Alfabetismo técnico e limitações
 
 # 26. Plano de Aprendizagem de Trinta Dias
@@ -981,7 +981,7 @@ Um sistema de gestão para controlar o risco de segurança da informação atrav
 
 # # 27.3 O que é o SoA?
 
-Um registo controlado dos controlos necessários, a justificação da inclusão ou exclusão no anexo A e o estado de execução, ligados ao tratamento e às provas.
+Um registro controlado dos controles necessários, a justificação da inclusão ou exclusão no anexo A e o estado de execução, ligados ao tratamento e às provas.
 
 ## 27.4 Todos os controles do Anexo A são obrigatórios?
 
@@ -1011,7 +1011,7 @@ Factos estatais apoiados por elementos de prova e âmbito definidos, divulgar li
 
 - Como as populações de evidência são produzidas e validadas?
 
-- Que sistemas gerem riscos, controlos, fornecedores, resultados e medidas correctivas?
+- Que sistemas gerem riscos, controles, fornecedores, resultados e medidas correctivas?
 
 - Como é mantida a independência do auditor interno?
 
@@ -1028,10 +1028,10 @@ Factos estatais apoiados por elementos de prova e âmbito definidos, divulgar li
 * Campo** * Entrada**
 ----------------------------------------------------------------------------------------------------------------------
 ID de risco e proprietário
-Objectivo / activo
+Objetivo / ativo
 "Evento e condição de ameaça"
 Consequências
-Controlos existentes
+Controles existentes
 * Litígio e impacto
 O risco actual
 O titular do tratamento e da acção □ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \  \ \ \  \  \ \ \ \ \ \ \ \ \ 
@@ -1057,7 +1057,7 @@ Conclusão e limitação
 
 * ** ** ** ** ** ** **
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-• Anexo A • Conjunto de referência de 93 controlos de segurança da informação em ISO/IEC 27001:2022.
+• Anexo A • Conjunto de referência de 93 controles de segurança da informação em ISO/IEC 27001:2022.
 . CIA . . Confidencialidade, integridade e disponibilidade.
 O cumprimento de uma exigência.
 □ Controle □ Medida que modifica ou mantém o risco.
@@ -1075,7 +1075,7 @@ Gestão de topo □ Pessoa ou grupo que dirige e controla a organização no mai
 
 **Sujeito** **Capítulo**
 ----------------------------------
-□ Controlos do anexo A
+□ Controles do anexo A
 Auditoria
 □ Certificação
 Emenda Climática 1, 2, 6, 21

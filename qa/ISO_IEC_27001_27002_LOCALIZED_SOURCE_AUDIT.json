@@ -5,620 +5,374 @@
       "source": "02-management-systems/ISO_IEC_27001_27002/Espanol/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md",
       "status": "FAIL",
       "findings": {
-        "malformed_html_or_image_markup": [
-          {
-            "line": 187,
-            "pattern": "لimg\\b",
-            "text": "لimg src=\"media/image1.png\" style=\"width:6.15in;height:3.39605in\" alt=\"Context and risk drive planning, implementation, evaluation, and improvement.\" /"
-          },
-          {
-            "line": 236,
-            "pattern": "\\bEl estilo [\\\"']?png",
-            "text": "El estilo \"png\"=\"width:6.15in;height:3.39605in\" alt=\"Los dueños de Risk evalúan escenarios, tratamiento y riesgo residual utilizando criterios definidos\"."
-          }
-        ],
-        "placeholder_or_injected_text": [
-          {
-            "line": 192,
-            "pattern": "La vida eterna",
-            "text": "|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ La vida eterna... |"
-          },
-          {
-            "line": 378,
-            "pattern": "La vida eterna",
-            "text": "|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-          },
-          {
-            "line": 590,
-            "pattern": "La vida eterna",
-            "text": "La vida eterna---------------------------------------------------------------------- La vida--"
-          },
-          {
-            "line": 196,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| ISO/IEC 27005:2022 Silencioso Guía para la gestión del riesgo de seguridad de la información | Orientación de apoyo, no el estándar de certificación 27001"
-          },
-          {
-            "line": 224,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso ** Prueba de la encuesta**"
-          },
-          {
-            "line": 274,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| **Control** Silencioso ** Aplicable** |"
-          },
-          {
-            "line": 292,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso | Establece dirección y compromisos"
-          },
-          {
-            "line": 349,
-            "pattern": "\\bSilencioso\\b",
-            "text": "tención 6.3 Silencioso Plan ISMS cambia para que se tengan en cuenta sus propósitos, consecuencias, recursos, responsabilidades e integridad del sistema. tención Confirme la propiedad, alcance, método, aprobación, pruebas de funcionamiento,"
-          },
-          {
-            "line": 633,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Conformidad | La evidencia es compatible con los criterios"
-          },
-          {
-            "line": 705,
-            "pattern": "\\bSilencioso\\b",
-            "text": "tención SimpleRisk Community Silencioso www.simplerisk.com"
-          },
-          {
-            "line": 707,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso osquery | www.osquery.io | Inventario y consultas"
-          },
-          {
-            "line": 708,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| OpenSCAP Silencioso www.open-scap.org Evaluación de la configuración de Linux |"
-          },
-          {
-            "line": 863,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Certificación | ¿Son las reclamaciones alcances, actuales y compatibles? Verde / Amarillo / Rojo"
-          },
-          {
-            "line": 948,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Declaración de aplicabilidad Silencioso"
-          },
-          {
-            "line": 966,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| 23–25 | Noconformidad, causa raíz, acción correctiva, mejora Silencioso Dos registros de hallazgo y acción correctiva"
-          },
-          {
-            "line": 1062,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Conformity | Fulfillment of a requirement."
-          },
-          {
-            "line": 1068,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| Noconformidad Silencioso para cumplir con un requisito. |"
-          },
-          {
-            "line": 1070,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso propietario | Persona o entidad responsable y autorizado para gestionar un riesgo."
-          },
-          {
-            "line": 1071,
-            "pattern": "\\bSilencioso\\b",
-            "text": "| SoA Silencioso Declaración de Aplicabilidad. |"
-          },
-          {
-            "line": 1079,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso en la auditoría"
-          },
-          {
-            "line": 1080,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Certificación | 21 |"
-          },
-          {
-            "line": 1085,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso analista junior"
-          },
-          {
-            "line": 1086,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso examen de la gestión"
-          },
-          {
-            "line": 1089,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso evaluación y tratamiento de los riesgos"
-          },
-          {
-            "line": 1090,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso en la vida útil 2, 6"
-          },
-          {
-            "line": 1091,
-            "pattern": "\\bSilencioso\\b",
-            "text": "Silencioso Declaración de aplicabilidad"
-          },
-          {
-            "line": 16,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 53,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 225,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 275,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 307,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 412,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 470,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 492,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 516,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 560,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 583,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 643,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 720,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 922,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 1044,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          },
-          {
-            "line": 1109,
-            "pattern": "\\|\\. \\|",
-            "text": "|. |"
-          }
-        ],
         "malformed_markdown_links": [
           {
-            "line": 59,
+            "line": 57,
             "pattern": "\\]\\s+\\(#",
             "text": "[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)"
           },
           {
-            "line": 61,
+            "line": 59,
             "pattern": "\\]\\s+\\(#",
             "text": "[Prefacio [3] (#preface)](#preface)"
           },
           {
-            "line": 81,
+            "line": 79,
             "pattern": "\\]\\s+\\(#",
             "text": "[8. Cláusula 6 — Planificación [14] (#clause-6-planning)] (#clause-6-planning)"
           },
           {
-            "line": 85,
+            "line": 83,
             "pattern": "\\]\\s+\\(#",
             "text": "[10. Cláusula 8 — Operación [16] (#clause-8-operation)] (#clause-8-operation)"
           },
           {
-            "line": 149,
+            "line": 147,
             "pattern": "\\]\\s+\\(#",
             "text": "[26. Plan de aprendizaje de 30 días [39] (#thirty-day-learning-plan)](#thirty-day-learning-plan)"
           },
           {
-            "line": 57,
+            "line": 55,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[Notificación de publicación y uso [2](#publication-and-use-notice)](#publication-and-use-notice)"
           },
           {
-            "line": 59,
+            "line": 57,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)"
           },
           {
-            "line": 61,
+            "line": 59,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[Prefacio [3] (#preface)](#preface)"
           },
           {
-            "line": 63,
+            "line": 61,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[Cómo utilizar este manual [4](#how-to-use-this-manual)](#how-to-use-this-manual)"
           },
           {
-            "line": 65,
+            "line": 63,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[Tabla de contenidos [4](#table-of-contents)](#table-of-contents)"
           },
           {
-            "line": 67,
+            "line": 65,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[1. ISO/IEC 27001 y 27002 Foundations [7](#isoiec-27001-and-27002-foundations)](#isoiec-27001-and-27002-foundations)"
           },
           {
-            "line": 69,
+            "line": 67,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[2. ISMS Scope and Interested Parties [8](#isms-scope-and-interested-parties)](#isms-scope-and-interested-parties)"
           },
           {
-            "line": 71,
+            "line": 69,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[3. Evaluación del riesgo y tratamiento del riesgo [9](#risk-assessment-and-risk-treatment)](#risk-assessment-and-risk-treatment)"
           },
           {
-            "line": 73,
+            "line": 71,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[4. Declaración de aplicabilidad [10](#statement-of-applicability)](#statement-of-applicability)"
           },
           {
-            "line": 75,
+            "line": 73,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[5. Documentación y pruebas [11](#documentation-and-evidence)](#documentation-and-evidence)"
           },
           {
-            "line": 77,
+            "line": 75,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[6. Cláusula 4 — Contexto de la organización [12](#clause-4-context-of-the-organization)](#clause-4-context-of-the-organization)"
           },
           {
-            "line": 79,
+            "line": 77,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[7. Cláusula 5 — Liderazgo [13](#clause-5-leadership)](#clause-5-leadership)"
           },
           {
-            "line": 83,
+            "line": 81,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[9. Cláusula 7 - Apoyo [15](#clause-7-support)](#clause-7-support)"
           },
           {
-            "line": 87,
+            "line": 85,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[11. Cláusula 9 — Evaluación del desempeño [17](#clause-9-performance-evaluation)](#clause-9-performance-evaluation)"
           },
           {
-            "line": 89,
+            "line": 87,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[12. Cláusula 10 — Mejora [18](#clause-10-improvement)](#clause-10-improvement)"
           },
           {
-            "line": 91,
+            "line": 89,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[13. Anexo A 5 Controles de organización [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)"
           },
           {
-            "line": 93,
+            "line": 91,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[14. Anexo A 6 Controles de personas [22](#annex-a-6-people-controls)](#annex-a-6-people-controls)"
           },
           {
-            "line": 95,
+            "line": 93,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[15. Anexo A 7 Controles físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)"
           },
           {
-            "line": 97,
+            "line": 95,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[16. Anexo A 8 Controles tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)"
           },
           {
-            "line": 99,
+            "line": 97,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[17. Implementing Controls with ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)"
           },
           {
-            "line": 101,
+            "line": 99,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[18. Pruebas de medición y control [27](#metrics-and-control-testing)](#metrics-and-control-testing)"
           },
           {
-            "line": 103,
+            "line": 101,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[19. Auditoría interna [28](#internal-audit)](#internal-audit)"
           },
           {
-            "line": 105,
+            "line": 103,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[20. Management Review and Corrective Action [29](#management-review-and-corrective-action)](#management-review-and-corrective-action)"
           },
           {
-            "line": 107,
+            "line": 105,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[21. Lectura de certificación [30](#certification-readiness)](#certification-readiness)"
           },
           {
-            "line": 109,
+            "line": 107,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22. Herramientas de código abierto [31](#open-source-tools)](#open-source-tools)"
           },
           {
-            "line": 111,
+            "line": 109,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.1 Auxiliar de CISO [31](#ciso-assistant)](#ciso-assistant)"
           },
           {
-            "line": 113,
+            "line": 111,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.2 Comunidad SimpleRisk [31](#simplerisk-community)](#simplerisk-community)"
           },
           {
-            "line": 115,
+            "line": 113,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.3 Wazuh [31](#wazuh)](#wazuh)"
           },
           {
-            "line": 117,
+            "line": 115,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.4 osquery [32](#osquery)](#osquery)"
           },
           {
-            "line": 119,
+            "line": 117,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.5 OpenSCAP [32](#openscap)](#openscap)"
           },
           {
-            "line": 121,
+            "line": 119,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.6 Greenbone Community Edition [32](#greenbone-community-edition)](#greenbone-community-edition)"
           },
           {
-            "line": 123,
+            "line": 121,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.7 Nmap [32](#nmap)](#nmap)"
           },
           {
-            "line": 125,
+            "line": 123,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.8 Trivy [32](#trivy)](#trivy)"
           },
           {
-            "line": 127,
+            "line": 125,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.9 OWASP ZAP [33](#owasp-zap)](#owasp-zap)"
           },
           {
-            "line": 129,
+            "line": 127,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.10 Keycloak [33](#keycloak)](#keycloak)"
           },
           {
-            "line": 131,
+            "line": 129,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.11 DefectDojo [33](#defectdojo)](#defectdojo)"
           },
           {
-            "line": 133,
+            "line": 131,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.12 AIDE [33](#aide)](#aide)"
           },
           {
-            "line": 135,
+            "line": 133,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.13 Lynis [33](#lynis)](#lynis)"
           },
           {
-            "line": 137,
+            "line": 135,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[22.14 Agente de política abierta [33](#open-policy-agent)](#open-policy-agent)"
           },
           {
-            "line": 139,
+            "line": 137,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[23. Manual del SGSI para gerentes [35](#managers-isms-playbook)](#managers-isms-playbook)"
           },
           {
-            "line": 141,
+            "line": 139,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[24. Guía de la carrera de analista junior [36](#junior-analyst-career-guide)](#junior-analyst-career-guide)"
           },
           {
-            "line": 143,
+            "line": 141,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[24.1 Trabajo junior típico [36](#typical-junior-work)](#typical-junior-work)"
           },
           {
-            "line": 145,
+            "line": 143,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[24.2 Valor de los empleadores de habilidades [37](#skills-employers-value)](#skills-employers-value)"
           },
           {
-            "line": 147,
+            "line": 145,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[25. Laboratorio de Ficción y Cartera [38](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)"
           },
           {
-            "line": 149,
+            "line": 147,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[26. Plan de aprendizaje de 30 días [39] (#thirty-day-learning-plan)](#thirty-day-learning-plan)"
           },
           {
-            "line": 151,
+            "line": 149,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27. Preparación de entrevistas [40](#interview-preparation)](#interview-preparation)"
           },
           {
-            "line": 153,
+            "line": 151,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.1 ¿Qué es un ISMS? [40](#what-is-an-isms)](#what-is-an-isms)"
           },
           {
-            "line": 155,
+            "line": 153,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.2 ISO 27001 versus 27002? [40](#iso-27001-versus-27002)](#iso-27001-versus-27002)"
           },
           {
-            "line": 157,
+            "line": 155,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.3 ¿Cuál es el SoA? [40](#what-is-the-soa)](#what-is-the-soa)"
           },
           {
-            "line": 159,
+            "line": 157,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.4 ¿Todos los controles del anexo A son obligatorios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)"
           },
           {
-            "line": 161,
+            "line": 159,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.5 ¿Cómo se prueba un control? [40](#how-do-you-test-a-control)](#how-do-you-test-a-control)"
           },
           {
-            "line": 163,
+            "line": 161,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.6 ¿Qué es una no conformidad? [40](#what-is-a-nonconformity)](#what-is-a-nonconformity)"
           },
           {
-            "line": 165,
+            "line": 163,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.7 ¿Qué cambió en 2024? [40](#what-changed-in-2024)](#what-changed-in-2024)"
           },
           {
-            "line": 167,
+            "line": 165,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.8 ¿Qué puede concluir un analista junior con seguridad? [40](#what-can-a-junior-analyst-safely-conclude)](#what-can-a-junior-analyst-safely-conclude)"
           },
           {
-            "line": 169,
+            "line": 167,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[27.9 Preguntas para hacer al empleador [40](#questions-to-ask-the-employer)](#questions-to-ask-the-employer)"
           },
           {
-            "line": 171,
+            "line": 169,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28. Plantillas, Glosario, Índice y Referencias [42](#templates-glossary-index-and-references)](#templates-glossary-index-and-references)"
           },
           {
-            "line": 173,
+            "line": 171,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28.1 Registro mínimo de riesgo [42](#minimal-risk-record)](#minimal-risk-record)"
           },
           {
-            "line": 175,
+            "line": 173,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28.2 Documentos de prueba de control [42](#control-test-workpaper)](#control-test-workpaper)"
           },
           {
-            "line": 177,
+            "line": 175,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28.3 Glosario [42](#glossary)](#glossary)"
           },
           {
-            "line": 179,
+            "line": 177,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28.4 Índice de asunto [43](#subject-index)](#subject-index)"
           },
           {
-            "line": 181,
+            "line": 179,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
             "text": "[28.5 Referencias oficiales [43](#official-references)](#official-references)"
           }
         ],
-        "untranslated_english_headings": [
-          {
-            "line": 18,
-            "pattern": "^#?\\s*Publication and Use Notice$",
-            "text": "# Publication and Use Notice"
-          }
-        ],
         "known_mistranslations": [
           {
-            "line": 107,
+            "line": 105,
             "pattern": "Lectura de certificación",
             "text": "[21. Lectura de certificación [30](#certification-readiness)](#certification-readiness)"
           },
           {
-            "line": 147,
+            "line": 145,
             "pattern": "Laboratorio de Ficción y Cartera",
             "text": "[25. Laboratorio de Ficción y Cartera [38](#fictional-laboratory-and-portfolio)](#fictional-laboratory-and-portfolio)"
           },
           {
-            "line": 145,
+            "line": 143,
             "pattern": "Valor de los empleadores de habilidades",
             "text": "[24.2 Valor de los empleadores de habilidades [37](#skills-employers-value)](#skills-employers-value)"
           },
           {
-            "line": 905,
+            "line": 895,
             "pattern": "Valor de los empleadores de habilidades",
             "text": "## 24.2 Valor de los empleadores de habilidades"
           },
           {
-            "line": 59,
+            "line": 57,
             "pattern": "Uso electrónico y autorizado",
             "text": "[Uso electrónico y autorizado [2] (#ethical-and-authorized-use)](#ethical-and-authorized-use)"
           },
           {
-            "line": 52,
-            "pattern": "Contenido de la palabra",
-            "text": "Contenido de la palabra:** Este documento contiene un campo de mesa de contenido de Word nativo y una guía de capítulo verificada. Después de editar, haga clic con el botón derecho en el contenido y elija el campo de actualización, luego ac"
-          },
-          {
-            "line": 218,
-            "pattern": "SIV\\b",
-            "text": "- Considerar si el cambio climático es relevante para la eficacia del SIV y si las partes interesadas tienen requisitos relacionados con el clima; documentar el razonamiento."
-          },
-          {
-            "line": 318,
+            "line": 315,
             "pattern": "SIV\\b",
             "text": "TEN **2024 enmienda:** Determinar explícitamente si el cambio climático es relevante para el contexto del SIV y reconocer que las partes interesadas pertinentes pueden tener requisitos relacionados con el clima. Mantenga la evidencia del ra"
-          },
-          {
-            "line": 200,
-            "pattern": "37 orgánicos",
-            "text": "- En el anexo A se enumeran 93 controles de referencia en cuatro temas: 37 orgánicos, 8 personas, 14 físicos y 34 tecnológicos."
           }
         ]
       },
       "major_section_counts": {
         "1": 1,
-        "2": 0,
+        "2": 1,
         "3": 1,
         "4": 1,
         "5": 1,
@@ -647,7 +401,6 @@
         "28": 1
       },
       "missing_major_sections": [
-        2,
         6,
         7,
         8,
@@ -666,7 +419,7 @@
       "duplicate_major_sections": [],
       "image_reference_counts": {
         "1": 1,
-        "2": 0,
+        "2": 1,
         "3": 1,
         "4": 1,
         "5": 0,
@@ -676,14 +429,13 @@
         "9": 1
       },
       "missing_image_references": [
-        2,
         5,
         6,
         8
       ],
       "table_signals": {
-        "pipe_rows": 239,
-        "separator_rows": 15,
+        "pipe_rows": 224,
+        "separator_rows": 16,
         "collapsed_rule_rows": 0
       }
     },
@@ -706,12 +458,12 @@
           {
             "line": 57,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[Comunicação de publicação e utilização [2](#publication-and-use-notice)](#publication-and-use-notice)"
+            "text": "[Comunicação de publicação e uso [2](#publication-and-use-notice)](#publication-and-use-notice)"
           },
           {
             "line": 59,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[Utilização ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)"
+            "text": "[Uso ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)"
           },
           {
             "line": 61,
@@ -726,7 +478,7 @@
           {
             "line": 65,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)"
+            "text": "[Sumário [4](#table-of-contents)](#table-of-contents)"
           },
           {
             "line": 67,
@@ -766,7 +518,7 @@
           {
             "line": 81,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[8. Cláusula 6 — Planeamento [14](#clause-6-planning)](#clause-6-planning)"
+            "text": "[8. Cláusula 6 — Planejamento [14](#clause-6-planning)](#clause-6-planning)"
           },
           {
             "line": 83,
@@ -791,7 +543,7 @@
           {
             "line": 91,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[13. Anexo A 5 Controlos organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)"
+            "text": "[13. Anexo A 5 Controles organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)"
           },
           {
             "line": 93,
@@ -801,17 +553,17 @@
           {
             "line": 95,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[15. Anexo A 7 Controlos físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)"
+            "text": "[15. Anexo A 7 Controles físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)"
           },
           {
             "line": 97,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[16. Anexo A 8 Controlos tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)"
+            "text": "[16. Anexo A 8 Controles tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)"
           },
           {
             "line": 99,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[17. Controlos de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)"
+            "text": "[17. Controles de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)"
           },
           {
             "line": 101,
@@ -956,7 +708,7 @@
           {
             "line": 159,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[27.4 Todos os controlos do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)"
+            "text": "[27.4 Todos os controles do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)"
           },
           {
             "line": 161,
@@ -986,12 +738,12 @@
           {
             "line": 173,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[28.1 Registo mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)"
+            "text": "[28.1 Registro mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)"
           },
           {
             "line": 175,
             "pattern": "\\[[^\\]]+\\]\\s*\\(#.*\\)\\]\\(#",
-            "text": "[28.2 Papel de ensaio de controlo [42](#control-test-workpaper)](#control-test-workpaper)"
+            "text": "[28.2 Papel de trabalho para teste de controle [42](#control-test-workpaper)](#control-test-workpaper)"
           },
           {
             "line": 177,
@@ -1023,329 +775,17 @@
             "text": "![The SoA registra seleção de controle fundamentada e status de implementação.](media/image3.png)"
           }
         ],
-        "non_brazilian_or_mixed_locale_forms": [
-          {
-            "line": 15,
-            "pattern": "\\bcontrolos\\b",
-            "text": "• todos os 93 controlos do Anexo A • risco • declaração de aplicabilidade • auditoria • certificação • provas • ferramentas • laboratórios • preparação para a carreira"
-          },
-          {
-            "line": 91,
-            "pattern": "\\bcontrolos\\b",
-            "text": "[13. Anexo A 5 Controlos organizacionais [19](#annex-a-5-organizational-controls)](#annex-a-5-organizational-controls)"
-          },
-          {
-            "line": 95,
-            "pattern": "\\bcontrolos\\b",
-            "text": "[15. Anexo A 7 Controlos físicos [23](#annex-a-7-physical-controls)](#annex-a-7-physical-controls)"
-          },
-          {
-            "line": 97,
-            "pattern": "\\bcontrolos\\b",
-            "text": "[16. Anexo A 8 Controlos tecnológicos [24](#annex-a-8-technological-controls)](#annex-a-8-technological-controls)"
-          },
-          {
-            "line": 99,
-            "pattern": "\\bcontrolos\\b",
-            "text": "[17. Controlos de execução com ISO/IEC 27002 [26](#implementing-controls-with-isoiec-27002)](#implementing-controls-with-isoiec-27002)"
-          },
-          {
-            "line": 159,
-            "pattern": "\\bcontrolos\\b",
-            "text": "[27.4 Todos os controlos do anexo A são obrigatórios? [40](#are-all-annex-a-controls-mandatory)](#are-all-annex-a-controls-mandatory)"
-          },
-          {
-            "line": 193,
-            "pattern": "\\bcontrolos\\b",
-            "text": "ISO/IEC 27001:2022 □ Requisitos de ISMS Normativos, incluindo os controlos de referência do anexo A"
-          },
-          {
-            "line": 195,
-            "pattern": "\\bcontrolos\\b",
-            "text": "ISO/IEC 27002:2022 □ Orientações de implementação para os controlos de segurança da informação"
-          },
-          {
-            "line": 200,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- O Anexo A enumera 93 controlos de referência em quatro temas: 37 organizativos, 8 pessoas, 14 físicos e 34 tecnológicos."
-          },
-          {
-            "line": 202,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- A selecção dos controlos segue o tratamento de risco e as obrigações aplicáveis; o anexo A não é uma lista de verificação universal onde cada controlo deve ser sempre aplicado."
-          },
-          {
-            "line": 204,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- A declaração de aplicabilidade regista os controlos necessários, a justificação, o estado de execução e as exclusões justificadas do anexo A."
-          },
-          {
-            "line": 256,
-            "pattern": "\\bcontrolos\\b",
-            "text": "* A ponte entre o tratamento de risco, o anexo A, outros controlos e provas de auditoria.*"
-          },
-          {
-            "line": 262,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- Listar os controlos necessários para tratar os riscos identificados de segurança da informação e cumprir os requisitos legais, regulamentares, contratuais e comerciais."
-          },
-          {
-            "line": 264,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- Compare os controlos seleccionados com o anexo A, pelo que os controlos de referência necessários não são ignorados."
-          },
-          {
-            "line": 270,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- Inclua controlos específicos da organização quando o anexo A não abordar totalmente um risco."
-          },
-          {
-            "line": 295,
-            "pattern": "\\bcontrolos\\b",
-            "text": "□ Declaração de Aplicabilidade • Explica a selecção e o estado de controlo • Todos os controlos do anexo A abordados; justificações suportadas"
-          },
-          {
-            "line": 425,
-            "pattern": "\\bcontrolos\\b",
-            "text": "# 13. Anexo A 5 Controlos organizacionais"
-          },
-          {
-            "line": 427,
-            "pattern": "\\bcontrolos\\b",
-            "text": "* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*"
-          },
-          {
-            "line": 469,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 478,
-            "pattern": "\\bcontrolos\\b",
-            "text": "* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*"
-          },
-          {
-            "line": 491,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 494,
-            "pattern": "\\bcontrolos\\b",
-            "text": "# 15. Anexo A 7 Controlos físicos"
-          },
-          {
-            "line": 496,
-            "pattern": "\\bcontrolos\\b",
-            "text": "* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*"
-          },
-          {
-            "line": 515,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 518,
-            "pattern": "\\bcontrolos\\b",
-            "text": "16. Anexo A 8 Controlos tecnológicos"
-          },
-          {
-            "line": 520,
-            "pattern": "\\bcontrolos\\b",
-            "text": "* Resumos originais dos controlos de referência, foco de verificação e exemplos de provas.*"
-          },
-          {
-            "line": 559,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 704,
-            "pattern": "\\bcontrolos\\b",
-            "text": "□ Ciso Assistant; intuitem.github.io; ISMS, riscos, controlos, provas"
-          },
-          {
-            "line": 984,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Um registo controlado dos controlos necessários, a justificação da inclusão ou exclusão no anexo A e o estado de execução, ligados ao tratamento e às provas."
-          },
-          {
-            "line": 1014,
-            "pattern": "\\bcontrolos\\b",
-            "text": "- Que sistemas gerem riscos, controlos, fornecedores, resultados e medidas correctivas?"
-          },
-          {
-            "line": 1034,
-            "pattern": "\\bcontrolos\\b",
-            "text": "Controlos existentes"
-          },
-          {
-            "line": 1060,
-            "pattern": "\\bcontrolos\\b",
-            "text": "• Anexo A • Conjunto de referência de 93 controlos de segurança da informação em ISO/IEC 27001:2022."
-          },
-          {
-            "line": 1078,
-            "pattern": "\\bcontrolos\\b",
-            "text": "□ Controlos do anexo A"
-          },
-          {
-            "line": 202,
-            "pattern": "\\bselecção\\b",
-            "text": "- A selecção dos controlos segue o tratamento de risco e as obrigações aplicáveis; o anexo A não é uma lista de verificação universal onde cada controlo deve ser sempre aplicado."
-          },
-          {
-            "line": 295,
-            "pattern": "\\bselecção\\b",
-            "text": "□ Declaração de Aplicabilidade • Explica a selecção e o estado de controlo • Todos os controlos do anexo A abordados; justificações suportadas"
-          },
-          {
-            "line": 469,
-            "pattern": "\\bselecção\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 491,
-            "pattern": "\\bselecção\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 515,
-            "pattern": "\\bselecção\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 559,
-            "pattern": "\\bselecção\\b",
-            "text": "Regra da selecção:** O anexo A é um conjunto de referência utilizado para verificar se os controlos necessários não foram ignorados. A organização pode precisar de outros controles. Qualquer inclusão ou exclusão deve ser justificada através"
-          },
-          {
-            "line": 244,
-            "pattern": "\\bobjectivo\\b",
-            "text": "□ Activo ou objectivo □ Portal do cliente e disponibilidade contratualmente exigida"
-          },
-          {
-            "line": 764,
-            "pattern": "\\bobjectivo\\b",
-            "text": "Objectivo: Gestão da vulnerabilidade. Projeto oficial: [<u>Greenbone Community Edition</u>](https://greenbone.github.io/docs/latest/)"
-          },
-          {
-            "line": 812,
-            "pattern": "\\bobjectivo\\b",
-            "text": "Objectivo: Monitorização da integridade dos ficheiros. Projecto oficial: [<u>AIDE</u>](https://aide.github.io/)"
-          },
-          {
-            "line": 1031,
-            "pattern": "\\bobjectivo\\b",
-            "text": "Objectivo / activo"
-          },
-          {
-            "line": 244,
-            "pattern": "\\bactivo\\b",
-            "text": "□ Activo ou objectivo □ Portal do cliente e disponibilidade contratualmente exigida"
-          },
-          {
-            "line": 710,
-            "pattern": "\\bactivo\\b",
-            "text": "O Nmap nmap.org O Activo e a descoberta do serviço"
-          },
-          {
-            "line": 1031,
-            "pattern": "\\bactivo\\b",
-            "text": "Objectivo / activo"
-          },
-          {
-            "line": 173,
-            "pattern": "\\bregisto\\b",
-            "text": "[28.1 Registo mínimo de risco [42](#minimal-risk-record)](#minimal-risk-record)"
-          },
-          {
-            "line": 289,
-            "pattern": "\\bregisto\\b",
-            "text": "**Documento ou registo** **Purpose** **Controle**"
-          },
-          {
-            "line": 293,
-            "pattern": "\\bregisto\\b",
-            "text": "O método de risco e o registo mostram a avaliação e as decisões repetiveis . Critérios aplicados de forma consistente; os proprietários aprovam o risco residual ."
-          },
-          {
-            "line": 690,
-            "pattern": "\\bregisto\\b",
-            "text": "Método utilizado de forma consistente; registo completo; os proprietários aceitam risco residual"
-          },
-          {
-            "line": 910,
-            "pattern": "\\bregisto\\b",
-            "text": "• Risco • Criar um plano de registo e tratamento consistente"
-          },
-          {
-            "line": 947,
-            "pattern": "\\bregisto\\b",
-            "text": "• Método de risco, registo, tratamento"
-          },
-          {
-            "line": 952,
-            "pattern": "\\bregisto\\b",
-            "text": "• Registo de acção correctiva"
-          },
-          {
-            "line": 984,
-            "pattern": "\\bregisto\\b",
-            "text": "Um registo controlado dos controlos necessários, a justificação da inclusão ou exclusão no anexo A e o estado de execução, ligados ao tratamento e às provas."
-          },
-          {
-            "line": 81,
-            "pattern": "\\bplaneamento\\b",
-            "text": "[8. Cláusula 6 — Planeamento [14](#clause-6-planning)](#clause-6-planning)"
-          },
-          {
-            "line": 340,
-            "pattern": "\\bplaneamento\\b",
-            "text": "□ ** Finalidade da clausa: ** Planeamento"
-          },
-          {
-            "line": 57,
-            "pattern": "\\butilização\\b",
-            "text": "[Comunicação de publicação e utilização [2](#publication-and-use-notice)](#publication-and-use-notice)"
-          },
-          {
-            "line": 59,
-            "pattern": "\\butilização\\b",
-            "text": "[Utilização ética e autorizada [2](#ethical-and-authorized-use)](#ethical-and-authorized-use)"
-          }
-        ],
         "known_mistranslations": [
           {
             "line": 9,
             "pattern": "mudadores de carreira",
             "text": "* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*"
-          },
-          {
-            "line": 194,
-            "pattern": "Alterações da ação climática",
-            "text": "ISO/IEC 27001:2022/Amd 1:2024 □ Alterações da ação climática que afetam o contexto e a consideração de partes interessadas"
-          },
-          {
-            "line": 229,
-            "pattern": "portas do produto",
-            "text": "Alteração O que desencadeia uma revisão do escopo? Mudar registros, aquisição e portas do produto"
-          },
-          {
-            "line": 175,
-            "pattern": "Papel de ensaio de controlo",
-            "text": "[28.2 Papel de ensaio de controlo [42](#control-test-workpaper)](#control-test-workpaper)"
-          },
-          {
-            "line": 65,
-            "pattern": "Quadro de conteúdos",
-            "text": "[Quadro de conteúdos [4](#table-of-contents)](#table-of-contents)"
           }
         ]
       },
       "major_section_counts": {
         "1": 1,
-        "2": 0,
+        "2": 1,
         "3": 1,
         "4": 1,
         "5": 1,
@@ -1374,7 +814,6 @@
         "28": 1
       },
       "missing_major_sections": [
-        2,
         16
       ],
       "duplicate_major_sections": [],

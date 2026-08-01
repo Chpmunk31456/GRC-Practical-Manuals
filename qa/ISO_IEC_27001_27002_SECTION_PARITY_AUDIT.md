@@ -4,19 +4,18 @@ This audit compares each localized major section with the approved English maste
 
 ## es-419
 
-- Failing sections: 12 of 28
+- Failing sections: 11 of 28
 
 - Section 1: residual_english
-- Section 2: corruption_tokens
-- Section 4: corruption_tokens, residual_english
+- Section 4: residual_english
 - Section 5: corruption_tokens, residual_english
 - Section 6: missing_heading, table_structure_drift, length_drift
 - Section 13: residual_english
 - Section 14: residual_english
 - Section 15: residual_english
 - Section 16: residual_english
-- Section 17: table_structure_drift, corruption_tokens
-- Section 25: corruption_tokens
+- Section 17: table_structure_drift
+- Section 25: table_structure_drift
 - Section 28: corruption_tokens, residual_english
 
 ## pt-BR

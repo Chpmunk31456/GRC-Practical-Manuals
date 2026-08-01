@@ -10,6 +10,36 @@ This project uses version numbers such as:
 
 ---
 
+## [1.7] — 1 August 2026
+
+### Added
+
+- Published the GRC Policy Template Toolkit.
+- Added four controlled English implementation chapters, a combined English Markdown master, Microsoft Word edition, searchable PDF, source assembly records, QA reports, and SHA-256 checksums.
+- Added ten controlled English policy templates and ten editable policy-template DOCX files covering information security, access control, acceptable use, incident response, business continuity and disaster recovery, third-party and vendor risk, data protection and privacy, change management, vulnerability and patch management, and logging and monitoring.
+- Added a 25-field policy register, a 25-field policy exception tracker, and a 33-field policy adoption and review checklist.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF formats.
+
+### Validated
+
+- English controlled assembly, combined DOCX ZIP integrity, searchable-PDF text, ten editable DOCX templates, drafting safeguards, controlled placeholders, and all three CSV schemas passed automated validation.
+- Both localized editions passed level-one and level-two heading parity, protected-token restoration, DOCX ZIP integrity, searchable-PDF, page-count, extracted-word, and checksum checks.
+- Spanish package: 29 PDF pages and 7,108 extracted words.
+- Brazilian Portuguese package: 29 PDF pages and 6,842 extracted words.
+
+### Changed
+
+- Updated the root repository catalog and the Templates and Tools index.
+- Advanced the repository version from 1.6 to 1.7.
+- Identified control-mapping resources as the next planned Section 08 workstream.
+- Removed temporary English and localized policy-toolkit workflows after successful publication.
+
+### Limitations
+
+- Native-language editorial approval, organization-specific legal or regulatory review, privacy and labor review, standards certification, assistive-technology testing, and full page-by-page human visual review are not represented as completed.
+
+---
+
 ## [1.6] — 1 August 2026
 
 ### Added

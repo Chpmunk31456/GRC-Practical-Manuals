@@ -211,7 +211,7 @@ Figura 3. Estructura de medición de las Salvaguardas de CIS
 
 *Las 5 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image4.png" style="width:6.15in;height:3.38991in" alt="El descubrimiento, la conciliación, la respuesta y la revisión mantienen actualizadas las poblaciones fundamentales." />
+![El descubrimiento, la conciliación, la respuesta y la revisión mantienen actualizadas las poblaciones fundamentales.](media/image4.png)
 
 Figura 4. Ciclo de inventario de activos y software
 
@@ -251,7 +251,7 @@ Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluació
 
 *Las 14 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image5.png" style="width:6.15in;height:3.39605in" alt="Descubrir, clasificar, proteger, conservar y eliminar datos según su sensibilidad y necesidad." />
+![Descubrir, clasificar, proteger, conservar y eliminar datos según su sensibilidad y necesidad.](media/image5.png)
 
 Figura 5. Ciclo de vida de protección de datos
 
@@ -323,7 +323,7 @@ Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluació
 
 *Las 8 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image6.png" style="width:6.15in;height:3.03192in" alt="Las cuentas y los privilegios requieren creación aprobada, autenticación sólida, revisión y revocación oportuna." />
+![Las cuentas y los privilegios requieren creación aprobada, autenticación sólida, revisión y revocación oportuna.](media/image6.png)
 
 Figura 6. Ciclo de vida de identidad y acceso
 
@@ -347,7 +347,7 @@ Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluació
 
 *Las 7 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image7.png" style="width:6.15in;height:3.14547in" alt="La cobertura completa y la remediación verificada importan más que la producción de informes de escaneo." />
+![La cobertura completa y la remediación verificada importan más que la producción de informes de escaneo.](media/image7.png)
 
 Figura 7. Gestión continua de vulnerabilidades
 
@@ -469,7 +469,7 @@ Utilice la guía oficial de CIS Controls v8.1 y la Especificación de Evaluació
 
 *Las 11 Salvaguardas, su significado claro, el enfoque de verificación y ejemplos de evidencia.*
 
-<img src="media/image8.png" style="width:6.15in;height:3.20094in" alt="El contexto centralizado, la detección ajustada, la investigación humana y la respuesta crean una defensa útil." />
+![El contexto centralizado, la detección ajustada, la investigación humana y la respuesta crean una defensa útil.](media/image8.png)
 
 Figura 8. Monitoreo y defensa de la red
 

@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/integrate-cis-spanish-opening.yml'
       - 'qa/tools/integrate_cis_spanish_opening.py'
+      - 'qa/tools/generate_cis_spanish_figures.py'
       - 'qa/rewrite/CIS_CONTROLS_V8_1_ES_OPENING_REVIEWED.md'
   pull_request:
     branches:
@@ -77,39 +78,50 @@ jobs:
           ref: production/multilingual-grc-editions
           fetch-depth: 0
 
-      - name: Install document tools
+      - name: Install document and graphics tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice poppler-utils
+          sudo apt-get install -y pandoc libreoffice poppler-utils python3-pil
+
+      - name: Generate complete Spanish figure set
+        run: python3 qa/tools/generate_cis_spanish_figures.py
 
       - name: Rebuild and validate CIS Spanish publication
         shell: bash
         run: |
           set -euo pipefail
           base='01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0'
+          media_dir="$(dirname "$base")/media"
+          for n in $(seq 1 10); do
+            test -s "$media_dir/image${n}.png"
+          done
           pandoc "${base}.md" --resource-path="$(dirname "$base")" -o "${base}.docx"
           libreoffice --headless --convert-to pdf --outdir "$(dirname "$base")" "${base}.docx"
           unzip -t "${base}.docx" >/dev/null
           pdftotext "${base}.pdf" /tmp/cis-es.txt
           grep -q 'SERIE PRÁCTICA DE CIBERSEGURIDAD' /tmp/cis-es.txt
           grep -q 'Fundamentos de CIS Controls v8.1' /tmp/cis-es.txt
+          for n in $(seq 1 10); do
+            grep -q "Figura ${n}." /tmp/cis-es.txt
+          done
           media_count=$(unzip -Z1 "${base}.docx" | grep -c '^word/media/' || true)
-          test "$media_count" -ge 1
-          sha256sum "${base}.md" "${base}.docx" "${base}.pdf" > qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt
+          test "$media_count" -ge 10
+          sha256sum "${base}.md" "${base}.docx" "${base}.pdf" "$media_dir"/image*.png > qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt
 
-      - name: Commit rebuilt publication
+      - name: Commit rebuilt publication and figures
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
+          git add '01-foundations/CIS_Controls_v8.1/Espanol/media/' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
           if ! git diff --cached --quiet; then
-            git commit -m 'Rebuild validated CIS Spanish publication'
+            git commit -m 'Restore complete CIS Spanish figures and rebuild publication'
             git push origin HEAD:production/multilingual-grc-editions
           fi
 
   visual-review-package:
+    needs: rebuild-publication
     runs-on: ubuntu-latest
     steps:
       - name: Check out production branch

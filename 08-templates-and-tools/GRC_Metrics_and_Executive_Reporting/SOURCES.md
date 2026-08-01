@@ -3,6 +3,8 @@
 **Validated:** 1 August 2026  
 **Status:** core baseline verified against official publisher pages
 
+See also [`OFFICIAL_SOURCE_REVALIDATION.md`](./OFFICIAL_SOURCE_REVALIDATION.md) for the independent publication-status and supersession review completed during PR review.
+
 ## Approved primary sources
 
 ### NIST SP 800-55 Volume 1

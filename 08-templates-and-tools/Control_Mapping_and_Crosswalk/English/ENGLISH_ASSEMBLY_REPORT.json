@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "output": "English/Control_Mapping_and_Crosswalk_Practical_Manual_English_v1.0.md",
+  "sources": [
+    {
+      "path": "chapters/01_Mapping_Governance_and_Intended_Use.md",
+      "sha256": "fb0912f23c88365be2b13c2870f7dce3eb885a94bd79763aab3d7d5f74f83831",
+      "words": 868,
+      "lines": 129
+    },
+    {
+      "path": "chapters/02_Requirement_Decomposition_and_Normalization.md",
+      "sha256": "b905e6f7b96aedc2b8af7f42d14d9a07a2b73f33d01c02dbfb59ab247c2e220c",
+      "words": 673,
+      "lines": 103
+    },
+    {
+      "path": "chapters/03_Relationship_Analysis_and_Coverage_Decisions.md",
+      "sha256": "0c21ffb4d1e0e642d23ced2f482d0f9bf276356a12f8e6fffda366e59c9c13cd",
+      "words": 562,
+      "lines": 99
+    },
+    {
+      "path": "chapters/04_Implementation_Evidence_and_Common_Control_Linkage.md",
+      "sha256": "2805d3edf2f30faf91a2c915609a67d9e6bba36d73ac39c35fdd2a214408731c",
+      "words": 553,
+      "lines": 116
+    },
+    {
+      "path": "chapters/05_Gap_Overlap_Conflict_and_Prioritization.md",
+      "sha256": "ce842c5e5f5a134202aade6646978002ed5901cc4b9778ab3f7b3dfaa2be39e3",
+      "words": 491,
+      "lines": 88
+    },
+    {
+      "path": "chapters/06_Review_Change_Control_and_Retirement.md",
+      "sha256": "96ac388873586cdc65d8c3ec25e91f60b4898d379f464c1e0abd3a8c4d4984d4",
+      "words": 553,
+      "lines": 108
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "26b2b34e7374f70cf1c2a0ad05c8911f7cbac4f741de70bb9e040b3171602fe7",
+      "words": 255,
+      "lines": 24
+    }
+  ],
+  "tool_field_counts": {
+    "Control_Mapping_Register.csv": 40,
+    "Requirement_Decomposition_Worksheet.csv": 30,
+    "Mapping_Review_Checklist.csv": 38,
+    "Gap_Overlap_and_Conflict_Register.csv": 32
+  },
+  "assembled_sha256": "8729d4671849a2103251588e04f3d703ee4f21373024a92e4b20b69ca9158957",
+  "assembled_words": 4065,
+  "assembled_lines": 703,
+  "human_review_limitations": [
+    "No legal, regulatory, licensing, certification or audit opinion is represented.",
+    "No native-language editorial approval is represented.",
+    "No assistive-technology or full page-by-page visual approval is represented."
+  ]
+}

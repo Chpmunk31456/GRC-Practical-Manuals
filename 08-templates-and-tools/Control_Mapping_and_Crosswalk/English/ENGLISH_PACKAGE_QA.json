@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "tool_field_counts": {
+    "Control_Mapping_Register.csv": 40,
+    "Requirement_Decomposition_Worksheet.csv": 30,
+    "Mapping_Review_Checklist.csv": 38,
+    "Gap_Overlap_and_Conflict_Register.csv": 32
+  },
+  "checksummed_files": 9,
+  "human_review_limitations": [
+    "Mappings require qualified source, legal, licensing, control and audit review.",
+    "Automated validation does not establish compliance or equivalence.",
+    "Native-language, assistive-technology and full page-by-page visual review are not represented."
+  ]
+}

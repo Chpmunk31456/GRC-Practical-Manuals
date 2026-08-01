@@ -2,40 +2,35 @@
 
 A practical manual and toolkit for creating, reviewing, approving, maintaining, and using control mappings across cybersecurity, privacy, resilience, audit, and regulatory frameworks.
 
+## Publication package
+
+- Six controlled English chapters
+- English Markdown, DOCX, and searchable PDF
+- 40-field control-mapping register
+- 30-field requirement-decomposition worksheet
+- 38-field mapping-review checklist
+- 32-field gap, overlap, and conflict register
+- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF publication candidate
+- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF publication candidate
+- Assembly reports, automated QA evidence, and SHA-256 checksums
+
 ## Controlled scope
 
-This workstream covers:
+The manual covers mapping governance, intended use, source-version control, requirement decomposition, normalization, relationship type, directionality, coverage, confidence, common-control and evidence linkage, gap and overlap analysis, conflicts, independent review, change control, and retirement.
 
-- mapping governance and intended use;
-- source-version control;
-- requirement decomposition;
-- control-objective normalization;
-- relationship types and confidence;
-- one-to-one, one-to-many, and many-to-many mappings;
-- implementation and evidence linkage;
-- gap, overlap, and conflict analysis;
-- reviewer independence and approval;
-- change management and mapping retirement;
-- reporting limitations and assurance boundaries.
+## Validation status
 
-## Planned publication package
+English and localized package checks passed. Automated validation covers controlled-source assembly, CSV schemas, required safeguard notices, DOCX ZIP integrity, searchable PDF text, heading parity, protected-token restoration, page and extracted-word thresholds, and checksums.
 
-- English controlled implementation manual
-- Controlled mapping methodology
-- Crosswalk register
-- Requirement-decomposition worksheet
-- Mapping-review checklist
-- Gap and overlap register
-- English DOCX and searchable PDF
-- Latin American Spanish (`es-419`) publication candidate
-- Brazilian Portuguese (`pt-BR`) publication candidate
-- Automated QA reports and SHA-256 checksums
+The localized editions are machine-assisted publication candidates. Native-language editorial approval is not represented as completed.
 
 ## Important notice
 
-A mapping is an analytical relationship, not proof of compliance, certification, control effectiveness, legal sufficiency, or audit assurance. Organizations must verify the authoritative source, applicable scope, implementation facts, evidence, and jurisdiction-specific obligations.
+A mapping is an analytical relationship, not proof of compliance, certification, control effectiveness, legal sufficiency, or audit assurance. Organizations must verify authoritative sources, applicable scope, implementation facts, evidence, and jurisdiction-specific obligations.
 
 Proprietary standards text must not be copied into this toolkit unless the organization has the necessary rights. Use licensed source identifiers and organization-authored summaries where appropriate.
+
+Qualified legal, regulatory, licensing, control, audit, accessibility, and full page-by-page human review remain required where applicable.
 
 ## Author
 

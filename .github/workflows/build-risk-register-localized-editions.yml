@@ -66,7 +66,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          root='08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/translations'
+          root='08-templates-and-tools/GRC_Risk_Register_and_Treatment/translations'
           for locale in es-419 pt-BR; do
             md=$(find "$root/$locale" -maxdepth 1 -type f -name '*.md' ! -name 'GLOSSARY.md' -print -quit)
             test -n "$md"

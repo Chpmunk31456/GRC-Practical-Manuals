@@ -1,0 +1,129 @@
+name: Build evidence collection and audit support manual
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '08-templates-and-tools/Evidence_Collection_and_Audit_Support/**'
+      - '.github/workflows/build-evidence-audit-support-manual.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: evidence-audit-support-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-english:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Check out exact candidate branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Install document tooling
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Assemble controlled English master
+        run: |
+          set -euo pipefail
+          python3 08-templates-and-tools/Evidence_Collection_and_Audit_Support/scripts/assemble_english_manual.py
+
+      - name: Build DOCX and searchable PDF
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/Evidence_Collection_and_Audit_Support'
+          stem='Evidence_Collection_and_Audit_Support_Practical_Manual_English_v1.0'
+          md="$root/English/$stem.md"
+          docx="$root/English/$stem.docx"
+          pdf="$root/English/$stem.pdf"
+          pandoc "$md" --toc --toc-depth=3 --metadata title='Evidence Collection and Audit Support Practical Manual' --metadata author='Alberto Al Leiva' -o "$docx"
+          libreoffice --headless --convert-to pdf --outdir "$root/English" "$docx" >/dev/null
+          test -s "$md"
+          test -s "$docx"
+          test -s "$pdf"
+          unzip -t "$docx" >/dev/null
+          pdftotext "$pdf" - | grep -q 'Evidence Governance and Principles'
+          words=$(pdftotext "$pdf" - | wc -w)
+          test "$words" -ge 2500
+
+      - name: Validate templates and write evidence
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv, hashlib, json
+          from pathlib import Path
+          root = Path('08-templates-and-tools/Evidence_Collection_and_Audit_Support')
+          expected = {
+              'Evidence_Request_Tracker.csv': 38,
+              'Evidence_Quality_Review_Checklist.csv': 36,
+              'Audit_Request_and_Response_Log.csv': 21,
+              'Corrective_Action_Tracker.csv': 32,
+          }
+          counts = {}
+          for name, wanted in expected.items():
+              with (root / 'templates' / name).open(encoding='utf-8', newline='') as f:
+                  rows = list(csv.reader(f))
+              got = len(rows[0])
+              if got != wanted:
+                  raise SystemExit(f'{name}: expected {wanted} fields, found {got}')
+              counts[name] = got
+          files = sorted((root / 'English').glob('*')) + sorted((root / 'templates').glob('*.csv'))
+          sums = []
+          for path in files:
+              if path.is_file():
+                  sums.append(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.relative_to(root)}")
+          (root / 'English/ENGLISH_SHA256SUMS.txt').write_text('\n'.join(sums) + '\n', encoding='utf-8')
+          report = {
+              'status': 'PASS',
+              'template_field_counts': counts,
+              'docx_zip_integrity': 'PASS',
+              'pdf_searchable_text': 'PASS',
+              'checksummed_files': len(sums),
+              'human_review_limitations': [
+                  'Automated checks do not replace legal or regulatory review.',
+                  'Automated checks do not replace assistive-technology testing.',
+                  'Automated checks do not replace full page-by-page human visual review.'
+              ]
+          }
+          (root / 'English/ENGLISH_PACKAGE_QA.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          lines = ['# English Package QA', '', '- Status: **PASS**', '- DOCX ZIP integrity: PASS', '- PDF searchable text: PASS']
+          for name, count in counts.items():
+              lines.append(f'- {name}: {count} fields')
+          lines += ['', '## Human-review limitations', '', '- Legal, regulatory, standards, and audit conclusions require qualified human review.', '- Assistive-technology behavior requires native-application testing.', '- Final visual approval requires page-by-page inspection.', '']
+          (root / 'English/ENGLISH_PACKAGE_QA.md').write_text('\n'.join(lines), encoding='utf-8')
+          PY
+
+      - name: Commit generated English package
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          branch='${{ github.event.pull_request.head.ref }}'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 08-templates-and-tools/Evidence_Collection_and_Audit_Support/English
+          if git diff --cached --quiet; then
+            echo 'No generated English changes.'
+          else
+            git commit -m 'Build and validate English evidence support package'
+            git fetch origin "$branch"
+            git rebase "origin/$branch"
+            git push origin "HEAD:$branch"
+          fi
+
+      - name: Upload English review package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: evidence-audit-support-english-candidate
+          path: 08-templates-and-tools/Evidence_Collection_and_Audit_Support/English
+          if-no-files-found: error
+          retention-days: 30

@@ -73,7 +73,7 @@ Templates, metrics, dashboards, and scorecards alone do not establish compliance
 
 ## Version
 
-Version 1.7 — August 2026
+Version 1.10 — August 2026
 
 ## License
 

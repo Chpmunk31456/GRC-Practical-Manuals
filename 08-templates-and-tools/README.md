@@ -1,81 +1,56 @@
 # GRC Templates and Tools
 
-This section will contain practical templates, checklists, worksheets, and control-mapping resources that support governance, risk, compliance, audit readiness, cybersecurity, privacy, resilience, and third-party risk programs.
+This section contains practical templates, checklists, worksheets, registers, trackers, and control-mapping resources that support governance, risk, compliance, audit readiness, cybersecurity, privacy, resilience, and third-party risk programs.
 
-## Planned Resources
+## Published Resources
 
-### Risk Registers
+### GRC Risk Register and Risk Treatment Practical Manual
 
-Practical templates for documenting:
+[Open the completed manual and toolkit](./GRC_Risk_Register_and_Risk_Treatment/)
 
-- Risk descriptions
-- Risk owners
-- Likelihood
-- Impact
-- Inherent risk
-- Existing controls
-- Residual risk
-- Treatment plans
-- Due dates
-- Review status
+The publication package includes:
 
-### Evidence Checklists
+- English controlled Markdown, DOCX, and searchable PDF
+- A 41-field risk-register template
+- A 27-field risk-treatment plan template
+- A formal risk-acceptance record
+- Latin American Spanish (`es-419`) publication candidate
+- Brazilian Portuguese (`pt-BR`) publication candidate
+- Assembly evidence, automated QA records, and SHA-256 checksums
 
-Checklists for collecting and organizing:
+The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
-- Policies
-- Procedures
-- Screenshots
-- System reports
-- Access reviews
-- Training records
-- Incident records
+## Next Planned Resource
+
+### Evidence Collection and Audit Support Practical Manual
+
+Planned coverage includes:
+
+- Evidence requests and ownership
+- Policies and procedures
+- Screenshots and system reports
+- Access-review evidence
+- Training and awareness records
+- Incident and change records
 - Vendor assessments
 - Control-testing evidence
-- Audit-support documents
+- Auditor request tracking
+- Evidence quality, freshness, provenance, retention, and secure handling
+- Management responses and corrective-action follow-through
+
+## Later Planned Resources
 
 ### Audit-Readiness Tools
 
-Resources for:
-
-- Control ownership
-- Evidence tracking
-- Gap identification
-- Remediation planning
-- Readiness reviews
-- Auditor requests
-- Management responses
-- Corrective-action tracking
+Resources for control ownership, gap identification, remediation planning, readiness reviews, auditor requests, management responses, and corrective-action tracking.
 
 ### Policy Templates
 
-Starter templates for areas such as:
-
-- Information security
-- Access control
-- Acceptable use
-- Incident response
-- Business continuity
-- Vendor risk
-- Data protection
-- Change management
-- Vulnerability management
-- Logging and monitoring
+Starter templates for information security, access control, acceptable use, incident response, business continuity, vendor risk, data protection, change management, vulnerability management, and logging and monitoring.
 
 ### Control Mappings
 
-Practical crosswalks and mapping resources for frameworks and requirements such as:
-
-- NIST Cybersecurity Framework
-- NIST SP 800-53
-- CIS Controls
-- ISO/IEC 27001
-- SOC 2
-- HIPAA
-- GDPR
-- PCI DSS
-- Cloud security frameworks
-- Third-party risk programs
+Practical crosswalks and mapping resources for NIST CSF, NIST SP 800-53, CIS Controls, ISO/IEC 27001, SOC 2, HIPAA, GDPR, PCI DSS, cloud security frameworks, and third-party risk programs.
 
 ## Intended Audience
 
@@ -92,29 +67,17 @@ Practical crosswalks and mapping resources for frameworks and requirements such 
 
 ## Important Notice
 
-These resources are provided as educational and planning tools.
+These resources are educational and planning tools. They must be adapted to the organization’s industry, location, systems, data, risk profile, legal obligations, regulatory requirements, contractual commitments, and business objectives.
 
-They should be adapted to the organization’s:
-
-- Industry
-- Location
-- Systems
-- Data
-- Risk profile
-- Legal obligations
-- Regulatory requirements
-- Contractual commitments
-- Business objectives
-
-Templates alone do not establish compliance or prove that controls are operating effectively.
+Templates alone do not establish compliance or prove that controls are designed or operating effectively.
 
 ## Author
 
-**Alberto (Al) Leiva**
+**Alberto “Al” Leiva**
 
 ## Version
 
-Version 1.0 — July 2026
+Version 1.1 — August 2026
 
 ## License
 

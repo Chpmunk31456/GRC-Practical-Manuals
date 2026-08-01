@@ -318,64 +318,109 @@ Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos nor
 | **Emenda de 2024:** Determinar explicitamente se a mudança climática é relevante para o contexto do SGSI e reconhecer que as partes interessadas pertinentes podem ter requisitos relacionados ao clima. Manter evidências do raciocínio e de qualquer ação resultante. |
 |---|
 
-# 7. Projete e execute um plano de auditoria interna contra cláusulas e controles selecionados.
+# 7. Cláusula 5 — Liderança
 
-# 8. Escreva duas não conformidades, registros de causa raiz, ações corretivas e testes de eficácia.
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
 
-# 9. Crie minutos de gerenciamento-revisão mostrando entradas, decisões, proprietários, recursos e prazos.
+| **Finalidade da cláusula:** Liderança |
+|---|
 
-# 10. Publique somente artefatos sintéticos e higienizados, com uma declaração clara de limitações.
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 5.1 | A alta direção demonstra comprometimento, integra o SGSI aos processos de negócio, fornece recursos e apoia a melhoria. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 5.2 | Estabelecer, comunicar e manter uma política de segurança da informação adequada à organização. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 5.3 | Atribuir e comunicar responsabilidades de segurança da informação e autoridade para reporte. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
 
-O artefato de Portfólio** O que demonstra**
-□------------------------------------------------------------------------------------------------------------------
-Contexto, partidos, escopo . Cláusula 4 raciocínio e limites .
-• Método de risco, registro, tratamento
-□ Declaração de aplicabilidade
-□ Controle papel de teste □ Evidência, amostragem, exceção e conclusão
-Programa, plano, critérios, relatório e acompanhamento
-□ Minutos de análise de gestão
-• Registro de acção correctiva
-O Memorando de evidência da ferramenta O Alfabetismo técnico e limitações
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
 
-# 11. Cláusula 9 — Avaliação do desempenho
+# 8. Cláusula 6 — Planejamento
 
-* Requisitos em linguagem plana, foco de verificação e evidência de exemplo.*
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
 
-□ ** Finalidade da clausa: ** Avaliação do desempenho
------------------------
+| **Finalidade da cláusula:** Planejamento |
+|---|
 
-*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Defina o que monitorar e medir, como e quando fazê-lo, quem o avalia e como os resultados são retidos e analisados. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-9.2.1 Realizar auditorias internas em intervalos planejados para avaliar a conformidade com os requisitos organizacionais e ISO/IEC 27001 e implementação eficaz. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-9.2.2 Manter um programa de auditoria com frequência, métodos, responsabilidades, planejamento, relatórios, escopo, critérios, auditores objetivos, resultados retidos e ação corretiva oportuna. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-□ 9.3.1 □ Top management revê o ISMS em intervalos planejados para adequação, adequação e eficácia contínuas. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-Leia os insumos necessários, tais como ações anteriores, mudanças de contexto, necessidades interessadas, desempenho, feedback, risco, tratamento e oportunidades de melhoria. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-□ 9.3.3 □ Registre as decisões da análise crítica pela direção sobre melhorias e mudanças necessárias no SGSI. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 6.1.1 | Determinar riscos e oportunidades no nível do SGSI, planejar ações, integrá-las aos processos do SGSI e avaliar sua eficácia. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 6.1.2 | Definir e aplicar critérios consistentes de risco de segurança da informação e métodos de avaliação; identificar responsáveis e analisar e avaliar os riscos. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 6.1.3 | Escolher opções e controles de tratamento de riscos, compará-los ao Anexo A, produzir a Declaração de Aplicabilidade e o plano de tratamento e obter aprovação do responsável pelo risco. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 6.2 | Definir objetivos mensuráveis de segurança com responsáveis, recursos, datas e métodos de avaliação. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 6.3 | Planejar mudanças no SGSI considerando finalidade, consequências, recursos, responsabilidades e integridade do sistema. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
 
-Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. Este manual parafraseia conceitos para a educação e não substitui o padrão.
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
 
-![Um programa de auditoria segue risco, independência, evidências, relatórios e acompanhamento verificado.](media/image5.png)
+# 9. Cláusula 7 — Apoio
 
-Figura 5. Fluxo de trabalho de auditoria interna
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
+
+| **Finalidade da cláusula:** Apoio |
+|---|
+
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 7.1 | Fornecer pessoas, orçamento, tecnologia e outros recursos necessários ao SGSI. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 7.2 | Definir necessidades de competência, tratar lacunas, avaliar resultados e manter evidências. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 7.3 | Assegurar que as pessoas compreendam a política, sua contribuição e as consequências da não conformidade. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 7.4 | Planejar o que, quando, com quem e como a organização se comunica interna e externamente. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 7.5 | Criar, aprovar, identificar, proteger, distribuir, reter e controlar as informações documentadas necessárias. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
+
+# 10. Cláusula 8 — Operação
+
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
+
+| **Finalidade da cláusula:** Operação |
+|---|
+
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 8.1 | Planejar e controlar processos do SGSI, critérios, mudanças, trabalho terceirizado e evidências da operação adequada. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 8.2 | Realizar avaliações de riscos de segurança da informação em intervalos planejados e quando ocorrerem mudanças significativas. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 8.3 | Implementar o plano de tratamento de riscos e manter evidências dos resultados. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
+
+# 11. Cláusula 9 — Avaliação de desempenho
+
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
+
+| **Finalidade da cláusula:** Avaliação de desempenho |
+|---|
+
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 9.1 | Definir o que monitorar e medir, como e quando fazê-lo, quem avalia e como os resultados são retidos e analisados. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 9.2.1 | Realizar auditorias internas em intervalos planejados para avaliar a conformidade com os requisitos organizacionais e da ISO/IEC 27001 e a eficácia da implementação. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 9.2.2 | Manter um programa de auditoria com frequência, métodos, responsabilidades, planejamento, reporte, escopo, critérios, auditores objetivos, resultados retidos e ação corretiva tempestiva. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 9.3.1 | A alta direção analisa o SGSI em intervalos planejados quanto à adequação, suficiência e eficácia contínuas. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 9.3.2 | Analisar entradas obrigatórias, como ações anteriores, mudanças de contexto, necessidades das partes interessadas, desempenho, feedback, riscos, tratamento e oportunidades de melhoria. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 9.3.3 | Registrar decisões da análise crítica da direção sobre melhorias e mudanças necessárias no SGSI. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
+
+<img src="media/image5.png" style="width:6.15in;height:3.32973in" alt="Um programa de auditoria considera riscos, independência, evidências, reporte e acompanhamento verificado." />
+
+Figura 5. Fluxo de trabalho da auditoria interna
 
 # 12. Cláusula 10 — Melhoria
 
-* Requisitos em linguagem plana, foco de verificação e evidência de exemplo.*
+*Requisitos em linguagem clara, foco de verificação e exemplos de evidências.*
 
-□ ** Finalidade da clausa: ** Melhoria
-O que é que se passa?
+| **Finalidade da cláusula:** Melhoria |
+|---|
 
-*Cláusula** **Plain signification** ** **Verificação de foco** **Exemplo evidência**
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-□ 10.1 □ Melhorar continuamente a adequação, adequação e eficácia do ISMS. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
-Reagir a não conformidades, corrigi-las, analisar as causas, prevenir a recorrência, verificar a eficácia e manter evidências. Confirmar propriedade, escopo, método, aprovação, provas operacionais, exceções, correção e registros retidos. Políticas, registros, planos, registros, minutos, resultados, aprovações e evidências de seguimento.
+| **Cláusula** | **Significado em linguagem clara** | **Foco de verificação** | **Exemplo de evidência** |
+|---|---|---|---|
+| 10.1 | Melhorar continuamente a adequação, suficiência e eficácia do SGSI. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
+| 10.2 | Reagir às não conformidades, corrigi-las, analisar causas, prevenir recorrência, verificar a eficácia e manter evidências. | Confirmar responsabilidade, escopo, método, aprovação, evidência operacional, exceções, correção e registros retidos. | Políticas, registros, planos, atas, resultados, aprovações e evidências de acompanhamento. |
 
-Use o texto oficial licenciado ISO/IEC 27001 para requisitos normativos exatos. Este manual parafraseia conceitos para a educação e não substitui o padrão.
+Use o texto oficial licenciado da ISO/IEC 27001 para consultar os requisitos normativos exatos. Este manual apresenta paráfrases para fins educacionais e não substitui a norma.
 
-![Os 93 controles de referência são agrupados em temas organizacionais, pessoas, físicos e tecnológicos.](media/image6.png)
+<img src="media/image6.png" style="width:6.15in;height:3.27166in" alt="Os 93 controles de referência estão agrupados em temas organizacionais, de pessoas, físicos e tecnológicos." />
 
-Figura 6. Temas de controlo do anexo A
+Figura 6. Temas dos controles do Anexo A
 
 # 13. Anexo A 5 Controles organizacionais
 

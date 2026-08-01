@@ -1,14 +1,14 @@
-# Trigger ISO localized-source fail-closed audit
+# Trigger ISO localized structural repair batch 01
 
-Run the bounded ISO/IEC 27001 and 27002 localized-source audit against `production/multilingual-grc-editions` using the current workflow definition on `main`.
+Run the bounded ISO/IEC 27001 and 27002 localized-source repair-and-audit workflow against `production/multilingual-grc-editions` using the current workflow definition on `main`.
 
 The workflow must:
 
-- inspect the Spanish and Brazilian Portuguese Markdown sources;
-- compare expected major-section and image-reference structure;
-- identify configured corrupted markup, malformed links and emphasis, collapsed table signals, untranslated headings, known mistranslations, and mixed-locale terminology;
-- write detailed Markdown and JSON audit evidence to the production branch;
-- fail closed while any configured defect remains; and
-- make no changes to localized prose, DOCX, PDF, graphics, or publication metadata.
-
-This PR is trigger-only, modifies no publication content on `main`, and must not be merged.
+- apply only exact, high-confidence structural repairs defined in `qa/tools/repair_iso_localized_structural_batch_01.py`;
+- correct known corrupted image markup, injected tokens, placeholder rows, selected missing heading markers, mixed PT-BR terminology, and a small set of unambiguous technical mistranslations;
+- abort if any exact expected source string is missing or duplicated;
+- rerun the deterministic Spanish and Brazilian Portuguese localized-source audit;
+- commit both repaired Markdown sources and refreshed Markdown/JSON audit evidence to the production branch;
+- remain fail-closed while any configured defect remains;
+- not rebuild DOCX/PDF files or alter publication metadata; and
+- not merge this trigger-only PR.

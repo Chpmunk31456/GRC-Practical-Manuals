@@ -500,17 +500,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 136,
-        "pipe_rows": 0,
+        "chars": 1249,
+        "pipe_rows": 2,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.105,
-        "blockers": [
-          "table_structure_drift",
-          "length_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.967,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -533,16 +530,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 2367,
-        "pipe_rows": 0,
+        "chars": 2441,
+        "pipe_rows": 9,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.796,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.821,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -565,16 +560,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1511,
-        "pipe_rows": 0,
+        "chars": 1403,
+        "pipe_rows": 6,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.807,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.749,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -597,16 +590,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 1228,
-        "pipe_rows": 0,
+        "chars": 1302,
+        "pipe_rows": 8,
         "images": 0,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.821,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.871,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {
@@ -629,16 +620,14 @@
         "status": "PASS"
       },
       "pt-BR": {
-        "chars": 2029,
-        "pipe_rows": 0,
+        "chars": 2035,
+        "pipe_rows": 10,
         "images": 1,
         "bad_hits": 0,
         "english_fragments": 0,
-        "length_ratio": 0.915,
-        "blockers": [
-          "table_structure_drift"
-        ],
-        "status": "FAIL"
+        "length_ratio": 0.918,
+        "blockers": [],
+        "status": "PASS"
       }
     },
     {

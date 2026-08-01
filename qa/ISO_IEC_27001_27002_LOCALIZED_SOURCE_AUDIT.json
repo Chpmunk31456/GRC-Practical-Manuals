@@ -107,13 +107,13 @@
       },
       "missing_image_references": [],
       "table_signals": {
-        "pipe_rows": 201,
-        "separator_rows": 36,
-        "collapsed_rule_rows": 11,
+        "pipe_rows": 236,
+        "separator_rows": 39,
+        "collapsed_rule_rows": 9,
         "malformed_separator_rows": 0
       },
       "table_blockers": [
-        "collapsed_rule_rows=11"
+        "collapsed_rule_rows=9"
       ]
     }
   ]

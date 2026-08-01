@@ -555,122 +555,128 @@ Figura 7. Gestão de incidentes de segurança
 
 **Regra de seleção:** O Anexo A é um conjunto de referência usado para verificar se controles necessários não foram ignorados. A organização pode precisar de outros controles. Toda inclusão ou exclusão deve ser justificada pelo tratamento de riscos e registrada na Declaração de Aplicabilidade.
 
-# 17. Controles de implementação com ISO/IEC 27002
+# 17. Implementação de Controles com a ISO/IEC 27002
 
-* Como transformar decisões de risco em controles que se encaixam na organização.*
+*Como transformar decisões de risco em controles adequados à organização.*
+
+1. Comece pela decisão de tratamento de risco, pela obrigação aplicável e pelo resultado esperado — não por uma ferramenta.
+
+2. Use as orientações da ISO/IEC 27002 e seus atributos relevantes para compreender a finalidade, as considerações de implementação e as relações entre controles.
+
+3. Adapte o controle às pessoas, aos processos, à tecnologia, ao ambiente físico, às restrições legais e às operações do negócio.
+
+4. Defina proprietário, escopo, gatilho, entradas, etapas, saídas, registros, frequência, dependências, exceções e escalonamento.
+
+5. Avalie se o desenho do controle pode alcançar razoavelmente o resultado pretendido.
+
+6. Implemente por meio de mudança controlada e treine as pessoas afetadas.
+
+7. Meça a operação e a eficácia, investigue exceções e melhore o controle.
+
+8. Atualize riscos, plano de tratamento, Declaração de Aplicabilidade, procedimentos e evidências quando o controle mudar.
+
+| **Distinção importante:** A ISO/IEC 27002 fornece orientação. A organização continua responsável por selecionar e desenhar controles que tratem seus riscos e atendam aos requisitos aplicáveis. |
+|---|
 
 # 18. Métricas e Testes de Controle
 
-* Como verificar se o ISMS e seus controles funcionam.*
+*Como verificar se o SGSI e seus controles funcionam.*
 
-* ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
-□-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Risco Todos os riscos atuais; amostra alta, alterado, aceito, e itens atrasados; Reperform pontuação, trace tratamento, confirmar aprovação do proprietário e revisão; Método, registro, aprovações, tratamento e risco residual
-Todos os trabalhadores, privilegiados, serviços e identidades de terceiros Necessidade de teste, aprovação, MFA, revisão, mudança, inatividade, e terminação
-Todos os ativos e resultados Validar cobertura, priorização, exceções, prazos, correção e rescan Inventário, varreduras, tickets, aprovações e retestes
-□ Fornecedores □ População completa do fornecedor; serviços críticos e alterados da amostra □ Teste a devida diligência, acordo, responsabilidade, monitoramento, incidente e saída
-Todos os eventos e incidentes reportados Todos os eventos e incidentes relatados
-Continuidade Processos críticos e suporte TIC Trace business needs to recovery design and exercises BIA, plans, test records, gaps and retests
-Todos os objetivos e medidas do ISMS. Verifique definição, qualidade dos dados, tendência, alvo, análise, decisão e ação.
+| **Área** | **População e amostra** | **Teste** | **Evidência** |
+|---|---|---|---|
+| Risco | Todos os riscos atuais; amostra de itens altos, alterados, aceitos e vencidos | Reexecutar a pontuação, rastrear o tratamento e confirmar aprovação e revisão pelo proprietário | Método, registro, aprovações, tratamento e risco residual |
+| Acesso | Todas as identidades de funcionários, privilegiadas, de serviço e de terceiros | Testar necessidade, aprovação, MFA, revisão, alteração, inatividade e desligamento | Populações, exportações, tickets, configurações e logs |
+| Vulnerabilidades | Todos os ativos e achados | Validar cobertura, priorização, exceções, prazos, correção e nova varredura | Inventário, varreduras, tickets, aprovações e retestes |
+| Fornecedores | População completa de fornecedores; amostra de serviços críticos e alterados | Testar diligência, acordo, responsabilidades, monitoramento, incidente e saída | Inventário, avaliação, contrato, revisão e prova de encerramento |
+| Incidentes | Todos os eventos e incidentes relatados | Testar classificação, resposta, evidências, comunicações, recuperação e aprendizado | Casos, cronologia, decisões, registro de evidências e lições |
+| Continuidade | Processos críticos e TIC de suporte | Rastrear necessidades do negócio até o desenho de recuperação e os exercícios | BIA, planos, registros de testes, lacunas e retestes |
+| Objetivos | Todos os objetivos e medidas do SGSI | Verificar definição, qualidade dos dados, tendência, meta, análise, decisão e ação | Definições de métricas, dados-fonte, painéis, atas e ações |
 
-- Definir critérios exatos, escopo, período, população, controle, proprietário, evidência e resultado esperado.
-
-- Avalie o design antes da operação de teste.
-
-- Obter a população completa e validar sua completude e precisão de forma independente.
-
-- Selecione uma amostra baseada em risco cobrindo datas relevantes, proprietários, locais, falhas, exceções e alterações.
-
-- Inspecionar registros, observar trabalho, entrevistar pessoal, examinar configuração, e reperformance onde prático.
-
-- Excepções documentais como fatos ligados a critérios; não exagere ou esconda limitações.
-
-- Atribuir correção, análise de causa raiz, proprietário, data de vencimento, proteção provisória, e escalada.
-
-- Reteste e indicar a conclusão final e limitação restante.
+- Defina critérios, escopo, período, população, controle, proprietário, evidência e resultado esperado.
+- Avalie o desenho antes de testar a operação.
+- Obtenha a população completa e valide sua integridade e exatidão de forma independente.
+- Selecione uma amostra baseada em risco que cubra datas, proprietários, locais, falhas, exceções e mudanças relevantes.
+- Inspecione registros, observe o trabalho, entreviste pessoas, examine configurações e reexecute procedimentos quando viável.
+- Documente exceções como fatos vinculados aos critérios; não exagere nem oculte limitações.
+- Atribua correção, análise de causa raiz, proprietário, prazo, proteção provisória e escalonamento.
+- Reteste e declare a conclusão final e qualquer limitação remanescente.
 
 # 19. Auditoria Interna
 
-* Uma avaliação independente da conformidade e uma aplicação eficaz.*
+*Uma avaliação independente da conformidade e da implementação eficaz.*
 
-Mantenha um programa de auditoria que considere a importância do processo, mudança, risco e resultados anteriores.
+Mantenha um programa de auditoria que considere importância dos processos, mudanças, riscos e resultados anteriores.
 
-Definir objetivo, escopo, critérios, tempo, método, amostragem, registros e relatórios para cada auditoria.
+Defina objetivo, escopo, critérios, momento, método, amostragem, registros e comunicação para cada auditoria.
 
-Seleccionar os auditores competentes e suficientemente objectivos; os auditores não devem controlar o seu próprio trabalho sem salvaguardas.
+Selecione auditores competentes e suficientemente objetivos; auditores não devem auditar o próprio trabalho sem salvaguardas.
 
-Use o padrão licenciado, requisitos organizacionais, decisões de risco, SoA, políticas e obrigações aplicáveis como critérios.
+Use a norma licenciada, requisitos organizacionais, decisões de risco, Declaração de Aplicabilidade, políticas e obrigações aplicáveis como critérios.
 
-Registar provas e conclusões suficientemente claras de que outra pessoa competente pode compreender a base.
+Registre evidências e achados com clareza suficiente para que outra pessoa competente compreenda sua base.
 
-Reportar os resultados à gestão relevante e acompanhar as correções e ações corretivas através da revisão da eficácia.
+Comunique os resultados à gestão relevante e acompanhe correções e ações corretivas até a verificação de eficácia.
 
-Tipo de localização** ** ** ** ** Resposta exigida**
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Conformidade A evidência suporta os critérios
-Oportunidade de melhoria Uma sugestão de melhoria útil que não é uma inconformidade oculta Avaliar voluntariamente e registrar decisão
-Não-conformidade Um ou mais requisitos não são preenchidos, corrigir, analisar a causa, agir para prevenir a recorrência e verificar a eficácia
-• Limitação da auditoria – Escopo, evidência, tempo, independência ou acesso restringiu a conclusão – Divulgar claramente e resolver quando possível
+| **Tipo de achado** | **Significado** | **Resposta exigida** |
+|---|---|---|
+| Conformidade | A evidência sustenta os critérios | Manter e monitorar |
+| Oportunidade de melhoria | Sugestão útil que não encobre uma não conformidade | Avaliar voluntariamente e registrar a decisão |
+| Não conformidade | Um ou mais requisitos não foram atendidos | Corrigir, analisar a causa, prevenir recorrência e verificar eficácia |
+| Limitação da auditoria | Escopo, evidência, tempo, independência ou acesso restringiram a conclusão | Divulgar claramente e resolver quando possível |
 
-# 20. Revisão de Gestão e Ação Corretiva
+# 20. Análise Crítica pela Direção e Ação Corretiva
 
-* Decisões de liderança que mantêm o ISMS adequado e eficaz.*
+*Decisões de liderança que mantêm o SGSI adequado e eficaz.*
 
-• ** ** ** ** ** ** ** ** **
-□----------------------------------------------------------------------------------------------------------------
-• As ações anteriores foram concluídas e eficazes?
-O que mudou, incluindo a relevância climática e as necessidades das partes interessadas?
-Performance O que mostram métricas, objetivos, incidentes, resultados de auditoria e não conformidades?
-O feedback do partido interessado O que relatam os clientes, reguladores, trabalhadores, fornecedores e proprietários?
-Os níveis de risco, aceitação, tratamento, recursos e SoA ainda são apropriados?
-Oportunidades de melhoria Que mudanças a liderança deve aprovar?
+| **Entrada da análise crítica** | **Perguntas** |
+|---|---|
+| Ações anteriores | As decisões anteriores foram concluídas e eficazes? |
+| Contexto e partes interessadas | O que mudou, incluindo relevância climática e necessidades das partes interessadas? |
+| Desempenho | O que mostram métricas, objetivos, incidentes, auditorias e não conformidades? |
+| Retorno das partes interessadas | O que relatam clientes, reguladores, trabalhadores, fornecedores e proprietários? |
+| Risco e tratamento | Níveis de risco, aceitação, tratamento, recursos e Declaração de Aplicabilidade continuam adequados? |
+| Oportunidades de melhoria | Quais mudanças a liderança deve aprovar? |
 
 - Contenha ou corrija o problema imediato.
+- Determine a extensão e se existem falhas semelhantes em outros locais.
+- Analise a causa raiz com evidências, sem atribuição simplista de culpa.
+- Planeje ações proporcionais ao efeito e ao risco de recorrência.
+- Implemente mudanças com proprietário e prazo definidos.
+- Verifique a eficácia com evidências definidas após tempo suficiente de operação.
+- Atualize riscos, controles, documentos, treinamento, objetivos e Declaração de Aplicabilidade quando necessário.
 
-- Determinar a extensão e se falhas semelhantes existem em outro lugar.
+# 21. Preparação para Certificação
 
-- Analisar a causa com provas, não culpar.
+*O que a certificação faz, como normalmente ocorre e o que ela não garante.*
 
-- Plano de acção proporcional ao efeito e ao risco de recorrência.
+![A preparação é seguida pela avaliação de certificação e por atividades contínuas de supervisão e renovação.](media/image8.png)
 
-- Aplicar alterações sob a propriedade e datas de vencimento.
+Figura 8. Caminho para certificação
 
-- Verificar a eficácia usando evidências definidas após tempo de operação suficiente.
+A certificação é opcional; organizações podem implementar a ISO/IEC 27001 sem buscar um certificado.
 
-- Atualizar risco, controles, documentos, treinamento, objetivos e SoA quando necessário.
+A ISO não realiza certificações. Um organismo de certificação independente conduz as auditorias de certificação.
 
-# 21. Preparação da certificação
+A acreditação oferece confiança adicional na competência de um organismo de certificação; verifique o escopo relevante da acreditação e do certificado.
 
-* O que a certificação faz, como geralmente procede, e o que não garante.*
+A Fase 1 normalmente avalia prontidão, escopo, sistema documentado e preparação para a auditoria de implementação.
 
-![A disponibilidade é seguida de avaliação de certificação e atividades de vigilância e renovação contínuas.](media/image8.png)
+A Fase 2 avalia implementação e eficácia em todo o escopo definido.
 
-Figura 8. Caminho de certificação
+Atividades de supervisão e recertificação avaliam a conformidade contínua; confirme os detalhes com o organismo de certificação selecionado e as regras de acreditação.
 
-A certificação é opcional; as organizações podem implementar ISO/IEC 27001 sem procurar um certificado.
+Um certificado tem escopo e prazo definidos. Ele não prova que todo produto é seguro, que nenhum incidente ocorrerá ou que todos os sistemas da empresa estão incluídos.
 
-ISO não realiza certificação. Um organismo de certificação independente realiza auditorias de certificação.
-
-A acreditação proporciona uma confiança adicional na competência de um organismo de certificação; verificar o âmbito de acreditação e de certificação relevantes.
-
-A Fase 1 avalia geralmente a prontidão, o âmbito, o sistema documentado e a preparação para a auditoria de execução.
-
-A fase 2 avalia a implementação e a eficácia em todo o âmbito definido.
-
-As atividades de vigilância e recertificação avaliam a conformidade contínua; os pormenores devem ser confirmados com o organismo de certificação seleccionado e as regras de acreditação.
-
-Um certificado tem alcance e tempo limite. Ele não prova que cada produto é seguro, que nenhum incidente pode ocorrer, ou que cada sistema na empresa está incluído.
-
-Área de preparação** Verificação de aceitação**
----------------------------------------------------------------------------------------------------------------------------------
-• Escopo • Claro, suportável, refletido em operações reais e intenção de certificado
-Método utilizado de forma consistente; registro completo; os proprietários aceitam risco residual
-Todos os controles do Anexo A abordados; seleções, exclusões e status suportados
-• Controles Implementados, operados tempo suficiente para produzir evidências confiáveis, e medidos
-• Auditoria interna • Programa e auditoria completa concluídas com provas objectivas e seguimento
-• Análise de gestão
-• Acção correctiva; Não conformidades corrigidas; causa e eficácia abordadas
-Emenda □ Relevância climática e requisitos das partes interessadas considerados e evidenciados
+| **Área de prontidão** | **Critério de aceitação** |
+|---|---|
+| Escopo | Claro, defensável e refletido nas operações reais e na intenção do certificado |
+| Risco | Método usado de forma consistente; registro completo; proprietários aceitam o risco residual |
+| Declaração de Aplicabilidade | Todos os controles do Anexo A abordados; seleções, exclusões e status sustentados |
+| Controles | Implementados, operados por tempo suficiente para gerar evidência confiável e medidos |
+| Auditoria interna | Programa e auditoria de escopo completo concluídos com evidência objetiva e acompanhamento |
+| Análise crítica pela direção | Entradas exigidas consideradas e decisões registradas |
+| Ação corretiva | Não conformidades corrigidas; causa e eficácia tratadas |
+| Emenda | Relevância climática e requisitos das partes interessadas considerados e evidenciados |
 
 # 22. Ferramentas de Código Aberto
 

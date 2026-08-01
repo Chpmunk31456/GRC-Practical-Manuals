@@ -26,8 +26,8 @@ No configured findings.
 - Missing major sections: none
 - Duplicate major sections: none
 - Missing image references: none
-- Table signals: `{'pipe_rows': 201, 'separator_rows': 36, 'collapsed_rule_rows': 11, 'malformed_separator_rows': 0}`
-- Table blockers: ['collapsed_rule_rows=11']
+- Table signals: `{'pipe_rows': 236, 'separator_rows': 39, 'collapsed_rule_rows': 9, 'malformed_separator_rows': 0}`
+- Table blockers: ['collapsed_rule_rows=9']
 
 ### Findings
 

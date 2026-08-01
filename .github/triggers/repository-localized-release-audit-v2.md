@@ -1,7 +1,7 @@
 # Trigger corrected repository localized automated release audit
 
-Run the corrected audit-only release gate against `production/multilingual-grc-editions` after the localized package metadata repair.
+Run the corrected audit-only release gate against `production/multilingual-grc-editions` after main-production reconciliation.
 
-This version preserves dotted version names such as `v1.0` when resolving DOCX and PDF package paths and verifies that metadata warnings are resolved.
+This version preserves dotted version names such as `v1.0`, verifies metadata, package integrity, local images, embedded media, searchable PDFs, and representative raster pages.
 
 Trigger only. Do not merge this branch or pull request.

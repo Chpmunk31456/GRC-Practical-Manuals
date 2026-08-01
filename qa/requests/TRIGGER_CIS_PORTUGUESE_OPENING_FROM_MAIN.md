@@ -1,15 +1,15 @@
-# Trigger complete CIS Spanish figure restoration
+# Trigger diagnostic CIS Spanish figure restoration
 
-Run the controlled CIS Controls v8.1 Spanish figure-restoration and publication workflow against `production/multilingual-grc-editions`.
+Run the controlled CIS Controls v8.1 Spanish figure-restoration and publication workflow against `production/multilingual-grc-editions` using the diagnostic validation committed on `main`.
 
 The workflow must:
 
 - preserve the reviewed Spanish Markdown content;
 - generate deterministic Spanish Figures 1, 2, and 4–10 while retaining reviewed Figure 3;
-- require all ten figure files to exist;
+- require all ten source figure files;
 - rebuild only the CIS Spanish DOCX and PDF;
-- require at least ten embedded DOCX media assets and all ten figure captions in searchable PDF text;
-- record updated SHA-256 checksums; and
-- render every rebuilt PDF page for a new page-level visual review artifact.
+- report the exact missing PDF caption or DOCX embedded-media count if validation fails;
+- record updated SHA-256 checksums after success; and
+- render every rebuilt PDF page for a new visual-review artifact.
 
-This PR exists only to generate an observable `pull_request` workflow event. It modifies no publication content on `main` and must not be merged.
+This PR is trigger-only, modifies no publication content on `main`, and must not be merged.

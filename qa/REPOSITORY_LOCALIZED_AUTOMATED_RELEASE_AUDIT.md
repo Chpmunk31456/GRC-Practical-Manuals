@@ -1,6 +1,6 @@
 # Repository Localized Automated Release Audit
 
-- Candidate SHA: `90c4bea3ba1f6c899ef9eb262d93e536b306aef3`
+- Candidate SHA: `ef3455b2c7e6d07943297a41ef043773950e398e`
 - Localized editions inspected: 22
 - Automated result: **PASS**
 - Failures: 0

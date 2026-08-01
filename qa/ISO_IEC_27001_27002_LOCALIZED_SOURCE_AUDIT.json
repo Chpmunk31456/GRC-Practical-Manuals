@@ -71,7 +71,7 @@
         ],
         "untranslated_english_text": [
           {
-            "line": 702,
+            "line": 512,
             "pattern": "\\bPurpose\\b",
             "text": ". **Ferramenta** . **Purpose** . **Possível suporte** ."
           }
@@ -85,16 +85,16 @@
         ]
       },
       "major_section_counts": {
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 3,
-        "6": 3,
-        "7": 3,
-        "8": 3,
-        "9": 2,
-        "10": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
         "11": 1,
         "12": 1,
         "13": 1,
@@ -115,38 +115,33 @@
         "28": 1
       },
       "missing_major_sections": [],
-      "duplicate_major_sections": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
+      "duplicate_major_sections": [],
       "image_reference_counts": {
-        "1": 1,
-        "2": 1,
-        "3": 1,
-        "4": 1,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
         "5": 1,
         "6": 1,
         "7": 1,
         "8": 1,
         "9": 1
       },
-      "missing_image_references": [],
+      "missing_image_references": [
+        1,
+        2,
+        3,
+        4
+      ],
       "table_signals": {
-        "pipe_rows": 42,
-        "separator_rows": 36,
-        "collapsed_rule_rows": 30,
+        "pipe_rows": 0,
+        "separator_rows": 23,
+        "collapsed_rule_rows": 22,
         "malformed_separator_rows": 0
       },
       "table_blockers": [
-        "collapsed_rule_rows=30"
+        "collapsed_rule_rows=22",
+        "pipe_rows=0"
       ]
     }
   ]

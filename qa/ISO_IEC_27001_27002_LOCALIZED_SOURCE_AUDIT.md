@@ -24,10 +24,10 @@ No configured findings.
 - Source: `02-management-systems/ISO_IEC_27001_27002/Portugues_BR/ISO_IEC_27001_27002_Practical_Manager_and_Junior_Analyst_Manual_Portugues_BR_v1.0.md`
 - Status: **FAIL**
 - Missing major sections: none
-- Duplicate major sections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-- Missing image references: none
-- Table signals: `{'pipe_rows': 42, 'separator_rows': 36, 'collapsed_rule_rows': 30, 'malformed_separator_rows': 0}`
-- Table blockers: ['collapsed_rule_rows=30']
+- Duplicate major sections: none
+- Missing image references: [1, 2, 3, 4]
+- Table signals: `{'pipe_rows': 0, 'separator_rows': 23, 'collapsed_rule_rows': 22, 'malformed_separator_rows': 0}`
+- Table blockers: ['collapsed_rule_rows=22', 'pipe_rows=0']
 
 ### Findings
 
@@ -35,7 +35,7 @@ No configured findings.
 - Line 3: `** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE`
 
 #### untranslated_english_text
-- Line 702: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
+- Line 512: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
 
 #### known_mistranslations
 - Line 9: `* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*`

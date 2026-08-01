@@ -9,11 +9,8 @@ This audit compares each localized major section with the approved English maste
 
 ## pt-BR
 
-- Failing sections: 27 of 28
+- Failing sections: 24 of 28
 
-- Section 1: table_structure_drift, length_drift
-- Section 2: table_structure_drift, length_drift
-- Section 3: table_structure_drift, length_drift
 - Section 4: table_structure_drift, length_drift
 - Section 5: table_structure_drift, length_drift
 - Section 6: table_structure_drift, length_drift

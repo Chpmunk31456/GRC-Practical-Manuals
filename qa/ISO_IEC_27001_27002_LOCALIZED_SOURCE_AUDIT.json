@@ -71,7 +71,7 @@
         ],
         "untranslated_english_text": [
           {
-            "line": 512,
+            "line": 577,
             "pattern": "\\bPurpose\\b",
             "text": ". **Ferramenta** . **Purpose** . **Possível suporte** ."
           }
@@ -117,8 +117,8 @@
       "missing_major_sections": [],
       "duplicate_major_sections": [],
       "image_reference_counts": {
-        "1": 0,
-        "2": 0,
+        "1": 1,
+        "2": 1,
         "3": 0,
         "4": 0,
         "5": 1,
@@ -128,20 +128,17 @@
         "9": 1
       },
       "missing_image_references": [
-        1,
-        2,
         3,
         4
       ],
       "table_signals": {
-        "pipe_rows": 0,
-        "separator_rows": 23,
+        "pipe_rows": 24,
+        "separator_rows": 26,
         "collapsed_rule_rows": 22,
         "malformed_separator_rows": 0
       },
       "table_blockers": [
-        "collapsed_rule_rows=22",
-        "pipe_rows=0"
+        "collapsed_rule_rows=22"
       ]
     }
   ]

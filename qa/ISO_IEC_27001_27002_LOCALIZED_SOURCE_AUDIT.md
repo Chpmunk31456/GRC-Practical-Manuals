@@ -25,9 +25,9 @@ No configured findings.
 - Status: **FAIL**
 - Missing major sections: none
 - Duplicate major sections: none
-- Missing image references: [1, 2, 3, 4]
-- Table signals: `{'pipe_rows': 0, 'separator_rows': 23, 'collapsed_rule_rows': 22, 'malformed_separator_rows': 0}`
-- Table blockers: ['collapsed_rule_rows=22', 'pipe_rows=0']
+- Missing image references: [3, 4]
+- Table signals: `{'pipe_rows': 24, 'separator_rows': 26, 'collapsed_rule_rows': 22, 'malformed_separator_rows': 0}`
+- Table blockers: ['collapsed_rule_rows=22']
 
 ### Findings
 
@@ -35,7 +35,7 @@ No configured findings.
 - Line 3: `** SÉRIES PRÁTICAS DE CIBERSegurança, PRIVACIDADE E CONFORMIDADE`
 
 #### untranslated_english_text
-- Line 512: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
+- Line 577: `. **Ferramenta** . **Purpose** . **Possível suporte** .`
 
 #### known_mistranslations
 - Line 9: `* Um manual de trabalho para gerentes, analistas júnior, estudantes, mudadores de carreira, auditores internos e equipes de segurança*`

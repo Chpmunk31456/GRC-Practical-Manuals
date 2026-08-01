@@ -9,7 +9,8 @@
 - Brazilian Portuguese (`pt-BR`): machine-assisted publication candidate, automated QA PASS
 - Checksums and release evidence: complete
 - Temporary English workflow: removed after successful build
-- Temporary localization workflow: pending removal before merge
+- Temporary localization workflow: removed after successful build
+- Temporary changelog workflow: removed after successful release-record update
 
 ## Automated release evidence
 

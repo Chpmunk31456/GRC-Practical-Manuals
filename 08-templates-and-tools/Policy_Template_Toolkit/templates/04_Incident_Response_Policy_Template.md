@@ -1,6 +1,6 @@
 # Incident Response Policy Template
 
-> Adapt legal, regulatory, contractual, privacy, insurance, law-enforcement, privilege, and breach-notification requirements before approval.
+> **Drafting notice:** Resolve and adapt legal, regulatory, contractual, privacy, insurance, law-enforcement, privilege, and breach-notification requirements before approval.
 
 ## Document control
 

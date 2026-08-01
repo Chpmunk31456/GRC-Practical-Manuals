@@ -45,12 +45,12 @@
         "english_fragments": 1
       },
       "es-419": {
-        "chars": 1953,
+        "chars": 1957,
         "pipe_rows": 3,
         "images": 0,
         "bad_hits": 2,
         "english_fragments": 0,
-        "length_ratio": 0.79,
+        "length_ratio": 0.792,
         "blockers": [
           "corruption_tokens"
         ],
@@ -113,12 +113,12 @@
         "english_fragments": 4
       },
       "es-419": {
-        "chars": 1837,
+        "chars": 2049,
         "pipe_rows": 5,
         "images": 1,
         "bad_hits": 5,
         "english_fragments": 2,
-        "length_ratio": 0.798,
+        "length_ratio": 0.89,
         "blockers": [
           "corruption_tokens",
           "residual_english"

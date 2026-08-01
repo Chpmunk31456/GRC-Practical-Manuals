@@ -203,7 +203,7 @@ Gráfico 1 Ciclo de mejora continua de los ISMS
 
 - La Declaración de aplicabilidad registra los controles necesarios, la justificación, el estado de aplicación y las exclusiones justificadas del anexo A.
 
-# 2. ISMS Scope and Interested Parties
+# 2. Alcance del SGSI y partes interesadas
 
 *Cómo definir un límite defensible para el sistema de gestión.*
 
@@ -255,21 +255,21 @@ Definir los criterios de riesgo antes de anotar: método de identificación de r
 
 *El puente entre el tratamiento del riesgo, el anexo A, otros controles y pruebas de auditoría*.
 
-<!-- REVISIÓN HUMANA: falta el recurso localizado media/image3.png; texto alternativo conservado: The SoA records reasoned control selection and implementation status. -->
+<!-- REVISIÓN HUMANA: falta el recurso localizado media/image3.png; texto alternativo conservado: La Declaración de Aplicabilidad registra la selección fundamentada de controles y su estado de implementación. -->
 
 Figure 3. Statement of Applicability workflow
 
-- List the controls necessary to treat identified information-security risks and meet legal, regulatory, contractual, and business requirements.
+- Enumerar los controles necesarios para tratar los riesgos identificados de seguridad de la información y cumplir los requisitos legales, regulatorios, contractuales y empresariales.
 
-- No se pasan por alto los controles seleccionados del anexo A.
+- Comparar los controles seleccionados con el Anexo A para comprobar que no se hayan omitido controles de referencia necesarios.
 
-- Recordar si cada control del Anexo A es aplicable y justificar la inclusión o exclusión.
+- Registrar si cada control del Anexo A es aplicable y justificar su inclusión o exclusión.
 
-- Recordar claramente el estado de aplicación y mantenerlo en consonancia con el plan de tratamiento de riesgos y las pruebas de funcionamiento.
+- Registrar claramente el estado de implementación y mantenerlo alineado con el plan de tratamiento de riesgos y la evidencia operativa.
 
 - Incluir controles específicos de la organización cuando el anexo A no se ocupa plenamente de un riesgo.
 
-- Controlar el SoA como información documentada y actualizarla después de cambios de riesgo, alcance, legal, proveedor, tecnología o control.
+- Controlar la Declaración de Aplicabilidad como información documentada y actualizarla después de cambios materiales en el riesgo, el alcance, los requisitos legales, los proveedores, la tecnología o los controles.
 
 | **Control** Silencioso ** Aplicable** |
 |. |

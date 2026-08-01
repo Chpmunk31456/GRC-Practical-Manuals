@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 # Controlled localization generator for the validated English policy toolkit.
+import json
 import re
 from pathlib import Path
 
@@ -16,6 +17,9 @@ LOCALES = {
         "file": "Kit_de_Plantillas_de_Politicas_GRC_es-419_v1.0.md",
         "lang": "es-419",
         "title": "Kit de Plantillas de Políticas GRC",
+        "date": "1 de agosto de 2026",
+        "subject": "GRC, gobernanza de políticas, seguridad de la información, privacidad y resiliencia",
+        "rights": "CC BY-NC-SA 4.0 salvo que un archivo indique lo contrario",
         "status": "Candidato de publicación asistido por máquina; no se presenta como revisión lingüística nativa ni asesoría legal.",
     },
     "pt": {
@@ -23,6 +27,9 @@ LOCALES = {
         "file": "Kit_de_Modelos_de_Politicas_GRC_pt-BR_v1.0.md",
         "lang": "pt-BR",
         "title": "Kit de Modelos de Políticas GRC",
+        "date": "1 de agosto de 2026",
+        "subject": "GRC, governança de políticas, segurança da informação, privacidade e resiliência",
+        "rights": "CC BY-NC-SA 4.0, salvo indicação em contrário no arquivo",
         "status": "Candidato de publicação assistido por máquina; não é apresentado como revisão linguística nativa nem assessoria jurídica.",
     },
 }
@@ -51,7 +58,7 @@ def restore(text: str, values: dict[str, str]) -> str:
 
 def translate_line(line: str, target: str) -> str:
     stripped = line.strip()
-    if not stripped or stripped == "---" or stripped.startswith("\\newpage"):
+    if not stripped or stripped.startswith("\\newpage"):
         return line
     prefix = line[: len(line) - len(line.lstrip())]
     body = line.lstrip()
@@ -65,37 +72,47 @@ def translate_line(line: str, target: str) -> str:
     return prefix + marker + restore(translated, values)
 
 
-def replace_frontmatter(text: str, locale: dict[str, str]) -> str:
+def source_body(text: str) -> str:
     if not text.startswith("---\n"):
         raise RuntimeError("Expected YAML front matter")
     end = text.find("\n---\n", 4)
     if end < 0:
         raise RuntimeError("Unterminated YAML front matter")
-    body = text[end + 5 :]
-    header = f'''---
-title: "{locale['title']}"
-author: "Alberto Al Leiva"
-date: "1 de agosto de 2026"
-lang: {locale['lang']}
-subject: "GRC, gobernanza de políticas, seguridad de la información, privacidad y resiliencia"
-rights: "CC BY-NC-SA 4.0 salvo que un archivo indique lo contrario"
-status: "{locale['status']}"
----
-'''
-    return header + body
+    return text[end + 5 :]
+
+
+def yaml_value(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def localized_header(locale: dict[str, str]) -> str:
+    return "\n".join(
+        [
+            "---",
+            f"title: {yaml_value(locale['title'])}",
+            f"author: {yaml_value('Alberto Al Leiva')}",
+            f"date: {yaml_value(locale['date'])}",
+            f"lang: {locale['lang']}",
+            f"subject: {yaml_value(locale['subject'])}",
+            f"rights: {yaml_value(locale['rights'])}",
+            f"status: {yaml_value(locale['status'])}",
+            "---",
+            "",
+        ]
+    )
 
 
 def main() -> None:
     if not SOURCE.is_file():
         raise SystemExit(f"Missing controlled English master: {SOURCE}")
-    source = SOURCE.read_text(encoding="utf-8")
+    body = source_body(SOURCE.read_text(encoding="utf-8"))
     for target, locale in LOCALES.items():
-        localized = replace_frontmatter(source, locale)
-        translated = [translate_line(line, target) for line in localized.splitlines()]
+        translated_body = [translate_line(line, target) for line in body.splitlines()]
         out_dir = ROOT / locale["folder"]
         out_dir.mkdir(parents=True, exist_ok=True)
         out = out_dir / locale["file"]
-        out.write_text("\n".join(translated).strip() + "\n", encoding="utf-8")
+        content = localized_header(locale) + "\n".join(translated_body).strip() + "\n"
+        out.write_text(content, encoding="utf-8")
         print(out)
 
 

@@ -1,0 +1,125 @@
+name: Build GRC metrics toolkit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/**'
+      - '.github/workflows/build-grc-metrics-toolkit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grc-metrics-english-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-english:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out candidate branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Install document tools
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice poppler-utils unzip
+
+      - name: Assemble controlled English master
+        run: |
+          set -euo pipefail
+          python3 08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/scripts/assemble_english_manual.py
+
+      - name: Build and validate documents
+        run: |
+          set -euo pipefail
+          root='08-templates-and-tools/GRC_Metrics_and_Executive_Reporting'
+          stem='GRC_Metrics_and_Executive_Reporting_Toolkit_English_v1.0'
+          md="$root/English/$stem.md"
+          docx="$root/English/$stem.docx"
+          pdf="$root/English/$stem.pdf"
+          txt="$root/English/$stem.extracted.txt"
+          pandoc "$md" --toc --toc-depth=3 --metadata author='Alberto Al Leiva' -o "$docx"
+          libreoffice --headless --convert-to pdf --outdir "$root/English" "$docx" >/dev/null
+          test -s "$md" && test -s "$docx" && test -s "$pdf"
+          unzip -t "$docx" >/dev/null
+          pdftotext "$pdf" "$txt"
+          words=$(wc -w < "$txt")
+          pages=$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')
+          test "$words" -ge 2200
+          grep -Fq 'GRC Metrics and Executive Reporting Toolkit' "$txt"
+          rm -f "$txt"
+          echo "PDF pages=$pages words=$words"
+
+      - name: Create QA and checksums
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv, hashlib, json
+          from pathlib import Path
+          root = Path('08-templates-and-tools/GRC_Metrics_and_Executive_Reporting')
+          expected = {
+              'Metric_Definition_Register.csv': 40,
+              'KPI_KRI_Review_Worksheet.csv': 36,
+              'Executive_GRC_Scorecard.csv': 34,
+              'Metrics_Action_and_Decision_Tracker.csv': 28,
+          }
+          counts = {}
+          for name, wanted in expected.items():
+              with (root / 'tools' / name).open(encoding='utf-8-sig', newline='') as f:
+                  rows = list(csv.reader(f))
+              got = len(rows[0])
+              if len(rows) != 1 or got != wanted:
+                  raise SystemExit(f'{name}: expected one header row with {wanted} fields, found {len(rows)} rows and {got} fields')
+              counts[name] = got
+          stem = root / 'English/GRC_Metrics_and_Executive_Reporting_Toolkit_English_v1.0'
+          files = [stem.with_suffix('.md'), stem.with_suffix('.docx'), stem.with_suffix('.pdf'), root / 'English/ENGLISH_ASSEMBLY_REPORT.md', root / 'English/ENGLISH_ASSEMBLY_REPORT.json'] + sorted((root / 'tools').glob('*.csv'))
+          sums = [f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.relative_to(root)}" for p in files]
+          (root / 'English/ENGLISH_SHA256SUMS.txt').write_text('\n'.join(sums) + '\n', encoding='utf-8')
+          report = {
+              'status': 'PASS',
+              'docx_zip_integrity': 'PASS',
+              'pdf_searchable_text': 'PASS',
+              'tool_field_counts': counts,
+              'checksummed_files': len(files),
+              'human_review_limitations': [
+                  'Automated validation does not establish compliance, security, control effectiveness, audit assurance, or business performance.',
+                  'Native-language, legal, regulatory, statistical, accessibility, and page-by-page human review are not represented.'
+              ]
+          }
+          (root / 'English/ENGLISH_PACKAGE_QA.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+          lines = ['# English Package QA', '', '- Status: **PASS**', '- DOCX ZIP integrity: PASS', '- PDF searchable text: PASS'] + [f'- {n}: {c} fields' for n, c in counts.items()] + ['', '## Human-review limitations', '', '- Automated validation does not establish compliance, security, control effectiveness, audit assurance, or business performance.', '- Native-language, legal, regulatory, statistical, accessibility, and page-by-page human review are not represented as completed.', '']
+          (root / 'English/ENGLISH_PACKAGE_QA.md').write_text('\n'.join(lines), encoding='utf-8')
+          PY
+
+      - name: Commit generated English package
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          branch='${{ github.event.pull_request.head.ref }}'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/English
+          if git diff --cached --quiet; then
+            echo 'No generated English changes.'
+          else
+            git commit -m 'Build and validate English GRC metrics toolkit'
+            git fetch origin "$branch"
+            git rebase "origin/$branch"
+            git push origin "HEAD:$branch"
+          fi
+
+      - name: Upload English candidate
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: grc-metrics-english-candidate
+          path: 08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/English
+          if-no-files-found: error
+          retention-days: 30

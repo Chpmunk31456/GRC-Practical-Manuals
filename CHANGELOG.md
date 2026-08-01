@@ -10,6 +10,34 @@ This project uses version numbers such as:
 
 ---
 
+## [1.6] — 1 August 2026
+
+### Added
+
+- Published the Audit Readiness and Remediation Management Practical Manual.
+- Added six controlled English chapters, an English Markdown master, Microsoft Word edition, searchable PDF, source assembly records, QA reports, and SHA-256 checksums.
+- Added a 42-field audit-readiness assessment tracker, a 35-field finding and root-cause register, a 34-field remediation action-plan tracker, and a 29-field closure-validation record.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF formats.
+
+### Validated
+
+- English assembly, DOCX integrity, searchable-PDF, and template-schema validation completed successfully.
+- Both localized editions passed heading parity, protected-token restoration, DOCX ZIP integrity, searchable-PDF, page-count, extracted-word, metadata, and checksum checks.
+- Spanish package: 20 PDF pages and 4,829 extracted words.
+- Brazilian Portuguese package: 19 PDF pages and 4,705 extracted words.
+
+### Changed
+
+- Updated the root repository catalog and the Templates and Tools roadmap.
+- Retained the Policy Template Toolkit as the next planned Section 08 resource.
+- Removed temporary English and localized audit-readiness workflows after successful publication.
+
+### Limitations
+
+- Native-language editorial approval, legal or regulatory review, standards certification, formal audit opinion, assistive-technology testing, and full page-by-page human visual review are not represented as completed.
+
+---
+
 ## [1.5] — 1 August 2026
 
 ### Added

@@ -1,0 +1,806 @@
+[
+  {
+    "path": ".github/workflows/analyze-main-production-conflicts.yml",
+    "name": "Analyze main-production reconciliation conflicts",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/analyze-main-production-conflicts.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 1966
+  },
+  {
+    "path": ".github/workflows/audit-actions-cleanup-inventory.yml",
+    "name": "Audit Actions cleanup inventory",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/actions-cleanup-inventory.md",
+      "]*\\.github/triggers/[^"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 3143
+  },
+  {
+    "path": ".github/workflows/audit-cis-controls-localized-figures.yml",
+    "name": "Audit CIS Controls localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2527
+  },
+  {
+    "path": ".github/workflows/audit-cis-portuguese-full-manual.yml",
+    "name": "Audit CIS Portuguese full manual",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1190
+  },
+  {
+    "path": ".github/workflows/audit-cis-spanish-full-manual.yml",
+    "name": "Audit CIS Spanish full manual",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1750
+  },
+  {
+    "path": ".github/workflows/audit-cloud-third-party-localized-figures.yml",
+    "name": "Audit Cloud and Third-Party Risk localized figures",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1000
+  },
+  {
+    "path": ".github/workflows/audit-iso-localized-parity-isolated.yml",
+    "name": "Audit ISO localized parity isolated",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1583
+  },
+  {
+    "path": ".github/workflows/audit-iso-localized-sources.yml",
+    "name": "Audit ISO localized sources",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1862
+  },
+  {
+    "path": ".github/workflows/audit-iso27001-pci-localized-figures.yml",
+    "name": "Audit ISO 27001 and PCI localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2602
+  },
+  {
+    "path": ".github/workflows/audit-nist-rmf-incident-response-localized-figures.yml",
+    "name": "Audit NIST RMF and Incident Response localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2840
+  },
+  {
+    "path": ".github/workflows/build-eu-ai-act-english-publication.yml",
+    "name": "Build EU AI Act English publication",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 5418
+  },
+  {
+    "path": ".github/workflows/build-eu-ai-act-spanish-portuguese.yml",
+    "name": "Build EU AI Act Spanish and Portuguese editions",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 9777
+  },
+  {
+    "path": ".github/workflows/build-multilingual-documents.yml",
+    "name": "Build multilingual GRC documents",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 1977
+  },
+  {
+    "path": ".github/workflows/build-reviewed-nist-documents.yml",
+    "name": "Build reviewed NIST CSF documents",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 15406
+  },
+  {
+    "path": ".github/workflows/deduplicate-iso-ptbr-sections.yml",
+    "name": "Deduplicate ISO PT-BR sections",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 1829
+  },
+  {
+    "path": ".github/workflows/diagnose-iso-spanish-final-sections.yml",
+    "name": "Diagnose ISO Spanish final sections",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 1090
+  },
+  {
+    "path": ".github/workflows/extract-english-sources.yml",
+    "name": "Extract English GRC sources",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 1717
+  },
+  {
+    "path": ".github/workflows/generate-gdpr-spanish-figures.yml",
+    "name": "Generate Spanish GDPR figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3415
+  },
+  {
+    "path": ".github/workflows/generate-multilingual-drafts.yml",
+    "name": "Generate multilingual GRC drafts",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 6484
+  },
+  {
+    "path": ".github/workflows/generate-nist-csf-localized-graphics.yml",
+    "name": "Generate NIST CSF localized graphics",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 10704
+  },
+  {
+    "path": ".github/workflows/integrate-cis-es-reviewed-rewrite.yml",
+    "name": "Integrate reviewed CIS Spanish rewrite",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3608
+  },
+  {
+    "path": ".github/workflows/integrate-cis-portuguese-controls-1-5.yml",
+    "name": "Integrate CIS Portuguese Controls 1-5",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1674
+  },
+  {
+    "path": ".github/workflows/integrate-cis-portuguese-opening-sections-1-5.yml",
+    "name": "Audit third-party risk and supply-chain English master baseline",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1672
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-control-17.yml",
+    "name": "Integrate reviewed CIS Spanish Control 17",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1656
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-opening.yml",
+    "name": "Integrate reviewed CIS Spanish opening",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 6432
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-section-30.yml",
+    "name": "Integrate CIS Spanish Section 30",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1610
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-1-5.yml",
+    "name": "Integrate reviewed CIS Spanish Sections 1-5",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1844
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-11-12.yml",
+    "name": "Integrate reviewed CIS Spanish Sections 11-12",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2444
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-13-15.yml",
+    "name": "Integrate reviewed CIS Spanish Sections 13-15",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1862
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-16-17.yml",
+    "name": "Integrate reviewed CIS Spanish Sections 16-17",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1862
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-18-21.yml",
+    "name": "Integrate CIS Spanish Sections 18-21",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1671
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-25-to-28.yml",
+    "name": "Integrate reviewed CIS Spanish sections 25 through 28",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1702
+  },
+  {
+    "path": ".github/workflows/integrate-cis-spanish-sections-6-10.yml",
+    "name": "Integrate reviewed CIS Spanish Sections 6-10",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1853
+  },
+  {
+    "path": ".github/workflows/integrate-nist-csf-reviewed-rewrites.yml",
+    "name": "Integrate reviewed NIST CSF rewrites",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2254
+  },
+  {
+    "path": ".github/workflows/launch-nist-integration.yml",
+    "name": "Launch NIST CSF localized graphics production",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 2759
+  },
+  {
+    "path": ".github/workflows/multilingual-package-inventory.yml",
+    "name": "Multilingual GRC production pipeline",
+    "triggers": [
+      "workflow_dispatch",
+      "push",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 5702
+  },
+  {
+    "path": ".github/workflows/nist-visual-qa.yml",
+    "name": "NIST CSF localized visual QA assets",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 2456
+  },
+  {
+    "path": ".github/workflows/normalize-cis-spanish-pandoc-images.yml",
+    "name": "Normalize CIS Spanish Pandoc images",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1788
+  },
+  {
+    "path": ".github/workflows/normalize-iso-ptbr-annex-tables-13-16.yml",
+    "name": "Normalize ISO PT-BR Annex tables 13-16",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-annex-13-16.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 2219
+  },
+  {
+    "path": ".github/workflows/package-multilingual-qa.yml",
+    "name": "Package multilingual QA corpus",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 1582
+  },
+  {
+    "path": ".github/workflows/promote-cis-controls-localized-figures.yml",
+    "name": "Promote CIS Controls localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3103
+  },
+  {
+    "path": ".github/workflows/promote-cloud-third-party-localized-figures.yml",
+    "name": "Validate Batch 5 promotion and rebuild affected packages",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 10533
+  },
+  {
+    "path": ".github/workflows/promote-iso27001-pci-localized-figures.yml",
+    "name": "Promote ISO 27001 and PCI localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 7000
+  },
+  {
+    "path": ".github/workflows/promote-nist-rmf-incident-response-localized-figures.yml",
+    "name": "Promote NIST RMF and Incident Response localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 17823
+  },
+  {
+    "path": ".github/workflows/publish-eu-ai-act-translations-approved.yml",
+    "name": "Publish approved EU AI Act translations",
+    "triggers": [
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 8289
+  },
+  {
+    "path": ".github/workflows/rebaseline-iso-spanish-controlled.yml",
+    "name": "Rebaseline ISO Spanish controlled source",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "retain-candidate",
+    "bytes": 2792
+  },
+  {
+    "path": ".github/workflows/rebuild-cis-ptbr-package.yml",
+    "name": "Rebuild and validate CIS PT-BR package",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/cis-ptbr-package-rebuild.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 11346
+  },
+  {
+    "path": ".github/workflows/rebuild-cis-spanish-publication.yml",
+    "name": "Rebuild CIS Spanish publication",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3603
+  },
+  {
+    "path": ".github/workflows/rebuild-iso-localized-packages.yml",
+    "name": "Rebuild and validate ISO localized packages",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-final-package-rebuild.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 16440
+  },
+  {
+    "path": ".github/workflows/reconcile-main-into-production.yml",
+    "name": "Reconcile main into production",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/reconcile-main-into-production.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 2011
+  },
+  {
+    "path": ".github/workflows/recover-eu-ai-act-translation-assembly.yml",
+    "name": "Recover EU AI Act translation assembly",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 12123
+  },
+  {
+    "path": ".github/workflows/recover-iso-spanish-from-reviewed-branch.yml",
+    "name": "Recover ISO Spanish reviewed baseline",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 637
+  },
+  {
+    "path": ".github/workflows/regenerate-iso-ptbr-sections-1-3.yml",
+    "name": "Regenerate ISO PT-BR sections 1-3",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2019
+  },
+  {
+    "path": ".github/workflows/regenerate-iso-ptbr-sections-1-5.yml",
+    "name": "Regenerate ISO PT-BR sections 1-5",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2129
+  },
+  {
+    "path": ".github/workflows/regenerate-iso-ptbr-sections-17-21.yml",
+    "name": "Regenerate ISO PT-BR sections 17-21",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-sections-17-21.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 2300
+  },
+  {
+    "path": ".github/workflows/regenerate-iso-ptbr-sections-4-6.yml",
+    "name": "Regenerate ISO PT-BR sections 4-6",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2019
+  },
+  {
+    "path": ".github/workflows/regenerate-iso-ptbr-sections-7-12.yml",
+    "name": "Regenerate ISO PT-BR sections 7-12",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-sections-7-12.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 2156
+  },
+  {
+    "path": ".github/workflows/repair-iso-ptbr-objective-defects.yml",
+    "name": "Repair ISO PT-BR objective defects",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-objective-defects.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 2255
+  },
+  {
+    "path": ".github/workflows/repair-iso-ptbr-sections-22-26.yml",
+    "name": "Regenerate ISO PT-BR sections 22-26",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-sections-22-26.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 1957
+  },
+  {
+    "path": ".github/workflows/repair-iso-ptbr-sections-25-28.yml",
+    "name": "Regenerate ISO PT-BR sections 25 and 28",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/iso-ptbr-sections-25-28.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 1759
+  },
+  {
+    "path": ".github/workflows/repair-iso-spanish-final-sections.yml",
+    "name": "Repair ISO Spanish final sections",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2134
+  },
+  {
+    "path": ".github/workflows/repair-iso-spanish-parity-batch-a.yml",
+    "name": "Repair ISO Spanish parity batch A",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2079
+  },
+  {
+    "path": ".github/workflows/repair-iso-spanish-recovered-baseline.yml",
+    "name": "Repair ISO Spanish recovered baseline",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 1770
+  },
+  {
+    "path": ".github/workflows/repair-iso-spanish-sections-4-6.yml",
+    "name": "Repair ISO Spanish sections 4-6",
+    "triggers": [
+      "workflow_dispatch",
+      "pull_request"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 2138
+  },
+  {
+    "path": ".github/workflows/repair-localized-package-metadata.yml",
+    "name": "Repair localized package metadata",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/repair-localized-package-metadata.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 8593
+  },
+  {
+    "path": ".github/workflows/repository-localized-release-audit-v2.yml",
+    "name": "Repository localized release audit v2",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/repository-localized-release-audit-v2.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 12114
+  },
+  {
+    "path": ".github/workflows/repository-localized-release-audit.yml",
+    "name": "Repository localized release audit",
+    "triggers": [
+      "pull_request"
+    ],
+    "trigger_paths": [
+      ".github/triggers/repository-localized-release-audit.md"
+    ],
+    "classification": "one-time-candidate",
+    "bytes": 14399
+  },
+  {
+    "path": ".github/workflows/review-cis-controls-localized-figures.yml",
+    "name": "Review CIS Controls localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3205
+  },
+  {
+    "path": ".github/workflows/review-cloud-third-party-localized-figures.yml",
+    "name": "Review Cloud and Third-Party Risk localized figures",
+    "triggers": [
+      "workflow_dispatch"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3252
+  },
+  {
+    "path": ".github/workflows/review-hipaa-spanish-figures.yml",
+    "name": "Generate and promote Spanish HIPAA figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 5182
+  },
+  {
+    "path": ".github/workflows/review-iso27001-pci-localized-figures.yml",
+    "name": "Review ISO 27001 and PCI localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 3558
+  },
+  {
+    "path": ".github/workflows/review-nist-rmf-incident-response-localized-figures.yml",
+    "name": "Review NIST RMF and Incident Response localized figures",
+    "triggers": [
+      "workflow_dispatch",
+      "push"
+    ],
+    "trigger_paths": [],
+    "classification": "one-time-candidate",
+    "bytes": 4118
+  }
+]

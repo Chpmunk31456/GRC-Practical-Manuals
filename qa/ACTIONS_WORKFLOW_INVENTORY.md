@@ -1,0 +1,76 @@
+# GitHub Actions Workflow Inventory
+
+- Workflow files: 72
+
+- `.github/workflows/analyze-main-production-conflicts.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/analyze-main-production-conflicts.md
+- `.github/workflows/audit-actions-cleanup-inventory.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/actions-cleanup-inventory.md, ]*\.github/triggers/[^
+- `.github/workflows/audit-cis-controls-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/audit-cis-portuguese-full-manual.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/audit-cis-spanish-full-manual.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/audit-cloud-third-party-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch
+- `.github/workflows/audit-iso-localized-parity-isolated.yml` — **one-time-candidate** — triggers: pull_request
+- `.github/workflows/audit-iso-localized-sources.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/audit-iso27001-pci-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/audit-nist-rmf-incident-response-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/build-eu-ai-act-english-publication.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/build-eu-ai-act-spanish-portuguese.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/build-multilingual-documents.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/build-reviewed-nist-documents.yml` — **retain-candidate** — triggers: workflow_dispatch
+- `.github/workflows/deduplicate-iso-ptbr-sections.yml` — **retain-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/diagnose-iso-spanish-final-sections.yml` — **retain-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/extract-english-sources.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/generate-gdpr-spanish-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/generate-multilingual-drafts.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/generate-nist-csf-localized-graphics.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-es-reviewed-rewrite.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-portuguese-controls-1-5.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-portuguese-opening-sections-1-5.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/integrate-cis-spanish-control-17.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-opening.yml` — **one-time-candidate** — triggers: workflow_dispatch
+- `.github/workflows/integrate-cis-spanish-section-30.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-1-5.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-11-12.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-13-15.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-16-17.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-18-21.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-25-to-28.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-cis-spanish-sections-6-10.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/integrate-nist-csf-reviewed-rewrites.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/launch-nist-integration.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/multilingual-package-inventory.yml` — **retain-candidate** — triggers: workflow_dispatch, push, pull_request
+- `.github/workflows/nist-visual-qa.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/normalize-cis-spanish-pandoc-images.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/normalize-iso-ptbr-annex-tables-13-16.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request — trigger files: .github/triggers/iso-ptbr-annex-13-16.md
+- `.github/workflows/package-multilingual-qa.yml` — **retain-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/promote-cis-controls-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/promote-cloud-third-party-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/promote-iso27001-pci-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/promote-nist-rmf-incident-response-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/publish-eu-ai-act-translations-approved.yml` — **one-time-candidate** — triggers: push
+- `.github/workflows/rebaseline-iso-spanish-controlled.yml` — **retain-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/rebuild-cis-ptbr-package.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/cis-ptbr-package-rebuild.md
+- `.github/workflows/rebuild-cis-spanish-publication.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/rebuild-iso-localized-packages.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/iso-final-package-rebuild.md
+- `.github/workflows/reconcile-main-into-production.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/reconcile-main-into-production.md
+- `.github/workflows/recover-eu-ai-act-translation-assembly.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/recover-iso-spanish-from-reviewed-branch.yml` — **one-time-candidate** — triggers: workflow_dispatch
+- `.github/workflows/regenerate-iso-ptbr-sections-1-3.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/regenerate-iso-ptbr-sections-1-5.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/regenerate-iso-ptbr-sections-17-21.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request — trigger files: .github/triggers/iso-ptbr-sections-17-21.md
+- `.github/workflows/regenerate-iso-ptbr-sections-4-6.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/regenerate-iso-ptbr-sections-7-12.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request — trigger files: .github/triggers/iso-ptbr-sections-7-12.md
+- `.github/workflows/repair-iso-ptbr-objective-defects.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request — trigger files: .github/triggers/iso-ptbr-objective-defects.md
+- `.github/workflows/repair-iso-ptbr-sections-22-26.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/iso-ptbr-sections-22-26.md
+- `.github/workflows/repair-iso-ptbr-sections-25-28.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/iso-ptbr-sections-25-28.md
+- `.github/workflows/repair-iso-spanish-final-sections.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/repair-iso-spanish-parity-batch-a.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/repair-iso-spanish-recovered-baseline.yml` — **one-time-candidate** — triggers: workflow_dispatch
+- `.github/workflows/repair-iso-spanish-sections-4-6.yml` — **one-time-candidate** — triggers: workflow_dispatch, pull_request
+- `.github/workflows/repair-localized-package-metadata.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/repair-localized-package-metadata.md
+- `.github/workflows/repository-localized-release-audit-v2.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/repository-localized-release-audit-v2.md
+- `.github/workflows/repository-localized-release-audit.yml` — **one-time-candidate** — triggers: pull_request — trigger files: .github/triggers/repository-localized-release-audit.md
+- `.github/workflows/review-cis-controls-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/review-cloud-third-party-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch
+- `.github/workflows/review-hipaa-spanish-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/review-iso27001-pci-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push
+- `.github/workflows/review-nist-rmf-incident-response-localized-figures.yml` — **one-time-candidate** — triggers: workflow_dispatch, push

@@ -53,6 +53,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc libreoffice poppler-utils python3-pil
       - run: python3 qa/tools/generate_cis_spanish_figures.py
+      - name: Normalize Figure 4-8 image markup
+        run: python3 qa/tools/normalize_cis_spanish_image_markup.py
       - name: Rebuild with explicit diagnostics
         shell: bash
         run: |
@@ -80,7 +82,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add '01-foundations/CIS_Controls_v8.1/Espanol/media/' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
+          git add '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.md' '01-foundations/CIS_Controls_v8.1/Espanol/media/' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.docx' '01-foundations/CIS_Controls_v8.1/Espanol/CIS_Critical_Security_Controls_v8.1_Practical_Manager_and_Junior_Analyst_Manual_Espanol_v1.0.pdf' 'qa/CIS_CONTROLS_V8_1_ES_PUBLICATION_SHA256SUMS.txt'
           if ! git diff --cached --quiet; then git commit -m 'Restore complete CIS Spanish figures and rebuild publication' && git push origin HEAD:production/multilingual-grc-editions; fi
 
   visual-review-package:

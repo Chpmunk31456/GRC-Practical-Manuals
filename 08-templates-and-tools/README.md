@@ -49,13 +49,29 @@ The publication package includes:
 - Brazilian Portuguese (`pt-BR`) publication candidate
 - Assembly reports, automated QA records, and SHA-256 checksums
 
+### Control Mapping and Crosswalk Practical Manual
+
+[Open the completed manual and toolkit](./Control_Mapping_and_Crosswalk/)
+
+The publication package includes:
+
+- Six controlled English chapters
+- English Markdown, DOCX, and searchable PDF
+- A 40-field control-mapping register
+- A 30-field requirement-decomposition worksheet
+- A 38-field mapping-review checklist
+- A 32-field gap, overlap, and conflict register
+- Latin American Spanish (`es-419`) publication candidate
+- Brazilian Portuguese (`pt-BR`) publication candidate
+- Assembly reports, automated QA records, and SHA-256 checksums
+
 The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
 ## Next Planned Resource
 
-### Control Mappings
+### Compliance Obligations Register and Regulatory Change Management Toolkit
 
-Practical crosswalks and mapping resources for NIST CSF, NIST SP 800-53, CIS Controls, ISO/IEC 27001, SOC 2, HIPAA, GDPR, PCI DSS, cloud security frameworks, and third-party risk programs.
+Planned resources include a controlled obligations inventory, applicability and ownership model, regulatory-change intake and impact assessment, implementation tracking, evidence linkage, executive reporting, and review controls.
 
 ## Intended Audience
 
@@ -82,7 +98,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.4 — August 2026
+Version 1.5 — August 2026
 
 ## License
 

@@ -3,7 +3,7 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and operational GRC tooling.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.7  
+**Repository version:** 1.8  
 **Last updated:** 1 August 2026
 
 ## Start Here
@@ -25,7 +25,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
-| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), and [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/) |
+| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/), and [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/) |
 
 ## Available Formats and Languages
 
@@ -35,6 +35,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 - The Evidence Collection and Audit Support Practical Manual includes an English controlled master, DOCX, searchable PDF, four editable evidence and remediation trackers, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
 - The Audit Readiness and Remediation Management Practical Manual includes six controlled English chapters, DOCX, searchable PDF, four editable readiness and remediation trackers, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
 - The GRC Policy Template Toolkit includes four controlled English chapters, ten editable policy templates in Markdown and DOCX, combined English DOCX and searchable PDF editions, three policy-governance CSV tools, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
+- The Control Mapping and Crosswalk Practical Manual includes six controlled English chapters, four editable mapping and review tools, English DOCX and searchable PDF editions, and machine-assisted Spanish and Brazilian Portuguese publication candidates with automated QA evidence and checksums.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 

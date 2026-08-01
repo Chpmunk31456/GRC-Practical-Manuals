@@ -14,16 +14,23 @@ The publication package includes an English controlled master, DOCX, searchable 
 
 [Open the completed manual and toolkit](./Evidence_Collection_and_Audit_Support/)
 
+The publication package includes an English controlled master, DOCX, searchable PDF, four editable evidence and corrective-action trackers, Latin American Spanish and Brazilian Portuguese publication candidates, assembly evidence, QA records, and SHA-256 checksums.
+
+### Audit Readiness and Remediation Management Practical Manual
+
+[Open the completed manual and toolkit](./Audit_Readiness_and_Remediation_Management/)
+
 The publication package includes:
 
-- English controlled Markdown, DOCX, and searchable PDF
-- A 38-field evidence request tracker
-- A 36-field evidence quality review checklist
-- A 21-field audit request and response log
-- A 32-field corrective-action tracker
+- Six controlled English chapters
+- English Markdown, DOCX, and searchable PDF
+- A 42-field audit-readiness assessment tracker
+- A 35-field finding and root-cause register
+- A 34-field remediation action-plan tracker
+- A 29-field closure-validation record
 - Latin American Spanish (`es-419`) publication candidate
 - Brazilian Portuguese (`pt-BR`) publication candidate
-- Assembly evidence, automated QA records, and SHA-256 checksums
+- Assembly reports, automated QA records, and SHA-256 checksums
 
 The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
@@ -75,7 +82,7 @@ Templates alone do not establish compliance or prove that controls are designed 
 
 ## Version
 
-Version 1.2 — August 2026
+Version 1.3 — August 2026
 
 ## License
 

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "source_count": 6,
+  "sources": [
+    {
+      "path": "chapters/01_Readiness_Governance_and_Assessment_Strategy.md",
+      "sha256": "5f20f39cc6db36968661ebcf9ae9e14eb4cce616769c22b1e74bb0e499ad3c96",
+      "words": 810
+    },
+    {
+      "path": "chapters/02_Control_Mapping_and_Readiness_Assessment.md",
+      "sha256": "32d5c2383b6ea67b962c809f685afe6b03ff0b88fd436e2207dad445e81dd378",
+      "words": 736
+    },
+    {
+      "path": "chapters/03_Findings_Root_Cause_and_Risk_Prioritization.md",
+      "sha256": "55aefb320862b4c5ec349f732b11ac7c0358db7838f7a8e2f3a39be0d6f73434",
+      "words": 598
+    },
+    {
+      "path": "chapters/04_Remediation_Planning_and_Governance.md",
+      "sha256": "a6ddfd5e4fe375ebf6753aacf886adbfd3d4c2d913142163217ee829ba513785",
+      "words": 553
+    },
+    {
+      "path": "chapters/05_Closure_Validation_and_Sustainability.md",
+      "sha256": "28005c6cd0519daef566549a237e117c2739fa1e07b6779e327b40e5dcd767ab",
+      "words": 540
+    },
+    {
+      "path": "chapters/06_Reporting_Operating_Procedure_and_Worked_Example.md",
+      "sha256": "ab7ed4518d027ebeaf812d5a61fb5e2ad9d9416482f8a6e1dbb15c6df34ac165",
+      "words": 781
+    }
+  ],
+  "master": "English/Audit_Readiness_and_Remediation_Management_Practical_Manual_English_v1.0.md",
+  "master_sha256": "054dc4c1f7a715b920bb064cbae16154ffa427c0037c844091a77ab8dc8a6e48",
+  "master_words": 4093
+}

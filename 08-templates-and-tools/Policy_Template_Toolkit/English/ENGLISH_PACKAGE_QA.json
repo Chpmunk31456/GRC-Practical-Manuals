@@ -21,7 +21,7 @@
   },
   "combined_docx_zip_integrity": "PASS",
   "pdf_searchable_text": "PASS",
-  "checksummed_files": 28,
+  "checksummed_files": 31,
   "human_review_limitations": [
     "Templates require organization-specific legal, regulatory, privacy, labor, records, and contractual review.",
     "Automated checks do not replace native-language editorial review.",

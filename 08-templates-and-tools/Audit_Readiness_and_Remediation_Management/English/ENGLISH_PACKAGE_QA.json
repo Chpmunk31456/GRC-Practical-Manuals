@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "template_field_counts": {
+    "Audit_Readiness_Assessment_Tracker.csv": 42,
+    "Finding_and_Root_Cause_Register.csv": 35,
+    "Remediation_Action_Plan_Tracker.csv": 34,
+    "Closure_Validation_Record.csv": 29
+  },
+  "docx_zip_integrity": "PASS",
+  "pdf_searchable_text": "PASS",
+  "checksummed_files": 9,
+  "human_review_limitations": [
+    "Automated checks do not replace legal, regulatory, standards, or formal audit review.",
+    "Automated checks do not replace assistive-technology testing.",
+    "Automated checks do not replace full page-by-page human visual review."
+  ]
+}

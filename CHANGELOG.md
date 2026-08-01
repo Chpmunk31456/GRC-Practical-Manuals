@@ -10,6 +10,39 @@ This project uses version numbers such as:
 
 ---
 
+## [1.5] — 1 August 2026
+
+### Added
+
+- Published the Evidence Collection and Audit Support Practical Manual.
+- Added an English controlled Markdown master, Microsoft Word edition, searchable PDF, source assembly records, QA reports, and SHA-256 checksums.
+- Added a 38-field evidence request tracker, a 36-field evidence quality review checklist, a 21-field audit request and response log, and a 32-field corrective-action tracker.
+- Added Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) machine-assisted publication candidates in Markdown, DOCX, and searchable PDF formats.
+
+### Validated
+
+- English assembly and package validation completed successfully.
+- Spanish and Brazilian Portuguese editions passed heading parity, protected-token restoration, DOCX ZIP integrity, searchable-PDF, page-count, extracted-word, metadata, and checksum checks.
+- Spanish package: 16 PDF pages and 3,927 extracted words.
+- Brazilian Portuguese package: 16 PDF pages and 3,879 extracted words.
+
+### Updated
+
+- Adopted ISO 19011:2026 as the current management-system audit guidance baseline; the 2018 edition is withdrawn.
+- Used NIST SP 800-53A Rev. 5 Release 5.2.0, NIST SP 800-53 Rev. 5 Release 5.2.0, the 2025 GAO Green Book, and the IIA Global Internal Audit Standards as current primary references.
+
+### Changed
+
+- Updated the root repository catalog and the Templates and Tools roadmap.
+- Identified the Policy Template Toolkit as the next planned Section 08 resource.
+- Removed temporary English and localized evidence-manual workflows after successful publication.
+
+### Limitations
+
+- Native-language editorial approval, legal or regulatory review, standards certification, formal audit opinion, assistive-technology testing, and full page-by-page human visual review are not represented as completed.
+
+---
+
 ## [1.4] — 1 August 2026
 
 ### Added

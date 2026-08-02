@@ -1,205 +1,130 @@
 # GRC Practical Manuals
 
+[English](#english) | [Español](#español) | [Português do Brasil](#português-do-brasil)
+
+**Author / Autor:** Alberto “Al” Leiva  
+**Repository version / Versión / Versão:** 1.14  
+**Last updated / Última actualización / Última atualização:** 1 August 2026
+
+---
+
+## English
+
 Practical, plain-language manuals and operational toolkits for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and GRC program management.
 
-**Author:** Alberto “Al” Leiva  
-**Repository version:** 1.13  
-**Last updated:** 1 August 2026
+### Start here
 
-## Choose Your Language
+1. Select a section below.
+2. Open the section `README.md`.
+3. Open the manual or toolkit `README.md`.
+4. Select an available English, Latin American Spanish, or Brazilian Portuguese edition.
+5. Verify current requirements through official sources and qualified professionals.
 
-| Language | Where to start | Publication status |
-|---|---|---|
-| **English** | Use the [English catalog](#english-catalog) below | Primary controlled language for the repository |
-| **Español — América Latina (`es-419`)** | Open a multilingual manual or toolkit from the [multilingual catalog](#multilingual-catalog) | Fully published for selected manuals; machine-assisted publication candidates for selected toolkits |
-| **Português do Brasil (`pt-BR`)** | Open a multilingual manual or toolkit from the [multilingual catalog](#multilingual-catalog) | Fully published for selected manuals; machine-assisted publication candidates for selected toolkits |
+## Español
 
-> Language availability differs by manual. Each manual folder and its `README.md` are the authoritative source for available Markdown, Word, PDF, editable-tool, manifest, QA, and checksum files.
+Manuales prácticos, redactados en lenguaje claro, y herramientas operativas para aprender y aplicar gobierno, riesgo, cumplimiento, privacidad, aseguramiento, resiliencia, seguridad en la nube, gobierno de inteligencia artificial, riesgo de terceros y gestión de programas GRC.
 
-## Start Here
+### Cómo comenzar
 
-1. Choose English or a multilingual edition.
-2. Select a subject area from the catalogs below.
-3. Open the section `README.md`.
-4. Open the selected manual or toolkit `README.md`.
-5. Select the available Markdown, Word, PDF, or editable-tool edition.
-6. Adapt the guidance to your organization’s actual risks, systems, contracts, data, and obligations.
-7. Verify current requirements against official sources and retain appropriate evidence.
+1. Seleccione una sección a continuación.
+2. Abra el archivo `README.md` de la sección.
+3. Abra el archivo `README.md` del manual o kit de herramientas.
+4. Seleccione una edición disponible en inglés, español de América Latina o portugués de Brasil.
+5. Verifique los requisitos vigentes mediante fuentes oficiales y profesionales cualificados.
 
-## English Catalog
+## Português do Brasil
 
-| Section | Manuals and toolkits |
-|---|---|
-| [01 — Foundations](./01-foundations/README.md) | [NIST CSF 2.0](./01-foundations/NIST_CSF_2/README.md), [CIS Controls v8.1](./01-foundations/CIS_Controls_v8.1/README.md), and [NIST RMF / SP 800-53](./01-foundations/NIST_RMF_SP_800-53/README.md) |
-| [02 — Management Systems](./02-management-systems/README.md) | [ISO/IEC 27001 and 27002](./02-management-systems/ISO_IEC_27001_27002/README.md) |
-| [03 — Assurance and Audit](./03-assurance-and-audit/README.md) | [SOC 2 Audit Readiness](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/README.md) |
-| [04 — Regulatory Compliance](./04-regulatory-compliance/README.md) | [EU AI Act GRC Compliance Manual](./04-regulatory-compliance/EU_AI_Act_GRC/README.md), [GDPR](./04-regulatory-compliance/GDPR/README.md), [HIPAA](./04-regulatory-compliance/HIPAA/README.md), and [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/README.md) |
-| [05 — Operational Resilience](./05-operational-resilience/README.md) | [Incident Response, Business Continuity, and Disaster Recovery](./05-operational-resilience/Incident_Response_BCDR/README.md) |
-| [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/README.md) | [Cloud Security and Compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/README.md) |
-| [07 — Third-Party Risk](./07-third-party-risk/README.md) | [Third-Party Risk and Cyber Supply-Chain Security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/README.md) |
-| [08 — Templates and Tools](./08-templates-and-tools/README.md) | Eight operational GRC toolkits listed below |
+Manuais práticos, em linguagem clara, e kits de ferramentas operacionais para aprender e aplicar governança, risco, conformidade, privacidade, asseguração, resiliência, segurança em nuvem, governança de inteligência artificial, risco de terceiros e gestão de programas de GRC.
 
-## Complete README Navigation Map
+### Como começar
 
-This directory links every published section and manual-level README currently represented in the repository catalog.
+1. Selecione uma seção abaixo.
+2. Abra o arquivo `README.md` da seção.
+3. Abra o arquivo `README.md` do manual ou kit de ferramentas.
+4. Selecione uma edição disponível em inglês, espanhol da América Latina ou português do Brasil.
+5. Verifique os requisitos atuais em fontes oficiais e com profissionais qualificados.
 
-### 01 — Foundations
+---
 
-- [Section README](./01-foundations/README.md)
-- [NIST Cybersecurity Framework 2.0 README](./01-foundations/NIST_CSF_2/README.md)
-- [CIS Critical Security Controls v8.1 README](./01-foundations/CIS_Controls_v8.1/README.md)
-- [NIST Risk Management Framework and SP 800-53 README](./01-foundations/NIST_RMF_SP_800-53/README.md)
+## Complete README Navigation Map / Mapa completo de README / Mapa completo de READMEs
 
-### 02 — Management Systems
+### 01 — Foundations / Fundamentos
 
-- [Section README](./02-management-systems/README.md)
-- [ISO/IEC 27001 and ISO/IEC 27002 README](./02-management-systems/ISO_IEC_27001_27002/README.md)
+- [Section README / README de la sección / README da seção](./01-foundations/README.md)
+- [NIST Cybersecurity Framework 2.0](./01-foundations/NIST_CSF_2/README.md)
+- [CIS Critical Security Controls v8.1](./01-foundations/CIS_Controls_v8.1/README.md)
+- [NIST Risk Management Framework and SP 800-53](./01-foundations/NIST_RMF_SP_800-53/README.md)
 
-### 03 — Assurance and Audit
+### 02 — Management Systems / Sistemas de gestión / Sistemas de gestão
 
-- [Section README](./03-assurance-and-audit/README.md)
-- [SOC 2 Audit Readiness README](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/README.md)
+- [Section README / README de la sección / README da seção](./02-management-systems/README.md)
+- [ISO/IEC 27001 and ISO/IEC 27002](./02-management-systems/ISO_IEC_27001_27002/README.md)
 
-### 04 — Regulatory Compliance
+### 03 — Assurance and Audit / Aseguramiento y auditoría / Asseguração e auditoria
 
-- [Section README](./04-regulatory-compliance/README.md)
-- [EU AI Act GRC Compliance Manual README](./04-regulatory-compliance/EU_AI_Act_GRC/README.md)
-- [GDPR README](./04-regulatory-compliance/GDPR/README.md)
-- [HIPAA README](./04-regulatory-compliance/HIPAA/README.md)
-- [PCI DSS v4.0.1 README](./04-regulatory-compliance/PCI_DSS_v4.0.1/README.md)
+- [Section README / README de la sección / README da seção](./03-assurance-and-audit/README.md)
+- [SOC 2 Audit Readiness](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/README.md)
 
-### 05 — Operational Resilience
+### 04 — Regulatory Compliance / Cumplimiento normativo / Conformidade regulatória
 
-- [Section README](./05-operational-resilience/README.md)
-- [Incident Response, Business Continuity, and Disaster Recovery README](./05-operational-resilience/Incident_Response_BCDR/README.md)
+- [Section README / README de la sección / README da seção](./04-regulatory-compliance/README.md)
+- [EU AI Act GRC Compliance Manual](./04-regulatory-compliance/EU_AI_Act_GRC/README.md)
+- [GDPR](./04-regulatory-compliance/GDPR/README.md)
+- [HIPAA](./04-regulatory-compliance/HIPAA/README.md)
+- [PCI DSS v4.0.1](./04-regulatory-compliance/PCI_DSS_v4.0.1/README.md)
 
-### 06 — Cloud and Technology Risk
+### 05 — Operational Resilience / Resiliencia operativa / Resiliência operacional
 
-- [Section README](./06-cloud-and-technology-risk/README.md)
-- [Cloud Security and Compliance README](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/README.md)
+- [Section README / README de la sección / README da seção](./05-operational-resilience/README.md)
+- [Incident Response, Business Continuity, and Disaster Recovery](./05-operational-resilience/Incident_Response_BCDR/README.md)
 
-### 07 — Third-Party Risk
+### 06 — Cloud and Technology Risk / Riesgo de nube y tecnología / Risco de nuvem e tecnologia
 
-- [Section README](./07-third-party-risk/README.md)
-- [Third-Party Risk and Cyber Supply-Chain Security README](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/README.md)
+- [Section README / README de la sección / README da seção](./06-cloud-and-technology-risk/README.md)
+- [Cloud Security and Compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/README.md)
 
-### 08 — Templates and Tools
+### 07 — Third-Party Risk / Riesgo de terceros / Risco de terceiros
 
-- [Section README](./08-templates-and-tools/README.md)
-- [GRC Risk Register and Risk Treatment README](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/README.md)
-- [Evidence Collection and Audit Support README](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/README.md)
-- [Audit Readiness and Remediation Management README](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/README.md)
-- [GRC Policy Template Toolkit README](./08-templates-and-tools/Policy_Template_Toolkit/README.md)
-- [Control Mapping and Crosswalk README](./08-templates-and-tools/Control_Mapping_and_Crosswalk/README.md)
-- [Compliance Obligations and Regulatory Change README](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/README.md)
-- [GRC Metrics and Executive Reporting README](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/README.md)
-- [GRC Program Management and Operating Model README](./08-templates-and-tools/GRC_Program_Management_and_Operating_Model/README.md)
+- [Section README / README de la sección / README da seção](./07-third-party-risk/README.md)
+- [Third-Party Risk and Cyber Supply-Chain Security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/README.md)
 
-## README Navigation Standard
+### 08 — Templates and Tools / Plantillas y herramientas / Modelos e ferramentas
 
-The intended hierarchy is:
+- [Section README / README de la sección / README da seção](./08-templates-and-tools/README.md)
+- [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/README.md)
+- [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/README.md)
+- [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/README.md)
+- [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/README.md)
+- [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/README.md)
+- [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/README.md)
+- [GRC Metrics and Executive Reporting](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/README.md)
+- [GRC Program Management and Operating Model](./08-templates-and-tools/GRC_Program_Management_and_Operating_Model/README.md)
 
-> **Main repository README → Section README → Manual or toolkit README → Publication files**
+## Language and publication status / Estado de idiomas y publicación / Status de idiomas e publicação
 
-Manual and toolkit READMEs should provide links back to both their section README and this main repository README. Section READMEs should provide links to their manuals and back to this main repository README.
+- English is the primary controlled language for most repository materials.
+- El inglés es el idioma controlado principal para la mayoría de los materiales del repositorio.
+- O inglês é o idioma controlado principal para a maioria dos materiais do repositório.
+- Selected manuals are fully published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`).
+- Algunos kits localizados are machine-assisted publication candidates and retain documented human-review limitations.
+- Alguns kits localizados são candidatos de publicação produzidos com assistência de máquina e mantêm limitações documentadas de revisão humana.
 
-## Multilingual Catalog
+## Important notice / Aviso importante / Aviso importante
 
-### Fully Published Multilingual Manuals
+These materials are educational and do not constitute legal, regulatory, accounting, medical, contractual, statistical, data-governance, or formal audit advice.
 
-| Manual | English | Spanish (`es-419`) | Portuguese (`pt-BR`) | Notes |
-|---|---:|---:|---:|---|
-| [EU AI Act GRC Compliance Manual](./04-regulatory-compliance/EU_AI_Act_GRC/README.md) | ✓ | ✓ | ✓ | Published and validated editions with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums |
-| [SOC 2 Audit Readiness Manual](./03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0/README.md) | ✓ | ✓ | ✓ | English, Latin American Spanish, and Brazilian Portuguese editions; localized editions retain documented machine-assistance and human-review limitations |
+Estos materiales son educativos y no constituyen asesoría legal, normativa, contable, médica, contractual, estadística, de gobierno de datos ni de auditoría formal.
 
-### Multilingual Section 08 Toolkits
+Estes materiais são educacionais e não constituem aconselhamento jurídico, regulatório, contábil, médico, contratual, estatístico, de governança de dados ou de auditoria formal.
 
-The following toolkits include controlled English editions and Latin American Spanish and Brazilian Portuguese publication candidates:
+## Accessibility / Accesibilidad / Acessibilidade
 
-1. [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/README.md)
-2. [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/README.md)
-3. [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/README.md)
-4. [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/README.md)
-5. [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/README.md)
-6. [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/README.md)
-7. [GRC Metrics and Executive Reporting](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/README.md)
-8. [GRC Program Management and Operating Model](./08-templates-and-tools/GRC_Program_Management_and_Operating_Model/README.md)
+See [ACCESSIBILITY.md](./ACCESSIBILITY.md).
 
-Localized Section 08 editions are machine-assisted publication candidates. Automated package and structural validation may be complete, but native-language editorial approval is not represented as complete unless the individual manual folder explicitly states otherwise.
+## Contributing / Contribuciones / Contribuições
 
-## Formats and Publication Evidence
+See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CHANGELOG.md](./CHANGELOG.md).
 
-Depending on the manual, publication packages may include:
+## License / Licencia / Licença
 
-- Controlled Markdown source
-- Microsoft Word (`.docx`)
-- Searchable PDF
-- Editable CSV registers, trackers, worksheets, and scorecards
-- Source and build manifests
-- Automated QA reports
-- Accessibility or visual-inspection records
-- PDF metadata
-- SHA-256 checksums
-- Translation or localization evidence
-
-Do not assume that every format or language exists for every manual. Confirm availability in the applicable manual folder.
-
-## Who These Manuals Are For
-
-- Students and people entering GRC or cybersecurity
-- Junior analysts and career changers
-- Security, privacy, compliance, risk, audit, resilience, and AI-governance professionals
-- Managers, consultants, small businesses, and nonprofit organizations
-- Teams developing or improving formal security and compliance programs
-
-## Educational Mission
-
-I was born in 1956. As a Latino man with learning disabilities, I could easily have been underestimated or denied opportunities. Mentors recognized my potential and helped me find paths I might not have discovered alone.
-
-Their guidance helped me build a career across technology, education, counseling, rehabilitation engineering, cybersecurity, and service to others. These free resources are my way of helping more people find practical paths into meaningful work, regardless of age, disability, background, or income.
-
-ChatGPT assisted under my direction. I remain responsible for the project’s content and editorial decisions.
-
-## Important Notice
-
-These materials are for education and general professional guidance. They do not constitute legal, regulatory, accounting, medical, contractual, statistical, data-governance, or formal audit advice, and they do not guarantee certification, compliance, security, employment, or business outcomes.
-
-Requirements change and vary by industry, jurisdiction, contract, system, customer, data, and risk profile. Always verify current requirements through official publications and qualified professionals.
-
-Translations and localized publication candidates must also be reviewed in the context of the applicable jurisdiction, official-language legal text, organizational terminology, and intended audience.
-
-## Responsible and Ethical Use
-
-Use cybersecurity examples only on systems you own, are authorized to manage, or have written permission to test. Technical ability does not create permission.
-
-Do not use these materials to access systems without authorization, evade security controls, violate privacy, steal credentials, deploy malware, or cause harm.
-
-## Accessibility
-
-The project aims to use plain language, descriptive headings, meaningful link text, readable structure, and accessible source documents. See [Accessibility](./ACCESSIBILITY.md) to report a barrier or help test a document.
-
-## Contributing and Corrections
-
-Constructive corrections are welcome. Please read [Contributing](./CONTRIBUTING.md) before opening an issue or pull request.
-
-For corrections, identify:
-
-- Manual and language
-- Version and file type
-- Page, chapter, or section
-- Proposed correction
-- Authoritative source, where applicable
-
-See the [Changelog](./CHANGELOG.md) for documented repository updates.
-
-## License
-
-Unless a file states otherwise, this collection is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](./LICENSE).
-
-You may share and adapt the materials with attribution for noncommercial purposes, provided adaptations use the same or a compatible license. Identify significant modifications and do not imply that an adaptation is an official or professionally approved translation unless that status is documented.
-
-## Author
-
-**Alberto “Al” Leiva**
-
-Cybersecurity, GRC, AI governance, cloud security, enterprise security architecture, operational resilience, third-party risk, and technology education.
+Unless a file states otherwise, this collection is licensed under [CC BY-NC-SA 4.0](./LICENSE).

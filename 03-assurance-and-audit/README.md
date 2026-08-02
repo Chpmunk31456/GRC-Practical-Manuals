@@ -1,15 +1,31 @@
-# Assurance and Audit
+# Assurance and Audit / Aseguramiento y auditoría / Asseguração e auditoria
 
-This section covers control readiness, evidence, testing, remediation, and work with independent auditors.
+[English](#english) | [Español](#español) | [Português](#português)
 
-[Main repository](../README.md) › **03 — Assurance and Audit**
+[Main repository / Repositorio principal / Repositório principal](../README.md)
 
-## Published manual
+## English
 
-- [SOC 2 Audit Readiness README](./SOC2_Audit_Readiness_Bilingual_v1.0/README.md) — available in English, Latin American Spanish, and Brazilian Portuguese. The manual README provides direct links to each available edition.
+Control readiness, evidence, testing, remediation, and work with independent auditors.
 
-## Important notice
+## Español
 
-These materials support education and preparation. They do not replace independent auditor judgment, legal advice, formal attestation standards, or organization-specific evidence requirements.
+Preparación de controles, evidencia, pruebas, remediación y trabajo con auditores independientes.
 
-**Repository navigation:** [Main README](../README.md)
+## Português
+
+Preparação de controles, evidências, testes, remediação e trabalho com auditores independentes.
+
+## Published manual / Manual publicado / Manual publicado
+
+- [SOC 2 Audit Readiness README](./SOC2_Audit_Readiness_Bilingual_v1.0/README.md) — English, Latin American Spanish, and Brazilian Portuguese editions.
+
+## Notice / Aviso / Aviso
+
+These materials support education and preparation but do not replace auditor judgment, legal advice, formal attestation standards, or organization-specific evidence requirements.
+
+Estos materiales apoyan la educación y la preparación, pero no reemplazan el juicio del auditor, la asesoría legal, las normas formales de atestación ni los requisitos de evidencia de la organización.
+
+Estes materiais apoiam a educação e a preparação, mas não substituem o julgamento do auditor, aconselhamento jurídico, normas formais de asseguração ou requisitos de evidência da organização.
+
+[Main README / README principal](../README.md)

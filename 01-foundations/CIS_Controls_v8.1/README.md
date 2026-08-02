@@ -1,5 +1,7 @@
 # CIS Critical Security Controls v8.1 Practical Manual
 
+[Main repository](../../README.md) › [01 — Foundations](../README.md) › **CIS Controls v8.1**
+
 ## Available editions
 
 | Language | Word | PDF |
@@ -16,4 +18,4 @@ Localized editions were produced with machine assistance and retain documented h
 
 This manual does not reproduce the copyrighted CIS Controls text. Consult official CIS resources for the complete controls and safeguards.
 
-[Return to GRC Foundations](../README.md) · [Return to the main repository](../../README.md)
+**Repository navigation:** [Foundations README](../README.md) · [Main README](../../README.md)

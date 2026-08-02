@@ -1,37 +1,19 @@
 # GRC Risk Register and Risk Treatment Practical Manual
 
-A practical, plain-language manual for establishing, operating, reviewing, and reporting an organizational risk register.
+## Available editions
 
-## Controlled scope
+| Language | Markdown | Word | PDF |
+|---|---|---|---|
+| English | [Markdown](../GRC_Risk_Register_and_Treatment/English/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.md) | [DOCX](../GRC_Risk_Register_and_Treatment/English/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.docx) | [PDF](../GRC_Risk_Register_and_Treatment/English/GRC_Risk_Register_and_Risk_Treatment_Practical_Manual_English_v1.0.pdf) |
+| Spanish (Latin America) | [Markdown](../GRC_Risk_Register_and_Treatment/translations/es-419/GRC_Registro_de_Riesgos_y_Tratamiento_de_Riesgos_Manual_Practico_es-419_v1.0.md) | [DOCX](../GRC_Risk_Register_and_Treatment/translations/es-419/GRC_Registro_de_Riesgos_y_Tratamiento_de_Riesgos_Manual_Practico_es-419_v1.0.docx) | [PDF](../GRC_Risk_Register_and_Treatment/translations/es-419/GRC_Registro_de_Riesgos_y_Tratamiento_de_Riesgos_Manual_Practico_es-419_v1.0.pdf) |
+| Brazilian Portuguese | [Markdown](../GRC_Risk_Register_and_Treatment/translations/pt-BR/GRC_Registro_e_Tratamento_de_Riscos_Manual_Pratico_pt-BR_v1.0.md) | [DOCX](../GRC_Risk_Register_and_Treatment/translations/pt-BR/GRC_Registro_e_Tratamento_de_Riscos_Manual_Pratico_pt-BR_v1.0.docx) | [PDF](../GRC_Risk_Register_and_Treatment/translations/pt-BR/GRC_Registro_e_Tratamento_de_Riscos_Manual_Pratico_pt-BR_v1.0.pdf) |
 
-This manual covers governance, risk statements, risk ownership, likelihood and impact, inherent and residual risk, control linkage, treatment planning, exceptions, escalation, reporting, review cycles, and evidence.
+## Editable tools
 
-## Publication package
+- [Risk Register Template](../GRC_Risk_Register_and_Treatment/templates/Risk_Register_Template.csv)
+- [Risk Treatment Plan Template](../GRC_Risk_Register_and_Treatment/templates/Risk_Treatment_Plan_Template.csv)
+- [Risk Acceptance Record](../GRC_Risk_Register_and_Treatment/templates/Risk_Acceptance_Record.md)
 
-- English controlled Markdown master
-- English Microsoft Word edition
-- English searchable PDF edition
-- Editable 41-field risk-register template
-- Editable 27-field risk-treatment plan template
-- Risk-acceptance record
-- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF candidate
-- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF candidate
-- Assembly reports, QA records, and SHA-256 checksums
+Localized editions are machine-assisted publication candidates. Native-language editorial approval is not represented as completed.
 
-The Spanish and Brazilian Portuguese editions are clearly identified as machine-assisted publication candidates. Their automated structural and package checks passed, but native-language editorial approval is not represented as completed.
-
-## Quality evidence
-
-English and localized package evidence is stored alongside each edition. Automated checks cover source assembly, heading parity, protected-token restoration, DOCX ZIP integrity, searchable PDF text, field counts, page counts, extracted-word thresholds, and checksums.
-
-Automated validation does not replace legal or regulatory review, standards certification, assistive-technology testing, or full page-by-page human visual inspection.
-
-## Author
-
-**Alberto “Al” Leiva**
-
-ChatGPT assisted under the author's direction. The author remains responsible for editorial and release decisions.
-
-## Important notice
-
-These materials are educational and must be adapted to the organization’s objectives, legal obligations, contractual commitments, risk appetite, systems, data, and operating context. They do not constitute legal, audit, accounting, regulatory, or certification advice.
+[Return to Section 08](../README.md) · [Return to the main repository](../../README.md)

@@ -1,39 +1,20 @@
 # Control Mapping and Crosswalk Practical Manual
 
-A practical manual and toolkit for creating, reviewing, approving, maintaining, and using control mappings across cybersecurity, privacy, resilience, audit, and regulatory frameworks.
+## Available editions
 
-## Publication package
+| Language | Markdown | Word | PDF |
+|---|---|---|---|
+| English | [Markdown](./English/Control_Mapping_and_Crosswalk_Practical_Manual_English_v1.0.md) | [DOCX](./English/Control_Mapping_and_Crosswalk_Practical_Manual_English_v1.0.docx) | [PDF](./English/Control_Mapping_and_Crosswalk_Practical_Manual_English_v1.0.pdf) |
+| Spanish (Latin America) | [Markdown](./translations/es-419/Manual_Practico_de_Mapeo_de_Controles_y_Cruces_es-419_v1.0.md) | [DOCX](./translations/es-419/Manual_Practico_de_Mapeo_de_Controles_y_Cruces_es-419_v1.0.docx) | [PDF](./translations/es-419/Manual_Practico_de_Mapeo_de_Controles_y_Cruces_es-419_v1.0.pdf) |
+| Brazilian Portuguese | [Markdown](./translations/pt-BR/Manual_Pratico_de_Mapeamento_de_Controles_e_Crosswalks_pt-BR_v1.0.md) | [DOCX](./translations/pt-BR/Manual_Pratico_de_Mapeamento_de_Controles_e_Crosswalks_pt-BR_v1.0.docx) | [PDF](./translations/pt-BR/Manual_Pratico_de_Mapeamento_de_Controles_e_Crosswalks_pt-BR_v1.0.pdf) |
 
-- Six controlled English chapters
-- English Markdown, DOCX, and searchable PDF
-- 40-field control-mapping register
-- 30-field requirement-decomposition worksheet
-- 38-field mapping-review checklist
-- 32-field gap, overlap, and conflict register
-- Latin American Spanish (`es-419`) Markdown, DOCX, and searchable PDF publication candidate
-- Brazilian Portuguese (`pt-BR`) Markdown, DOCX, and searchable PDF publication candidate
-- Assembly reports, automated QA evidence, and SHA-256 checksums
+## Editable tools
 
-## Controlled scope
+- [Control Mapping Register](./tools/Control_Mapping_Register.csv)
+- [Requirement Decomposition Worksheet](./tools/Requirement_Decomposition_Worksheet.csv)
+- [Mapping Review Checklist](./tools/Mapping_Review_Checklist.csv)
+- [Gap, Overlap, and Conflict Register](./tools/Gap_Overlap_and_Conflict_Register.csv)
 
-The manual covers mapping governance, intended use, source-version control, requirement decomposition, normalization, relationship type, directionality, coverage, confidence, common-control and evidence linkage, gap and overlap analysis, conflicts, independent review, change control, and retirement.
+Localized editions are machine-assisted publication candidates. Native-language editorial approval is not represented as completed.
 
-## Validation status
-
-English and localized package checks passed. Automated validation covers controlled-source assembly, CSV schemas, required safeguard notices, DOCX ZIP integrity, searchable PDF text, heading parity, protected-token restoration, page and extracted-word thresholds, and checksums.
-
-The localized editions are machine-assisted publication candidates. Native-language editorial approval is not represented as completed.
-
-## Important notice
-
-A mapping is an analytical relationship, not proof of compliance, certification, control effectiveness, legal sufficiency, or audit assurance. Organizations must verify authoritative sources, applicable scope, implementation facts, evidence, and jurisdiction-specific obligations.
-
-Proprietary standards text must not be copied into this toolkit unless the organization has the necessary rights. Use licensed source identifiers and organization-authored summaries where appropriate.
-
-Qualified legal, regulatory, licensing, control, audit, accessibility, and full page-by-page human review remain required where applicable.
-
-## Author
-
-**Alberto “Al” Leiva**
-
-ChatGPT assisted under the author's direction. The author remains responsible for editorial and release decisions.
+[Return to Section 08](../README.md) · [Return to the main repository](../../README.md)

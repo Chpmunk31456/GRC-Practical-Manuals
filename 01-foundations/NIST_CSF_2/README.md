@@ -1,5 +1,7 @@
 # NIST Cybersecurity Framework 2.0 Practical Manual
 
+[Main repository](../../README.md) › [01 — Foundations](../README.md) › **NIST CSF 2.0**
+
 ## Available editions
 
 | Language | Word | PDF |
@@ -16,4 +18,4 @@ Localized editions were produced with machine assistance and retain documented h
 
 Govern, Identify, Protect, Detect, Respond, Recover, profiles, implementation tiers, risk assessment, policy, evidence, metrics, and continuous improvement.
 
-[Return to GRC Foundations](../README.md) · [Return to the main repository](../../README.md)
+**Repository navigation:** [Foundations README](../README.md) · [Main README](../../README.md)

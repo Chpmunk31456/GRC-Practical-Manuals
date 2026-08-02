@@ -1,5 +1,7 @@
 # ISO/IEC 27001 and ISO/IEC 27002 Practical Manual
 
+[Main repository](../../README.md) › [02 — Management Systems](../README.md) › **ISO/IEC 27001 and 27002**
+
 ## Available editions
 
 | Language | Markdown | Word | PDF |
@@ -14,4 +16,4 @@ Localized editions were produced with machine assistance and retain documented h
 
 This material does not replace official ISO publications, certification-body requirements, legal advice, regulatory guidance, or qualified professional review.
 
-[Return to Management Systems](../README.md) · [Return to the main repository](../../README.md)
+**Repository navigation:** [Management Systems README](../README.md) · [Main README](../../README.md)

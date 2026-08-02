@@ -1,15 +1,31 @@
-# Management Systems
+# Management Systems / Sistemas de gestión / Sistemas de gestão
 
-This section covers structured programs for establishing, operating, reviewing, and continually improving information security governance.
+[English](#english) | [Español](#español) | [Português](#português)
 
-[Main repository](../README.md) › **02 — Management Systems**
+[Main repository / Repositorio principal / Repositório principal](../README.md)
 
-## Published manual
+## English
 
-- [ISO/IEC 27001 and ISO/IEC 27002 README](./ISO_IEC_27001_27002/README.md) — available in English, Latin American Spanish, and Brazilian Portuguese, with direct Markdown, Word, and PDF links in the manual README.
+Structured programs for establishing, operating, reviewing, and continually improving information security governance.
 
-## Important notice
+## Español
 
-This material is educational and does not replace official ISO publications, certification-body requirements, legal advice, regulatory guidance, or qualified professional review.
+Programas estructurados para establecer, operar, revisar y mejorar continuamente el gobierno de la seguridad de la información.
 
-**Repository navigation:** [Main README](../README.md)
+## Português
+
+Programas estruturados para estabelecer, operar, revisar e melhorar continuamente a governança da segurança da informação.
+
+## Published manual / Manual publicado / Manual publicado
+
+- [ISO/IEC 27001 and ISO/IEC 27002 README](./ISO_IEC_27001_27002/README.md) — English, Latin American Spanish, and Brazilian Portuguese editions.
+
+## Notice / Aviso / Aviso
+
+This material does not replace official ISO publications, certification-body requirements, legal advice, regulatory guidance, or qualified professional review.
+
+Este material no reemplaza las publicaciones oficiales de ISO, los requisitos de organismos de certificación, la asesoría legal, la orientación normativa ni la revisión profesional cualificada.
+
+Este material não substitui publicações oficiais da ISO, requisitos de organismos de certificação, aconselhamento jurídico, orientação regulatória ou revisão profissional qualificada.
+
+[Main README / README principal](../README.md)

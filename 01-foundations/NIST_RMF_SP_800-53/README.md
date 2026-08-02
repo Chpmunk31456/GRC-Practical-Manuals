@@ -1,19 +1,35 @@
 # NIST Risk Management Framework and SP 800-53 Practical Manual
 
-[Main repository](../../README.md) › [01 — Foundations](../README.md) › **NIST RMF and SP 800-53**
+[English](#english) | [Español](#español) | [Português](#português)
 
-## Available editions
+[Main repository](../../README.md) › [Foundations](../README.md) › **NIST RMF and SP 800-53**
 
-| Language | Word | PDF |
+## English
+
+Practical guidance for applying the NIST Risk Management Framework and NIST SP 800-53 security and privacy controls.
+
+## Español
+
+Guía práctica para aplicar el Marco de Gestión de Riesgos de NIST y los controles de seguridad y privacidad de NIST SP 800-53.
+
+## Português
+
+Orientação prática para aplicar o Framework de Gestão de Riscos do NIST e os controles de segurança e privacidade da NIST SP 800-53.
+
+## Available editions / Ediciones disponibles / Edições disponíveis
+
+| Language / Idioma | Word | PDF |
 |---|---|---|
 | English | [DOCX](./NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx) | [PDF](./NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.pdf) |
-| Spanish (Latin America) | [DOCX](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx) | [PDF](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf) |
-| Brazilian Portuguese | [DOCX](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx) | [PDF](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf) |
+| Español — América Latina | [DOCX](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx) | [PDF](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf) |
+| Português do Brasil | [DOCX](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx) | [PDF](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf) |
 
-Localized editions were produced with machine assistance and retain documented human-review limitations.
+## Notice / Aviso / Aviso
 
-## Important notice
+This manual does not replace official NIST publications, organization-specific requirements, or formal authorization processes.
 
-This manual provides educational implementation guidance and does not replace official NIST publications, organization-specific requirements, or formal authorization processes.
+Este manual no reemplaza las publicaciones oficiales de NIST, los requisitos específicos de la organización ni los procesos formales de autorización.
 
-**Repository navigation:** [Foundations README](../README.md) · [Main README](../../README.md)
+Este manual não substitui publicações oficiais do NIST, requisitos específicos da organização ou processos formais de autorização.
+
+[Foundations README](../README.md) · [Main README](../../README.md)

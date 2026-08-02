@@ -1,5 +1,7 @@
 # NIST Risk Management Framework and SP 800-53 Practical Manual
 
+[Main repository](../../README.md) › [01 — Foundations](../README.md) › **NIST RMF and SP 800-53**
+
 ## Available editions
 
 | Language | Word | PDF |
@@ -14,4 +16,4 @@ Localized editions were produced with machine assistance and retain documented h
 
 This manual provides educational implementation guidance and does not replace official NIST publications, organization-specific requirements, or formal authorization processes.
 
-[Return to GRC Foundations](../README.md) · [Return to the main repository](../../README.md)
+**Repository navigation:** [Foundations README](../README.md) · [Main README](../../README.md)

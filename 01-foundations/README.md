@@ -2,15 +2,17 @@
 
 Published foundational cybersecurity governance, risk, and compliance manuals.
 
+[Main repository](../README.md) › **01 — Foundations**
+
 ## Available manuals and languages
 
-| Manual | English | Spanish (Latin America) | Brazilian Portuguese |
+| Manual README | English | Spanish (Latin America) | Brazilian Portuguese |
 |---|---|---|---|
-| [NIST Cybersecurity Framework 2.0](./NIST_CSF_2/) | Available | Available | Available |
-| [CIS Critical Security Controls v8.1](./CIS_Controls_v8.1/) | Available | Available | Available |
-| [NIST Risk Management Framework and SP 800-53](./NIST_RMF_SP_800-53/) | Available | Available | Available |
+| [NIST Cybersecurity Framework 2.0](./NIST_CSF_2/README.md) | Available | Available | Available |
+| [CIS Critical Security Controls v8.1](./CIS_Controls_v8.1/README.md) | Available | Available | Available |
+| [NIST Risk Management Framework and SP 800-53](./NIST_RMF_SP_800-53/README.md) | Available | Available | Available |
 
-Each manual folder provides direct links to its available Markdown, Microsoft Word, and searchable PDF editions.
+Each manual README provides direct links to its available Markdown, Microsoft Word, searchable PDF, and related publication files.
 
 ## Recommended learning order
 
@@ -23,4 +25,4 @@ Each manual folder provides direct links to its available Markdown, Microsoft Wo
 
 These resources provide educational implementation guidance. Verify current requirements through official publications and adapt the material to the organization’s actual systems, risks, obligations, and authorization processes.
 
-[Return to the main repository](../README.md)
+**Repository navigation:** [Main README](../README.md)

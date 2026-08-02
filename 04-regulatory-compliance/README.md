@@ -1,26 +1,38 @@
-# Regulatory Compliance
+# Regulatory Compliance / Cumplimiento normativo / Conformidade regulatória
 
-Published practical guidance for major AI-governance, privacy, healthcare, and payment-card compliance requirements.
+[English](#english) | [Español](#español) | [Português](#português)
 
-[Main repository](../README.md) › **04 — Regulatory Compliance**
+[Main repository / Repositorio principal / Repositório principal](../README.md)
 
-## Available manuals and languages
+## English
 
-| Manual README | English | Spanish (Latin America) | Brazilian Portuguese |
+Practical guidance for major AI-governance, privacy, healthcare, and payment-card compliance requirements.
+
+## Español
+
+Guía práctica para requisitos importantes de gobierno de IA, privacidad, salud y cumplimiento de tarjetas de pago.
+
+## Português
+
+Orientação prática para requisitos importantes de governança de IA, privacidade, saúde e conformidade de cartões de pagamento.
+
+## Manuals / Manuales / Manuais
+
+| Manual README | English | Español | Português |
 |---|---|---|---|
-| [EU AI Act GRC Compliance Manual](./EU_AI_Act_GRC/README.md) | Available | Available | Available |
-| [GDPR](./GDPR/README.md) | Available | Available | Available |
-| [HIPAA](./HIPAA/README.md) | Available | Available | Available |
-| [PCI DSS v4.0.1](./PCI_DSS_v4.0.1/README.md) | Available | Available | Available |
+| [EU AI Act GRC Compliance Manual](./EU_AI_Act_GRC/README.md) | Available | Disponible | Disponível |
+| [GDPR](./GDPR/README.md) | Available | Disponible | Disponível |
+| [HIPAA](./HIPAA/README.md) | Available | Disponible | Disponível |
+| [PCI DSS v4.0.1](./PCI_DSS_v4.0.1/README.md) | Available | Disponible | Disponível |
 
-Each manual README provides direct links to its available Markdown, Microsoft Word, searchable PDF, QA, manifest, or checksum files.
+## Notice / Aviso / Aviso
 
-## Important notice
+These materials are educational and do not constitute legal, regulatory, audit, accounting, medical, or certification advice.
 
-These materials are educational guidance. They do not constitute legal, regulatory, audit, accounting, medical, or certification advice. Verify current requirements through official sources and qualified professionals.
+Estos materiales son educativos y no constituyen asesoría legal, normativa, de auditoría, contable, médica ni de certificación.
 
-## Repository status
+Estes materiais são educacionais e não constituem aconselhamento jurídico, regulatório, de auditoria, contábil, médico ou de certificação.
 
-Aligned with repository version 1.13 — August 2026.
+**Repository version / Versión / Versão:** 1.14 — August 2026
 
-**Repository navigation:** [Main README](../README.md)
+[Main README / README principal](../README.md)

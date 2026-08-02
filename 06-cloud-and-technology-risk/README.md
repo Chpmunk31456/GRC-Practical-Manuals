@@ -1,15 +1,31 @@
-# Cloud and Technology Risk
+# Cloud and Technology Risk / Riesgo de nube y tecnología / Risco de nuvem e tecnologia
 
-This section covers governance and risk management for cloud services and modern technology environments.
+[English](#english) | [Español](#español) | [Português](#português)
 
-[Main repository](../README.md) › **06 — Cloud and Technology Risk**
+[Main repository / Repositorio principal / Repositório principal](../README.md)
 
-## Published manual
+## English
 
-- [Cloud Security and Compliance README](./Cloud_Security_and_Compliance/README.md) — available in English, Latin American Spanish, and Brazilian Portuguese. The manual README provides direct links to available editions.
+Governance and risk management for cloud services and modern technology environments.
 
-## Important notice
+## Español
 
-Adapt the guidance to the organization’s cloud architecture, shared-responsibility model, contracts, data classifications, identity controls, monitoring, resilience requirements, and applicable obligations.
+Gobierno y gestión de riesgos para servicios en la nube y entornos tecnológicos modernos.
 
-**Repository navigation:** [Main README](../README.md)
+## Português
+
+Governança e gestão de riscos para serviços em nuvem e ambientes tecnológicos modernos.
+
+## Published manual / Manual publicado / Manual publicado
+
+- [Cloud Security and Compliance README](./Cloud_Security_and_Compliance/README.md) — English, Latin American Spanish, and Brazilian Portuguese editions.
+
+## Notice / Aviso / Aviso
+
+Adapt the guidance to cloud architecture, shared responsibility, contracts, data classifications, identity controls, monitoring, resilience, and applicable obligations.
+
+Adapte la guía a la arquitectura de nube, responsabilidad compartida, contratos, clasificación de datos, controles de identidad, monitoreo, resiliencia y obligaciones aplicables.
+
+Adapte a orientação à arquitetura de nuvem, responsabilidade compartilhada, contratos, classificação de dados, controles de identidade, monitoramento, resiliência e obrigações aplicáveis.
+
+[Main README / README principal](../README.md)

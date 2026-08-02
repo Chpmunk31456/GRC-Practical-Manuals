@@ -1,71 +1,13 @@
 # Operational Resilience
 
-This section contains practical guidance for helping organizations prepare for disruptions, respond effectively, recover critical services, and improve resilience over time.
+This section contains practical guidance for preparing for disruptions, responding effectively, recovering critical services, and improving resilience over time.
 
-## Included Manual
+## Published manual
 
-- [Incident Response and Business Continuity](./Incident_Response_BCDR/)
+- [Incident Response, Business Continuity, and Disaster Recovery](./Incident_Response_BCDR/) — available in English, Latin American Spanish, and Brazilian Portuguese. The manual README provides direct Word and PDF links.
 
-## Topics Covered
+## Important notice
 
-- Operational resilience
-- Business impact analysis
-- Critical business services
-- Incident response
-- Crisis management
-- Business continuity planning
-- Disaster recovery
-- Backup and restoration
-- Recovery time objectives
-- Recovery point objectives
-- Communication plans
-- Roles and responsibilities
-- Tabletop exercises
-- Testing and validation
-- Third-party dependencies
-- Emergency operations
-- Lessons learned
-- Corrective action tracking
-- Evidence collection
-- Continuous improvement
+Adapt the guidance to the organization’s actual risks, dependencies, critical services, recovery priorities, contracts, and applicable requirements. Test plans regularly.
 
-## Intended Audience
-
-- Students
-- GRC professionals
-- Security managers
-- Business continuity professionals
-- Disaster recovery professionals
-- Compliance analysts
-- Internal auditors
-- Technology leaders
-- Consultants
-- Small organizations and nonprofits
-
-## Important Notice
-
-This material is provided for education and general resilience planning.
-
-Operational resilience requirements vary according to the organization’s industry, location, contractual obligations, critical services, technology environment, and applicable laws and regulations.
-
-Organizations should adapt the guidance to their specific risks, dependencies, recovery priorities, and business needs.
-
-## Author
-
-**Alberto (Al) Leiva**
-
-## Version
-
-Version 1.0 — July 2026
-
-## License
-
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
-
-## Disclaimer
-
-Use this material as a practical learning and planning resource. It does not guarantee uninterrupted operations, successful recovery, regulatory compliance, or protection from every incident.
-
-Organizations should test their plans regularly and obtain qualified legal, regulatory, security, continuity, or technical advice when appropriate.
-
-[Return to the Main Repository](../README.md)
+[Return to the main repository](../README.md)

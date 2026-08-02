@@ -1,5 +1,7 @@
 # SOC 2 Audit Readiness Manual
 
+[Main repository](../../README.md) › [03 — Assurance and Audit](../README.md) › **SOC 2 Audit Readiness**
+
 Practical guidance for preparing a service organization for a SOC 2 examination.
 
 ## Available editions
@@ -15,4 +17,4 @@ Localized editions were produced with machine assistance and retain documented h
 **Author:** Alberto “Al” Leiva  
 **License:** CC BY-NC-SA 4.0
 
-[Return to Assurance and Audit](../README.md) · [Return to the main repository](../../README.md)
+**Repository navigation:** [Assurance and Audit README](../README.md) · [Main README](../../README.md)

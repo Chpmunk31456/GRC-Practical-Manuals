@@ -3,7 +3,7 @@
 Practical, plain-language manuals for learning and applying governance, risk, compliance, privacy, assurance, resilience, cloud security, AI governance, third-party risk, and operational GRC tooling.
 
 **Author:** Alberto “Al” Leiva  
-**Repository version:** 1.10  
+**Repository version:** 1.11
 **Last updated:** 1 August 2026
 
 ## Start Here
@@ -25,7 +25,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 | [05 — Operational Resilience](./05-operational-resilience/) | [Incident response, business continuity, and disaster recovery](./05-operational-resilience/Incident_Response_BCDR/) |
 | [06 — Cloud and Technology Risk](./06-cloud-and-technology-risk/) | [Cloud security and compliance](./06-cloud-and-technology-risk/Cloud_Security_and_Compliance/) |
 | [07 — Third-Party Risk](./07-third-party-risk/) | [Third-party risk and cyber supply-chain security](./07-third-party-risk/Third_Party_Risk_and_Supply_Chain/) |
-| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/), [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/), [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/), and [GRC Metrics and Executive Reporting](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/) |
+| [08 — Templates and Tools](./08-templates-and-tools/) | [GRC Risk Register and Risk Treatment](./08-templates-and-tools/GRC_Risk_Register_and_Risk_Treatment/), [Evidence Collection and Audit Support](./08-templates-and-tools/Evidence_Collection_and_Audit_Support/), [Audit Readiness and Remediation Management](./08-templates-and-tools/Audit_Readiness_and_Remediation_Management/), [GRC Policy Template Toolkit](./08-templates-and-tools/Policy_Template_Toolkit/), [Control Mapping and Crosswalk](./08-templates-and-tools/Control_Mapping_and_Crosswalk/), [Compliance Obligations and Regulatory Change](./08-templates-and-tools/Compliance_Obligations_and_Regulatory_Change/), [GRC Metrics and Executive Reporting](./08-templates-and-tools/GRC_Metrics_and_Executive_Reporting/), and [GRC Program Management and Operating Model](./08-templates-and-tools/GRC_Program_Management_and_Operating_Model/) |
 
 ## Available Formats and Languages
 
@@ -33,6 +33,7 @@ Practical, plain-language manuals for learning and applying governance, risk, co
 - The EU AI Act GRC Compliance Manual is published in English, Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) with controlled Markdown masters, DOCX, PDF, manifests, QA reports, PDF metadata, and SHA-256 checksums.
 - The Section 08 practical toolkits include controlled English masters, editable operational tools, DOCX and searchable PDF editions, machine-assisted Spanish and Brazilian Portuguese publication candidates, automated QA evidence, and SHA-256 checksums.
 - The GRC Metrics and Executive Reporting Toolkit includes six controlled English chapters, four editable metrics and reporting tools, English DOCX and searchable PDF editions, current-source revalidation records, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
+- The GRC Program Management and Operating Model Toolkit includes a controlled English master, six editable operating-model tools, English DOCX and searchable PDF editions, official-source records, automated QA, and machine-assisted Spanish and Brazilian Portuguese publication candidates.
 - The SOC 2 audit-readiness guide is available in English and neutral Latin American Spanish, including Markdown editions.
 - Each manual folder identifies the files currently available.
 

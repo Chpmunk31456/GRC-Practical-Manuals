@@ -1,0 +1,4 @@
+# Local publication build and rendering intermediates
+**/.build/
+**/__pycache__/
+*.pyc

@@ -48,6 +48,14 @@ The publication package includes six controlled English chapters, English Markdo
 
 The localized editions are identified as machine-assisted publication candidates. Automated package and structural validation passed; native-language editorial approval is not represented as completed.
 
+### GRC Program Management and Operating Model Toolkit
+
+[Open the completed manual and toolkit](./GRC_Program_Management_and_Operating_Model/)
+
+The publication package includes a controlled English master, English Markdown, DOCX and searchable PDF, a 22-field program charter, an 18-field operating-model and RACI tool, a 19-field annual plan, a 24-field initiative portfolio tracker, a 20-field governance decision log, a 20-field maturity assessment, Latin American Spanish and Brazilian Portuguese publication candidates, official-source records, automated QA, page-by-page Codex visual inspection evidence, and SHA-256 checksums.
+
+The localized editions are machine-assisted publication candidates. Native-language editorial approval, organization-specific legal or regulatory review, accessibility testing, standards certification, formal audit assurance, and human publication approval are not represented as completed.
+
 ## Intended Audience
 
 - Students
@@ -73,7 +81,7 @@ Templates, metrics, dashboards, and scorecards alone do not establish compliance
 
 ## Version
 
-Version 1.10 — August 2026
+Version 1.11 — August 2026
 
 ## License
 

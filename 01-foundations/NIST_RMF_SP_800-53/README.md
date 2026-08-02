@@ -1,46 +1,17 @@
-# NIST Risk Management Framework and SP 800-53
+# NIST Risk Management Framework and SP 800-53 Practical Manual
 
-This section contains practical guidance for applying the NIST Risk Management Framework and understanding the NIST SP 800-53 security and privacy control catalog.
+## Available editions
 
-## Topics
+| Language | Word | PDF |
+|---|---|---|
+| English | [DOCX](./NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.docx) | [PDF](./NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_v1.0.pdf) |
+| Spanish (Latin America) | [DOCX](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.docx) | [PDF](./Espanol/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Espanol_v1.0.pdf) |
+| Brazilian Portuguese | [DOCX](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.docx) | [PDF](./Portugues_BR/NIST_RMF_and_SP_800-53_Release_5.2.0_Practical_Manual_Portugues_BR_v1.0.pdf) |
 
-- Prepare
-- Categorize
-- Select
-- Implement
-- Assess
-- Authorize
-- Monitor
-- Security and privacy controls
-- Control baselines
-- Control tailoring
-- Control implementation statements
-- Assessment procedures
-- Plans of action and milestones
-- Continuous monitoring
-- Authorization evidence
+Localized editions were produced with machine assistance and retain documented human-review limitations.
 
-## Intended Audience
+## Important notice
 
-- Students
-- GRC professionals
-- Risk analysts
-- Security control assessors
-- Internal auditors
-- Security managers
-- Consultants
-- Government contractors
+This manual provides educational implementation guidance and does not replace official NIST publications, organization-specific requirements, or formal authorization processes.
 
-## Important Notice
-
-This section provides educational implementation guidance and does not replace official NIST publications, organization-specific requirements, or formal authorization processes.
-
-## Author
-
-**Alberto (Al) Leiva**
-
-## License
-
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
-
-[Return to GRC Foundations](../README.md)
+[Return to GRC Foundations](../README.md) · [Return to the main repository](../../README.md)

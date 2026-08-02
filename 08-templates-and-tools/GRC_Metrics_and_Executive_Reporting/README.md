@@ -1,38 +1,20 @@
 # GRC Metrics and Executive Reporting Toolkit
 
-A practical manual and editable toolkit for defining, validating, interpreting, governing, and reporting governance, risk, compliance, audit, resilience, third-party, privacy, cybersecurity, and AI-governance metrics.
+## Available editions
 
-## Published package
+| Language | Markdown | Word | PDF |
+|---|---|---|---|
+| English | [Markdown](./English/GRC_Metrics_and_Executive_Reporting_Toolkit_English_v1.0.md) | [DOCX](./English/GRC_Metrics_and_Executive_Reporting_Toolkit_English_v1.0.docx) | [PDF](./English/GRC_Metrics_and_Executive_Reporting_Toolkit_English_v1.0.pdf) |
+| Spanish (Latin America) | [Markdown](./translations/es-419/Kit_Metricas_GRC_e_Informes_Ejecutivos_es-419_v1.0.md) | [DOCX](./translations/es-419/Kit_Metricas_GRC_e_Informes_Ejecutivos_es-419_v1.0.docx) | [PDF](./translations/es-419/Kit_Metricas_GRC_e_Informes_Ejecutivos_es-419_v1.0.pdf) |
+| Brazilian Portuguese | [Markdown](./translations/pt-BR/Kit_Metricas_GRC_e_Relatorios_Executivos_pt-BR_v1.0.md) | [DOCX](./translations/pt-BR/Kit_Metricas_GRC_e_Relatorios_Executivos_pt-BR_v1.0.docx) | [PDF](./translations/pt-BR/Kit_Metricas_GRC_e_Relatorios_Executivos_pt-BR_v1.0.pdf) |
 
-- Six controlled English implementation chapters
-- English Markdown, DOCX, and searchable PDF
-- 40-field metric definition register
-- 36-field KPI/KRI review worksheet
-- 34-field executive GRC scorecard
-- 28-field metrics action and decision tracker
-- Latin American Spanish (`es-419`) machine-assisted publication candidate
-- Brazilian Portuguese (`pt-BR`) machine-assisted publication candidate
-- Assembly reports, automated QA records, and SHA-256 checksums
+## Editable tools
 
-## Controlled scope
+- [Metric Definition Register](./tools/Metric_Definition_Register.csv)
+- [KPI and KRI Review Worksheet](./tools/KPI_KRI_Review_Worksheet.csv)
+- [Executive GRC Scorecard](./tools/Executive_GRC_Scorecard.csv)
+- [Metrics Action and Decision Tracker](./tools/Metrics_Action_and_Decision_Tracker.csv)
 
-The toolkit covers metric governance and decision purpose; KPI, KRI, KCI, assurance, maturity, activity, outcome, and exposure measures; formula and scope controls; data lineage and quality; baselines, targets, thresholds, trends, benchmarks, and variance; executive and board reporting; narrative interpretation; decisions, actions, escalation, review, modification, and retirement.
+Localized editions are machine-assisted publication candidates. Native-language editorial approval is not represented as completed.
 
-## Automated validation
-
-- English controlled assembly, four CSV schemas, DOCX ZIP integrity, searchable PDF, and checksums: PASS
-- English searchable PDF: 9 pages and 2,353 extracted words
-- Spanish: 7 H1 and 45 H2 headings, 9 pages, and 2,848 extracted words: PASS
-- Brazilian Portuguese: 7 H1 and 45 H2 headings, 9 pages, and 2,782 extracted words: PASS
-
-## Important notice
-
-A metric is an analytical signal, not proof of compliance, security, control effectiveness, audit assurance, or business performance. Metrics must be interpreted in context and supported by governed data.
-
-Native-language editorial approval, legal or regulatory review, statistical validation, accessibility testing, formal audit assurance, and full page-by-page human visual approval are not represented as completed.
-
-## Author
-
-**Alberto “Al” Leiva**
-
-ChatGPT assisted under the author's direction. The author remains responsible for editorial and release decisions.
+[Return to Section 08](../README.md) · [Return to the main repository](../../README.md)

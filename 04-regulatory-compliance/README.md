@@ -2,14 +2,16 @@
 
 Published practical guidance for major AI-governance, privacy, healthcare, and payment-card compliance requirements.
 
+[Main repository](../README.md) › **04 — Regulatory Compliance**
+
 ## Available manuals and languages
 
-| Manual | English | Spanish (Latin America) | Brazilian Portuguese |
+| Manual README | English | Spanish (Latin America) | Brazilian Portuguese |
 |---|---|---|---|
-| [EU AI Act GRC Compliance Manual](./EU_AI_Act_GRC/) | Available | Available | Available |
-| [GDPR](./GDPR/) | Available | Available | Available |
-| [HIPAA](./HIPAA/) | Available | Available | Available |
-| [PCI DSS v4.0.1](./PCI_DSS_v4.0.1/) | Available | Available | Available |
+| [EU AI Act GRC Compliance Manual](./EU_AI_Act_GRC/README.md) | Available | Available | Available |
+| [GDPR](./GDPR/README.md) | Available | Available | Available |
+| [HIPAA](./HIPAA/README.md) | Available | Available | Available |
+| [PCI DSS v4.0.1](./PCI_DSS_v4.0.1/README.md) | Available | Available | Available |
 
 Each manual README provides direct links to its available Markdown, Microsoft Word, searchable PDF, QA, manifest, or checksum files.
 
@@ -19,6 +21,6 @@ These materials are educational guidance. They do not constitute legal, regulato
 
 ## Repository status
 
-Aligned with repository version 1.11 — August 2026.
+Aligned with repository version 1.13 — August 2026.
 
-[Return to the main repository](../README.md)
+**Repository navigation:** [Main README](../README.md)

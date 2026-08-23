@@ -5,8 +5,17 @@
 [English](#english) | [Español](#español) | [Português do Brasil](#português-do-brasil)
 
 **Author / Autor:** Alberto “Al” Leiva  
-**Repository version / Versión / Versão:** 1.14  
-**Last updated / Última actualización / Última atualização:** 1 August 2026
+**Repository version / Versión / Versão:** 2.0.0  
+**Last updated / Última actualización / Última atualização:** 23 August 2026
+
+## Archival publication and DOI / Publicación archivística y DOI / Publicação arquivística e DOI
+
+This multilingual collection is permanently archived in Zenodo through the GitHub integration.
+
+- All-versions DOI: [10.5281/zenodo.22072466](https://doi.org/10.5281/zenodo.22072466)
+- Current v2.0.0 DOI: [10.5281/zenodo.22072467](https://doi.org/10.5281/zenodo.22072467)
+
+Use the all-versions DOI for the evolving collection and the version-specific DOI to cite the exact archived release.
 
 ---
 

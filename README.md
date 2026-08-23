@@ -1,5 +1,7 @@
 # GRC Practical Manuals
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22072466.svg)](https://doi.org/10.5281/zenodo.22072466)
+
 [English](#english) | [Español](#español) | [Português do Brasil](#português-do-brasil)
 
 **Author / Autor:** Alberto “Al” Leiva  

@@ -1,0 +1,36 @@
+name: One-time Zenodo release v2.0.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/zenodo-release-v2.0.0.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TARGET: ${{ github.event.before }}
+        run: |
+          if gh release view v2.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release v2.0.0 already exists."
+            exit 0
+          fi
+          gh release create v2.0.0 \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$RELEASE_TARGET" \
+            --title "GRC Practical Manuals v2.0.0 — Multilingual Edition" \
+            --notes "Second major public release of the GRC Practical Manuals.
+
+          This release archives the current multilingual collection from the protected main branch for long-term preservation through Zenodo. It includes practical governance, risk, compliance, audit, resilience, cloud and technology risk, third-party risk, and supporting toolkits in English, neutral Latin American Spanish, and Brazilian Portuguese.
+
+          Author: Alberto (Al) Leiva
+          License: CC BY-NC-SA 4.0" \
+            --latest
+          gh release view v2.0.0 --repo "$GITHUB_REPOSITORY"

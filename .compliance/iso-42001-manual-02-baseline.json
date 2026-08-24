@@ -29,6 +29,12 @@
     ]
   },
   "localized_full_source_status": "draft-human-review-required",
+  "human_review_checklist": "translations/HUMAN_SEMANTIC_REVIEW_CHECKLIST.md",
+  "human_review_gate": "open",
+  "human_review_required_languages": [
+    "es-419",
+    "pt-BR"
+  ],
   "required_localized_chapters": 32,
   "required_localized_source_graphics": 10,
   "localized_full_required_phrases": {

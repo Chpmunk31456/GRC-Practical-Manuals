@@ -20,13 +20,13 @@ This manual translates the EU Artificial Intelligence Act into a practical gover
 
 Este manual convierte la Ley de Inteligencia Artificial de la Unión Europea en una guía práctica de gobierno, riesgo, cumplimiento, controles, evidencia, auditoría e implementación. Está dirigido a ejecutivos, equipos de cumplimiento, abogados, auditores, seguridad, compras, recursos humanos, operaciones, tecnología y responsables de negocio no técnicos.
 
-**Comience aquí:** la ruta controlada en inglés se encuentra en [rutas prácticas de implementación para organizaciones micro/pequeñas, medianas y grandes o complejas](./MANUAL_01_IMPLEMENTATION_PATHS.md). Las ediciones localizadas se actualizarán después de aprobar la fuente inglesa.
+**Comience aquí:** [rutas prácticas de implementación para organizaciones micro/pequeñas, medianas y grandes o complejas](./translations/es-419/source/MANUAL_01_RUTAS_DE_IMPLEMENTACION.md).
 
 ## Português
 
 Este manual transforma a Lei de Inteligência Artificial da União Europeia em um guia prático de governança, risco, conformidade, controles, evidências, auditoria e implementação. Destina-se a executivos, equipes de conformidade, advogados, auditores, segurança, compras, recursos humanos, operações, tecnologia e responsáveis de negócios não técnicos.
 
-**Comece aqui:** o caminho controlado em inglês está em [caminhos práticos de implementação para organizações micro/pequenas, médias e grandes ou complexas](./MANUAL_01_IMPLEMENTATION_PATHS.md). As edições localizadas serão atualizadas após a aprovação da fonte em inglês.
+**Comece aqui:** [caminhos práticos de implementação para organizações micro/pequenas, médias e grandes ou complexas](./translations/pt-BR/source/MANUAL_01_CAMINHOS_DE_IMPLEMENTACAO.md).
 
 ## Published editions / Ediciones publicadas / Edições publicadas
 

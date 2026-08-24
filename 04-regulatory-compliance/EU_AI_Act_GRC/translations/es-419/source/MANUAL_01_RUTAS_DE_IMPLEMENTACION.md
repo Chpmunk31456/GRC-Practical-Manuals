@@ -26,6 +26,20 @@ Complete un registro para cada sistema, modelo, servicio, función, piloto y cas
 
 Cuando una respuesta sea incierta, márquela como **no resuelta** y restrinja el despliegue según corresponda. No clasifique silenciosamente la incertidumbre como riesgo bajo.
 
+### Guía visual — Clasificación y ruta de decisión
+
+```mermaid
+flowchart TD
+    A["Inventariar el uso de IA"] --> B["Confirmar alcance y función jurídica"]
+    B --> C{"¿Posible práctica prohibida?"}
+    C -- "Sí o no resuelta" --> D["Restringir el uso y escalar"]
+    C -- "No" --> E{"¿Alto riesgo, IA de uso general o deber de transparencia?"}
+    E -- "Sí" --> F["Mapear obligaciones, controles y evidencia"]
+    E -- "No" --> G["Documentar la base y monitorear cambios"]
+```
+
+**Explicación accesible:** Cada uso de IA ingresa al inventario y recibe una decisión sobre alcance y función jurídica. Una posible práctica prohibida se restringe y escala. Los demás usos se evalúan para determinar obligaciones de alto riesgo, IA de uso general y transparencia; las obligaciones aplicables se convierten en controles y evidencia, mientras las demás decisiones permanecen documentadas y bajo monitoreo.
+
 ## 2. Ciclo mínimo de implementación
 
 ### Puerta 1 — Movilizar y establecer autoridad
@@ -102,6 +116,23 @@ La preparación para IA de uso general y para transparencia debe distinguir las 
 5. Vuelva a clasificar después de cambios materiales; no trate la aprobación inicial como permanente.
 
 **Evidencia de salida:** plan y resultados de pruebas, registro de aprobación, decisión sobre riesgo residual, plan de monitoreo, procedimiento de incidentes, pista de auditoría e historial de reclasificaciones.
+
+### Guía visual — Siete puertas de implementación
+
+```mermaid
+flowchart TD
+    A["1. Movilizar y establecer autoridad"] --> B["2. Descubrir la IA y definir límites"]
+    B --> C["3. Evaluar prácticas prohibidas y capacitar"]
+    C --> D["4. Clasificar cada sistema y modelo"]
+    D --> E["5. Implementar el conjunto de obligaciones"]
+    E --> F["6. Controlar proveedores y dependencias"]
+    F --> G["7. Validar, autorizar y monitorear"]
+    G --> H{"¿Cambio material o incidente?"}
+    H -- "Sí" --> B
+    H -- "No" --> G
+```
+
+**Explicación accesible:** El programa avanza por siete puertas controladas, desde la movilización del gobierno hasta el monitoreo continuo. Un cambio material o incidente devuelve el sistema al descubrimiento, la clasificación y los controles afectados; si no ocurre, el monitoreo continúa.
 
 ## 3. Tres rutas de implementación
 
@@ -227,4 +258,3 @@ El flujo de trabajo dedicado verifica que estas fuentes, este punto de entrada, 
 - [Cuestionario para proveedores de IA](../../../appendices/Appendix_O_AI_Vendor_Questionnaire_CORRECTED_MASTER.md)
 - [Lista de cláusulas contractuales](../../../appendices/Appendix_P_Contract_Clause_Checklist_CORRECTED_MASTER.md)
 - [Ruta general de implementación](../../../appendices/Appendix_Z_Implementation_Roadmap_CORRECTED_MASTER.md)
-

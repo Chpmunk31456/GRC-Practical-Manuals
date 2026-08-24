@@ -16,6 +16,20 @@ Repository documents should:
 - Preserve a sensible reading order in Word and PDF editions
 - Avoid unnecessary animation, flashing content, and decorative clutter
 
+## Accessible Visual Learning
+
+Follow the [project visual-learning standard](./VISUAL_LEARNING_STANDARD.md). A graphic must clarify a decision, workflow, mapping, timeline, hierarchy, data flow, or evidence-and-assurance relationship. It must not be included only as decoration.
+
+Every informative graphic should:
+
+- appear near the concept it explains;
+- include localized labels and an accessible text explanation;
+- preserve the same meaning when read without color;
+- use a logical reading order and concise labels; and
+- avoid simplifying a legal or technical obligation into a misleading rule.
+
+The text explanation is part of the controlled content and must remain available in Markdown, Word, PDF, and other published formats.
+
 ## Review Workflow
 
 When creating or revising a manual:

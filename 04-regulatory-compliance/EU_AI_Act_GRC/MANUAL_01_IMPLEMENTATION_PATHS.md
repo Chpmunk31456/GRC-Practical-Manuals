@@ -23,6 +23,20 @@ Complete one record for every AI system, model, service, feature, pilot, and mat
 
 When an answer is uncertain, mark it **unresolved** and restrict deployment as appropriate. Do not silently classify uncertainty as low risk.
 
+### Visual guide — Classification and routing
+
+```mermaid
+flowchart TD
+    A["Inventory the AI use"] --> B["Confirm scope and actor role"]
+    B --> C{"Possible prohibited practice?"}
+    C -- "Yes or unresolved" --> D["Restrict use and escalate"]
+    C -- "No" --> E{"High-risk, GPAI, or transparency duty?"}
+    E -- "Yes" --> F["Map obligations, controls, and evidence"]
+    E -- "No" --> G["Document basis and monitor changes"]
+```
+
+**Accessible explanation:** Every AI use enters the inventory and receives a scope and actor-role decision. A possible prohibited practice is restricted and escalated. Other uses are evaluated for high-risk, GPAI, and transparency duties; applicable obligations become controls and evidence, while other decisions remain documented and monitored for change.
+
 ## 2. Minimum implementation lifecycle
 
 ### Gate 1 — Mobilize and establish authority
@@ -99,6 +113,23 @@ GPAI and transparency readiness must distinguish provider duties from downstream
 5. Reclassify after material changes; do not treat initial approval as permanent.
 
 **Exit evidence:** test plan and results, approval record, residual-risk decision, monitoring plan, incident procedure, audit trail, and reclassification history.
+
+### Visual guide — Seven implementation gates
+
+```mermaid
+flowchart TD
+    A["1. Mobilize and establish authority"] --> B["2. Discover AI and define boundaries"]
+    B --> C["3. Screen prohibited practices and train"]
+    C --> D["4. Classify each system and model"]
+    D --> E["5. Implement the obligation set"]
+    E --> F["6. Control vendors and dependencies"]
+    F --> G["7. Validate, release, and monitor"]
+    G --> H{"Material change or incident?"}
+    H -- "Yes" --> B
+    H -- "No" --> G
+```
+
+**Accessible explanation:** The programme moves through seven controlled gates from governance mobilization to continuous monitoring. A material change or incident sends the system back through discovery, classification, and any affected controls; otherwise monitoring continues.
 
 ## 3. Three implementation paths
 

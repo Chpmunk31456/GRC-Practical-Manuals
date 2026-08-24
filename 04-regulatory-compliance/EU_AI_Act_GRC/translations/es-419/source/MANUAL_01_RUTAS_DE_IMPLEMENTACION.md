@@ -219,6 +219,22 @@ Cada registro de sistema debe enlazar los siguientes elementos. Marque un elemen
 - acciones correctivas y evidencia de cierre; y
 - decisión de retención y eliminación.
 
+### Cadena de evidencia y aseguramiento
+
+```mermaid
+flowchart TD
+    A["Requisito"] --> B["Actividad de control"]
+    B --> C["Responsable y frecuencia"]
+    C --> D["Evidencia"]
+    D --> E["Prueba independiente"]
+    E --> F{"¿Control eficaz?"}
+    F -- "Sí" --> G["Monitorear y conservar evidencia"]
+    F -- "No" --> H["Hallazgo y remediación"]
+    H --> B
+```
+
+**Explicación accesible:** Un requisito se convierte en una actividad de control con una persona responsable y una frecuencia. La actividad produce evidencia que se somete a una prueba independiente. Los controles eficaces continúan bajo monitoreo; los controles ineficaces generan hallazgos y remediación que regresa al diseño del control.
+
 ## 6. Métricas que muestran la calidad de la implementación
 
 - porcentaje de sistemas de IA con propietario confirmado;

@@ -12,6 +12,8 @@
 
 **AI assistance / Asistencia de IA / Assistência de IA:** [ChatGPT and Codex, OpenAI — disclosure](./AI_ASSISTANCE_DISCLOSURE.md)
 
+**Visual learning / Aprendizaje visual / Aprendizagem visual:** [Project visual-learning standard](./VISUAL_LEARNING_STANDARD.md)
+
 ## Archival publication and DOI / Publicación archivística y DOI / Publicação arquivística e DOI
 
 This multilingual collection is permanently archived in Zenodo through the GitHub integration.

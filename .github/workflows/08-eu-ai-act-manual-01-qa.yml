@@ -1,0 +1,36 @@
+name: "08 - EU AI Act Manual 01 QA"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "04-regulatory-compliance/EU_AI_Act_GRC/**"
+      - ".compliance/eu-ai-act-manual-01-baseline.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "scripts/eu_ai_act_manual_01_qa.py"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/08-eu-ai-act-manual-01-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eu-ai-act-manual-01-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-eu-ai-act-manual-01:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate the EU AI Act controlled baseline and implementation paths
+        run: python3 scripts/eu_ai_act_manual_01_qa.py
+      - name: Validate the repository authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate the controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog

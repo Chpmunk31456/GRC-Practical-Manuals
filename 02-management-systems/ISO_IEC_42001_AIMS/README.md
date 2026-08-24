@@ -2,6 +2,8 @@
 
 **Status:** Trilingual full-source review. The controlled English 32-chapter master is complete; Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) 32-chapter localized source drafts are present and require human semantic review. Consolidated localized masters and DOCX/PDF release artifacts remain in development.
 
+**Controlled trilingual implementation entry:** English, neutral Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) size- and risk-scaled implementation paths remain the publication entry layer while full localized release artifacts undergo review.
+
 **Author and accountable human creator:** Alberto “Al” Leiva
 
 [Main repository](../../README.md) | [Management systems](../README.md) | [AI-assistance disclosure](../../AI_ASSISTANCE_DISCLOSURE.md) | [Visual-learning standard](../../VISUAL_LEARNING_STANDARD.md)

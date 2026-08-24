@@ -216,6 +216,22 @@ Each system record should link to the following, marking an item **not applicabl
 - corrective actions and closure evidence; and
 - retention and disposal decision.
 
+### Evidence-and-assurance chain
+
+```mermaid
+flowchart TD
+    A["Requirement"] --> B["Control activity"]
+    B --> C["Owner and frequency"]
+    C --> D["Evidence"]
+    D --> E["Independent test"]
+    E --> F{"Control effective?"}
+    F -- "Yes" --> G["Monitor and retain evidence"]
+    F -- "No" --> H["Finding and remediation"]
+    H --> B
+```
+
+**Accessible explanation:** A requirement becomes a controlled activity with an owner and frequency. The activity produces evidence that is tested independently. Effective controls continue under monitoring; ineffective controls create findings and remediation that returns to control design.
+
 ## 6. Metrics that reveal implementation quality
 
 - percentage of AI systems with a confirmed owner;

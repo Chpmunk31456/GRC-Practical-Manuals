@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main
+      - "maintenance/**"
     paths:
       - "02-management-systems/ISO_IEC_42001_AIMS/**"
       - ".compliance/iso-42001-manual-02-baseline.json"

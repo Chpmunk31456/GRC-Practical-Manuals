@@ -48,19 +48,20 @@ def main() -> int:
             errors.append("human semantic-review checklist is missing")
         else:
             text = checklist.read_text(encoding="utf-8")
+            semantic_text = text.replace("**", "")
             required_markers = (
                 "Gate status: OPEN",
                 "human review required",
                 "must not mark this gate complete or impersonate a human language/domain reviewer",
                 "Spanish (`es-419`) terms to verify consistently",
                 "Brazilian Portuguese (`pt-BR`) terms to verify consistently",
-                "Visible labels in those raster images remain an **open release issue**",
+                "Visible labels in those raster images remain an open release issue",
                 "Human sign-off gate",
                 "zero open Critical and Major issues",
                 "baseline must remain `draft-human-review-required`",
             )
             for marker in required_markers:
-                if marker not in text:
+                if marker not in semantic_text:
                     errors.append(f"human review checklist is missing controlled marker: {marker}")
 
             if "| `es-419` | Pending | Pending | Pending | Pending | Pending |" not in text:

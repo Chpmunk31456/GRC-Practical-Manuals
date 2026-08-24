@@ -26,6 +26,20 @@ Preencha um registro para cada sistema, modelo, serviço, recurso, piloto e caso
 
 Quando uma resposta for incerta, marque-a como **não resolvida** e restrinja a implantação conforme necessário. Não classifique silenciosamente a incerteza como baixo risco.
 
+### Guia visual — Classificação e caminho de decisão
+
+```mermaid
+flowchart TD
+    A["Inventariar o uso de IA"] --> B["Confirmar escopo e papel jurídico"]
+    B --> C{"Possível prática proibida?"}
+    C -- "Sim ou não resolvida" --> D["Restringir o uso e escalonar"]
+    C -- "Não" --> E{"Alto risco, IA de uso geral ou dever de transparência?"}
+    E -- "Sim" --> F["Mapear obrigações, controles e evidências"]
+    E -- "Não" --> G["Documentar a base e monitorar mudanças"]
+```
+
+**Explicação acessível:** Cada uso de IA entra no inventário e recebe uma decisão sobre escopo e papel jurídico. Uma possível prática proibida é restringida e escalonada. Os demais usos são avaliados quanto a obrigações de alto risco, IA de uso geral e transparência; as obrigações aplicáveis tornam-se controles e evidências, enquanto as demais decisões permanecem documentadas e monitoradas.
+
 ## 2. Ciclo mínimo de implementação
 
 ### Marco 1 — Mobilizar e estabelecer autoridade
@@ -102,6 +116,23 @@ A preparação para IA de uso geral e transparência deve distinguir as obrigaç
 5. Reclassifique após mudanças relevantes; não trate a aprovação inicial como permanente.
 
 **Evidência de saída:** plano e resultados de testes, registro de aprovação, decisão sobre risco residual, plano de monitoramento, procedimento de incidentes, trilha de auditoria e histórico de reclassificações.
+
+### Guia visual — Sete marcos de implementação
+
+```mermaid
+flowchart TD
+    A["1. Mobilizar e estabelecer autoridade"] --> B["2. Descobrir a IA e definir limites"]
+    B --> C["3. Triar práticas proibidas e treinar"]
+    C --> D["4. Classificar cada sistema e modelo"]
+    D --> E["5. Implementar o conjunto de obrigações"]
+    E --> F["6. Controlar fornecedores e dependências"]
+    F --> G["7. Validar, autorizar e monitorar"]
+    G --> H{"Mudança relevante ou incidente?"}
+    H -- "Sim" --> B
+    H -- "Não" --> G
+```
+
+**Explicação acessível:** O programa percorre sete marcos controlados, desde a mobilização da governança até o monitoramento contínuo. Uma mudança relevante ou um incidente devolve o sistema à descoberta, à classificação e aos controles afetados; caso contrário, o monitoramento continua.
 
 ## 3. Três caminhos de implementação
 
@@ -227,4 +258,3 @@ O fluxo de trabalho dedicado verifica se essas fontes, este ponto de entrada, o 
 - [Questionário para fornecedores de IA](../../../appendices/Appendix_O_AI_Vendor_Questionnaire_CORRECTED_MASTER.md)
 - [Lista de cláusulas contratuais](../../../appendices/Appendix_P_Contract_Clause_Checklist_CORRECTED_MASTER.md)
 - [Caminho geral de implementação](../../../appendices/Appendix_Z_Implementation_Roadmap_CORRECTED_MASTER.md)
-

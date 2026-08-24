@@ -56,6 +56,28 @@ def main() -> int:
     if baseline.get("manual_id") != "eu-ai-act-manual-01":
         errors.append("unexpected manual_id")
 
+    disclosure_relative = baseline.get("repository_disclosure_path")
+    if not isinstance(disclosure_relative, str) or not disclosure_relative:
+        errors.append("repository_disclosure_path must be a non-empty path")
+    elif ".." in Path(disclosure_relative).parts:
+        errors.append("repository_disclosure_path must remain inside the repository")
+    else:
+        disclosure_path = REPO_ROOT / disclosure_relative
+        if not disclosure_path.is_file():
+            errors.append("AI assistance disclosure is missing")
+        else:
+            disclosure_text = disclosure_path.read_text(encoding="utf-8")
+            required_disclosure_phrases = (
+                "Alberto “Al” Leiva",
+                "ChatGPT and Codex, OpenAI",
+                "human author",
+                "does not imply",
+                "does not provide legal advice",
+            )
+            for phrase in required_disclosure_phrases:
+                if phrase not in disclosure_text:
+                    errors.append(f"AI assistance disclosure is missing phrase: {phrase}")
+
     manual_relative = baseline.get("manual_path")
     if not isinstance(manual_relative, str) or not manual_relative:
         errors.append("manual_path must be a non-empty repository-relative path")
@@ -99,6 +121,25 @@ def main() -> int:
         if normalized_text(phrase) not in implementation_normalized:
             errors.append(f"implementation entry point is missing size path: {phrase}")
 
+    try:
+        required_visuals = int(baseline.get("required_visuals_per_entry"))
+        if required_visuals < 1:
+            raise ValueError
+    except (TypeError, ValueError):
+        errors.append("required_visuals_per_entry must be a positive integer")
+        required_visuals = 0
+    accessibility_labels = baseline.get("visual_accessibility_labels")
+    if not isinstance(accessibility_labels, dict):
+        errors.append("visual_accessibility_labels must be an object")
+        accessibility_labels = {}
+    if implementation_text.count("```mermaid") != required_visuals:
+        errors.append("English entry has an unexpected number of Mermaid visuals")
+    english_accessibility_label = accessibility_labels.get("en")
+    if not isinstance(english_accessibility_label, str) or implementation_text.count(
+        english_accessibility_label
+    ) != required_visuals:
+        errors.append("English visuals must each have a controlled accessible explanation")
+
     localized_entries = baseline.get("localized_entry_files")
     localized_phrases = baseline.get("localized_required_phrases")
     if not isinstance(localized_entries, dict) or set(localized_entries) != {"es-419", "pt-BR"}:
@@ -129,6 +170,13 @@ def main() -> int:
         numbered_sections = re.findall(r"(?m)^## [1-8]\. ", localized_text)
         if len(numbered_sections) != 8:
             errors.append(f"{language} entry must contain numbered sections 1 through 8")
+        if localized_text.count("```mermaid") != required_visuals:
+            errors.append(f"{language} entry has an unexpected number of Mermaid visuals")
+        accessibility_label = accessibility_labels.get(language)
+        if not isinstance(accessibility_label, str) or localized_text.count(
+            accessibility_label
+        ) != required_visuals:
+            errors.append(f"{language} visuals must each have an accessible explanation")
         for source_id in baseline.get("binding_source_ids", []) + baseline.get(
             "implementation_source_ids", []
         ):

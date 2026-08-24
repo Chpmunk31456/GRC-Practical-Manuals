@@ -1,0 +1,326 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-08-24",
+  "sources": [
+    {
+      "id": "nist-csf-2",
+      "family": "NIST",
+      "title": "NIST Cybersecurity Framework 2.0",
+      "version": "2.0",
+      "status": "final",
+      "url": "https://www.nist.gov/cyberframework",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-30-r1",
+      "family": "NIST",
+      "title": "Guide for Conducting Risk Assessments",
+      "version": "SP 800-30 Rev. 1",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/30/r1/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-37-r2",
+      "family": "NIST",
+      "title": "Risk Management Framework for Information Systems and Organizations",
+      "version": "SP 800-37 Rev. 2",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/37/r2/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-53-r5",
+      "family": "NIST",
+      "title": "Security and Privacy Controls for Information Systems and Organizations",
+      "version": "SP 800-53 Rev. 5",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-53a-r5",
+      "family": "NIST",
+      "title": "Assessing Security and Privacy Controls",
+      "version": "SP 800-53A Rev. 5",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/a/r5/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-61-r3",
+      "family": "NIST",
+      "title": "Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+      "version": "SP 800-61 Rev. 3",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-63-4",
+      "family": "NIST",
+      "title": "Digital Identity Guidelines",
+      "version": "SP 800-63-4",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-82-r3",
+      "family": "NIST",
+      "title": "Guide to Operational Technology Security",
+      "version": "SP 800-82 Rev. 3",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-115",
+      "family": "NIST",
+      "title": "Technical Guide to Information Security Testing and Assessment",
+      "version": "SP 800-115",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-137",
+      "family": "NIST",
+      "title": "Information Security Continuous Monitoring",
+      "version": "SP 800-137",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/137/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-161-r1-upd1",
+      "family": "NIST",
+      "title": "Cybersecurity Supply Chain Risk Management Practices",
+      "version": "SP 800-161 Rev. 1 Update 1",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-171-r3",
+      "family": "NIST",
+      "title": "Protecting Controlled Unclassified Information",
+      "version": "SP 800-171 Rev. 3",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-171a-r3",
+      "family": "NIST",
+      "title": "Assessing Security Requirements for Controlled Unclassified Information",
+      "version": "SP 800-171A Rev. 3",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/171/a/r3/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-sp-800-172",
+      "family": "NIST",
+      "title": "Enhanced Security Requirements for Controlled Unclassified Information",
+      "version": "SP 800-172",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/172/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-207",
+      "family": "NIST",
+      "title": "Zero Trust Architecture",
+      "version": "SP 800-207",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-sp-800-218",
+      "family": "NIST",
+      "title": "Secure Software Development Framework",
+      "version": "SP 800-218 v1.1",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "nist-privacy-framework",
+      "family": "NIST",
+      "title": "NIST Privacy Framework",
+      "version": "current published version",
+      "status": "final",
+      "url": "https://www.nist.gov/privacy-framework",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "family": "NIST AI",
+      "title": "Artificial Intelligence Risk Management Framework",
+      "version": "AI RMF 1.0",
+      "status": "final-under-revision",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "nist-ai-600-1",
+      "family": "NIST AI",
+      "title": "Generative Artificial Intelligence Profile",
+      "version": "NIST AI 600-1",
+      "status": "final",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework/ai-risk-management-framework-resources",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "iso-iec-42001-2023",
+      "family": "ISO AI",
+      "title": "Artificial Intelligence Management System",
+      "version": "ISO/IEC 42001:2023",
+      "status": "final",
+      "url": "https://www.iso.org/standard/42001",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "iso-iec-42005-2025",
+      "family": "ISO AI",
+      "title": "AI System Impact Assessment",
+      "version": "ISO/IEC 42005:2025",
+      "status": "final",
+      "url": "https://www.iso.org/standard/42005",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "iso-iec-42006-2025",
+      "family": "ISO AI",
+      "title": "Requirements for Bodies Providing Audit and Certification of AI Management Systems",
+      "version": "ISO/IEC 42006:2025",
+      "status": "final",
+      "url": "https://www.iso.org/standard/42006",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "iso-iec-23894-2023",
+      "family": "ISO AI",
+      "title": "Artificial Intelligence Guidance on Risk Management",
+      "version": "ISO/IEC 23894:2023",
+      "status": "final",
+      "url": "https://www.iso.org/standard/77304.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "iso-iec-5338-2023",
+      "family": "ISO AI",
+      "title": "AI System Life Cycle Processes",
+      "version": "ISO/IEC 5338:2023",
+      "status": "final",
+      "url": "https://www.iso.org/standard/81118.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 90
+    },
+    {
+      "id": "iso-iec-27090",
+      "family": "ISO AI",
+      "title": "Artificial Intelligence Security Threats and Mitigations",
+      "version": "ISO/IEC 27090",
+      "status": "final",
+      "url": "https://www.iso.org/standard/56581.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "iso-19011-2026",
+      "family": "ISO Audit",
+      "title": "Guidelines for Auditing Management Systems",
+      "version": "ISO 19011:2026",
+      "status": "final",
+      "url": "https://www.iso.org/standard/19011",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    },
+    {
+      "id": "hhs-hipaa-security-rule",
+      "family": "HIPAA",
+      "title": "HIPAA Security Rule",
+      "version": "current rule",
+      "status": "final",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "hhs-hipaa-privacy-rule",
+      "family": "HIPAA",
+      "title": "HIPAA Privacy Rule",
+      "version": "current rule",
+      "status": "final",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "hhs-hipaa-breach-notification",
+      "family": "HIPAA",
+      "title": "HIPAA Breach Notification Rule",
+      "version": "current rule",
+      "status": "final",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "hhs-hipaa-business-associates",
+      "family": "HIPAA",
+      "title": "HIPAA Business Associate Guidance",
+      "version": "current guidance",
+      "status": "final",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "hhs-hipaa-security-rule-nprm",
+      "family": "HIPAA",
+      "title": "HIPAA Security Rule Notice of Proposed Rulemaking",
+      "version": "NPRM",
+      "status": "proposed-not-current-law",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/security/hipaa-security-rule-nprm/index.html",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 14
+    },
+    {
+      "id": "nist-sp-1305-c-scrm",
+      "family": "Vendor Risk",
+      "title": "CSF 2.0 Quick-Start Guide for Cybersecurity Supply Chain Risk Management",
+      "version": "SP 1305",
+      "status": "final",
+      "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-20-quick-start-guide-cybersecurity-supply-chain-risk",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 60
+    }
+  ]
+}

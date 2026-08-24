@@ -1,0 +1,23 @@
+name: "03 - Authoritative Source Watch"
+
+on:
+  schedule:
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: authoritative-source-watch
+  cancel-in-progress: false
+
+jobs:
+  check-current-sources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the protected default branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check review deadlines and live authoritative URLs
+        run: python3 scripts/compliance_qa.py sources --network

@@ -10,6 +10,8 @@
 
 **Languages / Idiomas:** English, `es-419`, `pt-BR`
 
+**AI assistance disclosure / Divulgación / Divulgação:** [ChatGPT and Codex, OpenAI](../../AI_ASSISTANCE_DISCLOSURE.md)
+
 ## English
 
 This manual translates the EU Artificial Intelligence Act into a practical governance, risk, compliance, control, evidence, audit, and implementation guide. It is designed for executives, compliance teams, lawyers, auditors, security teams, procurement, HR, operations, technology teams, and nontechnical business owners.

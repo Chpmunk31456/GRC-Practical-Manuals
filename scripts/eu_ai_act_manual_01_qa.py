@@ -99,6 +99,42 @@ def main() -> int:
         if normalized_text(phrase) not in implementation_normalized:
             errors.append(f"implementation entry point is missing size path: {phrase}")
 
+    localized_entries = baseline.get("localized_entry_files")
+    localized_phrases = baseline.get("localized_required_phrases")
+    if not isinstance(localized_entries, dict) or set(localized_entries) != {"es-419", "pt-BR"}:
+        errors.append("localized_entry_files must define exactly es-419 and pt-BR")
+        localized_entries = {}
+    if not isinstance(localized_phrases, dict):
+        errors.append("localized_required_phrases must be an object")
+        localized_phrases = {}
+    for language, relative in localized_entries.items():
+        if not isinstance(relative, str) or not relative or ".." in Path(relative).parts:
+            errors.append(f"invalid localized entry path for {language}: {relative!r}")
+            continue
+        localized_path = manual_root / relative
+        if not localized_path.is_file():
+            errors.append(f"localized implementation entry is missing: {language}")
+            continue
+        if localized_path.stat().st_size < 5_000:
+            errors.append(f"localized implementation entry is unexpectedly small: {language}")
+        localized_text = localized_path.read_text(encoding="utf-8")
+        localized_normalized = normalized_text(localized_text)
+        phrases = localized_phrases.get(language)
+        if not isinstance(phrases, list) or not phrases:
+            errors.append(f"localized required phrases are missing: {language}")
+            phrases = []
+        for phrase in phrases:
+            if normalized_text(str(phrase)) not in localized_normalized:
+                errors.append(f"{language} entry is missing controlled phrase: {phrase}")
+        numbered_sections = re.findall(r"(?m)^## [1-8]\. ", localized_text)
+        if len(numbered_sections) != 8:
+            errors.append(f"{language} entry must contain numbered sections 1 through 8")
+        for source_id in baseline.get("binding_source_ids", []) + baseline.get(
+            "implementation_source_ids", []
+        ):
+            if source_id not in localized_text:
+                errors.append(f"{language} entry is missing controlled source id: {source_id}")
+
     readme_path = manual_root / "README.md"
     readme_text = readme_path.read_text(encoding="utf-8") if readme_path.is_file() else ""
     if "Manual 01" not in readme_text:
@@ -167,6 +203,7 @@ def main() -> int:
 
     print("EU AI Act Manual 01 QA")
     print(f"  required files checked: {len(required_files)}")
+    print(f"  localized entries checked: {len(localized_entries)}")
     print(f"  controlled sources checked: {len(required_source_ids)}")
     print(f"  implementation topics checked: {len(baseline.get('required_topics', []))}")
     for warning in warnings:

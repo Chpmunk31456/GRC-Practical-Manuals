@@ -56,6 +56,30 @@ def main() -> int:
     if baseline.get("manual_id") != "eu-ai-act-manual-01":
         errors.append("unexpected manual_id")
 
+    visual_standard_relative = baseline.get("visual_learning_standard_path")
+    if not isinstance(visual_standard_relative, str) or not visual_standard_relative:
+        errors.append("visual_learning_standard_path must be a non-empty path")
+    elif ".." in Path(visual_standard_relative).parts:
+        errors.append("visual_learning_standard_path must remain inside the repository")
+    else:
+        visual_standard_path = REPO_ROOT / visual_standard_relative
+        if not visual_standard_path.is_file():
+            errors.append("visual-learning standard is missing")
+        else:
+            visual_standard_text = visual_standard_path.read_text(encoding="utf-8")
+            required_visual_standard_phrases = (
+                "decision or classification routing",
+                "evidence-and-assurance chain",
+                "accessible text explanation",
+                "without relying on color alone",
+                "fully localized in each published language",
+                "must not oversimplify a legal or technical obligation",
+                "subject to source review and change management",
+            )
+            for phrase in required_visual_standard_phrases:
+                if phrase not in visual_standard_text:
+                    errors.append(f"visual-learning standard is missing phrase: {phrase}")
+
     disclosure_relative = baseline.get("repository_disclosure_path")
     if not isinstance(disclosure_relative, str) or not disclosure_relative:
         errors.append("repository_disclosure_path must be a non-empty path")

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "eu-ai-act-manual-01",
+  "title": "Manual 01 — EU AI Act Practical Implementation Guide",
+  "manual_path": "04-regulatory-compliance/EU_AI_Act_GRC",
+  "controlled_language": "en",
+  "publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "legal_baseline_verified": "2026-08-24",
+  "consolidated_text_date": "2026-07-27",
+  "binding_source_ids": [
+    "eu-ai-act-consolidated-2026-07-27",
+    "eu-ai-omnibus-2026-1744"
+  ],
+  "implementation_source_ids": [
+    "ec-eu-ai-act-implementation",
+    "ec-eu-ai-act-enforcement",
+    "ec-eu-ai-transparency-code-2026"
+  ],
+  "implementation_paths": [
+    "micro-small",
+    "midsize",
+    "large-complex"
+  ],
+  "required_entry_files": [
+    "README.md",
+    "MANUAL_01_IMPLEMENTATION_PATHS.md",
+    "EU_AI_Act_GRC_Manual_Foundation_CORRECTED_MASTER.md",
+    "chapters/06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
+    "chapters/129_First_30_Days_CORRECTED_MASTER.md",
+    "chapters/133_High_Risk_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "chapters/134_GPAI_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "chapters/135_Transparency_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "appendices/Appendix_O_AI_Vendor_Questionnaire_CORRECTED_MASTER.md",
+    "appendices/Appendix_P_Contract_Clause_Checklist_CORRECTED_MASTER.md",
+    "appendices/Appendix_Z_Implementation_Roadmap_CORRECTED_MASTER.md"
+  ],
+  "required_topics": [
+    "applicability",
+    "actor roles",
+    "ai inventory",
+    "prohibited practices",
+    "ai literacy",
+    "high-risk",
+    "general-purpose ai",
+    "transparency",
+    "human oversight",
+    "fundamental rights",
+    "vendor",
+    "evidence",
+    "audit",
+    "incident",
+    "regulatory change"
+  ],
+  "assurance_boundary": "Repository QA validates structure, source control, and evidence readiness; it does not determine legal compliance, certification, or audit success."
+}

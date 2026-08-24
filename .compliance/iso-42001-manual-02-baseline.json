@@ -3,7 +3,7 @@
   "manual_id": "iso-42001-manual-02",
   "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
   "manual_path": "02-management-systems/ISO_IEC_42001_AIMS",
-  "development_phase": "trilingual-implementation-intake",
+  "development_phase": "trilingual-full-source-review",
   "controlled_language": "en",
   "planned_publication_languages": [
     "en",
@@ -13,6 +13,45 @@
   "localized_entry_files": {
     "es-419": "translations/es-419/source/MANUAL_02_RUTAS_DE_IMPLEMENTACION.md",
     "pt-BR": "translations/pt-BR/source/MANUAL_02_CAMINHOS_DE_IMPLEMENTACAO.md"
+  },
+  "localized_full_source_parts": {
+    "es-419": [
+      "translations/es-419/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+      "translations/es-419/source/02_CAPITULOS_09_16.md",
+      "translations/es-419/source/03_CAPITULOS_17_24.md",
+      "translations/es-419/source/04_CAPITULOS_25_32.md"
+    ],
+    "pt-BR": [
+      "translations/pt-BR/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+      "translations/pt-BR/source/02_CAPITULOS_09_16.md",
+      "translations/pt-BR/source/03_CAPITULOS_17_24.md",
+      "translations/pt-BR/source/04_CAPITULOS_25_32.md"
+    ]
+  },
+  "localized_full_source_status": "draft-human-review-required",
+  "required_localized_chapters": 32,
+  "required_localized_source_graphics": 10,
+  "localized_full_required_phrases": {
+    "es-419": [
+      "Declaración de Aplicabilidad",
+      "evaluación de impacto",
+      "auditoría interna",
+      "revisión por la dirección",
+      "acción correctiva",
+      "proveedores",
+      "no conformidad",
+      "mejora continua"
+    ],
+    "pt-BR": [
+      "Declaração de Aplicabilidade",
+      "avaliação de impacto",
+      "auditoria interna",
+      "análise crítica pela direção",
+      "ação corretiva",
+      "fornecedores",
+      "não conformidade",
+      "melhoria contínua"
+    ]
   },
   "localized_required_phrases": {
     "es-419": [

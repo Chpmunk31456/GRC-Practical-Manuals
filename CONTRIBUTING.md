@@ -108,7 +108,7 @@ Machine-assisted translations require human review by a proficient speaker befor
 
 ## Accessibility
 
-Review [ACCESSIBILITY.md](./ACCESSIBILITY.md) before changing document structure or producing new Word or PDF editions. Correct the source document before regenerating derivative formats.
+Review [ACCESSIBILITY.md](./ACCESSIBILITY.md) and the [visual-learning standard](./VISUAL_LEARNING_STANDARD.md) before changing document structure or producing new Word or PDF editions. Place purposeful graphics near the decision, process, mapping, or assurance concept they explain. Localize their labels and provide an accessible text explanation. Correct the source document before regenerating derivative formats.
 
 ## Pull Requests
 

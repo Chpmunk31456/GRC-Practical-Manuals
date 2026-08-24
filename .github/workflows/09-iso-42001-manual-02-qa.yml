@@ -12,6 +12,7 @@ on:
       - ".compliance/manual-catalog.json"
       - "VISUAL_LEARNING_STANDARD.md"
       - "scripts/iso_42001_manual_02_qa.py"
+      - "scripts/iso_42001_human_review_gate_qa.py"
       - "scripts/compliance_qa.py"
       - ".github/workflows/09-iso-42001-manual-02-qa.yml"
   workflow_dispatch:
@@ -32,6 +33,8 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate the ISO 42001 controlled trilingual implementation intake
         run: python3 scripts/iso_42001_manual_02_qa.py
+      - name: Validate the human semantic-review boundary
+        run: python3 scripts/iso_42001_human_review_gate_qa.py
       - name: Validate the authoritative-source registry
         run: python3 scripts/compliance_qa.py sources
       - name: Validate the controlled manual catalog

@@ -1,0 +1,37 @@
+name: "09 - ISO 42001 Manual 02 QA"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "02-management-systems/ISO_IEC_42001_AIMS/**"
+      - ".compliance/iso-42001-manual-02-baseline.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "VISUAL_LEARNING_STANDARD.md"
+      - "scripts/iso_42001_manual_02_qa.py"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/09-iso-42001-manual-02-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iso-42001-manual-02-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-iso-42001-manual-02:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate the ISO 42001 controlled trilingual implementation intake
+        run: python3 scripts/iso_42001_manual_02_qa.py
+      - name: Validate the authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate the controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog

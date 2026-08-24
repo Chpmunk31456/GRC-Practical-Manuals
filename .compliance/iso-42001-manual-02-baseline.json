@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "iso-42001-manual-02",
+  "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
+  "manual_path": "02-management-systems/ISO_IEC_42001_AIMS",
+  "development_phase": "trilingual-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "localized_entry_files": {
+    "es-419": "translations/es-419/source/MANUAL_02_RUTAS_DE_IMPLEMENTACION.md",
+    "pt-BR": "translations/pt-BR/source/MANUAL_02_CAMINHOS_DE_IMPLEMENTACAO.md"
+  },
+  "localized_required_phrases": {
+    "es-419": [
+      "micro o pequeña organización",
+      "organización mediana",
+      "empresa grande o compleja",
+      "Declaración de Aplicabilidad",
+      "evaluación de impacto",
+      "auditoría interna",
+      "revisión por la dirección",
+      "acción correctiva",
+      "proveedores"
+    ],
+    "pt-BR": [
+      "micro ou pequena organização",
+      "organização de médio porte",
+      "empresa grande ou complexa",
+      "Declaração de Aplicabilidade",
+      "avaliação de impacto",
+      "auditoria interna",
+      "análise crítica pela direção",
+      "ação corretiva",
+      "fornecedores"
+    ]
+  },
+  "visual_learning_standard_path": "VISUAL_LEARNING_STANDARD.md",
+  "implementation_entry": "MANUAL_02_IMPLEMENTATION_PATHS.md",
+  "english_markdown_master": "English/ISO_IEC_42001_2023_Practical_AIMS_Manual_English_v1.0.md",
+  "english_docx_source": "English/ISO_IEC_42001_2023_Practical_AIMS_Manual_English_v1.0.docx",
+  "required_source_ids": [
+    "iso-iec-42001-2023",
+    "iso-iec-42005-2025",
+    "iso-iec-42006-2025",
+    "iso-iec-23894-2023",
+    "iso-19011-2026"
+  ],
+  "implementation_paths": [
+    "essential",
+    "structured",
+    "enhanced"
+  ],
+  "required_visuals_in_implementation_entry": 3,
+  "implementation_structure": {
+    "numbered_sections": 8,
+    "subsections": 10,
+    "table_rows": 14,
+    "bullet_items": 47
+  },
+  "visual_accessibility_labels": {
+    "en": "Accessible explanation:",
+    "es-419": "Explicación accesible:",
+    "pt-BR": "Explicação acessível:"
+  },
+  "required_visual_labels": {
+    "en": [
+      "Inventory AI roles and systems",
+      "1. Scope",
+      "Traceable evidence"
+    ],
+    "es-419": [
+      "Inventariar funciones y sistemas de IA",
+      "1. Definir el alcance",
+      "Evidencia trazable"
+    ],
+    "pt-BR": [
+      "Inventariar papéis e sistemas de IA",
+      "1. Definir o escopo",
+      "Evidência rastreável"
+    ]
+  },
+  "required_placed_source_graphics": 10,
+  "required_docx_data_tables": 33,
+  "required_docx_layout_tables": 0,
+  "visual_accessibility_label": "Accessible explanation:",
+  "required_topics": [
+    "context and scope",
+    "leadership",
+    "ai policy",
+    "risk assessment",
+    "impact assessment",
+    "statement of applicability",
+    "operational control",
+    "monitoring",
+    "internal audit",
+    "management review",
+    "corrective action",
+    "continual improvement",
+    "supplier",
+    "evidence",
+    "certification readiness"
+  ],
+  "assurance_boundary": "Repository QA validates controlled structure, sources, accessibility, and evidence readiness; it does not determine conformity, certification, legal compliance, or audit success."
+}

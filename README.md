@@ -76,6 +76,7 @@ Manuais práticos, em linguagem clara, e kits de ferramentas operacionais para a
 
 - [Section README / README de la sección / README da seção](./02-management-systems/README.md)
 - [ISO/IEC 27001 and ISO/IEC 27002](./02-management-systems/ISO_IEC_27001_27002/README.md)
+- [Manual 02 — ISO/IEC 42001 AI Management System Implementation](./02-management-systems/ISO_IEC_42001_AIMS/README.md) — controlled development
 
 ### 03 — Assurance and Audit / Aseguramiento y auditoría / Asseguração e auditoria
 

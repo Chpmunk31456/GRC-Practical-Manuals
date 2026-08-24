@@ -313,6 +313,56 @@
       "review_interval_days": 14
     },
     {
+      "id": "eu-ai-act-consolidated-2026-07-27",
+      "family": "EU AI Act",
+      "title": "Regulation (EU) 2024/1689 — Consolidated Text",
+      "version": "consolidated on 2026-07-27",
+      "status": "final",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 14
+    },
+    {
+      "id": "eu-ai-omnibus-2026-1744",
+      "family": "EU AI Act",
+      "title": "Regulation (EU) 2026/1744 — Digital Omnibus on AI",
+      "version": "Regulation (EU) 2026/1744",
+      "status": "final",
+      "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
+      "id": "ec-eu-ai-act-implementation",
+      "family": "EU AI Act",
+      "title": "European Commission AI Act Implementation Overview",
+      "version": "current official guidance",
+      "status": "official-guidance-non-binding",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 14
+    },
+    {
+      "id": "ec-eu-ai-act-enforcement",
+      "family": "EU AI Act",
+      "title": "European Commission AI Act Enforcement Framework",
+      "version": "current official guidance",
+      "status": "official-guidance-non-binding",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 14
+    },
+    {
+      "id": "ec-eu-ai-transparency-code-2026",
+      "family": "EU AI Act",
+      "title": "Code of Practice on Transparency of AI-Generated Content",
+      "version": "2026 final voluntary code",
+      "status": "voluntary-code-non-binding",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content",
+      "last_verified": "2026-08-24",
+      "review_interval_days": 30
+    },
+    {
       "id": "nist-sp-1305-c-scrm",
       "family": "Vendor Risk",
       "title": "CSF 2.0 Quick-Start Guide for Cybersecurity Supply Chain Risk Management",

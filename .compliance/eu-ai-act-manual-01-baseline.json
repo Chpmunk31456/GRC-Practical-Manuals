@@ -3,6 +3,7 @@
   "manual_id": "eu-ai-act-manual-01",
   "title": "Manual 01 — EU AI Act Practical Implementation Guide",
   "manual_path": "04-regulatory-compliance/EU_AI_Act_GRC",
+  "repository_disclosure_path": "AI_ASSISTANCE_DISCLOSURE.md",
   "controlled_language": "en",
   "publication_languages": [
     "en",
@@ -48,6 +49,12 @@
       "supervisão humana",
       "direitos fundamentais"
     ]
+  },
+  "required_visuals_per_entry": 2,
+  "visual_accessibility_labels": {
+    "en": "Accessible explanation:",
+    "es-419": "Explicación accesible:",
+    "pt-BR": "Explicação acessível:"
   },
   "required_entry_files": [
     "README.md",

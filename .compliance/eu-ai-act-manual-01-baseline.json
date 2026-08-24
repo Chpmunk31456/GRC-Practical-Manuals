@@ -25,6 +25,30 @@
     "midsize",
     "large-complex"
   ],
+  "localized_entry_files": {
+    "es-419": "translations/es-419/source/MANUAL_01_RUTAS_DE_IMPLEMENTACION.md",
+    "pt-BR": "translations/pt-BR/source/MANUAL_01_CAMINHOS_DE_IMPLEMENTACAO.md"
+  },
+  "localized_required_phrases": {
+    "es-419": [
+      "micro y pequeña organización",
+      "organización mediana",
+      "empresa grande o compleja",
+      "prácticas prohibidas",
+      "alfabetización en materia de IA",
+      "supervisión humana",
+      "derechos fundamentales"
+    ],
+    "pt-BR": [
+      "micro e pequena organização",
+      "organização de médio porte",
+      "empresa grande ou complexa",
+      "práticas proibidas",
+      "letramento em IA",
+      "supervisão humana",
+      "direitos fundamentais"
+    ]
+  },
   "required_entry_files": [
     "README.md",
     "MANUAL_01_IMPLEMENTATION_PATHS.md",

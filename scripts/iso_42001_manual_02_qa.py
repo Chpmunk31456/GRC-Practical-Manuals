@@ -12,6 +12,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import re
+import struct
 import sys
 import xml.etree.ElementTree as ET
 import zipfile
@@ -130,6 +131,11 @@ def validate_localized_full_sources(
         errors.append("localized_full_required_phrases must be an object")
         full_phrases = {}
 
+    asset_roots = baseline.get("localized_graphic_asset_roots")
+    if not isinstance(asset_roots, dict) or set(asset_roots) != {"es-419", "pt-BR"}:
+        errors.append("localized_graphic_asset_roots must define exactly es-419 and pt-BR")
+        asset_roots = {}
+
     checked = 0
     for language, relatives in source_sets.items():
         if not isinstance(relatives, list) or len(relatives) != 4:
@@ -182,6 +188,18 @@ def validate_localized_full_sources(
                 f"{language} localized full source has {len(graphics)} graphics; "
                 f"expected {required_graphics}"
             )
+        expected_sources = {
+            f"../../../assets/{language}/media/image{number}.png"
+            for number in range(1, required_graphics + 1)
+        }
+        actual_sources = {source for source, _ in graphics}
+        if actual_sources != expected_sources:
+            errors.append(
+                f"{language} localized source must reference exactly its own "
+                f"image1-image{required_graphics} PNG graphics"
+            )
+        if any("assets/English/" in source for source, _ in graphics):
+            errors.append(f"{language} localized source must not fall back to English graphics")
         for source, alt_text in graphics:
             if not alt_text.strip():
                 errors.append(f"{language} localized graphic has empty alternative text: {source}")
@@ -190,6 +208,47 @@ def validate_localized_full_sources(
             asset_path = (first_part.parent / source).resolve()
             if not asset_path.is_relative_to(manual_root.resolve()) or not asset_path.is_file():
                 errors.append(f"{language} localized graphic path is missing/outside Manual 02: {source}")
+
+        asset_root_relative = asset_roots.get(language)
+        asset_root = manual_root / str(asset_root_relative)
+        if not isinstance(asset_root_relative, str) or ".." in Path(asset_root_relative).parts:
+            errors.append(f"invalid localized graphic asset root for {language}")
+        elif not asset_root.is_dir():
+            errors.append(f"localized graphic asset root is missing for {language}")
+        else:
+            expected_names = {
+                f"image{number}.{extension}"
+                for number in range(1, required_graphics + 1)
+                for extension in ("png", "svg")
+            }
+            actual_names = {path.name for path in asset_root.iterdir() if path.is_file()}
+            if actual_names != expected_names:
+                errors.append(
+                    f"{language} must contain exactly image1-image{required_graphics} "
+                    "as editable SVG and PNG derivatives"
+                )
+            for number in range(1, required_graphics + 1):
+                png_path = asset_root / f"image{number}.png"
+                svg_path = asset_root / f"image{number}.svg"
+                if png_path.is_file():
+                    try:
+                        png_data = png_path.read_bytes()[:24]
+                        if png_data[:8] != b"\x89PNG\r\n\x1a\n":
+                            raise ValueError("invalid PNG signature")
+                        width, height = struct.unpack(">II", png_data[16:24])
+                        if (width, height) != (1657, 871):
+                            errors.append(
+                                f"{language} image{number}.png is {width}x{height}; expected 1657x871"
+                            )
+                    except (OSError, ValueError, struct.error) as exc:
+                        errors.append(f"{language} image{number}.png is invalid: {exc}")
+                if svg_path.is_file():
+                    svg_text = svg_path.read_text(encoding="utf-8")
+                    for marker in ('role="img"', "<title", "<desc", f"Figura {number}"):
+                        if marker not in svg_text:
+                            errors.append(
+                                f"{language} image{number}.svg lacks accessible marker: {marker}"
+                            )
 
         label = accessibility_labels.get(language)
         if not isinstance(label, str) or combined.count(label) != required_graphics:
@@ -340,6 +399,24 @@ def main() -> int:
     ):
         if phrase not in translations_text:
             errors.append(f"translations README is missing controlled phrase: {phrase}")
+
+    precheck_relative = baseline.get("ai_assisted_precheck")
+    precheck_path = manual_root / str(precheck_relative)
+    precheck_text = precheck_path.read_text(encoding="utf-8") if precheck_path.is_file() else ""
+    for phrase in (
+        "AI-assisted precheck only",
+        "human gate remains OPEN",
+        "must not be treated as human approval",
+    ):
+        if phrase not in precheck_text:
+            errors.append(f"AI-assisted precheck is missing boundary phrase: {phrase}")
+
+    generator_relative = baseline.get("localized_graphic_generator")
+    generator_path = repository_path(
+        generator_relative, "localized_graphic_generator", errors
+    )
+    if generator_path and not generator_path.is_file():
+        errors.append("localized graphic generator is missing")
 
     markdown_relative = baseline.get("english_markdown_master")
     markdown_path = manual_root / str(markdown_relative)

@@ -2,7 +2,7 @@
 
 *A auditoria interna fornece evidência independente e baseada em riscos de que o SGIA está conforme e opera de forma eficaz.*
 
-<img src="../../../assets/English/media/image5.png" style="width:6.15in;height:3.23274in" alt="A ISO 19011:2026 fornece orientação atual para o programa de auditoria; a ISO/IEC 42001 fornece critérios de auditoria." />
+<img src="../../../assets/pt-BR/media/image5.png" style="width:6.15in;height:3.23274in" alt="A ISO 19011:2026 fornece orientação atual para o programa de auditoria; a ISO/IEC 42001 fornece critérios de auditoria." />
 
 Figura 5. Cadeia de auditoria do SGIA
 
@@ -125,7 +125,7 @@ Figura 5. Cadeia de auditoria do SGIA
 
 ## 22.2 Relato de preocupações
 
-- Forneça canais internos e externos acessíveis, confidencialidade/anonimato quando apropriado, não retaliação, triagem, investigação, proteção, escalonamento, feedback e registros.
+- Forneça canais internos e externos acessíveis, confidencialidade/anonimato quando apropriado, não retaliação, triagem, investigação, proteção, escalonamento, retorno e registros.
 - Aceite preocupações sobre uso inseguro, viés, direitos, privacidade, segurança, dados, saída enganosa, IA oculta, comportamento de fornecedor, pressão para contornar controles ou retaliação.
 - Meça conscientização, acessibilidade, resposta, recorrência, casos vencidos e ação corretiva sem expor denunciantes.
 

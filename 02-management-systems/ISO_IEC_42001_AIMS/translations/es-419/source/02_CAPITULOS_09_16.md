@@ -2,7 +2,7 @@
 
 *La evaluación de impacto de sistemas de IA examina cómo un sistema de IA puede afectar a personas, grupos y a la sociedad a lo largo de su ciclo de vida.*
 
-<img src="../../../assets/English/media/image4.png" style="width:6.15in;height:3.23274in" alt="ISO/IEC 42005:2025 proporciona orientación vigente que complementa ISO/IEC 42001." />
+<img src="../../../assets/es-419/media/image4.png" style="width:6.15in;height:3.23274in" alt="ISO/IEC 42005:2025 proporciona orientación vigente que complementa ISO/IEC 42001." />
 
 Figura 4. Evaluación de impacto de sistemas de IA
 

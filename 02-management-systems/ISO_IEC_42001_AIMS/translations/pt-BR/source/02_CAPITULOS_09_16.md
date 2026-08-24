@@ -2,7 +2,7 @@
 
 *A avaliação de impacto de sistemas de IA examina como um sistema de IA pode afetar indivíduos, grupos e a sociedade ao longo de seu ciclo de vida.*
 
-<img src="../../../assets/English/media/image4.png" style="width:6.15in;height:3.23274in" alt="A ISO/IEC 42005:2025 fornece orientação atual que complementa a ISO/IEC 42001." />
+<img src="../../../assets/pt-BR/media/image4.png" style="width:6.15in;height:3.23274in" alt="A ISO/IEC 42005:2025 fornece orientação atual que complementa a ISO/IEC 42001." />
 
 Figura 4. Avaliação de impacto de sistemas de IA
 
@@ -95,7 +95,7 @@ Figura 4. Avaliação de impacto de sistemas de IA
 | Quando | Marco do ciclo de vida, intervalo planejado, incidente, reclamação, mudança ou gatilho legal |
 | Como | Treinamento, aviso, ficha do sistema, relatório, contrato, painel, reunião ou alerta |
 | Proprietário/aprovação | Quem prepara, valida, aprova, entrega e registra? |
-| Feedback | Como são tratados dúvidas, acessibilidade, compreensão, preocupações e correção? |
+| Retorno | Como são tratados dúvidas, acessibilidade, compreensão, preocupações e correção? |
 
 # 13. Cláusula 7.5: Informação documentada
 

@@ -2,7 +2,7 @@
 
 *O Anexo A.6 conecta objetivos de desenvolvimento responsável a requisitos, projeto, testes, implantação, operação, documentação e registro de eventos.*
 
-<img src="../../../assets/English/media/image6.png" style="width:6.15in;height:3.23274in" alt="Cada marco do ciclo de vida deve produzir evidência rastreável e uma decisão com responsável." />
+<img src="../../../assets/pt-BR/media/image6.png" style="width:6.15in;height:3.23274in" alt="Cada marco do ciclo de vida deve produzir evidência rastreável e uma decisão com responsável." />
 
 Figura 6. Ciclo de vida responsável do sistema de IA
 
@@ -28,7 +28,7 @@ Figura 6. Ciclo de vida responsável do sistema de IA
 
 *O Anexo A.7 exige aquisição, qualidade, proveniência e preparação governadas de dados para desenvolvimento, melhoria e operação de IA.*
 
-<img src="../../../assets/English/media/image7.png" style="width:6.15in;height:3.23274in" alt="A linhagem deve conectar fonte e autoridade a transformações, qualidade, uso, retenção e exclusão." />
+<img src="../../../assets/pt-BR/media/image7.png" style="width:6.15in;height:3.23274in" alt="A linhagem deve conectar fonte e autoridade a transformações, qualidade, uso, retenção e exclusão." />
 
 Figura 7. Cadeia de evidências de dados de IA
 
@@ -55,7 +55,7 @@ Figura 7. Cadeia de evidências de dados de IA
 
 *O Anexo A.8 exige informação útil para usuários e partes interessadas, além de reporte e comunicação de incidentes.*
 
-<img src="../../../assets/English/media/image8.png" style="width:6.15in;height:3.23274in" alt="Transparência é comunicação específica ao público que permite uso seguro, responsabilização e reparação." />
+<img src="../../../assets/pt-BR/media/image8.png" style="width:6.15in;height:3.23274in" alt="Transparência é comunicação específica ao público que permite uso seguro, responsabilização e reparação." />
 
 Figura 8. Informação para partes interessadas
 
@@ -72,7 +72,7 @@ Figura 8. Informação para partes interessadas
 ## 27.2 Reporte externo e incidentes
 
 - Forneça canais acessíveis para relatar erros, danos, viés, preocupações de segurança/privacidade, uso indevido, problemas de acessibilidade ou efeitos inesperados.
-- Defina triagem, gravidade, investigação, proteção, feedback, correção, reparação, escalonamento, retenção e análise de tendências.
+- Defina triagem, gravidade, investigação, proteção, retorno, correção, reparação, escalonamento, retenção e análise de tendências.
 - Predefina públicos do incidente, conteúdo, proprietário/porta-voz, revisão jurídica, tempo, canal, acessibilidade, coordenação, atualizações e encerramento.
 - Não divulgue excessivamente informações sensíveis de segurança ou dados pessoais; tampouco esconda limitações materiais atrás de confidencialidade.
 
@@ -80,11 +80,11 @@ Figura 8. Informação para partes interessadas
 
 *O Anexo A.9 governa o uso responsável e a finalidade pretendida; o Anexo A.10 aloca deveres entre fornecedores, clientes e a cadeia de valor de IA.*
 
-<img src="../../../assets/English/media/image9.png" style="width:6.15in;height:3.23274in" alt="A asseguração de fornecedores deve corresponder ao modelo, serviço, uso, fluxo de dados e configuração do cliente exatos." />
+<img src="../../../assets/pt-BR/media/image9.png" style="width:6.15in;height:3.23274in" alt="A asseguração de fornecedores deve corresponder ao modelo, serviço, uso, fluxo de dados e configuração do cliente exatos." />
 
 Figura 9. Ciclo de vida de IA de terceiros
 
-> **Explicação acessível:** O controle de terceiros começa identificando atores e responsabilidades, segue com due diligence e contratos, monitora mudanças do fornecedor e termina com continuidade, portabilidade, exclusão e saída. Responsabilidade não pode ser transferida por linguagem contratual vaga.
+> **Explicação acessível:** O controle de terceiros começa identificando atores e responsabilidades, segue com diligência prévia e contratos, monitora mudanças do fornecedor e termina com continuidade, portabilidade, exclusão e saída. Responsabilidade não pode ser transferida por linguagem contratual vaga.
 
 ## 28.1 Uso responsável
 
@@ -97,7 +97,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 
 - Mapeie desenvolvedor/fornecedor/implantador, fornecedores de dados/modelos/ferramentas/nuvem, integradores, serviços humanos, clientes, usuários e partes afetadas.
 - Aloque responsabilidade por dados, requisitos, testes, configuração, transparência, supervisão humana, segurança, incidentes, monitoramento, mudança, evidências, direitos, exclusão e saída.
-- Realize due diligence e contratação baseadas em risco; verifique documentação de modelo/sistema, avaliação, asseguração de segurança/privacidade, termos de dados, propriedade intelectual, suporte, vulnerabilidades, mudanças, subprocessadores, resiliência e portabilidade.
+- Realize diligência prévia e contratação baseadas em risco; verifique documentação de modelo/sistema, avaliação, asseguração de segurança/privacidade, termos de dados, propriedade intelectual, suporte, vulnerabilidades, mudanças, subprocessadores, resiliência e portabilidade.
 - Monitore mudanças de fornecedor em modelo/termos/treinamento/retenção/subprocessadores/incidentes/descontinuação e reavalie prontamente.
 - Defina obrigações e suporte do cliente; não use responsabilidade do cliente como transferência vaga de deveres do fornecedor.
 
@@ -311,7 +311,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 
 *Gestores mantêm o SGIA ligado a resultados reais; analistas juniores criam inventários, papéis de trabalho, constatações e evidências de melhoria confiáveis.*
 
-<img src="../../../assets/English/media/image10.png" style="width:6.15in;height:3.23274in" alt="Trabalho prático e limitações declaradas com honestidade valem mais que números de cláusulas memorizados." />
+<img src="../../../assets/pt-BR/media/image10.png" style="width:6.15in;height:3.23274in" alt="Trabalho prático e limitações declaradas com honestidade valem mais que números de cláusulas memorizados." />
 
 Figura 10. Caminho do analista júnior de SGIA
 

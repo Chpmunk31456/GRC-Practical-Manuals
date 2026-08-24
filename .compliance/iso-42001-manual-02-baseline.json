@@ -37,6 +37,12 @@
   ],
   "required_localized_chapters": 32,
   "required_localized_source_graphics": 10,
+  "localized_graphic_asset_roots": {
+    "es-419": "assets/es-419/media",
+    "pt-BR": "assets/pt-BR/media"
+  },
+  "localized_graphic_generator": "scripts/generate_iso42001_localized_graphics.py",
+  "ai_assisted_precheck": "translations/AI_ASSISTED_PRECHECK_01.md",
   "localized_full_required_phrases": {
     "es-419": [
       "Declaración de Aplicabilidad",

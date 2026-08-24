@@ -2,7 +2,7 @@
 
 *El Anexo A.6 conecta los objetivos de desarrollo responsable con requisitos, diseño, pruebas, despliegue, operación, documentación y registro de eventos.*
 
-<img src="../../../assets/English/media/image6.png" style="width:6.15in;height:3.23274in" alt="Cada puerta del ciclo de vida debe producir evidencia trazable y una decisión con responsable." />
+<img src="../../../assets/es-419/media/image6.png" style="width:6.15in;height:3.23274in" alt="Cada puerta del ciclo de vida debe producir evidencia trazable y una decisión con responsable." />
 
 Figura 6. Ciclo de vida responsable del sistema de IA
 
@@ -28,7 +28,7 @@ Figura 6. Ciclo de vida responsable del sistema de IA
 
 *El Anexo A.7 exige adquisición, calidad, procedencia y preparación gobernadas de datos para desarrollo, mejora y operación de IA.*
 
-<img src="../../../assets/English/media/image7.png" style="width:6.15in;height:3.23274in" alt="El linaje debe conectar la fuente y la autoridad con transformaciones, calidad, uso, retención y eliminación." />
+<img src="../../../assets/es-419/media/image7.png" style="width:6.15in;height:3.23274in" alt="El linaje debe conectar la fuente y la autoridad con transformaciones, calidad, uso, retención y eliminación." />
 
 Figura 7. Cadena de evidencia de datos de IA
 
@@ -55,7 +55,7 @@ Figura 7. Cadena de evidencia de datos de IA
 
 *El Anexo A.8 exige información útil para usuarios y partes interesadas, además de reporte y comunicación de incidentes.*
 
-<img src="../../../assets/English/media/image8.png" style="width:6.15in;height:3.23274in" alt="La transparencia es comunicación específica para cada audiencia que permite uso seguro, rendición de cuentas y reparación." />
+<img src="../../../assets/es-419/media/image8.png" style="width:6.15in;height:3.23274in" alt="La transparencia es comunicación específica para cada audiencia que permite uso seguro, rendición de cuentas y reparación." />
 
 Figura 8. Información para partes interesadas
 
@@ -80,7 +80,7 @@ Figura 8. Información para partes interesadas
 
 *El Anexo A.9 gobierna el uso responsable y el propósito previsto; el Anexo A.10 asigna deberes entre proveedores, clientes y la cadena de valor de IA.*
 
-<img src="../../../assets/English/media/image9.png" style="width:6.15in;height:3.23274in" alt="El aseguramiento de proveedores debe corresponder al modelo, servicio, uso, flujo de datos y configuración del cliente exactos." />
+<img src="../../../assets/es-419/media/image9.png" style="width:6.15in;height:3.23274in" alt="El aseguramiento de proveedores debe corresponder al modelo, servicio, uso, flujo de datos y configuración del cliente exactos." />
 
 Figura 9. Ciclo de vida de IA de terceros
 
@@ -131,7 +131,7 @@ Figura 9. Ciclo de vida de IA de terceros
 ## 29.3 Preparación para auditoría sin teatro
 
 - Opere los controles el tiempo suficiente para producir evidencia honesta; no cree registros después de los hechos.
-- Reconcile alcance, inventario, riesgo, impacto, Declaración de Aplicabilidad, proveedor, versiones del sistema, métricas, auditoría y revisión por la dirección.
+- Concilie el alcance, el inventario, el riesgo, el impacto, la Declaración de Aplicabilidad, el proveedor, las versiones del sistema, las métricas, la auditoría y la revisión por la dirección.
 - Prepare a entrevistados para explicar su trabajo real y mostrar evidencia, no para memorizar respuestas.
 - Revele con precisión brechas, riesgos aceptados, limitaciones, incidentes y acciones correctivas.
 
@@ -311,7 +311,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 *Los responsables mantienen el SGIA conectado con resultados reales; los analistas junior crean inventarios, papeles de trabajo, hallazgos y evidencia de mejora confiables.*
 
-<img src="../../../assets/English/media/image10.png" style="width:6.15in;height:3.23274in" alt="El trabajo práctico y las limitaciones declaradas con honestidad valen más que memorizar números de cláusulas." />
+<img src="../../../assets/es-419/media/image10.png" style="width:6.15in;height:3.23274in" alt="El trabajo práctico y las limitaciones declaradas con honestidad valen más que memorizar números de cláusulas." />
 
 Figura 10. Ruta del analista junior de SGIA
 

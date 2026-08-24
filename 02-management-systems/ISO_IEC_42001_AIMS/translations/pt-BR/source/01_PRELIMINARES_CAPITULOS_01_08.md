@@ -94,7 +94,7 @@ O arquivo-fonte em Word contém um sumário nativo e um guia permanente de capí
 
 *O SGIA segue a estrutura harmonizada dos sistemas de gestão e um ciclo contínuo Planejar-Fazer-Verificar-Agir (PDCA).* 
 
-<img src="../../../assets/English/media/image1.png" style="width:6.15in;height:3.23274in" alt="As cláusulas interagem continuamente; a norma não é uma lista de verificação linear concluída uma única vez." />
+<img src="../../../assets/pt-BR/media/image1.png" style="width:6.15in;height:3.23274in" alt="As cláusulas interagem continuamente; a norma não é uma lista de verificação linear concluída uma única vez." />
 
 Figura 1. Ciclo PDCA do SGIA
 
@@ -117,7 +117,7 @@ Figura 1. Ciclo PDCA do SGIA
 
 *Uma implementação útil começa com controle organizacional, inventário preciso de IA, papéis responsáveis e um roteiro por etapas.*
 
-<img src="../../../assets/English/media/image2.png" style="width:6.15in;height:3.23274in" alt="O escopo deve descrever honestamente limites organizacionais, papéis de IA, sistemas, dados, fornecedores e exclusões." />
+<img src="../../../assets/pt-BR/media/image2.png" style="width:6.15in;height:3.23274in" alt="O escopo deve descrever honestamente limites organizacionais, papéis de IA, sistemas, dados, fornecedores e exclusões." />
 
 Figura 2. Cadeia de construção do escopo
 
@@ -129,8 +129,8 @@ Figura 2. Cadeia de construção do escopo
 | Líder do SGIA | Coordenar sistema de gestão, desempenho, auditorias e melhoria |
 | Proprietário de negócio/sistema de IA | Finalidade, resultado, processo afetado, risco, aprovação e monitoramento |
 | Modelo/dados/produto/engenharia | Requisitos, projeto, dados, avaliação, implantação e mudança |
-| Segurança/privacidade/jurídico/compliance/segurança funcional | Requisitos especializados, revisão, contestação e incidentes |
-| Compras/gestor de fornecedores | Due diligence, alocação, contratos, evidências, monitoramento e saída |
+| Segurança/privacidade/jurídico/conformidade/segurança funcional | Requisitos especializados, revisão, contestação e incidentes |
+| Compras/gestor de fornecedores | Diligência prévia, alocação, contratos, evidências, monitoramento e saída |
 | Auditoria interna | Avaliação independente e objetiva sem ser proprietária dos controles |
 
 ## 3.1 Roteiro de implementação
@@ -156,7 +156,7 @@ Figura 2. Cadeia de construção do escopo
 
 - Identifique pessoas e grupos afetados pela IA, mesmo que não sejam usuários ou clientes diretos.
 - Inclua reguladores, clientes, trabalhadores, usuários, titulares de dados, fornecedores, parceiros, comunidades, acionistas, auditores, seguradoras e público, conforme relevante.
-- Separe necessidades/expectativas de obrigações de compliance vinculantes; registre autoridade/fonte, sistema/processo, responsável, evidência e monitoramento de mudanças.
+- Separe necessidades e expectativas de obrigações vinculantes de conformidade; registre autoridade/fonte, sistema/processo, responsável, evidência e monitoramento de mudanças.
 - Determine quais requisitos a organização abordará por meio do SGIA.
 
 ## 4.3 Declaração de escopo
@@ -223,7 +223,7 @@ Figura 2. Cadeia de construção do escopo
 
 *O processo de avaliação de riscos de IA deve usar critérios definidos e repetíveis para identificar, analisar, avaliar e priorizar riscos.*
 
-<img src="../../../assets/English/media/image3.png" style="width:6.15in;height:3.23274in" alt="Registre evidências e incerteza para que diferentes avaliadores possam chegar a conclusões comparáveis." />
+<img src="../../../assets/pt-BR/media/image3.png" style="width:6.15in;height:3.23274in" alt="Registre evidências e incerteza para que diferentes avaliadores possam chegar a conclusões comparáveis." />
 
 Figura 3. Fluxo de avaliação de riscos de IA
 

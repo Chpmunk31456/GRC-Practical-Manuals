@@ -31,7 +31,9 @@ The complete chapter sequence is now represented in four reviewable source parts
 3. [Capítulos 17–24](./pt-BR/source/03_CAPITULOS_17_24.md)
 4. [Capítulos 25–32](./pt-BR/source/04_CAPITULOS_25_32.md)
 
-The localized sources preserve the chapter numbering, core management-system logic, Annex A control-group coverage, risk and impact distinctions, Statement/Declaração/Declaración of Applicability concepts, certification boundaries, tool-safety guidance, reusable audit templates, official-reference links, source-graphic references, alternative text, and accessible explanations.
+The localized sources preserve the chapter numbering, core management-system logic, Annex A control-group coverage, risk and impact distinctions, Statement/Declaração/Declaración of Applicability concepts, certification boundaries, tool-safety guidance, reusable audit templates, official-reference links, alternative text, and accessible explanations. Each language now references its own ten localized learning graphics. Editable SVG controlled sources and 1657×871 PNG derivatives are maintained under `assets/es-419/media` and `assets/pt-BR/media`. The SVG sources can be regenerated with `scripts/generate_iso42001_localized_graphics.py`; the PNG files are fixed-size exports of those controlled sources.
+
+An [AI-assisted precheck log](./AI_ASSISTED_PRECHECK_01.md) records source-language residue and terminology corrections already made. It is preparation for competent human review, not a substitute for it, and the human gate remains open.
 
 ## Remaining controlled work
 
@@ -39,7 +41,7 @@ Before Manual 02 can be represented as release-ready in all three languages, the
 
 - human semantic and terminology review of the Spanish and Brazilian Portuguese chapter sources;
 - consolidation into one controlled Markdown master per localized language;
-- localized replacement or approved treatment of the ten English source raster graphics so visible labels meet the project visual-learning standard;
+- human review of the localized visible labels, captions, alternative text, and accessible explanations for all ten figures in each language;
 - generation of accessible Spanish and Brazilian Portuguese DOCX editions;
 - PDF generation and page-by-page visual QA;
 - final trilingual parity and release-package validation; and

@@ -2,7 +2,7 @@
 
 *La auditoría interna proporciona evidencia independiente y basada en riesgos de que el SGIA es conforme y funciona eficazmente.*
 
-<img src="../../../assets/English/media/image5.png" style="width:6.15in;height:3.23274in" alt="ISO 19011:2026 proporciona orientación vigente para el programa de auditoría; ISO/IEC 42001 proporciona los criterios de auditoría." />
+<img src="../../../assets/es-419/media/image5.png" style="width:6.15in;height:3.23274in" alt="ISO 19011:2026 proporciona orientación vigente para el programa de auditoría; ISO/IEC 42001 proporciona los criterios de auditoría." />
 
 Figura 5. Cadena de auditoría del SGIA
 
@@ -147,7 +147,7 @@ Figura 5. Cadena de auditoría del SGIA
 ## 23.1 Flujo de documentación de recursos
 
 - Conecte recursos a sistemas de IA exactos, etapas del ciclo de vida, propietarios, evaluaciones de riesgo/impacto, registros de proveedores, versiones e historial de cambios.
-- Reconcile inventarios de recursos con código, registros de modelos, catálogos de datos, facturación nube/API, identidad, red, compras y entrevistas.
+- Concilie los inventarios de recursos con el código, los registros de modelos, los catálogos de datos, la facturación de nube/API, la identidad, la red, las compras y las entrevistas.
 - Identifique recursos no aprobados o sombra, componentes sin soporte, falta de competencia, límites de capacidad, dependencias comunes y efectos ambientales.
 - Utilice el registro para reproducibilidad, respuesta a incidentes, evaluación de cambios, recuperación, salida de proveedores y retiro.
 

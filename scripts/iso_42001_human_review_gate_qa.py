@@ -55,7 +55,7 @@ def main() -> int:
                 "must not mark this gate complete or impersonate a human language/domain reviewer",
                 "Spanish (`es-419`) terms to verify consistently",
                 "Brazilian Portuguese (`pt-BR`) terms to verify consistently",
-                "Visible labels in those raster images remain an open release issue",
+                "a competent human must still confirm terminology, meaning, readability, and accessibility before release",
                 "Human sign-off gate",
                 "zero open Critical and Major issues",
                 "baseline must remain `draft-human-review-required`",

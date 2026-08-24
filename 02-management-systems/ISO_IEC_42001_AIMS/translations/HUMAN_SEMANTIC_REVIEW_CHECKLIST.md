@@ -110,14 +110,14 @@ The reviewer may approve a different professional term when it is more natural o
 
 ## 6. Figures and accessibility
 
-The localized source drafts currently preserve the ten English raster source graphics as controlled references while localizing alternative text and accessible explanations. Visible labels in those raster images remain an **open release issue**.
+The localized source drafts now reference ten language-specific learning graphics per language. Each figure has an editable SVG controlled source, a 1657×871 PNG derivative, numbered steps, arrows, localized visible labels, alternative text, and an accessible explanation. Their production resolves the English-visible-label dependency, but a competent human must still confirm terminology, meaning, readability, and accessibility before release.
 
 For each figure:
 
 - [ ] Caption meaning is correct.
 - [ ] Alternative text is accurate and useful.
 - [ ] Accessible explanation communicates the decision/process without requiring the image.
-- [ ] Visible labels are localized before final localized release, or an approved accessible replacement is provided.
+- [ ] Visible labels use accurate and natural terminology for the target locale.
 - [ ] Meaning does not depend on color alone.
 - [ ] The localized graphic does not introduce a new requirement or remove a decision point.
 

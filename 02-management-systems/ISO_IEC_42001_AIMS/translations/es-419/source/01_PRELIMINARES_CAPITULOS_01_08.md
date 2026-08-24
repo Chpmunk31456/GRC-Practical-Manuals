@@ -94,7 +94,7 @@ El archivo fuente en Word contiene una tabla de contenido nativa y una guía per
 
 *El SGIA sigue la estructura armonizada de los sistemas de gestión y un ciclo continuo Planificar-Hacer-Verificar-Actuar (PHVA).* 
 
-<img src="../../../assets/English/media/image1.png" style="width:6.15in;height:3.23274in" alt="Las cláusulas interactúan de forma continua; la norma no es una lista lineal que se completa una sola vez." />
+<img src="../../../assets/es-419/media/image1.png" style="width:6.15in;height:3.23274in" alt="Las cláusulas interactúan de forma continua; la norma no es una lista lineal que se completa una sola vez." />
 
 Figura 1. Ciclo PHVA del SGIA
 
@@ -117,7 +117,7 @@ Figura 1. Ciclo PHVA del SGIA
 
 *Una implementación útil comienza con control organizacional, un inventario de IA exacto, funciones responsables y una hoja de ruta por etapas.*
 
-<img src="../../../assets/English/media/image2.png" style="width:6.15in;height:3.23274in" alt="El alcance debe describir con honestidad los límites organizacionales, las funciones de IA, los sistemas, los datos, los proveedores y las exclusiones." />
+<img src="../../../assets/es-419/media/image2.png" style="width:6.15in;height:3.23274in" alt="El alcance debe describir con honestidad los límites organizacionales, las funciones de IA, los sistemas, los datos, los proveedores y las exclusiones." />
 
 Figura 2. Cadena para construir el alcance
 
@@ -223,7 +223,7 @@ Figura 2. Cadena para construir el alcance
 
 *El proceso de evaluación de riesgos de IA debe utilizar criterios definidos y repetibles para identificar, analizar, evaluar y priorizar riesgos.*
 
-<img src="../../../assets/English/media/image3.png" style="width:6.15in;height:3.23274in" alt="Registre evidencia e incertidumbre para que distintos evaluadores puedan llegar a conclusiones comparables." />
+<img src="../../../assets/es-419/media/image3.png" style="width:6.15in;height:3.23274in" alt="Registre evidencia e incertidumbre para que distintos evaluadores puedan llegar a conclusiones comparables." />
 
 Figura 3. Flujo de evaluación de riesgos de IA
 

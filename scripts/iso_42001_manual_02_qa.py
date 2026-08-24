@@ -2,9 +2,9 @@
 """Fail-closed integrity gate for ISO/IEC 42001 Manual 02.
 
 Passing this check confirms the controlled English master, trilingual
-proportional implementation entries, official-source registry, accessible
-graphics, and workflow boundary. It does not establish conformity or
-certification.
+proportional implementation entries, draft 32-chapter localized source sets,
+official-source registry, accessible graphics, and workflow boundary. It does
+not establish conformity, certification, legal compliance, or an audit opinion.
 """
 
 from __future__ import annotations
@@ -39,7 +39,18 @@ def load_json(path: Path) -> dict:
 
 
 def normalized_text(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
+    return re.sub(r"[^a-z0-9áéíóúüñãõâêôàç]+", " ", value.casefold()).strip()
+
+
+def repository_path(relative: object, field: str, errors: list[str]) -> Path | None:
+    if not isinstance(relative, str) or not relative:
+        errors.append(f"{field} must be a non-empty repository-relative path")
+        return None
+    candidate = REPO_ROOT / relative
+    if ".." in Path(relative).parts or not candidate.resolve().is_relative_to(REPO_ROOT):
+        errors.append(f"{field} must remain inside the repository")
+        return None
+    return candidate
 
 
 def validate_implementation_structure(
@@ -53,6 +64,7 @@ def validate_implementation_structure(
     if not isinstance(structure, dict):
         errors.append("implementation_structure must be an object")
         return
+
     actual = {
         "numbered_sections": len(re.findall(r"(?m)^## [1-8]\. ", text)),
         "subsections": len(re.findall(r"(?m)^### ", text)),
@@ -95,15 +107,101 @@ def validate_implementation_structure(
             errors.append(f"{language} entry is missing localized visual label: {label}")
 
 
-def repository_path(relative: object, field: str, errors: list[str]) -> Path | None:
-    if not isinstance(relative, str) or not relative:
-        errors.append(f"{field} must be a non-empty repository-relative path")
-        return None
-    candidate = REPO_ROOT / relative
-    if ".." in Path(relative).parts or not candidate.resolve().is_relative_to(REPO_ROOT):
-        errors.append(f"{field} must remain inside the repository")
-        return None
-    return candidate
+def validate_localized_full_sources(
+    manual_root: Path,
+    baseline: dict,
+    accessibility_labels: dict,
+    errors: list[str],
+) -> int:
+    source_sets = baseline.get("localized_full_source_parts")
+    if not isinstance(source_sets, dict) or set(source_sets) != {"es-419", "pt-BR"}:
+        errors.append("localized_full_source_parts must define exactly es-419 and pt-BR")
+        return 0
+
+    try:
+        required_chapters = int(baseline.get("required_localized_chapters"))
+        required_graphics = int(baseline.get("required_localized_source_graphics"))
+    except (TypeError, ValueError):
+        errors.append("localized source chapter/graphic requirements must be integers")
+        return 0
+
+    full_phrases = baseline.get("localized_full_required_phrases")
+    if not isinstance(full_phrases, dict):
+        errors.append("localized_full_required_phrases must be an object")
+        full_phrases = {}
+
+    checked = 0
+    for language, relatives in source_sets.items():
+        if not isinstance(relatives, list) or len(relatives) != 4:
+            errors.append(f"{language} full source must define exactly four reviewable parts")
+            continue
+
+        texts: list[str] = []
+        for relative in relatives:
+            if not isinstance(relative, str) or not relative or ".." in Path(relative).parts:
+                errors.append(f"invalid localized full-source path for {language}: {relative!r}")
+                continue
+            path = manual_root / relative
+            if not path.is_file():
+                errors.append(f"localized full-source part is missing for {language}: {relative}")
+                continue
+            text = path.read_text(encoding="utf-8")
+            if len(text) < 4_000:
+                errors.append(f"localized full-source part is unexpectedly small for {language}: {relative}")
+            texts.append(text)
+
+        if len(texts) != 4:
+            continue
+
+        combined = "\n\n".join(texts)
+        chapters = [
+            int(value)
+            for value in re.findall(r"(?m)^# ([1-9]|[12][0-9]|3[0-2])\. ", combined)
+        ]
+        expected = list(range(1, required_chapters + 1))
+        if chapters != expected:
+            errors.append(
+                f"{language} localized full source must contain chapters 1-{required_chapters} "
+                "exactly once and in order"
+            )
+
+        phrases = full_phrases.get(language)
+        if not isinstance(phrases, list) or not phrases:
+            errors.append(f"localized full-source required phrases are missing: {language}")
+            phrases = []
+        normalized = normalized_text(combined)
+        for phrase in phrases:
+            if normalized_text(str(phrase)) not in normalized:
+                errors.append(f"{language} full source is missing controlled phrase: {phrase}")
+
+        graphics = re.findall(
+            r'<img\s+src="([^"]+)"[^>]*\salt="([^"]+)"\s*/?>', combined
+        )
+        if len(graphics) != required_graphics:
+            errors.append(
+                f"{language} localized full source has {len(graphics)} graphics; "
+                f"expected {required_graphics}"
+            )
+        for source, alt_text in graphics:
+            if not alt_text.strip():
+                errors.append(f"{language} localized graphic has empty alternative text: {source}")
+                continue
+            first_part = manual_root / relatives[0]
+            asset_path = (first_part.parent / source).resolve()
+            if not asset_path.is_relative_to(manual_root.resolve()) or not asset_path.is_file():
+                errors.append(f"{language} localized graphic path is missing/outside Manual 02: {source}")
+
+        label = accessibility_labels.get(language)
+        if not isinstance(label, str) or combined.count(label) != required_graphics:
+            errors.append(
+                f"{language} localized source graphics must each have one accessible explanation"
+            )
+
+        if "ISO/IEC 42001" not in combined or "ISO/IEC 42005" not in combined or "ISO/IEC 42006" not in combined:
+            errors.append(f"{language} localized full source is missing core ISO references")
+        checked += 1
+
+    return checked
 
 
 def main() -> int:
@@ -121,8 +219,10 @@ def main() -> int:
         errors.append("baseline schema_version must be 1.0")
     if baseline.get("manual_id") != "iso-42001-manual-02":
         errors.append("unexpected manual_id")
-    if baseline.get("development_phase") != "trilingual-implementation-intake":
-        errors.append("development phase must remain trilingual-implementation-intake")
+    if baseline.get("development_phase") != "trilingual-full-source-review":
+        errors.append("development phase must remain trilingual-full-source-review")
+    if baseline.get("localized_full_source_status") != "draft-human-review-required":
+        errors.append("localized full-source status must remain draft-human-review-required")
     if baseline.get("planned_publication_languages") != ["en", "es-419", "pt-BR"]:
         errors.append("planned publication languages must be en, es-419, and pt-BR")
 
@@ -217,26 +317,26 @@ def main() -> int:
         if localized_text.count("```mermaid") != required_visuals:
             errors.append(f"{language} entry has an unexpected number of Mermaid visuals")
         localized_label = accessibility_labels.get(language)
-        if not isinstance(localized_label, str) or localized_text.count(
-            localized_label
-        ) != required_visuals:
+        if not isinstance(localized_label, str) or localized_text.count(localized_label) != required_visuals:
             errors.append(f"{language} visuals must each have an accessible explanation")
         for source_id in baseline.get("required_source_ids", []):
             if source_id not in localized_text:
                 errors.append(f"{language} entry is missing controlled source id: {source_id}")
-        validate_implementation_structure(
-            localized_text, language, baseline, required_visuals, errors
-        )
+        validate_implementation_structure(localized_text, language, baseline, required_visuals, errors)
+
+    localized_full_sets_checked = validate_localized_full_sources(
+        manual_root, baseline, accessibility_labels, errors
+    )
 
     translations_readme = manual_root / "translations" / "README.md"
     translations_text = (
         translations_readme.read_text(encoding="utf-8") if translations_readme.is_file() else ""
     )
     for phrase in (
-        "full 32-chapter localized masters remain in development",
-        "MANUAL_02_RUTAS_DE_IMPLEMENTACION.md",
-        "MANUAL_02_CAMINHOS_DE_IMPLEMENTACAO.md",
-        "must not be described as completed full-manual translations",
+        "trilingual full-source review",
+        "32-chapter Spanish and Brazilian Portuguese source drafts are present",
+        "draft localized sources subject to human review",
+        "consolidated single-file masters and derived DOCX/PDF release artifacts remain in development",
     ):
         if phrase not in translations_text:
             errors.append(f"translations README is missing controlled phrase: {phrase}")
@@ -280,18 +380,14 @@ def main() -> int:
             tables = document_xml.findall(f".//{{{WORD_NS}}}tbl")
             required_docx_tables = int(baseline.get("required_docx_data_tables"))
             if len(tables) != required_docx_tables:
-                errors.append(
-                    f"English DOCX must contain {required_docx_tables} controlled data tables"
-                )
+                errors.append(f"English DOCX must contain {required_docx_tables} controlled data tables")
             layout_tables = 0
             for table_index, table in enumerate(tables, start=1):
                 rows = table.findall(f"{{{WORD_NS}}}tr")
                 cells = rows[0].findall(f"{{{WORD_NS}}}tc") if rows else []
                 if len(rows) == 1 and len(cells) == 1:
                     layout_tables += 1
-                header = rows[0].find(
-                    f"{{{WORD_NS}}}trPr/{{{WORD_NS}}}tblHeader"
-                ) if rows else None
+                header = rows[0].find(f"{{{WORD_NS}}}trPr/{{{WORD_NS}}}tblHeader") if rows else None
                 if header is None:
                     errors.append(f"English DOCX data table {table_index} lacks header-row metadata")
             if layout_tables != int(baseline.get("required_docx_layout_tables")):
@@ -342,12 +438,12 @@ def main() -> int:
     if len(catalog_matches) != 1:
         errors.append("manual catalog must contain exactly one iso-42001-aims entry")
     else:
-        entry = catalog_matches[0]
-        if entry.get("path") != baseline.get("manual_path"):
+        catalog_entry = catalog_matches[0]
+        if catalog_entry.get("path") != baseline.get("manual_path"):
             errors.append("Manual 02 catalog path does not match baseline")
-        if entry.get("status") != "development":
+        if catalog_entry.get("status") != "development":
             errors.append("Manual 02 catalog status must remain development")
-        if entry.get("layout") != "controlled-build" or entry.get("series_order") != 2:
+        if catalog_entry.get("layout") != "controlled-build" or catalog_entry.get("series_order") != 2:
             errors.append("Manual 02 catalog must use controlled-build layout and series_order 2")
 
     if not WORKFLOW_PATH.is_file():
@@ -368,6 +464,7 @@ def main() -> int:
     print(f"  proportional paths checked: {len(baseline.get('implementation_paths', []))}")
     print(f"  implementation visuals checked: {required_visuals}")
     print(f"  localized implementation entries checked: {len(localized_entries)}")
+    print(f"  localized 32-chapter source sets checked: {localized_full_sets_checked}")
     print(f"  placed source graphics checked: {required_graphics}")
     print(f"  controlled sources checked: {len(required_source_ids)}")
     print(f"  required topics checked: {len(baseline.get('required_topics', []))}")

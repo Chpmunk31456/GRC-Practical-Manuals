@@ -219,6 +219,22 @@ Cada registro de sistema deve vincular os itens abaixo. Marque um item como **n�
 - ações corretivas e evidências de encerramento; e
 - decisão de retenção e descarte.
 
+### Cadeia de evidências e asseguração
+
+```mermaid
+flowchart TD
+    A["Requisito"] --> B["Atividade de controle"]
+    B --> C["Responsável e frequência"]
+    C --> D["Evidências"]
+    D --> E["Teste independente"]
+    E --> F{"Controle eficaz?"}
+    F -- "Sim" --> G["Monitorar e reter evidências"]
+    F -- "Não" --> H["Constatação e remediação"]
+    H --> B
+```
+
+**Explicação acessível:** Um requisito se torna uma atividade de controle com uma pessoa responsável e uma frequência. A atividade produz evidências submetidas a teste independente. Controles eficazes continuam sob monitoramento; controles ineficazes geram constatações e remediação que retorna ao desenho do controle.
+
 ## 6. Métricas que revelam a qualidade da implementação
 
 - percentual de sistemas de IA com proprietário confirmado;

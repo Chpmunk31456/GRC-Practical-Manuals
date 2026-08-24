@@ -1,0 +1,28 @@
+name: "02 - Authoritative Source Registry"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".compliance/authoritative-sources.json"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/02-authoritative-source-registry.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-registry-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-source-registry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate source identity, status, and review dates
+        run: python3 scripts/compliance_qa.py sources

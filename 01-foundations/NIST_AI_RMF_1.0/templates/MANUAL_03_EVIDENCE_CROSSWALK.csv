@@ -1,0 +1,7 @@
+rmf_function,implementation_focus,primary_record,minimum_evidence,decision_or_escalation
+GOVERN,"policy, accountability, risk tolerance, ownership, suppliers, culture",AI_SYSTEM_AND_USE_CASE_REGISTER.csv,"owned inventory, policy/authority linkage, competence and review records","approve governance path; escalate missing authority or ownership"
+MAP,"purpose, context, actors, affected parties, dependencies, impacts",AI_RISK_AND_IMPACT_REGISTER.csv,"context record, affected-party analysis, assumptions, risk/impact scenarios","approve scope/tier; escalate unclear purpose or material impact"
+MEASURE,"TEVV, metrics, limitations, uncertainty, control/evidence testing",AI_CONTROL_AND_EVIDENCE_MATRIX.csv,"test procedures, samples, results, limitations, metrics, findings","accept evidence; require more testing; restrict if evidence insufficient"
+MANAGE,"prioritize, treat, approve, restrict, monitor, respond, retire",AI_DECISION_AND_APPROVAL_LOG.csv,"treatment decision, residual risk, conditions, monitoring and stop triggers","approve/condition/reject/rollback/retire"
+CROSS-CUTTING,"monitoring, incidents, complaints, drift, material changes",AI_MONITORING_AND_METRICS_REGISTER.csv,"operational signals, thresholds, trends, incidents, reassessment evidence","continue, reassess, contain, stop or reopen approval"
+ASSURANCE,"independent challenge and traceable review",AI_AUDIT_WORKPAPER_INDEX.csv,"criteria, testing, evidence, exceptions, reviewer conclusion","close finding, remediate, accept residual risk or escalate"

@@ -1,0 +1,1 @@
+record_id,system_or_use_case_id,risk_or_impact_statement,risk_family,affected_parties,source_or_criteria,cause_or_threat,existing_controls,likelihood,impact,inherent_risk,treatment_option,planned_controls,control_owner,target_date,residual_risk,risk_acceptance_authority,evidence,decision,reviewer,review_date,status,change_trigger

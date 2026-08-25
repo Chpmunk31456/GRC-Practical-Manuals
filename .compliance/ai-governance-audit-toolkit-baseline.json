@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "toolkit_id": "ai-governance-audit-toolkit",
+  "title": "AI Governance and Audit Toolkit",
+  "toolkit_path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
+  "development_phase": "controlled-toolkit-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "iso-iec-42001-2023",
+    "iso-19011-2026",
+    "nist-ai-rmf-1-0",
+    "nist-ai-600-1"
+  ],
+  "professional_practice_sources": ["isaca-aaia"],
+  "planned_tools": [
+    "AI_SYSTEM_AND_USE_CASE_REGISTER.csv",
+    "AI_RISK_AND_IMPACT_REGISTER.csv",
+    "AI_CONTROL_AND_EVIDENCE_MATRIX.csv",
+    "AI_AUDIT_WORKPAPER_INDEX.csv",
+    "AI_FINDINGS_AND_REMEDIATION_LOG.csv",
+    "AI_VENDOR_AND_COMPONENT_REGISTER.csv",
+    "AI_CHANGE_AND_REASSESSMENT_LOG.csv",
+    "HUMAN_REVIEW_AND_APPROVAL_RECORD.csv",
+    "RELEASE_EVIDENCE_MANIFEST.csv"
+  ],
+  "required_fields_across_toolkit": [
+    "record_id",
+    "owner",
+    "status",
+    "source_or_criteria",
+    "evidence",
+    "decision",
+    "reviewer",
+    "review_date",
+    "findings",
+    "remediation",
+    "residual_risk",
+    "change_trigger"
+  ],
+  "release_boundary": "The toolkit remains development material until schemas, examples, trilingual terminology, accessibility, document/tool QA, security/provenance review, and final human release approval are complete.",
+  "assurance_boundary": "Toolkit records support governance and audit evidence; completion of a template does not establish compliance, certification, control effectiveness, or an audit opinion."
+}

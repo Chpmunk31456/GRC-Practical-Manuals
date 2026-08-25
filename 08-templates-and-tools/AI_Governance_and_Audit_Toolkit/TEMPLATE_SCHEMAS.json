@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "toolkit_id": "ai-governance-audit-toolkit",
+  "common_control_fields": ["record_id", "owner", "status", "source_or_criteria", "evidence", "decision", "reviewer", "review_date", "findings", "remediation", "residual_risk", "change_trigger"],
+  "tools": {
+    "AI_SYSTEM_AND_USE_CASE_REGISTER.csv": [
+      "record_id", "system_name", "use_case", "business_owner", "technical_owner", "risk_owner", "status", "lifecycle_stage", "deployment_model", "model_provider", "model_name_version", "data_categories", "personal_or_sensitive_data", "jurisdictions", "users_and_affected_parties", "autonomy_level", "tools_actions_permissions", "rag_or_vector_store", "critical_suppliers", "inherent_risk_tier", "impact_assessment_id", "risk_register_ids", "approval_decision", "decision", "reviewer", "review_date", "evidence", "findings", "remediation", "residual_risk", "change_trigger", "next_review_date"
+    ],
+    "AI_RISK_AND_IMPACT_REGISTER.csv": [
+      "record_id", "system_or_use_case_id", "risk_or_impact_statement", "risk_family", "affected_parties", "source_or_criteria", "cause_or_threat", "existing_controls", "likelihood", "impact", "inherent_risk", "treatment_option", "planned_controls", "control_owner", "target_date", "residual_likelihood", "residual_impact", "residual_risk", "risk_acceptance_authority", "status", "evidence", "decision", "reviewer", "review_date", "findings", "remediation", "change_trigger"
+    ],
+    "AI_CONTROL_AND_EVIDENCE_MATRIX.csv": [
+      "record_id", "system_or_scope_id", "source_or_criteria", "requirement_or_control_id", "control_objective", "applicability", "control_owner", "implementation_description", "evidence_expected", "evidence", "test_procedure", "sample_or_population", "test_result", "design_effectiveness", "operating_effectiveness", "status", "findings", "remediation", "residual_risk", "decision", "reviewer", "review_date", "change_trigger"
+    ],
+    "AI_AUDIT_WORKPAPER_INDEX.csv": [
+      "record_id", "engagement_id", "workpaper_id", "audit_objective", "scope", "source_or_criteria", "risk_addressed", "test_procedure", "population", "sample_method", "sample_size", "evidence", "evidence_date", "preparer", "prepared_date", "result", "exceptions", "findings", "conclusion", "status", "remediation", "residual_risk", "decision", "reviewer", "review_date", "change_trigger"
+    ],
+    "AI_FINDINGS_AND_REMEDIATION_LOG.csv": [
+      "record_id", "engagement_or_review_id", "system_or_scope_id", "source_or_criteria", "condition", "cause", "risk_or_impact", "severity", "evidence", "finding_owner", "management_response", "remediation", "target_date", "risk_acceptance_or_exception", "residual_risk", "validation_procedure", "validation_evidence", "validation_result", "status", "decision", "reviewer", "review_date", "closure_date", "change_trigger"
+    ],
+    "AI_VENDOR_AND_COMPONENT_REGISTER.csv": [
+      "record_id", "vendor_or_component", "service_or_component_type", "business_owner", "technical_owner", "status", "criticality", "inherent_risk", "data_categories", "access_level", "model_or_ai_dependency", "subprocessors", "fourth_parties", "jurisdictions", "due_diligence_date", "security_evidence", "privacy_evidence", "resilience_evidence", "ai_governance_evidence", "contract_requirements", "incident_notification_requirement", "right_to_audit_or_evidence", "data_return_or_deletion", "findings", "remediation", "residual_risk", "decision", "reviewer", "review_date", "evidence", "change_trigger", "next_review_date"
+    ],
+    "AI_CHANGE_AND_REASSESSMENT_LOG.csv": [
+      "record_id", "system_or_scope_id", "change_date", "change_type", "change_description", "change_trigger", "source_or_criteria", "materiality", "affected_controls", "affected_risks", "affected_suppliers", "prior_approvals_invalidated", "reassessment_required", "testing_required", "evidence", "findings", "remediation", "residual_risk", "status", "decision", "reviewer", "review_date", "closure_date"
+    ],
+    "HUMAN_REVIEW_AND_APPROVAL_RECORD.csv": [
+      "record_id", "artifact_or_scope", "review_type", "reviewer", "reviewer_role", "review_date", "evidence", "findings", "remediation", "exceptions", "unresolved_items", "residual_risk", "decision", "approval_scope", "material_change_invalidation_rule", "change_trigger", "status", "next_review_or_reapproval_date"
+    ],
+    "RELEASE_EVIDENCE_MANIFEST.csv": [
+      "record_id", "manual_or_toolkit_id", "version", "release_candidate_commit", "source_verification_date", "source_or_criteria", "evidence", "languages", "artifacts", "checksums", "translation_review_status", "editorial_review_status", "visual_review_status", "accessibility_review_status", "security_review_status", "document_qa_status", "human_approval_record_ids", "findings", "remediation", "residual_risk", "decision", "reviewer", "review_date", "github_tag_or_release", "zenodo_concept_doi", "zenodo_version_doi", "status", "change_trigger"
+    ]
+  }
+}

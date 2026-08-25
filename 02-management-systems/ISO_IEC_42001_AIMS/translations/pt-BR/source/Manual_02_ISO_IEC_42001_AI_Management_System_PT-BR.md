@@ -6,13 +6,13 @@ date: "2026-08-24"
 lang: "pt-BR"
 version: "First Edition / v1.0"
 source-branch: "build/iso-iec-42001-manual-02-2026"
-source-commit: "b1ddffa6a33376ec72db570d8437f996cf61b97d"
+source-commit: "647c88fa905a16cba4e3ec162a32aad56f48c58b"
 review-status: "DRAFT — HUMAN SEMANTIC REVIEW REQUIRED"
 ---
 
 > **Controle de publicação: Este documento é um rascunho derivado mecanicamente dos quatro arquivos fonte localizados da ramificação indicada. Requer revisão semântica humana. Não é uma tradução autorizada pela ISO, e sua geração não demonstra certificação, conformidade, cumprimento legal nem asseguração de auditoria. A assistência de IA foi utilizada conforme a divulgação do repositório; a autoria e a responsabilidade humana permanecem com Alberto (Al) Leiva.**
 
-> **Source control:** `build/iso-iec-42001-manual-02-2026` @ `b1ddffa6a33376ec72db570d8437f996cf61b97d` · 2026-08-24 · First Edition / v1.0
+> **Source control:** `build/iso-iec-42001-manual-02-2026` @ `647c88fa905a16cba4e3ec162a32aad56f48c58b` · 2026-08-24 · First Edition / v1.0
 
 | **O que este manual faz:** Explica como estabelecer, implementar, operar, auditar, preparar para certificação e melhorar um sistema de gestão de inteligência artificial. Detalha as Cláusulas 4–10, os nove grupos de controles do Anexo A, avaliação de riscos e impactos, a Declaração de Aplicabilidade, certificação, evidências, ferramentas, decisões gerenciais e o trabalho do analista júnior. |
 |---|
@@ -602,7 +602,7 @@ Figura 5. Cadeia de auditoria do SGIA
 
 # 23. Anexo A.4: Recursos para sistemas de IA
 
-*O Anexo A.4 exige visibilidade dos dados, ferramentas, sistema/computação e pessoas necessários em todo o ciclo de vida da IA.*
+*Quando os controles do Anexo A.4 são selecionados por meio do tratamento de riscos e da Declaração de Aplicabilidade da organização, sua implementação deve manter visibilidade sobre os dados, as ferramentas, os sistemas e recursos computacionais, e as pessoas necessárias ao longo do ciclo de vida da IA.*
 
 | **Registro de recurso** | **Detalhes** |
 |---|---|
@@ -667,9 +667,9 @@ Figura 6. Ciclo de vida responsável do sistema de IA
 
 # 26. Anexo A.7: Dados para sistemas de IA
 
-*O Anexo A.7 exige aquisição, qualidade, proveniência e preparação governadas de dados para desenvolvimento, melhoria e operação de IA.*
+*Quando os controles do Anexo A.7 são selecionados por meio do tratamento de riscos e da Declaração de Aplicabilidade da organização, sua implementação deve governar a aquisição, a qualidade, a proveniência e a preparação de dados para o desenvolvimento, a melhoria e a operação de IA.*
 
-![A linhagem deve conectar fonte e autoridade a transformações, qualidade, uso, retenção e exclusão.](../../../assets/pt-BR/media/image7.png){width=6.15in height=3.23274in}
+![O fluxo de evidências recomendado conecta a fonte e a autoridade às transformações, à qualidade, ao uso, à retenção e à exclusão.](../../../assets/pt-BR/media/image7.png){width=6.15in height=3.23274in}
 
 Figura 7. Cadeia de evidências de dados de IA
 
@@ -694,7 +694,7 @@ Figura 7. Cadeia de evidências de dados de IA
 
 # 27. Anexo A.8: Informação para partes interessadas
 
-*O Anexo A.8 exige informação útil para usuários e partes interessadas, além de reporte e comunicação de incidentes.*
+*Quando os controles do Anexo A.8 são selecionados por meio do tratamento de riscos e da Declaração de Aplicabilidade da organização, sua implementação deve fornecer informações úteis para usuários e partes interessadas, juntamente com o reporte e a comunicação de incidentes.*
 
 ![Transparência é comunicação específica ao público que permite uso seguro, responsabilização e reparação.](../../../assets/pt-BR/media/image8.png){width=6.15in height=3.23274in}
 
@@ -721,7 +721,7 @@ Figura 8. Informação para partes interessadas
 
 *O Anexo A.9 governa o uso responsável e a finalidade pretendida; o Anexo A.10 aloca deveres entre fornecedores, clientes e a cadeia de valor de IA.*
 
-![A asseguração de fornecedores deve corresponder ao modelo, serviço, uso, fluxo de dados e configuração do cliente exatos.](../../../assets/pt-BR/media/image9.png){width=6.15in height=3.23274in}
+![A asseguração de fornecedores baseada em riscos corresponde ao modelo, serviço, uso, fluxo de dados e configuração exatos do cliente.](../../../assets/pt-BR/media/image9.png){width=6.15in height=3.23274in}
 
 Figura 9. Ciclo de vida de IA de terceiros
 

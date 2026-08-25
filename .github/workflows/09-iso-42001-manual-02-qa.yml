@@ -47,7 +47,7 @@ jobs:
       - name: Validate DOCX, PDF, page-level, and trilingual publication QA
         run: >-
           python3 scripts/qa_iso42001_publication.py
-          --source-commit b1ddffa6a33376ec72db570d8437f996cf61b97d
+          --source-commit 647c88fa905a16cba4e3ec162a32aad56f48c58b
           --generation-date 2026-08-24
       - name: Confirm publication QA evidence is reproducible
         run: git diff --exit-code -- qa/manual02-document-processing

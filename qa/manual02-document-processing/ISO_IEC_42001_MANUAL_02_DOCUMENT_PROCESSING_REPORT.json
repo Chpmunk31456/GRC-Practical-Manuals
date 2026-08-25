@@ -1,7 +1,7 @@
 {
   "manual": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
   "source_branch": "build/iso-iec-42001-manual-02-2026",
-  "source_commit": "b1ddffa6a33376ec72db570d8437f996cf61b97d",
+  "source_commit": "647c88fa905a16cba4e3ec162a32aad56f48c58b",
   "generation_date": "2026-08-24",
   "release_status": "blocked-by-translation-review",
   "gates": {
@@ -79,7 +79,7 @@
           },
           {
             "source": "../assets/English/media/image7.png",
-            "alt": "Lineage must connect source and authority to transformations, quality, use, retention, and deletion."
+            "alt": "Recommended evidence flow connects source and authority to transformations, quality, use, retention, and deletion."
           },
           {
             "source": "../assets/English/media/image8.png",
@@ -87,7 +87,7 @@
           },
           {
             "source": "../assets/English/media/image9.png",
-            "alt": "Supplier assurance must match the exact model, service, use, data flow, and customer configuration."
+            "alt": "Risk-based supplier assurance matches the exact model, service, use, data flow, and customer configuration."
           },
           {
             "source": "../assets/English/media/image10.png",
@@ -103,7 +103,7 @@
       },
       "docx": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_EN.docx",
-        "size_bytes": 518943,
+        "size_bytes": 518996,
         "paragraphs": 539,
         "heading_counts": {
           "1": 35,
@@ -143,7 +143,7 @@
       },
       "pdf": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_EN.pdf",
-        "size_bytes": 681725,
+        "size_bytes": 681801,
         "pages": 55,
         "selectable_text_pages": 55,
         "page_size_counts": {
@@ -227,7 +227,7 @@
           },
           {
             "source": "../../../assets/es-419/media/image7.png",
-            "alt": "El linaje debe conectar la fuente y la autoridad con transformaciones, calidad, uso, retención y eliminación."
+            "alt": "El flujo de evidencia recomendado conecta la fuente y la autoridad con las transformaciones, la calidad, el uso, la retención y la eliminación."
           },
           {
             "source": "../../../assets/es-419/media/image8.png",
@@ -235,7 +235,7 @@
           },
           {
             "source": "../../../assets/es-419/media/image9.png",
-            "alt": "El aseguramiento de proveedores debe corresponder al modelo, servicio, uso, flujo de datos y configuración del cliente exactos."
+            "alt": "El aseguramiento de proveedores basado en riesgos corresponde al modelo, servicio, uso, flujo de datos y configuración exactos del cliente."
           },
           {
             "source": "../../../assets/es-419/media/image10.png",
@@ -251,7 +251,7 @@
       },
       "docx": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_ES-419.docx",
-        "size_bytes": 484525,
+        "size_bytes": 484593,
         "paragraphs": 511,
         "heading_counts": {
           "1": 35,
@@ -291,11 +291,11 @@
       },
       "pdf": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_ES-419.pdf",
-        "size_bytes": 401942,
-        "pages": 40,
-        "selectable_text_pages": 40,
+        "size_bytes": 403579,
+        "pages": 41,
+        "selectable_text_pages": 41,
         "page_size_counts": {
-          "612.0x792.0": 40
+          "612.0x792.0": 41
         },
         "outline_entries": 68,
         "external_links": 37,
@@ -375,7 +375,7 @@
           },
           {
             "source": "../../../assets/pt-BR/media/image7.png",
-            "alt": "A linhagem deve conectar fonte e autoridade a transformações, qualidade, uso, retenção e exclusão."
+            "alt": "O fluxo de evidências recomendado conecta a fonte e a autoridade às transformações, à qualidade, ao uso, à retenção e à exclusão."
           },
           {
             "source": "../../../assets/pt-BR/media/image8.png",
@@ -383,7 +383,7 @@
           },
           {
             "source": "../../../assets/pt-BR/media/image9.png",
-            "alt": "A asseguração de fornecedores deve corresponder ao modelo, serviço, uso, fluxo de dados e configuração do cliente exatos."
+            "alt": "A asseguração de fornecedores baseada em riscos corresponde ao modelo, serviço, uso, fluxo de dados e configuração exatos do cliente."
           },
           {
             "source": "../../../assets/pt-BR/media/image10.png",
@@ -399,7 +399,7 @@
       },
       "docx": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_PT-BR.docx",
-        "size_bytes": 486750,
+        "size_bytes": 486840,
         "paragraphs": 511,
         "heading_counts": {
           "1": 35,
@@ -439,11 +439,11 @@
       },
       "pdf": {
         "path": "02-management-systems/ISO_IEC_42001_AIMS/publication/qa-candidate/Manual_02_ISO_IEC_42001_AI_Management_System_PT-BR.pdf",
-        "size_bytes": 402248,
-        "pages": 39,
-        "selectable_text_pages": 39,
+        "size_bytes": 403300,
+        "pages": 40,
+        "selectable_text_pages": 40,
         "page_size_counts": {
-          "612.0x792.0": 39
+          "612.0x792.0": 40
         },
         "outline_entries": 68,
         "external_links": 37,
@@ -506,7 +506,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.17562,
+      "nonwhite_ratio": 0.17553,
       "issues": ""
     },
     {
@@ -518,7 +518,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.02464,
+      "nonwhite_ratio": 0.02456,
       "issues": ""
     },
     {
@@ -530,7 +530,7 @@
       "images": 0,
       "vector_drawings": 140,
       "external_links": 0,
-      "nonwhite_ratio": 0.18813,
+      "nonwhite_ratio": 0.18805,
       "issues": ""
     },
     {
@@ -542,7 +542,7 @@
       "images": 0,
       "vector_drawings": 29,
       "external_links": 0,
-      "nonwhite_ratio": 0.12924,
+      "nonwhite_ratio": 0.12916,
       "issues": ""
     },
     {
@@ -554,7 +554,7 @@
       "images": 2,
       "vector_drawings": 28,
       "external_links": 0,
-      "nonwhite_ratio": 0.17914,
+      "nonwhite_ratio": 0.17907,
       "issues": ""
     },
     {
@@ -566,7 +566,7 @@
       "images": 2,
       "vector_drawings": 28,
       "external_links": 0,
-      "nonwhite_ratio": 0.18181,
+      "nonwhite_ratio": 0.18174,
       "issues": ""
     },
     {
@@ -578,7 +578,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.0421,
+      "nonwhite_ratio": 0.04202,
       "issues": ""
     },
     {
@@ -590,7 +590,7 @@
       "images": 0,
       "vector_drawings": 27,
       "external_links": 0,
-      "nonwhite_ratio": 0.17246,
+      "nonwhite_ratio": 0.17238,
       "issues": ""
     },
     {
@@ -602,7 +602,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.12855,
+      "nonwhite_ratio": 0.12851,
       "issues": ""
     },
     {
@@ -614,7 +614,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.09513,
+      "nonwhite_ratio": 0.09509,
       "issues": ""
     },
     {
@@ -626,7 +626,7 @@
       "images": 2,
       "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.19455,
+      "nonwhite_ratio": 0.1945,
       "issues": ""
     },
     {
@@ -638,7 +638,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.04458,
+      "nonwhite_ratio": 0.04454,
       "issues": ""
     },
     {
@@ -650,7 +650,7 @@
       "images": 0,
       "vector_drawings": 43,
       "external_links": 0,
-      "nonwhite_ratio": 0.16946,
+      "nonwhite_ratio": 0.16942,
       "issues": ""
     },
     {
@@ -662,7 +662,7 @@
       "images": 2,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.16069,
+      "nonwhite_ratio": 0.16064,
       "issues": ""
     },
     {
@@ -674,7 +674,7 @@
       "images": 0,
       "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.07314,
+      "nonwhite_ratio": 0.0731,
       "issues": ""
     },
     {
@@ -686,7 +686,7 @@
       "images": 0,
       "vector_drawings": 22,
       "external_links": 0,
-      "nonwhite_ratio": 0.1399,
+      "nonwhite_ratio": 0.13986,
       "issues": ""
     },
     {
@@ -698,7 +698,7 @@
       "images": 0,
       "vector_drawings": 29,
       "external_links": 0,
-      "nonwhite_ratio": 0.12094,
+      "nonwhite_ratio": 0.12089,
       "issues": ""
     },
     {
@@ -710,7 +710,7 @@
       "images": 0,
       "vector_drawings": 27,
       "external_links": 0,
-      "nonwhite_ratio": 0.14457,
+      "nonwhite_ratio": 0.14453,
       "issues": ""
     },
     {
@@ -722,7 +722,7 @@
       "images": 0,
       "vector_drawings": 27,
       "external_links": 0,
-      "nonwhite_ratio": 0.14372,
+      "nonwhite_ratio": 0.14368,
       "issues": ""
     },
     {
@@ -734,7 +734,7 @@
       "images": 0,
       "vector_drawings": 28,
       "external_links": 0,
-      "nonwhite_ratio": 0.12749,
+      "nonwhite_ratio": 0.12745,
       "issues": ""
     },
     {
@@ -746,7 +746,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.1007,
+      "nonwhite_ratio": 0.10066,
       "issues": ""
     },
     {
@@ -758,7 +758,7 @@
       "images": 0,
       "vector_drawings": 27,
       "external_links": 0,
-      "nonwhite_ratio": 0.12943,
+      "nonwhite_ratio": 0.12939,
       "issues": ""
     },
     {
@@ -770,7 +770,7 @@
       "images": 2,
       "vector_drawings": 22,
       "external_links": 0,
-      "nonwhite_ratio": 0.18624,
+      "nonwhite_ratio": 0.18619,
       "issues": ""
     },
     {
@@ -782,7 +782,7 @@
       "images": 0,
       "vector_drawings": 14,
       "external_links": 0,
-      "nonwhite_ratio": 0.04421,
+      "nonwhite_ratio": 0.04417,
       "issues": ""
     },
     {
@@ -794,7 +794,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.11374,
+      "nonwhite_ratio": 0.1137,
       "issues": ""
     },
     {
@@ -806,7 +806,7 @@
       "images": 0,
       "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.13268,
+      "nonwhite_ratio": 0.13264,
       "issues": ""
     },
     {
@@ -818,7 +818,7 @@
       "images": 0,
       "vector_drawings": 56,
       "external_links": 0,
-      "nonwhite_ratio": 0.15451,
+      "nonwhite_ratio": 0.15447,
       "issues": ""
     },
     {
@@ -830,7 +830,7 @@
       "images": 0,
       "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.12374,
+      "nonwhite_ratio": 0.1237,
       "issues": ""
     },
     {
@@ -842,7 +842,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.11002,
+      "nonwhite_ratio": 0.10997,
       "issues": ""
     },
     {
@@ -850,11 +850,11 @@
       "page": 31,
       "chapter": "Chapter 23",
       "status": "PASS",
-      "text_characters": 1493,
+      "text_characters": 1642,
       "images": 0,
       "vector_drawings": 22,
       "external_links": 0,
-      "nonwhite_ratio": 0.12771,
+      "nonwhite_ratio": 0.1318,
       "issues": ""
     },
     {
@@ -866,7 +866,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.11346,
+      "nonwhite_ratio": 0.11341,
       "issues": ""
     },
     {
@@ -878,7 +878,7 @@
       "images": 2,
       "vector_drawings": 28,
       "external_links": 0,
-      "nonwhite_ratio": 0.19469,
+      "nonwhite_ratio": 0.19464,
       "issues": ""
     },
     {
@@ -886,11 +886,11 @@
       "page": 34,
       "chapter": "Chapter 26",
       "status": "PASS",
-      "text_characters": 1632,
+      "text_characters": 1602,
       "images": 2,
-      "vector_drawings": 16,
+      "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.19316,
+      "nonwhite_ratio": 0.18795,
       "issues": ""
     },
     {
@@ -898,11 +898,11 @@
       "page": 35,
       "chapter": "Chapter 26",
       "status": "PASS",
-      "text_characters": 351,
+      "text_characters": 502,
       "images": 0,
-      "vector_drawings": 15,
+      "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.05022,
+      "nonwhite_ratio": 0.05979,
       "issues": ""
     },
     {
@@ -910,11 +910,11 @@
       "page": 36,
       "chapter": "Chapter 27",
       "status": "PASS",
-      "text_characters": 1473,
+      "text_characters": 1485,
       "images": 2,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.1576,
+      "nonwhite_ratio": 0.1578,
       "issues": ""
     },
     {
@@ -922,11 +922,11 @@
       "page": 37,
       "chapter": "Chapter 27",
       "status": "PASS",
-      "text_characters": 437,
+      "text_characters": 565,
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.02976,
+      "nonwhite_ratio": 0.03746,
       "issues": ""
     },
     {
@@ -938,7 +938,7 @@
       "images": 2,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.14849,
+      "nonwhite_ratio": 0.14844,
       "issues": ""
     },
     {
@@ -950,7 +950,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.04273,
+      "nonwhite_ratio": 0.04269,
       "issues": ""
     },
     {
@@ -962,7 +962,7 @@
       "images": 0,
       "vector_drawings": 22,
       "external_links": 0,
-      "nonwhite_ratio": 0.19647,
+      "nonwhite_ratio": 0.19643,
       "issues": ""
     },
     {
@@ -974,7 +974,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.01832,
+      "nonwhite_ratio": 0.01828,
       "issues": ""
     },
     {
@@ -986,7 +986,7 @@
       "images": 0,
       "vector_drawings": 74,
       "external_links": 1,
-      "nonwhite_ratio": 0.21257,
+      "nonwhite_ratio": 0.21253,
       "issues": ""
     },
     {
@@ -998,7 +998,7 @@
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.14317,
+      "nonwhite_ratio": 0.14313,
       "issues": ""
     },
     {
@@ -1010,7 +1010,7 @@
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.14428,
+      "nonwhite_ratio": 0.14424,
       "issues": ""
     },
     {
@@ -1022,7 +1022,7 @@
       "images": 0,
       "vector_drawings": 4,
       "external_links": 4,
-      "nonwhite_ratio": 0.14528,
+      "nonwhite_ratio": 0.14524,
       "issues": ""
     },
     {
@@ -1034,7 +1034,7 @@
       "images": 0,
       "vector_drawings": 4,
       "external_links": 4,
-      "nonwhite_ratio": 0.1419,
+      "nonwhite_ratio": 0.14186,
       "issues": ""
     },
     {
@@ -1046,7 +1046,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.02733,
+      "nonwhite_ratio": 0.02729,
       "issues": ""
     },
     {
@@ -1058,7 +1058,7 @@
       "images": 2,
       "vector_drawings": 36,
       "external_links": 0,
-      "nonwhite_ratio": 0.17596,
+      "nonwhite_ratio": 0.17591,
       "issues": ""
     },
     {
@@ -1070,7 +1070,7 @@
       "images": 0,
       "vector_drawings": 62,
       "external_links": 0,
-      "nonwhite_ratio": 0.20825,
+      "nonwhite_ratio": 0.20821,
       "issues": ""
     },
     {
@@ -1082,7 +1082,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.13847,
+      "nonwhite_ratio": 0.13843,
       "issues": ""
     },
     {
@@ -1094,7 +1094,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.02721,
+      "nonwhite_ratio": 0.02717,
       "issues": ""
     },
     {
@@ -1106,7 +1106,7 @@
       "images": 0,
       "vector_drawings": 111,
       "external_links": 0,
-      "nonwhite_ratio": 0.23475,
+      "nonwhite_ratio": 0.23471,
       "issues": ""
     },
     {
@@ -1118,7 +1118,7 @@
       "images": 0,
       "vector_drawings": 127,
       "external_links": 0,
-      "nonwhite_ratio": 0.26587,
+      "nonwhite_ratio": 0.26583,
       "issues": ""
     },
     {
@@ -1130,7 +1130,7 @@
       "images": 0,
       "vector_drawings": 129,
       "external_links": 0,
-      "nonwhite_ratio": 0.2491,
+      "nonwhite_ratio": 0.24906,
       "issues": ""
     },
     {
@@ -1142,7 +1142,7 @@
       "images": 0,
       "vector_drawings": 55,
       "external_links": 19,
-      "nonwhite_ratio": 0.16048,
+      "nonwhite_ratio": 0.16044,
       "issues": ""
     },
     {
@@ -1154,7 +1154,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.20917,
+      "nonwhite_ratio": 0.20893,
       "issues": ""
     },
     {
@@ -1166,7 +1166,7 @@
       "images": 0,
       "vector_drawings": 32,
       "external_links": 0,
-      "nonwhite_ratio": 0.1994,
+      "nonwhite_ratio": 0.19916,
       "issues": ""
     },
     {
@@ -1178,7 +1178,7 @@
       "images": 0,
       "vector_drawings": 34,
       "external_links": 0,
-      "nonwhite_ratio": 0.14314,
+      "nonwhite_ratio": 0.14291,
       "issues": ""
     },
     {
@@ -1190,7 +1190,7 @@
       "images": 0,
       "vector_drawings": 17,
       "external_links": 0,
-      "nonwhite_ratio": 0.154,
+      "nonwhite_ratio": 0.15377,
       "issues": ""
     },
     {
@@ -1202,7 +1202,7 @@
       "images": 0,
       "vector_drawings": 31,
       "external_links": 0,
-      "nonwhite_ratio": 0.17191,
+      "nonwhite_ratio": 0.17169,
       "issues": ""
     },
     {
@@ -1214,7 +1214,7 @@
       "images": 0,
       "vector_drawings": 39,
       "external_links": 0,
-      "nonwhite_ratio": 0.18361,
+      "nonwhite_ratio": 0.18337,
       "issues": ""
     },
     {
@@ -1226,7 +1226,7 @@
       "images": 0,
       "vector_drawings": 13,
       "external_links": 0,
-      "nonwhite_ratio": 0.19632,
+      "nonwhite_ratio": 0.19607,
       "issues": ""
     },
     {
@@ -1238,7 +1238,7 @@
       "images": 0,
       "vector_drawings": 11,
       "external_links": 0,
-      "nonwhite_ratio": 0.19302,
+      "nonwhite_ratio": 0.19278,
       "issues": ""
     },
     {
@@ -1250,7 +1250,7 @@
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.12313,
+      "nonwhite_ratio": 0.12287,
       "issues": ""
     },
     {
@@ -1262,7 +1262,7 @@
       "images": 0,
       "vector_drawings": 35,
       "external_links": 0,
-      "nonwhite_ratio": 0.19049,
+      "nonwhite_ratio": 0.19053,
       "issues": ""
     },
     {
@@ -1274,7 +1274,7 @@
       "images": 0,
       "vector_drawings": 38,
       "external_links": 0,
-      "nonwhite_ratio": 0.22768,
+      "nonwhite_ratio": 0.22767,
       "issues": ""
     },
     {
@@ -1286,7 +1286,7 @@
       "images": 0,
       "vector_drawings": 23,
       "external_links": 0,
-      "nonwhite_ratio": 0.17715,
+      "nonwhite_ratio": 0.17716,
       "issues": ""
     },
     {
@@ -1298,7 +1298,7 @@
       "images": 0,
       "vector_drawings": 27,
       "external_links": 0,
-      "nonwhite_ratio": 0.21521,
+      "nonwhite_ratio": 0.21523,
       "issues": ""
     },
     {
@@ -1310,7 +1310,7 @@
       "images": 0,
       "vector_drawings": 17,
       "external_links": 0,
-      "nonwhite_ratio": 0.19181,
+      "nonwhite_ratio": 0.19182,
       "issues": ""
     },
     {
@@ -1322,7 +1322,7 @@
       "images": 0,
       "vector_drawings": 30,
       "external_links": 0,
-      "nonwhite_ratio": 0.21171,
+      "nonwhite_ratio": 0.21173,
       "issues": ""
     },
     {
@@ -1334,7 +1334,7 @@
       "images": 0,
       "vector_drawings": 16,
       "external_links": 0,
-      "nonwhite_ratio": 0.19666,
+      "nonwhite_ratio": 0.19668,
       "issues": ""
     },
     {
@@ -1346,7 +1346,7 @@
       "images": 0,
       "vector_drawings": 15,
       "external_links": 0,
-      "nonwhite_ratio": 0.16385,
+      "nonwhite_ratio": 0.16387,
       "issues": ""
     },
     {
@@ -1358,7 +1358,7 @@
       "images": 0,
       "vector_drawings": 36,
       "external_links": 0,
-      "nonwhite_ratio": 0.18762,
+      "nonwhite_ratio": 0.18765,
       "issues": ""
     },
     {
@@ -1370,7 +1370,7 @@
       "images": 0,
       "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.19648,
+      "nonwhite_ratio": 0.19651,
       "issues": ""
     },
     {
@@ -1382,7 +1382,7 @@
       "images": 0,
       "vector_drawings": 34,
       "external_links": 0,
-      "nonwhite_ratio": 0.18315,
+      "nonwhite_ratio": 0.18316,
       "issues": ""
     },
     {
@@ -1394,7 +1394,7 @@
       "images": 0,
       "vector_drawings": 29,
       "external_links": 0,
-      "nonwhite_ratio": 0.20761,
+      "nonwhite_ratio": 0.20762,
       "issues": ""
     },
     {
@@ -1402,23 +1402,23 @@
       "page": 22,
       "chapter": "Chapter 23",
       "status": "PASS",
-      "text_characters": 2569,
+      "text_characters": 2647,
       "images": 0,
-      "vector_drawings": 34,
+      "vector_drawings": 33,
       "external_links": 0,
-      "nonwhite_ratio": 0.20829,
+      "nonwhite_ratio": 0.21736,
       "issues": ""
     },
     {
       "language": "es-419",
       "page": 23,
-      "chapter": "Chapter 25",
+      "chapter": "Chapter 24",
       "status": "PASS",
-      "text_characters": 2885,
+      "text_characters": 2851,
       "images": 0,
-      "vector_drawings": 10,
+      "vector_drawings": 11,
       "external_links": 0,
-      "nonwhite_ratio": 0.20929,
+      "nonwhite_ratio": 0.20431,
       "issues": ""
     },
     {
@@ -1426,11 +1426,11 @@
       "page": 24,
       "chapter": "Chapter 25",
       "status": "PASS",
-      "text_characters": 2245,
+      "text_characters": 2137,
       "images": 0,
       "vector_drawings": 39,
       "external_links": 0,
-      "nonwhite_ratio": 0.19229,
+      "nonwhite_ratio": 0.18349,
       "issues": ""
     },
     {
@@ -1438,11 +1438,11 @@
       "page": 25,
       "chapter": "Chapter 26",
       "status": "PASS",
-      "text_characters": 2102,
+      "text_characters": 2125,
       "images": 0,
       "vector_drawings": 23,
       "external_links": 0,
-      "nonwhite_ratio": 0.17081,
+      "nonwhite_ratio": 0.17297,
       "issues": ""
     },
     {
@@ -1450,47 +1450,47 @@
       "page": 26,
       "chapter": "Chapter 27",
       "status": "PASS",
-      "text_characters": 2079,
+      "text_characters": 1720,
       "images": 0,
-      "vector_drawings": 33,
+      "vector_drawings": 14,
       "external_links": 0,
-      "nonwhite_ratio": 0.18251,
+      "nonwhite_ratio": 0.13198,
       "issues": ""
     },
     {
       "language": "es-419",
       "page": 27,
-      "chapter": "Chapter 28",
+      "chapter": "Chapter 27",
       "status": "PASS",
-      "text_characters": 2233,
+      "text_characters": 2272,
       "images": 0,
-      "vector_drawings": 23,
+      "vector_drawings": 19,
       "external_links": 0,
-      "nonwhite_ratio": 0.17924,
+      "nonwhite_ratio": 0.17539,
       "issues": ""
     },
     {
       "language": "es-419",
       "page": 28,
-      "chapter": "Chapter 29",
+      "chapter": "Chapter 28",
       "status": "PASS",
-      "text_characters": 2950,
+      "text_characters": 2107,
       "images": 0,
-      "vector_drawings": 0,
+      "vector_drawings": 23,
       "external_links": 0,
-      "nonwhite_ratio": 0.19846,
+      "nonwhite_ratio": 0.17338,
       "issues": ""
     },
     {
       "language": "es-419",
       "page": 29,
-      "chapter": "Chapter 30",
+      "chapter": "Chapter 29",
       "status": "PASS",
-      "text_characters": 2616,
+      "text_characters": 2782,
       "images": 0,
-      "vector_drawings": 26,
+      "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.20806,
+      "nonwhite_ratio": 0.20145,
       "issues": ""
     },
     {
@@ -1498,11 +1498,11 @@
       "page": 30,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2706,
+      "text_characters": 2614,
       "images": 0,
-      "vector_drawings": 36,
-      "external_links": 2,
-      "nonwhite_ratio": 0.21808,
+      "vector_drawings": 37,
+      "external_links": 0,
+      "nonwhite_ratio": 0.22041,
       "issues": ""
     },
     {
@@ -1510,11 +1510,11 @@
       "page": 31,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 3009,
+      "text_characters": 2862,
       "images": 0,
-      "vector_drawings": 5,
-      "external_links": 5,
-      "nonwhite_ratio": 0.20423,
+      "vector_drawings": 26,
+      "external_links": 4,
+      "nonwhite_ratio": 0.21938,
       "issues": ""
     },
     {
@@ -1522,11 +1522,11 @@
       "page": 32,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2876,
+      "text_characters": 3026,
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.19433,
+      "nonwhite_ratio": 0.20469,
       "issues": ""
     },
     {
@@ -1534,11 +1534,11 @@
       "page": 33,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2979,
+      "text_characters": 2967,
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.20275,
+      "nonwhite_ratio": 0.19966,
       "issues": ""
     },
     {
@@ -1546,11 +1546,11 @@
       "page": 34,
       "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 1966,
+      "text_characters": 2714,
       "images": 0,
-      "vector_drawings": 37,
-      "external_links": 1,
-      "nonwhite_ratio": 0.18214,
+      "vector_drawings": 4,
+      "external_links": 4,
+      "nonwhite_ratio": 0.1895,
       "issues": ""
     },
     {
@@ -1558,11 +1558,11 @@
       "page": 35,
       "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 3086,
+      "text_characters": 2122,
       "images": 0,
-      "vector_drawings": 27,
+      "vector_drawings": 41,
       "external_links": 0,
-      "nonwhite_ratio": 0.21978,
+      "nonwhite_ratio": 0.18518,
       "issues": ""
     },
     {
@@ -1570,23 +1570,23 @@
       "page": 36,
       "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 2431,
+      "text_characters": 2845,
       "images": 0,
-      "vector_drawings": 22,
+      "vector_drawings": 31,
       "external_links": 0,
-      "nonwhite_ratio": 0.19274,
+      "nonwhite_ratio": 0.22019,
       "issues": ""
     },
     {
       "language": "es-419",
       "page": 37,
-      "chapter": "Chapter 32",
+      "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 2795,
+      "text_characters": 2313,
       "images": 0,
-      "vector_drawings": 37,
+      "vector_drawings": 13,
       "external_links": 0,
-      "nonwhite_ratio": 0.23156,
+      "nonwhite_ratio": 0.18032,
       "issues": ""
     },
     {
@@ -1594,11 +1594,11 @@
       "page": 38,
       "chapter": "Chapter 32",
       "status": "PASS",
-      "text_characters": 2906,
+      "text_characters": 2996,
       "images": 0,
-      "vector_drawings": 79,
+      "vector_drawings": 57,
       "external_links": 0,
-      "nonwhite_ratio": 0.27352,
+      "nonwhite_ratio": 0.26184,
       "issues": ""
     },
     {
@@ -1606,11 +1606,11 @@
       "page": 39,
       "chapter": "Chapter 32",
       "status": "PASS",
-      "text_characters": 2496,
+      "text_characters": 2954,
       "images": 0,
-      "vector_drawings": 60,
+      "vector_drawings": 70,
       "external_links": 0,
-      "nonwhite_ratio": 0.22593,
+      "nonwhite_ratio": 0.26496,
       "issues": ""
     },
     {
@@ -1618,11 +1618,23 @@
       "page": 40,
       "chapter": "Chapter 32",
       "status": "PASS",
-      "text_characters": 1948,
+      "text_characters": 1999,
       "images": 0,
-      "vector_drawings": 50,
-      "external_links": 19,
-      "nonwhite_ratio": 0.19666,
+      "vector_drawings": 54,
+      "external_links": 2,
+      "nonwhite_ratio": 0.20536,
+      "issues": ""
+    },
+    {
+      "language": "es-419",
+      "page": 41,
+      "chapter": "Chapter 32",
+      "status": "PASS",
+      "text_characters": 1532,
+      "images": 0,
+      "vector_drawings": 27,
+      "external_links": 17,
+      "nonwhite_ratio": 0.12813,
       "issues": ""
     },
     {
@@ -1634,7 +1646,7 @@
       "images": 0,
       "vector_drawings": 10,
       "external_links": 0,
-      "nonwhite_ratio": 0.20446,
+      "nonwhite_ratio": 0.20421,
       "issues": ""
     },
     {
@@ -1646,7 +1658,7 @@
       "images": 0,
       "vector_drawings": 33,
       "external_links": 0,
-      "nonwhite_ratio": 0.19512,
+      "nonwhite_ratio": 0.19488,
       "issues": ""
     },
     {
@@ -1658,7 +1670,7 @@
       "images": 0,
       "vector_drawings": 33,
       "external_links": 0,
-      "nonwhite_ratio": 0.159,
+      "nonwhite_ratio": 0.15876,
       "issues": ""
     },
     {
@@ -1666,23 +1678,23 @@
       "page": 4,
       "chapter": "Chapter 2",
       "status": "PASS",
-      "text_characters": 2066,
+      "text_characters": 1729,
       "images": 0,
-      "vector_drawings": 32,
+      "vector_drawings": 17,
       "external_links": 0,
-      "nonwhite_ratio": 0.17204,
+      "nonwhite_ratio": 0.13126,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 5,
-      "chapter": "Chapter 3",
+      "chapter": "Chapter 2",
       "status": "PASS",
-      "text_characters": 2129,
+      "text_characters": 2266,
       "images": 0,
-      "vector_drawings": 16,
+      "vector_drawings": 31,
       "external_links": 0,
-      "nonwhite_ratio": 0.15135,
+      "nonwhite_ratio": 0.17691,
       "issues": ""
     },
     {
@@ -1690,11 +1702,11 @@
       "page": 6,
       "chapter": "Chapter 3",
       "status": "PASS",
-      "text_characters": 2056,
+      "text_characters": 1881,
       "images": 0,
       "vector_drawings": 39,
       "external_links": 0,
-      "nonwhite_ratio": 0.18582,
+      "nonwhite_ratio": 0.17993,
       "issues": ""
     },
     {
@@ -1702,11 +1714,11 @@
       "page": 7,
       "chapter": "Chapter 4",
       "status": "PASS",
-      "text_characters": 2651,
+      "text_characters": 2643,
       "images": 0,
       "vector_drawings": 15,
       "external_links": 0,
-      "nonwhite_ratio": 0.19198,
+      "nonwhite_ratio": 0.19292,
       "issues": ""
     },
     {
@@ -1714,11 +1726,11 @@
       "page": 8,
       "chapter": "Chapter 6",
       "status": "PASS",
-      "text_characters": 2522,
+      "text_characters": 2561,
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.17325,
+      "nonwhite_ratio": 0.17289,
       "issues": ""
     },
     {
@@ -1726,23 +1738,23 @@
       "page": 9,
       "chapter": "Chapter 7",
       "status": "PASS",
-      "text_characters": 2003,
+      "text_characters": 1536,
       "images": 0,
-      "vector_drawings": 23,
+      "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.16474,
+      "nonwhite_ratio": 0.10339,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 10,
-      "chapter": "Chapter 8",
+      "chapter": "Chapter 7",
       "status": "PASS",
-      "text_characters": 2902,
+      "text_characters": 2267,
       "images": 0,
-      "vector_drawings": 26,
+      "vector_drawings": 36,
       "external_links": 0,
-      "nonwhite_ratio": 0.22542,
+      "nonwhite_ratio": 0.19453,
       "issues": ""
     },
     {
@@ -1750,71 +1762,71 @@
       "page": 11,
       "chapter": "Chapter 9",
       "status": "PASS",
-      "text_characters": 2077,
+      "text_characters": 2391,
       "images": 0,
-      "vector_drawings": 47,
+      "vector_drawings": 37,
       "external_links": 0,
-      "nonwhite_ratio": 0.1996,
+      "nonwhite_ratio": 0.21214,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 12,
-      "chapter": "Chapter 10",
+      "chapter": "Chapter 9",
       "status": "PASS",
-      "text_characters": 2960,
+      "text_characters": 2420,
       "images": 0,
-      "vector_drawings": 26,
+      "vector_drawings": 33,
       "external_links": 0,
-      "nonwhite_ratio": 0.22287,
+      "nonwhite_ratio": 0.20523,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 13,
-      "chapter": "Chapter 12",
+      "chapter": "Chapter 11",
       "status": "PASS",
-      "text_characters": 2546,
+      "text_characters": 2530,
       "images": 0,
-      "vector_drawings": 27,
+      "vector_drawings": 26,
       "external_links": 0,
-      "nonwhite_ratio": 0.19728,
+      "nonwhite_ratio": 0.19257,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 14,
-      "chapter": "Chapter 13",
+      "chapter": "Chapter 12",
       "status": "PASS",
-      "text_characters": 2587,
+      "text_characters": 2586,
       "images": 0,
-      "vector_drawings": 25,
+      "vector_drawings": 17,
       "external_links": 0,
-      "nonwhite_ratio": 0.20615,
+      "nonwhite_ratio": 0.18651,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 15,
-      "chapter": "Chapter 15",
+      "chapter": "Chapter 14",
       "status": "PASS",
-      "text_characters": 2523,
+      "text_characters": 2616,
       "images": 0,
       "vector_drawings": 30,
       "external_links": 0,
-      "nonwhite_ratio": 0.20478,
+      "nonwhite_ratio": 0.21445,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 16,
-      "chapter": "Chapter 16",
+      "chapter": "Chapter 15",
       "status": "PASS",
-      "text_characters": 2717,
+      "text_characters": 2740,
       "images": 0,
-      "vector_drawings": 14,
+      "vector_drawings": 16,
       "external_links": 0,
-      "nonwhite_ratio": 0.19807,
+      "nonwhite_ratio": 0.20263,
       "issues": ""
     },
     {
@@ -1822,71 +1834,71 @@
       "page": 17,
       "chapter": "Chapter 17",
       "status": "PASS",
-      "text_characters": 1950,
+      "text_characters": 1980,
       "images": 0,
-      "vector_drawings": 33,
+      "vector_drawings": 15,
       "external_links": 0,
-      "nonwhite_ratio": 0.17324,
+      "nonwhite_ratio": 0.15027,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 18,
-      "chapter": "Chapter 19",
+      "chapter": "Chapter 17",
       "status": "PASS",
-      "text_characters": 2460,
+      "text_characters": 2045,
       "images": 0,
-      "vector_drawings": 25,
+      "vector_drawings": 36,
       "external_links": 0,
-      "nonwhite_ratio": 0.19838,
+      "nonwhite_ratio": 0.18576,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 19,
-      "chapter": "Chapter 20",
+      "chapter": "Chapter 19",
       "status": "PASS",
-      "text_characters": 2498,
+      "text_characters": 2486,
       "images": 0,
-      "vector_drawings": 33,
+      "vector_drawings": 21,
       "external_links": 0,
-      "nonwhite_ratio": 0.19209,
+      "nonwhite_ratio": 0.19674,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 20,
-      "chapter": "Chapter 21",
+      "chapter": "Chapter 20",
       "status": "PASS",
-      "text_characters": 2414,
+      "text_characters": 2352,
       "images": 0,
-      "vector_drawings": 29,
+      "vector_drawings": 35,
       "external_links": 0,
-      "nonwhite_ratio": 0.19271,
+      "nonwhite_ratio": 0.18196,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 21,
-      "chapter": "Chapter 23",
+      "chapter": "Chapter 21",
       "status": "PASS",
-      "text_characters": 2364,
+      "text_characters": 2431,
       "images": 0,
-      "vector_drawings": 33,
+      "vector_drawings": 30,
       "external_links": 0,
-      "nonwhite_ratio": 0.19669,
+      "nonwhite_ratio": 0.19295,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 22,
-      "chapter": "Chapter 24",
+      "chapter": "Chapter 23",
       "status": "PASS",
-      "text_characters": 2857,
+      "text_characters": 2618,
       "images": 0,
-      "vector_drawings": 12,
+      "vector_drawings": 24,
       "external_links": 0,
-      "nonwhite_ratio": 0.20665,
+      "nonwhite_ratio": 0.20408,
       "issues": ""
     },
     {
@@ -1894,64 +1906,76 @@
       "page": 23,
       "chapter": "Chapter 25",
       "status": "PASS",
-      "text_characters": 2256,
+      "text_characters": 2661,
       "images": 0,
-      "vector_drawings": 39,
+      "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.19654,
+      "nonwhite_ratio": 0.1851,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 24,
-      "chapter": "Chapter 26",
+      "chapter": "Chapter 25",
       "status": "PASS",
-      "text_characters": 2133,
+      "text_characters": 2327,
       "images": 0,
-      "vector_drawings": 23,
+      "vector_drawings": 39,
       "external_links": 0,
-      "nonwhite_ratio": 0.17382,
+      "nonwhite_ratio": 0.19495,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 25,
-      "chapter": "Chapter 27",
+      "chapter": "Chapter 26",
       "status": "PASS",
-      "text_characters": 2022,
+      "text_characters": 2139,
       "images": 0,
-      "vector_drawings": 33,
+      "vector_drawings": 23,
       "external_links": 0,
-      "nonwhite_ratio": 0.17742,
+      "nonwhite_ratio": 0.17641,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 26,
-      "chapter": "Chapter 28",
+      "chapter": "Chapter 27",
       "status": "PASS",
-      "text_characters": 2254,
+      "text_characters": 2091,
       "images": 0,
-      "vector_drawings": 23,
+      "vector_drawings": 33,
       "external_links": 0,
-      "nonwhite_ratio": 0.18298,
+      "nonwhite_ratio": 0.18676,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 27,
+      "chapter": "Chapter 28",
+      "status": "PASS",
+      "text_characters": 2266,
+      "images": 0,
+      "vector_drawings": 23,
+      "external_links": 0,
+      "nonwhite_ratio": 0.18369,
+      "issues": ""
+    },
+    {
+      "language": "pt-BR",
+      "page": 28,
       "chapter": "Chapter 29",
       "status": "PASS",
       "text_characters": 2801,
       "images": 0,
       "vector_drawings": 0,
       "external_links": 0,
-      "nonwhite_ratio": 0.19034,
+      "nonwhite_ratio": 0.19041,
       "issues": ""
     },
     {
       "language": "pt-BR",
-      "page": 28,
+      "page": 29,
       "chapter": "Chapter 30",
       "status": "PASS",
       "text_characters": 2695,
@@ -1963,26 +1987,14 @@
     },
     {
       "language": "pt-BR",
-      "page": 29,
+      "page": 30,
       "chapter": "Chapter 30",
       "status": "PASS",
       "text_characters": 2688,
       "images": 0,
       "vector_drawings": 35,
       "external_links": 3,
-      "nonwhite_ratio": 0.20961,
-      "issues": ""
-    },
-    {
-      "language": "pt-BR",
-      "page": 30,
-      "chapter": "Chapter 30",
-      "status": "PASS",
-      "text_characters": 2872,
-      "images": 0,
-      "vector_drawings": 5,
-      "external_links": 5,
-      "nonwhite_ratio": 0.1953,
+      "nonwhite_ratio": 0.20964,
       "issues": ""
     },
     {
@@ -1990,11 +2002,11 @@
       "page": 31,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2924,
+      "text_characters": 2872,
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.19672,
+      "nonwhite_ratio": 0.19531,
       "issues": ""
     },
     {
@@ -2002,23 +2014,23 @@
       "page": 32,
       "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2776,
+      "text_characters": 2924,
       "images": 0,
       "vector_drawings": 5,
       "external_links": 5,
-      "nonwhite_ratio": 0.18776,
+      "nonwhite_ratio": 0.19676,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 33,
-      "chapter": "Chapter 31",
+      "chapter": "Chapter 30",
       "status": "PASS",
-      "text_characters": 2066,
+      "text_characters": 2776,
       "images": 0,
-      "vector_drawings": 39,
-      "external_links": 0,
-      "nonwhite_ratio": 0.18755,
+      "vector_drawings": 5,
+      "external_links": 5,
+      "nonwhite_ratio": 0.18778,
       "issues": ""
     },
     {
@@ -2026,11 +2038,11 @@
       "page": 34,
       "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 2877,
+      "text_characters": 2066,
       "images": 0,
-      "vector_drawings": 40,
+      "vector_drawings": 39,
       "external_links": 0,
-      "nonwhite_ratio": 0.22967,
+      "nonwhite_ratio": 0.18754,
       "issues": ""
     },
     {
@@ -2038,23 +2050,23 @@
       "page": 35,
       "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 2407,
+      "text_characters": 2877,
       "images": 0,
-      "vector_drawings": 18,
+      "vector_drawings": 40,
       "external_links": 0,
-      "nonwhite_ratio": 0.18891,
+      "nonwhite_ratio": 0.2297,
       "issues": ""
     },
     {
       "language": "pt-BR",
       "page": 36,
-      "chapter": "Chapter 32",
+      "chapter": "Chapter 31",
       "status": "PASS",
-      "text_characters": 2729,
+      "text_characters": 2407,
       "images": 0,
-      "vector_drawings": 51,
+      "vector_drawings": 18,
       "external_links": 0,
-      "nonwhite_ratio": 0.23108,
+      "nonwhite_ratio": 0.18892,
       "issues": ""
     },
     {
@@ -2062,11 +2074,11 @@
       "page": 37,
       "chapter": "Chapter 32",
       "status": "PASS",
-      "text_characters": 3024,
+      "text_characters": 2729,
       "images": 0,
-      "vector_drawings": 72,
+      "vector_drawings": 51,
       "external_links": 0,
-      "nonwhite_ratio": 0.27084,
+      "nonwhite_ratio": 0.23106,
       "issues": ""
     },
     {
@@ -2074,11 +2086,11 @@
       "page": 38,
       "chapter": "Chapter 32",
       "status": "PASS",
-      "text_characters": 2104,
+      "text_characters": 3024,
       "images": 0,
-      "vector_drawings": 53,
+      "vector_drawings": 72,
       "external_links": 0,
-      "nonwhite_ratio": 0.2085,
+      "nonwhite_ratio": 0.27089,
       "issues": ""
     },
     {
@@ -2086,11 +2098,23 @@
       "page": 39,
       "chapter": "Chapter 32",
       "status": "PASS",
+      "text_characters": 2104,
+      "images": 0,
+      "vector_drawings": 53,
+      "external_links": 0,
+      "nonwhite_ratio": 0.20852,
+      "issues": ""
+    },
+    {
+      "language": "pt-BR",
+      "page": 40,
+      "chapter": "Chapter 32",
+      "status": "PASS",
       "text_characters": 1635,
       "images": 0,
       "vector_drawings": 41,
       "external_links": 19,
-      "nonwhite_ratio": 0.15612,
+      "nonwhite_ratio": 0.15614,
       "issues": ""
     }
   ],

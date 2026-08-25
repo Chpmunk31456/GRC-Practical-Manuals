@@ -31,7 +31,7 @@
   "localized_full_source_status": "draft-human-review-required",
   "publication_qa_candidate": {
     "source_branch": "build/iso-iec-42001-manual-02-2026",
-    "source_commit": "b1ddffa6a33376ec72db570d8437f996cf61b97d",
+    "source_commit": "647c88fa905a16cba4e3ec162a32aad56f48c58b",
     "generation_date": "2026-08-24",
     "edition_version": "1.0 publication QA candidate",
     "review_status": "draft-human-review-required",

@@ -7,7 +7,7 @@ This directory contains controlled **publication QA candidates** for Manual 02. 
 - Manual: `02`
 - Edition/version: `1.0 publication QA candidate`
 - Source branch: `build/iso-iec-42001-manual-02-2026`
-- Source commit: `b1ddffa6a33376ec72db570d8437f996cf61b97d`
+- Source commit: `647c88fa905a16cba4e3ec162a32aad56f48c58b`
 - Generation date: `2026-08-24`
 - English status: controlled-source publication QA candidate
 - Spanish and Brazilian Portuguese status: **DRAFT — HUMAN SEMANTIC REVIEW REQUIRED**
@@ -32,12 +32,12 @@ Run from the repository root:
 
 ```bash
 python3 scripts/generate_iso42001_publication.py \
-  --source-commit b1ddffa6a33376ec72db570d8437f996cf61b97d \
+  --source-commit 647c88fa905a16cba4e3ec162a32aad56f48c58b \
   --generation-date 2026-08-24 \
   --force
 
 python3 scripts/qa_iso42001_publication.py \
-  --source-commit b1ddffa6a33376ec72db570d8437f996cf61b97d \
+  --source-commit 647c88fa905a16cba4e3ec162a32aad56f48c58b \
   --generation-date 2026-08-24
 ```
 

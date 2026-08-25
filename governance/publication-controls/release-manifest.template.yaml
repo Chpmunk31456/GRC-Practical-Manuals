@@ -1,0 +1,52 @@
+schema_version: "1.0"
+manual_id: "replace-with-manual-id"
+manual_number: 0
+title: "replace-with-title"
+version: "0.0.0"
+release_status: "release-candidate"
+languages:
+  - en
+repository: "Chpmunk31456/GRC-Practical-Manuals"
+source_branch: "replace-with-branch"
+release_commit_sha: "replace-with-40-character-git-sha"
+source_verification_date: "YYYY-MM-DD"
+authoritative_source_evidence: null
+translation_status:
+  en: "controlled-source"
+  es-419: "not-applicable-or-status"
+  pt-BR: "not-applicable-or-status"
+editorial_status:
+  en: "pending"
+  es-419: "pending"
+  pt-BR: "pending"
+human_approval:
+  status: "pending"
+  evidence: null
+qa:
+  visual: "pending"
+  accessibility: "pending"
+  repository_security: "pending"
+  page_by_page: "pending"
+  trilingual_parity: "pending"
+artifacts:
+  - filename: "replace-with-artifact-name.pdf"
+    language: "en"
+    format: "pdf"
+    source_commit: "replace-with-40-character-git-sha"
+    generated_date: "YYYY-MM-DD"
+    generation_tool: null
+    bytes: null
+    sha256: null
+    accessibility_status: "pending"
+    visual_qa_status: "pending"
+github_release:
+  tag: null
+  url: null
+zenodo:
+  concept_doi: null
+  version_doi: null
+  record_url: null
+release_date: null
+known_exceptions: []
+supersedes: null
+superseded_by: null

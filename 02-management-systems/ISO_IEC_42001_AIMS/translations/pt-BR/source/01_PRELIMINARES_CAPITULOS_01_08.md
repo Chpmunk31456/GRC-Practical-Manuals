@@ -92,7 +92,7 @@ O arquivo-fonte em Word contém um sumário nativo e um guia permanente de capí
 
 # 2. Arquitetura do SGIA e ciclo Planejar-Fazer-Verificar-Agir
 
-*O SGIA segue a estrutura harmonizada dos sistemas de gestão e um ciclo contínuo Planejar-Fazer-Verificar-Agir (PDCA).* 
+*O SGIA segue a estrutura harmonizada dos sistemas de gestão e um ciclo contínuo Planejar-Fazer-Verificar-Agir (PDCA).*
 
 <img src="../../../assets/pt-BR/media/image1.png" style="width:6.15in;height:3.23274in" alt="As cláusulas interagem continuamente; a norma não é uma lista de verificação linear concluída uma única vez." />
 

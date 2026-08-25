@@ -411,6 +411,20 @@ def main() -> int:
         if phrase not in precheck_text:
             errors.append(f"AI-assisted precheck is missing boundary phrase: {phrase}")
 
+    if baseline.get("editorial_qa_status") != "advisory-pass-human-review-open":
+        errors.append("editorial QA must remain advisory with human review open")
+    editorial_relative = baseline.get("editorial_qa_report")
+    editorial_path = manual_root / str(editorial_relative)
+    editorial_text = editorial_path.read_text(encoding="utf-8") if editorial_path.is_file() else ""
+    for phrase in (
+        "Grammar 3 · Logic 2 · Flow 5",
+        "does not close the human semantic-review gate",
+        "does not determine conformity",
+        "EDITORIAL QA STATUS: PASS WITH ADVISORY ITEMS",
+    ):
+        if phrase not in editorial_text:
+            errors.append(f"editorial QA report is missing boundary/result phrase: {phrase}")
+
     generator_relative = baseline.get("localized_graphic_generator")
     generator_path = repository_path(
         generator_relative, "localized_graphic_generator", errors
@@ -545,6 +559,7 @@ def main() -> int:
     print(f"  placed source graphics checked: {required_graphics}")
     print(f"  controlled sources checked: {len(required_source_ids)}")
     print(f"  required topics checked: {len(baseline.get('required_topics', []))}")
+    print("  editorial QA advisory checked: 1")
     for error in errors:
         print(f"  ERROR: {error}")
     if errors:

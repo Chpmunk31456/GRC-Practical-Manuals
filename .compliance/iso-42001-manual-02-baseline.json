@@ -43,6 +43,8 @@
   },
   "localized_graphic_generator": "scripts/generate_iso42001_localized_graphics.py",
   "ai_assisted_precheck": "translations/AI_ASSISTED_PRECHECK_01.md",
+  "editorial_qa_report": "EDITORIAL_QA_REVIEW_01.md",
+  "editorial_qa_status": "advisory-pass-human-review-open",
   "localized_full_required_phrases": {
     "es-419": [
       "Declaración de Aplicabilidad",

@@ -92,7 +92,7 @@ El archivo fuente en Word contiene una tabla de contenido nativa y una guía per
 
 # 2. Arquitectura del SGIA y ciclo Planificar-Hacer-Verificar-Actuar
 
-*El SGIA sigue la estructura armonizada de los sistemas de gestión y un ciclo continuo Planificar-Hacer-Verificar-Actuar (PHVA).* 
+*El SGIA sigue la estructura armonizada de los sistemas de gestión y un ciclo continuo Planificar-Hacer-Verificar-Actuar (PHVA).*
 
 <img src="../../../assets/es-419/media/image1.png" style="width:6.15in;height:3.23274in" alt="Las cláusulas interactúan de forma continua; la norma no es una lista lineal que se completa una sola vez." />
 

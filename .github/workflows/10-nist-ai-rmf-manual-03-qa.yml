@@ -1,0 +1,38 @@
+name: "10 - NIST AI RMF Manual 03 QA"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - "build/iso-iec-42001-manual-02-2026"
+    paths:
+      - "01-foundations/NIST_AI_RMF_1.0/**"
+      - ".compliance/nist-ai-rmf-manual-03-baseline.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "VISUAL_LEARNING_STANDARD.md"
+      - "scripts/nist_ai_rmf_manual_03_qa.py"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/10-nist-ai-rmf-manual-03-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nist-ai-rmf-manual-03-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-nist-ai-rmf-manual-03:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate the NIST AI RMF controlled implementation intake
+        run: python3 scripts/nist_ai_rmf_manual_03_qa.py
+      - name: Validate the authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate the controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog

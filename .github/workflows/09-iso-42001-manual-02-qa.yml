@@ -1,0 +1,53 @@
+name: "09 - ISO 42001 Manual 02 QA"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - "maintenance/**"
+    paths:
+      - "02-management-systems/ISO_IEC_42001_AIMS/**"
+      - ".compliance/iso-42001-manual-02-baseline.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "VISUAL_LEARNING_STANDARD.md"
+      - "scripts/iso_42001_manual_02_qa.py"
+      - "scripts/iso_42001_human_review_gate_qa.py"
+      - "scripts/generate_iso42001_publication.py"
+      - "scripts/qa_iso42001_publication.py"
+      - "qa/manual02-document-processing/**"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/09-iso-42001-manual-02-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iso-42001-manual-02-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-iso-42001-manual-02:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate the ISO 42001 controlled trilingual implementation intake
+        run: python3 scripts/iso_42001_manual_02_qa.py
+      - name: Validate the human semantic-review boundary
+        run: python3 scripts/iso_42001_human_review_gate_qa.py
+      - name: Validate the authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate the controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog
+      - name: Install publication-QA dependencies
+        run: python3 -m pip install --disable-pip-version-check python-docx==1.2.0 lxml==6.1.1 PyMuPDF==1.26.6 Pillow==12.3.0 pypdf==6.10.0
+      - name: Validate DOCX, PDF, page-level, and trilingual publication QA
+        run: >-
+          python3 scripts/qa_iso42001_publication.py
+          --source-commit 647c88fa905a16cba4e3ec162a32aad56f48c58b
+          --generation-date 2026-08-24
+      - name: Confirm publication QA evidence is reproducible
+        run: git diff --exit-code -- qa/manual02-document-processing

@@ -20,6 +20,10 @@ Programas estruturados para estabelecer, operar, revisar e melhorar continuament
 
 - [ISO/IEC 27001 and ISO/IEC 27002 README](./ISO_IEC_27001_27002/README.md) — English, Latin American Spanish, and Brazilian Portuguese editions.
 
+## Manual in controlled development / Manual en desarrollo controlado / Manual em desenvolvimento controlado
+
+- [Manual 02 — ISO/IEC 42001 AI Management System Implementation](./ISO_IEC_42001_AIMS/README.md) — English source intake and proportional implementation paths; localized editions are pending.
+
 ## Notice / Aviso / Aviso
 
 This material does not replace official ISO publications, certification-body requirements, legal advice, regulatory guidance, or qualified professional review.

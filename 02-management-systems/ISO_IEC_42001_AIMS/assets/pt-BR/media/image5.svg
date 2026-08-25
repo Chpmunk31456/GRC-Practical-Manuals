@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1657" height="871" viewBox="0 0 1657 871" role="img" aria-labelledby="title desc">
+<title id="title">As conclusões de auditoria do SGIA exigem critérios, evidências, julgamento e acompanhamento.</title>
+<desc id="desc">1. CRITÉRIOS: Cláusula; 2. AMOSTRA: Baseada em risco; 3. EVIDÊNCIA: Rastreável; 4. TESTE: Desenho + operação; 5. CONSTATAÇÃO: Não conformidade; 6. ACOMPANHAR: Ação corretiva</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="83" y="250" width="235" height="195" rx="16" fill="#17324d" stroke="#10253b" stroke-width="3"/>
+<circle cx="111" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="111" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">1</text>
+<text x="200.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">CRITÉRIOS</text>
+<text x="200.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Cláusula</text>
+<line x1="321" y1="347.5" x2="331" y2="347.5" stroke="#10253b" stroke-width="4"/>
+<polygon points="331,347.5 320,339.5 320,355.5" fill="#10253b"/>
+<rect x="334" y="250" width="235" height="195" rx="16" fill="#2f75b5" stroke="#10253b" stroke-width="3"/>
+<circle cx="362" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="362" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">2</text>
+<text x="451.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">AMOSTRA</text>
+<text x="451.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Baseada em risco</text>
+<line x1="572" y1="347.5" x2="582" y2="347.5" stroke="#10253b" stroke-width="4"/>
+<polygon points="582,347.5 571,339.5 571,355.5" fill="#10253b"/>
+<rect x="585" y="250" width="235" height="195" rx="16" fill="#11777d" stroke="#10253b" stroke-width="3"/>
+<circle cx="613" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="613" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">3</text>
+<text x="702.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">EVIDÊNCIA</text>
+<text x="702.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Rastreável</text>
+<line x1="823" y1="347.5" x2="833" y2="347.5" stroke="#10253b" stroke-width="4"/>
+<polygon points="833,347.5 822,339.5 822,355.5" fill="#10253b"/>
+<rect x="836" y="250" width="235" height="195" rx="16" fill="#5b3f91" stroke="#10253b" stroke-width="3"/>
+<circle cx="864" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="864" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">4</text>
+<text x="953.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">TESTE</text>
+<text x="953.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Desenho + operação</text>
+<line x1="1074" y1="347.5" x2="1084" y2="347.5" stroke="#10253b" stroke-width="4"/>
+<polygon points="1084,347.5 1073,339.5 1073,355.5" fill="#10253b"/>
+<rect x="1087" y="250" width="235" height="195" rx="16" fill="#9e5700" stroke="#10253b" stroke-width="3"/>
+<circle cx="1115" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="1115" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">5</text>
+<text x="1204.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">CONSTATAÇÃO</text>
+<text x="1204.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Não conformidade</text>
+<line x1="1325" y1="347.5" x2="1335" y2="347.5" stroke="#10253b" stroke-width="4"/>
+<polygon points="1335,347.5 1324,339.5 1324,355.5" fill="#10253b"/>
+<rect x="1338" y="250" width="235" height="195" rx="16" fill="#27815f" stroke="#10253b" stroke-width="3"/>
+<circle cx="1366" cy="280" r="18" fill="#ffffff" stroke="#10253b" stroke-width="2"/>
+<text x="1366" y="287" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#10253b">6</text>
+<text x="1455.5" y="342" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">ACOMPANHAR</text>
+<text x="1455.5" y="387" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#ffffff">Ação corretiva</text>
+<text x="828.5" y="570" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="29" font-weight="700" fill="#17324d"><tspan x="828.5" dy="0">As conclusões de auditoria do SGIA exigem critérios, evidências, julgamento e</tspan><tspan x="828.5" dy="40">acompanhamento.</tspan></text>
+<text x="828.5" y="790" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" fill="#526777">ISO/IEC 42001 Manual 02 · pt-BR · Figura 5</text>
+</svg>

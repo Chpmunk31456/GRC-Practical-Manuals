@@ -113,10 +113,11 @@
     },
     {
       "id": "iso-42001-aims",
-      "title": "ISO/IEC 42001 AI Management System Implementation",
+      "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
       "path": "02-management-systems/ISO_IEC_42001_AIMS",
-      "status": "planned",
-      "layout": "standard"
+      "status": "development",
+      "layout": "controlled-build",
+      "series_order": 2
     },
     {
       "id": "ai-auditing-assurance",

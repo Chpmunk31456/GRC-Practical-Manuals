@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "iso-42001-manual-02",
+  "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
+  "manual_path": "02-management-systems/ISO_IEC_42001_AIMS",
+  "development_phase": "trilingual-full-source-review",
+  "controlled_language": "en",
+  "planned_publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "localized_entry_files": {
+    "es-419": "translations/es-419/source/MANUAL_02_RUTAS_DE_IMPLEMENTACION.md",
+    "pt-BR": "translations/pt-BR/source/MANUAL_02_CAMINHOS_DE_IMPLEMENTACAO.md"
+  },
+  "localized_full_source_parts": {
+    "es-419": [
+      "translations/es-419/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+      "translations/es-419/source/02_CAPITULOS_09_16.md",
+      "translations/es-419/source/03_CAPITULOS_17_24.md",
+      "translations/es-419/source/04_CAPITULOS_25_32.md"
+    ],
+    "pt-BR": [
+      "translations/pt-BR/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+      "translations/pt-BR/source/02_CAPITULOS_09_16.md",
+      "translations/pt-BR/source/03_CAPITULOS_17_24.md",
+      "translations/pt-BR/source/04_CAPITULOS_25_32.md"
+    ]
+  },
+  "localized_full_source_status": "draft-human-review-required",
+  "publication_qa_candidate": {
+    "source_branch": "build/iso-iec-42001-manual-02-2026",
+    "source_commit": "647c88fa905a16cba4e3ec162a32aad56f48c58b",
+    "generation_date": "2026-08-24",
+    "edition_version": "1.0 publication QA candidate",
+    "review_status": "draft-human-review-required",
+    "release_ready": false,
+    "human_review_gate": "open",
+    "localized_markdown_masters": {
+      "es-419": "translations/es-419/source/Manual_02_ISO_IEC_42001_AI_Management_System_ES-419.md",
+      "pt-BR": "translations/pt-BR/source/Manual_02_ISO_IEC_42001_AI_Management_System_PT-BR.md"
+    },
+    "artifact_directory": "publication/qa-candidate",
+    "qa_report": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_DOCUMENT_PROCESSING_REPORT.json",
+    "page_qa": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_PAGE_QA.csv",
+    "checksums": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_SHA256SUMS.txt"
+  },
+  "human_review_checklist": "translations/HUMAN_SEMANTIC_REVIEW_CHECKLIST.md",
+  "human_review_gate": "open",
+  "human_review_required_languages": [
+    "es-419",
+    "pt-BR"
+  ],
+  "required_localized_chapters": 32,
+  "required_localized_source_graphics": 10,
+  "localized_graphic_asset_roots": {
+    "es-419": "assets/es-419/media",
+    "pt-BR": "assets/pt-BR/media"
+  },
+  "localized_graphic_generator": "scripts/generate_iso42001_localized_graphics.py",
+  "ai_assisted_precheck": "translations/AI_ASSISTED_PRECHECK_01.md",
+  "editorial_qa_report": "EDITORIAL_QA_REVIEW_01.md",
+  "editorial_qa_status": "advisory-pass-human-review-open",
+  "visual_qa_report": "VISUAL_QA_REVIEW_01.md",
+  "visual_qa_status": "conditional-pass-human-accessibility-review-open",
+  "localized_full_required_phrases": {
+    "es-419": [
+      "Declaración de Aplicabilidad",
+      "evaluación de impacto",
+      "auditoría interna",
+      "revisión por la dirección",
+      "acción correctiva",
+      "proveedores",
+      "no conformidad",
+      "mejora continua"
+    ],
+    "pt-BR": [
+      "Declaração de Aplicabilidade",
+      "avaliação de impacto",
+      "auditoria interna",
+      "análise crítica pela direção",
+      "ação corretiva",
+      "fornecedores",
+      "não conformidade",
+      "melhoria contínua"
+    ]
+  },
+  "localized_required_phrases": {
+    "es-419": [
+      "micro o pequeña organización",
+      "organización mediana",
+      "empresa grande o compleja",
+      "Declaración de Aplicabilidad",
+      "evaluación de impacto",
+      "auditoría interna",
+      "revisión por la dirección",
+      "acción correctiva",
+      "proveedores"
+    ],
+    "pt-BR": [
+      "micro ou pequena organização",
+      "organização de médio porte",
+      "empresa grande ou complexa",
+      "Declaração de Aplicabilidade",
+      "avaliação de impacto",
+      "auditoria interna",
+      "análise crítica pela direção",
+      "ação corretiva",
+      "fornecedores"
+    ]
+  },
+  "visual_learning_standard_path": "VISUAL_LEARNING_STANDARD.md",
+  "implementation_entry": "MANUAL_02_IMPLEMENTATION_PATHS.md",
+  "english_markdown_master": "English/ISO_IEC_42001_2023_Practical_AIMS_Manual_English_v1.0.md",
+  "english_docx_source": "English/ISO_IEC_42001_2023_Practical_AIMS_Manual_English_v1.0.docx",
+  "required_source_ids": [
+    "iso-iec-42001-2023",
+    "iso-iec-42005-2025",
+    "iso-iec-42006-2025",
+    "iso-iec-23894-2023",
+    "iso-iec-22989-2022",
+    "iso-iec-23053-2022",
+    "iso-iec-38507-2022",
+    "iso-iec-27001-2022",
+    "iso-iec-27001-2022-amd1-2024",
+    "iso-19011-2026"
+  ],
+  "implementation_paths": [
+    "essential",
+    "structured",
+    "enhanced"
+  ],
+  "required_visuals_in_implementation_entry": 3,
+  "implementation_structure": {
+    "numbered_sections": 8,
+    "subsections": 10,
+    "table_rows": 14,
+    "bullet_items": 47
+  },
+  "visual_accessibility_labels": {
+    "en": "Accessible explanation:",
+    "es-419": "Explicación accesible:",
+    "pt-BR": "Explicação acessível:"
+  },
+  "required_visual_labels": {
+    "en": [
+      "Inventory AI roles and systems",
+      "1. Scope",
+      "Traceable evidence"
+    ],
+    "es-419": [
+      "Inventariar funciones y sistemas de IA",
+      "1. Definir el alcance",
+      "Evidencia trazable"
+    ],
+    "pt-BR": [
+      "Inventariar papéis e sistemas de IA",
+      "1. Definir o escopo",
+      "Evidência rastreável"
+    ]
+  },
+  "required_placed_source_graphics": 10,
+  "required_docx_data_tables": 33,
+  "required_docx_layout_tables": 0,
+  "visual_accessibility_label": "Accessible explanation:",
+  "required_topics": [
+    "context and scope",
+    "leadership",
+    "ai policy",
+    "risk assessment",
+    "impact assessment",
+    "statement of applicability",
+    "operational control",
+    "monitoring",
+    "internal audit",
+    "management review",
+    "corrective action",
+    "continual improvement",
+    "supplier",
+    "evidence",
+    "certification readiness"
+  ],
+  "assurance_boundary": "Repository QA validates controlled structure, sources, accessibility, and evidence readiness; it does not determine conformity, certification, legal compliance, or audit success."
+}

@@ -147,7 +147,7 @@ Figura 4. Evaluación de impacto de sistemas de IA
 ## 15.1 Disparadores operacionales
 
 - Sistema de IA nuevo o modificado, uso previsto, población afectada, geografía, escala, automatización, autoridad de decisión, modelo, datos, prompt, herramienta, integración, proveedor o infraestructura.
-- Nueva ley, contrato, incidente, queja, hallazgo de auditoría, vulnerabilidad, inteligencia de amenazas, preocupación de seguridad, deriva, falla de evaluación, impacto inesperado o aviso del proveedor.
+- Nueva ley, contrato, incidente, queja, hallazgo de auditoría, vulnerabilidad, inteligencia de amenazas, preocupación de seguridad funcional, deriva, falla de evaluación, impacto inesperado o aviso del proveedor.
 - Cambios en criterios de riesgo, objetivos, controles, seguimiento, propiedad organizacional, alcance de certificación o capacidad de recursos.
 
 ## 15.2 Evidencia operacional

@@ -33,7 +33,7 @@ The complete chapter sequence is now represented in four reviewable source parts
 
 The localized sources preserve the chapter numbering, core management-system logic, Annex A control-group coverage, risk and impact distinctions, Statement/Declaração/Declaración of Applicability concepts, certification boundaries, tool-safety guidance, reusable audit templates, official-reference links, alternative text, and accessible explanations. Each language now references its own ten localized learning graphics. Editable SVG controlled sources and 1657×871 PNG derivatives are maintained under `assets/es-419/media` and `assets/pt-BR/media`. The SVG sources can be regenerated with `scripts/generate_iso42001_localized_graphics.py`; the PNG files are fixed-size exports of those controlled sources.
 
-An [AI-assisted precheck log](./AI_ASSISTED_PRECHECK_01.md) records source-language residue and terminology corrections already made. It is preparation for competent human review, not a substitute for it, and the human gate remains open.
+An [AI-assisted precheck log](./AI_ASSISTED_PRECHECK_01.md) records source-language residue and terminology corrections already made. The [controlled translation and semantic review 02](./CONTROLLED_TRANSLATION_REVIEW_02.md) records the source-order review, high-confidence corrections, graphic checks, cross-language findings, and the remaining human-review queue. These reviews prepare competent human review, do not replace it, and leave the human gate open.
 
 ## Remaining controlled work
 

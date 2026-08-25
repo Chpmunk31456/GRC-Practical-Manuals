@@ -85,7 +85,7 @@ O arquivo-fonte em Word contém um sumário nativo e um guia permanente de capí
 
 ## 1.1 O que a certificação não comprova
 
-- Não garante que toda saída de IA seja precisa, imparcial, segura, legal, confiável ou explicável.
+- Não garante que toda saída de IA seja precisa, imparcial, protegida contra ameaças, lícita, segura para as pessoas ou explicável.
 - Não certifica produtos de IA individualmente, salvo quando o escopo do SGIA certificado e o esquema sustentarem explicitamente essa alegação.
 - Não substitui testes de produto, análise jurídica, avaliação de impacto, controles de privacidade/segurança, validação de domínio ou supervisão humana.
 - Não transfere a responsabilização da organização para o organismo de certificação ou fornecedor.

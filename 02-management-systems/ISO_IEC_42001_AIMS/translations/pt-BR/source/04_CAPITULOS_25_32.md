@@ -112,7 +112,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 - Estágio 1: prontidão, escopo, sistema documentado, contexto, métodos de risco/impacto, Declaração de Aplicabilidade, auditoria interna, análise crítica pela direção e preparação para Estágio 2.
 - Estágio 2: implementação e eficácia operacional por entrevistas, amostras, registros, observação e rastreamento.
 - Resolva não conformidades com correção, causa, ação corretiva e evidência de eficácia conforme regras do esquema.
-- Decisão de certificação, certificado, supervisão, mudanças de escopo, recertificação, suspensão/retirada e melhoria contínua.
+- Decisão de certificação, certificado, auditorias de supervisão, mudanças de escopo, recertificação, suspensão/retirada e melhoria contínua.
 
 ## 29.2 Importância da ISO/IEC 42006:2025
 

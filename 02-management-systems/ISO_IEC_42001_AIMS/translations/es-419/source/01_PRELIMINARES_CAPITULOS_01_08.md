@@ -85,7 +85,7 @@ El archivo fuente en Word contiene una tabla de contenido nativa y una guía per
 
 ## 1.1 Lo que la certificación no demuestra
 
-- No garantiza que cada resultado de IA sea preciso, imparcial, seguro, lícito, confiable o explicable.
+- No garantiza que cada resultado de IA sea preciso, imparcial, protegido frente a amenazas, lícito, seguro para las personas o explicable.
 - No certifica individualmente productos de IA salvo que el alcance del SGIA certificado y el esquema respalden explícitamente esa afirmación.
 - No sustituye las pruebas de producto, el análisis legal, la evaluación de impacto, los controles de privacidad y seguridad, la validación de dominio ni la supervisión humana.
 - No transfiere la rendición de cuentas de la organización al organismo de certificación ni al proveedor.
@@ -214,7 +214,7 @@ Figura 2. Cadena para construir el alcance
 
 ## 6.1.1 Acciones sobre riesgos y oportunidades
 
-- Planifique acciones proporcionales al efecto sobre los resultados del SGIA; intégralas en los procesos en lugar de mantener únicamente un registro separado.
+- Planifique acciones proporcionales al efecto sobre los resultados del SGIA; intégrelas en los procesos en lugar de mantener únicamente un registro separado.
 - Defina acción, propietario, recurso, fecha, medida, evidencia, dependencia, decisión residual y evaluación de eficacia.
 - Las oportunidades pueden incluir mejor supervisión, calidad de datos, transparencia, evaluación, competencia, eficiencia, confianza de partes interesadas e innovación.
 - Evite que los controles previstos creen nuevos riesgos, como vigilancia excesiva, avisos inaccesibles o sobrecarga de revisión.

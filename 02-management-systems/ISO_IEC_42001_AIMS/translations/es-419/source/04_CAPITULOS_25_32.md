@@ -112,7 +112,7 @@ Figura 9. Ciclo de vida de IA de terceros
 - Etapa 1: preparación, alcance, sistema documentado, contexto, métodos de riesgo/impacto, Declaración de Aplicabilidad, auditoría interna, revisión por la dirección y preparación para Etapa 2.
 - Etapa 2: implementación y eficacia operacional mediante entrevistas, muestras, registros, observación y trazabilidad.
 - Resuelva no conformidades con corrección, causa, acción correctiva y evidencia de eficacia conforme a las reglas del esquema.
-- Decisión de certificación, certificado, vigilancia, cambios de alcance, recertificación, suspensión/retiro y mejora continua.
+- Decisión de certificación, certificado, auditorías de vigilancia, cambios de alcance, recertificación, suspensión/retiro y mejora continua.
 
 ## 29.2 Importancia de ISO/IEC 42006:2025
 
@@ -157,7 +157,7 @@ Figura 9. Ciclo de vida de IA de terceros
 | ModelScan | Análisis estático de archivos de modelos serializados |
 | CycloneDX | Formatos y herramientas de lista de materiales de software, ML e IA |
 | Open Policy Agent | Decisiones de política como código |
-| DefectDojo | Admisión, deduplicación, propiedad, remediación y reprueba de hallazgos |
+| DefectDojo | Admisión, deduplicación, propiedad, remediación y nueva prueba de hallazgos |
 | Langfuse | Trazabilidad de LLM, gestión de prompts y evaluación de código abierto |
 
 | **Gobierno de herramientas:** Utilice únicamente sistemas, modelos, cuentas, repositorios y datos autorizados. Comience con entornos aislados y datos sintéticos. Proteja credenciales, prompts, resultados, trazas, información personal y hallazgos. Registre versiones y valide resultados automatizados. |
@@ -169,7 +169,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Cree un proyecto local; registre parámetros, referencia de conjunto de datos, métricas, artefactos, propietario y aprobación; registre únicamente modelos probados; restrinja cambios al registro.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.2 DVC
 
@@ -177,7 +177,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Utilice un conjunto sintético en un repositorio de entrenamiento; versione datos y etapas del pipeline; reproduzca una ejecución; proteja almacenamiento remoto y credenciales.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.3 OpenLineage
 
@@ -185,7 +185,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Instrumente un pipeline pequeño de laboratorio; registre relaciones entre conjuntos de datos y trabajos; verifique integridad de eventos; proteja metadatos sensibles.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.4 OpenMetadata
 
@@ -193,7 +193,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Despliegue una instancia de laboratorio; catalogue conjuntos sintéticos; asigne propietarios/clasificación; documente linaje y retención; restrinja conectores.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.5 Great Expectations
 
@@ -201,7 +201,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Defina expectativas de exactitud, completitud, rango y nulos para datos sintéticos; ejecute validación; conserve suite/versión/resultados y excepciones.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.6 Evidently
 
@@ -209,7 +209,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Cree conjuntos sintéticos de referencia y actuales; ejecute un informe; defina umbrales de acción; investigue antes de reentrenar o revertir.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.7 Deepchecks
 
@@ -217,15 +217,15 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Ejecute una suite enfocada sobre datos de laboratorio aprobados; revise relevancia y falsos positivos; registre excepciones; repita después de la corrección.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.8 Giskard
 
 **Propósito:** Pruebas de IA y análisis de vulnerabilidades. Proyecto oficial: [Giskard](https://github.com/Giskard-AI/giskard)
 
-**Inicio seguro:** Conecte solo un modelo y conjunto de prueba aprobados; seleccione pruebas pertinentes; valide fallas manualmente; conserve informe y reprueba de remediación.
+**Inicio seguro:** Conecte solo un modelo y conjunto de prueba aprobados; seleccione pruebas pertinentes; valide fallas manualmente; conserve informe y nueva prueba de remediación.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.9 Promptfoo
 
@@ -233,7 +233,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Cree una suite YAML versionada con casos sintéticos y comportamiento esperado; ejecútela localmente; revise fallas; conserve configuración y resultados.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.10 Garak
 
@@ -241,7 +241,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Utilice un modelo aislado de laboratorio y un conjunto limitado de sondas aprobadas; limite solicitudes y costos; proteja resultados; valide cada hallazgo.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.11 PyRIT
 
@@ -249,7 +249,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Defina reglas escritas de laboratorio; use objetivos inocuos y datos sintéticos; establezca límites de solicitudes/tiempo/costo; proteja transcripciones y hallazgos.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.12 Inspect AI
 
@@ -257,7 +257,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Defina tarea, conjunto de datos, solver, evaluador y regla de aceptación; fije versiones; ejecute un modelo aprobado; conserve logs y limitaciones.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.13 Presidio
 
@@ -265,7 +265,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Pruebe con ejemplos sintéticos; configure reconocedores para idioma/contexto; inspeccione falsos positivos y omisiones; proteja la salida del analizador.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.14 ModelScan
 
@@ -273,7 +273,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Analice un artefacto en cuarentena; verifique fuente y hash; investigue advertencias; nunca cargue un modelo no confiable solamente para probarlo.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.15 CycloneDX
 
@@ -281,7 +281,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Genere una lista de materiales para un repositorio de laboratorio; valide componentes y versiones; vincule hallazgos con propietarios y registros de proveedores.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.16 Open Policy Agent
 
@@ -289,15 +289,15 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Escriba una regla pequeña de laboratorio para modelo/datos/uso aprobados; pruebe permitir, negar y casos con datos faltantes; haga revisión por pares; conserve autoridad humana para excepciones.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.17 DefectDojo
 
-**Propósito:** Admisión, deduplicación, propiedad, remediación y reprueba de hallazgos. Proyecto oficial: [DefectDojo](https://www.defectdojo.org/)
+**Propósito:** Admisión, deduplicación, propiedad, remediación y nueva prueba de hallazgos. Proyecto oficial: [DefectDojo](https://www.defectdojo.org/)
 
-**Inicio seguro:** Importe resultados seguros de laboratorio; valide duplicados y gravedad; asigne propietario/fecha; adjunte evidencia; cierre solo después de reprueba.
+**Inicio seguro:** Importe resultados seguros de laboratorio; valide duplicados y gravedad; asigne propietario/fecha; adjunte evidencia; cierre solo después de nueva prueba.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 ## 30.18 Langfuse
 
@@ -305,7 +305,7 @@ Figura 9. Ciclo de vida de IA de terceros
 
 **Inicio seguro:** Use un laboratorio aprobado; redacte campos sensibles; trace un flujo; restrinja acceso/retención; conecte trazas con evaluación y registros de incidentes.
 
-**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y reprueba.
+**Evidencia del SGIA:** autoridad/alcance, versiones de sistema/modelo/datos, identidad, herramienta/versión/configuración, criterios/umbrales, fecha, población fuente, resultado, validación humana, limitaciones, hallazgo, propietario/acción, aprobación y nueva prueba.
 
 # 31. Guía práctica para responsables y analistas junior, laboratorio y entrevistas
 
@@ -333,7 +333,7 @@ Figura 10. Ruta del analista junior de SGIA
 - Mantenga inventario de IA, alcance, partes interesadas, obligaciones, registros de riesgo/impacto, Declaración de Aplicabilidad, registros de proveedores, objetivos, evidencia y acciones.
 - Mapee cláusulas/controles a procesos y evidencia real del sistema; reconcilie poblaciones y versiones.
 - Pruebe control documental, competencia, puertas del ciclo de vida, linaje/calidad de datos, evaluación, uso responsable, cambio de proveedores, seguimiento, incidentes y acción correctiva.
-- Redacte hallazgos objetivos y resúmenes para responsables; siga la corrección y la reprueba de eficacia.
+- Redacte hallazgos objetivos y resúmenes para responsables; siga la corrección y la nueva prueba de eficacia.
 - Apoye auditorías internas y revisión por la dirección sin tomar decisiones reservadas a propietarios o auditores.
 
 | **Regla del laboratorio de portafolio:** Utilice una organización ficticia, datos sintéticos y modelos locales o de prueba aprobados. Nunca afirme que el proyecto está certificado, que fue auditado por un organismo acreditado o que se basa en evidencia confidencial de un empleador. |
@@ -345,7 +345,7 @@ Figura 10. Ruta del analista junior de SGIA
 - Defina contexto del SGIA, partes interesadas, funciones, alcance, política, mapa de procesos, inventario de IA, obligaciones y hoja de ruta de implementación.
 - Cree método de riesgo, seis escenarios, plan de tratamiento, Declaración de Aplicabilidad de 38 controles y dos evaluaciones de impacto utilizando conceptos de ISO/IEC 42005.
 - Construya registros de recursos, conjuntos de datos, modelo/sistema, proveedores, información al usuario, comunicación, competencia y control documental.
-- Ejecute evaluaciones sintéticas con dos herramientas de código abierto; conserve versiones, umbrales, fallas, corrección y reprueba.
+- Ejecute evaluaciones sintéticas con dos herramientas de código abierto; conserve versiones, umbrales, fallas, corrección y nueva prueba.
 - Cree objetivos/tablero, plan de auditoría interna y cinco papeles de trabajo, dos hallazgos, acciones correctivas, paquete de revisión por la dirección e informe de preparación para certificación.
 - Publique únicamente evidencia ficticia saneada y una declaración honesta de limitaciones.
 
@@ -436,7 +436,7 @@ Alcance exacto, evidencia cuidadosa, comprensión de cláusulas, redacción clar
 | Mapeo a Anexo A/control adicional | ________________________________________ |
 | Propietario/recurso/fecha/medida | ________________________________________ |
 | Riesgo residual/aprobador/condiciones | ________________________________________ |
-| Seguimiento/revisión/reprueba | ________________________________________ |
+| Seguimiento/revisión/nueva prueba | ________________________________________ |
 
 ## 32.3 Declaración de Aplicabilidad
 

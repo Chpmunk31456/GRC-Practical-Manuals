@@ -1,6 +1,8 @@
 # Manual 02 — Rutas de implementación de ISO/IEC 42001 para organizaciones de todos los tamaños
 
-**Idioma controlado de esta edición:** español neutro de América Latina (`es-419`)
+**Idioma fuente controlado:** inglés
+
+**Idioma de localización:** español neutro de América Latina (`es-419`)
 
 **Audiencia:** organizaciones que proveen, desarrollan, adquieren, despliegan, operan o utilizan sistemas de IA
 
@@ -39,7 +41,7 @@ Resultados operativos mínimos:
 
 - una persona ejecutiva responsable y una persona coordinadora del SGIA;
 - un inventario de IA dentro del alcance, con responsables y finalidades previstas;
-- evaluación documentada de riesgos e impactos antes de la aprobación;
+- evaluaciones documentadas y diferenciadas de riesgo y de impacto antes de la aprobación;
 - una política concisa de IA y reglas de uso aceptable;
 - revisión de proveedores y protecciones contractuales mínimas;
 - registros de aprobación, monitoreo, incidentes, cambios y retiro;
@@ -219,4 +221,4 @@ Después del día 90, complete el plan de tratamiento restante, pruebe la eficac
 
 ---
 
-El QA del repositorio comprueba la estructura, la paridad lingüística y la integridad de las fuentes controladas. No proporciona certificación, asesoría legal ni una opinión de auditoría.
+El QA del repositorio comprueba la estructura, la paridad estructural automatizada y la integridad de las fuentes controladas. No proporciona certificación, asesoría legal ni una opinión de auditoría.

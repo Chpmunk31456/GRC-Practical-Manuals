@@ -1,6 +1,8 @@
 # Manual 02 — Caminhos de implementação da ISO/IEC 42001 para organizações de todos os portes
 
-**Idioma controlado desta edição:** português do Brasil (`pt-BR`)
+**Idioma-fonte controlado:** inglês
+
+**Idioma de localização:** português do Brasil (`pt-BR`)
 
 **Público:** organizações que fornecem, desenvolvem, adquirem, implantam, operam ou utilizam sistemas de IA
 
@@ -39,7 +41,7 @@ Resultados operacionais mínimos:
 
 - um executivo responsável e um coordenador do SGIA;
 - um inventário de IA dentro do escopo, com proprietários e finalidades pretendidas;
-- triagem documentada de riscos e impactos antes da aprovação;
+- triagens documentadas e distintas de risco e de impacto antes da aprovação;
 - uma política concisa de IA e regras de uso aceitável;
 - análise de fornecedores e proteções contratuais mínimas;
 - registros de aprovação, monitoramento, incidentes, mudanças e desativação;
@@ -47,7 +49,7 @@ Resultados operacionais mínimos:
 - revisão interna periódica por uma pessoa independente do trabalho testado; e
 - evidências de análise crítica pela direção e de ações corretivas.
 
-Uma mesma pessoa pode exercer várias funções, mas não deve aprovar e auditar de forma independente o mesmo trabalho sem uma salvaguarda alternativa.
+Uma mesma pessoa pode exercer várias funções, mas não deveria aprovar e auditar de forma independente o mesmo trabalho sem uma salvaguarda alternativa.
 
 ### Caminho estruturado
 
@@ -141,7 +143,7 @@ Terceirizar o trabalho não terceiriza a responsabilidade. Contratos, consultore
 
 ## 4. Construa os registros controlados mínimos
 
-Cada organização deve manter, no mínimo:
+Cada organização deveria manter, no mínimo:
 
 1. registro do contexto, das partes interessadas e do escopo do SGIA;
 2. inventário de IA com papel, proprietário, finalidade, status, dados, fornecedor e risco;
@@ -219,4 +221,4 @@ Após o dia 90, conclua o plano de tratamento restante, teste a eficácia operac
 
 ---
 
-O QA do repositório verifica a estrutura, a paridade linguística e a integridade das fontes controladas. Ele não fornece certificação, aconselhamento jurídico nem opinião de auditoria.
+O QA do repositório verifica a estrutura, a paridade estrutural automatizada e a integridade das fontes controladas. Ele não fornece certificação, aconselhamento jurídico nem opinião de auditoria.

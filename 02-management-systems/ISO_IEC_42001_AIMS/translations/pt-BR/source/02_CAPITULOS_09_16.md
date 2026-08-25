@@ -147,7 +147,7 @@ Figura 4. Avaliação de impacto de sistemas de IA
 ## 15.1 Gatilhos operacionais
 
 - Sistema de IA novo ou alterado, uso pretendido, população afetada, geografia, escala, automação, autoridade de decisão, modelo, dados, prompt, ferramenta, integração, fornecedor ou infraestrutura.
-- Nova lei, contrato, incidente, reclamação, constatação de auditoria, vulnerabilidade, inteligência de ameaças, preocupação de segurança, drift, falha de avaliação, impacto inesperado ou aviso de fornecedor.
+- Nova lei, contrato, incidente, reclamação, constatação de auditoria, vulnerabilidade, inteligência de ameaças, preocupação de segurança funcional, drift, falha de avaliação, impacto inesperado ou aviso de fornecedor.
 - Mudanças nos critérios de risco, objetivos, controles, monitoramento, propriedade organizacional, escopo de certificação ou capacidade de recursos.
 
 ## 15.2 Evidência operacional

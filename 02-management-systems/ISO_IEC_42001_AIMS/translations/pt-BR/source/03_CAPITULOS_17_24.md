@@ -80,7 +80,7 @@ Figura 5. Cadeia de auditoria do SGIA
 | A.5 | Avaliação de impactos de sistemas de IA | 4 | Processo repetível, registros, impactos sobre pessoas/grupos e impactos sociais |
 | A.6 | Ciclo de vida do sistema de IA | 9 | Objetivos/processos de desenvolvimento responsável, requisitos, registros de projeto, V&V, implantação, operação, documentação técnica e logs |
 | A.7 | Dados para sistemas de IA | 5 | Gestão, aquisição, qualidade, proveniência e preparação de dados |
-| A.8 | Informação para partes interessadas | 4 | Informação ao usuário, reporte externo, comunicação de incidentes e outras informações |
+| A.8 | Informação para partes interessadas | 4 | Informação ao usuário, reporte externo, comunicação de incidentes e outras informações para partes interessadas |
 | A.9 | Uso de sistemas de IA | 3 | Processo e objetivos de uso responsável mais aderência ao uso pretendido |
 | A.10 | Relacionamentos com terceiros e clientes | 3 | Alocação de responsabilidade, governança de fornecedores e obrigações de clientes |
 

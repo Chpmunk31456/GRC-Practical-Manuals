@@ -1,0 +1,29 @@
+name: "11 - Release Manifest Controls"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".compliance/release-manifest.schema.json"
+      - "governance/publication-controls/**"
+      - "scripts/release_manifest_qa.py"
+      - ".github/workflows/11-release-manifest-controls.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-manifest-controls-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-release-manifest-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the exact candidate revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate schema and template controls
+        run: python3 scripts/release_manifest_qa.py

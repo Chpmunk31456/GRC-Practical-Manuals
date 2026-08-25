@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "nist-ai-600-1-manual-04",
+  "title": "Manual 04 — NIST AI 600-1 Generative AI Profile Implementation",
+  "manual_path": "01-foundations/NIST_AI_600-1_Generative_AI_Profile",
+  "development_phase": "version-aware-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "current_profile": {
+    "source_id": "nist-ai-600-1",
+    "publication": "NIST AI 600-1",
+    "version": "Generative Artificial Intelligence Profile",
+    "publication_date": "2024-07-26",
+    "registry_status": "final",
+    "relationship": "cross-sectoral-profile-and-companion-to-ai-rmf-1-0"
+  },
+  "parent_framework": {
+    "source_id": "nist-ai-rmf-1-0",
+    "publication": "NIST AI 100-1",
+    "version": "AI RMF 1.0",
+    "registry_status": "final-under-revision",
+    "revision_state": "revision-in-progress",
+    "impact_analysis_required_on_change": true
+  },
+  "required_source_ids": [
+    "nist-ai-600-1",
+    "nist-ai-rmf-1-0"
+  ],
+  "implementation_entry": "MANUAL_04_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": [
+    "essential",
+    "structured",
+    "enhanced"
+  ],
+  "core_functions": [
+    "GOVERN",
+    "MAP",
+    "MEASURE",
+    "MANAGE"
+  ],
+  "primary_considerations": [
+    "Governance",
+    "Content Provenance",
+    "Pre-deployment Testing",
+    "Incident Disclosure"
+  ],
+  "risk_families": [
+    "CBRN Information or Capabilities",
+    "Confabulation",
+    "Dangerous, Violent, or Hateful Content",
+    "Data Privacy",
+    "Environmental Impacts",
+    "Harmful Bias and Homogenization",
+    "Human-AI Configuration",
+    "Information Integrity",
+    "Information Security",
+    "Intellectual Property",
+    "Obscene, Degrading, and/or Abusive Content",
+    "Value Chain and Component Integration"
+  ],
+  "required_visuals_in_implementation_entry": 3,
+  "visual_accessibility_label": "Accessible explanation:",
+  "required_topics": [
+    "GAI inventory",
+    "AI actors",
+    "lifecycle",
+    "model",
+    "system",
+    "use case",
+    "ecosystem",
+    "risk tolerance",
+    "content provenance",
+    "pre-deployment testing",
+    "incident disclosure",
+    "red-teaming",
+    "human oversight",
+    "third party",
+    "residual risk",
+    "stop",
+    "rollback",
+    "decommissioning",
+    "NIST AI 600-1",
+    "AI RMF 1.0"
+  ],
+  "required_assurance_boundaries": [
+    "voluntary",
+    "suggested actions",
+    "not every suggested action applies",
+    "not certify",
+    "legal compliance",
+    "audit opinion"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 30,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 04 must remain development material until its controlled English chapter master, localized semantic-review gates, accessibility review, source-state review, publication-artifact QA, security review, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA validates controlled structure, authoritative-source state, applicability boundaries, accessibility, and evidence readiness; it does not determine trustworthy-AI achievement, legal compliance, certification, or an audit opinion."
+}

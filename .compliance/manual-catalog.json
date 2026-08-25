@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-25",
   "languages": [
     "en",
     "es-419",
@@ -123,10 +123,11 @@
     },
     {
       "id": "ai-auditing-assurance",
-      "title": "AI Auditing and Assurance",
+      "title": "Manual 05 — AI Auditing and Assurance",
       "path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
-      "status": "planned",
-      "layout": "standard"
+      "status": "development",
+      "layout": "controlled-build",
+      "series_order": 5
     },
     {
       "id": "hipaa-implementation-series",

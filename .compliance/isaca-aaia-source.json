@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "source_id": "isaca-aaia",
+  "publisher": "ISACA",
+  "title": "Advanced in AI Audit (AAIA)",
+  "source_type": "professional-certification-and-job-practice-reference",
+  "status": "current",
+  "official_url": "https://www.isaca.org/credentialing/aaia",
+  "exam_content_outline_url": "https://www.isaca.org/credentialing/aaia/aaia-exam-content-outline",
+  "verified_on": "2026-08-25",
+  "review_interval_days": 30,
+  "controlled_domains": [
+    "AI Governance and Risk",
+    "AI Operations",
+    "AI Auditing Tools and Techniques"
+  ],
+  "use_in_manuals": ["ai-auditing-assurance-manual-05"],
+  "classification_boundary": "Use AAIA as a controlled professional-practice reference for AI audit capability and audit-domain coverage. Do not describe AAIA as law, regulation, an ISO standard, certification of an organization, or a formal audit opinion.",
+  "copyright_boundary": "Do not reproduce proprietary ISACA review-manual or exam content. Use only publicly available official descriptions, domain names, and original implementation guidance."
+}

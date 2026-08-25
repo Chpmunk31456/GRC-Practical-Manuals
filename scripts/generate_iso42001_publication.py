@@ -281,6 +281,12 @@ def apply_docx_controls(
         if name.startswith("Heading") or name in {"Title", "Subtitle"}:
             set_keep_next(paragraph)
             paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        # Keep each inline figure with the caption paragraph that immediately
+        # follows it. Caption-only keep rules preserve the caption with the
+        # accessible explanation but can still strand the graphic on the
+        # preceding page after a semantic edit changes pagination.
+        if paragraph._p.xpath(".//w:drawing"):
+            set_keep_next(paragraph)
         if re.match(r"^(Figure|Figura)\s+\d+\.", paragraph.text.strip()):
             try:
                 paragraph.style = document.styles["Caption"]

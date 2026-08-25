@@ -1,0 +1,1 @@
+record_id,system_or_use_case_id,metric_or_signal,rmf_function,risk_or_objective,measurement_method,threshold_or_tolerance,data_source,frequency,owner,baseline,current_result,trend,limitation_or_uncertainty,trigger_action,evidence,decision,reviewer,review_date,status,change_trigger

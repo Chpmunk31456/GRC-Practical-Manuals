@@ -287,6 +287,11 @@ def apply_docx_controls(
         # preceding page after a semantic edit changes pagination.
         if paragraph._p.xpath(".//w:drawing"):
             set_keep_next(paragraph)
+        # Pandoc/LibreOffice may insert a FigureCaption paragraph containing
+        # the Markdown image description between the image and the manual's
+        # numbered caption. Keep that intermediate paragraph in the chain.
+        if name == "FigureCaption":
+            set_keep_next(paragraph)
         if re.match(r"^(Figure|Figura)\s+\d+\.", paragraph.text.strip()):
             try:
                 paragraph.style = document.styles["Caption"]

@@ -21,7 +21,7 @@
     {"id":"iso-42001-aims","title":"Manual 02 — ISO/IEC 42001 AI Management System Implementation","path":"02-management-systems/ISO_IEC_42001_AIMS","status":"development","layout":"controlled-build","series_order":2},
     {"id":"ai-auditing-assurance","title":"Manual 05 — AI Auditing and Assurance","path":"03-assurance-and-audit/AI_Auditing_and_Assurance","status":"development","layout":"controlled-build","series_order":5},
     {"id":"hipaa-implementation-series","title":"Manual 06 — HIPAA Implementation and Audit","path":"04-regulatory-compliance/HIPAA_Implementation_Series","status":"development","layout":"controlled-build","series_order":6},
-    {"id":"ai-security-lifecycle","title":"AI Security and Lifecycle Controls","path":"06-cloud-and-technology-risk/AI_Security_and_Lifecycle","status":"planned","layout":"standard"},
+    {"id":"ai-security-lifecycle","title":"Manual 07 — AI Security and Lifecycle Controls","path":"06-cloud-and-technology-risk/AI_Security_and_Lifecycle","status":"development","layout":"controlled-build","series_order":7},
     {"id":"vendor-risk-lifecycle","title":"Vendor Risk Lifecycle Implementation","path":"07-third-party-risk/Vendor_Risk_Lifecycle","status":"planned","layout":"standard"},
     {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
   ]

@@ -18,6 +18,8 @@ This manual translates the EU Artificial Intelligence Act into a practical gover
 
 **Start here:** [Practical implementation paths for micro/small, midsize, and large or complex organizations](./MANUAL_01_IMPLEMENTATION_PATHS.md). Company size changes the resourcing path, not the need to determine which legal obligations apply.
 
+**Agentic AI:** [AI Agent Governance Controls](./tools/AI_AGENT_GOVERNANCE_CONTROLS.md) adds auditable controls for human approval, scoped authority, standing permissions, revocation, credential separation, prompt-injection handling, action logging, action receipts, irreversible actions, batch approvals, accessible oversight, and authority-boundary monitoring. These are implementation controls mapped to applicable legal duties; they are not represented as independent statutory requirements.
+
 ## Español
 
 Este manual convierte la Ley de Inteligencia Artificial de la Unión Europea en una guía práctica de gobierno, riesgo, cumplimiento, controles, evidencia, auditoría e implementación. Está dirigido a ejecutivos, equipos de cumplimiento, abogados, auditores, seguridad, compras, recursos humanos, operaciones, tecnología y responsables de negocio no técnicos.

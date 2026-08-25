@@ -2,7 +2,7 @@
 
 **Current controlled baseline:** NIST AI RMF 1.0 (NIST AI 100-1), published 26 January 2023
 
-**Development status:** controlled build — version-aware implementation intake
+**Development status:** controlled build — English master and current-source verification complete; localization and publication QA pending
 
 **Author and accountable human creator:** Alberto “Al” Leiva
 
@@ -10,7 +10,7 @@
 
 ## Important version notice
 
-NIST AI RMF 1.0 remains the current published AI Risk Management Framework as of 24 August 2026, but NIST states that **AI RMF 1.0 is being updated and a revised version is in progress**. NIST also states that the AI RMF Playbook will be updated after the AI RMF 1.0 revision.
+NIST AI RMF 1.0 remains the current published AI Risk Management Framework as of 25 August 2026, but NIST states that **AI RMF 1.0 is being updated and a revised version is in progress**. NIST also states that the AI RMF Playbook will be updated after the AI RMF 1.0 revision.
 
 This manual therefore uses a fail-closed, version-aware publication model:
 
@@ -29,7 +29,7 @@ This manual therefore uses a fail-closed, version-aware publication model:
 5. Map AI RMF outcomes to existing governance, security, privacy, risk, quality, supplier, incident, and assurance processes rather than duplicating them.
 6. Retain evidence showing decisions, tests, limitations, residual risk, approvals, monitoring, incidents, corrective actions, and reassessment.
 
-## What this manual will cover
+## What this manual covers
 
 - AI RMF purpose, voluntary-use boundary, scope, and organizational applicability;
 - AI actors, lifecycle responsibilities, governance, accountability, and culture;
@@ -47,16 +47,31 @@ This manual therefore uses a fail-closed, version-aware publication model:
 
 ## Core implementation model
 
-The AI RMF is not an ordered certification checklist. This manual will treat the Core as an operating system for AI risk management:
+The AI RMF is not an ordered certification checklist. This manual treats the Core as an operating system for AI risk management:
 
 - **GOVERN** establishes policies, responsibilities, culture, authority, risk tolerance, accountability, and oversight that cut across the other functions.
 - **MAP** establishes context: intended purposes, actors, affected parties, dependencies, impacts, benefits, harms, assumptions, and boundaries.
 - **MEASURE** evaluates risk and trustworthiness using appropriate qualitative and quantitative methods, TEVV, uncertainty analysis, and evidence.
 - **MANAGE** prioritizes and treats risks, makes go/no-go or conditional decisions, monitors controls and residual risk, responds to incidents, and drives improvement.
 
+## Evidence toolkit
+
+The controlled branch includes reusable CSV records under `templates/`:
+
+- `AI_SYSTEM_AND_USE_CASE_REGISTER.csv`
+- `AI_RISK_AND_IMPACT_REGISTER.csv`
+- `AI_CONTROL_AND_EVIDENCE_MATRIX.csv`
+- `AI_DECISION_AND_APPROVAL_LOG.csv`
+- `AI_MONITORING_AND_METRICS_REGISTER.csv`
+- `AI_INCIDENT_CHANGE_AND_REASSESSMENT_LOG.csv`
+- `AI_AUDIT_WORKPAPER_INDEX.csv`
+- `MANUAL_03_EVIDENCE_CROSSWALK.csv`
+
+These records support traceability and accountable decisions; completing them does not establish compliance, certification, trustworthy-AI achievement, control effectiveness, or an audit opinion.
+
 ## Generative AI boundary
 
-NIST AI 600-1 is a final cross-sectoral profile and companion resource for AI RMF 1.0. Manual 03 will use it when generative AI is in scope while preserving a clear distinction between:
+NIST AI 600-1 is a final cross-sectoral profile and companion resource for AI RMF 1.0. Manual 03 uses it when generative AI is in scope while preserving a clear distinction between:
 
 - general AI RMF outcomes and practices;
 - additional or emphasized generative-AI risks and actions; and
@@ -64,33 +79,32 @@ NIST AI 600-1 is a final cross-sectoral profile and companion resource for AI RM
 
 ## Controlled source identifiers
 
-Initial controlled source identifiers already present in the repository source registry:
-
 - `nist-ai-rmf-1-0` — NIST AI RMF 1.0; status `final-under-revision`
 - `nist-ai-600-1` — NIST AI 600-1 Generative AI Profile; status `final`
 
-Additional official NIST implementation resources will be registered before they become release-critical sources.
+Current-source verification evidence is recorded at `qa/manual03-source-verification/NIST_AI_RMF_MANUAL_03_SOURCE_VERIFICATION_2026-08-25.md`.
 
 ## Assurance boundary
 
-Passing repository QA will mean that the controlled structure, official-source references, version state, accessibility, and evidence expectations are internally consistent. It will **not** mean that an organization complies with law, satisfies a regulator, has eliminated AI risk, has achieved certification, or has received an audit opinion.
+Passing repository QA means that the controlled structure, official-source references, version state, accessibility, and evidence expectations are internally consistent. It does **not** mean that an organization complies with law, satisfies a regulator, has eliminated AI risk, has achieved certification, or has received an audit opinion.
 
 NIST AI RMF is voluntary guidance. Organizations remain responsible for determining which laws, regulations, contracts, standards, policies, and risk decisions apply to their actual systems and contexts.
 
 ## Development roadmap
 
-- [x] Establish a separate stacked Manual 03 branch from the green Manual 02 checkpoint.
+- [x] Establish Manual 03 on the released Manual 02 baseline.
 - [x] Confirm through current official NIST sources that AI RMF 1.0 remains published while a revision is in progress.
 - [x] Confirm NIST AI 600-1 as the published Generative AI Profile companion to AI RMF 1.0.
 - [x] Establish the controlled Manual 03 baseline and dedicated fail-closed QA workflow.
 - [x] Build Essential, Structured, and Enhanced implementation paths with accessible memory graphics.
 - [x] Build the 32-chapter controlled English source across GOVERN, MAP, MEASURE, and MANAGE.
-- [ ] Build evidence templates, crosswalks, manager decisions, analyst workpapers, and practical exercises.
-- [ ] Perform official-source, terminology, accessibility, copyright, and visual QA.
+- [x] Build evidence templates, crosswalk, manager-decision records, monitoring records, change/reassessment records, and analyst workpaper index.
+- [x] Reverify current official NIST source state for the 2026-08-25 candidate.
+- [ ] Complete terminology, accessibility, copyright, and visual QA across the candidate package.
 - [ ] Produce semantically localized Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) implementation entries and chapter-source drafts.
-- [ ] Apply the same explicit human semantic-review gate used by Manual 02.
-- [ ] Generate accessible DOCX/PDF release candidates only after the controlled source review passes.
-- [ ] Keep the branch stacked; do not merge or modify protected `main` directly.
+- [ ] Complete explicit human semantic-review approval for both localized editions.
+- [ ] Generate accessible DOCX/PDF release candidates and complete document QA.
+- [ ] Record Final Human Release Approval before merge/release.
 
 ## Official starting points
 

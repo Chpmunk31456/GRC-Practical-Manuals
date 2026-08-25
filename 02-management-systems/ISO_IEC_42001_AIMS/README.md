@@ -16,7 +16,7 @@
 4. Review the [localized-source index](./translations/README.md) for the complete four-part, 32-chapter Spanish and Brazilian Portuguese draft source sets.
 5. Obtain authorized copies of applicable ISO publications and confirm the current requirements with qualified professionals.
 
-Current QA records: [source verification](./SOURCE_VERIFICATION_REPORT_01.md), [source-status watch](./SOURCE_STATUS_WATCH_02.md), and [editorial QA review](./EDITORIAL_QA_REVIEW_01.md).
+Current QA records: [source verification](./SOURCE_VERIFICATION_REPORT_01.md), [source-status watch](./SOURCE_STATUS_WATCH_02.md), [editorial QA review](./EDITORIAL_QA_REVIEW_01.md), and [visual QA review](./VISUAL_QA_REVIEW_01.md).
 
 ## What this manual covers
 

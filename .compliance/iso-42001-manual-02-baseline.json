@@ -45,6 +45,8 @@
   "ai_assisted_precheck": "translations/AI_ASSISTED_PRECHECK_01.md",
   "editorial_qa_report": "EDITORIAL_QA_REVIEW_01.md",
   "editorial_qa_status": "advisory-pass-human-review-open",
+  "visual_qa_report": "VISUAL_QA_REVIEW_01.md",
+  "visual_qa_status": "conditional-pass-human-accessibility-review-open",
   "localized_full_required_phrases": {
     "es-419": [
       "Declaración de Aplicabilidad",

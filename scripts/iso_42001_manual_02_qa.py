@@ -425,6 +425,20 @@ def main() -> int:
         if phrase not in editorial_text:
             errors.append(f"editorial QA report is missing boundary/result phrase: {phrase}")
 
+    if baseline.get("visual_qa_status") != "conditional-pass-human-accessibility-review-open":
+        errors.append("visual QA must retain the human accessibility-review boundary")
+    visual_qa_relative = baseline.get("visual_qa_report")
+    visual_qa_path = manual_root / str(visual_qa_relative)
+    visual_qa_text = visual_qa_path.read_text(encoding="utf-8") if visual_qa_path.is_file() else ""
+    for phrase in (
+        "30/30 controlled PNG graphics",
+        "20/20 localized editable SVG sources",
+        "does not close the human semantic-review gate",
+        "VISUAL QA STATUS: CONDITIONAL PASS — HUMAN ACCESSIBILITY AND TERMINOLOGY REVIEW OPEN",
+    ):
+        if phrase not in visual_qa_text:
+            errors.append(f"visual QA report is missing boundary/result phrase: {phrase}")
+
     generator_relative = baseline.get("localized_graphic_generator")
     generator_path = repository_path(
         generator_relative, "localized_graphic_generator", errors
@@ -560,6 +574,7 @@ def main() -> int:
     print(f"  controlled sources checked: {len(required_source_ids)}")
     print(f"  required topics checked: {len(baseline.get('required_topics', []))}")
     print("  editorial QA advisory checked: 1")
+    print("  visual QA review checked: 1")
     for error in errors:
         print(f"  ERROR: {error}")
     if errors:

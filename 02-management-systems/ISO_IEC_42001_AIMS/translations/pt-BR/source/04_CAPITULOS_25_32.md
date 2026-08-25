@@ -26,9 +26,9 @@ Figura 6. Ciclo de vida responsável do sistema de IA
 
 # 26. Anexo A.7: Dados para sistemas de IA
 
-*O Anexo A.7 exige aquisição, qualidade, proveniência e preparação governadas de dados para desenvolvimento, melhoria e operação de IA.*
+*Quando os controles do Anexo A.7 são selecionados por meio do tratamento de riscos e da Declaração de Aplicabilidade da organização, sua implementação deve governar a aquisição, a qualidade, a proveniência e a preparação de dados para o desenvolvimento, a melhoria e a operação de IA.*
 
-<img src="../../../assets/pt-BR/media/image7.png" style="width:6.15in;height:3.23274in" alt="A linhagem deve conectar fonte e autoridade a transformações, qualidade, uso, retenção e exclusão." />
+<img src="../../../assets/pt-BR/media/image7.png" style="width:6.15in;height:3.23274in" alt="O fluxo de evidências recomendado conecta a fonte e a autoridade às transformações, à qualidade, ao uso, à retenção e à exclusão." />
 
 Figura 7. Cadeia de evidências de dados de IA
 
@@ -53,7 +53,7 @@ Figura 7. Cadeia de evidências de dados de IA
 
 # 27. Anexo A.8: Informação para partes interessadas
 
-*O Anexo A.8 exige informação útil para usuários e partes interessadas, além de reporte e comunicação de incidentes.*
+*Quando os controles do Anexo A.8 são selecionados por meio do tratamento de riscos e da Declaração de Aplicabilidade da organização, sua implementação deve fornecer informações úteis para usuários e partes interessadas, juntamente com o reporte e a comunicação de incidentes.*
 
 <img src="../../../assets/pt-BR/media/image8.png" style="width:6.15in;height:3.23274in" alt="Transparência é comunicação específica ao público que permite uso seguro, responsabilização e reparação." />
 
@@ -80,7 +80,7 @@ Figura 8. Informação para partes interessadas
 
 *O Anexo A.9 governa o uso responsável e a finalidade pretendida; o Anexo A.10 aloca deveres entre fornecedores, clientes e a cadeia de valor de IA.*
 
-<img src="../../../assets/pt-BR/media/image9.png" style="width:6.15in;height:3.23274in" alt="A asseguração de fornecedores deve corresponder ao modelo, serviço, uso, fluxo de dados e configuração do cliente exatos." />
+<img src="../../../assets/pt-BR/media/image9.png" style="width:6.15in;height:3.23274in" alt="A asseguração de fornecedores baseada em riscos corresponde ao modelo, serviço, uso, fluxo de dados e configuração exatos do cliente." />
 
 Figura 9. Ciclo de vida de IA de terceiros
 

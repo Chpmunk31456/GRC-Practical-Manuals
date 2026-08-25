@@ -76,23 +76,21 @@ The following mutually exclusive classification applies to the principal explana
 | Classification | Chapters | Count | Assessment |
 |---|---:|---:|---|
 | Directly supported by public official source descriptions | 1, 9, 24, 29, 30 | 5 | The high-level source purpose or assurance boundary is explicit in an official source |
-| Supported with implementation interpretation | 2, 4–8, 10–22, 25, 28 | 21 | Consistent with public source purpose and management-system practice, but detailed strength depends on licensed text |
+| Supported with implementation interpretation | 2, 4–8, 10–28 | 24 | Consistent with public source purpose and management-system practice, but detailed strength depends on licensed text; Chapters 23, 26, and 27 now state the Annex-control selection boundary explicitly |
 | Implementation recommendation | 3, 31, 32 | 3 | Practical guidance, laboratory design, templates, and analyst workflow; not represented as verbatim ISO requirements |
-| Possibly mischaracterized | 23, 26, 27 | 3 | Lead wording says an Annex A group “requires” an outcome without stating that Annex A control applicability is risk-treatment/SoA-dependent |
+| Possibly mischaracterized | — | 0 | The three identified Annex A lead statements were qualified to state the risk-treatment and Statement of Applicability boundary |
 | Unsupported | — | 0 | None found at the chapter-lead bundle level |
 | Source outdated | — | 0 | No superseded principal requirement source found after correction |
 
 ### B.2 Normative-language inventory
 
-The English master contains 39 normative tokens on 38 lines: `must` 15, `required` 6, `requires` 4, `should` 3, `may` 5, and `can` 6. Many are appropriate boundaries or plain-language implementation rules, but the following merit licensed human review because a reader could interpret them as direct ISO obligations:
+The English master was remediated to qualify three Annex A lead statements and two graphic descriptions that could read as unconditional obligations. The remaining normative-language inventory still merits licensed human review because a reader could interpret some implementation rules as direct ISO obligations:
 
 | Location / wording cue | Review issue | Disposition |
 |---|---|---|
-| Chapter 23, “Annex A.4 requires visibility…” | Annex A applicability may be conditional through risk treatment and the SoA | **CLAUSE REFERENCE REQUIRES HUMAN VERIFICATION** |
-| Chapter 26, “Annex A.7 requires governed data…” | Same applicability issue | **CLAUSE REFERENCE REQUIRES HUMAN VERIFICATION** |
-| Chapter 27, “Annex A.8 requires useful information…” | Same applicability issue | **CLAUSE REFERENCE REQUIRES HUMAN VERIFICATION** |
-| Chapter 26 graphic alternative text, “Lineage must connect…” | Strong implementation recommendation may read as normative text | Human editor should label as recommended evidence design or verify source strength |
-| Chapter 28 supplier graphic alternative text, “Supplier assurance must match…” | Strong implementation recommendation | Human editor should label as risk-based practice or verify source strength |
+| Chapters 23, 26, and 27 Annex A leads | Wording now conditions implementation guidance on control selection through risk treatment and the SoA | **WORDING REMEDIATED; CLAUSE ACCURACY STILL REQUIRES LICENSED HUMAN VERIFICATION** |
+| Chapter 26 data-lineage graphic alternative text | Relabeled as a recommended evidence flow | **WORDING REMEDIATED; HUMAN SEMANTIC REVIEW REMAINS OPEN** |
+| Chapter 28 supplier graphic alternative text | Relabeled as risk-based supplier assurance | **WORDING REMEDIATED; HUMAN SEMANTIC REVIEW REMAINS OPEN** |
 | Chapter 7 risk/impact comparison, “Must stay connected” / “both must exchange…” | Operational integration recommendation | Human editor should distinguish recommended method from direct requirement |
 | Chapter 31 audit-finding explanation, “finding must identify…” | Audit-practice rule; source strength may derive from audit guidance, not ISO/IEC 42001 alone | Verify against authorized ISO 19011 and applicable audit criteria |
 | Chapter 31 tool-evidence explanation, “must be scoped…” | Sound evidence practice, but not established here as verbatim normative language | Retain as guidance or relabel explicitly |
@@ -109,7 +107,7 @@ Specific human checks:
 2. Verify Chapter 20's statement that Annex A contains 38 controls in nine groups.
 3. Verify the relationship among Annex A selection, the risk-treatment process, additional controls, exclusions, and the Statement of Applicability.
 4. Verify that Annex B–D descriptions preserve their informative/normative status and do not imply equivalence.
-5. Verify whether the three “Annex A.x requires” lead statements should instead say the organization evaluates and applies relevant controls through risk treatment and the SoA.
+5. Verify that the remediated Annex A.4, A.7, and A.8 lead statements accurately describe conditional selection through risk treatment and the SoA without overstating or weakening the licensed requirements.
 
 **CLAUSE REFERENCE REQUIRES HUMAN VERIFICATION.**
 

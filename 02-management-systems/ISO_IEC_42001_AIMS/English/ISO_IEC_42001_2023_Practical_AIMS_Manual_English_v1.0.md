@@ -692,7 +692,7 @@ Figure 5. AIMS audit chain
 
 # 23. Annex A.4: Resources for AI Systems
 
-*Annex A.4 requires visibility into the data, tools, system/compute, and people needed across the AI life cycle.*
+*When Annex A.4 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should maintain visibility into the data, tools, systems and computing resources, and people needed across the AI life cycle.*
 
 | **Resource record** | **Details**                                                                                                  |
 |---------------------|--------------------------------------------------------------------------------------------------------------|
@@ -768,9 +768,9 @@ Figure 6. Responsible AI system life cycle
 
 # 26. Annex A.7: Data for AI Systems
 
-*Annex A.7 requires governed data acquisition, quality, provenance, and preparation for AI development, enhancement, and operation.*
+*When Annex A.7 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should govern data acquisition, quality, provenance, and preparation for AI development, enhancement, and operation.*
 
-<img src="../assets/English/media/image7.png" style="width:6.15in;height:3.23274in" alt="Lineage must connect source and authority to transformations, quality, use, retention, and deletion." />
+<img src="../assets/English/media/image7.png" style="width:6.15in;height:3.23274in" alt="Recommended evidence flow connects source and authority to transformations, quality, use, retention, and deletion." />
 
 Figure 7. AI data evidence chain
 
@@ -798,7 +798,7 @@ Figure 7. AI data evidence chain
 
 # 27. Annex A.8: Information for Interested Parties
 
-*Annex A.8 requires useful information for users and interested parties, plus reporting and incident communication.*
+*When Annex A.8 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should provide useful information for users and interested parties, together with reporting and incident communication.*
 
 <img src="../assets/English/media/image8.png" style="width:6.15in;height:3.23274in" alt="Transparency is audience-specific communication that enables safe use, accountability, and redress." />
 
@@ -830,7 +830,7 @@ Figure 8. Interested-party information
 
 *Annex A.9 governs responsible use and intended purpose; Annex A.10 allocates duties across suppliers, customers, and the AI value chain.*
 
-<img src="../assets/English/media/image9.png" style="width:6.15in;height:3.23274in" alt="Supplier assurance must match the exact model, service, use, data flow, and customer configuration." />
+<img src="../assets/English/media/image9.png" style="width:6.15in;height:3.23274in" alt="Risk-based supplier assurance matches the exact model, service, use, data flow, and customer configuration." />
 
 Figure 9. Third-party AI life cycle
 

@@ -134,7 +134,7 @@ Figura 5. Cadena de auditoría del SGIA
 
 # 23. Anexo A.4: Recursos para sistemas de IA
 
-*El Anexo A.4 exige visibilidad de los datos, herramientas, sistema/cómputo y personas necesarios durante el ciclo de vida de la IA.*
+*Cuando los controles del Anexo A.4 se seleccionan mediante el tratamiento de riesgos y la Declaración de Aplicabilidad de la organización, su implementación debe mantener visibilidad sobre los datos, las herramientas, los sistemas y recursos de cómputo, y las personas necesarias durante el ciclo de vida de la IA.*
 
 | **Registro de recurso** | **Detalles** |
 |---|---|

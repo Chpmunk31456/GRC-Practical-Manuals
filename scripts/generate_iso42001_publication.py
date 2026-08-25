@@ -80,6 +80,12 @@ ENGLISH_TEXT_REPLACEMENTS = {
         "Current-information note: Verified August 24, 2026. ISO/IEC 42001:2023 remains the published AIMS requirements standard. ISO/IEC 42005:2025 provides AI system impact-assessment guidance. ISO/IEC 42006:2025 adds requirements for bodies auditing and certifying AIMS. ISO 19011:2026 is the current management-system audit guideline. ISO/IEC 42003 remains an approved work item and ISO/IEC 42007 has advanced to draft international standard status; both remain under development and are not treated as requirements here.",
     "Keep one source of truth and map it to ISO 27001, ISO 9001, privacy, legal, NIST AI RMF, and sector obligations rather than duplicating records.":
         "Keep one source of truth and map it to ISO/IEC 27001:2022, ISO 9001, privacy, legal, NIST AI RMF, and sector obligations rather than duplicating records.",
+    "Annex A.4 requires visibility into the data, tools, system/compute, and people needed across the AI life cycle.":
+        "When Annex A.4 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should maintain visibility into the data, tools, systems and computing resources, and people needed across the AI life cycle.",
+    "Annex A.7 requires governed data acquisition, quality, provenance, and preparation for AI development, enhancement, and operation.":
+        "When Annex A.7 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should govern data acquisition, quality, provenance, and preparation for AI development, enhancement, and operation.",
+    "Annex A.8 requires useful information for users and interested parties, plus reporting and incident communication.":
+        "When Annex A.8 controls are selected through the organization's risk-treatment process and Statement of Applicability, implementation should provide useful information for users and interested parties, together with reporting and incident communication.",
 }
 
 ENGLISH_HYPERLINK_REPLACEMENTS = {

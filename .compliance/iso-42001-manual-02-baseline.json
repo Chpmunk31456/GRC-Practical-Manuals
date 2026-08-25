@@ -29,6 +29,23 @@
     ]
   },
   "localized_full_source_status": "draft-human-review-required",
+  "publication_qa_candidate": {
+    "source_branch": "build/iso-iec-42001-manual-02-2026",
+    "source_commit": "b1ddffa6a33376ec72db570d8437f996cf61b97d",
+    "generation_date": "2026-08-24",
+    "edition_version": "1.0 publication QA candidate",
+    "review_status": "draft-human-review-required",
+    "release_ready": false,
+    "human_review_gate": "open",
+    "localized_markdown_masters": {
+      "es-419": "translations/es-419/source/Manual_02_ISO_IEC_42001_AI_Management_System_ES-419.md",
+      "pt-BR": "translations/pt-BR/source/Manual_02_ISO_IEC_42001_AI_Management_System_PT-BR.md"
+    },
+    "artifact_directory": "publication/qa-candidate",
+    "qa_report": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_DOCUMENT_PROCESSING_REPORT.json",
+    "page_qa": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_PAGE_QA.csv",
+    "checksums": "qa/manual02-document-processing/ISO_IEC_42001_MANUAL_02_SHA256SUMS.txt"
+  },
   "human_review_checklist": "translations/HUMAN_SEMANTIC_REVIEW_CHECKLIST.md",
   "human_review_gate": "open",
   "human_review_required_languages": [

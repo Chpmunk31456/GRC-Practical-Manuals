@@ -2,6 +2,8 @@
 
 **Status:** trilingual full-source review; 32-chapter Spanish and Brazilian Portuguese source drafts are present; consolidated single-file masters and derived DOCX/PDF release artifacts remain in development
 
+Mechanically consolidated single-file Markdown masters and derived DOCX/PDF **publication-QA candidates** now exist for accessibility, rendering, and parity review. They remain drafts and are not the release artifacts described above.
+
 The practical size- and risk-scaled implementation entry is maintained in both localized languages:
 
 - [Español de América Latina — Rutas de implementación](./es-419/source/MANUAL_02_RUTAS_DE_IMPLEMENTACION.md)
@@ -35,15 +37,22 @@ The localized sources preserve the chapter numbering, core management-system log
 
 An [AI-assisted precheck log](./AI_ASSISTED_PRECHECK_01.md) records source-language residue and terminology corrections already made. The [controlled translation and semantic review 02](./CONTROLLED_TRANSLATION_REVIEW_02.md) records the source-order review, high-confidence corrections, graphic checks, cross-language findings, and the remaining human-review queue. These reviews prepare competent human review, do not replace it, and leave the human gate open.
 
+The controlled publication-QA masters are:
+
+- [Spanish (`es-419`) consolidated draft](./es-419/source/Manual_02_ISO_IEC_42001_AI_Management_System_ES-419.md)
+- [Brazilian Portuguese (`pt-BR`) consolidated draft](./pt-BR/source/Manual_02_ISO_IEC_42001_AI_Management_System_PT-BR.md)
+
+The corresponding DOCX/PDF candidates and their control record are indexed in the [publication-QA candidate directory](../publication/README.md). Substantive questions found during layout work must be returned to the human translation-review queue, not silently repaired in these generated masters.
+
 ## Remaining controlled work
 
 Before Manual 02 can be represented as release-ready in all three languages, the project still requires:
 
 - human semantic and terminology review of the Spanish and Brazilian Portuguese chapter sources;
-- consolidation into one controlled Markdown master per localized language;
+- human approval of the mechanically consolidated Markdown master for each localized language;
 - human review of the localized visible labels, captions, alternative text, and accessible explanations for all ten figures in each language;
-- generation of accessible Spanish and Brazilian Portuguese DOCX editions;
-- PDF generation and page-by-page visual QA;
+- human approval of the generated accessible Spanish and Brazilian Portuguese DOCX candidates;
+- final human visual approval of the generated localized PDFs after the semantic gate closes;
 - final trilingual parity and release-package validation; and
 - release metadata/Zenodo packaging only after all gates pass.
 

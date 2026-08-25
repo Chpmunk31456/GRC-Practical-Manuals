@@ -1,6 +1,6 @@
 # Manual 02 — ISO/IEC 42001 AI Management System Implementation
 
-**Status:** Trilingual full-source review. The controlled English 32-chapter master is complete; Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) 32-chapter localized source drafts are present and require human semantic review. Consolidated localized masters and DOCX/PDF release artifacts remain in development.
+**Status:** Trilingual full-source review. The controlled English 32-chapter master is complete; Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`) 32-chapter localized source drafts are present and require human semantic review. Controlled single-file localized masters and DOCX/PDF publication-QA candidates have been generated, but consolidated localized masters and DOCX/PDF release artifacts remain in development.
 
 **Controlled trilingual implementation entry:** English, neutral Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`) size- and risk-scaled implementation paths remain the publication entry layer while full localized release artifacts undergo review.
 
@@ -14,7 +14,8 @@
 2. Use the [English practical AIMS manual](./English/ISO_IEC_42001_2023_Practical_AIMS_Manual_English_v1.0.md) for detailed implementation, audit, evidence, and template guidance.
 3. Use the localized implementation entry in [Latin American Spanish](./translations/es-419/source/MANUAL_02_RUTAS_DE_IMPLEMENTACION.md) or [Brazilian Portuguese](./translations/pt-BR/source/MANUAL_02_CAMINHOS_DE_IMPLEMENTACAO.md).
 4. Review the [localized-source index](./translations/README.md) for the complete four-part, 32-chapter Spanish and Brazilian Portuguese draft source sets.
-5. Obtain authorized copies of applicable ISO publications and confirm the current requirements with qualified professionals.
+5. Review the [publication-QA candidates](./publication/README.md) and the linked accessibility, page-level, and parity evidence without treating them as approved translations or release artifacts.
+6. Obtain authorized copies of applicable ISO publications and confirm the current requirements with qualified professionals.
 
 Current QA records: [source verification](./SOURCE_VERIFICATION_REPORT_01.md), [source-status watch](./SOURCE_STATUS_WATCH_02.md), [editorial QA review](./EDITORIAL_QA_REVIEW_01.md), and [visual QA review](./VISUAL_QA_REVIEW_01.md).
 
@@ -61,11 +62,13 @@ Supporting certification source under systematic review:
 - [x] Replace one-cell layout tables with accessible callout paragraphs, verify table headers and image descriptions, and render-review all 54 English pages.
 - [x] Produce semantically aligned `es-419` and `pt-BR` implementation entry points with three localized accessible graphics per language.
 - [x] Produce complete 32-chapter draft localized source sets for neutral Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`).
+- [x] Mechanically consolidate the localized draft source parts into controlled publication-QA Markdown masters without changing substantive meaning.
+- [x] Generate draft accessible DOCX/PDF candidates and complete automated page-by-page layout and trilingual structural-parity QA.
 - [ ] Complete human semantic and terminology review of both localized source sets.
-- [ ] Consolidate each reviewed localized source set into one controlled Markdown master.
+- [ ] Approve each reviewed localized single-file master for publication use.
 - [ ] Replace or otherwise approve the treatment of the ten English raster source graphics so visible labels satisfy the localized visual-learning standard.
-- [ ] Generate accessible Spanish and Brazilian Portuguese DOCX editions.
-- [ ] Generate localized PDFs and complete page-by-page visual QA.
+- [ ] Approve the accessible Spanish and Brazilian Portuguese DOCX editions after semantic review.
+- [ ] Approve the localized PDFs after semantic review and final human visual inspection.
 - [ ] Complete final semantic, terminology, graphic, accessibility, and release-artifact parity review.
 - [ ] Merge only through a reviewed pull request after PR #88 is integrated; do not bypass protected `main`.
 

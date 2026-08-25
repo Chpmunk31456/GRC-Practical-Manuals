@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "hipaa-implementation-manual-06",
+  "title": "Manual 06 — HIPAA Implementation and Audit",
+  "manual_path": "04-regulatory-compliance/HIPAA_Implementation_Series",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "hhs-hipaa-security-rule",
+    "hhs-hipaa-privacy-rule",
+    "hhs-hipaa-breach-notification",
+    "hhs-hipaa-business-associates",
+    "hhs-hipaa-security-rule-nprm"
+  ],
+  "current_law_source_ids": [
+    "hhs-hipaa-security-rule",
+    "hhs-hipaa-privacy-rule",
+    "hhs-hipaa-breach-notification",
+    "hhs-hipaa-business-associates"
+  ],
+  "proposed_only_source_ids": ["hhs-hipaa-security-rule-nprm"],
+  "implementation_entry": "MANUAL_06_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "required_topics": [
+    "covered entity",
+    "business associate",
+    "protected health information",
+    "electronic protected health information",
+    "privacy rule",
+    "security rule",
+    "breach notification",
+    "risk analysis",
+    "risk management",
+    "administrative safeguards",
+    "physical safeguards",
+    "technical safeguards",
+    "workforce",
+    "minimum necessary",
+    "business associate agreement",
+    "incident response",
+    "breach assessment",
+    "documentation retention",
+    "audit evidence",
+    "corrective action"
+  ],
+  "required_legal_boundaries": [
+    "current law",
+    "proposed rule",
+    "not legal advice",
+    "jurisdiction-specific",
+    "organization-specific applicability"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 30,
+    "nprm_maximum_review_interval_days": 14,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 06 remains development material until current-law verification, proposed-rule separation, controlled English master, localization/semantic review, accessibility, security, document QA, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA supports implementation readiness; it does not establish HIPAA compliance, legal sufficiency, breach determination, or an audit opinion."
+}

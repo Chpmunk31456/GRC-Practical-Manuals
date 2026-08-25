@@ -29,6 +29,8 @@ SOURCES_PATH = REPO_ROOT / ".compliance" / "authoritative-sources.json"
 ALLOWED_SOURCE_DOMAINS = {
     "airc.nist.gov",
     "csrc.nist.gov",
+    "digital-strategy.ec.europa.eu",
+    "eur-lex.europa.eu",
     "hhs.gov",
     "nvlpubs.nist.gov",
     "www.hhs.gov",
@@ -38,8 +40,10 @@ ALLOWED_SOURCE_DOMAINS = {
 ALLOWED_SOURCE_STATUSES = {
     "final",
     "final-under-revision",
+    "official-guidance-non-binding",
     "proposed-not-current-law",
     "under-development",
+    "voluntary-code-non-binding",
 }
 PUBLISHED_FORMATS = (".md", ".docx", ".pdf")
 

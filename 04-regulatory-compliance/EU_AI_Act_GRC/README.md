@@ -1,23 +1,36 @@
-# EU Artificial Intelligence Act GRC Compliance Manual
+# Manual 01 — EU Artificial Intelligence Act Practical Implementation Guide
 
 [English](#english) | [Español](#español) | [Português](#português)
 
 [Main repository](../../README.md) › [Regulatory Compliance](../README.md) › **EU AI Act GRC**
 
-**Status / Estado / Status:** Published and validated in English, Latin American Spanish, and Brazilian Portuguese  
+**Series position / Posición / Posição:** Manual 01 — first implementation manual
+
+**Status / Estado / Status:** Published foundation and trilingual controlled package; implementation-path modernization in progress
+
 **Languages / Idiomas:** English, `es-419`, `pt-BR`
+
+**AI assistance disclosure / Divulgación / Divulgação:** [ChatGPT and Codex, OpenAI](../../AI_ASSISTANCE_DISCLOSURE.md)
 
 ## English
 
 This manual translates the EU Artificial Intelligence Act into a practical governance, risk, compliance, control, evidence, audit, and implementation guide. It is designed for executives, compliance teams, lawyers, auditors, security teams, procurement, HR, operations, technology teams, and nontechnical business owners.
 
+**Start here:** [Practical implementation paths for micro/small, midsize, and large or complex organizations](./MANUAL_01_IMPLEMENTATION_PATHS.md). Company size changes the resourcing path, not the need to determine which legal obligations apply.
+
+**Agentic AI:** [AI Agent Governance Controls](./tools/AI_AGENT_GOVERNANCE_CONTROLS.md) adds auditable controls for human approval, scoped authority, standing permissions, revocation, credential separation, prompt-injection handling, action logging, action receipts, irreversible actions, batch approvals, accessible oversight, and authority-boundary monitoring. These are implementation controls mapped to applicable legal duties; they are not represented as independent statutory requirements.
+
 ## Español
 
 Este manual convierte la Ley de Inteligencia Artificial de la Unión Europea en una guía práctica de gobierno, riesgo, cumplimiento, controles, evidencia, auditoría e implementación. Está dirigido a ejecutivos, equipos de cumplimiento, abogados, auditores, seguridad, compras, recursos humanos, operaciones, tecnología y responsables de negocio no técnicos.
 
+**Comience aquí:** [rutas prácticas de implementación para organizaciones micro/pequeñas, medianas y grandes o complejas](./translations/es-419/source/MANUAL_01_RUTAS_DE_IMPLEMENTACION.md).
+
 ## Português
 
 Este manual transforma a Lei de Inteligência Artificial da União Europeia em um guia prático de governança, risco, conformidade, controles, evidências, auditoria e implementação. Destina-se a executivos, equipes de conformidade, advogados, auditores, segurança, compras, recursos humanos, operações, tecnologia e responsáveis de negócios não técnicos.
+
+**Comece aqui:** [caminhos práticos de implementação para organizações micro/pequenas, médias e grandes ou complexas](./translations/pt-BR/source/MANUAL_01_CAMINHOS_DE_IMPLEMENTACAO.md).
 
 ## Published editions / Ediciones publicadas / Edições publicadas
 
@@ -53,6 +66,8 @@ Os pacotes em espanhol e português do Brasil estão disponíveis em [translatio
 2. Regulation (EU) 2026/1744
 3. Current consolidated EUR-Lex text
 4. Official European Commission and EU AI Office guidance, identified as non-binding where applicable
+
+The controlled source IDs and review intervals are recorded in [the Manual 01 baseline](../../.compliance/eu-ai-act-manual-01-baseline.json) and the repository authoritative-source registry. The dedicated `08 - EU AI Act Manual 01 QA` workflow fails when required sources, entry files, implementation paths, or safety controls are missing.
 
 ## Key quality records / Registros clave de calidad / Registros principais de qualidade
 

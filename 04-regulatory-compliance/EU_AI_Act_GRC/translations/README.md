@@ -5,6 +5,15 @@
 **Languages:** Latin American Spanish (`es-419`) and Brazilian Portuguese (`pt-BR`)  
 **Publication PR:** #35
 
+## Manual 01 implementation entry points
+
+The size-scaled implementation entry point added after the original publication is maintained in both localized languages:
+
+- [Español de América Latina — Rutas de implementación](./es-419/source/MANUAL_01_RUTAS_DE_IMPLEMENTACION.md)
+- [Português do Brasil — Caminhos de implementação](./pt-BR/source/MANUAL_01_CAMINHOS_DE_IMPLEMENTACAO.md)
+
+These entry points preserve the English controlled-source structure while using natural regional terminology. They do not replace the published 138-chapter localized masters.
+
 ## Published scope
 
 Both localized editions contain:

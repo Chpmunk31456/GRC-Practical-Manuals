@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "eu-ai-act-manual-01",
+  "title": "Manual 01 — EU AI Act Practical Implementation Guide",
+  "manual_path": "04-regulatory-compliance/EU_AI_Act_GRC",
+  "repository_disclosure_path": "AI_ASSISTANCE_DISCLOSURE.md",
+  "visual_learning_standard_path": "VISUAL_LEARNING_STANDARD.md",
+  "controlled_language": "en",
+  "publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "legal_baseline_verified": "2026-08-24",
+  "consolidated_text_date": "2026-07-27",
+  "binding_source_ids": [
+    "eu-ai-act-consolidated-2026-07-27",
+    "eu-ai-omnibus-2026-1744"
+  ],
+  "implementation_source_ids": [
+    "ec-eu-ai-act-implementation",
+    "ec-eu-ai-act-enforcement",
+    "ec-eu-ai-transparency-code-2026"
+  ],
+  "implementation_paths": [
+    "micro-small",
+    "midsize",
+    "large-complex"
+  ],
+  "localized_entry_files": {
+    "es-419": "translations/es-419/source/MANUAL_01_RUTAS_DE_IMPLEMENTACION.md",
+    "pt-BR": "translations/pt-BR/source/MANUAL_01_CAMINHOS_DE_IMPLEMENTACAO.md"
+  },
+  "localized_required_phrases": {
+    "es-419": [
+      "micro y pequeña organización",
+      "organización mediana",
+      "empresa grande o compleja",
+      "prácticas prohibidas",
+      "alfabetización en materia de IA",
+      "supervisión humana",
+      "derechos fundamentales"
+    ],
+    "pt-BR": [
+      "micro e pequena organização",
+      "organização de médio porte",
+      "empresa grande ou complexa",
+      "práticas proibidas",
+      "letramento em IA",
+      "supervisão humana",
+      "direitos fundamentais"
+    ]
+  },
+  "required_visuals_per_entry": 3,
+  "visual_accessibility_labels": {
+    "en": "Accessible explanation:",
+    "es-419": "Explicación accesible:",
+    "pt-BR": "Explicação acessível:"
+  },
+  "required_entry_files": [
+    "README.md",
+    "MANUAL_01_IMPLEMENTATION_PATHS.md",
+    "EU_AI_Act_GRC_Manual_Foundation_CORRECTED_MASTER.md",
+    "chapters/06_Application_Timeline_and_Transitional_Rules_CORRECTED.md",
+    "chapters/129_First_30_Days_CORRECTED_MASTER.md",
+    "chapters/133_High_Risk_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "chapters/134_GPAI_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "chapters/135_Transparency_Readiness_Roadmap_CORRECTED_MASTER.md",
+    "appendices/Appendix_O_AI_Vendor_Questionnaire_CORRECTED_MASTER.md",
+    "appendices/Appendix_P_Contract_Clause_Checklist_CORRECTED_MASTER.md",
+    "appendices/Appendix_Z_Implementation_Roadmap_CORRECTED_MASTER.md"
+  ],
+  "required_topics": [
+    "applicability",
+    "actor roles",
+    "ai inventory",
+    "prohibited practices",
+    "ai literacy",
+    "high-risk",
+    "general-purpose ai",
+    "transparency",
+    "human oversight",
+    "fundamental rights",
+    "vendor",
+    "evidence",
+    "audit",
+    "incident",
+    "regulatory change"
+  ],
+  "assurance_boundary": "Repository QA validates structure, source control, and evidence readiness; it does not determine legal compliance, certification, or audit success."
+}

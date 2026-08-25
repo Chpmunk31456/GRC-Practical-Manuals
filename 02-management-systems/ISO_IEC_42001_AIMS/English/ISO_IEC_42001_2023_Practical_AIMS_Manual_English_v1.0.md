@@ -17,7 +17,7 @@ ISO/IEC 42001 helps organizations govern AI through an organization-wide managem
 
 This manual explains concepts in original language and does not reproduce the copyrighted standard. Obtain an authorized copy of ISO/IEC 42001:2023 and any standards used for implementation or audit. Certification, laws, sector duties, contracts, and technical risk must be evaluated against the organization’s actual scope and facts.
 
-| **Current-information note:** Verified July 14, 2026. ISO/IEC 42001:2023 remains the published AIMS requirements standard. ISO/IEC 42005:2025 provides AI system impact-assessment guidance. ISO/IEC 42006:2025 adds requirements for bodies auditing and certifying AIMS. ISO 19011:2026 is the current management-system audit guideline. ISO/IEC 42003 and 42007 remain under development and are not treated as requirements here. |
+| **Current-information note:** Verified August 24, 2026. ISO/IEC 42001:2023 remains the published AIMS requirements standard. ISO/IEC 42005:2025 provides AI system impact-assessment guidance. ISO/IEC 42006:2025 adds requirements for bodies auditing and certifying AIMS. ISO 19011:2026 is the current management-system audit guideline. ISO/IEC 42003 remains an approved work item and ISO/IEC 42007 has advanced to draft international standard status; both remain under development and are not treated as requirements here. |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## How to use this manual
@@ -118,7 +118,7 @@ Figure 1. AIMS Plan-Do-Check-Act cycle
 
 - Create AI-specific additions for impact assessment, model/data lifecycle, responsible use, transparency, human oversight, and value-chain responsibilities.
 
-- Keep one source of truth and map it to ISO 27001, ISO 9001, privacy, legal, NIST AI RMF, and sector obligations rather than duplicating records.
+- Keep one source of truth and map it to ISO/IEC 27001:2022, ISO 9001, privacy, legal, NIST AI RMF, and sector obligations rather than duplicating records.
 
 # 3. Applicability, Organizational Roles, and Implementation Roadmap
 
@@ -986,7 +986,7 @@ AIMS evidence: authority/scope, system/model/data versions, identity, tool/versi
 
 ## 30.8 Giskard
 
-Purpose: AI testing and vulnerability scanning. Official project: [<u>Giskard</u>](https://github.com/Giskard-AI/giskard)
+Purpose: AI testing and vulnerability scanning. Official project: [<u>Giskard</u>](https://github.com/Giskard-AI/giskard-oss)
 
 Safe quick start: Connect only an approved test model and dataset; select relevant tests; validate failures manually; keep the report and remediation retest.
 
@@ -1010,7 +1010,7 @@ AIMS evidence: authority/scope, system/model/data versions, identity, tool/versi
 
 ## 30.11 PyRIT
 
-Purpose: Risk identification and red-team orchestration for generative AI. Official project: [<u>PyRIT</u>](https://github.com/Azure/PyRIT)
+Purpose: Risk identification and red-team orchestration for generative AI. Official project: [<u>PyRIT</u>](https://github.com/microsoft/PyRIT)
 
 Safe quick start: Define written lab rules; use harmless objectives and synthetic data; set request/time/cost limits; protect transcripts and findings.
 
@@ -1026,7 +1026,7 @@ AIMS evidence: authority/scope, system/model/data versions, identity, tool/versi
 
 ## 30.13 Presidio
 
-Purpose: Detection and de-identification of personal information. Official project: [<u>Presidio</u>](https://microsoft.github.io/presidio/)
+Purpose: Detection and de-identification of personal information. Official project: [<u>Presidio</u>](https://presidio.dataprivacystack.org/)
 
 Safe quick start: Test on synthetic examples; configure recognizers for language/context; inspect false positives and misses; protect analyzer output.
 
@@ -1340,6 +1340,12 @@ Accurate scope, careful evidence, clause understanding, clear writing, respect f
 - [<u>ISO/IEC 23053:2022 ML system framework</u>](https://www.iso.org/standard/74438.html)
 
 - [<u>ISO/IEC 38507:2022 governance implications of AI</u>](https://www.iso.org/standard/56641.html)
+
+- [<u>ISO/IEC 27001:2022 information-security management-system requirements</u>](https://www.iso.org/standard/27001)
+
+- [<u>ISO/IEC 27001:2022/Amd 1:2024 climate-action changes</u>](https://www.iso.org/standard/88435.html)
+
+- [<u>ISO/IEC 17021-1:2015 management-system certification bodies</u>](https://www.iso.org/standard/61651.html)
 
 - [<u>ISO/IEC JTC 1/SC 42 catalogue</u>](https://committee.iso.org/committee/6794475/x/catalogue/)
 

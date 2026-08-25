@@ -19,7 +19,7 @@ A ISO/IEC 42001 ajuda organizações a governar a inteligência artificial por m
 
 Este manual explica conceitos em redação original e não reproduz a norma protegida por direitos autorais. Obtenha uma cópia autorizada da ISO/IEC 42001:2023 e de quaisquer normas utilizadas na implementação ou auditoria. Certificação, leis, deveres setoriais, contratos e riscos técnicos devem ser avaliados em relação ao escopo e aos fatos reais da organização.
 
-| **Nota de informação atual:** Verificado em 14 de julho de 2026. A ISO/IEC 42001:2023 continua sendo a norma publicada de requisitos para SGIA. A ISO/IEC 42005:2025 fornece orientação sobre avaliação de impacto de sistemas de IA. A ISO/IEC 42006:2025 acrescenta requisitos para organismos que auditam e certificam SGIA. A ISO 19011:2026 é a orientação atual para auditoria de sistemas de gestão. ISO/IEC 42003 e 42007 continuam em desenvolvimento e não são tratadas aqui como requisitos. |
+| **Nota de informação atual:** Verificado em 24 de agosto de 2026. A ISO/IEC 42001:2023 continua sendo a norma publicada de requisitos para SGIA. A ISO/IEC 42005:2025 fornece orientação sobre avaliação de impacto de sistemas de IA. A ISO/IEC 42006:2025 acrescenta requisitos para organismos que auditam e certificam SGIA. A ISO 19011:2026 é a orientação atual para auditoria de sistemas de gestão. A ISO/IEC 42003 continua como item de trabalho aprovado e a ISO/IEC 42007 avançou para o estágio de projeto de norma internacional; ambas continuam em desenvolvimento e não são tratadas aqui como requisitos. |
 |---|
 
 ## Como utilizar este manual
@@ -111,7 +111,7 @@ Figura 1. Ciclo PDCA do SGIA
 
 - Reutilize processos de governança, controle documental, risco, auditoria, ação corretiva, fornecedores, segurança, privacidade, qualidade e continuidade quando seu escopo e controles forem adequados ao risco de IA.
 - Crie complementos específicos de IA para avaliação de impacto, ciclo de vida de modelos/dados, uso responsável, transparência, supervisão humana e responsabilidades da cadeia de valor.
-- Mantenha uma única fonte de verdade e mapeie-a para ISO 27001, ISO 9001, privacidade, obrigações legais, NIST AI RMF e deveres setoriais em vez de duplicar registros.
+- Mantenha uma única fonte de verdade e mapeie-a para ISO/IEC 27001:2022, ISO 9001, privacidade, obrigações legais, NIST AI RMF e deveres setoriais em vez de duplicar registros.
 
 # 3. Aplicabilidade, papéis organizacionais e roteiro de implementação
 

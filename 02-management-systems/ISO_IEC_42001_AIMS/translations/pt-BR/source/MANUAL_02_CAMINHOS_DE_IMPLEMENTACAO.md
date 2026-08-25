@@ -201,6 +201,8 @@ O registro de fontes controladas identifica as páginas oficiais vigentes com es
 - `iso-iec-23894-2023` — orientação para gestão de riscos de IA; e
 - `iso-19011-2026` — orientação para auditorias de sistemas de gestão.
 
+O registro também controla `iso-iec-22989-2022`, `iso-iec-23053-2022`, `iso-iec-38507-2022`, `iso-iec-27001-2022` e `iso-iec-27001-2022-amd1-2024`. A fonte de apoio à certificação `iso-iec-17021-1-2015` continua publicada, mas está em revisão sistemática.
+
 Não afirme que:
 
 - o uso deste manual demonstra conformidade;

@@ -39,7 +39,16 @@ Current controlled source identifiers:
 - `iso-iec-42005-2025`
 - `iso-iec-42006-2025`
 - `iso-iec-23894-2023`
+- `iso-iec-22989-2022`
+- `iso-iec-23053-2022`
+- `iso-iec-38507-2022`
+- `iso-iec-27001-2022`
+- `iso-iec-27001-2022-amd1-2024`
 - `iso-19011-2026`
+
+Supporting certification source under systematic review:
+
+- `iso-iec-17021-1-2015`
 
 ## Publication roadmap
 

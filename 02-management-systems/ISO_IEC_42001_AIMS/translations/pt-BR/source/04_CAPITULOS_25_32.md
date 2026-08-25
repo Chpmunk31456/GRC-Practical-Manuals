@@ -221,7 +221,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 
 ## 30.8 Giskard
 
-**Finalidade:** Testes de IA e varredura de vulnerabilidades. Projeto oficial: [Giskard](https://github.com/Giskard-AI/giskard)
+**Finalidade:** Testes de IA e varredura de vulnerabilidades. Projeto oficial: [Giskard](https://github.com/Giskard-AI/giskard-oss)
 
 **Início seguro:** Conecte apenas modelo e conjunto de teste aprovados; selecione testes relevantes; valide falhas manualmente; preserve relatório e reteste de remediação.
 
@@ -245,7 +245,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 
 ## 30.11 PyRIT
 
-**Finalidade:** Identificação de riscos e orquestração de red teaming para IA generativa. Projeto oficial: [PyRIT](https://github.com/Azure/PyRIT)
+**Finalidade:** Identificação de riscos e orquestração de red teaming para IA generativa. Projeto oficial: [PyRIT](https://github.com/microsoft/PyRIT)
 
 **Início seguro:** Defina regras de laboratório por escrito; use objetivos inofensivos e dados sintéticos; estabeleça limites de solicitações/tempo/custo; proteja transcrições e constatações.
 
@@ -261,7 +261,7 @@ Figura 9. Ciclo de vida de IA de terceiros
 
 ## 30.13 Presidio
 
-**Finalidade:** Detecção e desidentificação de informações pessoais. Projeto oficial: [Presidio](https://microsoft.github.io/presidio/)
+**Finalidade:** Detecção e desidentificação de informações pessoais. Projeto oficial: [Presidio](https://presidio.dataprivacystack.org/)
 
 **Início seguro:** Teste em exemplos sintéticos; configure reconhecedores para idioma/contexto; inspecione falsos positivos e perdas; proteja a saída do analisador.
 
@@ -558,6 +558,9 @@ Escopo preciso, evidências cuidadosas, compreensão de cláusulas, redação cl
 - [ISO/IEC 22989:2022 — conceitos e terminologia de IA](https://www.iso.org/standard/74296.html)
 - [ISO/IEC 23053:2022 — estrutura de sistemas de ML](https://www.iso.org/standard/74438.html)
 - [ISO/IEC 38507:2022 — implicações de governança de IA](https://www.iso.org/standard/56641.html)
+- [ISO/IEC 27001:2022 — requisitos de sistemas de gestão de segurança da informação](https://www.iso.org/standard/27001)
+- [ISO/IEC 27001:2022/Amd 1:2024 — mudanças relativas à ação climática](https://www.iso.org/standard/88435.html)
+- [ISO/IEC 17021-1:2015 — organismos de auditoria e certificação de sistemas de gestão](https://www.iso.org/standard/61651.html)
 - [Catálogo ISO/IEC JTC 1/SC 42](https://committee.iso.org/committee/6794475/x/catalogue/)
 - [Normas ISO de sistemas de gestão](https://www.iso.org/management-system-standards.html)
 - [IAF CertSearch](https://www.iafcertsearch.org/)

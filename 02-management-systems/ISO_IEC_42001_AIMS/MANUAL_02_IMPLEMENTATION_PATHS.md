@@ -199,6 +199,8 @@ The controlled source registry identifies current official pages using these IDs
 - `iso-iec-23894-2023` — AI risk-management guidance; and
 - `iso-19011-2026` — management-system audit guidance.
 
+The registry also controls `iso-iec-22989-2022`, `iso-iec-23053-2022`, `iso-iec-38507-2022`, `iso-iec-27001-2022`, and `iso-iec-27001-2022-amd1-2024`. The supporting certification source `iso-iec-17021-1-2015` remains published but is under systematic review.
+
 Do not claim that:
 
 - using this manual establishes conformity;

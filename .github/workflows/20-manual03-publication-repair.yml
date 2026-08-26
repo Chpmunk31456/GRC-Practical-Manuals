@@ -9,6 +9,7 @@ on:
       - "01-foundations/NIST_AI_RMF_1.0/**"
       - ".compliance/nist-ai-rmf-manual-03-baseline.json"
       - "scripts/generate_nist_ai_rmf_manual_03_publication*.py"
+      - "scripts/pdf_content_preflight.py"
 
 permissions:
   contents: read

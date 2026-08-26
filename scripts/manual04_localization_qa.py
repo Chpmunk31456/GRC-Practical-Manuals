@@ -9,10 +9,16 @@ LOCALES = {
     "es-419": BASE / "es-419/source",
     "pt-BR": BASE / "pt-BR/source",
 }
+IMPLEMENTATION_FILES = {
+    "en": BASE / "MANUAL_04_IMPLEMENTATION_PATHS.md",
+    "es-419": BASE / "es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_04.md",
+    "pt-BR": BASE / "pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_04.md",
+}
 
-REQUIRED_FILES = 4
+REQUIRED_CHAPTER_FILES = 4
 REQUIRED_CHAPTERS = set(range(1, 33))
 REQUIRED_TOKENS = ["NIST AI 600-1", "AI RMF", "GOVERN", "MAP", "MEASURE", "MANAGE"]
+MIN_IMPLEMENTATION_CHARS = 9000
 
 # Fail only on affirmative overclaims. Required negative disclaimers such as
 # "does not create certification", "ni crea certificación", and
@@ -38,20 +44,43 @@ DISCLAIMERS = {
     "es-419": ["no reproduce", "ni crea certificación"],
     "pt-BR": ["não reproduz", "nem cria certificação"],
 }
+IMPLEMENTATION_PATH_TERMS = {
+    "en": ["Essential path", "Structured path", "Enhanced path", "Assurance statement"],
+    "es-419": ["Ruta esencial", "Ruta estructurada", "Ruta mejorada", "Declaracion de aseguramiento"],
+    "pt-BR": ["Caminho essencial", "Caminho estruturado", "Caminho aprimorado", "Declaracao de asseguracao"],
+}
+IMPLEMENTATION_BOUNDARIES = {
+    "en": ["voluntary", "does not certify", "legal compliance", "audit opinion"],
+    "es-419": ["voluntario", "no certifica", "cumplimiento legal", "opinion de auditoria"],
+    "pt-BR": ["voluntarias", "nao certifica", "conformidade legal", "opiniao de auditoria"],
+}
+
+
+def chapter_inventory(locale: str, directory: Path):
+    files = []
+    chapters = set()
+    if not directory.exists():
+        return files, chapters, ""
+    for path in sorted(directory.glob("*.md")):
+        body = path.read_text(encoding="utf-8")
+        if locale == "en":
+            found = {int(x) for x in re.findall(r"^## Chapter (\d{2})", body, re.M)}
+        else:
+            found = {int(x) for x in re.findall(r"^## Cap[ií]tulo (\d{2})", body, re.M)}
+        if found:
+            files.append(path)
+            chapters.update(found)
+    text = "\n".join(p.read_text(encoding="utf-8") for p in files)
+    return files, chapters, text
+
 
 errors = []
 summary = []
 
 for locale, directory in LOCALES.items():
-    files = sorted(directory.glob("*.md")) if directory.exists() else []
-    if len(files) != REQUIRED_FILES:
-        errors.append(f"{locale}: expected {REQUIRED_FILES} source blocks, found {len(files)}")
-        continue
-    text = "\n".join(p.read_text(encoding="utf-8") for p in files)
-    if locale == "en":
-        chapters = {int(x) for x in re.findall(r"^## Chapter (\d{2})", text, re.M)}
-    else:
-        chapters = {int(x) for x in re.findall(r"^## Cap[ií]tulo (\d{2})", text, re.M)}
+    files, chapters, text = chapter_inventory(locale, directory)
+    if len(files) != REQUIRED_CHAPTER_FILES:
+        errors.append(f"{locale}: expected {REQUIRED_CHAPTER_FILES} chapter source blocks, found {len(files)}")
     if chapters != REQUIRED_CHAPTERS:
         errors.append(f"{locale}: chapter coverage mismatch: {sorted(chapters)}")
     for token in REQUIRED_TOKENS:
@@ -69,7 +98,33 @@ for locale, directory in LOCALES.items():
     for pattern in PROHIBITED_PATTERNS:
         if re.search(pattern, text, re.I):
             errors.append(f"{locale}: prohibited affirmative implication matched {pattern!r}")
-    summary.append(f"{locale}: {len(files)} blocks, 32 chapters, required boundaries present")
+
+    implementation = IMPLEMENTATION_FILES[locale]
+    if not implementation.is_file():
+        errors.append(f"{locale}: implementation-path source is missing: {implementation.relative_to(ROOT)}")
+        continue
+    implementation_text = implementation.read_text(encoding="utf-8")
+    if len(implementation_text.strip()) < MIN_IMPLEMENTATION_CHARS:
+        errors.append(
+            f"{locale}: implementation-path source is unexpectedly small "
+            f"({len(implementation_text.strip())} chars; minimum {MIN_IMPLEMENTATION_CHARS})"
+        )
+    for term in IMPLEMENTATION_PATH_TERMS[locale]:
+        if term.lower() not in implementation_text.lower():
+            errors.append(f"{locale}: implementation paths missing required concept {term!r}")
+    for term in IMPLEMENTATION_BOUNDARIES[locale]:
+        if term.lower() not in implementation_text.lower():
+            errors.append(f"{locale}: implementation paths missing assurance boundary {term!r}")
+    for token in REQUIRED_TOKENS:
+        if token not in implementation_text:
+            errors.append(f"{locale}: implementation paths missing required token {token!r}")
+    for pattern in PROHIBITED_PATTERNS:
+        if re.search(pattern, implementation_text, re.I):
+            errors.append(f"{locale}: implementation paths contain prohibited affirmative implication {pattern!r}")
+
+    summary.append(
+        f"{locale}: {len(files)} chapter blocks, 32 chapters, implementation paths present, required boundaries present"
+    )
 
 if not errors:
     print("Manual 04 localization fail-closed QA: PASS")

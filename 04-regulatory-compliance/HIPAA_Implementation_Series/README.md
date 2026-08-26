@@ -45,7 +45,7 @@ See [Manual 06 implementation paths](./MANUAL_06_IMPLEMENTATION_PATHS.md).
 
 ## Audit and evidence boundary
 
-A control is not considered demonstrated merely because a policy exists. The future controlled master will require traceable implementation evidence such as inventories, risk analyses, access records, workforce records, technical configurations, audit logs, incident records, BAAs, breach assessments, remediation evidence, and management approvals where applicable.
+A control is not considered demonstrated merely because a policy exists. The controlled master requires traceable implementation evidence such as inventories, risk analyses, access records, workforce records, technical configurations, audit logs, incident records, BAAs, breach assessments, remediation evidence, and management approvals where applicable.
 
 ## Release gates
 
@@ -53,8 +53,8 @@ A control is not considered demonstrated merely because a policy exists. The fut
 - [x] Current-law versus NPRM separation encoded.
 - [x] Proportional implementation paths staged.
 - [x] Current HHS/OCR source-state verification completed on 2026-08-26; current law remains in effect and NPRM content remains readiness-only.
-- [x] Dedicated Manual 06 QA passed at controlled head `13c5c54729baa37417b66fa53d79bf5b27ed914f`; any later material/control change requires a fresh exact-head run.
-- [ ] Complete controlled English chapter master.
+- [x] Controlled English chapter master complete across four source blocks covering Chapters 01–32.
+- [x] Dedicated Manual 06 QA passed at controlled head `13c5c54729baa37417b66fa53d79bf5b27ed914f`; the new chapter-master head requires a fresh exact-head run before promotion.
 - [ ] Complete legal-boundary/editorial/technical review.
 - [ ] Complete `es-419` and `pt-BR` localization and human semantic review.
 - [ ] Complete learning graphics and accessibility review.

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-08-26",
+  "released_work_products": [
+    {
+      "id": "iso-42001-aims",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "PR #89 merged; controlled publication package and release QA completed"
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "PR #90 merged; controlled release workflow completed"
+    }
+  ]
+}

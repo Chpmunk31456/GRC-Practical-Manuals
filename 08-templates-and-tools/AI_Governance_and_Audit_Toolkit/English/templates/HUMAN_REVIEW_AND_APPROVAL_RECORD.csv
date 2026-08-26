@@ -1,0 +1,1 @@
+record_id,artifact_or_scope,review_type,reviewer,reviewer_role,review_date,evidence,findings,remediation,exceptions,unresolved_items,residual_risk,decision,approval_scope,material_change_invalidation_rule,change_trigger,status,next_review_or_reapproval_date

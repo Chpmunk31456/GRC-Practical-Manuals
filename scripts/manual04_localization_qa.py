@@ -13,11 +13,15 @@ LOCALES = {
 REQUIRED_FILES = 4
 REQUIRED_CHAPTERS = set(range(1, 33))
 REQUIRED_TOKENS = ["NIST AI 600-1", "AI RMF", "GOVERN", "MAP", "MEASURE", "MANAGE"]
+
+# Fail only on affirmative overclaims. Required negative disclaimers such as
+# "does not create certification", "ni crea certificación", and
+# "nem cria certificação" must not be treated as prohibited claims merely
+# because the standard identifier and certification term appear together.
 PROHIBITED_PATTERNS = [
-    r"NIST AI 600-1 (?:is|es|é) (?:mandatory|obligatorio|obrigatório)",
-    r"NIST AI 600-1 .*certification",
-    r"NIST AI 600-1 .*certificación",
-    r"NIST AI 600-1 .*certificação",
+    r"NIST AI 600-1\s+(?:is|es|é)\s+(?:mandatory|obligatorio|obrigatório)\b",
+    r"NIST AI 600-1\s+(?:is|es|é)\s+(?:a\s+|una\s+|uma\s+)?(?:certification|certificación|certificação)\b",
+    r"NIST AI 600-1\s+(?:provides|grants|otorga|concede|fornece)\s+(?:a\s+|una\s+|uma\s+)?(?:certification|certificación|certificação)\b",
 ]
 HUMAN_REVIEW_TERMS = {
     "en": ["human review", "Final Human Release Approval"],
@@ -31,7 +35,7 @@ STOP_TERMS = {
 }
 DISCLAIMERS = {
     "en": ["does not reproduce", "does not create certification"],
-    "es-419": ["no reproduce", "no crea certificación"],
+    "es-419": ["no reproduce", "ni crea certificación"],
     "pt-BR": ["não reproduz", "nem cria certificação"],
 }
 
@@ -64,10 +68,9 @@ for locale, directory in LOCALES.items():
             errors.append(f"{locale}: missing disclaimer fragment {term!r}")
     for pattern in PROHIBITED_PATTERNS:
         if re.search(pattern, text, re.I):
-            errors.append(f"{locale}: prohibited implication matched {pattern!r}")
+            errors.append(f"{locale}: prohibited affirmative implication matched {pattern!r}")
     summary.append(f"{locale}: {len(files)} blocks, 32 chapters, required boundaries present")
 
-# Structural parity: each locale must have exactly 32 chapter headings.
 if not errors:
     print("Manual 04 localization fail-closed QA: PASS")
     for line in summary:

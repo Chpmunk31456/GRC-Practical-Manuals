@@ -17,6 +17,7 @@ on:
       - "scripts/nist_ai_rmf_manual_03_publication_gate_qa.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication_v2.py"
+      - "scripts/generate_nist_ai_rmf_manual_03_publication_v3.py"
       - "scripts/compliance_qa.py"
       - ".github/workflows/10-nist-ai-rmf-manual-03-qa.yml"
   workflow_dispatch:
@@ -64,7 +65,7 @@ jobs:
         run: |
           set -euo pipefail
           OUT="$RUNNER_TEMP/manual03-publication"
-          python3 scripts/generate_nist_ai_rmf_manual_03_publication_v2.py \
+          python3 scripts/generate_nist_ai_rmf_manual_03_publication_v3.py \
             --output-root "$OUT" \
             --source-head "$SOURCE_HEAD"
           test -s "$OUT/qa/MANUAL_03_PUBLICATION_REPORT.json"

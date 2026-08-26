@@ -11,8 +11,8 @@
     {
       "id": "nist-ai-rmf-1-0",
       "type": "manual",
-      "release_state": "published",
-      "release_evidence": "PR #90 merged; controlled release workflow completed"
+      "release_state": "blocked-publication-package",
+      "release_evidence": "PR #90 merged, but repository reconciliation on 2026-08-26 found no committed DOCX/PDF publication package on main; publication state is blocked until regenerated and revalidated"
     }
   ]
 }

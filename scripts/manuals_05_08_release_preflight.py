@@ -5,7 +5,8 @@ Purpose:
 - catch affirmative compliance/certification overclaims without flagging required negative disclaimers;
 - verify core release-boundary language early;
 - verify HIPAA current-law vs proposed-rule separation;
-- inspect localized sources when present, without pretending automated checks are semantic approval.
+- inspect localized sources when present, without pretending automated checks are semantic approval;
+- regression-test detector behavior so known false-positive classes cannot silently return.
 
 This preflight is intentionally narrower than human semantic review. A PASS means the
 machine-detectable boundary checks passed; it does not constitute human approval.
@@ -43,7 +44,7 @@ AFFIRMATIVE_OVERCLAIMS = {
 
 NEGATION_MARKERS = {
     "English": ("does not", "do not", "not a", "not certification", "cannot", "doesn't"),
-    "es-419": ("no crea", "no constituye", "no es", "no garantiza", "no certifica"),
+    "es-419": ("no crea", "ni crea", "no constituye", "no es", "no garantiza", "no certifica"),
     "pt-BR": ("não cria", "não constitui", "não é", "não garante", "não certifica", "nem cria"),
 }
 
@@ -60,14 +61,37 @@ def iter_markdown(directory: Path):
     return sorted(directory.glob("*.md"))
 
 
-def scan_overclaims(locale: str, text: str, label: str, errors: list[str]) -> None:
+def overclaim_hits(locale: str, text: str) -> list[str]:
+    hits: list[str] = []
     for lineno, line in enumerate(text.splitlines(), 1):
         lowered = line.casefold()
         if any(marker.casefold() in lowered for marker in NEGATION_MARKERS[locale]):
             continue
         for pattern in AFFIRMATIVE_OVERCLAIMS[locale]:
             if re.search(pattern, line, re.I):
-                errors.append(f"{label}:{lineno}: affirmative overclaim matched {pattern!r}")
+                hits.append(f"line {lineno}: {pattern!r}")
+    return hits
+
+
+def scan_overclaims(locale: str, text: str, label: str, errors: list[str]) -> None:
+    for hit in overclaim_hits(locale, text):
+        errors.append(f"{label}: {hit}")
+
+
+def self_test_detector(errors: list[str]) -> None:
+    fixtures = [
+        ("English", "NIST AI 600-1 is a certification.", True),
+        ("English", "This text does not create certification or legal compliance.", False),
+        ("es-419", "NIST AI 600-1 es una certificación.", True),
+        ("es-419", "Este texto no reproduce el texto de NIST ni crea certificación.", False),
+        ("pt-BR", "NIST AI 600-1 é uma certificação.", True),
+        ("pt-BR", "Este texto não reproduz o texto do NIST nem cria certificação.", False),
+    ]
+    for locale, text, should_hit in fixtures:
+        hit = bool(overclaim_hits(locale, text))
+        if hit != should_hit:
+            expectation = "detect" if should_hit else "ignore"
+            errors.append(f"detector regression: {locale} fixture should {expectation}: {text!r}")
 
 
 def check_manual(number: str, base: Path, errors: list[str], notes: list[str]) -> None:
@@ -116,6 +140,8 @@ def check_manual(number: str, base: Path, errors: list[str], notes: list[str]) -
 def main() -> int:
     errors: list[str] = []
     notes: list[str] = []
+
+    self_test_detector(errors)
     for number, base in MANUALS.items():
         check_manual(number, base, errors, notes)
 

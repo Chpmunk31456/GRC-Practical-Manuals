@@ -1,0 +1,1 @@
+record_id,engagement_or_review_id,system_or_scope_id,source_or_criteria,condition,cause,risk_or_impact,severity,evidence,finding_owner,management_response,remediation,target_date,risk_acceptance_or_exception,residual_risk,validation_procedure,validation_evidence,validation_result,status,decision,reviewer,review_date,closure_date,change_trigger

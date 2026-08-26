@@ -16,18 +16,20 @@ Manual 07 will provide practical security engineering and governance controls ac
 
 The intake is anchored to controlled source IDs including:
 
-- `iso-iec-27090` — AI security threats and mitigations;
+- `iso-iec-27090` — AI security threats and mitigations; **source-state watch only while ISO lists the first edition as under publication (stage 60.00), not a published final standard**;
 - `iso-iec-5338-2023` — AI system lifecycle processes;
 - `iso-iec-42001-2023` — AI management-system governance;
 - `nist-ai-rmf-1-0` and `nist-ai-600-1` — AI/GenAI risk practices;
 - `nist-sp-800-218` — secure software development practices;
 - `nist-sp-800-207` — Zero Trust architecture principles.
 
+See [Manual 07 authoritative-source verification](./qa/SOURCE_VERIFICATION_2026-08-26.md).
+
 ## Security model
 
 Manual 07 will use defense in depth, least privilege, Zero Trust, strong identity, explicit authorization, human oversight, secure defaults, fail-closed behavior, provenance, monitoring, and recoverability as recurring design principles.
 
-The controlled master will address:
+The controlled master addresses:
 
 - AI asset/use-case inventory and ownership;
 - threat modeling across data, model, application, orchestration, tool, identity, infrastructure, and supplier layers;
@@ -55,8 +57,10 @@ Passing Manual 07 QA can show that required controlled topics and release eviden
 
 - [x] Controlled intake branch and baseline.
 - [x] Lifecycle/security implementation entry.
-- [ ] Complete controlled English chapter master.
-- [ ] Reverify authoritative sources at candidate head.
+- [x] Complete controlled English chapter master (32 chapters across four controlled source blocks).
+- [x] Authoritative-source verification record completed for the current pre-stage head; ISO/IEC 27090 publication-state correction retained as an explicit release watch item.
+- [ ] Reconcile the shared authoritative-source registry entry for ISO/IEC 27090 before release.
+- [ ] Re-run dedicated exact-head QA after source-state documentation changes.
 - [ ] Complete security architecture and technical review.
 - [ ] Complete `es-419` and `pt-BR` localization and human semantic review.
 - [ ] Complete educational graphics/accessibility review.

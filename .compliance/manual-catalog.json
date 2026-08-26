@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-26",
   "languages": [
     "en",
     "es-419",
@@ -73,6 +73,7 @@
       "title": "Manual 01 — EU AI Act Practical Implementation Guide",
       "path": "04-regulatory-compliance/EU_AI_Act_GRC",
       "status": "development",
+      "release_state": "development",
       "layout": "controlled-build",
       "series_order": 1
     },
@@ -102,6 +103,7 @@
       "title": "Manual 03 — NIST AI Risk Management Framework Implementation",
       "path": "01-foundations/NIST_AI_RMF_1.0",
       "status": "development",
+      "release_state": "blocked-publication-package",
       "layout": "controlled-build",
       "series_order": 3
     },
@@ -117,6 +119,7 @@
       "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
       "path": "02-management-systems/ISO_IEC_42001_AIMS",
       "status": "development",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 2
     },

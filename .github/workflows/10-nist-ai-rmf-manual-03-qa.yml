@@ -13,6 +13,8 @@ on:
       - "qa/manual03-publication-readiness/**"
       - "VISUAL_LEARNING_STANDARD.md"
       - "scripts/nist_ai_rmf_manual_03_qa.py"
+      - "scripts/nist_ai_rmf_manual_03_localization_qa.py"
+      - "scripts/nist_ai_rmf_manual_03_publication_gate_qa.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication_v2.py"
       - "scripts/compliance_qa.py"
@@ -36,6 +38,12 @@ jobs:
 
       - name: Validate the NIST AI RMF controlled implementation intake
         run: python3 scripts/nist_ai_rmf_manual_03_qa.py
+
+      - name: Validate localized chapter semantic depth and parity
+        run: python3 scripts/nist_ai_rmf_manual_03_localization_qa.py
+
+      - name: Validate localized implementation publication source
+        run: python3 scripts/nist_ai_rmf_manual_03_publication_gate_qa.py
 
       - name: Validate the authoritative-source registry
         run: python3 scripts/compliance_qa.py sources

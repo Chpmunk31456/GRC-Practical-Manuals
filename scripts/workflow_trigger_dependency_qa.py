@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import fnmatch
 import re
 import sys
 from pathlib import Path
@@ -12,7 +13,7 @@ WORKFLOWS = ROOT / ".github/workflows"
 
 RUN_SCRIPT_RE = re.compile(r"(?:python3?|python)\s+(scripts/[A-Za-z0-9_./-]+\.py)")
 PATH_LINE_RE = re.compile(
-    r"^\s*-\s+(?P<quote>['\"]?)(?P<path>scripts/[A-Za-z0-9_./*?-]+)(?P=quote)\s*(?:#.*)?$"
+    r"^\s*-\s+(?P<quote>['\"]?)(?P<path>scripts/[A-Za-z0-9_./*?\[\]-]+)(?P=quote)\s*(?:#.*)?$"
 )
 
 
@@ -29,18 +30,41 @@ def extract_trigger_paths(text: str) -> set[str]:
     return paths
 
 
+def path_is_covered(script: str, trigger_paths: set[str]) -> bool:
+    """Return True when an exact or glob trigger path covers the invoked script."""
+    return any(fnmatch.fnmatchcase(script, pattern) for pattern in trigger_paths)
+
+
 def self_test_parser(errors: list[str]) -> None:
     fixtures = {
         "- scripts/compliance_qa.py": "scripts/compliance_qa.py",
         "- 'scripts/compliance_qa.py'": "scripts/compliance_qa.py",
         '- "scripts/pdf_content_preflight.py"': "scripts/pdf_content_preflight.py",
         "      - 'scripts/**' # helper changes": "scripts/**",
+        "      - 'scripts/generate_nist_ai_rmf_manual_03_publication*.py'": "scripts/generate_nist_ai_rmf_manual_03_publication*.py",
     }
     for line, expected in fixtures.items():
         parsed = extract_trigger_paths(line)
         if parsed != {expected}:
             errors.append(
                 f"parser regression: expected {expected!r} from {line!r}, got {sorted(parsed)!r}"
+            )
+
+    coverage_fixtures = [
+        ("scripts/compliance_qa.py", {"scripts/compliance_qa.py"}, True),
+        ("scripts/pdf_content_preflight.py", {"scripts/**"}, True),
+        (
+            "scripts/generate_nist_ai_rmf_manual_03_publication_v3.py",
+            {"scripts/generate_nist_ai_rmf_manual_03_publication*.py"},
+            True,
+        ),
+        ("scripts/pdf_content_preflight.py", {"scripts/compliance_qa.py"}, False),
+    ]
+    for script, patterns, expected in coverage_fixtures:
+        actual = path_is_covered(script, patterns)
+        if actual != expected:
+            errors.append(
+                f"coverage regression: {script!r} with {sorted(patterns)!r} expected {expected}, got {actual}"
             )
 
 
@@ -60,7 +84,7 @@ def main() -> int:
         trigger_paths = extract_trigger_paths(text)
         checked += 1
         for script in invoked:
-            if script in trigger_paths or "scripts/**" in trigger_paths:
+            if path_is_covered(script, trigger_paths):
                 continue
             errors.append(
                 f"{workflow.relative_to(ROOT)} invokes {script} but does not include it in pull_request.paths"

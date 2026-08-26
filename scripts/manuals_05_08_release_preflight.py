@@ -5,8 +5,9 @@ Purpose:
 - catch affirmative compliance/certification overclaims without flagging required negative disclaimers;
 - verify core release-boundary language early;
 - verify HIPAA current-law vs proposed-rule separation;
+- classify controlled Markdown by content role rather than raw file count;
 - inspect localized sources when present, without pretending automated checks are semantic approval;
-- regression-test detector behavior so known false-positive classes cannot silently return.
+- regression-test detector and source-role behavior so known false-positive classes cannot silently return.
 
 This preflight is intentionally narrower than human semantic review. A PASS means the
 machine-detectable boundary checks passed; it does not constitute human approval.
@@ -17,6 +18,8 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
+
+from controlled_source_inventory import inventory_markdown, self_test as source_inventory_self_test
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -55,12 +58,6 @@ REQUIRED_BOUNDARY_FILES = (
 )
 
 
-def iter_markdown(directory: Path):
-    if not directory.exists():
-        return []
-    return sorted(directory.glob("*.md"))
-
-
 def overclaim_hits(locale: str, text: str) -> list[str]:
     hits: list[str] = []
     for lineno, line in enumerate(text.splitlines(), 1):
@@ -92,6 +89,7 @@ def self_test_detector(errors: list[str]) -> None:
         if hit != should_hit:
             expectation = "detect" if should_hit else "ignore"
             errors.append(f"detector regression: {locale} fixture should {expectation}: {text!r}")
+    errors.extend(source_inventory_self_test())
 
 
 def check_manual(number: str, base: Path, errors: list[str], notes: list[str]) -> None:
@@ -106,15 +104,24 @@ def check_manual(number: str, base: Path, errors: list[str], notes: list[str]) -
 
     for locale in LOCALES:
         source_dir = base / locale / "source"
-        files = iter_markdown(source_dir)
-        if not files:
+        inventory = inventory_markdown(source_dir)
+        all_files = inventory.chapter_files + inventory.support_files
+        if not all_files:
             if locale == "English":
                 errors.append(f"Manual {number}: English controlled source missing")
             else:
                 notes.append(f"Manual {number} {locale}: localized source not staged yet; preflight deferred")
             continue
-        text = "\n".join(p.read_text(encoding="utf-8") for p in files)
+
+        # Content-role awareness prevents valid implementation/support files from
+        # being mistaken for extra chapter blocks. Scan every controlled Markdown
+        # file for overclaims, but report chapter and support roles independently.
+        text = "\n".join(p.read_text(encoding="utf-8") for p in all_files)
         scan_overclaims(locale, text, f"Manual {number} {locale}", errors)
+        notes.append(
+            f"Manual {number} {locale}: {len(inventory.chapter_files)} chapter-bearing file(s), "
+            f"{len(inventory.support_files)} support file(s), {len(inventory.chapter_numbers)} unique chapter number(s)"
+        )
 
     # Manual 06 has an additional legal-status boundary. Require explicit separation
     # in release-readiness/source-verification material and reject wording that turns

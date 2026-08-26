@@ -11,12 +11,44 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = ROOT / ".github/workflows"
 
 RUN_SCRIPT_RE = re.compile(r"(?:python3?|python)\s+(scripts/[A-Za-z0-9_./-]+\.py)")
-PATH_LINE_RE = re.compile(r"^\s*-\s+['\"]?(scripts/[A-Za-z0-9_./*-]+)['\"]?\s*$")
+PATH_LINE_RE = re.compile(
+    r"^\s*-\s+(?P<quote>['\"]?)(?P<path>scripts/[A-Za-z0-9_./*?-]+)(?P=quote)\s*(?:#.*)?$"
+)
+
+
+def extract_trigger_paths(text: str) -> set[str]:
+    """Return normalized scripts/* path entries from YAML list lines.
+
+    Handles unquoted, single-quoted, and double-quoted path entries plus trailing comments.
+    """
+    paths: set[str] = set()
+    for line in text.splitlines():
+        match = PATH_LINE_RE.match(line)
+        if match:
+            paths.add(match.group("path"))
+    return paths
+
+
+def self_test_parser(errors: list[str]) -> None:
+    fixtures = {
+        "- scripts/compliance_qa.py": "scripts/compliance_qa.py",
+        "- 'scripts/compliance_qa.py'": "scripts/compliance_qa.py",
+        '- "scripts/pdf_content_preflight.py"': "scripts/pdf_content_preflight.py",
+        "      - 'scripts/**' # helper changes": "scripts/**",
+    }
+    for line, expected in fixtures.items():
+        parsed = extract_trigger_paths(line)
+        if parsed != {expected}:
+            errors.append(
+                f"parser regression: expected {expected!r} from {line!r}, got {sorted(parsed)!r}"
+            )
 
 
 def main() -> int:
     errors: list[str] = []
     checked = 0
+
+    self_test_parser(errors)
 
     for workflow in sorted(list(WORKFLOWS.glob("*.yml")) + list(WORKFLOWS.glob("*.yaml"))):
         text = workflow.read_text(encoding="utf-8")
@@ -25,12 +57,14 @@ def main() -> int:
         invoked = sorted(set(RUN_SCRIPT_RE.findall(text)))
         if not invoked:
             continue
-        trigger_paths = set(PATH_LINE_RE.findall(text))
+        trigger_paths = extract_trigger_paths(text)
         checked += 1
         for script in invoked:
             if script in trigger_paths or "scripts/**" in trigger_paths:
                 continue
-            errors.append(f"{workflow.relative_to(ROOT)} invokes {script} but does not include it in pull_request.paths")
+            errors.append(
+                f"{workflow.relative_to(ROOT)} invokes {script} but does not include it in pull_request.paths"
+            )
 
     print(f"Workflow trigger dependency QA: checked {checked} pull-request workflows")
     if errors:

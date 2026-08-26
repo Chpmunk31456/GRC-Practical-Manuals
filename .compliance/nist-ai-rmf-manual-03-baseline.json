@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "nist-ai-rmf-manual-03",
+  "title": "Manual 03 — NIST AI Risk Management Framework Implementation",
+  "manual_path": "01-foundations/NIST_AI_RMF_1.0",
+  "development_phase": "controlled-english-source-build",
+  "controlled_language": "en",
+  "planned_publication_languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "current_framework": {
+    "source_id": "nist-ai-rmf-1-0",
+    "publication": "NIST AI 100-1",
+    "version": "AI RMF 1.0",
+    "publication_date": "2023-01-26",
+    "registry_status": "final-under-revision",
+    "revision_state": "revision-in-progress",
+    "revision_notice_required": true
+  },
+  "generative_ai_profile": {
+    "source_id": "nist-ai-600-1",
+    "publication": "NIST AI 600-1",
+    "status": "final",
+    "applies_when": "generative-ai-in-scope"
+  },
+  "required_source_ids": [
+    "nist-ai-rmf-1-0",
+    "nist-ai-600-1"
+  ],
+  "implementation_entry": "MANUAL_03_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": [
+    "essential",
+    "structured",
+    "enhanced"
+  ],
+  "core_functions": [
+    "GOVERN",
+    "MAP",
+    "MEASURE",
+    "MANAGE"
+  ],
+  "english_source_parts": [
+    "English/source/01_PRELIMINARIES_CHAPTERS_01_08.md",
+    "English/source/02_MAP_CHAPTERS_09_16.md",
+    "English/source/03_MEASURE_CHAPTERS_17_24.md",
+    "English/source/04_MANAGE_CHAPTERS_25_32.md"
+  ],
+  "english_chapter_count": 32,
+  "required_source_visuals": 12,
+  "english_source_status": "controlled-draft-source-review-required",
+  "human_review_control": {
+    "required": true,
+    "gate_status": "open",
+    "fail_closed": true,
+    "final_release_approval_required": true,
+    "required_decision_fields": [
+      "reviewer",
+      "date",
+      "decision",
+      "evidence",
+      "findings",
+      "remediation"
+    ]
+  },
+  "required_visuals_in_implementation_entry": 3,
+  "visual_accessibility_label": "Accessible explanation:",
+  "required_topics": [
+    "AI inventory",
+    "AI actors",
+    "affected parties",
+    "risk ownership",
+    "GOVERN",
+    "MAP",
+    "MEASURE",
+    "MANAGE",
+    "TEVV",
+    "residual risk",
+    "human oversight",
+    "supplier",
+    "incident",
+    "corrective action",
+    "generative AI",
+    "NIST AI 600-1",
+    "version",
+    "revision"
+  ],
+  "required_assurance_boundaries": [
+    "voluntary",
+    "not certify",
+    "legal compliance",
+    "audit opinion"
+  ],
+  "required_version_markers": [
+    "AI RMF 1.0 is being updated",
+    "revised version is in progress",
+    "version-bound",
+    "impact-reviewed"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 30,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 03 must remain development material until the controlled English chapter master, localized review gates, accessibility review, source-state review, and release-artifact QA are complete.",
+  "assurance_boundary": "Repository QA validates controlled structure, authoritative-source state, accessibility, version awareness, and evidence readiness; it does not determine trustworthy-AI achievement, legal compliance, certification, or an audit opinion."
+}

@@ -1,0 +1,1 @@
+record_id,system_or_use_case_id,event_date,event_type,event_description,impact_or_risk,affected_parties,affected_controls,materiality,containment_or_interim_action,reassessment_required,testing_required,prior_approvals_invalidated,evidence,findings,remediation,residual_risk,decision,reviewer,review_date,status,closure_date,change_trigger

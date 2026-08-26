@@ -1,0 +1,1 @@
+record_id,system_name,use_case,business_owner,technical_owner,risk_owner,lifecycle_stage,users_and_affected_parties,model_provider,model_name_version,data_categories,critical_suppliers,autonomy_level,inherent_risk_tier,approval_decision,evidence,residual_risk,reviewer,review_date,status,change_trigger,next_review_date

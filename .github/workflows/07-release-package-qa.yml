@@ -18,6 +18,7 @@ on:
       - "LICENSE"
       - "README.md"
       - "scripts/compliance_qa.py"
+      - "scripts/pdf_content_preflight.py"
       - ".github/workflows/**"
   push:
     tags:
@@ -38,6 +39,8 @@ jobs:
     steps:
       - name: Check out the exact candidate revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Fail closed on blank or malformed PDFs
+        run: python3 scripts/pdf_content_preflight.py .
       - name: Run the complete release-readiness gate
         run: python3 scripts/compliance_qa.py release --output "$RUNNER_TEMP/release-qa-report.json"
       - name: Display the release QA report

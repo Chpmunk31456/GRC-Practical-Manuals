@@ -1,0 +1,1 @@
+record_id,system_or_scope_id,change_date,change_type,change_description,change_trigger,source_or_criteria,materiality,affected_controls,affected_risks,affected_suppliers,prior_approvals_invalidated,reassessment_required,testing_required,evidence,findings,remediation,residual_risk,status,decision,reviewer,review_date,closure_date

@@ -28,6 +28,12 @@ Manual 04 is now the front-of-line release candidate. Manual 03 no longer blocks
 | Changed-scope reconciliation | OPEN | Confirm no material change escaped an affected human or deterministic review gate. |
 | Final Human Release Approval | STANDING AUTHORITY / NOT YET OPERATIVE | Becomes operative only for the exact final candidate after every mandatory gate is green with no unresolved blocker. |
 
+## Mainline hardening reconciliation — 2026-08-26
+
+Manual 04 was reconciled onto hardened `main` commit `0d962a69f1caa8bae6e63afaa5f95a72e530a88b` through merge commit `e69d6d3a0aa23f720eded9a7307525f7f7fb4430`. The resulting branch comparison was **20 commits ahead / 0 commits behind** `main`, with only the intended Manual 04 controlled delta remaining.
+
+The reconciled lineage inherits the repository-wide blank/contentless PDF preflight, work-product release-state reconciliation, and current Manual 03 publication-repair controls from `main`. This is lineage and changed-scope evidence only; it does **not** close Manual 04 publication-artifact, semantic-review, accessibility/visual-review, security, provenance, or final-release gates. All automated checks must be re-run on the new exact candidate head, and later material changes must reopen affected gates.
+
 ## Parallel-throughput rule
 
 A wait in any Manual 04 gate must not idle the project. Independent capacity should move immediately to Manual 05 full-build work, Manual 06 source/legal architecture, Manual 07/08 controlled technical pre-stage, the shared AI Governance and Audit Toolkit, reusable graphics/localization/tooling, and research/intake for later manuals without bypassing dependency order.

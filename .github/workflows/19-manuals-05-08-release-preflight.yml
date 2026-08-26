@@ -8,6 +8,7 @@ on:
       - '06-cloud-and-technology-risk/AI_Security_and_Lifecycle/**'
       - '07-third-party-risk/Vendor_Risk_Lifecycle/**'
       - 'scripts/manuals_05_08_release_preflight.py'
+      - 'scripts/controlled_source_inventory.py'
       - '.github/workflows/19-manuals-05-08-release-preflight.yml'
   workflow_dispatch:
 

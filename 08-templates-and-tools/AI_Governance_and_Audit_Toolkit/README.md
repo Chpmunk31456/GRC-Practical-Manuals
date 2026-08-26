@@ -47,12 +47,12 @@ The toolkit will support Manual 05's controlled ISACA AAIA professional-practice
 ## Pre-staged release gates
 
 - [x] Controlled baseline and tool inventory.
-- [ ] Define field-level schemas for all nine tools.
-- [ ] Create English example/template files.
-- [ ] Validate formulas/enumerations and cross-record IDs.
+- [x] Define machine-readable field-level schemas for all nine tools (`TEMPLATE_SCHEMAS.json` and controlled field guide present; Workflow 17 previously PASS).
+- [ ] Complete field-level semantic/terminology review and validate formulas/enumerations/cross-record IDs.
+- [ ] Create English example/template files for all nine tools.
 - [ ] Create `es-419` and `pt-BR` field labels/instructions and complete human semantic review.
 - [ ] Complete accessibility and spreadsheet usability QA.
-- [ ] Complete security/provenance review.
+- [ ] Complete security/provenance review and release manifest/checksums.
 - [ ] Record final human release approval.
 
 ## Assurance boundary

@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Check out exact candidate
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install LibreOffice conversion dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
       - name: Install publication dependencies
         run: python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
       - name: Generate Manual 03 controlled publication package

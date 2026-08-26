@@ -1,0 +1,28 @@
+name: 19 - Manuals 05-08 Release Preflight
+
+on:
+  pull_request:
+    paths:
+      - '03-assurance-and-audit/AI_Auditing_and_Assurance/**'
+      - '04-regulatory-compliance/HIPAA_Implementation_Series/**'
+      - '06-cloud-and-technology-risk/AI_Security_and_Lifecycle/**'
+      - '07-third-party-risk/Vendor_Risk_Lifecycle/**'
+      - 'scripts/manuals_05_08_release_preflight.py'
+      - '.github/workflows/19-manuals-05-08-release-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run reusable release preflight
+        run: python scripts/manuals_05_08_release_preflight.py

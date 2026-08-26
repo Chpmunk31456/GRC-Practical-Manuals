@@ -21,6 +21,15 @@ MIN_PDF_BYTES = 1024
 MIN_TEXT_CHARS = 80
 
 
+def display_path(path: Path) -> Path:
+    """Return a stable printable path for repo and external/temp artifacts."""
+    resolved = path.resolve()
+    try:
+        return resolved.relative_to(REPO_ROOT)
+    except ValueError:
+        return resolved
+
+
 def iter_pdfs(inputs: list[Path]) -> list[Path]:
     found: set[Path] = set()
     for item in inputs:
@@ -81,7 +90,7 @@ def extract_text_chars(path: Path) -> int | None:
 def check_pdf(path: Path) -> list[str]:
     errors: list[str] = []
     data = path.read_bytes()
-    rel = path.relative_to(REPO_ROOT) if path.is_relative_to(REPO_ROOT) else path
+    rel = display_path(path)
 
     if len(data) < MIN_PDF_BYTES:
         errors.append(f"{rel}: PDF is suspiciously small ({len(data)} bytes)")
@@ -121,13 +130,14 @@ def main() -> int:
     errors: list[str] = []
     for pdf in pdfs:
         pdf_errors = check_pdf(pdf)
+        label = display_path(pdf)
         if pdf_errors:
             errors.extend(pdf_errors)
-            print(f"[FAIL] {pdf.relative_to(REPO_ROOT)}")
+            print(f"[FAIL] {label}")
             for err in pdf_errors:
                 print(f"  ERROR: {err}")
         else:
-            print(f"[PASS] {pdf.relative_to(REPO_ROOT)}")
+            print(f"[PASS] {label}")
 
     if errors:
         print(f"PDF content preflight: FAIL ({len(errors)} error(s))")

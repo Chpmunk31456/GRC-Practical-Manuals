@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "policy": "Downstream controlled manual branches should remain continuously reconciled with their immediate upstream dependency. Material drift is treated as an early preflight defect, not a release-time surprise.",
+  "max_allowed_behind_commits": 5,
+  "chains": [
+    {
+      "manual": "04",
+      "branch": "build/nist-ai-600-1-manual-04-2026",
+      "upstream": "main"
+    },
+    {
+      "manual": "05",
+      "branch": "build/ai-auditing-assurance-manual-05-2026",
+      "upstream": "build/nist-ai-600-1-manual-04-2026"
+    },
+    {
+      "manual": "06",
+      "branch": "build/hipaa-implementation-manual-06-2026",
+      "upstream": "build/ai-auditing-assurance-manual-05-2026"
+    },
+    {
+      "manual": "07",
+      "branch": "build/ai-security-lifecycle-manual-07-2026",
+      "upstream": "build/hipaa-implementation-manual-06-2026"
+    },
+    {
+      "manual": "08",
+      "branch": "build/vendor-risk-lifecycle-manual-08-2026",
+      "upstream": "build/ai-security-lifecycle-manual-07-2026"
+    }
+  ]
+}

@@ -52,8 +52,9 @@ A control is not considered demonstrated merely because a policy exists. The fut
 - [x] Controlled branch and machine-readable legal baseline staged.
 - [x] Current-law versus NPRM separation encoded.
 - [x] Proportional implementation paths staged.
+- [x] Current HHS/OCR source-state verification completed on 2026-08-26; current law remains in effect and NPRM content remains readiness-only.
+- [x] Dedicated Manual 06 QA passed at controlled head `13c5c54729baa37417b66fa53d79bf5b27ed914f`; any later material/control change requires a fresh exact-head run.
 - [ ] Complete controlled English chapter master.
-- [ ] Reverify current HHS sources at release-candidate head.
 - [ ] Complete legal-boundary/editorial/technical review.
 - [ ] Complete `es-419` and `pt-BR` localization and human semantic review.
 - [ ] Complete learning graphics and accessibility review.

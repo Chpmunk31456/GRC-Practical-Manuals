@@ -145,10 +145,12 @@
     },
     {
       "id": "ai-security-lifecycle",
-      "title": "AI Security and Lifecycle Controls",
+      "title": "Manual 07 — AI Security and Lifecycle Controls",
       "path": "06-cloud-and-technology-risk/AI_Security_and_Lifecycle",
-      "status": "planned",
-      "layout": "standard"
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 7
     },
     {
       "id": "vendor-risk-lifecycle",

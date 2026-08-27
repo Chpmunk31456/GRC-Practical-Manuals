@@ -33,13 +33,13 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
     },
     "es-419": {
-        "title": "Manual 04 - Implementacion del Perfil de IA Generativa NIST AI 600-1",
+        "title": "Manual 04 - Implementación del Perfil de IA Generativa NIST AI 600-1",
         "word_lang": "es-419",
         "filename": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419",
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
     },
     "pt-BR": {
-        "title": "Manual 04 - Implementacao do Perfil de IA Generativa NIST AI 600-1",
+        "title": "Manual 04 - Implementação do Perfil de IA Generativa NIST AI 600-1",
         "word_lang": "pt-BR",
         "filename": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR",
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
@@ -175,9 +175,6 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
 
 
 def inspect_docx(path: Path, language: str, expected_graphics: int) -> dict:
-    result = core.inspect_docx.__wrapped__(path, language, expected_graphics) if hasattr(core.inspect_docx, "__wrapped__") else None
-    # Manual 03's chapter-number regex is incompatible with Manual 04's Chapter/Capitulo headings,
-    # so perform equivalent checks here.
     import zipfile
     if not zipfile.is_zipfile(path):
         raise ValueError(f"not a valid DOCX ZIP: {path}")
@@ -250,7 +247,6 @@ def write_reports(output_root: Path, sources: dict[str, core.EditionSource], fil
             handle.write(f"{core.sha256(path)}  {path.name}\n")
 
 
-# Patch the proven engine only at Manual-04-specific extension points.
 core.MANUAL = MANUAL
 core.BASELINE = BASELINE
 core.LANG_META = LANG_META

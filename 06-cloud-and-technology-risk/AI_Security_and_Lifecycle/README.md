@@ -1,6 +1,6 @@
 # Manual 07 — AI Security and Lifecycle Controls
 
-**Status:** Controlled implementation intake, stacked behind Manual 06.
+**Status:** Controlled implementation development, stacked behind Manual 06.
 
 **Controlled source language:** English (`en`)
 
@@ -10,11 +10,11 @@
 
 ## Purpose
 
-Manual 07 will provide practical security engineering and governance controls across the complete AI system lifecycle: concept, data/model acquisition, development, evaluation, deployment, operation, incident/change management, and retirement. It will cover conventional ML, Generative AI, RAG, tool-using systems, and agentic AI. Repository QA is not a guarantee of security and must not be presented as one.
+Manual 07 provides practical security engineering and governance controls across the complete AI system lifecycle: concept, data/model acquisition, development, evaluation, deployment, operation, incident/change management, and retirement. It covers conventional ML, Generative AI, RAG, tool-using systems, and agentic AI. Repository QA is not a guarantee of security and must not be presented as one.
 
 ## Controlled source baseline
 
-The intake is anchored to controlled source IDs including:
+The controlled baseline is anchored to source IDs including:
 
 - `iso-iec-27090` — AI security threats and mitigations; **source-state watch only while ISO lists the first edition as under publication (stage 60.00), not a published final standard**;
 - `iso-iec-5338-2023` — AI system lifecycle processes;
@@ -27,7 +27,7 @@ See [Manual 07 authoritative-source verification](./qa/SOURCE_VERIFICATION_2026-
 
 ## Security model
 
-Manual 07 will use defense in depth, least privilege, Zero Trust, strong identity, explicit authorization, human oversight, secure defaults, fail-closed behavior, provenance, monitoring, and recoverability as recurring design principles.
+Manual 07 uses defense in depth, least privilege, Zero Trust, strong identity, explicit authorization, human oversight, secure defaults, fail-closed behavior, provenance, monitoring, and recoverability as recurring design principles.
 
 The controlled master addresses:
 
@@ -53,20 +53,21 @@ See [Manual 07 implementation paths](./MANUAL_07_IMPLEMENTATION_PATHS.md).
 
 Passing Manual 07 QA can show that required controlled topics and release evidence exist. It cannot prove that an AI system is secure, safe, compliant, unbiased, or resistant to every attack.
 
-## Pre-staged release gates
+## Release gates
 
-- [x] Controlled intake branch and baseline.
+- [x] Clean controlled branch and baseline reconciled directly on the current Manual 06 candidate.
 - [x] Lifecycle/security implementation entry.
 - [x] Complete controlled English chapter master (32 chapters across four controlled source blocks).
-- [x] Authoritative-source verification record completed for the current pre-stage head; ISO/IEC 27090 publication-state correction retained as an explicit release watch item.
-- [ ] Reconcile the shared authoritative-source registry entry for ISO/IEC 27090 before release.
-- [ ] Re-run dedicated exact-head QA after source-state documentation changes.
-- [ ] Complete security architecture and technical review.
-- [ ] Complete `es-419` and `pt-BR` localization and human semantic review.
-- [ ] Complete educational graphics/accessibility review.
-- [ ] Generate and QA DOCX/PDF artifacts.
-- [ ] Complete repository/security release audit and provenance.
-- [ ] Record final human release approval.
+- [x] Authoritative-source verification record completed; ISO/IEC 27090 retained as stage 60.00 / under publication.
+- [x] Shared authoritative-source registry corrected so ISO/IEC 27090 is not labeled final before ISO publication.
+- [x] Security architecture and technical review completed and recorded in `qa/SECURITY_ARCHITECTURE_TECHNICAL_REVIEW_2026-08-26.md`.
+- [x] Source-level educational graphics/accessibility review completed and recorded in `qa/SOURCE_GRAPHICS_ACCESSIBILITY_REVIEW_2026-08-26.md`.
+- [ ] Complete `es-419` and `pt-BR` localization drafts and mandatory human semantic review.
+- [ ] Generate and QA accessible DOCX/PDF publication artifacts, including rendered graphics, reading order, metadata, links, bookmarks, and page-level visual review.
+- [ ] Complete exact-final repository/security release audit and provenance.
+- [ ] Record Final Human Release Approval after all mandatory gates are green for the exact candidate.
+
+Material content or source-state changes reopen affected gates and require exact-head revalidation.
 
 ## Important notice
 

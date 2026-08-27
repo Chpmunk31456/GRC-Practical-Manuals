@@ -1,0 +1,38 @@
+name: "13 - AI Auditing and Assurance Manual 05 QA"
+
+on:
+  pull_request:
+    branches:
+      - "main"
+    paths:
+      - "03-assurance-and-audit/AI_Auditing_and_Assurance/**"
+      - ".compliance/ai-auditing-assurance-manual-05-baseline.json"
+      - ".compliance/isaca-aaia-source.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "VISUAL_LEARNING_STANDARD.md"
+      - "scripts/ai_auditing_assurance_manual_05_qa.py"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/13-ai-auditing-assurance-manual-05-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ai-auditing-assurance-manual-05-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-ai-auditing-assurance-manual-05:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate Manual 05 controlled implementation intake
+        run: python3 scripts/ai_auditing_assurance_manual_05_qa.py
+      - name: Validate the authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate the controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog

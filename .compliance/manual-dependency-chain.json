@@ -11,7 +11,7 @@
     {
       "manual": "05",
       "branch": "build/ai-auditing-assurance-manual-05-2026",
-      "upstream": "build/nist-ai-600-1-manual-04-2026"
+      "upstream": "main"
     },
     {
       "manual": "06",

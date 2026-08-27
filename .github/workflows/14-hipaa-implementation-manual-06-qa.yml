@@ -1,0 +1,36 @@
+name: "14 - HIPAA Implementation Manual 06 QA"
+
+on:
+  pull_request:
+    branches:
+      - "build/ai-auditing-assurance-manual-05-2026"
+    paths:
+      - "04-regulatory-compliance/HIPAA_Implementation_Series/**"
+      - ".compliance/hipaa-implementation-manual-06-baseline.json"
+      - ".compliance/authoritative-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "scripts/hipaa_implementation_manual_06_qa.py"
+      - "scripts/compliance_qa.py"
+      - ".github/workflows/14-hipaa-implementation-manual-06-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hipaa-manual-06-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-hipaa-manual-06:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out pull request revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Validate Manual 06 controlled implementation intake
+        run: python3 scripts/hipaa_implementation_manual_06_qa.py
+      - name: Validate authoritative-source registry
+        run: python3 scripts/compliance_qa.py sources
+      - name: Validate controlled manual catalog
+        run: python3 scripts/compliance_qa.py catalog

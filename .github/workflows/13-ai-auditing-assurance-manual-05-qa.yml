@@ -3,7 +3,7 @@ name: "13 - AI Auditing and Assurance Manual 05 QA"
 on:
   pull_request:
     branches:
-      - "build/nist-ai-600-1-manual-04-2026"
+      - "main"
     paths:
       - "03-assurance-and-audit/AI_Auditing_and_Assurance/**"
       - ".compliance/ai-auditing-assurance-manual-05-baseline.json"

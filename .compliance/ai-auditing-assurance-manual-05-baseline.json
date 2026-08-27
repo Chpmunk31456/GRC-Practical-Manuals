@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "ai-auditing-assurance-manual-05",
+  "title": "Manual 05 — AI Auditing and Assurance",
+  "manual_path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "iso-19011-2026",
+    "iso-iec-42006-2025",
+    "iso-iec-42001-2023",
+    "nist-ai-rmf-1-0",
+    "nist-ai-600-1",
+    "nist-sp-800-53a-r5",
+    "isaca-aaia"
+  ],
+  "professional_practice_source": {
+    "source_id": "isaca-aaia",
+    "publisher": "ISACA",
+    "title": "Advanced in AI Audit (AAIA)",
+    "status": "current-professional-practice-reference",
+    "official_url": "https://www.isaca.org/credentialing/aaia",
+    "content_outline_url": "https://www.isaca.org/credentialing/aaia/aaia-exam-content-outline",
+    "domains": [
+      "AI Governance and Risk",
+      "AI Operations",
+      "AI Auditing Tools and Techniques"
+    ],
+    "last_verified": "2026-08-25",
+    "review_interval_days": 30,
+    "classification_boundary": "AAIA is an ISACA professional certification and job-practice reference. It is not law, regulation, an ISO standard, or a formal audit opinion."
+  },
+  "implementation_entry": "MANUAL_05_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "audit_lifecycle": [
+    "mandate-and-scope",
+    "criteria-and-evidence-plan",
+    "fieldwork-and-testing",
+    "findings-and-severity",
+    "management-response",
+    "remediation-validation",
+    "closure-and-follow-up"
+  ],
+  "required_topics": [
+    "audit objective",
+    "audit criteria",
+    "scope boundary",
+    "independence",
+    "competence",
+    "sampling",
+    "evidence sufficiency",
+    "model and system testing",
+    "data governance",
+    "human oversight",
+    "third party",
+    "AI risk",
+    "impact assessment",
+    "finding severity",
+    "root cause",
+    "remediation",
+    "residual risk",
+    "management response",
+    "follow-up",
+    "assurance limitation",
+    "AI Governance and Risk",
+    "AI Operations",
+    "AI Auditing Tools and Techniques"
+  ],
+  "required_assurance_boundaries": [
+    "not certification",
+    "not legal advice",
+    "not an audit opinion unless formally issued",
+    "evidence-based",
+    "human judgment",
+    "scope-specific"
+  ],
+  "required_visuals_in_implementation_entry": 3,
+  "visual_accessibility_label": "Accessible explanation:",
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 60,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 05 remains development material until the controlled English master, localized semantic review, graphics/accessibility review, source verification, security review, document QA, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA validates controlled structure and evidence readiness; it does not itself create an audit opinion, certification, conformity determination, or legal conclusion."
+}

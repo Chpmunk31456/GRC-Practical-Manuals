@@ -127,10 +127,12 @@
     },
     {
       "id": "ai-auditing-assurance",
-      "title": "AI Auditing and Assurance",
+      "title": "Manual 05 — AI Auditing and Assurance",
       "path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
-      "status": "planned",
-      "layout": "standard"
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 5
     },
     {
       "id": "hipaa-implementation-series",

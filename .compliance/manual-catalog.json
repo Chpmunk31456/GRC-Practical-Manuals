@@ -136,10 +136,12 @@
     },
     {
       "id": "hipaa-implementation-series",
-      "title": "HIPAA Implementation and Audit Series",
+      "title": "Manual 06 — HIPAA Implementation and Audit",
       "path": "04-regulatory-compliance/HIPAA_Implementation_Series",
-      "status": "planned",
-      "layout": "controlled-build"
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 6
     },
     {
       "id": "ai-security-lifecycle",

@@ -3,7 +3,7 @@ name: "15 - AI Security Lifecycle Manual 07 QA"
 on:
   pull_request:
     branches:
-      - "build/hipaa-implementation-manual-06-2026"
+      - "main"
     paths:
       - "06-cloud-and-technology-risk/AI_Security_and_Lifecycle/**"
       - ".compliance/ai-security-lifecycle-manual-07-baseline.json"

@@ -12,6 +12,8 @@
 
 Manual 07 provides practical security engineering and governance controls across the complete AI system lifecycle: concept, data/model acquisition, development, evaluation, deployment, operation, incident/change management, and retirement. It covers conventional ML, Generative AI, RAG, tool-using systems, and agentic AI. Repository QA is not a guarantee of security and must not be presented as one.
 
+The writing standard is practical and human-readable: explain concepts before relying on jargon, use direct practitioner language, preserve technical precision, and avoid repetitive or machine-like compliance prose. Material that is technically correct but unnecessarily difficult to understand is a quality defect and must be revised before release.
+
 ## Controlled source baseline
 
 The controlled baseline is anchored to source IDs including:
@@ -62,7 +64,9 @@ Passing Manual 07 QA can show that required controlled topics and release eviden
 - [x] Shared authoritative-source registry corrected so ISO/IEC 27090 is not labeled final before ISO publication.
 - [x] Security architecture and technical review completed and recorded in `qa/SECURITY_ARCHITECTURE_TECHNICAL_REVIEW_2026-08-26.md`.
 - [x] Source-level educational graphics/accessibility review completed and recorded in `qa/SOURCE_GRAPHICS_ACCESSIBILITY_REVIEW_2026-08-26.md`.
-- [ ] Complete `es-419` and `pt-BR` localization drafts and mandatory human semantic review.
+- [x] Complete controlled `es-419` and `pt-BR` chapter drafts plus localized implementation paths.
+- [ ] Mandatory human semantic/terminology review of `es-419` and `pt-BR` localized content.
+- [ ] Human-readability review confirming clear, natural, practitioner-oriented language and absence of unnecessary AI-style compliance boilerplate across publication languages.
 - [ ] Generate and QA accessible DOCX/PDF publication artifacts, including rendered graphics, reading order, metadata, links, bookmarks, and page-level visual review.
 - [ ] Complete exact-final repository/security release audit and provenance.
 - [ ] Record Final Human Release Approval after all mandatory gates are green for the exact candidate.

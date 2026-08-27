@@ -1,0 +1,37 @@
+name: 21 - Release Pipeline Meta QA
+
+on:
+  pull_request:
+    paths:
+      - '.compliance/manual-dependency-chain.json'
+      - '.github/workflows/**'
+      - 'scripts/**'
+      - '01-foundations/NIST_AI_600-1_Generative_AI_Profile/**'
+      - '03-assurance-and-audit/AI_Auditing_and_Assurance/**'
+      - '04-regulatory-compliance/HIPAA_Implementation_Series/**'
+      - '06-cloud-and-technology-risk/AI_Security_and_Lifecycle/**'
+      - '07-third-party-risk/Vendor_Risk_Lifecycle/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-pipeline-meta-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  meta-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact candidate with history
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Validate workflow trigger dependencies
+        run: python3 scripts/workflow_trigger_dependency_qa.py
+      - name: Validate controlled dependency freshness
+        env:
+          CONTROLLED_BRANCH: ${{ github.head_ref }}
+        run: python3 scripts/manual_dependency_freshness.py --branch "$CONTROLLED_BRANCH"

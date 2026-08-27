@@ -29,7 +29,7 @@ jobs:
       - name: Install publication dependencies
         run: python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
       - name: Generate Manual 04 controlled publication package
-        run: python3 scripts/generate_nist_ai_600_1_manual_04_publication_v2.py --output-root "$RUNNER_TEMP/manual04-publication" --source-head "${{ github.event.pull_request.head.sha }}"
+        run: python3 scripts/generate_nist_ai_600_1_manual_04_publication_v3.py --output-root "$RUNNER_TEMP/manual04-publication" --source-head "${{ github.event.pull_request.head.sha }}"
       - name: Fail closed on generated PDF content
         run: python3 scripts/pdf_content_preflight.py "$RUNNER_TEMP/manual04-publication/publication"
       - name: Upload controlled publication package

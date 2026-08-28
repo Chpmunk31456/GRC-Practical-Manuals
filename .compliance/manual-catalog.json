@@ -189,6 +189,15 @@
       "series_order": 11
     },
     {
+      "id": "ccpa-cpra-controlled",
+      "title": "Manual 12 — CCPA / CPRA California Privacy Controlled Implementation",
+      "path": "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation",
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 12
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

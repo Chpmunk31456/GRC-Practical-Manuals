@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "ccpa-cpra-controlled-manual-12",
+  "last_verified": "2026-08-27",
+  "sources": [
+    {
+      "id": "california-ccpa-statute-2026",
+      "family": "California Privacy Law",
+      "title": "California Consumer Privacy Act / CPRA-amended statutory baseline",
+      "version": "current effective statutory baseline",
+      "status": "in-force",
+      "source_type": "binding-law",
+      "url": "https://cppa.ca.gov/regulations/",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "cppa-ccpa-regulations-2026",
+      "family": "California Privacy Regulation",
+      "title": "California Consumer Privacy Act Regulations effective January 1, 2026",
+      "version": "Title 11, Division 6, Chapter 1 — effective 2026-01-01",
+      "status": "final-effective",
+      "source_type": "binding-regulation",
+      "url": "https://cppa.ca.gov/regulations/ccpa_updates.html",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "cppa-ccpa-regulations-2023",
+      "family": "California Privacy Regulation",
+      "title": "California Consumer Privacy Act Regulations approved March 29, 2023",
+      "version": "2023 final regulations as subsequently updated",
+      "status": "superseded-in-part-by-later-effective-updates",
+      "source_type": "binding-regulation-history",
+      "url": "https://cppa.ca.gov/regulations/consumer_privacy_act.html",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 90
+    },
+    {
+      "id": "cppa-drop-regulations-2026",
+      "family": "California Data Broker / Delete Act",
+      "title": "Accessible Deletion Mechanism — DROP System Requirements",
+      "version": "effective 2026-01-01",
+      "status": "final-effective",
+      "source_type": "binding-regulation-related",
+      "url": "https://cppa.ca.gov/regulations/drop.html",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "cppa-current-guidance",
+      "family": "California Privacy Protection Agency",
+      "title": "CPPA current official implementation information, FAQs, and regulatory materials",
+      "version": "current public materials",
+      "status": "guidance-information",
+      "source_type": "official-guidance-information",
+      "url": "https://cppa.ca.gov/faq",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    }
+  ],
+  "controlled_2026_dates": {
+    "updated_regulations_effective": "2026-01-01",
+    "risk_assessment_compliance_begins": "2026-01-01",
+    "admt_requirements_begin": "2027-01-01",
+    "risk_assessment_submission_attestation_deadline": "2028-04-01",
+    "cybersecurity_audit_first_submission_dates": "phased 2028-2030 based on revenue tier"
+  },
+  "control_boundary": "The manual must distinguish the binding CCPA statutory baseline, final effective CPPA regulations, phased future compliance dates, historical/superseded regulatory text, related Delete Act/DROP requirements, and non-binding agency guidance."
+}

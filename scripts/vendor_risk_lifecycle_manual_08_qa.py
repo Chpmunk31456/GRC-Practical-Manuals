@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / '.compliance' / 'vendor-risk-lifecycle-manual-08-baseline.json'
 REG = ROOT / '.compliance' / 'authoritative-sources.json'
+SUPPLEMENT = ROOT / '.compliance' / 'vendor-risk-lifecycle-manual-08-sources.json'
 CAT = ROOT / '.compliance' / 'manual-catalog.json'
 MAN = ROOT / '07-third-party-risk' / 'Vendor_Risk_Lifecycle'
 WF = ROOT / '.github' / 'workflows' / '16-vendor-risk-lifecycle-manual-08-qa.yml'
@@ -38,21 +39,31 @@ def roots(text):
     return {w[:-1] if len(w)>4 and w.endswith('s') else w for w in words}
 def concept_present(concept, document_roots):
     needed=roots(str(concept)); return bool(needed) and needed.issubset(document_roots)
-
 def chapter_numbers(text):
     return [int(x) for x in re.findall(r'(?mi)^##\s+(?:Chapter|Capítulo)\s+(\d+)\s+—', text)]
 
 def main():
     errors=[]
     try:
-        base, reg, cat = load(BASE), load(REG), load(CAT)
+        base, reg, supplement, cat = load(BASE), load(REG), load(SUPPLEMENT), load(CAT)
     except Exception as exc:
         print(f'FAIL: {exc}'); return 1
     if base.get('manual_id') != 'vendor-risk-lifecycle-manual-08': errors.append('unexpected manual id')
     if base.get('planned_publication_languages') != ['en','es-419','pt-BR']: errors.append('language plan changed')
-    ids={x.get('id'):x for x in reg.get('sources',[]) if isinstance(x,dict)}
+    if supplement.get('manual_id') != 'vendor-risk-lifecycle-manual-08': errors.append('unexpected Manual 08 source supplement id')
+
+    shared=[x for x in reg.get('sources',[]) if isinstance(x,dict)]
+    supplemental=[x for x in supplement.get('sources',[]) if isinstance(x,dict)]
+    all_sources=shared+supplemental
+    source_ids=[x.get('id') for x in all_sources if x.get('id')]
+    duplicate_ids=sorted({sid for sid in source_ids if source_ids.count(sid)>1})
+    if duplicate_ids: errors.append(f'duplicate authoritative source ids across registry/supplement: {duplicate_ids}')
+    ids={x.get('id'):x for x in all_sources if x.get('id')}
     for sid in base.get('required_source_ids',[]):
         if sid not in ids: errors.append(f'missing source: {sid}')
+    sp1305=[x for x in supplemental if x.get('id')=='nist-sp-1305-c-scrm']
+    if len(sp1305)!=1 or sp1305[0].get('status')!='final' or sp1305[0].get('last_verified')!='2026-08-28':
+        errors.append('Manual 08 SP 1305 supplemental source state invalid')
 
     readme=(MAN/'README.md').read_text(encoding='utf-8') if (MAN/'README.md').is_file() else ''
     entry=(MAN/'MANUAL_08_IMPLEMENTATION_PATHS.md').read_text(encoding='utf-8') if (MAN/'MANUAL_08_IMPLEMENTATION_PATHS.md').is_file() else ''
@@ -83,6 +94,7 @@ def main():
         text=WF.read_text(encoding='utf-8')
         if 'permissions:\n  contents: read' not in text: errors.append('workflow not read-only')
         if re.search(r'(?m)^\s*push:\s*$', text): errors.append('workflow must not push')
+        if 'pull_request_target' in text: errors.append('workflow must not use pull_request_target')
 
     print('Manual 08 Vendor Risk Lifecycle QA')
     for e in errors: print('  ERROR:',e)

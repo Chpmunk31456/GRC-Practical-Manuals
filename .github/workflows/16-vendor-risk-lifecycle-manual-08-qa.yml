@@ -7,6 +7,7 @@ on:
     paths:
       - "07-third-party-risk/Vendor_Risk_Lifecycle/**"
       - ".compliance/vendor-risk-lifecycle-manual-08-baseline.json"
+      - ".compliance/vendor-risk-lifecycle-manual-08-sources.json"
       - ".compliance/authoritative-sources.json"
       - ".compliance/manual-catalog.json"
       - "scripts/vendor_risk_lifecycle_manual_08_qa.py"
@@ -28,6 +29,8 @@ jobs:
     steps:
       - name: Check out pull request revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Validate Manual 08 controlled implementation intake
         run: python3 scripts/vendor_risk_lifecycle_manual_08_qa.py
       - name: Validate authoritative-source registry

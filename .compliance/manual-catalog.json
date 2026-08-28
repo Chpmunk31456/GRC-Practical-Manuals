@@ -180,6 +180,15 @@
       "series_order": 10
     },
     {
+      "id": "gdpr-controlled",
+      "title": "Manual 11 — GDPR Privacy and Data Protection Controlled Implementation",
+      "path": "04-regulatory-compliance/GDPR_Controlled_Implementation",
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 11
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

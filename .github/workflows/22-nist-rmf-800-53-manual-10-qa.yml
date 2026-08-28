@@ -1,0 +1,27 @@
+name: 22 Manual10 NIST RMF 800-53 QA
+
+on:
+  pull_request:
+    branches:
+      - build/nist-csf-2-manual-09-2026
+    paths:
+      - '.compliance/nist-rmf-800-53-manual-10-baseline.json'
+      - '.compliance/authoritative-sources.json'
+      - '.compliance/manual-catalog.json'
+      - '01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/**'
+      - 'scripts/nist_rmf_800_53_manual_10_qa.py'
+      - '.github/workflows/22-nist-rmf-800-53-manual-10-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  preflight-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact candidate
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
+      - name: Run Manual 10 fail-closed preflight QA
+        run: python scripts/nist_rmf_800_53_manual_10_qa.py

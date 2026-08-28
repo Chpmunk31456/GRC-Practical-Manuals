@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.1",
+  "manual_id": "nist-rmf-800-53-manual-10",
+  "title": "Manual 10 — NIST RMF and SP 800-53 Controlled Implementation",
+  "manual_path": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "nist-sp-800-37-r2",
+    "nist-sp-800-53-r5",
+    "nist-sp-800-53a-r5",
+    "nist-sp-800-53b",
+    "nist-sp-800-18-r2"
+  ],
+  "supplemental_authoritative_state": [
+    "NIST SP 800-53 Release 5.2.0 — final structured control release",
+    "NIST SP 800-53A Release 5.2.0 — final structured assessment-procedure release",
+    "NIST SP 800-53B Release 5.2.0 — final baseline release; no baseline content changes in 5.2.0",
+    "NIST SP 800-18 Rev. 2 — final June 2026 system security, privacy, and C-SCRM planning guidance aligned with RMF"
+  ],
+  "implementation_entry": "MANUAL_10_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "rmf_steps": ["PREPARE", "CATEGORIZE", "SELECT", "IMPLEMENT", "ASSESS", "AUTHORIZE", "MONITOR"],
+  "required_topics": [
+    "organization-level risk management",
+    "system-level risk management",
+    "system security privacy and C-SCRM planning",
+    "security and privacy controls",
+    "control tailoring",
+    "control baselines",
+    "common controls",
+    "system-specific controls",
+    "hybrid controls",
+    "control implementation",
+    "assessment procedures",
+    "assessment evidence",
+    "authorization decision",
+    "continuous monitoring",
+    "OSCAL",
+    "machine-readable planning evidence",
+    "control provenance",
+    "risk acceptance",
+    "exceptions",
+    "plan of action and milestones"
+  ],
+  "required_boundaries": [
+    "risk-based",
+    "tailorable",
+    "evidence-based",
+    "no checklist-only compliance claim",
+    "no automatic authorization",
+    "human authorization decision"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 30,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 10 remains development material until source verification, controlled English master, technical/editorial review, localization and human semantic review, accessibility, document QA, repository/workflow security review, provenance, exact-head reconciliation, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA can validate structure, mappings, evidence expectations, and publication controls; it cannot authorize a system, determine risk acceptance, certify compliance, or substitute for an accountable authorizing official or competent assessor."
+}

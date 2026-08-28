@@ -162,6 +162,15 @@
       "series_order": 8
     },
     {
+      "id": "nist-csf-2-controlled",
+      "title": "Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation",
+      "path": "01-foundations/NIST_CSF_2_Controlled_Implementation",
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 9
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

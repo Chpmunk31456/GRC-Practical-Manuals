@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-28",
   "languages": [
     "en",
     "es-419",
@@ -154,10 +154,12 @@
     },
     {
       "id": "vendor-risk-lifecycle",
-      "title": "Vendor Risk Lifecycle Implementation",
+      "title": "Manual 08 — Vendor and Third-Party Risk Lifecycle",
       "path": "07-third-party-risk/Vendor_Risk_Lifecycle",
-      "status": "planned",
-      "layout": "standard"
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 8
     },
     {
       "id": "ai-governance-audit-toolkit",

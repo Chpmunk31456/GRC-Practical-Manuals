@@ -7,7 +7,6 @@ on:
     paths:
       - "07-third-party-risk/Vendor_Risk_Lifecycle/**"
       - ".compliance/vendor-risk-lifecycle-manual-08-baseline.json"
-      - ".compliance/vendor-risk-lifecycle-manual-08-sources.json"
       - ".compliance/authoritative-sources.json"
       - ".compliance/manual-catalog.json"
       - "scripts/vendor_risk_lifecycle_manual_08_qa.py"

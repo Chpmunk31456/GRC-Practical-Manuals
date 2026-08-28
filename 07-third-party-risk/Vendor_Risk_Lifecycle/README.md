@@ -47,6 +47,8 @@ See [Manual 08 implementation paths](./MANUAL_08_IMPLEMENTATION_PATHS.md).
 
 A completed questionnaire, certification, or contract clause is evidence input—not proof that supplier risk is eliminated. Conclusions must reflect current evidence, scope, criticality, unresolved findings, fourth-party visibility, and residual risk.
 
+The controlled boundary is **risk-based, proportional, and evidence-based**, with **no questionnaire-only assurance**, explicit **fourth-party visibility**, and accountable **human approval** for material risk decisions.
+
 ## Pre-staged release gates
 
 - [x] Controlled branch and baseline.

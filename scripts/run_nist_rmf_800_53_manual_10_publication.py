@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Safe runner for Manual 10 NIST RMF / SP 800-53 publication generation.
+
+Prevents inherited Manual 09/07/06 publication bindings from reading or
+relabeling the wrong manual while preserving semantic, accessibility,
+provenance, security, and human-review gates.
+"""
+from __future__ import annotations
+
+import generate_nist_rmf_800_53_manual_10_publication as manual10
+import generate_nist_csf_2_manual_09_publication as manual09
+import generate_ai_security_lifecycle_manual_07_publication as manual07
+import generate_hipaa_implementation_manual_06_publication as hipaa06
+
+
+def find_localized_chapters(language: str):
+    chapters: dict[int, str] = {}
+    used: list[str] = []
+    for path in sorted(manual10.source_dir(language).glob("*.md")):
+        if path.name in {"RUTAS_DE_IMPLEMENTACION_MANUAL_10.md", "CAMINHOS_DE_IMPLEMENTACAO_MANUAL_10.md"}:
+            continue
+        found = manual10.core.split_chapters(path.read_text(encoding="utf-8"))
+        if not found:
+            continue
+        for number, body in found.items():
+            if number in chapters and chapters[number] != body:
+                raise ValueError(f"conflicting chapter {number} for {language}: {path}")
+            chapters[number] = body
+        used.append(str(path.relative_to(manual10.ROOT)))
+    expected = set(range(1, 33))
+    if set(chapters) != expected:
+        raise ValueError(f"{language} chapter inventory invalid: {sorted(chapters)}")
+    return "\n".join(chapters[n].rstrip() for n in range(1, 33)) + "\n", used
+
+
+# Manual 06 retains the raw Manual 03 renderer before manual-specific wrappers.
+# Bind Manual 10 directly to that helper so graphic titles and alt-text cannot
+# inherit Manual 06/07/09 labels.
+manual10._base_render = hipaa06._base_render
+manual10._base_alt = hipaa06._base_alt
+
+manual10.find_localized_chapters = find_localized_chapters
+manual10.core.find_localized_chapters = find_localized_chapters
+manual10.base.find_localized_chapters = find_localized_chapters
+manual09.find_localized_chapters = find_localized_chapters
+manual07.find_localized_chapters = find_localized_chapters
+hipaa06.find_localized_chapters = find_localized_chapters
+
+if __name__ == "__main__":
+    raise SystemExit(manual10.core.main())

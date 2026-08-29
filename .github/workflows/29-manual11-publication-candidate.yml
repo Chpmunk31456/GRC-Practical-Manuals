@@ -1,0 +1,58 @@
+name: "29 - Manual 11 Publication Candidate"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/29-manual11-publication-candidate.yml"
+      - "04-regulatory-compliance/GDPR_Controlled_Implementation/**"
+      - ".compliance/gdpr-manual-11-baseline.json"
+      - ".compliance/gdpr-manual-11-sources.json"
+      - ".compliance/authoritative-sources.json"
+      - "scripts/generate_gdpr_manual_11_publication.py"
+      - "scripts/run_gdpr_manual_11_publication.py"
+      - "scripts/generate_nist_rmf_800_53_manual_10_publication.py"
+      - "scripts/run_nist_rmf_800_53_manual_10_publication.py"
+      - "scripts/generate_nist_csf_2_manual_09_publication.py"
+      - "scripts/run_nist_csf_2_manual_09_publication.py"
+      - "scripts/generate_ai_security_lifecycle_manual_07_publication.py"
+      - "scripts/generate_hipaa_implementation_manual_06_publication.py"
+      - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
+      - "scripts/pdf_content_preflight.py"
+      - "scripts/localized_publication_regression_qa.py"
+
+permissions:
+  contents: read
+
+jobs:
+  generate-publication-package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install LibreOffice conversion dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
+      - name: Install publication dependencies
+        run: python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
+      - name: Generate Manual 11 controlled publication package
+        run: python3 scripts/run_gdpr_manual_11_publication.py --output-root "$RUNNER_TEMP/manual11-publication" --source-head "${{ github.event.pull_request.head.sha }}"
+      - name: Fail closed on generated PDF content
+        run: python3 scripts/pdf_content_preflight.py "$RUNNER_TEMP/manual11-publication/publication"
+      - name: Fail closed on localized publication regressions
+        run: python3 scripts/localized_publication_regression_qa.py "$RUNNER_TEMP/manual11-publication/publication" --manual-number 11
+      - name: Upload controlled publication package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: manual11-publication-candidate
+          path: |
+            ${{ runner.temp }}/manual11-publication/publication
+            ${{ runner.temp }}/manual11-publication/qa
+            ${{ runner.temp }}/manual11-publication/contact-sheets
+          if-no-files-found: error
+          retention-days: 1

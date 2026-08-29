@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "gdpr-controlled-manual-11",
+  "last_verified": "2026-08-27",
+  "sources": [
+    {
+      "id": "eu-gdpr-2016-679",
+      "family": "EU Privacy Law",
+      "title": "Regulation (EU) 2016/679 — General Data Protection Regulation",
+      "version": "GDPR / current in-force text",
+      "status": "in-force",
+      "source_type": "binding-law",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "eu-gdpr-enforcement-procedure-2025-2518",
+      "family": "EU Privacy Law",
+      "title": "Regulation (EU) 2025/2518 — additional procedural rules relating to GDPR enforcement",
+      "version": "2025/2518",
+      "status": "final",
+      "source_type": "binding-law",
+      "url": "https://eur-lex.europa.eu/",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "edpb-guidance-current",
+      "family": "EDPB",
+      "title": "European Data Protection Board current GDPR guidelines and recommendations",
+      "version": "current public guidance set",
+      "status": "guidance",
+      "source_type": "non-binding-official-guidance",
+      "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance_en",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    },
+    {
+      "id": "edpb-rights-guidance-current",
+      "family": "EDPB",
+      "title": "European Data Protection Board guidance on data subject rights",
+      "version": "current public guidance set",
+      "status": "guidance",
+      "source_type": "non-binding-official-guidance",
+      "url": "https://www.edpb.europa.eu/guidelines-on-your-rights_en",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 30
+    }
+  ],
+  "control_boundary": "Binding GDPR requirements must remain distinguishable from EDPB guidance, supervisory-authority practice, organizational policy, contractual commitments, standards, and professional interpretation. Guidance may support implementation but does not amend the Regulation."
+}

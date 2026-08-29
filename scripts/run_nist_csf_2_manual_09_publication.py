@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Safe runner for Manual 09 NIST CSF 2.0 publication generation.
 
-Prevents inherited publication-adapter bindings from reading an upstream manual
-while preserving semantic, accessibility, provenance, security, and human-review
-gates.
+Prevents inherited publication-adapter bindings from reading or relabeling an
+upstream manual while preserving semantic, accessibility, provenance, security,
+and human-review gates.
 """
 from __future__ import annotations
 
@@ -31,6 +31,13 @@ def find_localized_chapters(language: str):
         raise ValueError(f"{language} chapter inventory invalid: {sorted(chapters)}")
     return "\n".join(chapters[n].rstrip() for n in range(1, 33)) + "\n", used
 
+
+# Manual 07 inherits its renderer through Manual 06. Manual 06 retains the raw
+# Manual 03 renderer before any manual-specific relabeling wrapper. Bind Manual
+# 09 directly to that raw helper so the image title and alt-text cannot inherit a
+# Manual 06/07 label.
+manual09._base_render = hipaa06._base_render
+manual09._base_alt = hipaa06._base_alt
 
 manual09.find_localized_chapters = find_localized_chapters
 manual09.core.find_localized_chapters = find_localized_chapters

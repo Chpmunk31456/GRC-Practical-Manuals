@@ -3,6 +3,7 @@ name: "24 - Manual 06 Publication Candidate"
 on:
   pull_request:
     branches:
+      - main
       - "build/ai-auditing-assurance-manual-05-2026"
     paths:
       - ".github/workflows/24-manual06-publication-candidate.yml"
@@ -10,8 +11,10 @@ on:
       - ".compliance/hipaa-implementation-manual-06-baseline.json"
       - ".compliance/authoritative-sources.json"
       - "scripts/generate_hipaa_implementation_manual_06_publication.py"
+      - "scripts/generate_hipaa_implementation_manual_06_publication_v2.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
       - "scripts/pdf_content_preflight.py"
+      - "scripts/localized_publication_regression_qa.py"
 
 permissions:
   contents: read
@@ -30,9 +33,11 @@ jobs:
       - name: Install publication dependencies
         run: python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
       - name: Generate Manual 06 controlled publication package
-        run: python3 scripts/generate_hipaa_implementation_manual_06_publication.py --output-root "$RUNNER_TEMP/manual06-publication" --source-head "${{ github.event.pull_request.head.sha }}"
+        run: python3 scripts/generate_hipaa_implementation_manual_06_publication_v2.py --output-root "$RUNNER_TEMP/manual06-publication" --source-head "${{ github.event.pull_request.head.sha }}"
       - name: Fail closed on generated PDF content
         run: python3 scripts/pdf_content_preflight.py "$RUNNER_TEMP/manual06-publication/publication"
+      - name: Fail closed on localized publication regressions
+        run: python3 scripts/localized_publication_regression_qa.py "$RUNNER_TEMP/manual06-publication/publication" --manual-number 6
       - name: Upload controlled publication package
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:

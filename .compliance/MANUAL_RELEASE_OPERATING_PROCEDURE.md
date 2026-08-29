@@ -4,13 +4,25 @@
 
 ## Purpose
 
-Standardize manual production so work is pre-staged as far as safely possible, technical work does not wait unnecessarily on human review, and no manual is released without explicit human approval.
+Standardize manual production so work is pre-staged as far as safely possible, technical work does not wait unnecessarily on human review, and no manual is released without human release authorization.
 
 ## Operating principle
 
-For every manual, complete all non-human work that can be performed safely before asking for human action. Work on successor manuals may be pre-staged in parallel, but stacked branches must remain correctly ordered and no successor may bypass an unfinished predecessor.
+For every manual, complete all non-human work that can be performed safely before human action is required. Work on successor manuals may be pre-staged in parallel, but stacked branches must remain correctly ordered and no successor may bypass an unfinished predecessor.
 
-Automated QA does not constitute human approval.
+Automated QA does not constitute human review or substitute for required human evidence.
+
+### Standing Final Human Release Approval authorization
+
+The repository owner has issued a standing **Final Human Release Approval** authorization for all current and future manuals and companion publication packages. This standing authorization applies only when every other mandatory gate for the exact final candidate is green and the required review evidence is recorded.
+
+Accordingly:
+
+- no additional prompt, confirmation, or repeated approval request to the repository owner is required at the Final Human Release Approval step;
+- once all preceding mandatory gates are green for the exact candidate, the standing authorization satisfies the final release-permission step and the controlled merge/publication sequence should proceed automatically;
+- the standing authorization does **not** substitute for source, technical, editorial, legal, localization-semantic, accessibility, rendered-document, changed-scope, security, provenance, or other required review evidence;
+- a material change reopens the affected substantive review gates but does not by itself revoke the standing Final Human Release Approval authorization;
+- only an explicit owner revocation or replacement instruction suspends this standing authorization.
 
 ## Mandatory release sequence
 
@@ -67,8 +79,10 @@ Every manual must use the following controlled sequence unless a stricter manual
    - material changes after approval reopen the affected review gate.
 
 10. **Final Human Release Approval**
-   - release fails closed unless explicit Final Human Release Approval is recorded for the current reviewed scope;
-   - nothing is marked Completed or released before this approval.
+   - release fails closed unless Final Human Release Approval authorization applies to the current reviewed scope;
+   - the standing repository-owner authorization above satisfies this step automatically after all preceding mandatory gates are green for the exact final candidate;
+   - no additional owner prompt or repeated confirmation is required while the standing authorization remains active;
+   - nothing is marked Completed or released before all preceding mandatory gates are complete.
 
 11. **Merge and publication**
    - merge only in controlled stack order;
@@ -92,7 +106,7 @@ A manual must not be released when any mandatory gate is:
 - based on stale or materially changed authoritative sources;
 - technically failing required QA;
 - missing required publication/provenance evidence;
-- awaiting Final Human Release Approval.
+- awaiting Final Human Release Approval **when no active standing or candidate-specific owner authorization applies**.
 
 ## Parallel pre-staging rule
 

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 10 - NIST RMF and SP 800-53 Controlled Implementation",
+  "source_head": "9c420201ad6822c594e74c7f7508e00b53472f4c",
+  "source_branch": "build/nist-rmf-800-53-manual-10-2026",
+  "assurance_boundary": "Automated QA supports document integrity and review; it does not authorize a system, establish control effectiveness, create certification, or replace accountable human assessment and authorization decisions.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/English/source/01_PREPARE_CATEGORIZE_CHAPTERS_01_08.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/English/source/02_SELECT_IMPLEMENT_CHAPTERS_09_16.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/English/source/03_ASSESS_AUTHORIZE_CHAPTERS_17_24.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/English/source/04_MONITOR_CONTINUOUS_ASSURANCE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/MANUAL_10_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_EN.docx",
+          "bytes": 174957,
+          "paragraphs": 151,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 18862,
+          "source_completeness_floor_chars": 14720,
+          "sha256": "a9db6ac5185db50e8630fd7ada2e5bc0d79441dde30ad9776ddbee9b0f30110a",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_EN.pdf",
+          "bytes": 264207,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 10 - NIST RMF and SP 800-53 Controlled Implementation",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 10 controlled publication-QA artifact; language en; source head 9c420201ad6822c594e74c7f7508e00b53472f4c",
+            "keywords": "NIST, RMF, SP, 800-53, SP, 800-53A, SP, 800-53B, SP, 800-18, OSCAL, authorization, continuous, monitoring, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829184541Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "877f33e64c78c4506573ef0a7d0120233063e17abe0f9de70b93b78a6373041f",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Spanish_es-419/source/01_PREPARAR_CATEGORIZAR_CAPITULOS_01_08.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Spanish_es-419/source/02_SELECCIONAR_IMPLEMENTAR_CAPITULOS_09_16.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Spanish_es-419/source/03_EVALUAR_AUTORIZAR_CAPITULOS_17_24.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Spanish_es-419/source/04_MONITOREAR_ASEGURAMIENTO_CONTINUO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_10.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_ES-419.docx",
+          "bytes": 184272,
+          "paragraphs": 156,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 20037,
+          "source_completeness_floor_chars": 15619,
+          "sha256": "cdfa524e507c386bd6228473957b297303110f9a9b9e9df68c92dd71023c9559",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_ES-419.pdf",
+          "bytes": 293845,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 10 - Implementación Controlada de NIST RMF y SP 800-53",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 10 controlled publication-QA artifact; language es-419; source head 9c420201ad6822c594e74c7f7508e00b53472f4c",
+            "keywords": "NIST, RMF, SP, 800-53, SP, 800-53A, SP, 800-53B, SP, 800-18, OSCAL, authorization, continuous, monitoring, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829184543Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "d89a27647fb48d5a730cb151177b3204fd8f4b3111f8994c23239b35d29b8375",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Portuguese_pt-BR/source/01_PREPARAR_CATEGORIZAR_CAPITULOS_01_08.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Portuguese_pt-BR/source/02_SELECIONAR_IMPLEMENTAR_CAPITULOS_09_16.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Portuguese_pt-BR/source/03_AVALIAR_AUTORIZAR_CAPITULOS_17_24.md",
+        "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Portuguese_pt-BR/source/04_MONITORAR_ASSEGURACAO_CONTINUA_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_10.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_PT-BR.docx",
+          "bytes": 181658,
+          "paragraphs": 156,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 19478,
+          "source_completeness_floor_chars": 15216,
+          "sha256": "10640356658a307198879961a6902e34033fe4e89939a42555216cc0807c5809",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_10_NIST_RMF_SP_800-53_Controlled_Implementation_PT-BR.pdf",
+          "bytes": 293258,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 10 - Implementação Controlada do NIST RMF e SP 800-53",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 10 controlled publication-QA artifact; language pt-BR; source head 9c420201ad6822c594e74c7f7508e00b53472f4c",
+            "keywords": "NIST, RMF, SP, 800-53, SP, 800-53A, SP, 800-53B, SP, 800-18, OSCAL, authorization, continuous, monitoring, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829184545Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "133860895dfbfde7c2f56b45310a99978cae3740a9713b74a65e4357bbd6d155",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

@@ -9,8 +9,10 @@ on:
       - '.compliance/nist-rmf-800-53-manual-10-sources.json'
       - '.compliance/authoritative-sources.json'
       - '.compliance/manual-catalog.json'
+      - '.compliance/work-product-releases.json'
       - '01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation/**'
       - 'scripts/nist_rmf_800_53_manual_10_qa.py'
+      - 'scripts/run_legacy_manual_qa_release_state.py'
       - '.github/workflows/22-nist-rmf-800-53-manual-10-qa.yml'
 
 permissions:
@@ -26,4 +28,23 @@ jobs:
         with:
           persist-credentials: false
       - name: Run Manual 10 fail-closed preflight QA
-        run: python3 scripts/nist_rmf_800_53_manual_10_qa.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('.compliance/manual-catalog.json').read_text(encoding='utf-8'))
+          match = [m for m in catalog['manuals'] if m.get('id') == 'nist-rmf-800-53-controlled']
+          if len(match) != 1:
+              raise SystemExit('Manual 10 catalog entry must be unique')
+          print(match[0].get('status', ''))
+          PY
+          )"
+          if [[ "$STATUS" == "published" ]]; then
+            python3 scripts/run_legacy_manual_qa_release_state.py \
+              --manual-id nist-rmf-800-53-controlled \
+              --script scripts/nist_rmf_800_53_manual_10_qa.py
+          else
+            python3 scripts/nist_rmf_800_53_manual_10_qa.py
+          fi

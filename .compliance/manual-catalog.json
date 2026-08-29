@@ -102,8 +102,8 @@
       "id": "nist-ai-rmf-1-0",
       "title": "Manual 03 — NIST AI Risk Management Framework Implementation",
       "path": "01-foundations/NIST_AI_RMF_1.0",
-      "status": "development",
-      "release_state": "human-review-pending",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 3
     },

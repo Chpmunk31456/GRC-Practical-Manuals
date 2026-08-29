@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-26",
   "sources": [
     {
       "id": "nist-csf-2",
@@ -299,17 +299,17 @@
       "version": "ISO/IEC 5338:2023",
       "status": "final",
       "url": "https://www.iso.org/standard/81118.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-08-26",
       "review_interval_days": 90
     },
     {
       "id": "iso-iec-27090",
       "family": "ISO AI",
-      "title": "Artificial Intelligence Security Threats and Mitigations",
-      "version": "ISO/IEC 27090",
-      "status": "final",
+      "title": "Cybersecurity — Artificial Intelligence — Addressing security threats and compromises to artificial intelligence systems",
+      "version": "ISO/IEC 27090 (stage 60.00)",
+      "status": "under-development",
       "url": "https://www.iso.org/standard/56581.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-08-26",
       "review_interval_days": 30
     },
     {

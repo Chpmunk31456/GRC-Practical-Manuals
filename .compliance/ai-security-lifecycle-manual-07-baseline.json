@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "ai-security-lifecycle-manual-07",
+  "title": "Manual 07 — AI Security and Lifecycle Controls",
+  "manual_path": "06-cloud-and-technology-risk/AI_Security_and_Lifecycle",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "iso-iec-27090",
+    "iso-iec-5338-2023",
+    "iso-iec-42001-2023",
+    "nist-ai-rmf-1-0",
+    "nist-ai-600-1",
+    "nist-sp-800-218",
+    "nist-sp-800-207"
+  ],
+  "implementation_entry": "MANUAL_07_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "lifecycle_stages": [
+    "concept-and-use-case",
+    "data-and-model-acquisition",
+    "design-and-development",
+    "evaluation-and-security-testing",
+    "deployment-and-release",
+    "operation-and-monitoring",
+    "incident-and-change-management",
+    "retirement-and-decommissioning"
+  ],
+  "required_topics": [
+    "AI asset inventory",
+    "threat modeling",
+    "secure development",
+    "data provenance",
+    "model provenance",
+    "supply chain",
+    "prompt injection",
+    "tool permissions",
+    "agent authorization",
+    "secrets",
+    "data leakage",
+    "evaluation",
+    "red teaming",
+    "guardrails",
+    "monitoring",
+    "incident response",
+    "rollback",
+    "change management",
+    "decommissioning",
+    "evidence"
+  ],
+  "required_security_boundaries": [
+    "defense in depth",
+    "least privilege",
+    "zero trust",
+    "human oversight",
+    "fail closed",
+    "not a guarantee of security"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 60,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 07 remains development material until source verification, controlled English master, technical/security review, localization/semantic review, accessibility, document QA, repository security audit, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA validates controlled structure and evidence readiness; it does not guarantee that an AI system is secure, safe, compliant, or free from exploitable weaknesses."
+}

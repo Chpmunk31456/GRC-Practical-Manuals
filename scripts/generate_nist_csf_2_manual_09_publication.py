@@ -37,6 +37,7 @@ LANG_META = {
         "language_label": "Language:",
         "boundary": "Assurance boundary: This manual operationalizes NIST CSF 2.0 outcomes but does not create NIST certification, guarantee cybersecurity effectiveness, establish legal compliance, or prove that one control set is universally sufficient. Profiles, Tiers, exceptions, residual risk, and material decisions require accountable human judgment.",
         "figure_title": "Manual 09 memory graphic",
+        "figure_caption": "Figure {number}. Implementation memory graphic",
     },
     "es-419": {
         "title": "Manual 09 - Implementación Controlada del Marco de Ciberseguridad NIST 2.0",
@@ -48,6 +49,7 @@ LANG_META = {
         "language_label": "Idioma:",
         "boundary": "Límite de aseguramiento: Este manual operacionaliza resultados de NIST CSF 2.0, pero no crea certificación NIST, no garantiza efectividad de ciberseguridad, no establece cumplimiento legal ni demuestra que un conjunto de controles sea universalmente suficiente. Perfiles, Niveles, excepciones, riesgo residual y decisiones materiales requieren juicio humano responsable.",
         "figure_title": "Gráfico de memoria del Manual 09",
+        "figure_caption": "Figura {number}. Gráfico de memoria de implementación",
     },
     "pt-BR": {
         "title": "Manual 09 - Implementação Controlada do NIST Cybersecurity Framework 2.0",
@@ -59,6 +61,7 @@ LANG_META = {
         "language_label": "Idioma:",
         "boundary": "Limite de asseguração: Este manual operacionaliza resultados do NIST CSF 2.0, mas não cria certificação NIST, não garante efetividade de cibersegurança, não estabelece conformidade legal nem prova que um conjunto de controles seja universalmente suficiente. Perfis, Tiers, exceções, risco residual e decisões materiais exigem julgamento humano responsável.",
         "figure_title": "Gráfico de memória do Manual 09",
+        "figure_caption": "Figura {number}. Gráfico de memória de implementação",
     },
 }
 
@@ -141,6 +144,19 @@ def set_image_alt_text(inline_shape, title: str, description: str):
     return _base_alt(inline_shape, normalized_title, normalized_description)
 
 
+def localize_figure_captions(doc: Document, language: str) -> None:
+    """Replace inherited English implementation captions with the edition locale."""
+    template = LANG_META[language]["figure_caption"]
+    for paragraph in doc.paragraphs:
+        text = paragraph.text.strip()
+        if not text.startswith("Figure ") or "Implementation memory graphic" not in text:
+            continue
+        number = text.split(".", 1)[0].split()[-1]
+        paragraph.text = template.format(number=number)
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        core.set_paragraph_keep(paragraph, keep_next=True)
+
+
 def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, source_head: str):
     language = source.language
     meta = LANG_META[language]
@@ -173,6 +189,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     core.add_markdown(doc, source.chapter_text, language, image_dir, graphic_counter, "Chapter")
     if graphic_counter[0] != 3:
         raise ValueError(f"{language} expected exactly three memory graphics, got {graphic_counter[0]}")
+    localize_figure_captions(doc, language)
     for p in doc.paragraphs:
         for r in p.runs:
             core.set_run_font(r, language)

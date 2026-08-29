@@ -165,8 +165,8 @@
       "id": "nist-csf-2-controlled",
       "title": "Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation",
       "path": "01-foundations/NIST_CSF_2_Controlled_Implementation",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 9
     },

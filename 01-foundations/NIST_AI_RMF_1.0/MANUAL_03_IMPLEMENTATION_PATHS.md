@@ -11,9 +11,9 @@ Do not choose a path only by employee count. Start with the least complex path t
 ```mermaid
 flowchart TD
     A["Inventory AI systems, uses, actors and affected parties"] --> B{"Could failure or misuse materially affect people, safety, rights, security, finances, employment, essential services or the organization?"}
-    B -->|"Low and bounded"| C["Essential path"]
-    B -->|"Moderate, cross-functional or customer-facing"| D["Structured path"]
-    B -->|"High impact, regulated, safety-sensitive, large-scale or complex"| E["Enhanced path"]
+    B -->|"Low / bounded"| C["Essential path"]
+    B -->|"Moderate / cross-functional"| D["Structured path"]
+    B -->|"High-impact / regulated / complex"| E["Enhanced path"]
     C --> F["Document context, owner, minimum evaluation, decision and monitoring"]
     D --> G["Formal governance, lifecycle gates, TEVV, supplier controls and evidence"]
     E --> H["Independent challenge, deeper TEVV, affected-party analysis, continuous monitoring and executive risk decisions"]

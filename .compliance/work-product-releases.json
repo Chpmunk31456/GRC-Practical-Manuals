@@ -1,7 +1,13 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-29",
   "released_work_products": [
+    {
+      "id": "eu-ai-act-grc",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "English publication authorized and merged through PR #31; validated es-419 and pt-BR editions published through PR #35; completed EU AI Act v1.3 package published to main through PR #38 and recorded through PR #39; public manual tree contains durable DOCX/PDF publication artifacts"
+    },
     {
       "id": "iso-42001-aims",
       "type": "manual",
@@ -11,8 +17,8 @@
     {
       "id": "nist-ai-rmf-1-0",
       "type": "manual",
-      "release_state": "blocked-publication-package",
-      "release_evidence": "PR #90 merged, but repository reconciliation on 2026-08-26 found no committed DOCX/PDF publication package on main; publication state is blocked until regenerated and revalidated"
+      "release_state": "human-review-pending",
+      "release_evidence": "Durable trilingual DOCX/PDF package is committed on PR #124 with publication report, page QA, SHA-256 evidence, corrected localized generator-owned captions/boilerplate, and green structure/parity/release-package/publication/workflow-security machine controls. Publication remains fail-closed pending competent es-419 and pt-BR semantic/terminology review, human rendered accessibility/visual review, human changed-scope review, and exact-final reconciliation. Standing Final Human Release Approval is already recorded and applies automatically after those gates close."
     }
   ]
 }

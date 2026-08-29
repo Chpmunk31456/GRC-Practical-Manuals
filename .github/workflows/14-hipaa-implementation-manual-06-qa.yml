@@ -1,15 +1,19 @@
 name: "14 - HIPAA Implementation Manual 06 QA"
 
+# Lifecycle-aware validation preserves the legacy integrity gate after publication.
 on:
   pull_request:
     branches:
+      - main
       - "build/ai-auditing-assurance-manual-05-2026"
     paths:
       - "04-regulatory-compliance/HIPAA_Implementation_Series/**"
       - ".compliance/hipaa-implementation-manual-06-baseline.json"
       - ".compliance/authoritative-sources.json"
       - ".compliance/manual-catalog.json"
+      - ".compliance/work-product-releases.json"
       - "scripts/hipaa_implementation_manual_06_qa.py"
+      - "scripts/run_legacy_manual_qa_release_state.py"
       - "scripts/compliance_qa.py"
       - ".github/workflows/14-hipaa-implementation-manual-06-qa.yml"
   workflow_dispatch:
@@ -29,7 +33,26 @@ jobs:
       - name: Check out pull request revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate Manual 06 controlled implementation intake
-        run: python3 scripts/hipaa_implementation_manual_06_qa.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('.compliance/manual-catalog.json').read_text(encoding='utf-8'))
+          match = [m for m in catalog['manuals'] if m.get('id') == 'hipaa-implementation-series']
+          if len(match) != 1:
+              raise SystemExit('Manual 06 catalog entry must be unique')
+          print(match[0].get('status', ''))
+          PY
+          )"
+          if [[ "$STATUS" == "published" ]]; then
+            python3 scripts/run_legacy_manual_qa_release_state.py \
+              --manual-id hipaa-implementation-series \
+              --script scripts/hipaa_implementation_manual_06_qa.py
+          else
+            python3 scripts/hipaa_implementation_manual_06_qa.py
+          fi
       - name: Validate authoritative-source registry
         run: python3 scripts/compliance_qa.py sources
       - name: Validate controlled manual catalog

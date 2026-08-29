@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-29",
   "languages": [
     "en",
     "es-419",
@@ -72,8 +72,8 @@
       "id": "eu-ai-act-grc",
       "title": "Manual 01 — EU AI Act Practical Implementation Guide",
       "path": "04-regulatory-compliance/EU_AI_Act_GRC",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 1
     },

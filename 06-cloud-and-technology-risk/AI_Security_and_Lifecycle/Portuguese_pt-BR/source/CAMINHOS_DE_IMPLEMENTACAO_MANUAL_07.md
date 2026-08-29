@@ -25,7 +25,7 @@ Use para múltiplos sistemas de IA, serviços cloud, RAG, modelos/APIs externos,
 - testes de autorização de agentes/ferramentas;
 - cenários de avaliação adversarial/red team;
 - telemetria de segurança e detecção de anomalias;
-- gates de liberação documentados e governança de exceções;
+- pontos de controle de liberação documentados e governança de exceções;
 - reavaliação recorrente após mudanças de modelo/dados/ferramentas.
 
 ## Aprimorado
@@ -48,7 +48,7 @@ flowchart TD
     A["Conceito e caso de uso"] --> B["Aquisição de dados/modelos/componentes"]
     B --> C["Projeto e desenvolvimento seguro"]
     C --> D["Avaliação, testes de ameaças e red team"]
-    D --> E{"Gate de liberação aprovado?"}
+    D --> E{"Ponto de controle de liberação aprovado?"}
     E -->|"Não"| F["Remediar / reduzir escopo / rejeitar"]
     F --> C
     E -->|"Sim"| G["Implantar com privilégio mínimo e monitoramento"]
@@ -56,7 +56,7 @@ flowchart TD
     H --> I["Desativar / decomissionar / revogar acesso"]
 ```
 
-**Explicação acessível:** A segurança começa antes do desenvolvimento e continua durante aquisição, projeto, testes, liberação, operação, resposta a incidentes e desativação. Gates de liberação reprovados devolvem o trabalho para remediação em vez de permitir implantação sem controle.
+**Explicação acessível:** A segurança começa antes do desenvolvimento e continua durante aquisição, projeto, testes, liberação, operação, resposta a incidentes e desativação. Pontos de controle de liberação reprovados devolvem o trabalho para remediação em vez de permitir implantação sem controle.
 
 ## Cadeia de confiança e autorização
 

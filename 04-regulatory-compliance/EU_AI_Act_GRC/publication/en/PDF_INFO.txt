@@ -1,0 +1,19 @@
+Title:           EU Artificial Intelligence Act GRC Compliance Manual
+Author:          Al Leiva, with AI-assisted drafting and review support
+Creator:         Writer
+Producer:        LibreOffice 24.2
+CreationDate:    Sat Aug 29 12:33:56 2026 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           606
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       9027140 bytes
+Optimized:       no
+PDF version:     1.7

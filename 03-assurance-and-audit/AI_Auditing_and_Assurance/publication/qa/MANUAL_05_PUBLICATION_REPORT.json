@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "manual": "Manual 05 - AI Auditing and Assurance",
-  "source_head": "647eab3dda4bce3acadc9cd5a0874b354b360935",
+  "source_head": "d42b12447646993c54caade2b399efd4fb37f8d9",
   "source_branch": "build/ai-auditing-assurance-manual-05-2026",
   "controlled_baseline": "ISO/NIST assurance baseline with ISACA AAIA professional-practice alignment",
   "assurance_boundary": "Publication QA does not establish independence, competence, sufficient appropriate evidence, legal compliance, certification, conformity, or an audit opinion.",
@@ -20,7 +20,7 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_05_AI_Auditing_and_Assurance_EN.docx",
-          "bytes": 189064,
+          "bytes": 189067,
           "paragraphs": 241,
           "tables": 0,
           "inline_shapes": 3,
@@ -28,27 +28,27 @@
           "chapter_count": 32,
           "normalized_text_chars": 23890,
           "source_completeness_floor_chars": 18679,
-          "sha256": "3b4d50de4fc9b1582eae9950011cba7097c829edd2d412d33e15d47383faa115",
+          "sha256": "6e7d6663ddd759b498d12bd49606bda2f4694afe02b866484563f010dd54744e",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_05_AI_Auditing_and_Assurance_EN.pdf",
-          "bytes": 330523,
+          "bytes": 330615,
           "pages": 14,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 05 - AI Auditing and Assurance",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 05 controlled publication-QA artifact; language en; source head 647eab3dda4bce3acadc9cd5a0874b354b360935",
+            "subject": "Manual 05 controlled publication-QA artifact; language en; source head d42b12447646993c54caade2b399efd4fb37f8d9",
             "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124324Z'",
+            "creationDate": "D:20260829145908Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "8d3be16debb6084835458245e5c4abdef516047d3367519a7a8758bff2c38240",
+          "sha256": "85cc051d4888c0672e17877fab9972bcce26f06cb658159eb21565f6608a12e1",
           "status": "PASS"
         }
       }
@@ -67,35 +67,35 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_05_AI_Auditing_and_Assurance_ES-419.docx",
-          "bytes": 198762,
+          "bytes": 198765,
           "paragraphs": 241,
           "tables": 0,
           "inline_shapes": 3,
           "alt_text_entries": 3,
           "chapter_count": 32,
-          "normalized_text_chars": 27459,
+          "normalized_text_chars": 27506,
           "source_completeness_floor_chars": 21484,
-          "sha256": "07b286de9718782c9cb9313729eb6b02a6ba03549b74d2605f9579fb085faac4",
+          "sha256": "911aeea6872c1b24e35fcb83273c5e3aeaf20e37c9828fe977d65b3b448b65db",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_05_AI_Auditing_and_Assurance_ES-419.pdf",
-          "bytes": 368935,
+          "bytes": 368973,
           "pages": 14,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 05 - Auditoría y Aseguramiento de IA",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 05 controlled publication-QA artifact; language es-419; source head 647eab3dda4bce3acadc9cd5a0874b354b360935",
+            "subject": "Artefacto controlado de QA de publicación del Manual 05; idioma es-419; revisión de fuente d42b12447646993c54caade2b399efd4fb37f8d9",
             "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124326Z'",
+            "creationDate": "D:20260829145910Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "d1cf88fe7e819469a2e8ebc21fb61b5feed568858b906a76e37d3fd4c4182b80",
+          "sha256": "b6ef241df607a97409cbe670e7b15d23ccdbf8d11e9f9cec99b300d09c7d26b7",
           "status": "PASS"
         }
       }
@@ -114,35 +114,35 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_05_AI_Auditing_and_Assurance_PT-BR.docx",
-          "bytes": 197630,
+          "bytes": 197629,
           "paragraphs": 241,
           "tables": 0,
           "inline_shapes": 3,
           "alt_text_entries": 3,
           "chapter_count": 32,
-          "normalized_text_chars": 26876,
+          "normalized_text_chars": 26921,
           "source_completeness_floor_chars": 21012,
-          "sha256": "abd8316ce439beca1629e5959b0afff1550eb1305061f0e6cfbf048ffc0b0edb",
+          "sha256": "e2f490631a20bf9905ec6f27df1a806a309f80f7e77691c5219c53f5e8e38703",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_05_AI_Auditing_and_Assurance_PT-BR.pdf",
-          "bytes": 370158,
+          "bytes": 369888,
           "pages": 14,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 05 - Auditoria e Asseguração de IA",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 05 controlled publication-QA artifact; language pt-BR; source head 647eab3dda4bce3acadc9cd5a0874b354b360935",
+            "subject": "Artefato controlado de QA de publicação do Manual 05; idioma pt-BR; revisão da fonte d42b12447646993c54caade2b399efd4fb37f8d9",
             "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124328Z'",
+            "creationDate": "D:20260829145913Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "de9f7def204527c27ff4f82af97081638f7e0ebaf7d796dd63d07a897576ab02",
+          "sha256": "bbc85e98c48857f4b1507fcf539c47093455b3c3bab0d294940900ac7bc1450f",
           "status": "PASS"
         }
       }

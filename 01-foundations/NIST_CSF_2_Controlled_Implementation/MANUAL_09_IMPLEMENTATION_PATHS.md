@@ -68,6 +68,52 @@ Completion requires evidence that automated or advanced practices remain governe
 
 The loop is iterative. Material changes, incidents, failed tests, supplier changes, or changed risk assumptions return affected decisions to GOVERN and IDENTIFY.
 
+```mermaid
+flowchart TD
+    A["GOVERN: context, strategy, roles and oversight"] --> B["IDENTIFY: assets, dependencies, risk and improvement"]
+    B --> C["PROTECT: proportionate safeguards"]
+    C --> D["DETECT: monitoring and adverse-event analysis"]
+    D --> E["RESPOND: manage, analyze, communicate and mitigate"]
+    E --> F["RECOVER: restore services and communicate recovery"]
+    F --> A
+```
+
+**Accessible explanation:** The six NIST CSF 2.0 Functions operate as a connected cycle rather than isolated checklists. Governance sets the context for identification and protection; detection informs response; recovery feeds lessons, changed assumptions, and improvement priorities back into governance.
+
+## Profile and improvement route
+
+```mermaid
+flowchart TD
+    A["Organizational context and risk strategy"] --> B["Current Profile"]
+    B --> C["Target Profile"]
+    C --> D["Prioritized outcome gaps"]
+    D --> E["Implementation actions and accountable owners"]
+    E --> F["Evidence, testing and validation"]
+    F --> G{"Residual risk acceptable?"}
+    G -->|"No"| D
+    G -->|"Yes"| H["Approve, monitor and reassess"]
+    H --> B
+```
+
+**Accessible explanation:** CSF implementation begins with organizational context, compares Current and Target Profiles, prioritizes outcome gaps, implements accountable actions, and validates evidence. Unacceptable residual risk returns to treatment; accepted risk remains monitored and is reassessed as conditions change.
+
+## Proportional implementation routing
+
+```mermaid
+flowchart TD
+    A["Scope, critical services, threat exposure and obligations"] --> B{"Implementation depth needed?"}
+    B -->|"Focused / lower complexity"| C["Essential path"]
+    B -->|"Repeatable enterprise governance"| D["Structured path"]
+    B -->|"Systemic / high exposure / advanced assurance"| E["Enhanced path"]
+    C --> F["Evidence, accountable decisions and review cadence"]
+    D --> F
+    E --> F
+    F --> G["Material change, incident, test result or new risk"]
+    G --> A
+```
+
+**Accessible explanation:** The Essential, Structured, and Enhanced paths scale implementation depth to organizational context and exposure. All paths retain evidence, accountable decisions, and reassessment; material changes or new risk can move the organization to a different depth rather than locking it permanently into one tier.
+
 ## Evidence and decision loop
 
 For each material CSF outcome, record:

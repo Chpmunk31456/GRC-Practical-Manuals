@@ -1,8 +1,8 @@
 # Manual 03 — Durable Package Upload Gate
 
-The controlled workflow has generated the full trilingual publication package and its QA evidence. The durable repository copy of the six binary publication artifacts remains the specific repository-state repair item.
+**Status: COMPLETE for durable repository placement.**
 
-Required durable files under `01-foundations/NIST_AI_RMF_1.0/publication/qa-candidate/`:
+The controlled workflow generated the full trilingual publication package and QA evidence, and the six binary publication artifacts are now durably committed under `01-foundations/NIST_AI_RMF_1.0/publication/` on the Manual 03 release branch:
 
 1. `Manual_03_NIST_AI_RMF_Implementation_EN.docx`
 2. `Manual_03_NIST_AI_RMF_Implementation_EN.pdf`
@@ -11,4 +11,6 @@ Required durable files under `01-foundations/NIST_AI_RMF_1.0/publication/qa-cand
 5. `Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx`
 6. `Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf`
 
-Do not mark Manual 03 published until these durable artifacts are present and the remaining human semantic, rendered accessibility/visual, changed-scope, and Final Human Release Approval gates are complete.
+The durable-placement blocker is therefore closed. This metadata reconciliation commit also provides a non-bot exact head so repository workflows can execute against the durable package.
+
+Manual 03 remains fail-closed until the remaining substantive evidence is complete: competent human semantic/terminology review for `es-419` and `pt-BR`, human rendered-document accessibility/visual review, exact changed-scope review, and exact-final repository/security/provenance reconciliation. Standing Final Human Release Approval is already recorded and requires no additional owner prompt once those preceding gates are green.

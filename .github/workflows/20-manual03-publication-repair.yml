@@ -1,5 +1,7 @@
 name: "20 - Manual 03 Publication Repair"
 
+# Permanent release-candidate workflow: read-only repository permissions.
+# Temporary durable-staging workflows have been removed before this exact-head validation.
 on:
   pull_request:
     branches:

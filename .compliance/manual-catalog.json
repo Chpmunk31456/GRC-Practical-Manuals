@@ -171,6 +171,15 @@
       "series_order": 9
     },
     {
+      "id": "nist-rmf-800-53-controlled",
+      "title": "Manual 10 — NIST RMF and SP 800-53 Controlled Implementation",
+      "path": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation",
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 10
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

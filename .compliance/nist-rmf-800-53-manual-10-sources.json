@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "nist-rmf-800-53-manual-10",
+  "last_verified": "2026-08-27",
+  "purpose": "Controlled authoritative-source supplement for Manual 10 sources not yet present in the shared registry. These records must be reconciled into the shared authoritative-source registry when the stacked branch is reconciled upstream.",
+  "sources": [
+    {
+      "id": "nist-sp-800-53b",
+      "family": "NIST",
+      "title": "Control Baselines for Information Systems and Organizations",
+      "version": "SP 800-53B Release 5.2.0",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/b/upd1/final",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 60,
+      "source_state_note": "NIST issued Release 5.2.0 for consistency with SP 800-53 and SP 800-53A; NIST states there were no baseline content changes."
+    },
+    {
+      "id": "nist-sp-800-18-r2",
+      "family": "NIST",
+      "title": "Developing Security, Privacy, and Cybersecurity Supply Chain Risk Management Plans for Systems",
+      "version": "SP 800-18 Rev. 2",
+      "status": "final",
+      "url": "https://csrc.nist.gov/pubs/sp/800/18/r2/final",
+      "last_verified": "2026-08-27",
+      "review_interval_days": 60,
+      "source_state_note": "Final published June 30, 2026; covers system security, privacy, and C-SCRM plans aligned to RMF."
+    }
+  ]
+}

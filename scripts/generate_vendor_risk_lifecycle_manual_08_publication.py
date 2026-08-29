@@ -33,7 +33,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | supplier-risk and human decision boundaries retained.",
         "boundary": "Assurance boundary: Risk-based supplier governance reduces uncertainty but does not eliminate third-party or fourth-party risk. Evidence can be incomplete, stale, externally controlled, or subject to material change. Accountable human owners retain approval, exception, residual-risk, renewal, and exit decisions.",
         "figure_title": "Manual 08 memory graphic",
     },
@@ -44,7 +44,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites de riesgo de proveedores y de decisión humana.",
         "boundary": "Límite de aseguramiento: El gobierno de proveedores basado en riesgo reduce la incertidumbre, pero no elimina el riesgo de terceros o cuartas partes. La evidencia puede ser incompleta, desactualizada, controlada externamente o estar sujeta a cambios materiales. Los responsables humanos conservan las decisiones de aprobación, excepción, riesgo residual, renovación y salida.",
         "figure_title": "Gráfico de memoria del Manual 08",
     },
@@ -55,7 +55,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites de risco de fornecedores e de decisão humana mantidos.",
         "boundary": "Limite de asseguração: A governança de fornecedores baseada em risco reduz a incerteza, mas não elimina o risco de terceiros ou quartas partes. As evidências podem ser incompletas, desatualizadas, controladas externamente ou sujeitas a mudanças materiais. Responsáveis humanos mantêm as decisões de aprovação, exceção, risco residual, renovação e saída.",
         "figure_title": "Gráfico de memória do Manual 08",
     },
@@ -147,7 +147,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     subtitle = doc.add_paragraph(); subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = subtitle.add_run(meta["status"]); core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph(); control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | supplier-risk and human decision boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph(); run = boundary.add_run(meta["boundary"]); core.set_run_font(run, language, size=9, bold=True)
     graphic_counter = [0]

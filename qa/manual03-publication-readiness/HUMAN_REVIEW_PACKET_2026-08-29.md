@@ -3,6 +3,7 @@
 **Manual:** NIST AI Risk Management Framework Implementation  
 **Purpose:** Close the remaining substantive human gates without repeating completed machine QA.  
 **Controlled content source head:** `0c5e219dcca52266f6ea60d24fd16690df0de575`  
+**Corrected publication-generation revision recorded in durable QA report:** `415cb1bb4afcda24109137eca1d6890462458cd8`  
 **Release branch:** `release/manual03-publication-repair-2026-08-28`
 
 ## Review boundary
@@ -11,30 +12,42 @@ This packet is for competent human review only. Automated QA and AI-assisted ins
 
 Standing Final Human Release Approval is already recorded. Do **not** request a second final owner approval after the substantive reviews and exact-final reconciliation are green.
 
+## Preflight defects already remediated before human review
+
+Rendered/document preflight identified and corrected generator-owned localization defects before this packet was finalized:
+
+- Spanish and Portuguese figure captions had remained in English;
+- localized title/status/control-line/assurance-boundary/section-heading/footer boilerplate had inherited English generator text;
+- all 15 Spanish figure captions and all 15 Portuguese figure captions now render in their target language;
+- regenerated Spanish and Portuguese contact sheets were visually rechecked as supporting evidence;
+- PDF text preflight confirms zero stale English `Implementation memory graphic` / `Chapter memory graphic` captions in the two localized PDFs.
+
+These corrections changed generated publication artifacts and therefore the hashes below supersede all earlier Manual 03 review-packet hashes.
+
 ## Exact publication artifacts to review
 
 ### English controlled edition
 
 - DOCX: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_EN.docx`
-  - SHA-256: `3a9c588d8a06cf1fbc56df9dccbf318891450d7b83a722ccdbaa878041ce5370`
+  - SHA-256: `a56e5a342d41d17df8201aa8bad2adb952881956de339c40036069ba5f8e8ebc`
 - PDF: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_EN.pdf`
-  - SHA-256: `d6d17e92108b9374270faf34d970594b81059e928ee605c194ecf76071c10603`
+  - SHA-256: `14d7a1774c3a2b8cded02e318035e52064867f0324c41faeaaefdf3ba66ce784`
   - Pages: 47
 
 ### Spanish (`es-419`) controlled localization candidate
 
 - DOCX: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.docx`
-  - SHA-256: `84d92ca2136b057f9033f9ae5abcce46c739101c437f320fb64b335b68b86bd1`
+  - SHA-256: `f07b5cafa67c5bf7400cb8a7c7cfdea4bbd67a6ba566acdf07436766fdc7704f`
 - PDF: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.pdf`
-  - SHA-256: `d95ac0140fe72073f0ad49e97bf57aa7dbe6123c8705d8e9d7daa83a1456b37e`
+  - SHA-256: `d739d0974e70e9125198bb99953b4302a70aeab221e2fc803f7e7b9f58e0e707`
   - Pages: 48
 
 ### Brazilian Portuguese (`pt-BR`) controlled localization candidate
 
 - DOCX: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx`
-  - SHA-256: `caad011fc8f2e60b4b09a0097b5161b8c41ed367eb470f7b169c8c16ed64779d`
+  - SHA-256: `cc7ffb0efdd89665bd9fd5a66c87115ad5ab73dd676640cba7ac0afb81a0ec44`
 - PDF: `01-foundations/NIST_AI_RMF_1.0/publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf`
-  - SHA-256: `f6f87a258d7ce1e46783c55e412485eea210ffe87db84378fb1c4d14794bc486`
+  - SHA-256: `b8b4789552a6a4e7c4861eee8c71168f1e355127a8834703260a9c504bd719c3`
   - Pages: 48
 
 Supporting evidence:
@@ -62,7 +75,7 @@ Reviewer must compare the Spanish edition against the controlled English edition
 
 ## Gate B — `pt-BR` semantic and terminology review
 
-Reviewer must compare the Portuguese edition against the controlled English edition using the same criteria as Gate A.
+Reviewer must compare the Portuguese edition against the controlled English edition using the same criteria as Gate A. Particular attention should be paid to retained industry terms or English-derived terminology (for example `red team`, `rollback`, `logging`, or other technical terms) to confirm that the chosen terminology is appropriate for the intended Brazilian Portuguese professional audience.
 
 **Reviewer:** ____________________  
 **Qualification/competence basis:** ____________________  
@@ -97,7 +110,7 @@ Machine page QA and AI-assisted inspection are supporting evidence only.
 
 ## Gate D — changed-scope review
 
-Reviewer must confirm that the reviewed artifact hashes above correspond to the intended content candidate and that later release-branch changes are limited to package placement, workflow/release-pipeline repair, or review-evidence reconciliation unless explicitly re-reviewed.
+Reviewer must confirm that the reviewed artifact hashes above correspond to the intended content candidate and that later release-branch changes are limited to package placement, publication-generator localization repair, workflow/release-pipeline repair, or review-evidence reconciliation unless explicitly re-reviewed.
 
 Any content, translation, figure-content, or substantive document change after Gates A–C requires the affected gate to reopen and the new artifact hashes to be reviewed.
 

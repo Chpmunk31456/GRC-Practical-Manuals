@@ -1,5 +1,6 @@
 name: "15 - AI Security Lifecycle Manual 07 QA"
 
+# Lifecycle-aware validation preserves the legacy controlled-intake gate after publication.
 on:
   pull_request:
     branches:
@@ -9,7 +10,9 @@ on:
       - ".compliance/ai-security-lifecycle-manual-07-baseline.json"
       - ".compliance/authoritative-sources.json"
       - ".compliance/manual-catalog.json"
+      - ".compliance/work-product-releases.json"
       - "scripts/ai_security_lifecycle_manual_07_qa.py"
+      - "scripts/run_legacy_manual_qa_release_state.py"
       - "scripts/compliance_qa.py"
       - ".github/workflows/15-ai-security-lifecycle-manual-07-qa.yml"
   workflow_dispatch:
@@ -28,8 +31,29 @@ jobs:
     steps:
       - name: Check out pull request revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Validate Manual 07 controlled implementation intake
-        run: python3 scripts/ai_security_lifecycle_manual_07_qa.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('.compliance/manual-catalog.json').read_text(encoding='utf-8'))
+          match = [m for m in catalog['manuals'] if m.get('id') == 'ai-security-lifecycle']
+          if len(match) != 1:
+              raise SystemExit('Manual 07 catalog entry must be unique')
+          print(match[0].get('status', ''))
+          PY
+          )"
+          if [[ "$STATUS" == "published" ]]; then
+            python3 scripts/run_legacy_manual_qa_release_state.py \
+              --manual-id ai-security-lifecycle \
+              --script scripts/ai_security_lifecycle_manual_07_qa.py
+          else
+            python3 scripts/ai_security_lifecycle_manual_07_qa.py
+          fi
       - name: Validate authoritative-source registry
         run: python3 scripts/compliance_qa.py sources
       - name: Validate controlled manual catalog

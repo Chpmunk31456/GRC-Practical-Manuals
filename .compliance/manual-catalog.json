@@ -147,8 +147,8 @@
       "id": "ai-security-lifecycle",
       "title": "Manual 07 — AI Security and Lifecycle Controls",
       "path": "06-cloud-and-technology-risk/AI_Security_and_Lifecycle",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 7
     },

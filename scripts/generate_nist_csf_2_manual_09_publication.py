@@ -110,6 +110,9 @@ def find_implementation(language: str):
 
 
 def add_footer(section, language: str):
+    existing = " ".join(p.text.strip() for p in section.footer.paragraphs if p.text.strip())
+    if "Manual 09" in existing:
+        return
     p = section.footer.paragraphs[0]
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = p.add_run(f"Manual 09 | {LANG_META[language]['status']} | ")
@@ -119,8 +122,10 @@ def add_footer(section, language: str):
     p._p.append(field)
 
 
-_base_render = core.render_mermaid_memory_graphic
-_base_alt = core.set_image_alt_text
+# Use the underlying raw renderer/alt-text helper retained by the Manual 07
+# adapter, not its Manual-07 relabeling wrapper.
+_base_render = base._base_render
+_base_alt = base._base_alt
 
 
 def render_mermaid_memory_graphic(block: str, out_path: Path, title: str) -> str:

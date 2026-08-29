@@ -12,26 +12,170 @@
     "pdf"
   ],
   "manuals": [
-    {"id":"cis-controls-v8-1","title":"CIS Critical Security Controls v8.1","path":"01-foundations/CIS_Controls_v8.1","status":"published","layout":"standard"},
-    {"id":"nist-csf-2","title":"NIST Cybersecurity Framework 2.0","path":"01-foundations/NIST_CSF_2","status":"published","layout":"standard"},
-    {"id":"nist-rmf-sp-800-53","title":"NIST RMF and SP 800-53","path":"01-foundations/NIST_RMF_SP_800-53","status":"published","layout":"standard"},
-    {"id":"iso-27001-27002","title":"ISO/IEC 27001 and ISO/IEC 27002","path":"02-management-systems/ISO_IEC_27001_27002","status":"published","layout":"standard"},
-    {"id":"soc-2-audit-readiness","title":"SOC 2 Audit Readiness","path":"03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0","status":"published","layout":"language-directories"},
-    {"id":"gdpr","title":"GDPR","path":"04-regulatory-compliance/GDPR","status":"published","layout":"standard"},
-    {"id":"hipaa","title":"HIPAA","path":"04-regulatory-compliance/HIPAA","status":"published","layout":"standard"},
-    {"id":"pci-dss-4-0-1","title":"PCI DSS v4.0.1","path":"04-regulatory-compliance/PCI_DSS_v4.0.1","status":"published","layout":"standard"},
-    {"id":"eu-ai-act-grc","title":"Manual 01 — EU AI Act Practical Implementation Guide","path":"04-regulatory-compliance/EU_AI_Act_GRC","status":"published","release_state":"published","layout":"controlled-build","series_order":1},
-    {"id":"incident-response-bcdr","title":"Incident Response, Business Continuity, and Disaster Recovery","path":"05-operational-resilience/Incident_Response_BCDR","status":"published","layout":"standard"},
-    {"id":"cloud-security-compliance","title":"Cloud Security and Compliance","path":"06-cloud-and-technology-risk/Cloud_Security_and_Compliance","status":"published","layout":"standard"},
-    {"id":"third-party-risk-supply-chain","title":"Third-Party Risk and Cyber Supply Chain","path":"07-third-party-risk/Third_Party_Risk_and_Supply_Chain","status":"published","layout":"standard"},
-    {"id":"nist-ai-rmf-1-0","title":"Manual 03 — NIST AI Risk Management Framework Implementation","path":"01-foundations/NIST_AI_RMF_1.0","status":"published","release_state":"published","layout":"controlled-build","series_order":3},
-    {"id":"nist-ai-600-1","title":"Manual 04 — NIST AI 600-1 Generative AI Profile Implementation","path":"01-foundations/NIST_AI_600-1_Generative_AI_Profile","status":"published","release_state":"published","layout":"controlled-build","series_order":4},
-    {"id":"iso-42001-aims","title":"Manual 02 — ISO/IEC 42001 AI Management System Implementation","path":"02-management-systems/ISO_IEC_42001_AIMS","status":"published","release_state":"published","layout":"controlled-build","series_order":2},
-    {"id":"ai-auditing-assurance","title":"Manual 05 — AI Auditing and Assurance","path":"03-assurance-and-audit/AI_Auditing_and_Assurance","status":"published","release_state":"published","layout":"controlled-build","series_order":5},
-    {"id":"hipaa-implementation-series","title":"Manual 06 — HIPAA Implementation and Audit","path":"04-regulatory-compliance/HIPAA_Implementation_Series","status":"published","release_state":"published","layout":"controlled-build","series_order":6},
-    {"id":"ai-security-lifecycle","title":"Manual 07 — AI Security and Lifecycle Controls","path":"06-cloud-and-technology-risk/AI_Security_and_Lifecycle","status":"published","release_state":"published","layout":"controlled-build","series_order":7},
-    {"id":"vendor-risk-lifecycle","title":"Manual 08 — Vendor and Third-Party Risk Lifecycle","path":"07-third-party-risk/Vendor_Risk_Lifecycle","status":"published","release_state":"published","layout":"controlled-build","series_order":8},
-    {"id":"nist-csf-2-controlled","title":"Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation","path":"01-foundations/NIST_CSF_2_Controlled_Implementation","status":"development","release_state":"development","layout":"controlled-build","series_order":9},
-    {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
+    {
+      "id": "cis-controls-v8-1",
+      "title": "CIS Critical Security Controls v8.1",
+      "path": "01-foundations/CIS_Controls_v8.1",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "nist-csf-2",
+      "title": "NIST Cybersecurity Framework 2.0",
+      "path": "01-foundations/NIST_CSF_2",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "nist-rmf-sp-800-53",
+      "title": "NIST RMF and SP 800-53",
+      "path": "01-foundations/NIST_RMF_SP_800-53",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "iso-27001-27002",
+      "title": "ISO/IEC 27001 and ISO/IEC 27002",
+      "path": "02-management-systems/ISO_IEC_27001_27002",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "soc-2-audit-readiness",
+      "title": "SOC 2 Audit Readiness",
+      "path": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0",
+      "status": "published",
+      "layout": "language-directories"
+    },
+    {
+      "id": "gdpr",
+      "title": "GDPR",
+      "path": "04-regulatory-compliance/GDPR",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "hipaa",
+      "title": "HIPAA",
+      "path": "04-regulatory-compliance/HIPAA",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "pci-dss-4-0-1",
+      "title": "PCI DSS v4.0.1",
+      "path": "04-regulatory-compliance/PCI_DSS_v4.0.1",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "eu-ai-act-grc",
+      "title": "Manual 01 — EU AI Act Practical Implementation Guide",
+      "path": "04-regulatory-compliance/EU_AI_Act_GRC",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 1
+    },
+    {
+      "id": "incident-response-bcdr",
+      "title": "Incident Response, Business Continuity, and Disaster Recovery",
+      "path": "05-operational-resilience/Incident_Response_BCDR",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "cloud-security-compliance",
+      "title": "Cloud Security and Compliance",
+      "path": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "third-party-risk-supply-chain",
+      "title": "Third-Party Risk and Cyber Supply Chain",
+      "path": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "title": "Manual 03 — NIST AI Risk Management Framework Implementation",
+      "path": "01-foundations/NIST_AI_RMF_1.0",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 3
+    },
+    {
+      "id": "nist-ai-600-1",
+      "title": "Manual 04 — NIST AI 600-1 Generative AI Profile Implementation",
+      "path": "01-foundations/NIST_AI_600-1_Generative_AI_Profile",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 4
+    },
+    {
+      "id": "iso-42001-aims",
+      "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
+      "path": "02-management-systems/ISO_IEC_42001_AIMS",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 2
+    },
+    {
+      "id": "ai-auditing-assurance",
+      "title": "Manual 05 — AI Auditing and Assurance",
+      "path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 5
+    },
+    {
+      "id": "hipaa-implementation-series",
+      "title": "Manual 06 — HIPAA Implementation and Audit",
+      "path": "04-regulatory-compliance/HIPAA_Implementation_Series",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 6
+    },
+    {
+      "id": "ai-security-lifecycle",
+      "title": "Manual 07 — AI Security and Lifecycle Controls",
+      "path": "06-cloud-and-technology-risk/AI_Security_and_Lifecycle",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 7
+    },
+    {
+      "id": "vendor-risk-lifecycle",
+      "title": "Manual 08 — Vendor and Third-Party Risk Lifecycle",
+      "path": "07-third-party-risk/Vendor_Risk_Lifecycle",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 8
+    },
+    {
+      "id": "nist-csf-2-controlled",
+      "title": "Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation",
+      "path": "01-foundations/NIST_CSF_2_Controlled_Implementation",
+      "status": "development",
+      "release_state": "development",
+      "layout": "controlled-build",
+      "series_order": 9
+    },
+    {
+      "id": "ai-governance-audit-toolkit",
+      "title": "AI Governance and Audit Toolkit",
+      "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
+      "status": "planned",
+      "layout": "toolkit"
+    }
   ]
 }

@@ -1,4 +1,4 @@
-name: "36 - Manual 04 Corrected Durable Restage"
+name: "36 - Manual 05 Corrected Durable Restage"
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  restage-manual04:
+  restage-manual05:
     if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -30,33 +30,33 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libreoffice-writer
           python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
-      - name: Generate and validate corrected Manual 04 package
+      - name: Generate and validate corrected Manual 05 package
         run: |
           set -euo pipefail
-          OUT="$RUNNER_TEMP/manual04-corrected"
-          python3 scripts/generate_nist_ai_600_1_manual_04_publication_v3.py --output-root "$OUT" --source-head "${{ github.event.pull_request.head.sha }}"
+          OUT="$RUNNER_TEMP/manual05-corrected"
+          python3 scripts/generate_ai_auditing_assurance_manual_05_publication_v3.py --output-root "$OUT" --source-head "${{ github.event.pull_request.head.sha }}"
           python3 scripts/pdf_content_preflight.py "$OUT/publication"
-          python3 scripts/localized_publication_regression_qa.py "$OUT/publication" --manual-number 4
+          python3 scripts/localized_publication_regression_qa.py "$OUT/publication" --manual-number 5
           test "$(find "$OUT/publication" -maxdepth 1 -type f -name '*.docx' | wc -l)" -eq 3
           test "$(find "$OUT/publication" -maxdepth 1 -type f -name '*.pdf' | wc -l)" -eq 3
-      - name: Stage corrected Manual 04 package
+      - name: Stage corrected Manual 05 package
         run: |
           set -euo pipefail
-          OUT="$RUNNER_TEMP/manual04-corrected"
-          DEST="01-foundations/NIST_AI_600-1_Generative_AI_Profile/publication"
+          OUT="$RUNNER_TEMP/manual05-corrected"
+          DEST="03-assurance-and-audit/AI_Auditing_and_Assurance/publication"
           mkdir -p "$DEST/qa"
           cp "$OUT/publication/"*.docx "$DEST/"
           cp "$OUT/publication/"*.pdf "$DEST/"
           cp -a "$OUT/qa/." "$DEST/qa/"
-      - name: Commit corrected Manual 04 durable package
+      - name: Commit corrected Manual 05 durable package
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add 01-foundations/NIST_AI_600-1_Generative_AI_Profile/publication
+          git add 03-assurance-and-audit/AI_Auditing_and_Assurance/publication
           if git diff --cached --quiet; then
-            echo "Manual 04 durable package already matches corrected candidate."
+            echo "Manual 05 durable package already matches corrected candidate."
             exit 0
           fi
-          git commit -m "Durably restage corrected Manual 04 publication package"
+          git commit -m "Durably restage corrected Manual 05 publication package"
           git push origin HEAD:${{ github.head_ref }}

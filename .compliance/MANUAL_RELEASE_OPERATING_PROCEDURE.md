@@ -4,13 +4,76 @@
 
 ## Purpose
 
-Standardize manual production so work is pre-staged as far as safely possible, technical work does not wait unnecessarily on human review, and no manual is released without explicit human approval.
+Standardize manual production so work is pre-staged as far as safely possible, technical work does not wait unnecessarily on human review, and no manual is released without human release authorization.
 
 ## Operating principle
 
-For every manual, complete all non-human work that can be performed safely before asking for human action. Work on successor manuals may be pre-staged in parallel, but stacked branches must remain correctly ordered and no successor may bypass an unfinished predecessor.
+For every manual, complete all non-human work that can be performed safely before human action is required. Work on successor manuals may be pre-staged in parallel, but stacked branches must remain correctly ordered and no successor may bypass an unfinished predecessor.
 
-Automated QA does not constitute human approval.
+Automated QA does not constitute human review or substitute for required human evidence.
+
+## Reviewer-readiness lead rule
+
+To prevent human review from being delayed by repository cleanup, artifact generation, stale evidence, or avoidable rendering defects, the release train must maintain reviewer readiness ahead of the front-of-line manual.
+
+At minimum:
+
+- the **front-of-line manual** is the active publication target;
+- the **next manual** must already be reviewer-ready before the front manual completes substantive human review;
+- the **following manual** should be preflighted as far as safely possible so its remaining work is known before it becomes next in line.
+
+Reviewer-ready means, as applicable to the manual:
+
+- exact durable publication artifacts already exist;
+- reviewed artifact identities and SHA-256 hashes are recorded;
+- a consolidated human-review packet identifies only the substantive human gates still open;
+- rendered/document preflight has already been completed to catch machine-detectable or AI-detectable layout/localization defects before human review;
+- localization semantic/terminology review scope is explicit;
+- technical/editorial/legal/security review scope is explicit where required;
+- changed-scope review criteria are explicit and tied to artifact identity;
+- provenance, page QA, metadata, release manifests, checksums and repository/security evidence are already pre-staged wherever possible;
+- standing Final Human Release Approval is recognized so no repeated owner-approval prompt becomes a release delay.
+
+A manual must not reach the front of the release queue with machine-fixable preparation work that could reasonably have been completed while its predecessor was under review.
+
+## Slack-time learning and adaptation rule
+
+When the active publication target is waiting on a genuine human gate, available production capacity must be used to improve downstream readiness rather than remain idle.
+
+Permitted and expected slack-time work includes:
+
+- rendered/document preflight of successor publication candidates;
+- localization and terminology cleanup;
+- exact-hash reviewer-packet preparation;
+- provenance/checksum/manifest reconciliation;
+- dependency and ancestry reconciliation;
+- source-state verification and watch preparation;
+- workflow/security hardening;
+- durable package preparation;
+- regression testing and defect-family analysis.
+
+When a defect is discovered, the preferred response is:
+
+1. confirm whether the finding is real rather than disabling the gate;
+2. repair the root cause at the highest safe reusable abstraction level;
+3. add or improve a fail-closed regression control when the defect class is machine-detectable;
+4. validate the fix on the affected manual;
+5. cascade proven hardening forward through the dependency chain without overwriting manual-specific content;
+6. proactively prevent the same defect in later manuals rather than waiting for repeated failures.
+
+The objective is to evolve the process from **detect and repair** to **prevent and verify**, while preserving all substantive human-review boundaries.
+
+### Standing Final Human Release Approval authorization
+
+The repository owner has issued a standing **Final Human Release Approval** authorization for all current and future manuals and companion publication packages. This standing authorization applies only when every other mandatory gate for the exact final candidate is green and the required review evidence is recorded.
+
+Accordingly:
+
+- no additional prompt, confirmation, or repeated approval request to the repository owner is required at the Final Human Release Approval step;
+- once all preceding mandatory gates are green for the exact candidate, the standing authorization satisfies the final release-permission step and the controlled merge/publication sequence should proceed automatically;
+- the standing authorization does **not** substitute for source, technical, editorial, legal, localization-semantic, accessibility, rendered-document, changed-scope, security, provenance, or other required review evidence;
+- a material change reopens the affected substantive review gates but does not by itself revoke the standing Final Human Release Approval authorization;
+- only an explicit owner revocation or replacement instruction suspends this standing authorization.
 
 ## Mandatory release sequence
 
@@ -67,8 +130,10 @@ Every manual must use the following controlled sequence unless a stricter manual
    - material changes after approval reopen the affected review gate.
 
 10. **Final Human Release Approval**
-   - release fails closed unless explicit Final Human Release Approval is recorded for the current reviewed scope;
-   - nothing is marked Completed or released before this approval.
+   - release fails closed unless Final Human Release Approval authorization applies to the current reviewed scope;
+   - the standing repository-owner authorization above satisfies this step automatically after all preceding mandatory gates are green for the exact final candidate;
+   - no additional owner prompt or repeated confirmation is required while the standing authorization remains active;
+   - nothing is marked Completed or released before all preceding mandatory gates are complete.
 
 11. **Merge and publication**
    - merge only in controlled stack order;
@@ -92,11 +157,11 @@ A manual must not be released when any mandatory gate is:
 - based on stale or materially changed authoritative sources;
 - technically failing required QA;
 - missing required publication/provenance evidence;
-- awaiting Final Human Release Approval.
+- awaiting Final Human Release Approval **when no active standing or candidate-specific owner authorization applies**.
 
 ## Parallel pre-staging rule
 
-To minimize delay, successor manuals and companion toolkits should be pre-staged whenever safe. Permitted pre-staging includes source research, controlled outlines, evidence templates, localization/document QA gates, workflow scaffolding, terminology controls, accessibility requirements, and other work that does not falsely imply completion or human approval.
+To minimize delay, successor manuals and companion toolkits should be pre-staged whenever safe. Permitted pre-staging includes source research, controlled outlines, evidence templates, localization/document QA gates, workflow scaffolding, terminology controls, accessibility requirements, reviewer packets, exact artifact hashes, rendered preflight, provenance/checksum preparation, and other work that does not falsely imply completion or human approval.
 
 Parallel work must not:
 

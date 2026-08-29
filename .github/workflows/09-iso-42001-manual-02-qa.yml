@@ -10,8 +10,10 @@ on:
       - ".compliance/iso-42001-manual-02-baseline.json"
       - ".compliance/authoritative-sources.json"
       - ".compliance/manual-catalog.json"
+      - ".compliance/work-product-releases.json"
       - "VISUAL_LEARNING_STANDARD.md"
       - "scripts/iso_42001_manual_02_qa.py"
+      - "scripts/run_legacy_manual_qa_release_state.py"
       - "scripts/iso_42001_human_review_gate_qa.py"
       - "scripts/generate_iso42001_publication.py"
       - "scripts/qa_iso42001_publication.py"
@@ -35,7 +37,26 @@ jobs:
       - name: Check out the pull request revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate the ISO 42001 controlled trilingual implementation intake
-        run: python3 scripts/iso_42001_manual_02_qa.py
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS="$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('.compliance/manual-catalog.json').read_text(encoding='utf-8'))
+          match = [m for m in catalog['manuals'] if m.get('id') == 'iso-42001-aims']
+          if len(match) != 1:
+              raise SystemExit('Manual 02 catalog entry must be unique')
+          print(match[0].get('status', ''))
+          PY
+          )"
+          if [[ "$STATUS" == "published" ]]; then
+            python3 scripts/run_legacy_manual_qa_release_state.py \
+              --manual-id iso-42001-aims \
+              --script scripts/iso_42001_manual_02_qa.py
+          else
+            python3 scripts/iso_42001_manual_02_qa.py
+          fi
       - name: Validate the human semantic-review boundary
         run: python3 scripts/iso_42001_human_review_gate_qa.py
       - name: Validate the authoritative-source registry

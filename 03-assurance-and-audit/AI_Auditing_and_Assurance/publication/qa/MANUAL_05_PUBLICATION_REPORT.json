@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 05 - AI Auditing and Assurance",
+  "source_head": "d42b12447646993c54caade2b399efd4fb37f8d9",
+  "source_branch": "build/ai-auditing-assurance-manual-05-2026",
+  "controlled_baseline": "ISO/NIST assurance baseline with ISACA AAIA professional-practice alignment",
+  "assurance_boundary": "Publication QA does not establish independence, competence, sufficient appropriate evidence, legal compliance, certification, conformity, or an audit opinion.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/English/source/01_FOUNDATIONS_CHAPTERS_01_08.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/English/source/02_FIELDWORK_CHAPTERS_09_16.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/English/source/03_FINDINGS_CHAPTERS_17_24.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/English/source/04_CLOSURE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "03-assurance-and-audit/AI_Auditing_and_Assurance/MANUAL_05_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_EN.docx",
+          "bytes": 189067,
+          "paragraphs": 241,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 23890,
+          "source_completeness_floor_chars": 18679,
+          "sha256": "6e7d6663ddd759b498d12bd49606bda2f4694afe02b866484563f010dd54744e",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_EN.pdf",
+          "bytes": 330615,
+          "pages": 14,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 05 - AI Auditing and Assurance",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 05 controlled publication-QA artifact; language en; source head d42b12447646993c54caade2b399efd4fb37f8d9",
+            "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829145908Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "85cc051d4888c0672e17877fab9972bcce26f06cb658159eb21565f6608a12e1",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Spanish_es-419/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Spanish_es-419/source/02_TRABAJO_DE_CAMPO_CAPITULOS_09_16.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Spanish_es-419/source/03_HALLAZGOS_CAPITULOS_17_24.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Spanish_es-419/source/04_CIERRE_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "03-assurance-and-audit/AI_Auditing_and_Assurance/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_05.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_ES-419.docx",
+          "bytes": 198765,
+          "paragraphs": 241,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 27506,
+          "source_completeness_floor_chars": 21484,
+          "sha256": "911aeea6872c1b24e35fcb83273c5e3aeaf20e37c9828fe977d65b3b448b65db",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_ES-419.pdf",
+          "bytes": 368973,
+          "pages": 14,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 05 - Auditoría y Aseguramiento de IA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Artefacto controlado de QA de publicación del Manual 05; idioma es-419; revisión de fuente d42b12447646993c54caade2b399efd4fb37f8d9",
+            "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829145910Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "b6ef241df607a97409cbe670e7b15d23ccdbf8d11e9f9cec99b300d09c7d26b7",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Portuguese_pt-BR/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Portuguese_pt-BR/source/02_TRABALHO_DE_CAMPO_CAPITULOS_09_16.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Portuguese_pt-BR/source/03_ACHADOS_CAPITULOS_17_24.md",
+        "03-assurance-and-audit/AI_Auditing_and_Assurance/Portuguese_pt-BR/source/04_ENCERRAMENTO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "03-assurance-and-audit/AI_Auditing_and_Assurance/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_05.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_PT-BR.docx",
+          "bytes": 197629,
+          "paragraphs": 241,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 26921,
+          "source_completeness_floor_chars": 21012,
+          "sha256": "e2f490631a20bf9905ec6f27df1a806a309f80f7e77691c5219c53f5e8e38703",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_05_AI_Auditing_and_Assurance_PT-BR.pdf",
+          "bytes": 369888,
+          "pages": 14,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 05 - Auditoria e Asseguração de IA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Artefato controlado de QA de publicação do Manual 05; idioma pt-BR; revisão da fonte d42b12447646993c54caade2b399efd4fb37f8d9",
+            "keywords": "AI, audit, AI, assurance, ISACA, AAIA, ISO, 42001, ISO, 19011, ISO, 42006, NIST, AI, RMF, NIST, AI, 600-1",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829145913Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "bbc85e98c48857f4b1507fcf539c47093455b3c3bab0d294940900ac7bc1450f",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

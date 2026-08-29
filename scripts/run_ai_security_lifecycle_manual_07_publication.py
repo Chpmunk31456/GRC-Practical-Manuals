@@ -7,6 +7,14 @@ semantic, accessibility, provenance, security, and human approval controls.
 from __future__ import annotations
 
 import generate_ai_security_lifecycle_manual_07_publication as manual07
+import generate_hipaa_implementation_manual_06_publication as hipaa06
+
+
+FIGURE_CAPTIONS = {
+    "en": "Figure {number}. Implementation memory graphic",
+    "es-419": "Figura {number}. Gráfico de memoria de implementación",
+    "pt-BR": "Figura {number}. Gráfico de memória de implementação",
+}
 
 
 def find_localized_chapters(language: str):
@@ -28,12 +36,7 @@ def find_localized_chapters(language: str):
 
 
 def inspect_pdf(path, render_dir):
-    """Manual 07 PDF inspection with content-based checks and a realistic page floor.
-
-    Manual 07 is intentionally more compact than Manual 03. Eight pages is the
-    structural floor; chapter completeness is independently enforced in DOCX QA,
-    and every PDF page must still contain meaningful extractable text and render.
-    """
+    """Manual 07 PDF inspection with content-based checks and a realistic page floor."""
     pdf = manual07.core.fitz.open(path)
     if pdf.page_count < 8:
         raise ValueError(f"PDF page count unexpectedly small ({pdf.page_count}): {path}")
@@ -70,8 +73,42 @@ def inspect_pdf(path, render_dir):
     return result, page_rows
 
 
+# Manual 06 retains the raw Manual 03 renderer and alt-text helper before any
+# manual-specific relabeling wrapper. Bind Manual 07 directly to those raw
+# helpers so image titles cannot inherit a Manual 03/06 label.
+manual07._base_render = hipaa06._base_render
+manual07._base_alt = hipaa06._base_alt
+
+_base_build_docx = manual07.build_docx
+
+
+def build_docx(source, out_path, image_dir, source_head):
+    """Generate with the controlled Manual 07 adapter, then localize inherited captions."""
+    count = _base_build_docx(source, out_path, image_dir, source_head)
+    doc = manual07.Document(out_path)
+    template = FIGURE_CAPTIONS[source.language]
+    changed = False
+    for paragraph in doc.paragraphs:
+        text = paragraph.text.strip()
+        if not text.startswith("Figure ") or "Implementation memory graphic" not in text:
+            continue
+        number = text.split(".", 1)[0].split()[-1]
+        paragraph.text = template.format(number=number)
+        paragraph.alignment = manual07.WD_ALIGN_PARAGRAPH.CENTER
+        manual07.core.set_paragraph_keep(paragraph, keep_next=True)
+        for run in paragraph.runs:
+            manual07.core.set_run_font(run, source.language)
+        changed = True
+    if changed:
+        doc.save(out_path)
+    return count
+
+
+manual07.find_localized_chapters = find_localized_chapters
 manual07.base.find_localized_chapters = find_localized_chapters
 manual07.core.find_localized_chapters = find_localized_chapters
+manual07.build_docx = build_docx
+manual07.core.build_docx = build_docx
 manual07.core.inspect_pdf = inspect_pdf
 
 if __name__ == "__main__":

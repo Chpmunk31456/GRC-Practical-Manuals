@@ -34,7 +34,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | RMF authorization and human decision boundaries retained.",
         "boundary": "Assurance boundary: This manual operationalizes NIST RMF and SP 800-53 concepts but does not authorize a system, create NIST certification, prove control effectiveness, establish legal compliance, or replace an accountable authorizing official or competent assessor. Tailoring, assessment, authorization, exceptions, residual risk, and material decisions require accountable human judgment.",
         "figure_title": "Manual 10 memory graphic",
         "figure_caption": "Figure {number}. RMF implementation memory graphic",
@@ -46,7 +46,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites de autorización RMF y de decisión humana.",
         "boundary": "Límite de aseguramiento: Este manual operacionaliza conceptos de NIST RMF y SP 800-53, pero no autoriza un sistema, no crea certificación NIST, no demuestra efectividad de controles, no establece cumplimiento legal ni sustituye a una autoridad de autorización responsable o a un evaluador competente. La adaptación, evaluación, autorización, excepciones, riesgo residual y decisiones materiales requieren juicio humano responsable.",
         "figure_title": "Gráfico de memoria del Manual 10",
         "figure_caption": "Figura {number}. Gráfico de memoria de implementación RMF",
@@ -58,7 +58,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites de autorização RMF e de decisão humana mantidos.",
         "boundary": "Limite de asseguração: Este manual operacionaliza conceitos do NIST RMF e SP 800-53, mas não autoriza um sistema, não cria certificação NIST, não comprova efetividade de controles, não estabelece conformidade legal nem substitui uma autoridade de autorização responsável ou um avaliador competente. Tailoring, avaliação, autorização, exceções, risco residual e decisões materiais exigem julgamento humano responsável.",
         "figure_title": "Gráfico de memória do Manual 10",
         "figure_caption": "Figura {number}. Gráfico de memória de implementação RMF",
@@ -182,7 +182,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     subtitle = doc.add_paragraph(); subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = subtitle.add_run(meta["status"]); core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph(); control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | RMF authorization and human decision boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph(); run = boundary.add_run(meta["boundary"]); core.set_run_font(run, language, size=9, bold=True)
 

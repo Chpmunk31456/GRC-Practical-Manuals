@@ -33,7 +33,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation and security paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | authorization and stop/rollback boundaries retained.",
         "boundary": "Security and assurance boundary: This educational manual does not prove an AI system secure, safe, compliant, certified, conformant, or free from exploitable weaknesses. Authorization, least privilege, stop/rollback, incident response, supplier risk, and evidence decisions require accountable human judgment.",
         "figure_title": "Manual 07 memory graphic",
     },
@@ -44,7 +44,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación y seguridad",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites de autorización y parada/reversión.",
         "boundary": "Límite de seguridad y aseguramiento: Este manual educativo no demuestra que un sistema de IA sea seguro, conforme, certificado ni libre de vulnerabilidades explotables. Las decisiones sobre autorización, mínimo privilegio, parada/reversión, respuesta a incidentes, riesgo de proveedores y evidencia requieren juicio humano responsable.",
         "figure_title": "Gráfico de memoria del Manual 07",
     },
@@ -55,7 +55,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação e segurança",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites de autorização e parada/reversão mantidos.",
         "boundary": "Limite de segurança e asseguração: Este manual educacional não demonstra que um sistema de IA seja seguro, conforme, certificado ou livre de vulnerabilidades exploráveis. Decisões sobre autorização, privilégio mínimo, parada/reversão, resposta a incidentes, risco de fornecedores e evidências exigem julgamento humano responsável.",
         "figure_title": "Gráfico de memória do Manual 07",
     },
@@ -137,7 +137,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph()
     control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | authorization and stop/rollback boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph()
     run = boundary.add_run(meta["boundary"])

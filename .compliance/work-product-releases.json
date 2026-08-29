@@ -17,8 +17,8 @@
     {
       "id": "nist-ai-rmf-1-0",
       "type": "manual",
-      "release_state": "blocked-publication-package",
-      "release_evidence": "PR #90 merged, but repository reconciliation on 2026-08-26 found no committed DOCX/PDF publication package on main; publication state is blocked until regenerated and revalidated"
+      "release_state": "human-review-pending",
+      "release_evidence": "Durable trilingual DOCX/PDF package is committed on PR #124 with publication report, page QA, SHA-256 evidence, corrected localized generator-owned captions/boilerplate, and green structure/parity/release-package/publication/workflow-security machine controls. Publication remains fail-closed pending competent es-419 and pt-BR semantic/terminology review, human rendered accessibility/visual review, human changed-scope review, and exact-final reconciliation. Standing Final Human Release Approval is already recorded and applies automatically after those gates close."
     }
   ]
 }

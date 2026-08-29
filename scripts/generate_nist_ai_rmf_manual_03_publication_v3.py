@@ -93,7 +93,7 @@ def _localize_generated_docx(path, language: str, source_head: str):
             paragraph.alignment = base.WD_ALIGN_PARAGRAPH.CENTER
             title_done = True
             continue
-        if not status_done and "PUBLICATION QA" in text.upper():
+        if not status_done and text == base.LANG_META[language]["status"]:
             _replace_paragraph(paragraph, meta["status"], language)
             paragraph.alignment = base.WD_ALIGN_PARAGRAPH.CENTER
             status_done = True

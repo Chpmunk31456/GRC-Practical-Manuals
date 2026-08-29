@@ -31,7 +31,7 @@ Adicione:
 - mapas de fluxo de dados e relações sistema-finalidade;
 - registros de decisões sobre base legal e interesse legítimo;
 - controles para categorias especiais de dados e dados de crianças quando aplicável;
-- gates de privacidade desde a concepção no ciclo de vida de produtos/projetos;
+- pontos de controle de privacidade desde a concepção no ciclo de vida de produtos/projetos;
 - metodologia de AIPD/DPIA, instância de revisão e acompanhamento de remediação;
 - métricas e revisão de qualidade das solicitações de direitos;
 - due diligence e monitoramento de operadores/suboperadores;
@@ -61,7 +61,7 @@ Adicione:
 - asseguração independente e relatórios executivos;
 - crosswalks com ISO/IEC 27701, NIST Privacy Framework, ISO/IEC 27001, regulamentações setoriais e políticas organizacionais quando útil.
 
-## Ciclo operacional de sete gates
+## Ciclo operacional de sete pontos de controle
 
 ```mermaid
 flowchart LR
@@ -73,7 +73,7 @@ flowchart LR
   F --> G["Assegurar e melhorar"]
 ```
 
-**Explicação acessível:** A implementação do RGPD avança da análise de aplicabilidade e papéis para finalidade, base legal e transparência; risco de privacidade e design; controles operacionais; tratamento de direitos, violações e transferências; e finalmente asseguração e melhoria. Um defeito material em um gate anterior deve ser corrigido antes de se confiar em evidências de etapas posteriores.
+**Explicação acessível:** A implementação do RGPD avança da análise de aplicabilidade e papéis para finalidade, base legal e transparência; risco de privacidade e design; controles operacionais; tratamento de direitos, violações e transferências; e finalmente asseguração e melhoria. Um defeito material em um ponto de controle anterior deve ser corrigido antes de se confiar em evidências de etapas posteriores.
 
 ## Ciclo de responsabilidade e evidência
 
@@ -106,4 +106,4 @@ flowchart TD
 
 ## Limite de liberação fail-closed
 
-Verificações automatizadas podem confirmar a existência de campos obrigatórios, etapas de fluxo, rótulos de estado de fontes, arquivos e relações de evidência. Elas não podem determinar suficiência jurídica nem tomar automaticamente decisões específicas de uma organização sob o RGPD. A revisão humana competente de privacidade/jurídica permanece obrigatória. A autorização final de liberação do proprietário aplica-se conforme o procedimento de autorização permanente do repositório quando todos os gates substantivos anteriores estiverem verdes.
+Verificações automatizadas podem confirmar a existência de campos obrigatórios, etapas de fluxo, rótulos de estado de fontes, arquivos e relações de evidência. Elas não podem determinar suficiência jurídica nem tomar automaticamente decisões específicas de uma organização sob o RGPD. A revisão humana competente de privacidade/jurídica permanece obrigatória. A autorização final de liberação do proprietário aplica-se conforme o procedimento de autorização permanente do repositório quando todos os pontos de controle substantivos anteriores estiverem verdes.

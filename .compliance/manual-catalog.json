@@ -129,8 +129,8 @@
       "id": "ai-auditing-assurance",
       "title": "Manual 05 — AI Auditing and Assurance",
       "path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 5
     },

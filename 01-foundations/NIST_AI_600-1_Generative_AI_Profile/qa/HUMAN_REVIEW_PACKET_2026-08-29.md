@@ -2,8 +2,8 @@
 
 **Manual:** NIST AI 600-1 Generative AI Profile Implementation  
 **Purpose:** Pre-stage the substantive human review boundary while Manual 03 remains the front-of-line publication target.  
-**Controlled publication source head recorded by package:** `691c1aa5d01ef7395793be10195095551ace43a8`  
-**Preparation branch:** `release/manual04-human-review-prep-2026-08-29`
+**Corrected durable publication source head recorded by package:** `2b1e27f06c1f35ff2b95b8b528a30aae4682bd5d`  
+**Current repair branch:** `repair/manual04-05-localization-preflight-2026-08-29`
 
 ## Control boundary
 
@@ -11,30 +11,41 @@ This packet does not make Manual 04 publication-eligible and does not replace co
 
 Standing Final Human Release Approval is already recorded for the manual series. No additional owner approval prompt is required after all substantive gates and exact-final reconciliation are green.
 
-## Durable publication artifacts already present on `main`
+## Preflight defects remediated before human review
+
+Rendered/text preflight identified and corrected generator-owned defects before this packet was finalized:
+
+- duplicate footer text caused by linked Word section footers;
+- English footer status text remaining in the `es-419` and `pt-BR` PDFs.
+
+The generator now creates the footer idempotently, localizes the footer status, and Workflow 22 fails closed on localized publication regressions including stale English boilerplate/captions, wrong-manual alt-text inheritance, and duplicate footer text.
+
+The hashes below supersede all earlier Manual 04 review-packet hashes.
+
+## Exact durable publication artifacts to review
 
 ### English controlled edition
 
 - DOCX: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.docx`
-  - SHA-256: `83dfd0c6cbfc405d119d875da4d8bb71773b4d3beb3d4baf8bac79bc44b03f3d`
+  - SHA-256: `9956abd742ee229b1adc4148ceab98e64aeee5ca89bf9d62455d62ac202bf116`
 - PDF: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.pdf`
-  - SHA-256: `a42fe4029aa65b1d5fc3f72e2690790fb359ec5615e0e882a43bea4286ea9177`
+  - SHA-256: `cf5f4469e18dfe13dfdd327fc07c0a6c971160bf0c3b51e93f742177af1ba209`
   - Pages: 15
 
 ### Spanish (`es-419`) controlled localization candidate
 
 - DOCX: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.docx`
-  - SHA-256: `028a543729cb42188481fda3414ea25bcf0ef10d5306ef56bdce58d7e27e2193`
+  - SHA-256: `84d62af90ddc6766639e6a4aebdb81b1ce484b8a43adf3c1bd21666053ccfa95`
 - PDF: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.pdf`
-  - SHA-256: `9b4d56fafebc1432a1e43f3971df209c7b3b3137622b64d85b3b8ab15289aa64`
+  - SHA-256: `d67fc8a14e6ee182db998dcc50aef7507e51f64bbb8d39bed3f5a0402e4d0d03`
   - Pages: 15
 
 ### Brazilian Portuguese (`pt-BR`) controlled localization candidate
 
 - DOCX: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.docx`
-  - SHA-256: `f23ccb0abd823a6aec364c3b252aede501e3a84aeef296ebb8be51fc36158340`
+  - SHA-256: `5fe3e4b08555c01e4e677f85c11c7e3fac82bb4fc44b94382593c0179a4dc339`
 - PDF: `publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.pdf`
-  - SHA-256: `5247e98a9a33c00b43bc6feb6a7ebc6893f5e2505337de72cafd4a6ff63b5d73`
+  - SHA-256: `0ea9a96b924fbcae0d870542a940efd2ab8140dfa0668202450663c59d7a6f86`
   - Pages: 15
 
 Supporting machine evidence:
@@ -45,6 +56,7 @@ Supporting machine evidence:
 - `qa/SOURCE_VERIFICATION_2026-08-25.md`
 - `qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md`
 - `qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md`
+- Workflow 22 localized-publication regression QA
 
 ## Gate A — `es-419` semantic / terminology review
 
@@ -100,7 +112,7 @@ Human reviewer must inspect all three final PDFs and DOCX behavior where relevan
 - document metadata/language presentation where visible;
 - practical reading sequence and usable reading order.
 
-Machine page QA is supporting evidence only.
+Machine page QA and regression QA are supporting evidence only.
 
 **Reviewer:** ____________________  
 **Date:** ____________________  
@@ -126,7 +138,7 @@ When Manual 04 becomes the front-of-line release candidate and Gates A–E are a
 
 1. regenerate only if remediation changed controlled content/artifacts;
 2. reconcile hashes/provenance after any regeneration;
-3. run exact-final Manual 04 QA, localization QA, document/publication QA, structure, trilingual parity, workflow security, release-package, and release-pipeline meta QA;
+3. run exact-final Manual 04 QA, localization QA, localized-publication regression QA, document/publication QA, structure, trilingual parity, workflow security, release-package, and release-pipeline meta QA;
 4. reconcile catalog and release registry to the exact final candidate;
 5. apply the standing Final Human Release Approval automatically;
-6. publish immediately when every mandatory gate is green.
+6. publish immediately when every mandatory gate is green and Manual 03 is already published.

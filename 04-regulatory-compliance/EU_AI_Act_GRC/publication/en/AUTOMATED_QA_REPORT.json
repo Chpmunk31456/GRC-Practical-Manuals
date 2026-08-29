@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "artifacts": {
+    "markdown": "/home/runner/work/_temp/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Master.md",
+    "manifest": "/home/runner/work/_temp/eu-ai-act/CANONICAL_BUILD_MANIFEST.json",
+    "docx": "/home/runner/work/_temp/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx",
+    "pdf": "/home/runner/work/_temp/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf"
+  }
+}

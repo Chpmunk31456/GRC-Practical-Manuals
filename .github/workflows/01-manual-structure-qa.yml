@@ -15,6 +15,7 @@ on:
       - "08-templates-and-tools/**"
       - ".compliance/manual-catalog.json"
       - "scripts/compliance_qa.py"
+      - "scripts/compliance_qa_controlled_build.py"
       - ".github/workflows/01-manual-structure-qa.yml"
   workflow_dispatch:
 
@@ -33,6 +34,6 @@ jobs:
       - name: Check out the pull request revision
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Validate the controlled manual catalog
-        run: python3 scripts/compliance_qa.py catalog
+        run: python3 scripts/compliance_qa_controlled_build.py catalog
       - name: Validate repository and publication structure
-        run: python3 scripts/compliance_qa.py structure
+        run: python3 scripts/compliance_qa_controlled_build.py structure

@@ -18,6 +18,7 @@ on:
       - "LICENSE"
       - "README.md"
       - "scripts/compliance_qa.py"
+      - "scripts/compliance_qa_controlled_build.py"
       - "scripts/pdf_content_preflight.py"
       - "scripts/work_product_release_reconciliation.py"
       - ".github/workflows/**"
@@ -45,7 +46,7 @@ jobs:
       - name: Reconcile work-product release state
         run: python3 scripts/work_product_release_reconciliation.py
       - name: Run the complete release-readiness gate
-        run: python3 scripts/compliance_qa.py release --output "$RUNNER_TEMP/release-qa-report.json"
+        run: python3 scripts/compliance_qa_controlled_build.py release --output "$RUNNER_TEMP/release-qa-report.json"
       - name: Display the release QA report
         if: always()
         run: python3 -m json.tool "$RUNNER_TEMP/release-qa-report.json"

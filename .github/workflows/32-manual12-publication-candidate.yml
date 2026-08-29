@@ -3,7 +3,7 @@ name: "32 - Manual 12 Publication Candidate"
 on:
   pull_request:
     branches:
-      - "build/gdpr-manual-11-2026"
+      - "main"
     paths:
       - ".github/workflows/32-manual12-publication-candidate.yml"
       - "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/**"

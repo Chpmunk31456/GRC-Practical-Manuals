@@ -3,7 +3,7 @@ name: "31 - CCPA CPRA Manual 12 QA"
 on:
   pull_request:
     branches:
-      - "build/gdpr-manual-11-2026"
+      - "main"
     paths:
       - "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/**"
       - ".compliance/ccpa-cpra-manual-12-baseline.json"

@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 03 - NIST AI Risk Management Framework Implementation",
+  "source_head": "0c5e219dcca52266f6ea60d24fd16690df0de575",
+  "source_branch": "build/nist-ai-rmf-manual-03-2026",
+  "controlled_baseline": "NIST AI RMF 1.0 / NIST AI 100-1; NIST AI 600-1 when generative AI is in scope",
+  "assurance_boundary": "Publication QA does not establish legal compliance, certification, trustworthy-AI achievement, or an audit opinion.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "01-foundations/NIST_AI_RMF_1.0/English/source/01_PRELIMINARIES_CHAPTERS_01_08.md",
+        "01-foundations/NIST_AI_RMF_1.0/English/source/02_MAP_CHAPTERS_09_16.md",
+        "01-foundations/NIST_AI_RMF_1.0/English/source/03_MEASURE_CHAPTERS_17_24.md",
+        "01-foundations/NIST_AI_RMF_1.0/English/source/04_MANAGE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_AI_RMF_1.0/MANUAL_03_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 15,
+      "artifacts": {
+        "graphics": 15,
+        "docx": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_EN.docx",
+          "bytes": 793061,
+          "paragraphs": 1219,
+          "tables": 12,
+          "inline_shapes": 15,
+          "alt_text_entries": 15,
+          "chapter_count": 32,
+          "sha256": "3a9c588d8a06cf1fbc56df9dccbf318891450d7b83a722ccdbaa878041ce5370",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_EN.pdf",
+          "bytes": 2544634,
+          "pages": 47,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 03 - NIST AI Risk Management Framework Implementation",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 03 controlled publication-QA artifact; language en; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829121925Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "d6d17e92108b9374270faf34d970594b81059e928ee605c194ecf76071c10603",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "01-foundations/NIST_AI_RMF_1.0/translations/es-419/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+        "01-foundations/NIST_AI_RMF_1.0/translations/es-419/source/02_MAP_CAPITULOS_09_16.md",
+        "01-foundations/NIST_AI_RMF_1.0/es-419/source/03_MEASURE_CHAPTERS_17_24.md",
+        "01-foundations/NIST_AI_RMF_1.0/es-419/source/04_MANAGE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_AI_RMF_1.0/translations/es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_03.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 15,
+      "artifacts": {
+        "graphics": 15,
+        "docx": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_ES-419.docx",
+          "bytes": 859532,
+          "paragraphs": 1219,
+          "tables": 12,
+          "inline_shapes": 15,
+          "alt_text_entries": 15,
+          "chapter_count": 32,
+          "sha256": "84d92ca2136b057f9033f9ae5abcce46c739101c437f320fb64b335b68b86bd1",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_ES-419.pdf",
+          "bytes": 2812469,
+          "pages": 48,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 03 - Implementacion del Marco de Gestion de Riesgos de IA de NIST",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 03 controlled publication-QA artifact; language es-419; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829121935Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "d95ac0140fe72073f0ad49e97bf57aa7dbe6123c8705d8e9d7daa83a1456b37e",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "01-foundations/NIST_AI_RMF_1.0/translations/pt-BR/source/01_PRELIMINARES_CAPITULOS_01_08.md",
+        "01-foundations/NIST_AI_RMF_1.0/translations/pt-BR/source/02_MAP_CAPITULOS_09_16.md",
+        "01-foundations/NIST_AI_RMF_1.0/pt-BR/source/03_MEASURE_CHAPTERS_17_24.md",
+        "01-foundations/NIST_AI_RMF_1.0/pt-BR/source/04_MANAGE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "01-foundations/NIST_AI_RMF_1.0/translations/pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_03.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 15,
+      "artifacts": {
+        "graphics": 15,
+        "docx": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx",
+          "bytes": 844650,
+          "paragraphs": 1219,
+          "tables": 12,
+          "inline_shapes": 15,
+          "alt_text_entries": 15,
+          "chapter_count": 32,
+          "sha256": "caad011fc8f2e60b4b09a0097b5161b8c41ed367eb470f7b169c8c16ed64779d",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf",
+          "bytes": 2807330,
+          "pages": 48,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 03 - Implementacao do NIST AI Risk Management Framework",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 03 controlled publication-QA artifact; language pt-BR; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829121946Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "f6f87a258d7ce1e46783c55e412485eea210ffe87db84378fb1c4d14794bc486",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

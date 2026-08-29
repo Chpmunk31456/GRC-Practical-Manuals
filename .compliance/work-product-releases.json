@@ -17,8 +17,8 @@
     {
       "id": "nist-ai-rmf-1-0",
       "type": "manual",
-      "release_state": "human-review-pending",
-      "release_evidence": "Durable trilingual DOCX/PDF package is committed on PR #124 with publication report, page QA, SHA-256 evidence, corrected localized generator-owned captions/boilerplate, and green structure/parity/release-package/publication/workflow-security machine controls. Publication remains fail-closed pending competent es-419 and pt-BR semantic/terminology review, human rendered accessibility/visual review, human changed-scope review, and exact-final reconciliation. Standing Final Human Release Approval is already recorded and applies automatically after those gates close."
+      "release_state": "published",
+      "release_evidence": "Exact verified Manual 03 publication candidate at head 5d5fb95317254917b228774f315b6b3faead2802 passed structure, trilingual parity, release-package, workflow-security, Manual 03 publication-repair, NIST AI RMF QA, and release-pipeline checks; durable EN/es-419/pt-BR DOCX/PDF artifacts, page QA and SHA-256 provenance were merged to main through PR #148 after repairing the former Draft-state blocker. Standing human release approval applied under the repository-wide rule because verification was complete and no unresolved defects or material errors remained."
     }
   ]
 }

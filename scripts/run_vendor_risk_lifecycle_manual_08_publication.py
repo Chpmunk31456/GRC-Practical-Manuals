@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Safe runner for Manual 08 publication generation.
 
-Prevents inherited adapter recursion and stale upstream labels while preserving
-publication, semantic, accessibility, provenance, security, and human approval
-gates.
+Prevents inherited adapter recursion, stale upstream labels, and linked-section
+footer duplication while preserving fail-closed publication QA controls.
 """
 from __future__ import annotations
 
@@ -46,8 +45,21 @@ manual08._base_alt = hipaa06._base_alt
 _base_build_docx = manual08.build_docx
 
 
+def _rewrite_footer(section, language: str):
+    """Give each section one independent Manual 08 footer."""
+    section.footer.is_linked_to_previous = False
+    p = section.footer.paragraphs[0]
+    p.clear()
+    p.alignment = manual08.WD_ALIGN_PARAGRAPH.CENTER
+    run = p.add_run(f"Manual 08 | {manual08.LANG_META[language]['status']} | ")
+    manual08.core.set_run_font(run, language, size=8)
+    field = manual08.OxmlElement("w:fldSimple")
+    field.set(manual08.qn("w:instr"), "PAGE")
+    p._p.append(field)
+
+
 def build_docx(source, out_path, image_dir, source_head):
-    """Generate with Manual 08 controls, then localize inherited figure captions."""
+    """Generate with Manual 08 controls, then normalize captions and footers."""
     count = _base_build_docx(source, out_path, image_dir, source_head)
     doc = manual08.Document(out_path)
     template = FIGURE_CAPTIONS[source.language]
@@ -62,6 +74,9 @@ def build_docx(source, out_path, image_dir, source_head):
         manual08.core.set_paragraph_keep(paragraph, keep_next=True)
         for run in paragraph.runs:
             manual08.core.set_run_font(run, source.language)
+        changed = True
+    for section in doc.sections:
+        _rewrite_footer(section, source.language)
         changed = True
     if changed:
         doc.save(out_path)

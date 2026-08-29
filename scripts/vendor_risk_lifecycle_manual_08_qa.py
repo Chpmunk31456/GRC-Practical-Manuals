@@ -71,7 +71,7 @@ def main():
         chapters=chapter_numbers(text)
         if chapters != list(range(1,33)):
             errors.append(f'{lang} chapter sequence invalid: {chapters}')
-        if lang != 'en' and not re.search(r'(?i)(revisi[oó]n sem[aâ]ntica humana|revisão semântica humana)', text):
+        if lang != 'en' and not re.search(r'(?i)(revisi[oó]n sem[aáâ]ntica humana|revisão sem[aáâ]ntica humana)', text):
             errors.append(f'{lang} localization must retain explicit human semantic review boundary')
 
     if len(re.findall(r'(?ms)^```mermaid\s*\n.*?^```\s*$', entry)) != 3: errors.append('expected exactly three Mermaid graphics')

@@ -34,7 +34,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | CSF outcome and human decision boundaries retained.",
         "boundary": "Assurance boundary: This manual operationalizes NIST CSF 2.0 outcomes but does not create NIST certification, guarantee cybersecurity effectiveness, establish legal compliance, or prove that one control set is universally sufficient. Profiles, Tiers, exceptions, residual risk, and material decisions require accountable human judgment.",
         "figure_title": "Manual 09 memory graphic",
         "figure_caption": "Figure {number}. Implementation memory graphic",
@@ -46,7 +46,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites de resultados del CSF y de decisión humana.",
         "boundary": "Límite de aseguramiento: Este manual operacionaliza resultados de NIST CSF 2.0, pero no crea certificación NIST, no garantiza efectividad de ciberseguridad, no establece cumplimiento legal ni demuestra que un conjunto de controles sea universalmente suficiente. Perfiles, Niveles, excepciones, riesgo residual y decisiones materiales requieren juicio humano responsable.",
         "figure_title": "Gráfico de memoria del Manual 09",
         "figure_caption": "Figura {number}. Gráfico de memoria de implementación",
@@ -58,7 +58,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites de resultados do CSF e de decisão humana mantidos.",
         "boundary": "Limite de asseguração: Este manual operacionaliza resultados do NIST CSF 2.0, mas não cria certificação NIST, não garante efetividade de cibersegurança, não estabelece conformidade legal nem prova que um conjunto de controles seja universalmente suficiente. Perfis, Tiers, exceções, risco residual e decisões materiais exigem julgamento humano responsável.",
         "figure_title": "Gráfico de memória do Manual 09",
         "figure_caption": "Figura {number}. Gráfico de memória de implementação",
@@ -125,8 +125,6 @@ def add_footer(section, language: str):
     p._p.append(field)
 
 
-# Use the underlying raw renderer/alt-text helper retained by the Manual 07
-# adapter, not its Manual-07 relabeling wrapper.
 _base_render = base._base_render
 _base_alt = base._base_alt
 
@@ -145,7 +143,6 @@ def set_image_alt_text(inline_shape, title: str, description: str):
 
 
 def localize_figure_captions(doc: Document, language: str) -> None:
-    """Replace inherited English implementation captions with the edition locale."""
     template = LANG_META[language]["figure_caption"]
     for paragraph in doc.paragraphs:
         text = paragraph.text.strip()
@@ -177,7 +174,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     subtitle = doc.add_paragraph(); subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = subtitle.add_run(meta["status"]); core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph(); control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | CSF outcome and human decision boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph(); run = boundary.add_run(meta["boundary"]); core.set_run_font(run, language, size=9, bold=True)
 

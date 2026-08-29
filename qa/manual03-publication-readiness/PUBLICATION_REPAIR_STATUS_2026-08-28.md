@@ -21,13 +21,9 @@ The generated package reported PASS for all six publication artifacts. Independe
 
 ## Visual defect found and remediated in this branch
 
-Full-size rendered review identified crowding/overlap in the three route labels in Manual 03 Figure 1. The Mermaid labels were shortened without changing the routing semantics:
+Full-size rendered review identified crowding/overlap in the three fan-out route labels in Manual 03 Figure 1. The controlled English, `es-419`, and `pt-BR` source wording is preserved unchanged. The shared semantic graph renderer was corrected instead so parallel fan-out edges receive staggered routing lanes and wrapped labels on opaque backgrounds.
 
-- `Low and bounded` -> `Low / bounded`
-- `Moderate, cross-functional or customer-facing` -> `Moderate / cross-functional`
-- `High impact, regulated, safety-sensitive, large-scale or complex` -> `High-impact / regulated / complex`
-
-The accessible explanation and controlled prose retain the full substantive criteria. The publication workflow must regenerate the complete trilingual package at this branch head and visual review must confirm the defect is closed.
+This renderer-level remediation avoids changing substantive routing criteria merely to fit the graphic and applies consistently to all three language editions. The publication workflow must regenerate the complete trilingual package at the exact branch head, and rendered review must confirm the overlap is closed.
 
 ## Remaining fail-closed human gates
 

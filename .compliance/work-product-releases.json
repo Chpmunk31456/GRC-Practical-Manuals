@@ -25,6 +25,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after fixing duplicate/localized footer defects; exact-head Manual 04 publication candidate, localization, structure, trilingual parity, release-package, workflow-security, dedicated Manual 04 QA, and release-pipeline meta checks passed. Current main retains the corrected artifact package and SHA-256 evidence. Workflow 12 was additionally hardened before release to remain fail-closed across the development-to-published lifecycle. Standing human release approval applied because required verification was complete and no unresolved defects or material errors remained."
+    },
+    {
+      "id": "ai-auditing-assurance",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after localized figure-caption, control-line, and metadata defects were repaired; exact-head Manual 05 publication candidate, dedicated Manual 05 QA, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed. Current main retains the corrected package and SHA-256 evidence. Workflow 13 is lifecycle-aware so its legacy controlled-intake validator remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."
     }
   ]
 }

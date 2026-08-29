@@ -1,5 +1,6 @@
 name: "12 - NIST AI 600-1 Manual 04 QA"
 
+# Lifecycle-aware validation preserves the legacy integrity gate after publication.
 on:
   pull_request:
     branches:

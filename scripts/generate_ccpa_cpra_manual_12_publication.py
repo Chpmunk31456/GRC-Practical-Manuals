@@ -34,7 +34,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | California privacy legal and phased-date boundaries retained.",
         "boundary": "Legal and assurance boundary: This manual operationalizes California privacy practices but does not provide organization-specific legal advice, determine applicability or exemptions, establish risk-assessment sufficiency, decide cybersecurity-audit scope, determine ADMT coverage, establish liability, or guarantee CCPA/CPRA compliance. Current and phased obligations must be applied according to their effective dates and competent human legal/privacy judgment.",
         "figure_title": "Manual 12 memory graphic",
         "figure_caption": "Figure {number}. California privacy implementation memory graphic",
@@ -46,7 +46,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites jurídicos de privacidad de California y las fechas de cumplimiento escalonadas.",
         "boundary": "Límite jurídico y de aseguramiento: Este manual operacionaliza prácticas de privacidad de California, pero no proporciona asesoría jurídica específica para una organización, no determina aplicabilidad o exenciones, no establece suficiencia de evaluaciones de riesgo, no decide alcance de auditorías de ciberseguridad, no determina cobertura ADMT, no establece responsabilidad ni garantiza cumplimiento de CCPA/CPRA. Las obligaciones vigentes y escalonadas deben aplicarse según sus fechas efectivas y con juicio humano jurídico/de privacidad competente.",
         "figure_title": "Gráfico de memoria del Manual 12",
         "figure_caption": "Figura {number}. Gráfico de memoria de implementación de privacidad de California",
@@ -58,7 +58,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites jurídicos de privacidade da Califórnia e datas de conformidade escalonadas mantidos.",
         "boundary": "Limite jurídico e de asseguração: Este manual operacionaliza práticas de privacidade da Califórnia, mas não fornece aconselhamento jurídico específico para uma organização, não determina aplicabilidade ou isenções, não estabelece suficiência de avaliações de risco, não decide escopo de auditorias de cibersegurança, não determina cobertura ADMT, não estabelece responsabilidade nem garante conformidade com CCPA/CPRA. Obrigações vigentes e escalonadas devem ser aplicadas conforme suas datas de vigência e com julgamento humano jurídico/de privacidade competente.",
         "figure_title": "Gráfico de memória do Manual 12",
         "figure_caption": "Figura {number}. Gráfico de memória de implementação de privacidade da Califórnia",
@@ -180,7 +180,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     subtitle = doc.add_paragraph(); subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = subtitle.add_run(meta["status"]); core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph(); control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | California privacy legal and phased-date boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph(); run = boundary.add_run(meta["boundary"]); core.set_run_font(run, language, size=9, bold=True)
 

@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 11 - GDPR Privacy and Data Protection Controlled Implementation",
+  "source_head": "30410f7ba0ed3aa51b4d2ffd581fa51b05f90a28",
+  "source_branch": "build/gdpr-manual-11-2026",
+  "assurance_boundary": "Automated QA supports document integrity and review; it does not provide organization-specific legal advice, establish GDPR compliance, decide applicability/roles/lawful basis/DPIA/breach/transfer legality, or replace competent privacy/legal review.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/English/source/01_FOUNDATIONS_CHAPTERS_01_08.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/English/source/02_LAWFULNESS_RIGHTS_DESIGN_CHAPTERS_09_16.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/English/source/03_DPIA_SECURITY_BREACH_TRANSFERS_CHAPTERS_17_24.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/English/source/04_GOVERNANCE_ENFORCEMENT_EMERGING_TECH_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/GDPR_Controlled_Implementation/MANUAL_11_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_EN.docx",
+          "bytes": 159238,
+          "paragraphs": 167,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 19535,
+          "source_completeness_floor_chars": 14788,
+          "sha256": "a1e6f85e43dcb902094bff18659dfa42ef0bb8665059a67dae4c9dfad03ffc14",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_EN.pdf",
+          "bytes": 254549,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 11 - GDPR Privacy and Data Protection Controlled Implementation",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 11 controlled publication-QA artifact; language en; source head 30410f7ba0ed3aa51b4d2ffd581fa51b05f90a28",
+            "keywords": "GDPR, RGPD, privacy, data, protection, ROPA, DPIA, lawful, basis, rights, breach, processors, international, transfers, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829191944Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "2793115ba9dc8e9017b4fe548f8553090f493b1e186fb6f45bd7f523a7b357c4",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Spanish_es-419/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Spanish_es-419/source/02_LICITUD_DERECHOS_DISENO_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Spanish_es-419/source/03_EIPD_SEGURIDAD_BRECHAS_TRANSFERENCIAS_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Spanish_es-419/source/04_GOBIERNO_CUMPLIMIENTO_TECNOLOGIA_EMERGENTE_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/GDPR_Controlled_Implementation/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_11.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_ES-419.docx",
+          "bytes": 162092,
+          "paragraphs": 168,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 23695,
+          "source_completeness_floor_chars": 17644,
+          "sha256": "acc9915b132678a69e1a046640133a090780cbac72a8939203b967f91805c287",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_ES-419.pdf",
+          "bytes": 281158,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 11 - Implementación Controlada del RGPD para Privacidad y Protección de Datos",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 11 controlled publication-QA artifact; language es-419; source head 30410f7ba0ed3aa51b4d2ffd581fa51b05f90a28",
+            "keywords": "GDPR, RGPD, privacy, data, protection, ROPA, DPIA, lawful, basis, rights, breach, processors, international, transfers, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829191946Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "c1b294a4ddb812b66f46a0bd92cdd451b3363d07f872675d1f37097fe30b1544",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Portuguese_pt-BR/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Portuguese_pt-BR/source/02_LICITUDE_DIREITOS_DESIGN_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Portuguese_pt-BR/source/03_AIPD_SEGURANCA_VIOLACOES_TRANSFERENCIAS_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/GDPR_Controlled_Implementation/Portuguese_pt-BR/source/04_GOVERNANCA_FISCALIZACAO_TECNOLOGIA_EMERGENTE_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/GDPR_Controlled_Implementation/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_11.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_PT-BR.docx",
+          "bytes": 162307,
+          "paragraphs": 168,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 23020,
+          "source_completeness_floor_chars": 17065,
+          "sha256": "bafee731ac65962fdc914fc0d590e75d808e39d26a3e5df965e0560c0f1c1c08",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_11_GDPR_Privacy_Data_Protection_Controlled_Implementation_PT-BR.pdf",
+          "bytes": 279212,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 11 - Implementação Controlada do RGPD para Privacidade e Proteção de Dados",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 11 controlled publication-QA artifact; language pt-BR; source head 30410f7ba0ed3aa51b4d2ffd581fa51b05f90a28",
+            "keywords": "GDPR, RGPD, privacy, data, protection, ROPA, DPIA, lawful, basis, rights, breach, processors, international, transfers, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829191948Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "23ff4c30b24122369a8f698cf5c2c1f62c929cabdb115f03a7c94ef11a0e1485",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

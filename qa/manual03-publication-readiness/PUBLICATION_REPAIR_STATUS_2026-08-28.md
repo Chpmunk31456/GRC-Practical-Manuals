@@ -6,24 +6,28 @@
 
 Repair the missing committed publication-package condition recorded for Manual 03 and revalidate the exact release candidate without weakening semantic, accessibility, provenance, security, or Final Human Release Approval controls.
 
-## Evidence already obtained
+## Publication evidence
 
-A current controlled Manual 03 workflow run generated a complete isolated publication QA package containing:
+The controlled Manual 03 workflows generate a complete isolated trilingual publication QA package containing:
 
 - English DOCX and PDF;
 - Spanish (`es-419`) DOCX and PDF;
 - Brazilian Portuguese (`pt-BR`) DOCX and PDF;
 - 15 generated learning graphics per language (45 total);
-- page renders and contact sheets for all editions;
+- rendered-review/contact-sheet evidence;
 - publication report, page-QA CSV, and SHA-256 manifest.
 
-The generated package reported PASS for all six publication artifacts. Independent local verification also confirmed all six recorded SHA-256 values, zero findings from the DOCX accessibility audit for each edition, and openable/non-scanned PDFs with the expected 45/47/47 page counts.
+Exact artifact sizes, page counts, hashes, and source-head identity are recorded in each generated publication report and manifest rather than duplicated in this status file. This prevents stale evidence after a controlled repair commit.
 
-## Visual defect found and remediated in this branch
+## Visual defect found and remediated
 
-Full-size rendered review identified crowding/overlap in the three fan-out route labels in Manual 03 Figure 1. The controlled English, `es-419`, and `pt-BR` source wording is preserved unchanged. The shared semantic graph renderer was corrected instead so parallel fan-out edges receive staggered routing lanes and wrapped labels on opaque backgrounds.
+Full-size rendered review identified crowding/overlap in the three fan-out route labels in Manual 03 Figure 1. The controlled English, `es-419`, and `pt-BR` source wording remains unchanged. The shared semantic graph renderer was corrected so each fan-out label is centered in its destination node's horizontal slot, can wrap without truncation, and is drawn on an opaque background.
 
-This renderer-level remediation avoids changing substantive routing criteria merely to fit the graphic and applies consistently to all three language editions. The publication workflow must regenerate the complete trilingual package at the exact branch head, and rendered review must confirm the overlap is closed.
+This renderer-level remediation avoids changing substantive routing criteria merely to fit the graphic and applies consistently to all three language editions. Automated and AI-assisted rendered inspection may support the evidence package but does not substitute for the required human rendered-document review.
+
+## Durable publication-package gate
+
+The approved six DOCX/PDF publication artifacts must be durably placed under the controlled Manual 03 publication package and reconciled to the exact approved candidate before `release_state` can become `published`.
 
 ## Remaining fail-closed human gates
 

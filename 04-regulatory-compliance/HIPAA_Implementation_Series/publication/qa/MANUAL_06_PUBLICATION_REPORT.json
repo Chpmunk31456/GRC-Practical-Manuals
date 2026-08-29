@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 06 - HIPAA Implementation and Audit",
+  "source_head": "152d9d8520d40aab269e7760c73ea096e7ea90b6",
+  "source_branch": "build/hipaa-implementation-manual-06-2026",
+  "legal_boundary": "Current final HIPAA rules and official guidance are separated from proposed-rule readiness material. Automated QA does not determine legal status, compliance, or breach reportability.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "04-regulatory-compliance/HIPAA_Implementation_Series/English/source/01_FOUNDATIONS_CHAPTERS_01_08.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/English/source/02_SAFEGUARDS_CHAPTERS_09_16.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/English/source/03_INCIDENTS_AND_ASSURANCE_CHAPTERS_17_24.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/English/source/04_GOVERNANCE_AND_CLOSURE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/HIPAA_Implementation_Series/MANUAL_06_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_EN.docx",
+          "bytes": 177950,
+          "paragraphs": 163,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 22046,
+          "source_completeness_floor_chars": 17051,
+          "sha256": "301834fcd53ce9dceb3aa6276ba65266568264e5474a1afc06c77df5f09fd377",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_EN.pdf",
+          "bytes": 277477,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 06 - HIPAA Implementation and Audit",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 06 controlled publication-QA artifact; language en; source head 152d9d8520d40aab269e7760c73ea096e7ea90b6",
+            "keywords": "HIPAA, Privacy, Rule, Security, Rule, Breach, Notification, Rule, PHI, ePHI, audit, risk, analysis",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829124455Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "be7821666c7e675393d308f2f024fc2e9e775a7f6363f18fce71daee58d91097",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Spanish_es-419/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Spanish_es-419/source/02_SALVAGUARDAS_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Spanish_es-419/source/03_INCIDENTES_Y_ASEGURAMIENTO_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Spanish_es-419/source/04_GOBERNANZA_Y_CIERRE_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/HIPAA_Implementation_Series/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_06.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_ES-419.docx",
+          "bytes": 184770,
+          "paragraphs": 163,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 25359,
+          "source_completeness_floor_chars": 19644,
+          "sha256": "a20422b78b4267631a919c66d144ee4126b9d40d62829425d91b101e192076a0",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_ES-419.pdf",
+          "bytes": 305375,
+          "pages": 11,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 06 - Implementación y Auditoría de HIPAA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 06 controlled publication-QA artifact; language es-419; source head 152d9d8520d40aab269e7760c73ea096e7ea90b6",
+            "keywords": "HIPAA, Privacy, Rule, Security, Rule, Breach, Notification, Rule, PHI, ePHI, audit, risk, analysis",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829124457Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "fbd61f740a6d61e7ed7ed2ccfa61753a7d2a83be3428423588e7827fa4ebdc50",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Portuguese_pt-BR/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Portuguese_pt-BR/source/02_SALVAGUARDAS_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Portuguese_pt-BR/source/03_INCIDENTES_E_ASSEGURACAO_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/HIPAA_Implementation_Series/Portuguese_pt-BR/source/04_GOVERNANCA_E_ENCERRAMENTO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/HIPAA_Implementation_Series/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_06.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_PT-BR.docx",
+          "bytes": 182493,
+          "paragraphs": 163,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 24543,
+          "source_completeness_floor_chars": 19005,
+          "sha256": "c2719fe5bafdd0e4d566f55968d9856882b30119484069b9a88961bd22507a6d",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_06_HIPAA_Implementation_and_Audit_PT-BR.pdf",
+          "bytes": 304537,
+          "pages": 11,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 06 - Implementação e Auditoria HIPAA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 06 controlled publication-QA artifact; language pt-BR; source head 152d9d8520d40aab269e7760c73ea096e7ea90b6",
+            "keywords": "HIPAA, Privacy, Rule, Security, Rule, Breach, Notification, Rule, PHI, ePHI, audit, risk, analysis",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829124459Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "1f8830763257547a77c2f12b0240b29e5a072a9770e5819bacf10582e9a729b3",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

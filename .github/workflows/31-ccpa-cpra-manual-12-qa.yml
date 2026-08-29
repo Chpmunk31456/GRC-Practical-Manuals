@@ -24,6 +24,8 @@ jobs:
   validate-ccpa-cpra-manual-12:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
+    env:
+      MANUAL12_RELEASE_STAGE: candidate
     steps:
       - name: Check out exact candidate
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fail-closed controlled-build QA for Manual 12 — CCPA / CPRA."""
 
-import json, re, sys
+import json, os, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,16 +64,29 @@ def main():
         if phrase.casefold() not in narrative.casefold(): errors.append(f'missing legal/timing boundary: {phrase}')
     if paths.count('```mermaid')!=3: errors.append('expected exactly three Mermaid learning graphics')
     if paths.count('**Accessible explanation:**')!=3: errors.append('each graphic requires accessible explanation')
+
     entries=[x for x in cat.get('manuals',[]) if x.get('id')=='ccpa-cpra-controlled']
-    if len(entries)!=1: errors.append('catalog entry missing or duplicated')
-    elif entries[0].get('status')!='development' or entries[0].get('layout')!='controlled-build' or entries[0].get('series_order')!=12:
-        errors.append('catalog entry invalid')
+    release_stage=os.environ.get('MANUAL12_RELEASE_STAGE','repository').strip().lower()
+    if release_stage=='candidate':
+        if len(entries)>1:
+            errors.append('catalog entry duplicated')
+        elif len(entries)==1:
+            row=entries[0]
+            if row.get('status')!='development' or row.get('layout')!='controlled-build' or row.get('series_order')!=12:
+                errors.append('candidate catalog entry invalid')
+    else:
+        if len(entries)!=1:
+            errors.append('catalog entry missing or duplicated')
+        elif entries[0].get('status')!='development' or entries[0].get('layout')!='controlled-build' or entries[0].get('series_order')!=12:
+            errors.append('catalog entry invalid')
+
     if not WF.is_file(): errors.append('workflow missing')
     else:
         w=WF.read_text(encoding='utf-8')
         if 'permissions:\n  contents: read' not in w: errors.append('workflow not read-only')
         if re.search(r'(?m)^\s*push:\s*$',w): errors.append('workflow must not push')
         if 'pull_request_target' in w: errors.append('workflow must not use pull_request_target')
+        if 'MANUAL12_RELEASE_STAGE: candidate' not in w: errors.append('workflow must declare candidate release stage')
     print('Manual 12 CCPA / CPRA controlled-build QA')
     for e in errors: print('  ERROR:',e)
     if errors: print('FAIL'); return 1

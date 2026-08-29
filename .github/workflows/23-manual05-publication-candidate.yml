@@ -14,6 +14,7 @@ on:
       - "scripts/generate_ai_auditing_assurance_manual_05_publication_v3.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
       - "scripts/pdf_content_preflight.py"
+      - "scripts/localized_publication_regression_qa.py"
 
 permissions:
   contents: read
@@ -35,6 +36,8 @@ jobs:
         run: python3 scripts/generate_ai_auditing_assurance_manual_05_publication_v3.py --output-root "$RUNNER_TEMP/manual05-publication" --source-head "${{ github.event.pull_request.head.sha }}"
       - name: Fail closed on generated PDF content
         run: python3 scripts/pdf_content_preflight.py "$RUNNER_TEMP/manual05-publication/publication"
+      - name: Fail closed on localized publication regressions
+        run: python3 scripts/localized_publication_regression_qa.py "$RUNNER_TEMP/manual05-publication/publication" --manual-number 5
       - name: Upload controlled publication package
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:

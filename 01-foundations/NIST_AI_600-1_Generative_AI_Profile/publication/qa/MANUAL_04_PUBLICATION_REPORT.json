@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "manual": "Manual 04 - NIST AI 600-1 Generative AI Profile Implementation",
-  "source_head": "691c1aa5d01ef7395793be10195095551ace43a8",
+  "source_head": "2b1e27f06c1f35ff2b95b8b528a30aae4682bd5d",
   "source_branch": "build/nist-ai-600-1-manual-04-2026",
   "controlled_baseline": "NIST AI 600-1 Generative AI Profile with AI RMF 1.0 parent framework",
   "assurance_boundary": "Publication QA does not establish legal compliance, certification, trustworthy-AI achievement, universal applicability, or an audit opinion.",
@@ -20,33 +20,33 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.docx",
-          "bytes": 161128,
+          "bytes": 161129,
           "paragraphs": 324,
           "tables": 1,
           "inline_shapes": 3,
           "alt_text_entries": 3,
           "chapter_count": 32,
-          "sha256": "83dfd0c6cbfc405d119d875da4d8bb71773b4d3beb3d4baf8bac79bc44b03f3d",
+          "sha256": "9956abd742ee229b1adc4148ceab98e64aeee5ca89bf9d62455d62ac202bf116",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.pdf",
-          "bytes": 349822,
+          "bytes": 349863,
           "pages": 15,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 04 - NIST AI 600-1 Generative AI Profile Implementation",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 04 controlled publication-QA artifact; language en; source head 691c1aa5d01ef7395793be10195095551ace43a8",
+            "subject": "Manual 04 controlled publication-QA artifact; language en; source head 2b1e27f06c1f35ff2b95b8b528a30aae4682bd5d",
             "keywords": "NIST, AI, 600-1, Generative, AI, Profile, AI, RMF, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124140Z'",
+            "creationDate": "D:20260829145748Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "a42fe4029aa65b1d5fc3f72e2690790fb359ec5615e0e882a43bea4286ea9177",
+          "sha256": "cf5f4469e18dfe13dfdd327fc07c0a6c971160bf0c3b51e93f742177af1ba209",
           "status": "PASS"
         }
       }
@@ -65,33 +65,33 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.docx",
-          "bytes": 167059,
+          "bytes": 167070,
           "paragraphs": 299,
           "tables": 1,
           "inline_shapes": 3,
           "alt_text_entries": 3,
           "chapter_count": 32,
-          "sha256": "028a543729cb42188481fda3414ea25bcf0ef10d5306ef56bdce58d7e27e2193",
+          "sha256": "84d62af90ddc6766639e6a4aebdb81b1ce484b8a43adf3c1bd21666053ccfa95",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.pdf",
-          "bytes": 387535,
+          "bytes": 387735,
           "pages": 15,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 04 - Implementación del Perfil de IA Generativa NIST AI 600-1",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 04 controlled publication-QA artifact; language es-419; source head 691c1aa5d01ef7395793be10195095551ace43a8",
+            "subject": "Manual 04 controlled publication-QA artifact; language es-419; source head 2b1e27f06c1f35ff2b95b8b528a30aae4682bd5d",
             "keywords": "NIST, AI, 600-1, Generative, AI, Profile, AI, RMF, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124142Z'",
+            "creationDate": "D:20260829145750Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "9b4d56fafebc1432a1e43f3971df209c7b3b3137622b64d85b3b8ab15289aa64",
+          "sha256": "d67fc8a14e6ee182db998dcc50aef7507e51f64bbb8d39bed3f5a0402e4d0d03",
           "status": "PASS"
         }
       }
@@ -110,33 +110,33 @@
         "graphics": 3,
         "docx": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.docx",
-          "bytes": 161579,
+          "bytes": 161588,
           "paragraphs": 286,
           "tables": 1,
           "inline_shapes": 3,
           "alt_text_entries": 3,
           "chapter_count": 32,
-          "sha256": "f23ccb0abd823a6aec364c3b252aede501e3a84aeef296ebb8be51fc36158340",
+          "sha256": "5fe3e4b08555c01e4e677f85c11c7e3fac82bb4fc44b94382593c0179a4dc339",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.pdf",
-          "bytes": 374736,
+          "bytes": 374854,
           "pages": 15,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 04 - Implementação do Perfil de IA Generativa NIST AI 600-1",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 04 controlled publication-QA artifact; language pt-BR; source head 691c1aa5d01ef7395793be10195095551ace43a8",
+            "subject": "Manual 04 controlled publication-QA artifact; language pt-BR; source head 2b1e27f06c1f35ff2b95b8b528a30aae4682bd5d",
             "keywords": "NIST, AI, 600-1, Generative, AI, Profile, AI, RMF, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829124145Z'",
+            "creationDate": "D:20260829145753Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "5247e98a9a33c00b43bc6feb6a7ebc6893f5e2505337de72cafd4a6ff63b5d73",
+          "sha256": "0ea9a96b924fbcae0d870542a940efd2ab8140dfa0668202450663c59d7a6f86",
           "status": "PASS"
         }
       }

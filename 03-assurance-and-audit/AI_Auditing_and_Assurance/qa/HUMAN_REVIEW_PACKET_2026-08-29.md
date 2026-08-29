@@ -2,12 +2,24 @@
 
 **Manual:** AI Auditing and Assurance  
 **Purpose:** Pre-stage the substantive human review boundary before Manual 05 becomes front-of-line.  
-**Controlled publication source head recorded by package:** `647eab3dda4bce3acadc9cd5a0874b354b360935`  
-**Preparation branch:** `release/manual05-human-review-prep-2026-08-29`
+**Corrected durable publication source head recorded by package:** `d42b12447646993c54caade2b399efd4fb37f8d9`  
+**Current repair branch:** `repair/manual04-05-localization-preflight-2026-08-29`
 
 ## Control boundary
 
 This packet does not itself make Manual 05 publication-eligible. It consolidates the already-completed machine/document/source evidence so reviewers can focus on the remaining human judgment gates. Standing Final Human Release Approval is already recorded for the manual series and must not be requested again after all preceding gates are green.
+
+## Preflight defects remediated before human review
+
+Rendered/text preflight identified and corrected generator-owned localization defects before this packet was finalized:
+
+- Spanish and Brazilian Portuguese figure captions remained in English;
+- the localized control lines retained an English generator-owned suffix;
+- localized document subject/comments metadata remained English.
+
+The generator now localizes those fields, and Workflow 23 fails closed on stale English localized boilerplate/captions, inherited wrong-manual alt text, and duplicate footer text.
+
+The hashes below supersede all earlier Manual 05 review-packet hashes.
 
 ## Existing completed supporting evidence
 
@@ -16,8 +28,8 @@ This packet does not itself make Manual 05 publication-eligible. It consolidates
 - ISO/NIST assurance baseline and ISACA AAIA professional-practice boundary;
 - non-human technical/editorial source-readiness review: PASS;
 - source-level graphics/accessibility and text-equivalent review: PASS;
-- trilingual DOCX/PDF generation, page QA, metadata, image-alt-text checks, PDF content preflight and SHA-256 provenance: PASS;
-- durable EN / es-419 / pt-BR DOCX/PDF publication package present on `main`.
+- trilingual DOCX/PDF generation, page QA, metadata, image-alt-text checks, PDF content preflight, localized-publication regression QA and SHA-256 provenance: PASS;
+- corrected durable EN / es-419 / pt-BR DOCX/PDF publication package present on the repair branch for merge to `main`.
 
 Supporting records include:
 
@@ -30,30 +42,30 @@ Supporting records include:
 - `publication/qa/MANUAL_05_PAGE_QA.csv`
 - `publication/qa/MANUAL_05_SHA256SUMS.txt`
 
-## Exact publication artifacts to review
+## Exact durable publication artifacts to review
 
 ### English controlled edition
 
 - DOCX: `publication/Manual_05_AI_Auditing_and_Assurance_EN.docx`
-  - SHA-256: `3b4d50de4fc9b1582eae9950011cba7097c829edd2d412d33e15d47383faa115`
+  - SHA-256: `6e7d6663ddd759b498d12bd49606bda2f4694afe02b866484563f010dd54744e`
 - PDF: `publication/Manual_05_AI_Auditing_and_Assurance_EN.pdf`
-  - SHA-256: `8d3be16debb6084835458245e5c4abdef516047d3367519a7a8758bff2c38240`
+  - SHA-256: `85cc051d4888c0672e17877fab9972bcce26f06cb658159eb21565f6608a12e1`
   - Pages: 14
 
 ### Spanish (`es-419`) controlled localization candidate
 
 - DOCX: `publication/Manual_05_AI_Auditing_and_Assurance_ES-419.docx`
-  - SHA-256: `07b286de9718782c9cb9313729eb6b02a6ba03549b74d2605f9579fb085faac4`
+  - SHA-256: `911aeea6872c1b24e35fcb83273c5e3aeaf20e37c9828fe977d65b3b448b65db`
 - PDF: `publication/Manual_05_AI_Auditing_and_Assurance_ES-419.pdf`
-  - SHA-256: `d1cf88fe7e819469a2e8ebc21fb61b5feed568858b906a76e37d3fd4c4182b80`
+  - SHA-256: `b6ef241df607a97409cbe670e7b15d23ccdbf8d11e9f9cec99b300d09c7d26b7`
   - Pages: 14
 
 ### Brazilian Portuguese (`pt-BR`) controlled localization candidate
 
 - DOCX: `publication/Manual_05_AI_Auditing_and_Assurance_PT-BR.docx`
-  - SHA-256: `abd8316ce439beca1629e5959b0afff1550eb1305061f0e6cfbf048ffc0b0edb`
+  - SHA-256: `e2f490631a20bf9905ec6f27df1a806a309f80f7e77691c5219c53f5e8e38703`
 - PDF: `publication/Manual_05_AI_Auditing_and_Assurance_PT-BR.pdf`
-  - SHA-256: `de9f7def204527c27ff4f82af97081638f7e0ebaf7d796dd63d07a897576ab02`
+  - SHA-256: `bbc85e98c48857f4b1507fcf539c47093455b3c3bab0d294940900ac7bc1450f`
   - Pages: 14
 
 ## Gate A — `es-419` semantic / terminology review
@@ -99,7 +111,7 @@ Human reviewer must inspect all three final PDFs and DOCX behavior where relevan
 - metadata/language presentation, reading order, links and bookmarks where applicable;
 - preservation of audit/assurance disclaimers so the publication does not imply certification, conformity or a formal audit opinion.
 
-Machine page QA is supporting evidence only.
+Machine page QA and regression QA are supporting evidence only.
 
 **Reviewer:** ____________________  
 **Date:** ____________________  
@@ -127,9 +139,9 @@ When Manual 05 becomes front-of-line and Gates A–D are approved:
 
 1. regenerate only if remediation changed controlled content/artifacts;
 2. reconcile hashes/provenance after any regeneration;
-3. run exact-final Manual 05 QA, publication-candidate QA, structure, trilingual parity, workflow security, release-package and release-pipeline meta QA;
+3. run exact-final Manual 05 QA, publication-candidate QA, localized-publication regression QA, structure, trilingual parity, workflow security, release-package and release-pipeline meta QA;
 4. reconcile catalog and release registry to the exact final candidate;
 5. apply the standing Final Human Release Approval automatically;
-6. publish immediately when every mandatory gate is green.
+6. publish immediately when every mandatory gate is green and Manuals 03–04 are already published.
 
 No additional repository-owner approval prompt is required at step 5.

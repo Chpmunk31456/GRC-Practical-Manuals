@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 08 - Vendor and Third-Party Risk Lifecycle",
+  "source_head": "c065e9ba7b7bbf37ff7c05de081a5864879e12ef",
+  "source_branch": "build/vendor-risk-lifecycle-manual-08-2026",
+  "assurance_boundary": "Automated QA supports document integrity and review; it does not establish vendor acceptability, compliance, assurance, or elimination of third/fourth-party risk.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "07-third-party-risk/Vendor_Risk_Lifecycle/English/source/01_FOUNDATIONS_CHAPTERS_01_08.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/English/source/02_DUE_DILIGENCE_CHAPTERS_09_16.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/English/source/03_MONITORING_CHAPTERS_17_24.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/English/source/04_EXIT_AND_ASSURANCE_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "07-third-party-risk/Vendor_Risk_Lifecycle/MANUAL_08_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_EN.docx",
+          "bytes": 184872,
+          "paragraphs": 142,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 15226,
+          "source_completeness_floor_chars": 11546,
+          "sha256": "47a96cddc00a53f9ef10f4ec0f5fb3e190bc6c78adba9bca7858ede59907dec8",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_EN.pdf",
+          "bytes": 277256,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 08 - Vendor and Third-Party Risk Lifecycle",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 08 controlled publication-QA artifact; language en; source head c065e9ba7b7bbf37ff7c05de081a5864879e12ef",
+            "keywords": "vendor, risk, third-party, risk, TPRM, C-SCRM, supplier, assurance, fourth, party, concentration, risk, due, diligence, monitoring, exit",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829182015Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "aaad553d3b37ca0c7819ef87c3c3fed75ca553614504ed73d943fef3df4b47f9",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Spanish_es-419/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Spanish_es-419/source/02_DEBIDA_DILIGENCIA_CAPITULOS_09_16.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Spanish_es-419/source/03_MONITOREO_CAPITULOS_17_24.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Spanish_es-419/source/04_SALIDA_Y_ASEGURAMIENTO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "07-third-party-risk/Vendor_Risk_Lifecycle/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_08.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_ES-419.docx",
+          "bytes": 192647,
+          "paragraphs": 142,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 17763,
+          "source_completeness_floor_chars": 13519,
+          "sha256": "9b340fc33c5409136cc94023b9d74259d053aa7368cccbbc0c098ec523a89a53",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_ES-419.pdf",
+          "bytes": 303259,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 08 - Ciclo de Vida de Riesgo de Proveedores y Terceros",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 08 controlled publication-QA artifact; language es-419; source head c065e9ba7b7bbf37ff7c05de081a5864879e12ef",
+            "keywords": "vendor, risk, third-party, risk, TPRM, C-SCRM, supplier, assurance, fourth, party, concentration, risk, due, diligence, monitoring, exit",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829182017Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "6d18ffa34cfb078e5370db207f57b43ab7462787fa798a8ca174608a12925c4f",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Portuguese_pt-BR/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Portuguese_pt-BR/source/02_DUE_DILIGENCE_CAPITULOS_09_16.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Portuguese_pt-BR/source/03_MONITORAMENTO_CAPITULOS_17_24.md",
+        "07-third-party-risk/Vendor_Risk_Lifecycle/Portuguese_pt-BR/source/04_SAIDA_E_ASSEGURACAO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "07-third-party-risk/Vendor_Risk_Lifecycle/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_08.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_PT-BR.docx",
+          "bytes": 191138,
+          "paragraphs": 142,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 17273,
+          "source_completeness_floor_chars": 13118,
+          "sha256": "9106e104885b877f07c723cf84d3a64cc34b2790d53f9cc94b7e9b8366ba7b9c",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_08_Vendor_and_Third_Party_Risk_Lifecycle_PT-BR.pdf",
+          "bytes": 302417,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 08 - Ciclo de Vida de Risco de Fornecedores e Terceiros",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 08 controlled publication-QA artifact; language pt-BR; source head c065e9ba7b7bbf37ff7c05de081a5864879e12ef",
+            "keywords": "vendor, risk, third-party, risk, TPRM, C-SCRM, supplier, assurance, fourth, party, concentration, risk, due, diligence, monitoring, exit",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260829182018Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "93bc51fa08d2318027a976279f5e8c8c5d46a13fe9846026ca6943a95e585771",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

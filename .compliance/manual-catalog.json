@@ -156,8 +156,8 @@
       "id": "vendor-risk-lifecycle",
       "title": "Manual 08 — Vendor and Third-Party Risk Lifecycle",
       "path": "07-third-party-risk/Vendor_Risk_Lifecycle",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 8
     },

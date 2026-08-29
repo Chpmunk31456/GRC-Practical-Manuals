@@ -18,6 +18,7 @@ on:
       - "scripts/generate_hipaa_implementation_manual_06_publication.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication.py"
       - "scripts/pdf_content_preflight.py"
+      - "scripts/localized_publication_regression_qa.py"
 
 permissions:
   contents: read
@@ -39,6 +40,8 @@ jobs:
         run: python3 scripts/run_nist_rmf_800_53_manual_10_publication.py --output-root "$RUNNER_TEMP/manual10-publication" --source-head "${{ github.event.pull_request.head.sha }}"
       - name: Fail closed on generated PDF content
         run: python3 scripts/pdf_content_preflight.py "$RUNNER_TEMP/manual10-publication/publication"
+      - name: Fail closed on localized publication regressions
+        run: python3 scripts/localized_publication_regression_qa.py "$RUNNER_TEMP/manual10-publication/publication" --manual-number 10
       - name: Upload controlled publication package
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:

@@ -2,11 +2,41 @@
   "schema_version": "1.0",
   "last_updated": "2026-08-29",
   "released_work_products": [
-    {"id":"eu-ai-act-grc","type":"manual","release_state":"published","release_evidence":"English publication authorized and merged through PR #31; validated es-419 and pt-BR editions published through PR #35; completed EU AI Act v1.3 package published to main through PR #38 and recorded through PR #39; public manual tree contains durable DOCX/PDF publication artifacts"},
-    {"id":"iso-42001-aims","type":"manual","release_state":"published","release_evidence":"PR #89 merged; controlled publication package and release QA completed"},
-    {"id":"nist-ai-rmf-1-0","type":"manual","release_state":"published","release_evidence":"Exact verified Manual 03 publication candidate at head 5d5fb95317254917b228774f315b6b3faead2802 passed structure, trilingual parity, release-package, workflow-security, Manual 03 publication-repair, NIST AI RMF QA, and release-pipeline checks; durable EN/es-419/pt-BR DOCX/PDF artifacts, page QA and SHA-256 provenance were merged to main through PR #148 after repairing the former Draft-state blocker. Standing human release approval applied under the repository-wide rule because verification was complete and no unresolved defects or material errors remained."},
-    {"id":"nist-ai-600-1","type":"manual","release_state":"published","release_evidence":"Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after fixing duplicate/localized footer defects; exact-head Manual 04 publication candidate, localization, structure, trilingual parity, release-package, workflow-security, dedicated Manual 04 QA, and release-pipeline meta checks passed. Current main retains the corrected artifact package and SHA-256 evidence. Workflow 12 was additionally hardened before release to remain fail-closed across the development-to-published lifecycle. Standing human release approval applied because required verification was complete and no unresolved defects or material errors remained."},
-    {"id":"ai-auditing-assurance","type":"manual","release_state":"published","release_evidence":"Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after localized figure-caption, control-line, and metadata defects were repaired; exact-head Manual 05 publication candidate, dedicated Manual 05 QA, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed. Current main retains the corrected package and SHA-256 evidence. Workflow 13 is lifecycle-aware so its legacy controlled-intake validator remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."},
-    {"id":"hipaa-implementation-series","type":"manual","release_state":"published","release_evidence":"Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #144 at exact head 3677eb5548a91ff962e8090a853f5234e1a131cc after localized control-line, figure-caption, and metadata defects were repaired. Exact-head Manual 06 publication-candidate, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed; current main retains the corrected SHA-256-bound package. Workflow 14 is lifecycle-aware and enabled on main so the legacy HIPAA controlled-intake gate remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."}
+    {
+      "id": "eu-ai-act-grc",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "English publication authorized and merged through PR #31; validated es-419 and pt-BR editions published through PR #35; completed EU AI Act v1.3 package published to main through PR #38 and recorded through PR #39; public manual tree contains durable DOCX/PDF publication artifacts"
+    },
+    {
+      "id": "iso-42001-aims",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "PR #89 merged; controlled publication package and release QA completed"
+    },
+    {
+      "id": "nist-ai-rmf-1-0",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Exact verified Manual 03 publication candidate at head 5d5fb95317254917b228774f315b6b3faead2802 passed structure, trilingual parity, release-package, workflow-security, Manual 03 publication-repair, NIST AI RMF QA, and release-pipeline checks; durable EN/es-419/pt-BR DOCX/PDF artifacts, page QA and SHA-256 provenance were merged to main through PR #148 after repairing the former Draft-state blocker. Standing human release approval applied under the repository-wide rule because verification was complete and no unresolved defects or material errors remained."
+    },
+    {
+      "id": "nist-ai-600-1",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after fixing duplicate/localized footer defects; exact-head Manual 04 publication candidate, localization, structure, trilingual parity, release-package, workflow-security, dedicated Manual 04 QA, and release-pipeline meta checks passed. Current main retains the corrected artifact package and SHA-256 evidence. Workflow 12 was additionally hardened before release to remain fail-closed across the development-to-published lifecycle. Standing human release approval applied because required verification was complete and no unresolved defects or material errors remained."
+    },
+    {
+      "id": "ai-auditing-assurance",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after localized figure-caption, control-line, and metadata defects were repaired; exact-head Manual 05 publication candidate, dedicated Manual 05 QA, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed. Current main retains the corrected package and SHA-256 evidence. Workflow 13 is lifecycle-aware so its legacy controlled-intake validator remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."
+    },
+    {
+      "id": "hipaa-implementation-series",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #144 at exact head 3677eb5548a91ff962e8090a853f5234e1a131cc after localized control-line, figure-caption, and metadata defects were repaired. Exact-head Manual 06 publication-candidate, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed; current main retains the corrected SHA-256-bound package. Workflow 14 is lifecycle-aware and enabled on main so the legacy HIPAA controlled-intake gate remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."
+    }
   ]
 }

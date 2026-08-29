@@ -25,6 +25,7 @@
     {"id":"vendor-risk-lifecycle","title":"Manual 08 — Vendor and Third-Party Risk Lifecycle","path":"07-third-party-risk/Vendor_Risk_Lifecycle","status":"published","release_state":"published","layout":"controlled-build","series_order":8},
     {"id":"nist-csf-2-controlled","title":"Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation","path":"01-foundations/NIST_CSF_2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":9},
     {"id":"nist-rmf-800-53-controlled","title":"Manual 10 — NIST RMF and SP 800-53 Controlled Implementation","path":"01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":10},
+    {"id":"gdpr-controlled","title":"Manual 11 — GDPR Privacy and Data Protection Controlled Implementation","path":"04-regulatory-compliance/GDPR_Controlled_Implementation","status":"development","release_state":"development","layout":"controlled-build","series_order":11},
     {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
   ]
 }

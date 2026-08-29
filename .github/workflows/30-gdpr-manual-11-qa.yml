@@ -1,0 +1,33 @@
+name: "30 - GDPR Manual 11 QA"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "04-regulatory-compliance/GDPR_Controlled_Implementation/**"
+      - ".compliance/gdpr-manual-11-baseline.json"
+      - ".compliance/gdpr-manual-11-sources.json"
+      - ".compliance/manual-catalog.json"
+      - "scripts/gdpr_manual_11_qa.py"
+      - ".github/workflows/30-gdpr-manual-11-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gdpr-manual-11-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-gdpr-manual-11:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Run Manual 11 fail-closed controlled-build QA
+        run: python3 scripts/gdpr_manual_11_qa.py

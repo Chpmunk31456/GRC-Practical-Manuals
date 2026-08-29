@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "vendor-risk-lifecycle-manual-08",
+  "title": "Manual 08 — Vendor and Third-Party Risk Lifecycle",
+  "manual_path": "07-third-party-risk/Vendor_Risk_Lifecycle",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "nist-sp-800-161-r1-upd1",
+    "nist-sp-1305-c-scrm",
+    "nist-csf-2",
+    "nist-ai-rmf-1-0",
+    "nist-ai-600-1",
+    "iso-iec-27001-2022"
+  ],
+  "implementation_entry": "MANUAL_08_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "lifecycle_stages": [
+    "intake-and-classification",
+    "due-diligence",
+    "risk-decision",
+    "contract-and-onboarding",
+    "continuous-monitoring",
+    "issue-and-change-management",
+    "renewal-and-reassessment",
+    "termination-and-offboarding"
+  ],
+  "required_topics": [
+    "vendor inventory",
+    "criticality",
+    "inherent risk",
+    "due diligence",
+    "security",
+    "privacy",
+    "resilience",
+    "AI supplier",
+    "subprocessor",
+    "fourth party",
+    "contract",
+    "right to audit",
+    "incident notification",
+    "data return",
+    "data deletion",
+    "continuous monitoring",
+    "evidence refresh",
+    "exceptions",
+    "remediation",
+    "offboarding"
+  ],
+  "required_boundaries": [
+    "risk-based",
+    "proportional",
+    "evidence-based",
+    "no questionnaire-only assurance",
+    "fourth-party visibility",
+    "human approval"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 60,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 08 remains development material until source verification, controlled English master, technical/editorial review, localization/semantic review, accessibility, document QA, security review, provenance, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA supports a controlled TPRM process; it does not certify a vendor, eliminate supplier risk, or replace organization-specific legal, procurement, privacy, security, resilience, or financial due diligence."
+}

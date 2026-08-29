@@ -59,7 +59,7 @@ Adicione:
 - métricas executivas de privacidade e acompanhamento de ações corretivas;
 - crosswalks com RGPD, NIST Privacy Framework, ISO/IEC 27701, ISO/IEC 27001 e requisitos setoriais quando útil.
 
-## Ciclo de privacidade da Califórnia com sete gates
+## Ciclo de privacidade da Califórnia com sete pontos de controle
 
 ```mermaid
 flowchart LR
@@ -100,4 +100,4 @@ flowchart LR
 
 ## Limite fail-closed
 
-A automação pode validar registros obrigatórios, campos de prazo, completude dos fluxos de solicitações, testes de sinais de preferência, links de evidência e rótulos de estado das fontes. Ela não pode emitir conclusões jurídicas finais específicas da organização sobre aplicabilidade, isenções, classificação ADMT, suficiência de avaliação de riscos, escopo de auditoria ou conformidade. A revisão humana competente de privacidade/jurídica permanece obrigatória. A autorização final de liberação do proprietário aplica-se conforme o procedimento permanente do repositório quando todos os gates substantivos anteriores estiverem verdes.
+A automação pode validar registros obrigatórios, campos de prazo, completude dos fluxos de solicitações, testes de sinais de preferência, links de evidência e rótulos de estado das fontes. Ela não pode emitir conclusões jurídicas finais específicas da organização sobre aplicabilidade, isenções, classificação ADMT, suficiência de avaliação de riscos, escopo de auditoria ou conformidade. A revisão humana competente de privacidade/jurídica permanece obrigatória. A autorização final de liberação do proprietário aplica-se conforme o procedimento permanente do repositório quando todos os pontos de controle substantivos anteriores estiverem verdes.

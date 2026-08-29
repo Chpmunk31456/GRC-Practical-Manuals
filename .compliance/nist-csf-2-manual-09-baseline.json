@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "nist-csf-2-manual-09",
+  "title": "Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation",
+  "manual_path": "01-foundations/NIST_CSF_2_Controlled_Implementation",
+  "development_phase": "controlled-implementation-intake",
+  "controlled_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": ["nist-csf-2"],
+  "supplemental_authoritative_sources": [
+    "NIST SP 1308 (2026) — Cybersecurity, Enterprise Risk Management, and Workforce Management Quick-Start Guide",
+    "NIST SP 1347 (2026) — Informative References Quick-Start Guide"
+  ],
+  "implementation_entry": "MANUAL_09_IMPLEMENTATION_PATHS.md",
+  "implementation_paths": ["essential", "structured", "enhanced"],
+  "csf_functions": ["GOVERN", "IDENTIFY", "PROTECT", "DETECT", "RESPOND", "RECOVER"],
+  "required_topics": [
+    "organizational context",
+    "cybersecurity governance",
+    "risk strategy",
+    "roles and responsibilities",
+    "policy",
+    "oversight",
+    "cybersecurity supply chain risk management",
+    "asset management",
+    "risk assessment",
+    "improvement",
+    "identity and access management",
+    "data security",
+    "platform security",
+    "technology infrastructure resilience",
+    "continuous monitoring",
+    "incident analysis",
+    "incident response management",
+    "incident recovery",
+    "organizational profiles",
+    "community profiles",
+    "implementation tiers",
+    "informative references",
+    "enterprise risk management",
+    "workforce management",
+    "evidence",
+    "metrics"
+  ],
+  "required_boundaries": [
+    "outcome-based not prescriptive",
+    "risk-based",
+    "organization-specific",
+    "no certification claim",
+    "no universal control sufficiency claim",
+    "human approval"
+  ],
+  "source_watch": {
+    "enabled": true,
+    "maximum_review_interval_days": 30,
+    "fail_on_missing_source": true,
+    "fail_on_status_mismatch": true,
+    "adoption_mode": "impact-analysis-before-baseline-change"
+  },
+  "release_boundary": "Manual 09 remains development material until authoritative-source verification, controlled English master, technical/editorial review, localization and human semantic review, accessibility, document QA, repository/workflow security review, provenance, exact-head reconciliation, and final human release approval are complete.",
+  "assurance_boundary": "Repository QA can validate structure, source-state records, evidence fields, and publication controls; it does not certify CSF conformance, establish cybersecurity effectiveness, or replace organization-specific risk judgment."
+}

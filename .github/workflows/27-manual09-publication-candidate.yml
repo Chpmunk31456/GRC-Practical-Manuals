@@ -3,7 +3,7 @@ name: "27 - Manual 09 Publication Candidate"
 on:
   pull_request:
     branches:
-      - "build/vendor-risk-lifecycle-manual-08-2026"
+      - "release/manual08-restack-v2-2026-08-29"
     paths:
       - ".github/workflows/27-manual09-publication-candidate.yml"
       - "01-foundations/NIST_CSF_2_Controlled_Implementation/**"
@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Check out exact candidate
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Install LibreOffice conversion dependency
         run: |
           sudo apt-get update

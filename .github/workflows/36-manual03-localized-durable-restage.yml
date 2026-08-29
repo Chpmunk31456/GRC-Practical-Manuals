@@ -1,0 +1,77 @@
+name: "36 - Manual 03 Corrected Durable Restage"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/36-manual03-localized-durable-restage.yml"
+
+# Temporary same-repository repair workflow. It writes only to the dedicated
+# Manual 03 release-repair branch and is deleted before the PR can merge.
+permissions:
+  contents: write
+
+jobs:
+  restage-manual03:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Check out exact repair branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Fail closed outside Manual 03 repair branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "release/manual03-publication-repair-2026-08-28"
+
+      - name: Install publication dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
+          python3 -m pip install --disable-pip-version-check pymupdf pillow python-docx
+
+      - name: Generate and validate corrected Manual 03 package
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/manual03-corrected"
+          rm -rf "$OUT"
+          python3 scripts/generate_nist_ai_rmf_manual_03_publication_v3.py \
+            --output-root "$OUT" \
+            --source-head "${{ github.event.pull_request.head.sha }}"
+          python3 scripts/pdf_content_preflight.py "$OUT/publication"
+          test "$(find "$OUT/publication" -maxdepth 1 -type f -name '*.docx' | wc -l)" -eq 3
+          test "$(find "$OUT/publication" -maxdepth 1 -type f -name '*.pdf' | wc -l)" -eq 3
+
+      - name: Stage corrected durable package only
+        shell: bash
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/manual03-corrected"
+          DEST="01-foundations/NIST_AI_RMF_1.0/publication"
+          mkdir -p "$DEST/qa"
+          cp "$OUT/publication/"*.docx "$DEST/"
+          cp "$OUT/publication/"*.pdf "$DEST/"
+          cp -a "$OUT/qa/." "$DEST/qa/"
+
+      - name: Commit corrected durable package to repair branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 01-foundations/NIST_AI_RMF_1.0/publication
+          if git diff --cached --quiet; then
+            echo "Corrected durable package already matches generated candidate."
+            exit 0
+          fi
+          git commit -m "Durably restage corrected Manual 03 publication package"
+          git push origin HEAD:${{ github.head_ref }}

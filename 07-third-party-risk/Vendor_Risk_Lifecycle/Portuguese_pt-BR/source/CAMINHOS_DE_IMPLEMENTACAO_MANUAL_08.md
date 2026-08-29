@@ -9,10 +9,10 @@ Use para organizações menores ou ecossistemas de fornecedores delimitados. Exp
 - due diligence baseada em evidências e proporcional ao risco;
 - decisão documentada de aprovar/condicionar/rejeitar;
 - cláusulas contratuais obrigatórias de segurança/privacidade;
-- controles de acesso e dados no onboarding;
+- controles de acesso e dados durante a integração;
 - rota de notificação de incidentes/mudanças;
 - atualização periódica de evidências e reavaliação;
-- offboarding, revogação de acesso e evidência de devolução/exclusão de dados.
+- desligamento, revogação de acesso e evidência de devolução/exclusão de dados.
 
 ## Estruturado
 
@@ -25,7 +25,7 @@ Use para múltiplos fornecedores críticos, dados regulados, dependência de nuv
 - revisão de resiliência/BCDR e risco de concentração;
 - sinais de monitoramento contínuo e reavaliação acionada por eventos;
 - planos formais de remediação e aceitação de risco;
-- gates de renovação vinculados a questões não resolvidas.
+- pontos de controle de renovação vinculados a questões não resolvidas.
 
 ## Aprimorado
 
@@ -49,7 +49,7 @@ flowchart TD
     C --> D{"Decisão de risco"}
     D -->|"Rejeitar"| E["Não integrar / selecionar alternativa"]
     D -->|"Condicional"| F["Remediação / exceção / controles compensatórios"]
-    D -->|"Aprovar"| G["Contrato e onboarding"]
+    D -->|"Aprovar"| G["Contrato e integração"]
     F --> G
     G --> H["Monitorar, atualizar evidências e gerenciar mudanças"]
     H --> I["Renovar / reavaliar / encerrar"]
@@ -93,11 +93,11 @@ flowchart TD
 4. Validação de evidências—incluindo certificações, relatórios, arquitetura, políticas, evidências de testes, incidentes e remediação—não asseguração baseada apenas em questionários.
 5. Decisão de risco e exceção/aceitação de risco documentada.
 6. Controles contratuais: uso de dados, confidencialidade, segurança, notificação de incidentes, direitos de auditoria/evidência, subprocessadores, resiliência, uso de IA, retenção, exclusão e saída.
-7. Onboarding de identidades, conectividade, fluxos de dados, chaves/segredos e responsabilidade.
+7. Integração de identidades, conectividade, fluxos de dados, chaves/segredos e responsabilidade.
 8. Monitoramento contínuo, atualização de evidências e gatilhos de mudança material.
 9. Gestão de incidentes, violações, interrupções de serviço, falhas de controles e remediação.
-10. Gates de renovação e reavaliação.
-11. Offboarding: revogação de acesso, devolução de ativos/chaves, devolução/exclusão de dados, retenção e evidências de transição/saída.
+10. Pontos de controle de renovação e reavaliação.
+11. Desligamento: revogação de acesso, devolução de ativos/chaves, devolução/exclusão de dados, retenção e evidências de transição/saída.
 
 ## Limite de asseguração
 

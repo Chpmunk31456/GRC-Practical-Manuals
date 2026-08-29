@@ -33,7 +33,7 @@ LANG_META = {
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
         "chapter_heading": "Controlled 32-chapter manual",
-        "language_label": "Language:",
+        "control": "Controlled source revision: {source_head} | Language: en | GDPR legal/privacy human-decision boundaries retained.",
         "boundary": "Legal and assurance boundary: This manual operationalizes GDPR privacy and data-protection practices but does not provide organization-specific legal advice, determine applicability or roles, establish lawful-basis sufficiency, decide DPIA adequacy or breach notification, validate international transfers, or guarantee GDPR compliance. Material legal/privacy decisions require competent human judgment.",
         "figure_title": "Manual 11 memory graphic",
         "figure_caption": "Figure {number}. GDPR implementation memory graphic",
@@ -45,7 +45,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisión de fuente controlada: {source_head} | Idioma: es-419 | se mantienen los límites jurídicos/de privacidad y de decisión humana del RGPD.",
         "boundary": "Límite jurídico y de aseguramiento: Este manual operacionaliza prácticas de privacidad y protección de datos del RGPD, pero no proporciona asesoría jurídica específica para una organización, no determina aplicabilidad o roles, no establece suficiencia de una base jurídica, no decide adecuación de una EIPD/DPIA o notificación de brechas, no valida transferencias internacionales ni garantiza cumplimiento del RGPD. Las decisiones jurídicas/de privacidad materiales requieren juicio humano competente.",
         "figure_title": "Gráfico de memoria del Manual 11",
         "figure_caption": "Figura {number}. Gráfico de memoria de implementación RGPD",
@@ -57,7 +57,7 @@ LANG_META = {
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",
         "chapter_heading": "Manual controlado de 32 capítulos",
-        "language_label": "Idioma:",
+        "control": "Revisão da fonte controlada: {source_head} | Idioma: pt-BR | limites jurídicos/de privacidade e de decisão humana do RGPD mantidos.",
         "boundary": "Limite jurídico e de asseguração: Este manual operacionaliza práticas de privacidade e proteção de dados do RGPD, mas não fornece aconselhamento jurídico específico para uma organização, não determina aplicabilidade ou papéis, não estabelece suficiência de base legal, não decide adequação de AIPD/DPIA ou notificação de violações, não valida transferências internacionais nem garante conformidade com o RGPD. Decisões jurídicas/de privacidade materiais exigem julgamento humano competente.",
         "figure_title": "Gráfico de memória do Manual 11",
         "figure_caption": "Figura {number}. Gráfico de memória de implementação RGPD",
@@ -176,7 +176,7 @@ def build_docx(source: core.EditionSource, out_path: Path, image_dir: Path, sour
     subtitle = doc.add_paragraph(); subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = subtitle.add_run(meta["status"]); core.set_run_font(run, language, size=10, bold=True)
     control = doc.add_paragraph(); control.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = control.add_run(f"Controlled source revision: {source_head} | {meta['language_label']} {language} | GDPR legal/privacy human-decision boundaries retained.")
+    run = control.add_run(meta["control"].format(source_head=source_head))
     core.set_run_font(run, language, size=8.5)
     boundary = doc.add_paragraph(); run = boundary.add_run(meta["boundary"]); core.set_run_font(run, language, size=9, bold=True)
 

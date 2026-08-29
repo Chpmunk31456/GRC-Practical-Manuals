@@ -3,7 +3,7 @@ name: "16 - Vendor Risk Lifecycle Manual 08 QA"
 on:
   pull_request:
     branches:
-      - "build/ai-security-lifecycle-manual-07-2026"
+      - "main"
     paths:
       - "07-third-party-risk/Vendor_Risk_Lifecycle/**"
       - ".compliance/vendor-risk-lifecycle-manual-08-baseline.json"

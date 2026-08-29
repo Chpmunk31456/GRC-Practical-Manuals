@@ -1,0 +1,119 @@
+name: "34 - Manual 01 English Durable Stage"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/34-manual01-english-durable-stage.yml"
+      - "04-regulatory-compliance/EU_AI_Act_GRC/**"
+      - "scripts/compliance_qa_controlled_build.py"
+
+# Temporary release-repair workflow. It writes only to the current same-repo
+# repair branch, never to main, and is removed before the repair PR is merged.
+permissions:
+  contents: write
+
+jobs:
+  stage-english-publication:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out exact repair branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Fail closed outside authorized repair branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "fix/controlled-build-publication-qa-2026-08-29"
+
+      - name: Install publication dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc libreoffice-writer python3-uno poppler-utils fonts-dejavu-core fonts-liberation
+
+      - name: Build controlled English Markdown
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/eu-ai-act"
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/inventory_english_sources.py --repo-root .
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/build_english_publication.py --repo-root . --out-dir "$RUNNER_TEMP/eu-ai-act"
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/normalize_publication_headings.py --build-dir "$RUNNER_TEMP/eu-ai-act"
+
+      - name: Generate DOCX and refresh TOC
+        env:
+          HOME: ${{ runner.temp }}/lo-toc-home
+        shell: bash
+        run: |
+          set -euo pipefail
+          pandoc "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Master.md" \
+            --from markdown+raw_tex --to docx --toc --toc-depth=1 --number-sections \
+            --metadata title='EU Artificial Intelligence Act GRC Compliance Manual' \
+            --output "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx"
+          mkdir -p "$HOME"
+          libreoffice --headless --accept='socket,host=127.0.0.1,port=2002;urp;StarOffice.ServiceManager' --norestore --nofirststartwizard > "$RUNNER_TEMP/libreoffice-toc.log" 2>&1 &
+          LO_PID=$!
+          trap 'kill "$LO_PID" 2>/dev/null || true' EXIT
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/update_docx_toc.py "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx" --port 2002
+          kill "$LO_PID" 2>/dev/null || true
+          wait "$LO_PID" 2>/dev/null || true
+          trap - EXIT
+
+      - name: Generate and render PDF
+        env:
+          HOME: ${{ runner.temp }}/lo-pdf-home
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME" "$RUNNER_TEMP/eu-ai-act/pdf-output" "$RUNNER_TEMP/eu-ai-act/rendered-pages"
+          libreoffice --headless --convert-to pdf --outdir "$RUNNER_TEMP/eu-ai-act/pdf-output" "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx"
+          mv "$RUNNER_TEMP/eu-ai-act/pdf-output/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf" "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf"
+          pdftoppm -png -r 110 "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf" "$RUNNER_TEMP/eu-ai-act/rendered-pages/page"
+          pdfinfo "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf" > "$RUNNER_TEMP/eu-ai-act/PDF_INFO.txt"
+
+      - name: Run fail-closed English publication QA and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 04-regulatory-compliance/EU_AI_Act_GRC/tools/qa_english_publication.py --build-dir "$RUNNER_TEMP/eu-ai-act"
+          cd "$RUNNER_TEMP/eu-ai-act"
+          sha256sum EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Master.md \
+            EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx \
+            EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf \
+            CANONICAL_BUILD_MANIFEST.json AUTOMATED_QA_REPORT.json > SHA256SUMS.txt
+
+      - name: Stage durable English package only
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="04-regulatory-compliance/EU_AI_Act_GRC/publication/en"
+          mkdir -p "$DEST"
+          cp "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Master.md" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.docx" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/EU_AI_Act_GRC_Compliance_Manual_English_Controlled_Review.pdf" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/CANONICAL_BUILD_MANIFEST.json" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/AUTOMATED_QA_REPORT.json" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/PDF_INFO.txt" "$DEST/"
+          cp "$RUNNER_TEMP/eu-ai-act/SHA256SUMS.txt" "$DEST/"
+
+      - name: Commit durable package to repair branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 04-regulatory-compliance/EU_AI_Act_GRC/publication/en
+          if git diff --cached --quiet; then
+            echo "Durable English package already matches generated candidate."
+            exit 0
+          fi
+          git commit -m "Durably stage Manual 01 English publication package"
+          git push origin HEAD:${{ github.head_ref }}

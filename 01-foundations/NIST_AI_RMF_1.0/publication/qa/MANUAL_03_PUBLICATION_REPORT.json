@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "manual": "Manual 03 - NIST AI Risk Management Framework Implementation",
-  "source_head": "0c5e219dcca52266f6ea60d24fd16690df0de575",
+  "source_head": "415cb1bb4afcda24109137eca1d6890462458cd8",
   "source_branch": "build/nist-ai-rmf-manual-03-2026",
   "controlled_baseline": "NIST AI RMF 1.0 / NIST AI 100-1; NIST AI 600-1 when generative AI is in scope",
   "assurance_boundary": "Publication QA does not establish legal compliance, certification, trustworthy-AI achievement, or an audit opinion.",
@@ -20,33 +20,33 @@
         "graphics": 15,
         "docx": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_EN.docx",
-          "bytes": 793061,
+          "bytes": 792991,
           "paragraphs": 1219,
           "tables": 12,
           "inline_shapes": 15,
           "alt_text_entries": 15,
           "chapter_count": 32,
-          "sha256": "3a9c588d8a06cf1fbc56df9dccbf318891450d7b83a722ccdbaa878041ce5370",
+          "sha256": "a56e5a342d41d17df8201aa8bad2adb952881956de339c40036069ba5f8e8ebc",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_EN.pdf",
-          "bytes": 2544634,
+          "bytes": 2544772,
           "pages": 47,
           "metadata": {
             "format": "PDF 1.7",
             "title": "Manual 03 - NIST AI Risk Management Framework Implementation",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 03 controlled publication-QA artifact; language en; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "subject": "Manual 03 controlled publication-QA artifact; language en; source head 415cb1bb4afcda24109137eca1d6890462458cd8",
             "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829121925Z'",
+            "creationDate": "D:20260829131810Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "d6d17e92108b9374270faf34d970594b81059e928ee605c194ecf76071c10603",
+          "sha256": "14d7a1774c3a2b8cded02e318035e52064867f0324c41faeaaefdf3ba66ce784",
           "status": "PASS"
         }
       }
@@ -65,33 +65,33 @@
         "graphics": 15,
         "docx": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_ES-419.docx",
-          "bytes": 859532,
+          "bytes": 859520,
           "paragraphs": 1219,
           "tables": 12,
           "inline_shapes": 15,
           "alt_text_entries": 15,
           "chapter_count": 32,
-          "sha256": "84d92ca2136b057f9033f9ae5abcce46c739101c437f320fb64b335b68b86bd1",
+          "sha256": "f07b5cafa67c5bf7400cb8a7c7cfdea4bbd67a6ba566acdf07436766fdc7704f",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_ES-419.pdf",
-          "bytes": 2812469,
+          "bytes": 2812621,
           "pages": 48,
           "metadata": {
             "format": "PDF 1.7",
-            "title": "Manual 03 - Implementacion del Marco de Gestion de Riesgos de IA de NIST",
+            "title": "Manual 03 - Implementación del Marco de Gestión de Riesgos de IA del NIST",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 03 controlled publication-QA artifact; language es-419; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "subject": "Artefacto controlado de QA de publicación del Manual 03; idioma es-419; revisión de fuente 415cb1bb4afcda24109137eca1d6890462458cd8",
             "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829121935Z'",
+            "creationDate": "D:20260829131822Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "d95ac0140fe72073f0ad49e97bf57aa7dbe6123c8705d8e9d7daa83a1456b37e",
+          "sha256": "d739d0974e70e9125198bb99953b4302a70aeab221e2fc803f7e7b9f58e0e707",
           "status": "PASS"
         }
       }
@@ -110,33 +110,33 @@
         "graphics": 15,
         "docx": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx",
-          "bytes": 844650,
+          "bytes": 844651,
           "paragraphs": 1219,
           "tables": 12,
           "inline_shapes": 15,
           "alt_text_entries": 15,
           "chapter_count": 32,
-          "sha256": "caad011fc8f2e60b4b09a0097b5161b8c41ed367eb470f7b169c8c16ed64779d",
+          "sha256": "cc7ffb0efdd89665bd9fd5a66c87115ad5ab73dd676640cba7ac0afb81a0ec44",
           "status": "PASS"
         },
         "pdf": {
           "file": "Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf",
-          "bytes": 2807330,
+          "bytes": 2807568,
           "pages": 48,
           "metadata": {
             "format": "PDF 1.7",
-            "title": "Manual 03 - Implementacao do NIST AI Risk Management Framework",
+            "title": "Manual 03 - Implementação do Marco de Gestão de Riscos de IA do NIST",
             "author": "Alberto (Al) Leiva",
-            "subject": "Manual 03 controlled publication-QA artifact; language pt-BR; source head 0c5e219dcca52266f6ea60d24fd16690df0de575",
+            "subject": "Artefato controlado de QA de publicação do Manual 03; idioma pt-BR; revisão da fonte 415cb1bb4afcda24109137eca1d6890462458cd8",
             "keywords": "NIST, AI, RMF, AI, 100-1, AI, risk, management, GOVERN, MAP, MEASURE, MANAGE, GRC",
             "creator": "Writer",
             "producer": "LibreOffice 24.2",
-            "creationDate": "D:20260829121946Z'",
+            "creationDate": "D:20260829131833Z'",
             "modDate": "",
             "trapped": "",
             "encryption": null
           },
-          "sha256": "f6f87a258d7ce1e46783c55e412485eea210ffe87db84378fb1c4d14794bc486",
+          "sha256": "b8b4789552a6a4e7c4861eee8c71168f1e355127a8834703260a9c504bd719c3",
           "status": "PASS"
         }
       }

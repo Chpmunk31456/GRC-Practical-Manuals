@@ -138,8 +138,8 @@
       "id": "hipaa-implementation-series",
       "title": "Manual 06 — HIPAA Implementation and Audit",
       "path": "04-regulatory-compliance/HIPAA_Implementation_Series",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 6
     },

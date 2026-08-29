@@ -31,6 +31,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #142 at exact head 8cd6673d098fe489b7688bbe769fae576e92bc9a after localized figure-caption, control-line, and metadata defects were repaired; exact-head Manual 05 publication candidate, dedicated Manual 05 QA, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed. Current main retains the corrected package and SHA-256 evidence. Workflow 13 is lifecycle-aware so its legacy controlled-intake validator remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."
+    },
+    {
+      "id": "hipaa-implementation-series",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Corrected durable EN/es-419/pt-BR DOCX/PDF publication package was reconciled through PR #144 at exact head 3677eb5548a91ff962e8090a853f5234e1a131cc after localized control-line, figure-caption, and metadata defects were repaired. Exact-head Manual 06 publication-candidate, structure, trilingual parity, release-package, workflow-security, and release-pipeline meta checks passed; current main retains the corrected SHA-256-bound package. Workflow 14 is lifecycle-aware and enabled on main so the legacy HIPAA controlled-intake gate remains fail-closed after publication. Standing human release approval applied because verification was complete and no unresolved defects or material errors remained."
     }
   ]
 }

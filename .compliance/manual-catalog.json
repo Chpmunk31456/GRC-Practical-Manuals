@@ -111,8 +111,8 @@
       "id": "nist-ai-600-1",
       "title": "Manual 04 — NIST AI 600-1 Generative AI Profile Implementation",
       "path": "01-foundations/NIST_AI_600-1_Generative_AI_Profile",
-      "status": "development",
-      "release_state": "development",
+      "status": "published",
+      "release_state": "published",
       "layout": "controlled-build",
       "series_order": 4
     },

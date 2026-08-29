@@ -3,7 +3,7 @@ name: "26 - Manual 08 Publication Candidate"
 on:
   pull_request:
     branches:
-      - "build/ai-security-lifecycle-manual-07-2026"
+      - "main"
     paths:
       - ".github/workflows/26-manual08-publication-candidate.yml"
       - "07-third-party-risk/Vendor_Risk_Lifecycle/**"

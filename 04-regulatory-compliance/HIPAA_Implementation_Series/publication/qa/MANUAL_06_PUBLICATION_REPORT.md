@@ -1,6 +1,6 @@
 # Manual 06 Publication Processing Report
 
-- Controlled source head: `152d9d8520d40aab269e7760c73ea096e7ea90b6`
+- Controlled source head: `c4c1ecef7f19c72de42b2589c9d69c18e0f0647a`
 - Candidate languages: English (`en`), Latin American Spanish (`es-419`), Brazilian Portuguese (`pt-BR`)
 - Automated document-processing status: **PASS**
 - Release status: **QA CANDIDATE - human semantic/legal/accessibility/release controls remain authoritative**

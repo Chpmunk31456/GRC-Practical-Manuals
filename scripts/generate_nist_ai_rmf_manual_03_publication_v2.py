@@ -95,22 +95,20 @@ def layered_positions(order: list[str], edges: list[tuple[str, str, str]]):
     return depth, dict(sorted(layers.items()))
 
 
-def _draw_edge_label(draw, text: str, center_x: int, top_y: int, edge_font) -> None:
-    """Draw a readable edge label on an opaque background.
+def _draw_edge_label(draw, text: str, center_x: int, center_y: int, edge_font) -> None:
+    """Draw a complete readable edge label on an opaque background.
 
-    Edge labels are allowed to wrap to two lines so translated fan-out labels do
-    not overlap adjacent routing labels. The full controlled wording remains in
-    the Mermaid source and the document's accessible explanation.
+    Fan-out labels are centered above their destination node, giving each
+    translated route its own horizontal slot. Labels may wrap to multiple lines;
+    controlled wording is never truncated merely to fit the graphic.
     """
-    lines = base.wrap_text(draw, text, edge_font, 430)
-    if len(lines) > 2:
-        lines = lines[:2]
-    line_h = 24
+    lines = base.wrap_text(draw, text, edge_font, 480)
+    line_h = 22
     widths = [draw.textbbox((0, 0), line, font=edge_font)[2] for line in lines]
     box_w = max(widths, default=0) + 20
     box_h = max(line_h, len(lines) * line_h) + 8
     x1 = int(center_x - box_w / 2)
-    y1 = top_y
+    y1 = int(center_y - box_h / 2)
     x2 = x1 + box_w
     y2 = y1 + box_h
     draw.rounded_rectangle((x1, y1, x2, y2), radius=6, outline="#bbbbbb", width=1, fill="white")
@@ -127,7 +125,7 @@ def render_mermaid_memory_graphic(block: str, out_path: Path, title: str) -> str
     width = 1900
     margin_x = 90
     margin_top = 160
-    row_gap = 110
+    row_gap = 120
     box_h = 150
     layer_count = max(layers) + 1 if layers else 1
     height = max(650, margin_top + layer_count * (box_h + row_gap) + 100)
@@ -152,12 +150,6 @@ def render_mermaid_memory_graphic(block: str, out_path: Path, title: str) -> str
             x2 = cx + box_w // 2
             positions[node] = (x1, y, x2, y + box_h)
 
-    forward_edges_by_src: dict[str, list[tuple[str, str]]] = defaultdict(list)
-    for src, dst, edge_label in edges:
-        if depth.get(dst, 0) > depth.get(src, 0):
-            forward_edges_by_src[src].append((dst, edge_label))
-    forward_seen: dict[str, int] = defaultdict(int)
-
     # Edges first, so boxes remain legible on top of lines.
     right_lane = width - 35
     feedback_index = 0
@@ -168,22 +160,14 @@ def render_mermaid_memory_graphic(block: str, out_path: Path, title: str) -> str
         sx, sy = (a[0] + a[2]) // 2, a[3]
         tx, ty = (b[0] + b[2]) // 2, b[1]
         if depth.get(dst, 0) > depth.get(src, 0):
-            fanout_count = len(forward_edges_by_src.get(src, []))
-            fanout_index = forward_seen[src]
-            forward_seen[src] += 1
-            base_mid = sy + max(20, (ty - sy) // 2)
-            if fanout_count > 1:
-                # Stagger parallel fan-out edges vertically so translated labels
-                # have dedicated visual lanes instead of occupying one baseline.
-                offset = int((fanout_index - (fanout_count - 1) / 2) * 34)
-            else:
-                offset = 0
-            mid_y = max(sy + 18, min(ty - 18, base_mid + offset))
+            mid_y = sy + max(20, (ty - sy) // 2)
             draw.line([(sx, sy), (sx, mid_y), (tx, mid_y), (tx, ty)], fill="#333333", width=4)
             draw.polygon([(tx, ty), (tx - 12, ty - 20), (tx + 12, ty - 20)], fill="#333333")
             if edge_label:
-                center_x = int((sx + tx) / 2)
-                _draw_edge_label(draw, edge_label, center_x, mid_y - 58, edge_font)
+                # Center the label in the destination node's horizontal slot.
+                # This prevents sibling fan-out labels from colliding even when
+                # Spanish or Portuguese wording is substantially longer.
+                _draw_edge_label(draw, edge_label, tx, mid_y, edge_font)
         else:
             # Feedback/cycle edge: route outside the node field so the return
             # relationship is explicit and never looks like a forward step.

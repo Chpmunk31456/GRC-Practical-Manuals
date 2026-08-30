@@ -1,0 +1,91 @@
+name: "99 - TEMP Manual 12 Release Ledger Reconcile"
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - ".github/workflows/99-temp-manual12-release-ledger-reconcile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile-and-self-remove:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+      - name: Reconcile Manual 12 catalog and release registry
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path = Path('.compliance/manual-catalog.json')
+          releases_path = Path('.compliance/work-product-releases.json')
+          catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+          releases = json.loads(releases_path.read_text(encoding='utf-8'))
+
+          mid = 'ccpa-cpra-controlled'
+          entry = {
+              'id': mid,
+              'title': 'Manual 12 — CCPA / CPRA Controlled Implementation',
+              'path': '04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation',
+              'status': 'published',
+              'release_state': 'published',
+              'layout': 'controlled-build',
+              'series_order': 12,
+          }
+          manuals = catalog.setdefault('manuals', [])
+          existing = next((x for x in manuals if x.get('id') == mid), None)
+          if existing:
+              existing.update(entry)
+          else:
+              toolkit_index = next((i for i,x in enumerate(manuals) if x.get('id') == 'ai-governance-audit-toolkit'), len(manuals))
+              manuals.insert(toolkit_index, entry)
+          catalog['last_updated'] = '2026-08-30'
+
+          release_entry = {
+              'id': mid,
+              'type': 'manual',
+              'release_state': 'published',
+              'release_evidence': 'Manual 12 publication PR #174 merged to main at commit 1efb32cbcc244f528008bae2eb9fd52c040ee260 from exact candidate 0765b63e2b52c266322062482984779bed29e58a after all seven applicable exact-head workflows succeeded. Durable EN/es-419/pt-BR DOCX/PDF artifacts, page QA, SHA-256 checksums, publication report, provenance evidence, and standing owner release authorization are committed on main.'
+          }
+          products = releases.setdefault('released_work_products', [])
+          rex = next((x for x in products if x.get('id') == mid), None)
+          if rex:
+              rex.update(release_entry)
+          else:
+              products.append(release_entry)
+          releases['last_updated'] = '2026-08-30'
+
+          catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          releases_path.write_text(json.dumps(releases, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Validate reconciliation
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          c=json.loads(Path('.compliance/manual-catalog.json').read_text())
+          r=json.loads(Path('.compliance/work-product-releases.json').read_text())
+          assert any(x.get('id')=='ccpa-cpra-controlled' and x.get('status')=='published' and x.get('series_order')==12 for x in c['manuals'])
+          assert any(x.get('id')=='ccpa-cpra-controlled' and x.get('release_state')=='published' for x in r['released_work_products'])
+          PY
+      - name: Remove temporary workflow and commit deterministic reconciliation
+        shell: bash
+        run: |
+          rm .github/workflows/99-temp-manual12-release-ledger-reconcile.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .github/workflows/99-temp-manual12-release-ledger-reconcile.yml
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Reconcile Manual 12 publication ledger"
+          git push origin HEAD:main

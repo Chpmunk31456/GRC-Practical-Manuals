@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "sox-itgc-icfr-manual-13",
+  "last_verified": "2026-08-30",
+  "sources": [
+    {
+      "id": "sox-public-law-107-204",
+      "family": "U.S. Federal Law",
+      "title": "Sarbanes-Oxley Act of 2002 — Public Law 107-204",
+      "version": "Public Law 107-204; official GPO text",
+      "status": "in-force",
+      "source_type": "binding-law",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-107publ204/html/PLAW-107publ204.htm",
+      "last_verified": "2026-08-30",
+      "review_interval_days": 30,
+      "scope_note": "Primary statutory source for Sections 302 and 404 and related statutory context."
+    },
+    {
+      "id": "sec-icfr-management-report-final-rule-2003",
+      "family": "U.S. Securities Regulation",
+      "title": "Management's Report on Internal Control Over Financial Reporting and Certification of Disclosure in Exchange Act Periodic Reports",
+      "version": "SEC final rule implementing Section 404 management reporting requirements",
+      "status": "effective",
+      "source_type": "binding-regulation-and-adopting-release",
+      "url": "https://www.sec.gov/rules-regulations/2003/03/managements-report-internal-control-over-financial-reporting-certification-disclosure-exchange-act",
+      "last_verified": "2026-08-30",
+      "review_interval_days": 30
+    },
+    {
+      "id": "sec-icfr-management-guidance-current",
+      "family": "SEC Guidance",
+      "title": "SEC management guidance and staff materials on internal control over financial reporting",
+      "version": "current official SEC guidance set",
+      "status": "guidance",
+      "source_type": "official-guidance",
+      "url": "https://www.sec.gov/info/accountants/stafficreporting.htm",
+      "last_verified": "2026-08-30",
+      "review_interval_days": 30,
+      "boundary_note": "Guidance supports risk-based management evaluation but does not replace statutory or Commission-rule requirements."
+    },
+    {
+      "id": "pcaob-as-2201-current",
+      "family": "PCAOB Auditing Standards",
+      "title": "AS 2201 — An Audit of Internal Control Over Financial Reporting That Is Integrated with An Audit of Financial Statements",
+      "version": "current standard before amendments effective 2026-12-15",
+      "status": "effective",
+      "source_type": "auditing-standard",
+      "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201",
+      "last_verified": "2026-08-30",
+      "review_interval_days": 15,
+      "effective_date_watch": "PCAOB states adopted and SEC-approved amendments become effective 2026-12-15; release-time verification is mandatory."
+    },
+    {
+      "id": "pcaob-as-2201-2026-amended",
+      "family": "PCAOB Auditing Standards",
+      "title": "AS 2201 — amended standard effective 2026-12-15",
+      "version": "approved future-effective amendments",
+      "status": "approved-not-yet-effective",
+      "source_type": "future-effective-auditing-standard",
+      "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/as-2201--an-audit-of-internal-control-over-financial-reporting-that-is-integrated-with-an-audit-of-financial-statements-%28effective-on-12-15-2026%29",
+      "last_verified": "2026-08-30",
+      "review_interval_days": 15,
+      "effective_date": "2026-12-15"
+    }
+  ],
+  "control_boundary": "Manual 13 must distinguish binding federal law and SEC rules from SEC guidance, management evaluation responsibilities from external-auditor responsibilities, and the currently effective AS 2201 text from amendments approved but not effective until 2026-12-15. ITGC content must remain anchored to technology controls relevant to ICFR and financially significant systems rather than generic cybersecurity compliance."
+}

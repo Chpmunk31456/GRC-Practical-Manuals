@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "13",
+  "manual_title": "SOX ITGC / ICFR",
+  "control_state": "prepublication_fail_closed",
+  "purpose": "Machine-readable contract for validating required genuine-human review evidence without substituting automation for human judgment.",
+  "candidate_binding": {
+    "required": true,
+    "required_fields": [
+      "candidate_commit_sha",
+      "controlled_english_sha256",
+      "es_419_sha256",
+      "pt_br_sha256",
+      "rendered_docx_sha256",
+      "rendered_pdf_sha256",
+      "source_registry_sha256",
+      "baseline_record_sha256",
+      "generator_or_tooling_version"
+    ],
+    "material_change_rule": "A material content or rendering change after review begins invalidates only the affected review evidence and requires refreshed artifact hashes and re-review for those affected gates."
+  },
+  "review_evidence_required_fields": [
+    "reviewer_identity",
+    "review_date",
+    "candidate_commit_sha",
+    "artifact_hashes",
+    "decision",
+    "evidence_examined",
+    "findings",
+    "remediation",
+    "rereview_disposition"
+  ],
+  "allowed_decisions": [
+    "approved",
+    "approved_with_nonblocking_findings",
+    "changes_required",
+    "rejected"
+  ],
+  "required_reviews": [
+    {
+      "review_id": "sox_icfr_legal_audit_editorial",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "SOX Sections 302 and 404 treatment",
+        "SEC ICFR guidance treatment",
+        "management assessment versus auditor attestation",
+        "deficiency terminology and legal-audit boundaries",
+        "current-effective versus future-effective authority treatment"
+      ]
+    },
+    {
+      "review_id": "itgc_control_mapping_technical",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "ICFR-relevant ITGC versus generic cybersecurity boundary",
+        "entity-level, application, interface, report/IPE and ITGC dependencies",
+        "design versus operating effectiveness",
+        "evidence examples versus mandatory evidence claims"
+      ]
+    },
+    {
+      "review_id": "es_419_semantic_terminology",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "semantic fidelity to controlled English",
+        "legal and audit terminology",
+        "citations and control identifiers",
+        "locale-specific adaptations",
+        "no false authorized-translation claim"
+      ]
+    },
+    {
+      "review_id": "pt_br_semantic_terminology",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "semantic fidelity to controlled English",
+        "legal and audit terminology",
+        "citations and control identifiers",
+        "locale-specific adaptations",
+        "no false authorized-translation claim"
+      ]
+    },
+    {
+      "review_id": "rendered_accessibility_visual",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "heading hierarchy and reading order",
+        "table structure and repeated headers",
+        "figure-caption placement and alternative text",
+        "contrast and non-color-only meaning",
+        "link text and destination behavior",
+        "page breaks, clipping, overflow, orphaned headings and blank pages",
+        "locale and language metadata",
+        "headers, footers, page numbers, title and version consistency"
+      ]
+    },
+    {
+      "review_id": "changed_scope_reconciliation",
+      "human_judgment_required": true,
+      "automation_can_satisfy": false,
+      "status": "pending",
+      "scope": [
+        "final material-change inventory",
+        "affected-gate determination",
+        "review evidence remains bound to exact final candidate and artifact hashes",
+        "reopened gates are re-reviewed where required"
+      ]
+    }
+  ],
+  "standing_final_human_release_approval": {
+    "state": "green",
+    "scope": "release authorization only",
+    "substitutes_for_substantive_reviews": false
+  },
+  "publication_preconditions": {
+    "predecessor_manual_12_must_be_published": true,
+    "all_required_reviews_must_be_green": true,
+    "all_required_automated_exact_head_checks_must_be_green": true,
+    "durable_artifacts_checksums_manifest_and_provenance_required": true,
+    "catalog_and_release_registry_reconciliation_required": true
+  },
+  "fail_closed_rules": [
+    "Missing reviewer identity, review date, decision, evidence examined, findings, remediation, rereview disposition, candidate SHA, or required artifact hashes fails the corresponding review gate.",
+    "Automation may validate completeness and hash binding but may not generate or infer a human review decision.",
+    "A review bound to a superseded candidate or superseded material artifact hash does not satisfy the gate.",
+    "Publication order may not bypass Manual 12 unless repository policy explicitly changes."
+  ]
+}

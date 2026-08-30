@@ -22,6 +22,7 @@ core = base.core
 LANG_META = {
     "en": {
         "title": "Manual 13 - SOX ITGC / ICFR Controlled Implementation",
+        "word_lang": "en-US",
         "filename": "Manual_13_SOX_ITGC_ICFR_Controlled_Implementation_EN",
         "status": "CONTROLLED PUBLICATION QA CANDIDATE",
         "implementation_heading": "Implementation paths",
@@ -33,6 +34,7 @@ LANG_META = {
     },
     "es-419": {
         "title": "Manual 13 - Implementación Controlada SOX ITGC / ICFR",
+        "word_lang": "es-419",
         "filename": "Manual_13_SOX_ITGC_ICFR_Controlled_Implementation_ES-419",
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACION",
         "implementation_heading": "Rutas de implementación",
@@ -44,6 +46,7 @@ LANG_META = {
     },
     "pt-BR": {
         "title": "Manual 13 - Implementação Controlada SOX ITGC / ICFR",
+        "word_lang": "pt-BR",
         "filename": "Manual_13_SOX_ITGC_ICFR_Controlled_Implementation_PT-BR",
         "status": "CANDIDATO CONTROLADO PARA QA DE PUBLICACAO",
         "implementation_heading": "Caminhos de implementação",

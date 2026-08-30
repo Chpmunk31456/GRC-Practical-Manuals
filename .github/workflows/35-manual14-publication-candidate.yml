@@ -1,0 +1,56 @@
+name: "35 - Manual 14 Publication Candidate"
+
+on:
+  pull_request:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/35-manual14-publication-candidate.yml"
+      - "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/**"
+      - "scripts/generate_pci_dss_manual_14_publication.py"
+      - "scripts/pdf_content_preflight.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-stage-publication-package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out exact candidate branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - name: Install LibreOffice conversion dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
+      - name: Install publication dependencies
+        run: python3 -m pip install --disable-pip-version-check python-docx pymupdf
+      - name: Generate exact trilingual Manual 14 package
+        run: python3 scripts/generate_pci_dss_manual_14_publication.py
+      - name: Fail closed on generated PDF content
+        run: python3 scripts/pdf_content_preflight.py "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication"
+      - name: Stage exact generated binaries and provenance on feature branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication \
+                  04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/qa/MANUAL_14_PUBLICATION_REPORT.json \
+                  04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/qa/MANUAL_14_SHA256SUMS.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Stage exact Manual 14 publication candidate artifacts"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
+      - name: Upload candidate package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: manual14-publication-candidate
+          path: |
+            04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication
+            04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/qa
+          if-no-files-found: error
+          retention-days: 1

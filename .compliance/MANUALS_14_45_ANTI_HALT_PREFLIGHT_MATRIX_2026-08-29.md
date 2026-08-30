@@ -1,10 +1,10 @@
 # Manuals 14–45 — Anti-Halt Parallel Preflight Matrix
 
-**Status:** PRE-STAGE / RESEARCH-ARCHITECTURE ONLY / NOT RELEASE AUTHORIZATION  
-**Preflight date:** 2026-08-29  
-**Base:** current `main` after Manual 13 durable-candidate staging through PR #192. Manual 13 remains unpublished until its genuine-human substantive review gates are complete and catalog/release-registry/provenance are reconciled.  
+**Status:** ACTIVE PARALLEL PREFLIGHT / RESEARCH-ARCHITECTURE / NOT RELEASE AUTHORIZATION  
+**Preflight date:** 2026-08-29; live-state reconciliation: 2026-08-30  
+**Base:** current `main` after Manual 13 publication reconciliation through PR #194 and rolling downstream advancement through PR #201. **Manual 13 is published. Manual 14 is front-of-line.**  
 
-This matrix exists to eliminate idle cycle time while preserving sequential publication and fail-closed human-review controls. It does not claim that any downstream manual is release-ready. Each manual must later receive current authoritative-source verification, controlled build, exact-head QA, durable artifacts, provenance, workflow-security checks, localization, genuine-human semantic/editorial/accessibility review as applicable, changed-scope reconciliation, and sequential predecessor clearance.
+This matrix exists to eliminate idle cycle time while preserving sequential publication and fail-closed substantive controls. It does not claim that any downstream manual is release-ready. Each manual must later receive current authoritative-source verification, controlled build, exact-head QA, durable artifacts, provenance, workflow-security checks, localization, substantive review where explicitly required, changed-scope reconciliation, and sequential predecessor clearance.
 
 ## Shared preflight requirements for every downstream manual
 
@@ -15,7 +15,7 @@ This matrix exists to eliminate idle cycle time while preserving sequential publ
 5. Pre-stage es-419 and pt-BR terminology architecture without claiming semantic approval.
 6. Pre-stage accessible graphics requirements, text equivalents, captions, figure references, tables, links, metadata, language tags, bookmarks, reading order, and rendered-page QA criteria.
 7. Pre-stage publication package, manifest, SHA-256 checksums, provenance, exact-head checks, repository/workflow-security checks, and durable-artifact requirements.
-8. Retain genuine-human legal/editorial/technical, localization-semantic, accessibility/visual, and changed-scope gates wherever the repository control requires human judgment.
+8. Retain genuine-human legal/editorial/technical, localization-semantic, accessibility/visual, and changed-scope gates wherever the repository control explicitly requires human judgment.
 9. Publication order remains sequential; research/build work may proceed in parallel.
 
 ## Parallel queue and source-target preflight
@@ -55,13 +55,14 @@ This matrix exists to eliminate idle cycle time while preserving sequential publ
 | 44 | NIST SSDF / SP 800-218 | NIST SP 800-218 and official NIST secure-software resources | revision/version state; federal procurement overlays must be separately sourced |
 | 45 | Enterprise Compliance Training Capstone | authoritative sources already verified for Manuals 01–44 | no new legal equivalence claims; scenarios must preserve each source manual’s scope and jurisdiction boundaries |
 
-## Parallelization depth targets
+## Parallelization depth targets — reconciled 2026-08-30
 
-- **Manual 13:** human-review/release-reconciliation lane — exact durable binaries are staged at commit `9a57479a6b7dcc44f6b0e51c8c6600d10be85a7f`; complete the required genuine-human review decisions, then reconcile catalog/release-registry/provenance and final release evidence without mutating the reviewed binaries.
-- **Manual 14:** next-manual lane — source/version verification, controlled architecture, localization terminology, graphics/evidence preflight.
-- **Manual 15:** +2 lane — source mapping, architecture, evidence model and copyright boundaries.
-- **Manual 16:** +3 lane — ISO edition/amendment watch, architecture, copyright boundary and localization preflight.
-- **Manuals 17–20:** early-build/preflight lane — source inventory, version-watch, dependency mapping, shared tooling requirements.
+- **Manual 14:** front-of-line controlled build/release lane — PCI DSS source-state verification is active; complete controlled English source, localization, exact-head QA, rendered candidates, durable artifacts, provenance, and release reconciliation.
+- **Manual 15:** active QA lane behind Manual 14; no publication bypass.
+- **Manual 16:** active QA lane behind Manual 15; no publication bypass.
+- **Manual 17:** active controlled-build lane; no publication bypass.
+- **Manual 18:** next pre-stage lane — GLBA / FTC Safeguards Rule source inventory, regulator-overlap boundaries, amendment/effective-date watch, localization architecture, evidence model, and publication-preflight controls.
+- **Manuals 19–20:** early preflight lane — source inventory, version-watch, dependency mapping, shared tooling requirements.
 - **Manuals 21–30:** architecture/research lane — primary-source targets, jurisdiction/standard boundaries, graphics and evidence-model reuse.
 - **Manuals 31–45:** research/intake lane — regulatory/standards source targets, currency watch, localization/legal-risk notes and dependency lineage.
 

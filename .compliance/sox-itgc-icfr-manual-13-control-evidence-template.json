@@ -1,0 +1,64 @@
+{
+  "manual": "13",
+  "title": "SOX ITGC / ICFR Control-Evidence Traceability Template",
+  "status": "prepublication-template",
+  "purpose": "Provide a machine-readable, fail-closed structure for mapping Manual 13 control statements to authoritative sources, ICFR relevance, evidence examples, testing attributes, and review decisions without converting examples into mandatory legal requirements.",
+  "candidate_binding": {
+    "candidate_commit_sha": null,
+    "controlled_english_sha256": null,
+    "es_419_sha256": null,
+    "pt_br_sha256": null,
+    "rendered_artifact_sha256": [],
+    "generator_version_or_commit": null
+  },
+  "required_boundaries": {
+    "distinguish_icfr_itgc_from_generic_cybersecurity": true,
+    "distinguish_management_assessment_from_auditor_attestation": true,
+    "distinguish_design_from_operating_effectiveness": true,
+    "do_not_treat_examples_as_mandatory_evidence": true,
+    "do_not_infer_legal_conclusions_from_automation": true,
+    "future_effective_sources_must_not_be_treated_as_current": true
+  },
+  "control_record_schema": {
+    "control_id": "string",
+    "control_domain": "string",
+    "control_objective": "string",
+    "control_statement": "string",
+    "icfr_relevance": "direct|dependent|contextual|out_of_scope",
+    "financial_reporting_dependency": "string|null",
+    "authoritative_source_refs": ["source_registry_id"],
+    "framework_reference_refs": ["non_authoritative_supporting_reference_id"],
+    "control_type": "entity_level|itgc|automated_application|manual_application|interface|ipe_report|other",
+    "frequency": "string|null",
+    "owner_role": "string|null",
+    "design_effectiveness_attributes": ["string"],
+    "operating_effectiveness_attributes": ["string"],
+    "evidence_examples": ["string"],
+    "evidence_boundary_note": "Evidence examples are illustrative unless an authoritative requirement explicitly states otherwise.",
+    "population_or_sample_basis": "string|null",
+    "exceptions_or_findings": ["string"],
+    "remediation_reference": "string|null",
+    "review_status": "unreviewed|reviewed|changes_required|accepted",
+    "reviewer": "string|null",
+    "review_date": "YYYY-MM-DD|null",
+    "reviewed_candidate_sha": "string|null"
+  },
+  "minimum_control_domains": [
+    "access_to_programs_and_data",
+    "program_changes",
+    "program_development_or_acquisition",
+    "computer_operations",
+    "interfaces_and_data_transfers",
+    "reports_and_information_produced_by_entity",
+    "automated_application_control_dependencies",
+    "entity_level_it_dependencies"
+  ],
+  "release_gate": {
+    "require_authoritative_source_resolution": true,
+    "require_human_itgc_control_mapping_review": true,
+    "require_human_sox_icfr_legal_audit_editorial_review": true,
+    "require_exact_candidate_hash_binding": true,
+    "require_changed_scope_reconciliation_after_material_change": true,
+    "automation_cannot_mark_human_review_complete": true
+  }
+}

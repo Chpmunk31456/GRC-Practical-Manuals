@@ -2,7 +2,7 @@
 
 **Status:** PRE-STAGE / RESEARCH-ARCHITECTURE ONLY / NOT RELEASE AUTHORIZATION  
 **Preflight date:** 2026-08-29  
-**Base:** current published `main` after Manual 11  
+**Base:** current `main` after the Manual 13 publication transaction; Manual 13 remains unreconciled until durable artifacts and catalog/release-registry evidence are complete.  
 
 This matrix exists to eliminate idle cycle time while preserving sequential publication and fail-closed human-review controls. It does not claim that any downstream manual is release-ready. Each manual must later receive current authoritative-source verification, controlled build, exact-head QA, durable artifacts, provenance, workflow-security checks, localization, genuine-human semantic/editorial/accessibility review as applicable, changed-scope reconciliation, and sequential predecessor clearance.
 
@@ -57,11 +57,11 @@ This matrix exists to eliminate idle cycle time while preserving sequential publ
 
 ## Parallelization depth targets
 
-- **Manual 12:** release lane — exact-head candidate, blocker resolution, human-review packet, durable artifacts, final source-state check.
-- **Manual 13:** next-manual lane — authoritative-source mapping and architecture already started; advance toward reviewer-ready controlled build.
-- **Manual 14:** +2 lane — source/version verification, architecture, localization terminology, graphics/evidence preflight.
-- **Manual 15:** +3 lane — source mapping, architecture, evidence model and copyright boundaries.
-- **Manuals 16–20:** early-build/preflight lane — source inventory, version-watch, dependency mapping, shared tooling requirements.
+- **Manual 13:** release-reconciliation lane — durable DOCX/PDF artifacts, catalog/release-registry/provenance reconciliation, exact-head integrity checks.
+- **Manual 14:** next-manual lane — source/version verification, controlled architecture, localization terminology, graphics/evidence preflight.
+- **Manual 15:** +2 lane — source mapping, architecture, evidence model and copyright boundaries.
+- **Manual 16:** +3 lane — ISO edition/amendment watch, architecture, copyright boundary and localization preflight.
+- **Manuals 17–20:** early-build/preflight lane — source inventory, version-watch, dependency mapping, shared tooling requirements.
 - **Manuals 21–30:** architecture/research lane — primary-source targets, jurisdiction/standard boundaries, graphics and evidence-model reuse.
 - **Manuals 31–45:** research/intake lane — regulatory/standards source targets, currency watch, localization/legal-risk notes and dependency lineage.
 

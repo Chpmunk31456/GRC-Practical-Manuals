@@ -45,7 +45,7 @@ def main() -> None:
     source_ids = {s.get("id") for s in sources.get("sources", [])}
     required = set(baseline.get("required_source_ids", []))
     if not required.issubset(source_ids):
-        fail(f"missing required authoritative sources: {sorted(required-source_ids)}")
+        fail(f"missing required authoritative sources: {sorted(required - source_ids)}")
 
     future = next((s for s in sources.get("sources", []) if s.get("id") == "pcaob-as-2201-2026-amended"), None)
     if not future or future.get("status") != "approved-not-yet-effective" or future.get("effective_date") != "2026-12-15":

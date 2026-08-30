@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 12 - CCPA / CPRA California Privacy Controlled Implementation",
+  "source_head": "93d5831ff3bd2349eb4973e3a77a8bd3d301c1d4",
+  "source_branch": "build/ccpa-cpra-manual-12-2026",
+  "assurance_boundary": "Automated QA supports document integrity and review; it does not provide organization-specific legal advice, establish CCPA/CPRA compliance, determine applicability/exemptions/risk-assessment sufficiency/cybersecurity-audit scope/ADMT coverage/liability, or replace competent California privacy/legal review.",
+  "editions": {
+    "en": {
+      "chapter_sources": [
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/English/source/01_FOUNDATIONS_CHAPTERS_01_08.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/English/source/02_NOTICES_RIGHTS_OPT_OUT_CHAPTERS_09_16.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/English/source/03_RISK_SECURITY_ADMT_THIRD_PARTIES_CHAPTERS_17_24.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/English/source/04_RETENTION_DATA_BROKERS_ENFORCEMENT_CHAPTERS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/MANUAL_12_IMPLEMENTATION_PATHS.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_EN.docx",
+          "bytes": 172122,
+          "paragraphs": 165,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 20480,
+          "source_completeness_floor_chars": 15202,
+          "sha256": "5fa4df219aefc5b3f97812ccd7cc9be3a3392675371064b0dfa2f32471eed241",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_EN.pdf",
+          "bytes": 261793,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 12 - CCPA / CPRA California Privacy Controlled Implementation",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 12 controlled publication-QA artifact; language en; source head 93d5831ff3bd2349eb4973e3a77a8bd3d301c1d4",
+            "keywords": "CCPA, CPRA, CPPA, California, privacy, consumer, rights, opt-out, sensitive, personal, information, risk, assessment, cybersecurity, audit, ADMT, DROP, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260830120920Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "761b07e4021c831e63d5ace792960ae3f1a8c6fad8fd8c981aa1d78d157a839f",
+          "status": "PASS"
+        }
+      }
+    },
+    "es-419": {
+      "chapter_sources": [
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Spanish_es-419/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Spanish_es-419/source/02_AVISOS_DERECHOS_OPT_OUT_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Spanish_es-419/source/03_RIESGO_SEGURIDAD_ADMT_TERCEROS_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Spanish_es-419/source/04_RETENCION_CORREDORES_DATOS_CUMPLIMIENTO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Spanish_es-419/source/RUTAS_DE_IMPLEMENTACION_MANUAL_12.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_ES-419.docx",
+          "bytes": 175047,
+          "paragraphs": 166,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 24621,
+          "source_completeness_floor_chars": 17977,
+          "sha256": "9b0d7e07f35b39f4c19daa14c345262ba2e5679225ffed71e1145894af5054fd",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_ES-419.pdf",
+          "bytes": 288355,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 12 - Implementación Controlada de Privacidad de California CCPA / CPRA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 12 controlled publication-QA artifact; language es-419; source head 93d5831ff3bd2349eb4973e3a77a8bd3d301c1d4",
+            "keywords": "CCPA, CPRA, CPPA, California, privacy, consumer, rights, opt-out, sensitive, personal, information, risk, assessment, cybersecurity, audit, ADMT, DROP, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260830120922Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "194072b9edf9b831fdbe1cb9c2c6b51758e3ca36343a55d267589b23628bf1f6",
+          "status": "PASS"
+        }
+      }
+    },
+    "pt-BR": {
+      "chapter_sources": [
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Portuguese_pt-BR/source/01_FUNDAMENTOS_CAPITULOS_01_08.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Portuguese_pt-BR/source/02_AVISOS_DIREITOS_OPT_OUT_CAPITULOS_09_16.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Portuguese_pt-BR/source/03_RISCO_SEGURANCA_ADMT_TERCEIROS_CAPITULOS_17_24.md",
+        "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Portuguese_pt-BR/source/04_RETENCAO_DATA_BROKERS_FISCALIZACAO_CAPITULOS_25_32.md"
+      ],
+      "implementation_source": "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation/Portuguese_pt-BR/source/CAMINHOS_DE_IMPLEMENTACAO_MANUAL_12.md",
+      "chapter_count": 32,
+      "mermaid_source_blocks": 3,
+      "artifacts": {
+        "graphics": 3,
+        "docx": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_PT-BR.docx",
+          "bytes": 171880,
+          "paragraphs": 166,
+          "tables": 0,
+          "inline_shapes": 3,
+          "alt_text_entries": 3,
+          "chapter_count": 32,
+          "normalized_text_chars": 23816,
+          "source_completeness_floor_chars": 17372,
+          "sha256": "6af5da369bc3f6699a42ac247b0cfd9d96da87fddac301ed2d9eb27ba610fe51",
+          "status": "PASS"
+        },
+        "pdf": {
+          "file": "Manual_12_CCPA_CPRA_California_Privacy_Controlled_Implementation_PT-BR.pdf",
+          "bytes": 285999,
+          "pages": 10,
+          "metadata": {
+            "format": "PDF 1.7",
+            "title": "Manual 12 - Implementação Controlada de Privacidade da Califórnia CCPA / CPRA",
+            "author": "Alberto (Al) Leiva",
+            "subject": "Manual 12 controlled publication-QA artifact; language pt-BR; source head 93d5831ff3bd2349eb4973e3a77a8bd3d301c1d4",
+            "keywords": "CCPA, CPRA, CPPA, California, privacy, consumer, rights, opt-out, sensitive, personal, information, risk, assessment, cybersecurity, audit, ADMT, DROP, evidence",
+            "creator": "Writer",
+            "producer": "LibreOffice 24.2",
+            "creationDate": "D:20260830120924Z'",
+            "modDate": "",
+            "trapped": "",
+            "encryption": null
+          },
+          "sha256": "9afccc9087b9099f36a17b9feaa0a46f99a47a286d155979ef09d5da7abe31d9",
+          "status": "PASS"
+        }
+      }
+    }
+  }
+}

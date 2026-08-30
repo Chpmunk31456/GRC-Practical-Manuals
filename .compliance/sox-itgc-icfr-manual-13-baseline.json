@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "sox-itgc-icfr-manual-13",
+  "title": "Manual 13 — SOX ITGC, ICFR and Technology Controls",
+  "series_order": 13,
+  "status": "preflight",
+  "layout": "controlled-build",
+  "controlled_source_language": "en",
+  "planned_publication_languages": ["en", "es-419", "pt-BR"],
+  "required_source_ids": [
+    "sox-public-law-107-204",
+    "sec-icfr-management-report-final-rule-2003",
+    "sec-icfr-management-guidance-current",
+    "pcaob-as-2201-current",
+    "pcaob-as-2201-2026-amended"
+  ],
+  "required_topics": [
+    "SOX Sections 302 and 404 statutory context",
+    "SEC ICFR management reporting requirements",
+    "scope applicability filer status and attestation boundaries",
+    "ICFR governance accountability and certification support",
+    "financial statement risk assertions and significant accounts",
+    "entity-level controls",
+    "IT general controls relevant to ICFR",
+    "automated application and configurable controls",
+    "reports interfaces spreadsheets end-user computing and data lineage",
+    "identity and access controls relevant to ICFR",
+    "change management and SDLC controls relevant to ICFR",
+    "computer operations backups scheduling and incident effects on ICFR",
+    "third-party and service-organization dependencies",
+    "control design and operating effectiveness",
+    "evidence design retention reproducibility and audit trail",
+    "testing strategy sampling and reliance boundaries",
+    "control deficiency significant deficiency and material weakness evaluation",
+    "remediation retesting and change-triggered reassessment",
+    "management and external-auditor responsibility separation",
+    "cloud SaaS modern architecture and financially relevant AI automation",
+    "essential structured and enhanced implementation paths",
+    "scenario exercises practitioner evidence and assessment questions"
+  ],
+  "required_boundaries": [
+    "SOX and SEC requirements versus SEC staff or interpretive guidance",
+    "management assessment versus external auditor attestation",
+    "ICFR-relevant ITGCs versus generic cybersecurity controls",
+    "currently effective PCAOB AS 2201 versus amendments effective 2026-12-15",
+    "recognized control framework versus statute or SEC rule",
+    "no legal audit certification or compliance guarantee",
+    "human legal audit editorial and materiality judgment retained"
+  ],
+  "training_grade": true,
+  "release_controls": [
+    "authoritative source verification",
+    "release-time effective-date verification",
+    "controlled English master",
+    "technical legal audit and editorial human review",
+    "control-mapping and evidence human review",
+    "es-419 localization and human semantic review",
+    "pt-BR localization and human semantic review",
+    "graphics accessibility and rendered visual human review",
+    "DOCX PDF publication QA",
+    "repository and workflow security review",
+    "manifest checksums provenance and durable artifacts",
+    "exact-head changed-scope reconciliation",
+    "Final Human Release Approval"
+  ],
+  "time_sensitive_watch": {
+    "source_id": "pcaob-as-2201-2026-amended",
+    "effective_date": "2026-12-15",
+    "rule": "Do not represent the 2026 amendments as currently effective before 2026-12-15; reverify exact PCAOB and SEC status at release-candidate time."
+  }
+}

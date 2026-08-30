@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "manual_id": "sox-itgc-icfr-manual-13",
+  "generated_on": "2026-08-30",
+  "purpose": "Fail-closed release-time freshness and effective-date watch for Manual 13 authoritative sources.",
+  "release_gate": {
+    "required": true,
+    "rule": "Before promotion from preflight to release candidate, re-verify every authoritative source against its official publisher and record the verification date, observed status, and any material change. Do not treat future-effective text as current before its effective date.",
+    "material_change_action": "Reopen affected source, legal/editorial, control-mapping, localization, changed-scope, and rendered-document gates as applicable."
+  },
+  "watch_items": [
+    {
+      "source_id": "sox-public-law-107-204",
+      "publisher": "U.S. Government Publishing Office / GovInfo",
+      "current_status": "in-force",
+      "verification_due_at_release": true
+    },
+    {
+      "source_id": "sec-icfr-management-report-final-rule-2003",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "current_status": "effective",
+      "verification_due_at_release": true
+    },
+    {
+      "source_id": "sec-icfr-management-guidance-current",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "current_status": "guidance",
+      "verification_due_at_release": true,
+      "boundary": "Guidance supports management's risk-based ICFR evaluation but does not replace statutory or Commission-rule requirements."
+    },
+    {
+      "source_id": "pcaob-as-2201-current",
+      "publisher": "Public Company Accounting Oversight Board",
+      "current_status": "effective-current-text",
+      "verification_due_at_release": true,
+      "effective_date_watch": "2026-12-15",
+      "boundary": "Use the currently effective AS 2201 text for releases before 2026-12-15 unless PCAOB or SEC status changes."
+    },
+    {
+      "source_id": "pcaob-as-2201-2026-amended",
+      "publisher": "Public Company Accounting Oversight Board",
+      "current_status": "approved-not-yet-effective",
+      "effective_date": "2026-12-15",
+      "verification_due_at_release": true,
+      "activation_rule": "On or after 2026-12-15, require explicit re-verification before treating the amended standard as current-effective text."
+    }
+  ],
+  "evidence_requirements": [
+    "official_source_url",
+    "verification_date",
+    "observed_version_or_status",
+    "reviewer_or_verifier_identity",
+    "material_change_assessment",
+    "affected_gate_reopen_decision"
+  ]
+}

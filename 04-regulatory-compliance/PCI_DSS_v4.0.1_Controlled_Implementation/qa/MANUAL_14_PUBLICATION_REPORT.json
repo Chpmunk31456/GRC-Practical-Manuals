@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 14 - PCI DSS v4.0.1 Controlled Implementation",
+  "release_state": "publication-candidate",
+  "languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "editions": [
+    {
+      "language": "en",
+      "source": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/English/source/CONTROLLED_CHAPTERS_01_32.md",
+      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/en/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_EN.docx",
+      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/en/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_EN.pdf",
+      "docx_sha256": "61335a1396921b01c739def895a5d55c9e2aedd513872f400588bd640fb6bb8c",
+      "pdf_sha256": "92e5cc017b6bcd426e91c6bad2eae8058b1af46a044dce2043d05b1eb7d3cb4d"
+    },
+    {
+      "language": "es-419",
+      "source": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/Spanish_es-419/source/CAPITULOS_CONTROLADOS_01_32.md",
+      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/es-419/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_ES-419.docx",
+      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/es-419/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_ES-419.pdf",
+      "docx_sha256": "0c84cc7890f8bbdb891d55a994342d128dae030cffa8c11628c8d316fc3d0825",
+      "pdf_sha256": "cab6999c5b7365bddd4d2fc97d15490907b6b2c74d1a345a130cdd3b79f0ac25"
+    },
+    {
+      "language": "pt-BR",
+      "source": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/Portuguese_pt-BR/source/CAPITULOS_CONTROLADOS_01_32.md",
+      "docx": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/pt-BR/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_PT-BR.docx",
+      "pdf": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation/publication/pt-BR/Manual_14_PCI_DSS_v4.0.1_Controlled_Implementation_PT-BR.pdf",
+      "docx_sha256": "a135cad00c4db1f699fe6d4c93a719a7236b4f206672716c3a42318213832412",
+      "pdf_sha256": "67475a01ebdb51dfd3813a1538aab57df62e96edc20f8efa41bee31ecb08f84c"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 **Status:** PRE-STAGE / RESEARCH-ARCHITECTURE ONLY / NOT RELEASE AUTHORIZATION  
 **Preflight date:** 2026-08-29  
-**Base:** current `main` after the Manual 13 publication transaction; Manual 13 remains unreconciled until durable artifacts and catalog/release-registry evidence are complete.  
+**Base:** current `main` after Manual 13 durable-candidate staging through PR #192. Manual 13 remains unpublished until its genuine-human substantive review gates are complete and catalog/release-registry/provenance are reconciled.  
 
 This matrix exists to eliminate idle cycle time while preserving sequential publication and fail-closed human-review controls. It does not claim that any downstream manual is release-ready. Each manual must later receive current authoritative-source verification, controlled build, exact-head QA, durable artifacts, provenance, workflow-security checks, localization, genuine-human semantic/editorial/accessibility review as applicable, changed-scope reconciliation, and sequential predecessor clearance.
 
@@ -57,7 +57,7 @@ This matrix exists to eliminate idle cycle time while preserving sequential publ
 
 ## Parallelization depth targets
 
-- **Manual 13:** release-reconciliation lane — durable DOCX/PDF artifacts, catalog/release-registry/provenance reconciliation, exact-head integrity checks.
+- **Manual 13:** human-review/release-reconciliation lane — exact durable binaries are staged at commit `9a57479a6b7dcc44f6b0e51c8c6600d10be85a7f`; complete the required genuine-human review decisions, then reconcile catalog/release-registry/provenance and final release evidence without mutating the reviewed binaries.
 - **Manual 14:** next-manual lane — source/version verification, controlled architecture, localization terminology, graphics/evidence preflight.
 - **Manual 15:** +2 lane — source mapping, architecture, evidence model and copyright boundaries.
 - **Manual 16:** +3 lane — ISO edition/amendment watch, architecture, copyright boundary and localization preflight.

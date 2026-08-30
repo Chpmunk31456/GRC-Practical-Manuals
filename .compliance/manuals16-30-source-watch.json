@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "status": "preflight-only-fail-closed",
+  "publication_order": "sequential",
+  "standing_final_human_release_approval": "green",
+  "human_review_substitution_prohibited": true,
+  "release_requirements": {
+    "source_freshness_reverification_required": true,
+    "effective_date_reverification_required": true,
+    "exact_candidate_hash_binding_required": true,
+    "exact_artifact_hash_binding_required": true,
+    "durable_provenance_required": true,
+    "workflow_security_required": true,
+    "predecessor_publication_required": true,
+    "genuine_human_substantive_reviews_required_where_documented": true
+  },
+  "manuals": [
+    {"manual":16,"topic":"ISO/IEC 27001 & 27002","authoritative_targets":["ISO official standard records","authorized ISO/IEC guidance"],"watch":["edition/amendment state","copyright boundary","implementation vs certification distinction"]},
+    {"manual":17,"topic":"NIST Privacy Framework","authoritative_targets":["NIST Privacy Framework official publication","NIST implementation resources"],"watch":["framework version currency","transition to newer NIST privacy guidance"]},
+    {"manual":18,"topic":"GLBA / FTC Safeguards Rule","authoritative_targets":["official statutory text","FTC Safeguards Rule","FTC official guidance"],"watch":["institution scope","regulator overlap","amendments and effective dates"]},
+    {"manual":19,"topic":"FedRAMP / FISMA","authoritative_targets":["FedRAMP official authorization requirements","NIST RMF and SP 800-53 sources","OMB/CISA/Federal policy as applicable"],"watch":["FedRAMP revision migration","agency policy vs statutory distinction"]},
+    {"manual":20,"topic":"CIS Controls","authoritative_targets":["Center for Internet Security current CIS Controls publication","official implementation resources"],"watch":["current control version","safeguard mapping drift"]},
+    {"manual":21,"topic":"OT/ICS Security","authoritative_targets":["NIST SP 800-82 current revision","ISA/IEC 62443 official records"],"watch":["industrial safety boundary","copyrighted IEC text","sector overlays"]},
+    {"manual":22,"topic":"Cloud Security","authoritative_targets":["Cloud Security Alliance CCM official current release","authoritative cloud-control references"],"watch":["CCM version drift","provider mappings as implementation aids only"]},
+    {"manual":23,"topic":"DORA","authoritative_targets":["EUR-Lex Regulation (EU) 2022/2554","delegated and implementing acts","ESA official materials"],"watch":["regulatory technical standards","implementing-act evolution"]},
+    {"manual":24,"topic":"NIS2","authoritative_targets":["EUR-Lex Directive (EU) 2022/2555","official national transposition sources when jurisdiction-specific"],"watch":["directive vs national transposition","member-state divergence"]},
+    {"manual":25,"topic":"ISO 22301","authoritative_targets":["ISO official ISO 22301 record","authorized related references"],"watch":["edition/amendment state","copyright boundary"]},
+    {"manual":26,"topic":"Incident Response & Cyber Crisis Management","authoritative_targets":["NIST incident-response guidance","CISA resources","applicable regulator requirements by context"],"watch":["voluntary guidance must not be represented as universally mandatory"]},
+    {"manual":27,"topic":"Data Governance & Privacy Engineering","authoritative_targets":["NIST privacy engineering and risk resources","applicable privacy-authority sources","recognized governance references"],"watch":["governance practice vs jurisdiction-specific legal obligation"]},
+    {"manual":28,"topic":"AI Privacy & Automated Decision Governance","authoritative_targets":["EU AI Act / EUR-Lex","privacy regulators","NIST AI RMF and GenAI Profile","jurisdictional automated-decision rules"],"watch":["rapid ADMT/AI rule change","exact-date jurisdiction verification"]},
+    {"manual":29,"topic":"Software / AI Supply Chain and Component Assurance","authoritative_targets":["NIST SSDF","CISA secure-by-design and supply-chain resources","NTIA/SBOM sources","applicable AI supply-chain guidance"],"watch":["SBOM/AI-BOM terminology","evolving federal guidance"]},
+    {"manual":30,"topic":"Enterprise GRC Integration & Crosswalks","authoritative_targets":["source manuals","original authoritative frameworks referenced by each crosswalk"],"watch":["no legal equivalence claim","no certification claim","no full-control-equivalence claim"]}
+  ]
+}

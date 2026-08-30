@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-29",
+  "last_updated": "2026-08-30",
   "languages": ["en", "es-419", "pt-BR"],
   "publication_formats": ["md", "docx", "pdf"],
   "manuals": [
@@ -26,6 +26,7 @@
     {"id":"nist-csf-2-controlled","title":"Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation","path":"01-foundations/NIST_CSF_2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":9},
     {"id":"nist-rmf-800-53-controlled","title":"Manual 10 — NIST RMF and SP 800-53 Controlled Implementation","path":"01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":10},
     {"id":"gdpr-controlled","title":"Manual 11 — GDPR Privacy and Data Protection Controlled Implementation","path":"04-regulatory-compliance/GDPR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":11},
+    {"id":"ccpa-cpra-controlled","title":"Manual 12 — CCPA / CPRA California Privacy Controlled Implementation","path":"04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":12},
     {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
   ]
 }

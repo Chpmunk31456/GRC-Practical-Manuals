@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT/'.compliance/ccpa-cpra-manual-12-baseline.json'
 SOURCES = ROOT/'.compliance/ccpa-cpra-manual-12-sources.json'
 CAT = ROOT/'.compliance/manual-catalog.json'
+RELEASES = ROOT/'.compliance/work-product-releases.json'
 MAN = ROOT/'04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation'
 WF = ROOT/'.github/workflows/31-ccpa-cpra-manual-12-qa.yml'
 ENGLISH = [
@@ -29,7 +30,7 @@ def chapters(text): return [int(x) for x in re.findall(r'(?mi)^##\s+Chapter\s+(\
 def main():
     errors=[]
     try:
-        base,sources,cat=load(BASE),load(SOURCES),load(CAT)
+        base,sources,cat,releases=load(BASE),load(SOURCES),load(CAT),load(RELEASES)
     except Exception as exc:
         print(f'FAIL: {exc}'); return 1
     if base.get('manual_id')!='ccpa-cpra-controlled-manual-12': errors.append('unexpected manual id')
@@ -66,19 +67,32 @@ def main():
     if paths.count('**Accessible explanation:**')!=3: errors.append('each graphic requires accessible explanation')
 
     entries=[x for x in cat.get('manuals',[]) if x.get('id')=='ccpa-cpra-controlled']
+    release_entries=[x for x in releases.get('released_work_products',[]) if x.get('id')=='ccpa-cpra-controlled']
     release_stage=os.environ.get('MANUAL12_RELEASE_STAGE','repository').strip().lower()
-    if release_stage=='candidate':
-        if len(entries)>1:
-            errors.append('catalog entry duplicated')
-        elif len(entries)==1:
-            row=entries[0]
-            if row.get('status')!='development' or row.get('layout')!='controlled-build' or row.get('series_order')!=12:
-                errors.append('candidate catalog entry invalid')
-    else:
-        if len(entries)!=1:
-            errors.append('catalog entry missing or duplicated')
-        elif entries[0].get('status')!='development' or entries[0].get('layout')!='controlled-build' or entries[0].get('series_order')!=12:
-            errors.append('catalog entry invalid')
+    if len(entries)>1:
+        errors.append('catalog entry duplicated')
+    elif len(entries)==1:
+        row=entries[0]
+        if row.get('layout')!='controlled-build' or row.get('series_order')!=12:
+            errors.append('catalog entry structural fields invalid')
+        status=row.get('status')
+        if status=='development':
+            if row.get('release_state') not in (None,'development'):
+                errors.append('development catalog entry has inconsistent release_state')
+        elif status=='published':
+            if row.get('release_state')!='published':
+                errors.append('published catalog entry must declare release_state published')
+            if len(release_entries)!=1 or release_entries[0].get('release_state')!='published':
+                errors.append('published catalog entry requires matching published release-registry evidence')
+        else:
+            errors.append(f'unsupported catalog lifecycle status: {status}')
+    elif release_stage!='candidate':
+        errors.append('catalog entry missing')
+
+    if len(release_entries)>1:
+        errors.append('release-registry entry duplicated')
+    if len(entries)==1 and entries[0].get('status')=='development' and release_entries:
+        errors.append('development catalog state must not have published release-registry entry')
 
     if not WF.is_file(): errors.append('workflow missing')
     else:

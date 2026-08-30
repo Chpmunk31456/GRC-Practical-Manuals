@@ -9,20 +9,24 @@ This template does not constitute a human review, approval, or release decision.
 
 ## 1. Exact candidate binding
 
-Populate only when the review candidate is frozen:
+The QA-passed publication-candidate workflow artifact is now cryptographically bound below. The candidate commit remains **PENDING** until these exact bytes are durably staged in the publication path on a repository head. Do not regenerate, resave, print-to-PDF, or otherwise transform these binaries while staging them.
 
-- Candidate commit SHA: **PENDING**
+- Candidate commit SHA: **PENDING — bind only after exact validated bytes are durably staged**
+- Validated publication-candidate workflow run: **33330513993**
+- Validated publication-candidate artifact ID: **9737505864**
 - English controlled-source tree/hash: **PENDING**
 - es-419 controlled-source tree/hash: **PENDING**
 - pt-BR controlled-source tree/hash: **PENDING**
-- EN DOCX SHA-256: **PENDING**
-- EN PDF SHA-256: **PENDING**
-- es-419 DOCX SHA-256: **PENDING**
-- es-419 PDF SHA-256: **PENDING**
-- pt-BR DOCX SHA-256: **PENDING**
-- pt-BR PDF SHA-256: **PENDING**
+- EN DOCX SHA-256: `e30a7125c6a611b084f21ab9a8f3a60cd2a9934dc2a9128d976d8917b179d240`
+- EN PDF SHA-256: `637f8122d361abdecb7b07f9f67069d3e735ff261b3f6524ed5981fde556e4eb`
+- es-419 DOCX SHA-256: `b05b8bd88f7bc355ba56a8e8f9c4637fcab357017c601535d5578854bf322d9e`
+- es-419 PDF SHA-256: `e3ceaeb100bee6285d3b5e4c61bbfa2241bf25f0de308e47893a49277ac49aca`
+- pt-BR DOCX SHA-256: `41febef509b451d8eca3b900f60f4fea75e4537d2c2bd218aefcb9447fd8da5e`
+- pt-BR PDF SHA-256: `75811ddc5912585983ac198d4938ceace361d3662e401a8e511b453d7a62760c`
 - Publication-package / manifest SHA-256: **PENDING**
 - Source-verification record hash: **PENDING**
+
+Fail closed on byte drift. A repository upload that differs from any validated SHA-256 above is not the candidate and must not be merged merely because its filename, rendered appearance, or source content appears equivalent.
 
 Any material change after a review decision must identify affected scopes and reopen those gates only.
 

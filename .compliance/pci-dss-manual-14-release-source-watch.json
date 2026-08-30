@@ -1,0 +1,41 @@
+{
+  "manual": "14",
+  "title": "PCI DSS Release-Time Source Watch",
+  "status": "prepublication",
+  "baseline": {
+    "standard": "PCI DSS",
+    "version": "4.0.1",
+    "publisher": "PCI Security Standards Council",
+    "published_date": "2024-06-11",
+    "release_time_reverification_required": true
+  },
+  "official_sources": [
+    "https://www.pcisecuritystandards.org/",
+    "https://blog.pcisecuritystandards.org/just-published-pci-dss-v4-0-1",
+    "https://blog.pcisecuritystandards.org/request-for-comments-pci-data-security-standard-pci-dss-v4.0.1",
+    "https://www.pcisecuritystandards.org/es/document_library/",
+    "https://www.pcisecuritystandards.org/pt/document_library/"
+  ],
+  "release_checks": [
+    "Verify whether PCI DSS v4.0.1 remains the currently published standard.",
+    "Verify whether any successor standard or revision has become effective.",
+    "Verify current validation/supporting-document versions used by SAQ, ROC and AOC workflows.",
+    "Keep RFC, draft and future-change material non-normative until formally published and effective.",
+    "Verify Spanish and Portuguese official-library status and preserve English-prevails boundary where stated by PCI SSC.",
+    "Record verification date, reviewer, source URL, source title, version/effective date and disposition."
+  ],
+  "fail_closed_conditions": [
+    "current_version_unverified",
+    "successor_or_effective_date_ambiguity",
+    "draft_or_rfc_text_treated_as_current_requirement",
+    "validation_instrument_conflated_with_security_requirement",
+    "translation_authority_or_precedence_unclear"
+  ],
+  "candidate_binding": {
+    "candidate_commit_sha": null,
+    "source_registry_sha256": null,
+    "controlled_english_sha256": null,
+    "es_419_sha256": null,
+    "pt_br_sha256": null
+  }
+}

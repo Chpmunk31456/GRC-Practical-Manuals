@@ -1,0 +1,1 @@
+Manual 12 publication branch. Publication remains sequential after Manual 11. Durable trilingual artifacts, QA evidence, checksums, provenance, catalog and release-registry reconciliation must be complete before merge.

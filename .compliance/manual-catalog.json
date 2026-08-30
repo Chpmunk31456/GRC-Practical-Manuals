@@ -28,6 +28,7 @@
     {"id":"gdpr-controlled","title":"Manual 11 — GDPR Privacy and Data Protection Controlled Implementation","path":"04-regulatory-compliance/GDPR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":11},
     {"id":"ccpa-cpra-controlled","title":"Manual 12 — CCPA / CPRA California Privacy Controlled Implementation","path":"04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":12},
     {"id":"sox-itgc-icfr-controlled","title":"Manual 13 — SOX ITGC / ICFR Controlled Implementation","path":"04-regulatory-compliance/SOX_ITGC_ICFR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":13},
+    {"id":"pci-dss-v4-0-1-controlled","title":"Manual 14 — PCI DSS v4.0.1 Controlled Implementation","path":"04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":14},
     {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
   ]
 }

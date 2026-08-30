@@ -1,5 +1,6 @@
 name: "32 - Manual 12 Publication Candidate"
 
+# Exact-head trigger marker: metadata-only workflow hardening; no release-control semantics changed.
 on:
   pull_request:
     branches:

@@ -1,0 +1,36 @@
+name: Manual 29 Publication Reconcile
+
+on:
+  push:
+    branches:
+      - publish/manual29-software-ai-supply-chain-2026-08-31
+    paths:
+      - '.github/workflows/manual29-publication-reconcile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Reconcile publication state fail closed
+        run: python .compliance/reconcile_manual29.py
+      - name: Remove temporary transaction files
+        run: |
+          rm .compliance/reconcile_manual29.py
+          rm .github/workflows/manual29-publication-reconcile.yml
+      - name: Commit reconciled state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .compliance/reconcile_manual29.py .github/workflows/manual29-publication-reconcile.yml
+          git diff --cached --quiet && exit 1
+          git commit -m 'Reconcile Manual 29 published state'
+          git push

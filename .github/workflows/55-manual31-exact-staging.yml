@@ -1,0 +1,56 @@
+name: "55 - Manual 31 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/55-manual31-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact-bytes:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download exact Manual 31 candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/manual31-candidate
+          mkdir -p /tmp/manual31-candidate
+          gh run download 33414345441 -R "$GITHUB_REPOSITORY" -n manual31-six-binary-candidate -D /tmp/manual31-candidate
+      - name: Verify exact candidate SHA-256 identities
+        run: |
+          cd /tmp/manual31-candidate
+          printf '%s  %s\n' \
+            e8676aea8a5464f7ef331c8bee94262157aa2cbbea30b60116d3c1254c4fe197 Manual_31_NYDFS_Part_500_Controlled_EN.docx \
+            ed6053a6cd6aaa788d0fcf20b6152d31eaba138e451a7405feb999686cc609c4 Manual_31_NYDFS_Part_500_Controlled_EN.pdf \
+            330610eedc9deab8c77829a3564b79f7a8401cb27f7c902f1a414d8ee5707752 Manual_31_NYDFS_Part_500_Controlled_ES-419.docx \
+            0d2b973c27c47ab27d77a2a9f6452a9a3ed29aa3f57b11ce4f6bc4ecae2d6d72 Manual_31_NYDFS_Part_500_Controlled_ES-419.pdf \
+            8c7026112e19a4cd6eb3aee2286e0f99538a7fe9412d32fc2d3dec44781356b3 Manual_31_NYDFS_Part_500_Controlled_PT-BR.docx \
+            7df1da4dde791798c8e6ea66ec191572b9e30555e33b958c4eb96bf174d034de Manual_31_NYDFS_Part_500_Controlled_PT-BR.pdf | sha256sum -c -
+      - name: Copy exact bytes without regeneration and self-remove staging workflow
+        run: |
+          ROOT='04-regulatory-compliance/NYDFS_Part_500_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_EN.docx "$ROOT/en/"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_EN.pdf "$ROOT/en/"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp /tmp/manual31-candidate/Manual_31_NYDFS_Part_500_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/55-manual31-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/55-manual31-exact-staging.yml
+          git commit -m 'Stage Manual 31 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

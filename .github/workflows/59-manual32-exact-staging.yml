@@ -1,0 +1,51 @@
+name: "59 - Manual 32 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/59-manual32-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33415623228 -n manual32-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "9997aa25662657760290fdd36b58daec0e6be45dc567e0f06c034a0f21cb48b5  candidate/Manual_32_FFIEC_Controlled_EN.docx" | sha256sum -c -
+          echo "9ea725e5a3a198677f4fb9dbf8112eb7f297f1940ada8a166accad3310d2264f  candidate/Manual_32_FFIEC_Controlled_EN.pdf" | sha256sum -c -
+          echo "c0132d94b58e5a952c4451afc6c6435e7aebc524d1e94d9d7468a789a24b2940  candidate/Manual_32_FFIEC_Controlled_ES-419.docx" | sha256sum -c -
+          echo "59b8e7f1a451f58089eba1d4487bdfcc1657c477f592eade83c8b6e2cd4f1861  candidate/Manual_32_FFIEC_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "9d9f2a81f45de2ceaffdc41a085c80820a3c9cb7f690ca91ed79952741cf41db  candidate/Manual_32_FFIEC_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "e3a13598e2e8d18de23b5d84f2ed8b9da913d562e539a16199711aee83710aa8  candidate/Manual_32_FFIEC_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/FFIEC_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_32_FFIEC_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_32_FFIEC_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_32_FFIEC_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_32_FFIEC_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_32_FFIEC_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_32_FFIEC_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/59-manual32-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/59-manual32-exact-staging.yml
+          git commit -m 'Stage Manual 32 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

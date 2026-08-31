@@ -241,6 +241,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 40 CJIS Security Policy controlled EN/es-419/pt-BR package merged through PR #445 against the FBI CJIS Security Policy Version 6.1 controlled baseline with CSA implementation and contractual layers kept distinct. Exact six-binary candidate workflow run 33439699453 / artifact 9775761693 is bound to artifact digest sha256:6ab4fda6232c1b7a5028e3e2a6a2ebadf2233e2d730fa75aa7fc2499e7eb97ae. PR #447 bound all six immutable SHA-256/byte identities. Independent exact-artifact verification confirmed all hashes and sizes, 32 chapters in each DOCX, and searchable/nonblank/unencrypted PDFs. PR #450 durably staged the exact six binaries after fail-closed SHA-256 verification; its temporary staging workflow self-removed and clean exact staging head c0c6c138f08736f27ee5686a4a7ce3525c3f8a09 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 39 is published; no unresolved material source, applicability, localization, integrity, packaging, provenance, workflow-security, or substantive defect is recorded."
+    },
+    {
+      "id": "uk-gdpr-dpa-controlled",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 41 UK GDPR / Data Protection Act controlled EN/es-419/pt-BR package merged through PR #449. Exact six-binary candidate workflow run 33440744859 / artifact 9776138801 is bound to artifact digest sha256:c2fdde24ffa5e549b2e46cac474f244739f67125f369b0452f9c3664e875dd6f. PR #452 bound all six immutable SHA-256/byte identities after independent artifact verification confirmed 32 chapters in every DOCX and searchable, nonblank, unencrypted PDFs. PR #455 durably staged the exact six binaries after fail-closed SHA-256 verification; cleaned staged head dc606b1f8599187d131f5ba9d8ac046c4a6936e4 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 40 is published; no unresolved material source, applicability, localization, integrity, packaging, provenance, workflow-security, or substantive defect is recorded."
     }
   ]
 }

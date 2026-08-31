@@ -2,11 +2,41 @@
   "manual": 18,
   "source_commit": "4855791a081ff02c85dcbc96c17e563b373e5112",
   "artifacts": [
-    {"locale":"en","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_EN.docx","sha256":"65efb6ff547b3ddec29b8540f1b44ff768854d77a218de38159311f70f15d8a8","bytes":42006},
-    {"locale":"en","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_EN.pdf","sha256":"ffc42d6fb60852c7bc865ce6e12070a6bbb1d2d03c9e02961bb1419ae69774ac","bytes":75470},
-    {"locale":"es-419","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.docx","sha256":"f2c0f32868403d4f03828e9015af46aa384af418c53237d3b739f0963bdadda1","bytes":41953},
-    {"locale":"es-419","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.pdf","sha256":"d04ad4840a82372ef63c6b84f9d0079db9c6d1d658d2f3d4187705a5e1abf5ed","bytes":76504},
-    {"locale":"pt-BR","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.docx","sha256":"cacf88ac1c872caab8402d225ce98cd794e7bb5aeafae1ffda18ccb38c4ed319","bytes":41931},
-    {"locale":"pt-BR","file":"Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.pdf","sha256":"0d29e706ba3da0affa9090bc9ed6b9eec52051410aa8908895e2c793acdd8d96","bytes":76734}
+    {
+      "locale": "en",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_EN.docx",
+      "sha256": "65efb6ff547b3ddec29b8540f1b44ff768854d77a218de38159311f70f15d8a8",
+      "bytes": 42006
+    },
+    {
+      "locale": "en",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_EN.pdf",
+      "sha256": "ffc42d6fb60852c7bc865ce6e12070a6bbb1d2d03c9e02961bb1419ae69774ac",
+      "bytes": 75470
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.docx",
+      "sha256": "f2c0f32868403d4f03828e9015af46aa384af418c53237d3b739f0963bdadda1",
+      "bytes": 41953
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.pdf",
+      "sha256": "d04ad4840a82372ef63c6b84f9d0079db9c6d1d658d2f3d4187705a5e1abf5ed",
+      "bytes": 76504
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.docx",
+      "sha256": "cacf88ac1c872caab8402d225ce98cd794e7bb5aeafae1ffda18ccb38c4ed319",
+      "bytes": 41931
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.pdf",
+      "sha256": "0d29e706ba3da0affa9090bc9ed6b9eec52051410aa8908895e2c793acdd8d96",
+      "bytes": 76734
+    }
   ]
 }

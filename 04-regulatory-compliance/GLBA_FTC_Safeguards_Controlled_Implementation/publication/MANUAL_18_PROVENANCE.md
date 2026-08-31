@@ -13,4 +13,4 @@ Exact artifact SHA-256 identities:
 - PT-BR DOCX: `cacf88ac1c872caab8402d225ce98cd794e7bb5aeafae1ffda18ccb38c4ed319`
 - PT-BR PDF: `0d29e706ba3da0affa9090bc9ed6b9eec52051410aa8908895e2c793acdd8d96`
 
-Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 18 Candidate Build completed successfully on the exact candidate head. Durable staging must use these same bytes; regenerated substitutes are not equivalent. This record does not claim publication and does not substitute for any explicitly required genuine-human substantive review.
+Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 18 Candidate Build completed successfully on the exact candidate head. These exact candidate bytes are durably staged without regeneration. This record does not claim any unperformed human review and does not itself promote publication state.

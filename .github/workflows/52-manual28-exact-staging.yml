@@ -1,0 +1,56 @@
+name: "52 - Manual 28 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/52-manual28-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact-bytes:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact PR head branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download exact Manual 28 candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/manual28-candidate
+          mkdir -p /tmp/manual28-candidate
+          gh run download 33398466434 -R "$GITHUB_REPOSITORY" -n manual28-six-binary-candidate -D /tmp/manual28-candidate
+      - name: Verify exact candidate SHA-256 identities
+        run: |
+          cd /tmp/manual28-candidate
+          printf '%s  %s\n' \
+            b34efd30c233adc435de653f6cdad3bdf6e2a24f2a863c36b69a9852aa3fae1d Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_EN.docx \
+            b8dbc416b0c49b5e31ea9c0426fe64f29656b4258bb7025567acf9b87b4d0627 Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_EN.pdf \
+            5cf5894188d653fe3e66d05f5597eced6e49065be57ebc690559b5c7b0da08b1 Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_ES-419.docx \
+            bb50a1713926b89cad90c809c24e8e655d32524e561abb800ba8eebdebd59374 Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_ES-419.pdf \
+            662a02982b6140e33e4072a7426791b5580f64e3716c67d5ed302d8c58abb78c Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_PT-BR.docx \
+            6d4eb978dea3dd73f407a05ae1ec52e0215317e3d0f102ea19e1a49f2f349af8 Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_PT-BR.pdf | sha256sum -c -
+      - name: Copy exact bytes without regeneration and self-remove staging workflow
+        run: |
+          ROOT='04-regulatory-compliance/AI_Privacy_Automated_Decision_Governance/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_EN.docx "$ROOT/en/"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_EN.pdf "$ROOT/en/"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp /tmp/manual28-candidate/Manual_28_AI_Privacy_Automated_Decision_Governance_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/52-manual28-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/52-manual28-exact-staging.yml
+          git commit -m 'Stage Manual 28 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

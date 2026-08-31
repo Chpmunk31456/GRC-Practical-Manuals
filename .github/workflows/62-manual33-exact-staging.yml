@@ -1,0 +1,65 @@
+name: "62 - Manual 33 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/62-manual33-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download and verify exact Manual 33 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/manual33
+          gh api -H 'Accept: application/vnd.github+json' "repos/${GITHUB_REPOSITORY}/actions/artifacts/9768178273/zip" > /tmp/manual33.zip
+          unzip -q /tmp/manual33.zip -d /tmp/manual33
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, shutil
+          src = Path('/tmp/manual33')
+          root = Path('04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation/publication')
+          expected = {
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.docx': ('en', 'b1b4ca7e336a11c8afc6c3f3e4d021d883eeb0de7201915d347d3868d483ac6f'),
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.pdf': ('en', '729e8f0f46b34b87653dd5f58cbdb30fc108dfba0b2e7c34fa943bb326eab13a'),
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.docx': ('es-419', 'd1293f03eb42662dcc677b6912de2492ad73793cc12991d1c8c8a87065a73674'),
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.pdf': ('es-419', '2674cd2b4a7f469344ba0ca75f3df222648caee49081cbf91a0d1cf16f0e16ea'),
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.docx': ('pt-BR', 'e68e98ef272a24da2cf8f3ac5527902fc55a3ce4a554c20e225e96552ec46f07'),
+            'Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.pdf': ('pt-BR', '41cc7cbe9561027264d73cd8c103f3e0a5a3fa8dde186c6886c1d91919fdb26d'),
+          }
+          for name,(locale,want) in expected.items():
+              p = src/name
+              if not p.is_file() or p.stat().st_size == 0:
+                  raise SystemExit(f'missing/empty candidate: {name}')
+              got = hashlib.sha256(p.read_bytes()).hexdigest()
+              if got != want:
+                  raise SystemExit(f'hash mismatch {name}: {got} != {want}')
+              outdir = root/locale
+              outdir.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(p, outdir/name)
+          print('all six Manual 33 hashes verified and exact bytes staged')
+          PY
+      - name: Commit exact bytes and remove temporary workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/62-manual33-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation/publication .github/workflows/62-manual33-exact-staging.yml
+          git commit -m 'Stage Manual 33 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

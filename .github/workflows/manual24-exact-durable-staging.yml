@@ -1,0 +1,79 @@
+name: Manual 24 Exact Durable Staging
+
+on:
+  push:
+    branches:
+      - release/manual24-durable-staging-2026-08-31
+    paths:
+      - .github/workflows/manual24-exact-durable-staging.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download exact candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl -fL \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/9755945218/zip" \
+            -o /tmp/manual24.zip
+          mkdir -p /tmp/manual24
+          unzip -q /tmp/manual24.zip -d /tmp/manual24
+
+      - name: Verify exact six candidate identities fail closed
+        run: |
+          set -euo pipefail
+          cd /tmp/manual24
+          echo '5cd618a0ef6fd2e14b2ca5af9ee87d6f87eb70085f543ae7108719f44038e222  Manual_24_NIS2_Controlled_EN.docx' | sha256sum -c -
+          echo 'b6e64f9058dd7f673942f0efc60498f252f3f36e1816454024fceeac94f178e9  Manual_24_NIS2_Controlled_EN.pdf' | sha256sum -c -
+          echo 'd6cce898c4606a27dc7bc500b667568f5d3336becc9a050a9e2cf9bbb45fda66  Manual_24_NIS2_Controlled_ES-419.docx' | sha256sum -c -
+          echo 'b2fe9222b79750f4a3dabf69292184a4cd5f4008980514947b40616d0ae6667c  Manual_24_NIS2_Controlled_ES-419.pdf' | sha256sum -c -
+          echo '185783033f3880c5f1654e6342632f7c2bbeb924438efddd252c7129ad606631  Manual_24_NIS2_Controlled_PT-BR.docx' | sha256sum -c -
+          echo '4ffc1eb318ad1d9c399036828fbf5c46691659a84c1b2817ef51a511604a1a8e  Manual_24_NIS2_Controlled_PT-BR.pdf' | sha256sum -c -
+
+      - name: Stage exact bytes without regeneration
+        run: |
+          set -euo pipefail
+          mkdir -p 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/en
+          mkdir -p 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/es-419
+          mkdir -p 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/pt-BR
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_EN.docx 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/en/
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_EN.pdf 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/en/
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_ES-419.docx 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/es-419/
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_ES-419.pdf 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/es-419/
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_PT-BR.docx 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/pt-BR/
+          cp /tmp/manual24/Manual_24_NIS2_Controlled_PT-BR.pdf 04-regulatory-compliance/NIS2_Controlled_Implementation/publication/pt-BR/
+
+      - name: Verify staged identities and self-remove workflow
+        run: |
+          set -euo pipefail
+          echo '5cd618a0ef6fd2e14b2ca5af9ee87d6f87eb70085f543ae7108719f44038e222  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/en/Manual_24_NIS2_Controlled_EN.docx' | sha256sum -c -
+          echo 'b6e64f9058dd7f673942f0efc60498f252f3f36e1816454024fceeac94f178e9  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/en/Manual_24_NIS2_Controlled_EN.pdf' | sha256sum -c -
+          echo 'd6cce898c4606a27dc7bc500b667568f5d3336becc9a050a9e2cf9bbb45fda66  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/es-419/Manual_24_NIS2_Controlled_ES-419.docx' | sha256sum -c -
+          echo 'b2fe9222b79750f4a3dabf69292184a4cd5f4008980514947b40616d0ae6667c  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/es-419/Manual_24_NIS2_Controlled_ES-419.pdf' | sha256sum -c -
+          echo '185783033f3880c5f1654e6342632f7c2bbeb924438efddd252c7129ad606631  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/pt-BR/Manual_24_NIS2_Controlled_PT-BR.docx' | sha256sum -c -
+          echo '4ffc1eb318ad1d9c399036828fbf5c46691659a84c1b2817ef51a511604a1a8e  04-regulatory-compliance/NIS2_Controlled_Implementation/publication/pt-BR/Manual_24_NIS2_Controlled_PT-BR.pdf' | sha256sum -c -
+          rm .github/workflows/manual24-exact-durable-staging.yml
+
+      - name: Commit exact durable package
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Stage Manual 24 exact six-binary publication package'
+          git push origin HEAD:release/manual24-durable-staging-2026-08-31

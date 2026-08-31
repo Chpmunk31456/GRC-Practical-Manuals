@@ -1,0 +1,51 @@
+name: "70 - Manual 36 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/70-manual36-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33426527901 -n manual36-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "00f9e2dcbcc0821205ab294505470ce300c6930d87e4752d45548b10e7a0244c  candidate/Manual_36_Brazil_LGPD_Controlled_EN.docx" | sha256sum -c -
+          echo "daa982822b3d7196a2086e44011609d5109e3e42ef047573f59cf4cf5be4db4c  candidate/Manual_36_Brazil_LGPD_Controlled_EN.pdf" | sha256sum -c -
+          echo "4beb1f47dc48403fab22f84ff207e8c62a51ae67da168dc49e1e05b1566d55b3  candidate/Manual_36_Brazil_LGPD_Controlled_ES-419.docx" | sha256sum -c -
+          echo "90379290467faf6a14c7896ec290c00586668a9a8e38af5aee33e741e32eeb82  candidate/Manual_36_Brazil_LGPD_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "826dc9a096feabc117b263bb4dca12f857976a3a0ef3816e4935cbdcc26bbd16  candidate/Manual_36_Brazil_LGPD_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "639378950c6119fa816a6d1c79f445616ebd5c7d7a571838d381aae3efb5f593  candidate/Manual_36_Brazil_LGPD_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/Brazil_LGPD_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_36_Brazil_LGPD_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/70-manual36-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/70-manual36-exact-staging.yml
+          git commit -m 'Stage Manual 36 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

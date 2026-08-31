@@ -3,7 +3,7 @@
 **Localização controlada pt-BR — candidata assistida por máquina**  
 **Ordem da série:** 19  
 **Fonte inglesa congelada:** blob `6dc279577768f23f9c2d799b04a0544fa1bfe1c4`  
-**Limite:** Somente orientação de implementação. Manter separados o estatuto FISMA, as políticas OMB/CISA, a orientação NIST, os requisitos do programa FedRAMP, os requisitos específicos de agências e os procedimentos organizacionais. Não afirmar que uma certificação FedRAMP, por si só, estabelece autorização de uma agência ou conformidade geral com FISMA. Esta localização não é tradução oficial e requer revisão semântica humana antes da publicação.
+**Limite:** Somente orientação de implementação. Manter separados o estatuto FISMA, as políticas OMB/CISA, a orientação NIST, os requisitos do programa FedRAMP, os requisitos específicos de agências e os procedimentos organizacionais. Não afirmar que uma certificação FedRAMP, por si só, estabelece autorização de uma agência ou conformidade geral com FISMA. Esta localização não é tradução oficial. A revisão semântica humana só é requisito de publicação quando houver uma questão substantiva específica e documentada que exija julgamento humano não determinístico; caso contrário, aplica-se a regra canônica de publicação automática para candidatos sem erros nem questões pendentes.
 
 ## 1. Governança federal, propósito e aplicabilidade
 Definir escopo do sistema/serviço, relações com clientes federais, organizações responsáveis, estatutos/políticas aplicáveis, caminho de autorização e executivos responsáveis. Evidência: memorando de aplicabilidade, charter de governança, registro de fontes e decisão do caminho de autorização. Reavaliar após mudanças de cliente, serviço, impacto ou política.

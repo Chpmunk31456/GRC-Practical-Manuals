@@ -1,0 +1,51 @@
+name: "64 - Manual 34 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/64-manual34-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33421561721 -n manual34-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "50f74845bad2d1489b99c35bd373a824f92b8c53b2158bd9d32d76f24f67b398  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_EN.docx" | sha256sum -c -
+          echo "50bdf474938860e0fc25da6bafea5da2caebcdb668426927941217b42f5c8704  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_EN.pdf" | sha256sum -c -
+          echo "e62f363e26f29ef570207aaba0febedfdf9bed68ca839c7e8a9e726a047572e3  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_ES-419.docx" | sha256sum -c -
+          echo "ebfaf839c893b1a46a08d9eb62e72cca2a8a9be1d563ece70e8df46fcf48d345  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "aa8caf511469225ccf92169c4b220bfb6cac63b688c1fcc7bb442ff115580621  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "272673fe7ffd6315bcbad4c5af63252e74e8b83561b7aec78f257f190cfdbae2  candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/ISO_IEC_27701_Privacy_Information_Management_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_34_ISO_IEC_27701_2025_Privacy_Information_Management_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/64-manual34-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/64-manual34-exact-staging.yml
+          git commit -m 'Stage Manual 34 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

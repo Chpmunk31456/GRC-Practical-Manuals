@@ -51,6 +51,24 @@ These controls are preparation requirements, not optional cleanup. Downstream ma
 
 Automation may prepare evidence, deterministic QA, review packets and release records, but must never invent reviewer identity, semantic judgment, findings or approval. Existing standing final release authorization applies only when all required technical, source, integrity, packaging and genuine-human evidence gates are satisfied and no unresolved substantive defect remains.
 
+## Human-review early-preflight control — Manual 18 lesson learned
+
+No future manual may reach front-of-line with an undiscovered or unprepared genuine-human review requirement. Human-review requirements must be identified and operationalized before candidate generation, not at final publication reconciliation.
+
+For every Manual N beginning with Manual 19 and continuing through the end of the series:
+
+- during controlled architecture, enumerate every substantive review competency required by the manual's own release controls, including legal/regulatory meaning, localization semantics, editorial usability, accessibility/visual inspection, and any domain-specific specialist review;
+- create the review-evidence schema and reviewer packet template before the English source is frozen, including required reviewer identity, review date, PASS/FAIL decision, findings, remediation, re-review, exact source identities, and exact artifact identities;
+- before candidate generation, verify that the repository contains no additional release boundary, localization gate, accessibility gate, legal/regulatory gate, or specialist-review requirement that is absent from the planned review packet;
+- immediately after the exact six candidate binaries and their SHA-256 identities are frozen, populate the review packet with those exact identities and start all genuinely human substantive review lanes at once rather than waiting for durable staging or catalog reconciliation;
+- run deterministic content, structural, parity, link, metadata, checksum, workflow-security, provenance, PDF-preflight and package checks before sending the exact candidate for human review so reviewers are not asked to inspect a technically defective candidate;
+- keep candidate hashes stable once substantive review begins. A material source or binary change invalidates only the affected review decisions and must trigger targeted re-review rather than silent carry-forward;
+- durable staging may proceed in parallel with human review when safe, but publication reconciliation must not begin until every genuinely required substantive review decision is recorded against the exact current hashes;
+- a manual is not considered "review-ready" merely because a review packet exists. It is review-ready only when exact candidate hashes, required competencies, evidence fields, and reviewer-facing artifacts are all complete and stable;
+- any late-discovered human-review requirement on Manual N is a pipeline defect. Fix the shared standard immediately and cascade the new preflight requirement to Manual N+1 and all later manuals before they reach the same stage.
+
+The intended steady state is: when a manual becomes front-of-line, its substantive human reviews are already complete or actively tied to a stable exact candidate, so the front publication path cannot be surprised by a newly discovered evidence requirement.
+
 ## Anti-halt behavior
 
 A blocker on one manual must not idle the rest of the queue. Continue all safe downstream work, preserve unique branch work, restack when needed, and return repeatedly to the front manual until publication is complete. After publication, the next manual immediately becomes front-of-line and the stagger is re-established.

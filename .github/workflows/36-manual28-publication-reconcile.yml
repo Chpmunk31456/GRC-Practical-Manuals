@@ -1,0 +1,32 @@
+name: "36 - Manual 28 Publication Reconciliation"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/reconcile_manual28_publication.py"
+      - ".github/workflows/36-manual28-publication-reconcile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact PR head branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Reconcile publication state
+        run: python3 scripts/reconcile_manual28_publication.py
+      - name: Commit reconciled state and remove temporary files
+        run: |
+          rm scripts/reconcile_manual28_publication.py .github/workflows/36-manual28-publication-reconcile.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json scripts/reconcile_manual28_publication.py .github/workflows/36-manual28-publication-reconcile.yml
+          git diff --cached --quiet && { echo 'No reconciliation changes'; exit 1; }
+          git commit -m 'Publish Manual 28 and remove temporary reconciler'
+          git push origin HEAD:${{ github.head_ref }}

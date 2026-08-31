@@ -1,0 +1,51 @@
+name: "81 - Manual 41 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/81-manual41-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33440744859 -n manual41-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "4b97c7233db7488bccc2556965ca9b75255c3928b100ef2665fb85afd050a282  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_EN.docx" | sha256sum -c -
+          echo "2ce430e8ce0b94c039195f8d95fc5cf0e08fc72eaee9a107e38c802c4698dce1  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_EN.pdf" | sha256sum -c -
+          echo "6b91ffb2452da3e3565eefb6f92e2c602c8065a673db0414e15959cabec371d3  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_ES-419.docx" | sha256sum -c -
+          echo "3f350f3c3e134b3e1f752ffe926fdb8868b6c3f21f8403c31a33cfa915d1c4fa  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "70e894de6214d5b62ed48d48df9629dbd3137962e0eff5168f7b817ec0114732  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "a961953a9a114e2675e58067cd61c3ad1c14aece4eb759b10c0cf46bd944da10  candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/UK_GDPR_Data_Protection_Act_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_41_UK_GDPR_Data_Protection_Act_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/81-manual41-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/81-manual41-exact-staging.yml
+          git commit -m 'Stage Manual 41 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

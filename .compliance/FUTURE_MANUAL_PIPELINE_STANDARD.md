@@ -21,6 +21,14 @@ After each downstream advancement, execution returns to the front manual and pus
 9. exact-head release/security/package QA;
 10. catalog and work-product release-registry reconciliation; publication complete only after reconciliation lands on `main`.
 
+## Canonical release authorization equation
+
+**NO ERRORS + NO ISSUES + ALL APPLICABLE OBJECTIVE GATES GREEN + PREDECESSOR PUBLISHED = HUMAN APPROVAL SATISFIED UNDER STANDING AUTHORIZATION = PUBLISH NOW.**
+
+This equation is the controlling release rule for Manual 18 and every current or future manual. When it is satisfied, do not stop at `ready`, `review-ready`, `candidate`, `awaiting approval`, `owner confirmation`, or equivalent states. Publish immediately, reconcile publication state on `main`, and continue to the next manual.
+
+A separate generic human-approval, final-signoff, owner-confirmation, or release-approval prompt must not be created or reintroduced after the equation is satisfied.
+
 ## One-stage-behind rule
 
 If Manual N advances from stage X to stage X+1, Manual N+1 must be advanced to stage X as soon as safely executable. Manual N+2 must be at stage X-1, and the stagger continues down the defined series. Work may run in parallel, but publication order remains strictly sequential.

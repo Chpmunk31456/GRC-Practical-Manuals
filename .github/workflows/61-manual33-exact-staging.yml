@@ -1,0 +1,51 @@
+name: "61 - Manual 33 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/61-manual33-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33419060069 -n manual33-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "b1b4ca7e336a11c8afc6c3f3e4d021d883eeb0de7201915d347d3868d483ac6f  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.docx" | sha256sum -c -
+          echo "729e8f0f46b34b87653dd5f58cbdb30fc108dfba0b2e7c34fa943bb326eab13a  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.pdf" | sha256sum -c -
+          echo "d1293f03eb42662dcc677b6912de2492ad73793cc12991d1c8c8a87065a73674  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.docx" | sha256sum -c -
+          echo "2674cd2b4a7f469344ba0ca75f3df222648caee49081cbf91a0d1cf16f0e16ea  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "e68e98ef272a24da2cf8f3ac5527902fc55a3ce4a554c20e225e96552ec46f07  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "41cc7cbe9561027264d73cd8c103f3e0a5a3fa8dde186c6886c1d91919fdb26d  candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_33_SEC_Cybersecurity_Governance_Disclosure_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/61-manual33-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/61-manual33-exact-staging.yml
+          git commit -m 'Stage Manual 33 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

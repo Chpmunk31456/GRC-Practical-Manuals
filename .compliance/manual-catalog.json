@@ -30,6 +30,7 @@
     {"id":"sox-itgc-icfr-controlled","title":"Manual 13 — SOX ITGC / ICFR Controlled Implementation","path":"04-regulatory-compliance/SOX_ITGC_ICFR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":13},
     {"id":"pci-dss-v4-0-1-controlled","title":"Manual 14 — PCI DSS v4.0.1 Controlled Implementation","path":"04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":14},
     {"id":"soc2-controlled","title":"Manual 15 — SOC 2 Controlled Implementation","path":"04-regulatory-compliance/SOC_2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":15},
+    {"id":"nist-privacy-framework-controlled","title":"Manual 17 — NIST Privacy Framework Controlled Implementation","path":"01-foundations/NIST_Privacy_Framework_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":17},
     {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"}
   ]
 }

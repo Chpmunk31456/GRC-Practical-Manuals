@@ -1,0 +1,75 @@
+name: "25 - Manual 23 Publication Reconciliation"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/25-manual23-publication-reconcile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact PR head branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Reconcile Manual 23 publication state fail closed
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          catalog_path=Path('.compliance/manual-catalog.json')
+          release_path=Path('.compliance/work-product-releases.json')
+          c=json.loads(catalog_path.read_text(encoding='utf-8'))
+          r=json.loads(release_path.read_text(encoding='utf-8'))
+          mid='dora-controlled'
+          if not any(x.get('series_order')==22 and x.get('status')=='published' for x in c['manuals']):
+              raise SystemExit('Manual 22 predecessor is not published in catalog')
+          if not any(x.get('id')=='cloud-security-controlled' and x.get('release_state')=='published' for x in r['released_work_products']):
+              raise SystemExit('Manual 22 predecessor is not published in release registry')
+          entry={
+            'id':mid,
+            'title':'Manual 23 — DORA Controlled Implementation',
+            'path':'04-regulatory-compliance/DORA_Controlled_Implementation',
+            'status':'published','release_state':'published','layout':'controlled-build','series_order':23
+          }
+          found=[x for x in c['manuals'] if x.get('id')==mid]
+          if found:
+              found[0].update(entry)
+          else:
+              insert_at=next((i for i,x in enumerate(c['manuals']) if x.get('id')=='ai-governance-audit-toolkit'), len(c['manuals']))
+              c['manuals'].insert(insert_at,entry)
+          evidence=(
+            'Manual 23 DORA controlled English master merged through PR #346 and controlled es-419/pt-BR localizations through PR #347. '
+            'The exact six-binary candidate was generated successfully by workflow run 33382887620 / artifact 9754443202 with artifact digest sha256:79ac9dd39aa40e56988bf63d615dd75db432db0ba5a4ec47e696aad40e8dab28. '
+            'Candidate Build, Workflow Security, Release Pipeline Meta QA, Manual Structure QA, Trilingual Publication Parity, and Release Package QA passed on the candidate transaction. '
+            'PR #349 bound the exact SHA-256 identities and deterministic PDF/DOCX checks with no identified defect requiring regeneration. '
+            'PR #350 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes after fail-closed hash verification; its owner-authored exact staging head 157d0eb06d621f73cf73a2f4b0c14e7efa022f39 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. '
+            'Predecessor Manual 22 is published. Standing release authorization applies because applicable objective gates are green and no unresolved material source, technical, localization, integrity, packaging, accessibility, provenance, workflow-security, or substantive defect is recorded.'
+          )
+          rent={'id':mid,'type':'manual','release_state':'published','release_evidence':evidence}
+          rf=[x for x in r['released_work_products'] if x.get('id')==mid]
+          if rf:
+              rf[0].update(rent)
+          else:
+              r['released_work_products'].append(rent)
+          c['last_updated']='2026-08-31'; r['last_updated']='2026-08-31'
+          catalog_path.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          release_path.write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Commit publication state and self-remove workflow
+        shell: bash
+        run: |
+          rm .github/workflows/25-manual23-publication-reconcile.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .github/workflows/25-manual23-publication-reconcile.yml
+          git diff --cached --quiet && { echo 'No reconciliation changes'; exit 1; }
+          git commit -m 'Publish Manual 23 and remove temporary reconciliation workflow'
+          git push origin HEAD:${{ github.head_ref }}

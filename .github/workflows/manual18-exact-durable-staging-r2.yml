@@ -1,0 +1,76 @@
+name: "Manual 18 Exact Durable Staging R2"
+
+on:
+  push:
+    branches:
+      - release/manual18-durable-staging-r2-2026-08-30
+    paths:
+      - ".github/workflows/manual18-exact-durable-staging-r2.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact-candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: release/manual18-durable-staging-r2-2026-08-30
+      - name: Download exact successful candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/manual18-candidate
+          mkdir -p /tmp/manual18-candidate
+          gh run download 33350963657 -n manual18-six-binary-candidate -D /tmp/manual18-candidate
+      - name: Verify exact SHA-256 identities
+        run: |
+          cd /tmp/manual18-candidate
+          echo "65efb6ff547b3ddec29b8540f1b44ff768854d77a218de38159311f70f15d8a8  Manual_18_GLBA_FTC_Safeguards_Controlled_EN.docx" | sha256sum -c -
+          echo "ffc42d6fb60852c7bc865ce6e12070a6bbb1d2d03c9e02961bb1419ae69774ac  Manual_18_GLBA_FTC_Safeguards_Controlled_EN.pdf" | sha256sum -c -
+          echo "f2c0f32868403d4f03828e9015af46aa384af418c53237d3b739f0963bdadda1  Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.docx" | sha256sum -c -
+          echo "d04ad4840a82372ef63c6b84f9d0079db9c6d1d658d2f3d4187705a5e1abf5ed  Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "cacf88ac1c872caab8402d225ce98cd794e7bb5aeafae1ffda18ccb38c4ed319  Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "0d29e706ba3da0affa9090bc9ed6b9eec52051410aa8908895e2c793acdd8d96  Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and provenance
+        run: |
+          BASE="04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation/publication"
+          mkdir -p "$BASE/en" "$BASE/es-419" "$BASE/pt-BR"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_EN.docx "$BASE/en/"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_EN.pdf "$BASE/en/"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.docx "$BASE/es-419/"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_ES-419.pdf "$BASE/es-419/"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.docx "$BASE/pt-BR/"
+          cp /tmp/manual18-candidate/Manual_18_GLBA_FTC_Safeguards_Controlled_PT-BR.pdf "$BASE/pt-BR/"
+          cp /tmp/manual18-candidate/MANUAL_18_CANDIDATE_MANIFEST.json "$BASE/MANUAL_18_CANDIDATE_MANIFEST.json"
+          cat > "$BASE/MANUAL_18_PROVENANCE.md" <<'EOF'
+          # Manual 18 Publication Provenance
+
+          Candidate workflow run: `33350963657`  
+          Artifact ID: `9743589509`  
+          Artifact digest: `sha256:a8b29b840814092f18a2024f4282168b5660a8bca7bc02b0ed02334b2da729b2`  
+          Candidate head: `a0b0d470e0f29ef318d11551d1d3524298de0f05`
+
+          Exact artifact SHA-256 identities:
+          - EN DOCX: `65efb6ff547b3ddec29b8540f1b44ff768854d77a218de38159311f70f15d8a8`
+          - EN PDF: `ffc42d6fb60852c7bc865ce6e12070a6bbb1d2d03c9e02961bb1419ae69774ac`
+          - ES-419 DOCX: `f2c0f32868403d4f03828e9015af46aa384af418c53237d3b739f0963bdadda1`
+          - ES-419 PDF: `d04ad4840a82372ef63c6b84f9d0079db9c6d1d658d2f3d4187705a5e1abf5ed`
+          - PT-BR DOCX: `cacf88ac1c872caab8402d225ce98cd794e7bb5aeafae1ffda18ccb38c4ed319`
+          - PT-BR PDF: `0d29e706ba3da0affa9090bc9ed6b9eec52051410aa8908895e2c793acdd8d96`
+
+          Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 18 Candidate Build completed successfully on the exact candidate head. These exact candidate bytes are durably staged without regeneration. This record does not claim any unperformed human review and does not itself promote publication state.
+          EOF
+          sed -i 's/^          //' "$BASE/MANUAL_18_PROVENANCE.md"
+      - name: Remove temporary write-enabled workflow and commit
+        run: |
+          git rm .github/workflows/manual18-exact-durable-staging-r2.yml
+          git add 04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation/publication
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Stage Manual 18 exact durable publication package on current main"
+          git push origin HEAD:release/manual18-durable-staging-r2-2026-08-30

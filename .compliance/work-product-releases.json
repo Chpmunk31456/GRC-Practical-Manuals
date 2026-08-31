@@ -187,6 +187,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 31 NYDFS 23 NYCRR Part 500 controlled EN/es-419/pt-BR package merged through PR #399 after release-time source verification. Exact six-binary candidate: workflow run 33414345441 / artifact 9766406222 / digest sha256:9e1c5df829d29730fed5398ea432940b5f478cdac2af4567b0c3dd089052ca7d. PR #401 bound immutable SHA-256 identities and deterministic DOCX/PDF integrity, 32-chapter completeness, zero-finding DOCX accessibility, searchable PDF checks, and complete rendered-page review. PR #402 durably staged the exact six binaries after fail-closed hash verification; exact staging QA passed before merge at 14ba1ad60d82aaacaa279e13bc7bb1a6219d5f8a. Predecessor Manual 30 is published; no unresolved material source, regulatory-boundary, localization, integrity, packaging, accessibility, provenance, workflow-security, or substantive defect is recorded."
+    },
+    {
+      "id": "ffiec-controlled",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 32 FFIEC controlled EN/es-419/pt-BR package passed structure, trilingual parity, and release-package QA before candidate generation. Exact candidate workflow run 33415623228 / artifact 9766895211 is bound to artifact digest sha256:ffc7f19ccf321e23bdcaa34ffb76f5b1e399e64cbe2f46278a187655987896f0. PR #407 bound all six exact SHA-256 identities, 32-chapter completeness, zero-finding DOCX accessibility audits, searchable PDF preflight, and complete rendered-page review without regeneration. PR #409 durably staged the exact six binaries after fail-closed hash verification; its owner-authored exact staging head 45b3aa8384f6b2f2de091d366c7aec0b7a061452 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at af1c120f672cd811303665cfb105d18d9965f457. Release-time source boundary uses the active FFIEC IT Examination Handbook and applicable member-agency overlays; the FFIEC Cybersecurity Assessment Tool was sunset August 31, 2025 and is excluded as a current baseline. Predecessor Manual 31 is published and no unresolved material source, applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, or substantive defect is recorded."
     }
   ]
 }

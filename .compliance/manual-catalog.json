@@ -263,6 +263,15 @@
       "series_order": 20
     },
     {
+      "id": "ot-ics-security-controlled",
+      "title": "Manual 21 — OT / ICS Security Controlled Implementation",
+      "path": "06-cloud-and-technology-risk/OT_ICS_Security_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 21
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

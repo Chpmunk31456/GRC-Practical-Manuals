@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-30",
+  "last_updated": "2026-08-31",
   "languages": [
     "en",
     "es-419",
@@ -243,6 +243,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 18
+    },
+    {
+      "id": "fedramp-fisma-controlled",
+      "title": "Manual 19 — FedRAMP / FISMA Controlled Implementation",
+      "path": "04-regulatory-compliance/FedRAMP_FISMA_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 19
     },
     {
       "id": "ai-governance-audit-toolkit",

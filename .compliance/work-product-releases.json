@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-30",
+  "last_updated": "2026-08-31",
   "released_work_products": [
     {
       "id": "eu-ai-act-grc",
@@ -109,6 +109,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 18 controlled English was frozen to blob be0b0c0d1b692ac0eb9e5e1692901e2a3237d739, then controlled es-419 and pt-BR localizations were merged. The exact six-binary candidate was produced by successful workflow run 33350963657 / artifact 9743589509 at candidate head a0b0d470e0f29ef318d11551d1d3524298de0f05. Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 18 Candidate Build passed. Candidate provenance binds artifact digest sha256:a8b29b840814092f18a2024f4282168b5660a8bca7bc02b0ed02334b2da729b2 and exact EN/es-419/pt-BR DOCX/PDF SHA-256 identities. PR #272 durably staged those exact bytes to main without regeneration; exact staging head c0a30d7bbc9f3b4fb5058f56f7fe16a6ceeaf516 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at cbc0acf3e38c57c5c56a904eefa22f8460a29ac2. Predecessor Manual 17 is published. Standing release authorization applies because the exact durable artifacts and provenance are present and no unresolved technical, integrity, source, packaging, or substantive defect is recorded. This reconciliation records publication state without modifying the reviewed publication binaries."
+    },
+    {
+      "id": "fedramp-fisma-controlled",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 19 controlled English was frozen to blob 6dc279577768f23f9c2d799b04a0544fa1bfe1c4 and controlled es-419/pt-BR localizations were merged. The stale unconditional localization-review wording was aligned to the canonical release policy through PR #318. The exact six-binary candidate was generated successfully by workflow run 33366244377 / artifact 9748385723 at candidate head cc09d80206ddcccd9e061dce8a4fc27d90e667c7, with artifact digest sha256:79b6718596eb218f1762ab07999e4978f2732cc7c5774a47c03051aafdcb543c. Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 19 Candidate Build passed on that exact candidate. PR #320 bound the six SHA-256 identities plus deterministic rendered/document/accessibility QA with no identified defect requiring regeneration. PR #322 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes after fail-closed hash verification; staging head 56155a766f2ab2dbd8800749dd304828509a59a7 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge. Predecessor Manual 18 is published. Standing release authorization applies under the canonical no-errors/no-issues rule because applicable objective gates are green and no unresolved material source, technical, localization, integrity, packaging, accessibility, provenance, or substantive defect is recorded."
     }
   ]
 }

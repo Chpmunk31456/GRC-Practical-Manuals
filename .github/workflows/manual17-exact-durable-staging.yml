@@ -1,0 +1,80 @@
+name: "Manual 17 Exact Durable Staging"
+
+on:
+  push:
+    branches:
+      - release/manual17-durable-package-r2-2026-08-30
+    paths:
+      - ".github/workflows/manual17-exact-durable-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact-artifact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: release/manual17-durable-package-r2-2026-08-30
+          fetch-depth: 0
+      - name: Download exact candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/${{ github.repository }}/actions/artifacts/9743124097/zip > /tmp/manual17.zip
+          mkdir -p /tmp/manual17
+          unzip -q /tmp/manual17.zip -d /tmp/manual17
+      - name: Verify exact candidate hashes
+        run: |
+          set -euo pipefail
+          cd /tmp/manual17
+          echo "8eb3d6270158e43d75e7a18c3202ff8fcfb3b2dbde8e707cd605d1f0a7419180  Manual_17_NIST_Privacy_Framework_Controlled_EN.docx" | sha256sum -c -
+          echo "542ea854027c0c6f2a908263aee80db118ac5aaa6514b7e0a69ceee4f6b0b547  Manual_17_NIST_Privacy_Framework_Controlled_EN.pdf" | sha256sum -c -
+          echo "3dce5cb82d71cd0124c368aca8e03cb424869593e72f49678e403cf4dc649d00  Manual_17_NIST_Privacy_Framework_Controlled_ES-419.docx" | sha256sum -c -
+          echo "45458495a9d51557d5a4ddeb824fe4e7f67dd58ea9cbad22aeb2afb5305ce52c  Manual_17_NIST_Privacy_Framework_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "55b67932cfab909178c6ef81374e593902d961379fc34d4ab010458dfb5abb3a  Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "1ab13ad82bed84d041869ad90ee7699322c502c3bd70638eca7daec7cfbb4973  Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact durable package and provenance
+        run: |
+          set -euo pipefail
+          ROOT="01-foundations/NIST_Privacy_Framework_Controlled_Implementation/publication"
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_EN.docx "$ROOT/en/"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_EN.pdf "$ROOT/en/"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp /tmp/manual17/Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          cp /tmp/manual17/MANUAL_17_CANDIDATE_MANIFEST.json "$ROOT/MANUAL_17_CANDIDATE_MANIFEST.json"
+          cat > "$ROOT/MANUAL_17_PROVENANCE.md" <<'EOF'
+          # Manual 17 Publication Provenance
+
+          Candidate workflow run: `33349530887`  
+          Artifact ID: `9743124097`  
+          Artifact digest: `sha256:09ba46423ca930228da1d8d33eba244e9975c47af8acfda82f067aa90a155f36`
+          Candidate head: `c73320bc40990918f805e1f29602cebfa4f56be3`
+
+          Exact artifact SHA-256 identities:
+          - EN DOCX: `8eb3d6270158e43d75e7a18c3202ff8fcfb3b2dbde8e707cd605d1f0a7419180`
+          - EN PDF: `542ea854027c0c6f2a908263aee80db118ac5aaa6514b7e0a69ceee4f6b0b547`
+          - ES-419 DOCX: `3dce5cb82d71cd0124c368aca8e03cb424869593e72f49678e403cf4dc649d00`
+          - ES-419 PDF: `45458495a9d51557d5a4ddeb824fe4e7f67dd58ea9cbad22aeb2afb5305ce52c`
+          - PT-BR DOCX: `55b67932cfab909178c6ef81374e593902d961379fc34d4ab010458dfb5abb3a`
+          - PT-BR PDF: `1ab13ad82bed84d041869ad90ee7699322c502c3bd70638eca7daec7cfbb4973`
+
+          Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 17 Candidate Build completed successfully on the exact candidate head. This record does not claim any unperformed human review and does not itself promote publication state.
+          EOF
+      - name: Commit exact package and remove temporary staging workflow
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 01-foundations/NIST_Privacy_Framework_Controlled_Implementation/publication
+          git rm .github/workflows/manual17-exact-durable-staging.yml
+          git commit -m "Stage Manual 17 exact durable publication package"
+          git push origin HEAD:release/manual17-durable-package-r2-2026-08-30

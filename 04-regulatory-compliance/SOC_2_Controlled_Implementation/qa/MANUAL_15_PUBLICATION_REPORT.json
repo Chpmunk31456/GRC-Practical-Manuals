@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "manual": "Manual 15 - SOC 2 Controlled Implementation",
+  "release_state": "publication-candidate",
+  "languages": [
+    "en",
+    "es-419",
+    "pt-BR"
+  ],
+  "editions": [
+    {
+      "language": "en",
+      "source": "04-regulatory-compliance/SOC_2_Controlled_Implementation/English/source/CONTROLLED_CHAPTERS_01_32.md",
+      "source_sha256": "6681cf7c8c06dfaebe3da0d93829864bb8e245724ebd2f304934b521b9e1efe3",
+      "docx": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/en/Manual_15_SOC_2_Controlled_Implementation_EN.docx",
+      "pdf": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/en/Manual_15_SOC_2_Controlled_Implementation_EN.pdf",
+      "docx_sha256": "335c1219291f2528f1c769ea190df375d454586150f7123b129d8d0711008de9",
+      "pdf_sha256": "6b70290b538cd201cae82e85ea70d0380899c01ce03e7e74eb71618fee8707ee"
+    },
+    {
+      "language": "es-419",
+      "source": "04-regulatory-compliance/SOC_2_Controlled_Implementation/Spanish_es-419/source/CAPITULOS_CONTROLADOS_01_32.md",
+      "source_sha256": "d6ccfa513cc70064631434b4078febc96365089aecf5b48e279fa3e34a40bfa8",
+      "docx": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/es-419/Manual_15_SOC_2_Controlled_Implementation_ES-419.docx",
+      "pdf": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/es-419/Manual_15_SOC_2_Controlled_Implementation_ES-419.pdf",
+      "docx_sha256": "6c8ca66c19db10178f30b83093dd50bf737fd206246c436474d83ffe3fe2f4ce",
+      "pdf_sha256": "11a27d858bea59d4e80612a09bb85253a00eed7f1c14e878cc3c47c87934aaaa"
+    },
+    {
+      "language": "pt-BR",
+      "source": "04-regulatory-compliance/SOC_2_Controlled_Implementation/Portuguese_pt-BR/source/CAPITULOS_CONTROLADOS_01_32.md",
+      "source_sha256": "59233872a0edee29c73f2e79d0b397a05253a9b1d8a88ae748a3de7b76f39963",
+      "docx": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/pt-BR/Manual_15_SOC_2_Controlled_Implementation_PT-BR.docx",
+      "pdf": "04-regulatory-compliance/SOC_2_Controlled_Implementation/publication/pt-BR/Manual_15_SOC_2_Controlled_Implementation_PT-BR.pdf",
+      "docx_sha256": "7ebbb4bfef17c79f1f13e271a1a9166f272333d2cf3dd6b66ce048467953da6c",
+      "pdf_sha256": "0b2faa2c479d78ab376a66a23936f12b29f49137146a7af344d5facef4ade454"
+    }
+  ]
+}

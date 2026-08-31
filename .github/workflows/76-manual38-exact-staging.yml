@@ -1,0 +1,14 @@
+name: "76 - Manual 38 Exact Durable Staging"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  staging-record:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Record staging deprecation
+        run: echo "Manual 38 exact publication bytes were already staged. This workflow is read-only and performs no repository mutation."

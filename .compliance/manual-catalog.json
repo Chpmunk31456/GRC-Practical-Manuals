@@ -308,6 +308,15 @@
       "series_order": 25
     },
     {
+      "id": "incident-response-cyber-crisis-controlled",
+      "title": "Manual 26 — Incident Response & Cyber Crisis Management Controlled Implementation",
+      "path": "05-operational-resilience/Incident_Response_Cyber_Crisis_Management",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 26
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

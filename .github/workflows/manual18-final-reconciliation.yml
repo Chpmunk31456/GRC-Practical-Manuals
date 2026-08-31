@@ -1,0 +1,75 @@
+name: "Manual 18 Final Publication Reconciliation"
+
+on:
+  push:
+    branches:
+      - release/manual18-final-reconciliation-2026-08-30
+    paths:
+      - ".github/workflows/manual18-final-reconciliation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout exact reconciliation branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: release/manual18-final-reconciliation-2026-08-30
+      - name: Reconcile catalog and release registry
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path=Path('.compliance/manual-catalog.json')
+          catalog=json.loads(catalog_path.read_text())
+          mid='glba-ftc-safeguards-controlled'
+          entry={
+            'id':mid,
+            'title':'Manual 18 — GLBA / FTC Safeguards Rule Controlled Implementation',
+            'path':'04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation',
+            'status':'published',
+            'release_state':'published',
+            'layout':'controlled-build',
+            'series_order':18
+          }
+          existing=[x for x in catalog['manuals'] if x.get('id')==mid or x.get('series_order')==18]
+          if existing:
+            for x in existing: x.update(entry)
+          else:
+            toolkit=next((i for i,x in enumerate(catalog['manuals']) if x.get('id')=='ai-governance-audit-toolkit'),len(catalog['manuals']))
+            catalog['manuals'].insert(toolkit,entry)
+          catalog['last_updated']='2026-08-30'
+          catalog_path.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
+
+          reg_path=Path('.compliance/work-product-releases.json')
+          reg=json.loads(reg_path.read_text())
+          evidence=(
+            'Manual 18 controlled English was frozen to blob be0b0c0d1b692ac0eb9e5e1692901e2a3237d739, then controlled es-419 and pt-BR localizations were merged. '
+            'The exact six-binary candidate was produced by successful workflow run 33350963657 / artifact 9743589509 at candidate head a0b0d470e0f29ef318d11551d1d3524298de0f05. '
+            'Candidate-stage Workflow Security, Release Pipeline Meta QA, Release Package QA, and Manual 18 Candidate Build passed. '
+            'Candidate provenance binds artifact digest sha256:a8b29b840814092f18a2024f4282168b5660a8bca7bc02b0ed02334b2da729b2 and exact EN/es-419/pt-BR DOCX/PDF SHA-256 identities. '
+            'PR #272 durably staged those exact bytes to main without regeneration; exact staging head c0a30d7bbc9f3b4fb5058f56f7fe16a6ceeaf516 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at cbc0acf3e38c57c5c56a904eefa22f8460a29ac2. '
+            'Predecessor Manual 17 is published. Standing release authorization applies because the exact durable artifacts and provenance are present and no unresolved technical, integrity, source, packaging, or substantive defect is recorded. '
+            'This reconciliation records publication state without modifying the reviewed publication binaries.'
+          )
+          rent={'id':mid,'type':'manual','release_state':'published','release_evidence':evidence}
+          found=False
+          for x in reg['released_work_products']:
+            if x.get('id')==mid:
+              x.update(rent); found=True
+          if not found: reg['released_work_products'].append(rent)
+          reg['last_updated']='2026-08-30'
+          reg_path.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Remove temporary write-enabled workflow and commit
+        run: |
+          git rm .github/workflows/manual18-final-reconciliation.yml
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish Manual 18 — final catalog and release-state reconciliation"
+          git push origin HEAD:release/manual18-final-reconciliation-2026-08-30

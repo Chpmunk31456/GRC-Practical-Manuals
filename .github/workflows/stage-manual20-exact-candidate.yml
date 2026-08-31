@@ -1,0 +1,58 @@
+name: "Stage Manual 20 exact candidate"
+
+on:
+  push:
+    branches:
+      - release/manual20-durable-staging-2026-08-31
+    paths:
+      - ".github/workflows/stage-manual20-exact-candidate.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage:
+    if: github.event.head_commit.message != 'Stage Manual 20 exact candidate and remove staging workflow'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: release/manual20-durable-staging-2026-08-31
+          fetch-depth: 0
+      - name: Download bound candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf /tmp/manual20-candidate
+          mkdir -p /tmp/manual20-candidate
+          gh run download 33367617544 --repo "$GITHUB_REPOSITORY" --name manual20-six-binary-candidate --dir /tmp/manual20-candidate
+      - name: Verify exact candidate hashes and stage publication tree
+        run: |
+          set -euo pipefail
+          cd /tmp/manual20-candidate
+          echo 'c7b1981e0849f2153812129d4b304d6009d7a08bc4c98844b3fef63e9662789f  Manual_20_CIS_Controls_v8.1_Controlled_EN.docx' | sha256sum -c -
+          echo 'ade9df0a2a42b2a01ccfa514f3f8ccac8b5ab1c6dafa1997b9a11bf801a675ca  Manual_20_CIS_Controls_v8.1_Controlled_EN.pdf' | sha256sum -c -
+          echo '775ead3373fd89f972ed93ff0e2eacd458d4e3d205d6a201aa9eda5dcf230482  Manual_20_CIS_Controls_v8.1_Controlled_ES-419.docx' | sha256sum -c -
+          echo '472620add4a3943a7c1bb9f18cba8ee7869af9523a4e5fc3157fa4fe439f33de  Manual_20_CIS_Controls_v8.1_Controlled_ES-419.pdf' | sha256sum -c -
+          echo '6c7e88a9c7af6e161407782350b097380a40dd495970c4509a29548b62b97293  Manual_20_CIS_Controls_v8.1_Controlled_PT-BR.docx' | sha256sum -c -
+          echo 'c7e3151a9e660ff11f1ea73ccb211d899b9c939e1e628acf896ffdef4175de0c  Manual_20_CIS_Controls_v8.1_Controlled_PT-BR.pdf' | sha256sum -c -
+          cd "$GITHUB_WORKSPACE"
+          base='01-foundations/CIS_Controls_v8.1_Controlled_Implementation/publication'
+          mkdir -p "$base/en" "$base/es-419" "$base/pt-BR"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_EN.docx "$base/en/"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_EN.pdf "$base/en/"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_ES-419.docx "$base/es-419/"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_ES-419.pdf "$base/es-419/"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_PT-BR.docx "$base/pt-BR/"
+          cp /tmp/manual20-candidate/Manual_20_CIS_Controls_v8.1_Controlled_PT-BR.pdf "$base/pt-BR/"
+          rm .github/workflows/stage-manual20-exact-candidate.yml
+      - name: Commit exact bytes and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Stage Manual 20 exact candidate and remove staging workflow'
+          git push origin HEAD:release/manual20-durable-staging-2026-08-31

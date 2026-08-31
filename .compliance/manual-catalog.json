@@ -457,6 +457,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 41
+    },
+    {
+      "id": "canada-privacy-controlled",
+      "title": "Manual 42 — Canada Privacy Controlled Implementation",
+      "path": "04-regulatory-compliance/Canada_Privacy_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 42
     }
   ]
 }

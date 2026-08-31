@@ -317,6 +317,15 @@
       "series_order": 26
     },
     {
+      "id": "data-governance-privacy-engineering-controlled",
+      "title": "Manual 27 — Data Governance & Privacy Engineering Controlled Implementation",
+      "path": "04-regulatory-compliance/Data_Governance_Privacy_Engineering",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 27
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

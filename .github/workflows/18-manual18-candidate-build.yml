@@ -1,0 +1,38 @@
+name: "18 - Manual 18 Candidate Build"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/build_manual18_candidate.py"
+      - "scripts/pdf_content_preflight.py"
+      - "04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation/controlled/**"
+      - ".github/workflows/18-manual18-candidate-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install document tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-writer fonts-liberation
+          python -m pip install --disable-pip-version-check python-docx
+      - name: Build six publication candidates
+        run: python scripts/build_manual18_candidate.py
+      - name: Verify PDFs are nonblank
+        run: python scripts/pdf_content_preflight.py qa/manual18-publication-candidate
+      - name: Upload exact candidate package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: manual18-six-binary-candidate
+          path: qa/manual18-publication-candidate/
+          if-no-files-found: error
+          retention-days: 7

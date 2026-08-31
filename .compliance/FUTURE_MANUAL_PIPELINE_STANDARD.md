@@ -33,6 +33,20 @@ When the current front manual has objective evidence that its applicable gate is
 
 Before publication-state promotion, each manual must have durable actual EN/es-419/pt-BR DOCX/PDF artifacts, required README, exact checksums using correct publication-relative paths, provenance, and required QA evidence on `main`. Catalog or release-registry promotion must never substitute for missing durable binaries.
 
+## Release-efficiency lessons learned
+
+Every future manual must inherit the following preflight controls before its release workflow is opened:
+
+- pin every third-party GitHub Action to a full immutable commit SHA; mutable tags such as `@v4` are prohibited;
+- include every repository script invoked by a workflow in that workflow's `pull_request.paths` dependency set so meta-QA cannot discover missing trigger coverage late in the release cycle;
+- establish the candidate-build workflow and dependency map before the manual reaches the front line;
+- generate the exact EN/es-419/pt-BR DOCX/PDF six-pack reproducibly from frozen controlled sources, not from ad hoc local files;
+- upload or stage the exact candidate bytes, then bind SHA-256 identities and provenance to those bytes before any release-state promotion;
+- run workflow-security, trigger-dependency meta-QA, PDF preflight, structural/parity QA and release-package QA on the exact candidate head before durable staging;
+- treat any workflow-hygiene defect found on Manual N as a preventive control to be applied immediately to Manual N+1 and all later manuals, rather than rediscovering it when they become front-of-line.
+
+These controls are preparation requirements, not optional cleanup. Downstream manuals should have them satisfied while they are still behind the front manual so publication latency is reduced without weakening any fail-closed gate.
+
 ## Human-review boundary
 
 Automation may prepare evidence, deterministic QA, review packets and release records, but must never invent reviewer identity, semantic judgment, findings or approval. Existing standing final release authorization applies only when all required technical, source, integrity, packaging and genuine-human evidence gates are satisfied and no unresolved substantive defect remains.

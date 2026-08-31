@@ -380,6 +380,15 @@
       "series_order": 33
     },
     {
+      "id": "iso-iec-27701-2025-controlled",
+      "title": "Manual 34 — ISO/IEC 27701:2025 Privacy Information Management Controlled Implementation",
+      "path": "04-regulatory-compliance/ISO_IEC_27701_Privacy_Information_Management_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 34
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

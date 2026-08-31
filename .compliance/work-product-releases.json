@@ -199,6 +199,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 33 SEC Cybersecurity Governance and Disclosure controlled EN/es-419/pt-BR package merged through PR #408 after release-time source verification against SEC Release 33-11216 and controlled rule/guidance/materiality boundaries. Exact six-binary candidate workflow run 33419060069 / artifact 9768178273 is bound to artifact digest sha256:8b3428492a6f5cdf43c53a38259332822286cc79947868cbcb2b514c114f628f. PR #413 bound all six exact SHA-256/byte identities plus deterministic DOCX/PDF package integrity, 32-chapter completeness, searchable PDF checks, and complete rendered-page review without regeneration. PR #414 durably staged the exact six binaries after fail-closed SHA-256 verification; exact staging head 032de6997d0c5a8546ad35b009d98bfa2f231d5a passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at b0acaddb0b3e39fdfd91b63c7e751983f599293e. Predecessor Manual 32 is published; the SEC final-rule source boundary was revalidated on 2026-08-31 and no unresolved material source, applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, or substantive defect is recorded."
+    },
+    {
+      "id": "iso-iec-27701-2025-controlled",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 34 ISO/IEC 27701:2025 Privacy Information Management controlled EN/es-419/pt-BR package merged through PR #417 after release-time verification that ISO/IEC 27701:2025 Edition 2 is current and the 2019 edition is withdrawn. Exact six-binary candidate workflow run 33421561721 / artifact 9769107949 is bound to artifact digest sha256:dff723aab2fe28411808261d3b5b610bbcaaf7448e9f2ec1edcf55e5bbe49585. PR #419 bound all six exact SHA-256/byte identities plus 32-chapter completeness, zero-finding DOCX accessibility audits, searchable PDF checks, and full rendered review of all 43 PDF/DOCX pages without regeneration. PR #420 durably staged the exact six binaries after fail-closed SHA-256 verification; exact staging head 3ed8d3f23de006cfb41a283bc5ee4f1d8ff29b0f passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at e167ff61fb3b497c722c0b5536e64c42e5ffed62. Predecessor Manual 33 is published; no unresolved material source, applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, copyright-boundary, or substantive defect is recorded."
     }
   ]
 }

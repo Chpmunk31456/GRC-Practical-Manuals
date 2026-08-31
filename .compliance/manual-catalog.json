@@ -254,6 +254,15 @@
       "series_order": 19
     },
     {
+      "id": "cis-controls-v8-1-controlled",
+      "title": "Manual 20 — CIS Controls v8.1 Controlled Implementation",
+      "path": "01-foundations/CIS_Controls_v8.1_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 20
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

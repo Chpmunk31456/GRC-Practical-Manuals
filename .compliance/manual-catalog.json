@@ -7,7 +7,7 @@
     {"id":"cis-controls-v8-1","title":"CIS Critical Security Controls v8.1","path":"01-foundations/CIS_Controls_v8.1","status":"published","layout":"standard"},
     {"id":"nist-csf-2","title":"NIST Cybersecurity Framework 2.0","path":"01-foundations/NIST_CSF_2","status":"published","layout":"standard"},
     {"id":"nist-rmf-sp-800-53","title":"NIST RMF and SP 800-53","path":"01-foundations/NIST_RMF_SP_800-53","status":"published","layout":"standard"},
-    {"id":"iso-27001-27002","title":"ISO/IEC 27001 and ISO/IEC 27002","path":"02-management-systems/ISO_IEC_27001_27002","status":"published","layout":"standard"},
+    {"id":"iso-27001-27002","title":"Manual 16 — ISO/IEC 27001/27002 Legacy-to-Controlled Migration","path":"02-management-systems/ISO_IEC_27001_27002","status":"published","release_state":"published","layout":"controlled-build","series_order":16},
     {"id":"soc-2-audit-readiness","title":"SOC 2 Audit Readiness","path":"03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0","status":"published","layout":"language-directories"},
     {"id":"gdpr","title":"GDPR","path":"04-regulatory-compliance/GDPR","status":"published","layout":"standard"},
     {"id":"hipaa","title":"HIPAA","path":"04-regulatory-compliance/HIPAA","status":"published","layout":"standard"},

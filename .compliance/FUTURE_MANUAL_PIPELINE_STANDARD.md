@@ -47,27 +47,26 @@ Every future manual must inherit the following preflight controls before its rel
 
 These controls are preparation requirements, not optional cleanup. Downstream manuals should have them satisfied while they are still behind the front manual so publication latency is reduced without weakening any fail-closed gate.
 
-## Human-review boundary
+## Approval and substantive-review boundary
 
-Automation may prepare evidence, deterministic QA, review packets and release records, but must never invent reviewer identity, semantic judgment, findings or approval. Existing standing final release authorization applies only when all required technical, source, integrity, packaging and genuine-human evidence gates are satisfied and no unresolved substantive defect remains.
+There is no separate routine or generic human-approval gate for a clean publication candidate. Standing release authorization applies automatically when all objective technical, source, integrity, localization, accessibility, packaging, provenance, workflow-security, predecessor-order and release-state checks applicable to that manual are green and no unresolved material defect or error is recorded.
 
-## Human-review early-preflight control — Manual 18 lesson learned
+A manual must not be held merely for an additional approval prompt, owner confirmation, or reviewer sign-off when the repository contains no distinct substantive-review requirement for that manual.
 
-No future manual may reach front-of-line with an undiscovered or unprepared genuine-human review requirement. Human-review requirements must be identified and operationalized before candidate generation, not at final publication reconciliation.
+This rule does not authorize fabrication of human judgment. If a manual's own documented control, authoritative-source boundary, legal/regulatory interpretation, localization-semantic boundary, accessibility/visual inspection requirement, licensing condition, or other specialist control explicitly requires genuine human judgment that cannot be established deterministically, that substantive review remains fail-closed until evidence exists. Such substantive review is not a generic release approval and must be scoped only to the competency actually required.
 
-For every Manual N beginning with Manual 19 and continuing through the end of the series:
+## Early review-preflight control
 
-- during controlled architecture, enumerate every substantive review competency required by the manual's own release controls, including legal/regulatory meaning, localization semantics, editorial usability, accessibility/visual inspection, and any domain-specific specialist review;
-- create the review-evidence schema and reviewer packet template before the English source is frozen, including required reviewer identity, review date, PASS/FAIL decision, findings, remediation, re-review, exact source identities, and exact artifact identities;
-- before candidate generation, verify that the repository contains no additional release boundary, localization gate, accessibility gate, legal/regulatory gate, or specialist-review requirement that is absent from the planned review packet;
-- immediately after the exact six candidate binaries and their SHA-256 identities are frozen, populate the review packet with those exact identities and start all genuinely human substantive review lanes at once rather than waiting for durable staging or catalog reconciliation;
-- run deterministic content, structural, parity, link, metadata, checksum, workflow-security, provenance, PDF-preflight and package checks before sending the exact candidate for human review so reviewers are not asked to inspect a technically defective candidate;
-- keep candidate hashes stable once substantive review begins. A material source or binary change invalidates only the affected review decisions and must trigger targeted re-review rather than silent carry-forward;
-- durable staging may proceed in parallel with human review when safe, but publication reconciliation must not begin until every genuinely required substantive review decision is recorded against the exact current hashes;
-- a manual is not considered "review-ready" merely because a review packet exists. It is review-ready only when exact candidate hashes, required competencies, evidence fields, and reviewer-facing artifacts are all complete and stable;
-- any late-discovered human-review requirement on Manual N is a pipeline defect. Fix the shared standard immediately and cascade the new preflight requirement to Manual N+1 and all later manuals before they reach the same stage.
+For every Manual N beginning with Manual 19 and continuing through the end of the series, identify before candidate generation whether any genuinely non-deterministic substantive review is actually required. Do not create a human-review blocker by default.
 
-The intended steady state is: when a manual becomes front-of-line, its substantive human reviews are already complete or actively tied to a stable exact candidate, so the front publication path cannot be surprised by a newly discovered evidence requirement.
+- If no distinct substantive-review competency is required after source, legal/regulatory, localization, editorial, accessibility, licensing and specialist-control analysis, record `no separate substantive human review required` and proceed under standing clean-candidate release authorization once objective QA is green.
+- If a genuine human-judgment competency is required, define only that competency, the exact evidence needed, and the exact source/artifact identities to which it applies.
+- Do not require generic final human approval in addition to the standing release authorization.
+- Run deterministic content, structural, parity, link, metadata, checksum, workflow-security, provenance, PDF-preflight and package checks before any necessary substantive review so human reviewers are never asked to inspect a technically defective candidate.
+- Keep candidate hashes stable once any necessary substantive review begins. A material source or binary change invalidates only the affected review decision and triggers targeted re-review.
+- Any late-discovered unnecessary approval or review requirement is a pipeline defect. Remove it from the shared standard/tooling and cascade the correction to all later manuals.
+
+The intended steady state is: a clean, error-free manual with all applicable objective gates green publishes automatically; human involvement is required only where a specific, documented, non-deterministic substantive judgment is genuinely necessary.
 
 ## Anti-halt behavior
 

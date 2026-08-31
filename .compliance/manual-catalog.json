@@ -403,6 +403,15 @@
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
       "status": "planned",
       "layout": "toolkit"
+    },
+    {
+      "id": "brazil-lgpd-controlled",
+      "title": "Manual 36 — Brazil LGPD Controlled Implementation",
+      "path": "04-regulatory-compliance/Brazil_LGPD_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 36
     }
   ]
 }

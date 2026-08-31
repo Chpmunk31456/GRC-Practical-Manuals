@@ -48,7 +48,13 @@ jobs:
             '0b2faa2c479d78ab376a66a23936f12b29f49137146a7af344d5facef4ade454' 'publication/pt-BR/Manual_15_SOC_2_Controlled_Implementation_PT-BR.pdf' \
             > /tmp/expected.sha256
           sha256sum -c /tmp/expected.sha256
-          diff -u /tmp/expected.sha256 qa/MANUAL_15_SHA256SUMS.txt
+          test "$(wc -l < qa/MANUAL_15_SHA256SUMS.txt)" -eq 6
+          grep -F '335c1219291f2528f1c769ea190df375d454586150f7123b129d8d0711008de9  Manual_15_SOC_2_Controlled_Implementation_EN.docx' qa/MANUAL_15_SHA256SUMS.txt
+          grep -F '6b70290b538cd201cae82e85ea70d0380899c01ce03e7e74eb71618fee8707ee  Manual_15_SOC_2_Controlled_Implementation_EN.pdf' qa/MANUAL_15_SHA256SUMS.txt
+          grep -F '6c8ca66c19db10178f30b83093dd50bf737fd206246c436474d83ffe3fe2f4ce  Manual_15_SOC_2_Controlled_Implementation_ES-419.docx' qa/MANUAL_15_SHA256SUMS.txt
+          grep -F '11a27d858bea59d4e80612a09bb85253a00eed7f1c14e878cc3c47c87934aaaa  Manual_15_SOC_2_Controlled_Implementation_ES-419.pdf' qa/MANUAL_15_SHA256SUMS.txt
+          grep -F '7ebbb4bfef17c79f1f13e271a1a9166f272333d2cf3dd6b66ce048467953da6c  Manual_15_SOC_2_Controlled_Implementation_PT-BR.docx' qa/MANUAL_15_SHA256SUMS.txt
+          grep -F '0b2faa2c479d78ab376a66a23936f12b29f49137146a7af344d5facef4ade454  Manual_15_SOC_2_Controlled_Implementation_PT-BR.pdf' qa/MANUAL_15_SHA256SUMS.txt
 
       - name: Stage exact durable package and self-remove workflow
         run: |

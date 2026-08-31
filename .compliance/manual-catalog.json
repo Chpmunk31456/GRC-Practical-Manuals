@@ -344,6 +344,15 @@
       "series_order": 29
     },
     {
+      "id": "enterprise-grc-integration-crosswalks-controlled",
+      "title": "Manual 30 — Enterprise GRC Integration & Crosswalks Controlled Implementation",
+      "path": "08-templates-and-tools/Enterprise_GRC_Integration_Crosswalks",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 30
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

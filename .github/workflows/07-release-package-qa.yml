@@ -49,4 +49,11 @@ jobs:
         run: python3 scripts/compliance_qa_controlled_build.py release --output "$RUNNER_TEMP/release-qa-report.json"
       - name: Display the release QA report
         if: always()
-        run: python3 -m json.tool "$RUNNER_TEMP/release-qa-report.json"
+        run: |
+          set -euo pipefail
+          report="$RUNNER_TEMP/release-qa-report.json"
+          if [[ -f "$report" ]]; then
+            python3 -m json.tool "$report"
+          else
+            echo "Release QA report was not generated because an earlier fail-closed step did not complete."
+          fi

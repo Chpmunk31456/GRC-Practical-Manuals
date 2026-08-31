@@ -371,6 +371,15 @@
       "series_order": 32
     },
     {
+      "id": "sec-cybersecurity-governance-disclosure-controlled",
+      "title": "Manual 33 — SEC Cybersecurity Governance and Disclosure Controlled Implementation",
+      "path": "04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 33
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

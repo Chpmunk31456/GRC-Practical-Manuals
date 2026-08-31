@@ -6,7 +6,7 @@ Preparation only; publication state unchanged. Sequential publication order and 
 32 FFIEC — verify current FFIEC IT/cyber examination resources, member-agency source distinctions, and applicability boundaries.
 33 SEC Cybersecurity Governance and Disclosure — verify current SEC disclosure rules, materiality, governance, filing, and public-company applicability boundaries.
 34 ISO/IEC 27701 — verify current edition/amendment state, ISO copyright, certification, localization, and relationship to ISO/IEC 27001/27002.
-35 HITRUST CSF — verify current framework/assurance version, proprietary-source boundaries, and assessment/certification distinctions.
+35 Singapore AI & Privacy Governance — verify current Singapore PDPA/PDPC statutory and regulatory obligations, breach-notification and cross-border-transfer requirements, current IMDA/PDPC Model AI Governance Frameworks for Traditional, Generative, and Agentic AI, AI Verify resources, and the binding-law versus voluntary-guidance boundary. This supersedes the earlier HITRUST CSF Manual 35 preparation lane.
 36 Brazil LGPD — verify current statutory text, ANPD regulations/guidance, rights, roles, incidents, transfers, sanctions, and change state.
 37 Colombia Data Protection / Habeas Data — verify current laws, decrees, SIC guidance, rights, authorization, transfers/transmissions, security, and sector overlays.
 38 FERPA — verify current Department of Education statutory/regulatory sources, education-record scope, consent exceptions, and school-official/audit boundaries.

@@ -1,0 +1,80 @@
+name: "Reconcile Manual 20 publication state"
+
+on:
+  push:
+    branches:
+      - release/manual20-publication-reconciliation-2026-08-31
+    paths:
+      - ".github/workflows/reconcile-manual20-publication.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout reconciliation branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: release/manual20-publication-reconciliation-2026-08-31
+          fetch-depth: 0
+      - name: Reconcile catalog and work-product registry
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path = Path('.compliance/manual-catalog.json')
+          registry_path = Path('.compliance/work-product-releases.json')
+          catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+          registry = json.loads(registry_path.read_text(encoding='utf-8'))
+
+          manual_id = 'cis-controls-v8-1-controlled'
+          entry = {
+              'id': manual_id,
+              'title': 'Manual 20 — CIS Controls v8.1 Controlled Implementation',
+              'path': '01-foundations/CIS_Controls_v8.1_Controlled_Implementation',
+              'status': 'published',
+              'release_state': 'published',
+              'layout': 'controlled-build',
+              'series_order': 20,
+          }
+          manuals = catalog['manuals']
+          existing = next((m for m in manuals if m.get('id') == manual_id), None)
+          if existing:
+              existing.update(entry)
+          else:
+              toolkit_index = next((i for i,m in enumerate(manuals) if m.get('id') == 'ai-governance-audit-toolkit'), len(manuals))
+              manuals.insert(toolkit_index, entry)
+          catalog['last_updated'] = '2026-08-31'
+
+          evidence = (
+              'Manual 20 controlled English was frozen to blob d257e418e8839fe8694ca943760c65e43c7e1644 and controlled es-419/pt-BR localizations were merged through PR #324. '
+              'The exact six-binary candidate was generated successfully by workflow run 33367617544 / artifact 9748837052 at candidate head fe199355f0d5a4027f3601fd37eb6b9e93e6daed, with artifact digest sha256:963e9e39fbebe354fad4a3d3452dc3fe0163f561e50edb57bacf8d68e2b9429c. '
+              'Manual 20 Candidate Build, Workflow Security, Release Pipeline Meta QA, and Release Package QA passed on that exact candidate. '
+              'PR #326 bound the six SHA-256 identities plus deterministic PDF/DOCX rendering and accessibility QA with no identified defect requiring regeneration. '
+              'PR #327 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes after fail-closed hash verification; staging head c91dfb0c322cde1b8d1138e72ec683cadc60a1b5 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge. '
+              'Predecessor Manual 19 is published. Standing release authorization applies under the canonical no-errors/no-issues rule because applicable objective gates are green and no unresolved material source, technical, localization, licensing-boundary, integrity, packaging, accessibility, provenance, or substantive defect is recorded.'
+          )
+          released = registry['released_work_products']
+          rentry = {'id': manual_id, 'type': 'manual', 'release_state': 'published', 'release_evidence': evidence}
+          rexisting = next((r for r in released if r.get('id') == manual_id), None)
+          if rexisting:
+              rexisting.update(rentry)
+          else:
+              released.append(rentry)
+          registry['last_updated'] = '2026-08-31'
+
+          catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          registry_path.write_text(json.dumps(registry, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          PY
+          rm .github/workflows/reconcile-manual20-publication.yml
+      - name: Commit reconciliation and remove temporary workflow
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish Manual 20 catalog and release-state reconciliation'
+          git push origin HEAD:release/manual20-publication-reconciliation-2026-08-31

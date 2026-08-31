@@ -389,6 +389,15 @@
       "series_order": 34
     },
     {
+      "id": "singapore-ai-privacy-governance-controlled",
+      "title": "Manual 35 — Singapore AI & Privacy Governance Controlled Implementation",
+      "path": "04-regulatory-compliance/Singapore_AI_Privacy_Governance_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 35
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

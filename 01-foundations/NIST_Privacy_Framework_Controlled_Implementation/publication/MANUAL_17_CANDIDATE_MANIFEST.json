@@ -1,0 +1,42 @@
+{
+  "manual": 17,
+  "source_commit": "a51cd8b78a53af6288feefe99556e16a2bb9366b",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_EN.docx",
+      "sha256": "8eb3d6270158e43d75e7a18c3202ff8fcfb3b2dbde8e707cd605d1f0a7419180",
+      "bytes": 42659
+    },
+    {
+      "locale": "en",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_EN.pdf",
+      "sha256": "542ea854027c0c6f2a908263aee80db118ac5aaa6514b7e0a69ceee4f6b0b547",
+      "bytes": 83205
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_ES-419.docx",
+      "sha256": "3dce5cb82d71cd0124c368aca8e03cb424869593e72f49678e403cf4dc649d00",
+      "bytes": 43008
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_ES-419.pdf",
+      "sha256": "45458495a9d51557d5a4ddeb824fe4e7f67dd58ea9cbad22aeb2afb5305ce52c",
+      "bytes": 87370
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.docx",
+      "sha256": "55b67932cfab909178c6ef81374e593902d961379fc34d4ab010458dfb5abb3a",
+      "bytes": 43003
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_17_NIST_Privacy_Framework_Controlled_PT-BR.pdf",
+      "sha256": "1ab13ad82bed84d041869ad90ee7699322c502c3bd70638eca7daec7cfbb4973",
+      "bytes": 87731
+    }
+  ]
+}

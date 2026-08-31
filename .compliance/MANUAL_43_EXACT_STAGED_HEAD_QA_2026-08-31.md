@@ -1,0 +1,3 @@
+# Manual 43 — Exact Staged-Head QA Handoff
+
+The six ISO/IEC 27017 & 27018 publication binaries on this branch match the frozen Manual 43 candidate from workflow run 33445224426 and artifact 9777780098. Independent verification confirmed the recorded SHA-256 values and byte sizes, 32 controlled chapters in each DOCX, and searchable, nonblank, unencrypted PDFs. All 11 rendered PDF pages were inspected without a material clipping, overlap, blank-page, or layout defect. This marker changes no publication binary and attaches repository QA to the exact staged head after the temporary staging workflow removed itself.

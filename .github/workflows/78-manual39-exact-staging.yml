@@ -1,0 +1,51 @@
+name: "78 - Manual 39 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/78-manual39-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33438143319 -n manual39-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "eeec3117e0461e59ab1a43a0cab05e201a3214e42667a1f043785a92c51592af  candidate/Manual_39_COPPA_Controlled_EN.docx" | sha256sum -c -
+          echo "27a1ad55c54f26a04e0ae9eee9ef2cdb6ae173369062200ebf9ced0a1209e71c  candidate/Manual_39_COPPA_Controlled_EN.pdf" | sha256sum -c -
+          echo "d129421acf06e0e0575dc36f8dbd965a0d0ea9fbec9be99cec2ef2aee38d567b  candidate/Manual_39_COPPA_Controlled_ES-419.docx" | sha256sum -c -
+          echo "0b74c9a31724b4589af711ce5168e975aacff1c8d079b78314bad4f02f0ab6c5  candidate/Manual_39_COPPA_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "ef050dbb767ffa7d7360d26ebe41b677cb48671bc4ce45aad6ad91dcb033c71a  candidate/Manual_39_COPPA_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "f654f7d07f10d8a80338cd70d81f19275bbe7784cf52908130aae7d7d7443189  candidate/Manual_39_COPPA_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/COPPA_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_39_COPPA_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_39_COPPA_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_39_COPPA_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_39_COPPA_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_39_COPPA_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_39_COPPA_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/78-manual39-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/78-manual39-exact-staging.yml
+          git commit -m 'Stage Manual 39 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

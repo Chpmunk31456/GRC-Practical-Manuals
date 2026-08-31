@@ -1,444 +1,59 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-08-31",
-  "languages": [
-    "en",
-    "es-419",
-    "pt-BR"
-  ],
-  "publication_formats": [
-    "md",
-    "docx",
-    "pdf"
-  ],
+  "languages": ["en", "es-419", "pt-BR"],
+  "publication_formats": ["md", "docx", "pdf"],
   "manuals": [
-    {
-      "id": "cis-controls-v8-1",
-      "title": "CIS Critical Security Controls v8.1",
-      "path": "01-foundations/CIS_Controls_v8.1",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "nist-csf-2",
-      "title": "NIST Cybersecurity Framework 2.0",
-      "path": "01-foundations/NIST_CSF_2",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "nist-rmf-sp-800-53",
-      "title": "NIST RMF and SP 800-53",
-      "path": "01-foundations/NIST_RMF_SP_800-53",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "iso-27001-27002",
-      "title": "Manual 16 — ISO/IEC 27001/27002 Legacy-to-Controlled Migration",
-      "path": "02-management-systems/ISO_IEC_27001_27002",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 16
-    },
-    {
-      "id": "soc-2-audit-readiness",
-      "title": "SOC 2 Audit Readiness",
-      "path": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0",
-      "status": "published",
-      "layout": "language-directories"
-    },
-    {
-      "id": "gdpr",
-      "title": "GDPR",
-      "path": "04-regulatory-compliance/GDPR",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "hipaa",
-      "title": "HIPAA",
-      "path": "04-regulatory-compliance/HIPAA",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "pci-dss-4-0-1",
-      "title": "PCI DSS v4.0.1",
-      "path": "04-regulatory-compliance/PCI_DSS_v4.0.1",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "eu-ai-act-grc",
-      "title": "Manual 01 — EU AI Act Practical Implementation Guide",
-      "path": "04-regulatory-compliance/EU_AI_Act_GRC",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 1
-    },
-    {
-      "id": "incident-response-bcdr",
-      "title": "Incident Response, Business Continuity, and Disaster Recovery",
-      "path": "05-operational-resilience/Incident_Response_BCDR",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "cloud-security-compliance",
-      "title": "Cloud Security and Compliance",
-      "path": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "third-party-risk-supply-chain",
-      "title": "Third-Party Risk and Cyber Supply Chain",
-      "path": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "nist-ai-rmf-1-0",
-      "title": "Manual 03 — NIST AI Risk Management Framework Implementation",
-      "path": "01-foundations/NIST_AI_RMF_1.0",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 3
-    },
-    {
-      "id": "nist-ai-600-1",
-      "title": "Manual 04 — NIST AI 600-1 Generative AI Profile Implementation",
-      "path": "01-foundations/NIST_AI_600-1_Generative_AI_Profile",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 4
-    },
-    {
-      "id": "iso-42001-aims",
-      "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
-      "path": "02-management-systems/ISO_IEC_42001_AIMS",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 2
-    },
-    {
-      "id": "ai-auditing-assurance",
-      "title": "Manual 05 — AI Auditing and Assurance",
-      "path": "03-assurance-and-audit/AI_Auditing_and_Assurance",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 5
-    },
-    {
-      "id": "hipaa-implementation-series",
-      "title": "Manual 06 — HIPAA Implementation and Audit",
-      "path": "04-regulatory-compliance/HIPAA_Implementation_Series",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 6
-    },
-    {
-      "id": "ai-security-lifecycle",
-      "title": "Manual 07 — AI Security and Lifecycle Controls",
-      "path": "06-cloud-and-technology-risk/AI_Security_and_Lifecycle",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 7
-    },
-    {
-      "id": "vendor-risk-lifecycle",
-      "title": "Manual 08 — Vendor and Third-Party Risk Lifecycle",
-      "path": "07-third-party-risk/Vendor_Risk_Lifecycle",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 8
-    },
-    {
-      "id": "nist-csf-2-controlled",
-      "title": "Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation",
-      "path": "01-foundations/NIST_CSF_2_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 9
-    },
-    {
-      "id": "nist-rmf-800-53-controlled",
-      "title": "Manual 10 — NIST RMF and SP 800-53 Controlled Implementation",
-      "path": "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 10
-    },
-    {
-      "id": "gdpr-controlled",
-      "title": "Manual 11 — GDPR Privacy and Data Protection Controlled Implementation",
-      "path": "04-regulatory-compliance/GDPR_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 11
-    },
-    {
-      "id": "ccpa-cpra-controlled",
-      "title": "Manual 12 — CCPA / CPRA California Privacy Controlled Implementation",
-      "path": "04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 12
-    },
-    {
-      "id": "sox-itgc-icfr-controlled",
-      "title": "Manual 13 — SOX ITGC / ICFR Controlled Implementation",
-      "path": "04-regulatory-compliance/SOX_ITGC_ICFR_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 13
-    },
-    {
-      "id": "pci-dss-v4-0-1-controlled",
-      "title": "Manual 14 — PCI DSS v4.0.1 Controlled Implementation",
-      "path": "04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 14
-    },
-    {
-      "id": "soc2-controlled",
-      "title": "Manual 15 — SOC 2 Controlled Implementation",
-      "path": "04-regulatory-compliance/SOC_2_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 15
-    },
-    {
-      "id": "nist-privacy-framework-controlled",
-      "title": "Manual 17 — NIST Privacy Framework Controlled Implementation",
-      "path": "01-foundations/NIST_Privacy_Framework_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 17
-    },
-    {
-      "id": "glba-ftc-safeguards-controlled",
-      "title": "Manual 18 — GLBA / FTC Safeguards Rule Controlled Implementation",
-      "path": "04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 18
-    },
-    {
-      "id": "fedramp-fisma-controlled",
-      "title": "Manual 19 — FedRAMP / FISMA Controlled Implementation",
-      "path": "04-regulatory-compliance/FedRAMP_FISMA_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 19
-    },
-    {
-      "id": "cis-controls-v8-1-controlled",
-      "title": "Manual 20 — CIS Controls v8.1 Controlled Implementation",
-      "path": "01-foundations/CIS_Controls_v8.1_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 20
-    },
-    {
-      "id": "ot-ics-security-controlled",
-      "title": "Manual 21 — OT / ICS Security Controlled Implementation",
-      "path": "06-cloud-and-technology-risk/OT_ICS_Security_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 21
-    },
-    {
-      "id": "cloud-security-controlled",
-      "title": "Manual 22 — Cloud Security Controlled Implementation",
-      "path": "06-cloud-and-technology-risk/Cloud_Security_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 22
-    },
-    {
-      "id": "dora-controlled",
-      "title": "Manual 23 — DORA Controlled Implementation",
-      "path": "04-regulatory-compliance/DORA_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 23
-    },
-    {
-      "id": "nis2-controlled",
-      "title": "Manual 24 — NIS2 Controlled Implementation",
-      "path": "04-regulatory-compliance/NIS2_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 24
-    },
-    {
-      "id": "iso-22301-controlled",
-      "title": "Manual 25 — ISO 22301 Business Continuity Management Controlled Implementation",
-      "path": "05-operational-resilience/ISO_22301_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 25
-    },
-    {
-      "id": "incident-response-cyber-crisis-controlled",
-      "title": "Manual 26 — Incident Response & Cyber Crisis Management Controlled Implementation",
-      "path": "05-operational-resilience/Incident_Response_Cyber_Crisis_Management",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 26
-    },
-    {
-      "id": "data-governance-privacy-engineering-controlled",
-      "title": "Manual 27 — Data Governance & Privacy Engineering Controlled Implementation",
-      "path": "04-regulatory-compliance/Data_Governance_Privacy_Engineering",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 27
-    },
-    {
-      "id": "ai-privacy-automated-decision-governance-controlled",
-      "title": "Manual 28 — AI Privacy & Automated Decision Governance Controlled Implementation",
-      "path": "04-regulatory-compliance/AI_Privacy_Automated_Decision_Governance",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 28
-    },
-    {
-      "id": "software-ai-supply-chain-assurance-controlled",
-      "title": "Manual 29 — Software / AI Supply Chain Assurance Controlled Implementation",
-      "path": "06-cloud-and-technology-risk/Software_AI_Supply_Chain_Assurance",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 29
-    },
-    {
-      "id": "enterprise-grc-integration-crosswalks-controlled",
-      "title": "Manual 30 — Enterprise GRC Integration & Crosswalks Controlled Implementation",
-      "path": "08-templates-and-tools/Enterprise_GRC_Integration_Crosswalks",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 30
-    },
-    {
-      "id": "nydfs-part-500-controlled",
-      "title": "Manual 31 — NYDFS 23 NYCRR Part 500 Controlled Implementation",
-      "path": "04-regulatory-compliance/NYDFS_Part_500_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 31
-    },
-    {
-      "id": "ffiec-controlled",
-      "title": "Manual 32 — FFIEC Controlled Implementation",
-      "path": "04-regulatory-compliance/FFIEC_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 32
-    },
-    {
-      "id": "sec-cybersecurity-governance-disclosure-controlled",
-      "title": "Manual 33 — SEC Cybersecurity Governance and Disclosure Controlled Implementation",
-      "path": "04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 33
-    },
-    {
-      "id": "iso-iec-27701-2025-controlled",
-      "title": "Manual 34 — ISO/IEC 27701:2025 Privacy Information Management Controlled Implementation",
-      "path": "04-regulatory-compliance/ISO_IEC_27701_Privacy_Information_Management_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 34
-    },
-    {
-      "id": "singapore-ai-privacy-governance-controlled",
-      "title": "Manual 35 — Singapore AI & Privacy Governance Controlled Implementation",
-      "path": "04-regulatory-compliance/Singapore_AI_Privacy_Governance_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 35
-    },
-    {
-      "id": "ai-governance-audit-toolkit",
-      "title": "AI Governance and Audit Toolkit",
-      "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
-      "status": "planned",
-      "layout": "toolkit"
-    },
-    {
-      "id": "brazil-lgpd-controlled",
-      "title": "Manual 36 — Brazil LGPD Controlled Implementation",
-      "path": "04-regulatory-compliance/Brazil_LGPD_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 36
-    },
-    {
-      "id": "colombia-data-protection-habeas-data-controlled",
-      "title": "Manual 37 — Colombia Data Protection / Habeas Data Controlled Implementation",
-      "path": "04-regulatory-compliance/Colombia_Data_Protection_Habeas_Data_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 37
-    },
-    {
-      "id": "ferpa-controlled",
-      "title": "Manual 38 — FERPA Controlled Implementation",
-      "path": "04-regulatory-compliance/FERPA_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 38
-    },
-    {
-      "id": "coppa-controlled",
-      "title": "Manual 39 — COPPA Controlled Implementation",
-      "path": "04-regulatory-compliance/COPPA_Controlled_Implementation",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 39
-    }
+    {"id":"cis-controls-v8-1","title":"CIS Critical Security Controls v8.1","path":"01-foundations/CIS_Controls_v8.1","status":"published","layout":"standard"},
+    {"id":"nist-csf-2","title":"NIST Cybersecurity Framework 2.0","path":"01-foundations/NIST_CSF_2","status":"published","layout":"standard"},
+    {"id":"nist-rmf-sp-800-53","title":"NIST RMF and SP 800-53","path":"01-foundations/NIST_RMF_SP_800-53","status":"published","layout":"standard"},
+    {"id":"iso-27001-27002","title":"Manual 16 — ISO/IEC 27001/27002 Legacy-to-Controlled Migration","path":"02-management-systems/ISO_IEC_27001_27002","status":"published","release_state":"published","layout":"controlled-build","series_order":16},
+    {"id":"soc-2-audit-readiness","title":"SOC 2 Audit Readiness","path":"03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0","status":"published","layout":"language-directories"},
+    {"id":"gdpr","title":"GDPR","path":"04-regulatory-compliance/GDPR","status":"published","layout":"standard"},
+    {"id":"hipaa","title":"HIPAA","path":"04-regulatory-compliance/HIPAA","status":"published","layout":"standard"},
+    {"id":"pci-dss-4-0-1","title":"PCI DSS v4.0.1","path":"04-regulatory-compliance/PCI_DSS_v4.0.1","status":"published","layout":"standard"},
+    {"id":"eu-ai-act-grc","title":"Manual 01 — EU AI Act Practical Implementation Guide","path":"04-regulatory-compliance/EU_AI_Act_GRC","status":"published","release_state":"published","layout":"controlled-build","series_order":1},
+    {"id":"incident-response-bcdr","title":"Incident Response, Business Continuity, and Disaster Recovery","path":"05-operational-resilience/Incident_Response_BCDR","status":"published","layout":"standard"},
+    {"id":"cloud-security-compliance","title":"Cloud Security and Compliance","path":"06-cloud-and-technology-risk/Cloud_Security_and_Compliance","status":"published","layout":"standard"},
+    {"id":"third-party-risk-supply-chain","title":"Third-Party Risk and Cyber Supply Chain","path":"07-third-party-risk/Third_Party_Risk_and_Supply_Chain","status":"published","layout":"standard"},
+    {"id":"nist-ai-rmf-1-0","title":"Manual 03 — NIST AI Risk Management Framework Implementation","path":"01-foundations/NIST_AI_RMF_1.0","status":"published","release_state":"published","layout":"controlled-build","series_order":3},
+    {"id":"nist-ai-600-1","title":"Manual 04 — NIST AI 600-1 Generative AI Profile Implementation","path":"01-foundations/NIST_AI_600-1_Generative_AI_Profile","status":"published","release_state":"published","layout":"controlled-build","series_order":4},
+    {"id":"iso-42001-aims","title":"Manual 02 — ISO/IEC 42001 AI Management System Implementation","path":"02-management-systems/ISO_IEC_42001_AIMS","status":"published","release_state":"published","layout":"controlled-build","series_order":2},
+    {"id":"ai-auditing-assurance","title":"Manual 05 — AI Auditing and Assurance","path":"03-assurance-and-audit/AI_Auditing_and_Assurance","status":"published","release_state":"published","layout":"controlled-build","series_order":5},
+    {"id":"hipaa-implementation-series","title":"Manual 06 — HIPAA Implementation and Audit","path":"04-regulatory-compliance/HIPAA_Implementation_Series","status":"published","release_state":"published","layout":"controlled-build","series_order":6},
+    {"id":"ai-security-lifecycle","title":"Manual 07 — AI Security and Lifecycle Controls","path":"06-cloud-and-technology-risk/AI_Security_and_Lifecycle","status":"published","release_state":"published","layout":"controlled-build","series_order":7},
+    {"id":"vendor-risk-lifecycle","title":"Manual 08 — Vendor and Third-Party Risk Lifecycle","path":"07-third-party-risk/Vendor_Risk_Lifecycle","status":"published","release_state":"published","layout":"controlled-build","series_order":8},
+    {"id":"nist-csf-2-controlled","title":"Manual 09 — NIST Cybersecurity Framework 2.0 Controlled Implementation","path":"01-foundations/NIST_CSF_2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":9},
+    {"id":"nist-rmf-800-53-controlled","title":"Manual 10 — NIST RMF and SP 800-53 Controlled Implementation","path":"01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":10},
+    {"id":"gdpr-controlled","title":"Manual 11 — GDPR Privacy and Data Protection Controlled Implementation","path":"04-regulatory-compliance/GDPR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":11},
+    {"id":"ccpa-cpra-controlled","title":"Manual 12 — CCPA / CPRA California Privacy Controlled Implementation","path":"04-regulatory-compliance/CCPA_CPRA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":12},
+    {"id":"sox-itgc-icfr-controlled","title":"Manual 13 — SOX ITGC / ICFR Controlled Implementation","path":"04-regulatory-compliance/SOX_ITGC_ICFR_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":13},
+    {"id":"pci-dss-v4-0-1-controlled","title":"Manual 14 — PCI DSS v4.0.1 Controlled Implementation","path":"04-regulatory-compliance/PCI_DSS_v4.0.1_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":14},
+    {"id":"soc2-controlled","title":"Manual 15 — SOC 2 Controlled Implementation","path":"04-regulatory-compliance/SOC_2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":15},
+    {"id":"nist-privacy-framework-controlled","title":"Manual 17 — NIST Privacy Framework Controlled Implementation","path":"01-foundations/NIST_Privacy_Framework_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":17},
+    {"id":"glba-ftc-safeguards-controlled","title":"Manual 18 — GLBA / FTC Safeguards Rule Controlled Implementation","path":"04-regulatory-compliance/GLBA_FTC_Safeguards_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":18},
+    {"id":"fedramp-fisma-controlled","title":"Manual 19 — FedRAMP / FISMA Controlled Implementation","path":"04-regulatory-compliance/FedRAMP_FISMA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":19},
+    {"id":"cis-controls-v8-1-controlled","title":"Manual 20 — CIS Controls v8.1 Controlled Implementation","path":"01-foundations/CIS_Controls_v8.1_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":20},
+    {"id":"ot-ics-security-controlled","title":"Manual 21 — OT / ICS Security Controlled Implementation","path":"06-cloud-and-technology-risk/OT_ICS_Security_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":21},
+    {"id":"cloud-security-controlled","title":"Manual 22 — Cloud Security Controlled Implementation","path":"06-cloud-and-technology-risk/Cloud_Security_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":22},
+    {"id":"dora-controlled","title":"Manual 23 — DORA Controlled Implementation","path":"04-regulatory-compliance/DORA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":23},
+    {"id":"nis2-controlled","title":"Manual 24 — NIS2 Controlled Implementation","path":"04-regulatory-compliance/NIS2_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":24},
+    {"id":"iso-22301-controlled","title":"Manual 25 — ISO 22301 Business Continuity Management Controlled Implementation","path":"05-operational-resilience/ISO_22301_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":25},
+    {"id":"incident-response-cyber-crisis-controlled","title":"Manual 26 — Incident Response & Cyber Crisis Management Controlled Implementation","path":"05-operational-resilience/Incident_Response_Cyber_Crisis_Management","status":"published","release_state":"published","layout":"controlled-build","series_order":26},
+    {"id":"data-governance-privacy-engineering-controlled","title":"Manual 27 — Data Governance & Privacy Engineering Controlled Implementation","path":"04-regulatory-compliance/Data_Governance_Privacy_Engineering","status":"published","release_state":"published","layout":"controlled-build","series_order":27},
+    {"id":"ai-privacy-automated-decision-governance-controlled","title":"Manual 28 — AI Privacy & Automated Decision Governance Controlled Implementation","path":"04-regulatory-compliance/AI_Privacy_Automated_Decision_Governance","status":"published","release_state":"published","layout":"controlled-build","series_order":28},
+    {"id":"software-ai-supply-chain-assurance-controlled","title":"Manual 29 — Software / AI Supply Chain Assurance Controlled Implementation","path":"06-cloud-and-technology-risk/Software_AI_Supply_Chain_Assurance","status":"published","release_state":"published","layout":"controlled-build","series_order":29},
+    {"id":"enterprise-grc-integration-crosswalks-controlled","title":"Manual 30 — Enterprise GRC Integration & Crosswalks Controlled Implementation","path":"08-templates-and-tools/Enterprise_GRC_Integration_Crosswalks","status":"published","release_state":"published","layout":"controlled-build","series_order":30},
+    {"id":"nydfs-part-500-controlled","title":"Manual 31 — NYDFS 23 NYCRR Part 500 Controlled Implementation","path":"04-regulatory-compliance/NYDFS_Part_500_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":31},
+    {"id":"ffiec-controlled","title":"Manual 32 — FFIEC Controlled Implementation","path":"04-regulatory-compliance/FFIEC_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":32},
+    {"id":"sec-cybersecurity-governance-disclosure-controlled","title":"Manual 33 — SEC Cybersecurity Governance and Disclosure Controlled Implementation","path":"04-regulatory-compliance/SEC_Cybersecurity_Governance_Disclosure_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":33},
+    {"id":"iso-iec-27701-2025-controlled","title":"Manual 34 — ISO/IEC 27701:2025 Privacy Information Management Controlled Implementation","path":"04-regulatory-compliance/ISO_IEC_27701_Privacy_Information_Management_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":34},
+    {"id":"singapore-ai-privacy-governance-controlled","title":"Manual 35 — Singapore AI & Privacy Governance Controlled Implementation","path":"04-regulatory-compliance/Singapore_AI_Privacy_Governance_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":35},
+    {"id":"ai-governance-audit-toolkit","title":"AI Governance and Audit Toolkit","path":"08-templates-and-tools/AI_Governance_and_Audit_Toolkit","status":"planned","layout":"toolkit"},
+    {"id":"brazil-lgpd-controlled","title":"Manual 36 — Brazil LGPD Controlled Implementation","path":"04-regulatory-compliance/Brazil_LGPD_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":36},
+    {"id":"colombia-data-protection-habeas-data-controlled","title":"Manual 37 — Colombia Data Protection / Habeas Data Controlled Implementation","path":"04-regulatory-compliance/Colombia_Data_Protection_Habeas_Data_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":37},
+    {"id":"ferpa-controlled","title":"Manual 38 — FERPA Controlled Implementation","path":"04-regulatory-compliance/FERPA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":38},
+    {"id":"coppa-controlled","title":"Manual 39 — COPPA Controlled Implementation","path":"04-regulatory-compliance/COPPA_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":39},
+    {"id":"cjis-security-policy-controlled","title":"Manual 40 — CJIS Security Policy Controlled Implementation","path":"04-regulatory-compliance/CJIS_Security_Policy_Controlled_Implementation","status":"published","release_state":"published","layout":"controlled-build","series_order":40}
   ]
 }

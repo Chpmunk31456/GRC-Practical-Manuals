@@ -326,6 +326,15 @@
       "series_order": 27
     },
     {
+      "id": "ai-privacy-automated-decision-governance-controlled",
+      "title": "Manual 28 — AI Privacy & Automated Decision Governance Controlled Implementation",
+      "path": "04-regulatory-compliance/AI_Privacy_Automated_Decision_Governance",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 28
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

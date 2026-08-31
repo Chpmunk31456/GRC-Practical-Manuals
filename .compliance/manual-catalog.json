@@ -466,6 +466,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 42
+    },
+    {
+      "id": "iso-iec-27017-27018-controlled",
+      "title": "Manual 43 — ISO/IEC 27017 & 27018 Cloud Security and Privacy Controlled Implementation",
+      "path": "06-cloud-and-technology-risk/ISO_IEC_27017_27018_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 43
     }
   ]
 }

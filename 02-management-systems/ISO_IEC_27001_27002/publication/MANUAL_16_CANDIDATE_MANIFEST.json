@@ -1,0 +1,42 @@
+{
+  "manual": 16,
+  "source_commit": "cbf23c01e5388c30ac41c767a42582507f202e45",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_EN.docx",
+      "sha256": "d5fdb1b5d2bf7d01dde13e9553534c77951f96994737fc4c5648c5722f82d206",
+      "bytes": 42587
+    },
+    {
+      "locale": "en",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_EN.pdf",
+      "sha256": "cbcc87ff31faaff4fa1f20030a48342e23e369cdfabf966ad9018133b0a1879a",
+      "bytes": 89209
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_ES-419.docx",
+      "sha256": "004f674a21d9e90d17d9ec349a4d81aee300b4f7e2ae34a4412256e754d90025",
+      "bytes": 41339
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_ES-419.pdf",
+      "sha256": "0c01b378c3d16d6c290f20f575378d95fe4a5f820ac67d2dc8ff26381d6d5382",
+      "bytes": 83693
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_PT-BR.docx",
+      "sha256": "ff74735811aeb26b55402cc05084a360337045d21544ad0d5a537453ecaef34e",
+      "bytes": 40819
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_16_ISO_IEC_27001_27002_Controlled_PT-BR.pdf",
+      "sha256": "ed5ef1e2058037bd88876cff0eaea06c8e70f980a29cd2e488d3a006cd2c3320",
+      "bytes": 84256
+    }
+  ]
+}

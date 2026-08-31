@@ -8,6 +8,7 @@ not replace page-level visual/accessibility review.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import re
 import shutil
 import subprocess
@@ -19,6 +20,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MIN_PDF_BYTES = 1024
 MIN_TEXT_CHARS = 80
+MAX_PDF_WORKERS = 4
 
 
 def display_path(path: Path) -> Path:
@@ -128,8 +130,14 @@ def main() -> int:
         return 0
 
     errors: list[str] = []
-    for pdf in pdfs:
-        pdf_errors = check_pdf(pdf)
+    worker_count = min(MAX_PDF_WORKERS, len(pdfs))
+    # Each PDF is independent. Parallel execution preserves every existing check
+    # while preventing repository growth from serially multiplying pdftotext time.
+    with ThreadPoolExecutor(max_workers=worker_count) as executor:
+        results = list(executor.map(check_pdf, pdfs))
+
+    # Report in the original deterministic path order regardless of worker timing.
+    for pdf, pdf_errors in zip(pdfs, results):
         label = display_path(pdf)
         if pdf_errors:
             errors.extend(pdf_errors)
@@ -142,7 +150,7 @@ def main() -> int:
     if errors:
         print(f"PDF content preflight: FAIL ({len(errors)} error(s))")
         return 1
-    print(f"PDF content preflight: PASS ({len(pdfs)} PDF(s) checked)")
+    print(f"PDF content preflight: PASS ({len(pdfs)} PDF(s) checked with {worker_count} worker(s))")
     return 0
 
 

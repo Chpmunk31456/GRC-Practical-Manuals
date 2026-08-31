@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/build_manual16_candidate.py"
+      - "scripts/pdf_content_preflight.py"
       - "02-management-systems/ISO_IEC_27001_27002/controlled/**"
       - ".github/workflows/16-manual16-candidate-build.yml"
   workflow_dispatch:

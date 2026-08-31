@@ -13,3 +13,7 @@ Status: deterministic staging evidence only; no human-review decision is asserte
 The staging transaction downloaded the previously successful publication-candidate artifact and verified all six fixed SHA-256 identities before copying bytes into the controlled publication tree. It did not regenerate publication artifacts. The temporary write-enabled staging workflow self-removed in the staging commit.
 
 Any subsequent binary change requires a new candidate identity, new SHA-256 binding, and reopening of affected review/QA gates. Publication-state reconciliation remains separate and must not occur unless the durable files are present on `main` and applicable exact-head checks are green.
+
+## Exact-head QA retrigger record
+
+On 2026-08-30, the first Release Package QA run for this durable-staging head was canceled during PDF validation before the release-readiness gate could complete. This text-only evidence update intentionally retriggers exact-head QA without changing any of the six staged publication binaries or their recorded SHA-256 identities. Publication remains fail-closed until the replacement exact-head release workflow completes successfully.

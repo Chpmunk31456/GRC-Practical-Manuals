@@ -10,8 +10,8 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 sources={
  'en': BASE/'en/MANUAL_17_CONTROLLED_EN.md',
- 'es-419': BASE/'es-419/MANUAL_17_CONTROLLED_ES-419.md',
- 'pt-BR': BASE/'pt-BR/MANUAL_17_CONTROLLED_PT-BR.md',
+ 'es-419': BASE/'es-419/MANUAL_17_CONTROLLED_ES_419.md',
+ 'pt-BR': BASE/'pt-BR/MANUAL_17_CONTROLLED_PT_BR.md',
 }
 
 names={

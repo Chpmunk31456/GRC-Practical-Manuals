@@ -299,6 +299,15 @@
       "series_order": 24
     },
     {
+      "id": "iso-22301-controlled",
+      "title": "Manual 25 — ISO 22301 Business Continuity Management Controlled Implementation",
+      "path": "05-operational-resilience/ISO_22301_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 25
+    },
+    {
       "id": "ai-governance-audit-toolkit",
       "title": "AI Governance and Audit Toolkit",
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",

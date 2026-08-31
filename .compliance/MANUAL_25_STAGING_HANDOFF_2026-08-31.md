@@ -5,3 +5,5 @@ The exact six publication-candidate binaries from workflow run `33390353180` / a
 The temporary write-enabled staging workflow removed itself in the same staging commit. This owner-authored handoff commit intentionally changes no publication binary and exists to place ordinary repository QA on an owner-authored exact staging head after the staging transaction.
 
 Candidate provenance is recorded in `.compliance/MANUAL_25_EXACT_CANDIDATE_PROVENANCE_2026-08-31.md`. Publication remains sequential behind published Manual 24; once this exact staging head passes the applicable objective gates, Manual 25 proceeds immediately to catalog/release-registry reconciliation under the canonical clean-candidate authorization rule.
+
+Final publication reconciliation has now updated the catalog and work-product release registry on this branch and self-removed its temporary workflow. This owner-authored metadata-only touch intentionally preserves every staged publication binary byte while re-triggering ordinary exact-head QA on the final reconciled candidate.

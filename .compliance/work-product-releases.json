@@ -247,6 +247,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 41 UK GDPR / Data Protection Act controlled EN/es-419/pt-BR package merged through PR #449. Exact six-binary candidate workflow run 33440744859 / artifact 9776138801 is bound to artifact digest sha256:c2fdde24ffa5e549b2e46cac474f244739f67125f369b0452f9c3664e875dd6f. PR #452 bound all six immutable SHA-256/byte identities after independent artifact verification confirmed 32 chapters in every DOCX and searchable, nonblank, unencrypted PDFs. PR #455 durably staged the exact six binaries after fail-closed SHA-256 verification; cleaned staged head dc606b1f8599187d131f5ba9d8ac046c4a6936e4 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 40 is published; no unresolved material source, applicability, localization, integrity, packaging, provenance, workflow-security, or substantive defect is recorded."
+    },
+    {
+      "id": "canada-privacy-controlled",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 42 Canada Privacy controlled EN/es-419/pt-BR package merged through PR #456 with federal PIPEDA, applicable provincial/private-sector laws, sector rules, and regulator guidance maintained as distinct source layers. Exact six-binary candidate workflow run 33445214696 / artifact 9777769425 is bound to artifact digest sha256:ac270e6af7e514fada095a3a2d6898ce97bc3064bf526788b8828b46e4d33ee7. PR #460 bound all six immutable SHA-256/byte identities after independent artifact verification confirmed manifest equality, 32 chapters in every DOCX, searchable nonblank unencrypted four-page PDFs, and rendered inspection of all 12 PDF pages without a material layout defect. PR #461 durably staged the exact six binaries after fail-closed SHA-256 verification; cleaned staged head d706cad947f92ff8a689c23ed5c2ddcfdc46c8b6 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 41 is published; the candidate build transaction also passed Workflow Security and Release Pipeline Meta QA, and no unresolved material source, applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, or substantive defect is recorded."
     }
   ]
 }

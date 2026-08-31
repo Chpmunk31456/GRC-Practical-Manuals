@@ -1,0 +1,3 @@
+# Manual 31 — localization boundary
+
+The es-419 and pt-BR editions are unofficial project translations of the controlled implementation guidance. They preserve DFS/Part 500 legal and regulatory identifiers, entity-status terms, timing/reporting concepts, and the non-legal-advice boundary. They are not NYDFS translations and must not be used as substitutes for the authoritative English regulation or current DFS materials.

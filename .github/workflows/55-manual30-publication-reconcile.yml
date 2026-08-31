@@ -1,0 +1,91 @@
+name: "55 - Manual 30 Publication Reconcile"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/55-manual30-publication-reconcile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile-publication:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact PR head branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Fail-closed predecessor, artifact, and registry reconciliation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path = Path('.compliance/manual-catalog.json')
+          releases_path = Path('.compliance/work-product-releases.json')
+          root = Path('08-templates-and-tools/Enterprise_GRC_Integration_Crosswalks/publication')
+
+          required = [
+              root/'en/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_EN.docx',
+              root/'en/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_EN.pdf',
+              root/'es-419/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_ES-419.docx',
+              root/'es-419/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_ES-419.pdf',
+              root/'pt-BR/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_PT-BR.docx',
+              root/'pt-BR/Manual_30_Enterprise_GRC_Integration_Crosswalks_Controlled_PT-BR.pdf',
+          ]
+          missing = [str(p) for p in required if not p.is_file() or p.stat().st_size == 0]
+          if missing:
+              raise SystemExit('missing/nonempty staged Manual 30 artifacts: ' + ', '.join(missing))
+
+          catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+          releases = json.loads(releases_path.read_text(encoding='utf-8'))
+
+          predecessor_id = 'software-ai-supply-chain-assurance-controlled'
+          if not any(m.get('id') == predecessor_id and m.get('status') == 'published' and m.get('release_state') == 'published' for m in catalog['manuals']):
+              raise SystemExit('Manual 29 is not published in manual catalog')
+          if not any(r.get('id') == predecessor_id and r.get('release_state') == 'published' for r in releases['released_work_products']):
+              raise SystemExit('Manual 29 is not published in work-product release registry')
+
+          manual_id = 'enterprise-grc-integration-crosswalks-controlled'
+          if any(m.get('id') == manual_id for m in catalog['manuals']):
+              raise SystemExit('Manual 30 catalog entry already exists; refusing duplicate reconciliation')
+          if any(r.get('id') == manual_id for r in releases['released_work_products']):
+              raise SystemExit('Manual 30 release entry already exists; refusing duplicate reconciliation')
+
+          entry = {
+              'id': manual_id,
+              'title': 'Manual 30 — Enterprise GRC Integration & Crosswalks Controlled Implementation',
+              'path': '08-templates-and-tools/Enterprise_GRC_Integration_Crosswalks',
+              'status': 'published',
+              'release_state': 'published',
+              'layout': 'controlled-build',
+              'series_order': 30,
+          }
+          toolkit_index = next((i for i,m in enumerate(catalog['manuals']) if m.get('id') == 'ai-governance-audit-toolkit'), len(catalog['manuals']))
+          catalog['manuals'].insert(toolkit_index, entry)
+          catalog['last_updated'] = '2026-08-31'
+
+          releases['released_work_products'].append({
+              'id': manual_id,
+              'type': 'manual',
+              'release_state': 'published',
+              'release_evidence': 'Manual 30 Enterprise GRC Integration & Crosswalks controlled EN/es-419/pt-BR package merged through PR #392 after the controlled non-equivalence architecture was established and restacked onto the published Manual 29 mainline. The exact six-binary candidate was generated successfully by workflow run 33409871076 / artifact 9764680408 with artifact digest sha256:4142932df810e97d88b243905cb1ead50e147f743654439893f5ee48301a0ac5. Candidate Build, Workflow Security, Release Pipeline Meta QA, Manual Structure QA, Trilingual Publication Parity, and Release Package QA passed. PR #396 bound all six immutable SHA-256 identities plus deterministic DOCX/PDF package integrity, 32-chapter completeness, accessibility with zero findings, searchable PDF checks, and full rendered review with no identified defect requiring regeneration. PR #397 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes after fail-closed verification of all six SHA-256 identities; its owner-authored exact staging head 5b4f8b7f4e394443a8cfe34d68d3dcf26cc42514 passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA before merge at 16456edaad042e2a939d1a1a8bfba5beeeb86528. Predecessor Manual 29 is published. Standing release authorization applies because applicable objective gates are green and no unresolved material source, applicability, technical, localization, integrity, packaging, accessibility, provenance, workflow-security, crosswalk-equivalence, or substantive defect is recorded.'
+          })
+          releases['last_updated'] = '2026-08-31'
+
+          catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          releases_path.write_text(json.dumps(releases, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          PY
+      - name: Commit publication state and self-remove reconciler
+        run: |
+          rm .github/workflows/55-manual30-publication-reconcile.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .github/workflows/55-manual30-publication-reconcile.yml
+          git commit -m 'Reconcile Manual 30 published state and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

@@ -430,6 +430,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 38
+    },
+    {
+      "id": "coppa-controlled",
+      "title": "Manual 39 — COPPA Controlled Implementation",
+      "path": "04-regulatory-compliance/COPPA_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 39
     }
   ]
 }

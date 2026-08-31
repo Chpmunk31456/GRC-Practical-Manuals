@@ -1,0 +1,51 @@
+name: "67 - Manual 35 Exact Durable Staging"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/67-manual35-exact-staging.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  stage-exact:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Download frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 33424241191 -n manual35-six-binary-candidate -D candidate
+      - name: Verify exact provenance-bound hashes
+        run: |
+          echo "df71850cdb9dbbdf8f2f1be5493ca4c819607bf8e9c1f4fae64c456d85c3e9fe  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_EN.docx" | sha256sum -c -
+          echo "cd4cda7c07f4cfb567f950acafc35ad0447cb28ec0641519ff8e9704aee14d1e  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_EN.pdf" | sha256sum -c -
+          echo "cb6e4b4e14ae503c07aeeb6b1f124a7d6f302691122f395ac4aeb7090a7e804c  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_ES-419.docx" | sha256sum -c -
+          echo "ecab1d24d247f65c47ba463cfffb1cada58f5e28d57aa1d7fb10c40c48e4f460  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_ES-419.pdf" | sha256sum -c -
+          echo "9d063831298351a4fac553ae85cb2aeab0f3a4895eeb499602b67840bd755743  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_PT-BR.docx" | sha256sum -c -
+          echo "31cd5c951e219e75f4bf2ad43ceb1886cbbccc7594bde74c56a2353dc16b07a2  candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact bytes and self-remove workflow
+        run: |
+          ROOT='04-regulatory-compliance/Singapore_AI_Privacy_Governance_Controlled_Implementation/publication'
+          mkdir -p "$ROOT/en" "$ROOT/es-419" "$ROOT/pt-BR"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_EN.docx "$ROOT/en/"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_EN.pdf "$ROOT/en/"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_ES-419.docx "$ROOT/es-419/"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_ES-419.pdf "$ROOT/es-419/"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_PT-BR.docx "$ROOT/pt-BR/"
+          cp candidate/Manual_35_Singapore_AI_Privacy_Governance_Controlled_PT-BR.pdf "$ROOT/pt-BR/"
+          rm .github/workflows/67-manual35-exact-staging.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$ROOT" .github/workflows/67-manual35-exact-staging.yml
+          git commit -m 'Stage Manual 35 exact publication bytes and remove temporary workflow'
+          git push origin HEAD:${{ github.head_ref }}

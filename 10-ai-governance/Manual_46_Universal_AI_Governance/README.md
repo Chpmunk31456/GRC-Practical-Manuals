@@ -1,7 +1,7 @@
 # Manual 46 — Universal AI Governance Foundation
 
 **Status:** CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft  
+**Version:** 0.2.0-draft  
 **Controlled language:** English  
 **Purpose:** Universal, jurisdiction-aware AI-governance training and operating model.
 
@@ -11,7 +11,7 @@ Manual 46 is the universal foundation for the AI-governance training series. It 
 
 It teaches the common governance system that an organization can use to govern predictive AI, machine learning, generative AI, foundation models, RAG systems, embedded AI, and agentic AI across the complete lifecycle.
 
-Later manuals specialize this foundation. Manual 47 is the first specialist training and covers the EU AI Act.
+Later manuals specialize this foundation. Manual 47 is the first specialist training and covers the EU AI Act. Interview-specific questions, case drills and 30/60/90-day material are reserved for the final interview capstone rather than embedded in Manual 46.
 
 ## 2. Universal governance objective
 
@@ -259,6 +259,6 @@ A learner completing Manual 46 should be able to:
 - [ ] Visible-page and text validation complete for every PDF.
 - [ ] Release manifest/provenance/checksums complete.
 - [ ] Repository/workflow security QA complete.
-- [ ] Required accountable-human release approval recorded.
+- [ ] Standing release authorization satisfied under the canonical equation; no separate generic final approval prompt.
 
 **Fail-closed rule:** Manual 46 remains controlled development until every applicable release gate is satisfied.

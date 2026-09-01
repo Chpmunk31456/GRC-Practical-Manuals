@@ -36,7 +36,7 @@ jobs:
           catalog=json.loads(Path('.compliance/manual-catalog.json').read_text())
           releases=json.loads(Path('.compliance/work-product-releases.json').read_text())
           assert any(m.get('series_order')==45 and m.get('status')=='published' and m.get('release_state')=='published' for m in catalog['manuals']), 'Manual 45 not published in catalog'
-          assert any(r.get('id')=='enterprise-compliance-training-capstone' and r.get('release_state')=='published' for r in releases['work_products']), 'Manual 45 not published in release registry'
+          assert any(r.get('id')=='enterprise-compliance-training-capstone' and r.get('release_state')=='published' for r in releases['released_work_products']), 'Manual 45 not published in release registry'
           PY
       - name: Reconcile Manual 46 publication state
         run: |
@@ -78,7 +78,7 @@ jobs:
             'No unresolved material source, localization, integrity, packaging, accessibility/rendering, provenance, workflow-security, or substantive defect is recorded.'
           )
           release_entry={'id': manual_id, 'type': 'manual', 'release_state': 'published', 'release_evidence': evidence}
-          products=releases['work_products']
+          products=releases['released_work_products']
           existing=[r for r in products if r.get('id')==manual_id]
           if existing:
             if existing != [release_entry]:

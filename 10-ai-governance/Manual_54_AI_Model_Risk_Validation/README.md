@@ -1,11 +1,23 @@
 # Manual 54 — AI Model Risk Management & Independent Validation
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.2.0-draft  
+**Canonical stage:** 0 — authoritative source baseline and validation-control architecture
 
 ## Purpose
 
 Establish a practical model-risk-management and independent-validation discipline for AI systems, including predictive AI, machine learning, generative AI, foundation-model integrations and agentic systems.
+
+## Stage-0 controlled work
+
+- authoritative model-risk and AI-validation source-baseline preparation;
+- validation independence and competence criteria;
+- materiality, intended-use, assumptions, data and methodology taxonomy;
+- performance, robustness, sensitivity, fairness-where-relevant and explainability evaluation architecture;
+- GenAI, RAG and agentic-system evaluation model;
+- independent challenge, findings, conditional approval and residual-risk decision model;
+- monitoring, drift, degradation and revalidation trigger architecture;
+- evidence catalogue and scenario framework preparation.
 
 ## Architecture
 
@@ -45,13 +57,14 @@ Validation independence should scale with materiality and risk. The person or fu
 
 ## Publication gates
 
-- [ ] Model-risk source set verified.
+- [x] Stage-0 source-baseline and validation-control architecture initiated.
+- [ ] Model-risk source set verified and source status classified.
 - [ ] Validation independence criteria reviewed.
 - [ ] GenAI and agentic evaluation methods reviewed.
 - [ ] Monitoring/revalidation criteria reviewed.
 - [ ] Crosswalk to Manual 46/49/51 complete.
 - [ ] Accessibility/localization preparation complete.
-- [ ] Artifact/provenance/security gates complete.
-- [ ] Required accountable-human release approval recorded.
+- [ ] Deterministic candidate/provenance/render/security gates complete.
+- [ ] Any retained substantive-review evidence genuinely recorded.
 
-**Fail-closed:** this is parallel pre-stage work and not a publication candidate.
+**Fail-closed:** Manual 54 remains exactly one controlled stage behind Manual 53 and is not yet a publication candidate.

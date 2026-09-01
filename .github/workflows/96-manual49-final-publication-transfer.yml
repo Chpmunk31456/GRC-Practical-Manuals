@@ -1,0 +1,87 @@
+name: Manual 49 final publication transfer
+on:
+  push:
+    branches: [publish/manual49-final-2026-09-01]
+    paths: ['.github/workflows/96-manual49-final-publication-transfer.yml']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish-exact-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: publish/manual49-final-2026-09-01
+      - name: Download frozen Manual 49 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/9817364772/zip" -o /tmp/m49.zip
+          mkdir -p /tmp/m49 && unzip -q /tmp/m49.zip -d /tmp/m49
+          find /tmp/m49 -maxdepth 3 -type f -print
+      - name: Verify exact frozen hashes and bytes
+        run: |
+          set -euo pipefail
+          cd /tmp/m49
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_EN.docx | awk '{print $1}')" = "9e9e1156f47691a7434466ca3eda4908971d6a3e3695f51b82f4ad9580f46594"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_EN.docx)" = "44501"
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_EN.pdf | awk '{print $1}')" = "189e89a75cba2d269d8325bfa69baec7ff1b6fd84202c8b47733cab7f98d706f"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_EN.pdf)" = "166491"
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_ES-419.docx | awk '{print $1}')" = "29c8797eb3a4bed3803fa358fe8f76fd86efb5fbf990371e3ece20a49d01a8f8"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_ES-419.docx)" = "39181"
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_ES-419.pdf | awk '{print $1}')" = "7e3b9f2d9d8a10d64f4f4c0f27871f9144540a46b7c92c54e035336a7d13eec7"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_ES-419.pdf)" = "67087"
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_PT-BR.docx | awk '{print $1}')" = "0101810fd1fbc386aab0ad58331f895a1f9a5160edfe1ba443d3cb3fe8c12966"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_PT-BR.docx)" = "39179"
+          test "$(sha256sum Manual_49_NIST_AI_RMF_GenAI_PT-BR.pdf | awk '{print $1}')" = "6f65744ffa0a6dd97eda2730d6d0dffdd90b356380ad71bc1824fcee677885f0"
+          test "$(stat -c%s Manual_49_NIST_AI_RMF_GenAI_PT-BR.pdf)" = "67433"
+      - name: Stage exact bytes and reconcile publication registries
+        run: |
+          set -euo pipefail
+          ROOT="10-ai-governance/Manual_49_NIST_AI_RMF_GenAI"
+          mkdir -p "$ROOT/English" "$ROOT/Espanol" "$ROOT/Portugues_BR" "$ROOT/qa"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_EN.docx "$ROOT/English/"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_EN.pdf "$ROOT/English/"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_ES-419.docx "$ROOT/Espanol/"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_ES-419.pdf "$ROOT/Espanol/"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_PT-BR.docx "$ROOT/Portugues_BR/"
+          cp /tmp/m49/Manual_49_NIST_AI_RMF_GenAI_PT-BR.pdf "$ROOT/Portugues_BR/"
+          CAND=$(find /tmp/m49 -maxdepth 2 -type f -iname '*manifest*.json' | head -1 || true)
+          if [ -n "$CAND" ]; then cp "$CAND" "$ROOT/qa/MANUAL_49_CANDIDATE_MANIFEST.json"; fi
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('.compliance/manual-catalog.json')
+          d=json.loads(p.read_text())
+          items=d.setdefault('manuals',[])
+          x=next((m for m in items if m.get('series_order')==49 or m.get('path')=='10-ai-governance/Manual_49_NIST_AI_RMF_GenAI'),None)
+          if x is None:
+              x={'id':'manual-49-nist-ai-rmf-genai','title':'Manual 49 — NIST AI RMF 1.0 + NIST AI 600-1 GenAI','path':'10-ai-governance/Manual_49_NIST_AI_RMF_GenAI','layout':'controlled-build','series_order':49}
+              items.append(x)
+          x.update({'status':'published','release_state':'published'})
+          d['last_updated']='2026-09-01'
+          p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+          p=Path('.compliance/work-product-releases.json')
+          d=json.loads(p.read_text())
+          items=d.setdefault('released_work_products',[])
+          x=next((m for m in items if m.get('id')=='manual-49-nist-ai-rmf-genai'),None)
+          if x is None:
+              x={'id':'manual-49-nist-ai-rmf-genai','type':'manual'}
+              items.append(x)
+          x['release_state']='published'
+          x['release_evidence']='Manual 49 controlled candidate and source/currentness reconciliation were merged through PRs #498, #499 and #502. Exact six-binary candidate from workflow run 33550836644 / artifact 9817364772 / digest sha256:10d76771a4d9bbda36706b07708fafcd87cf0a4ca01723beb731b25d633e86ea was transferred without regeneration after fail-closed hash and byte-count verification. Frozen hashes: EN DOCX/PDF 9e9e1156f47691a7434466ca3eda4908971d6a3e3695f51b82f4ad9580f46594 / 189e89a75cba2d269d8325bfa69baec7ff1b6fd84202c8b47733cab7f98d706f; es-419 DOCX/PDF 29c8797eb3a4bed3803fa358fe8f76fd86efb5fbf990371e3ece20a49d01a8f8 / 7e3b9f2d9d8a10d64f4f4c0f27871f9144540a46b7c92c54e035336a7d13eec7; pt-BR DOCX/PDF 0101810fd1fbc386aab0ad58331f895a1f9a5160edfe1ba443d3cb3fe8c12966 / 6f65744ffa0a6dd97eda2730d6d0dffdd90b356380ad71bc1824fcee677885f0. Predecessor Manual 48 is published. Canonical clean-candidate automatic release rule applies; no unresolved substantive defect is documented.'
+          d['last_updated']='2026-09-01'
+          p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Remove temporary workflow and commit publication transaction
+        run: |
+          set -euo pipefail
+          rm .github/workflows/96-manual49-final-publication-transfer.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git commit -m "Publish Manual 49 exact frozen binaries and registry state"
+          git push origin HEAD:publish/manual49-final-2026-09-01

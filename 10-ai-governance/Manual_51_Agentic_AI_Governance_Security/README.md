@@ -1,7 +1,9 @@
 # Manual 51 — Agentic AI Governance, Security, Identity & Human Accountability
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.2.0-draft  
+**Source verification date:** 1 September 2026  
+**Canonical stage:** 0 — authoritative source baseline and control taxonomy
 
 ## Purpose
 
@@ -10,6 +12,12 @@ Provide a practical governance and security model for AI agents that can plan, i
 ## Governing principle
 
 Agentic AI must be governed by the consequences of its actions, not only by the quality of its generated text.
+
+## Stage-0 controlled package
+
+- current source register covering IMDA Agentic AI governance, NIST AI RMF/GenAI, NIST 2026 agent-security/identity material and OWASP 2026 agentic security guidance;
+- explicit status labels distinguishing government framework, RFI-analysis/concept draft and community security guidance;
+- AG-01 through AG-20 independently authored control taxonomy covering identity, authorization, tools, data/memory, human checkpoints, provenance, multi-agent boundaries, containment, incident response, testing and continuous assurance.
 
 ## Core control questions
 
@@ -55,53 +63,23 @@ Agentic AI must be governed by the consequences of its actions, not only by the 
 27. Executive/board risk reporting.
 28. Scenario exercises and tabletop testing.
 
-## Minimum technical-control baseline
+## Source/currentness caveats
 
-- unique agent/service identity;
-- strong authentication;
-- least-privilege authorization;
-- scoped and short-lived credentials where practicable;
-- explicit tool/API policy;
-- deny-by-default for consequential actions;
-- human approval for defined high-impact actions;
-- protected secrets and tokens;
-- input/context integrity controls;
-- output/action validation;
-- transaction/resource limits;
-- immutable or tamper-evident audit logging appropriate to risk;
-- behavioral monitoring;
-- emergency disablement;
-- tested incident and recovery procedure.
-
-## Human accountability
-
-Human accountability is meaningful only when the responsible person has authority, competence, visibility into the agent's context and a practical mechanism to intervene. A nominal human-in-the-loop control that merely rubber-stamps high-volume agent decisions is not treated as effective oversight.
-
-## Change triggers
-
-Formal reassessment should occur after material changes to:
-
-- model or model version;
-- system prompt or policy layer;
-- tools/APIs;
-- permissions or credentials;
-- data sources or memory;
-- autonomy level;
-- intended purpose;
-- deployment geography;
-- affected population;
-- vendor or hosting architecture.
+- NIST AI 800-5 is an analysis of RFI responses, not a final mandatory agent-security standard.
+- The NIST agent identity/authorization concept paper is an initial public draft, not a final standard.
+- OWASP Agentic Security Initiative material is practical community guidance, not law or certification.
+- Fast-moving agentic guidance must be reverified immediately before candidate freeze and publication.
 
 ## Publication gates
 
-- [ ] Current official agentic-governance sources verified.
-- [ ] Identity/authorization architecture reviewed.
-- [ ] Prompt-injection/tool-abuse threat model reviewed.
-- [ ] Human-accountability controls reviewed.
+- [x] Current Stage-0 agentic-governance/security sources verified.
+- [x] Initial identity/authorization and agent security source architecture established.
+- [x] AG-01 through AG-20 control taxonomy established.
+- [ ] Full controlled training architecture at next eligible stage.
+- [ ] Detailed threat/control mappings and scenarios.
+- [ ] Accountable-human technical review where genuinely required.
 - [ ] Cross-framework mappings complete.
-- [ ] Scenario/tabletop QA complete.
 - [ ] Accessibility/localization preparation complete.
 - [ ] Artifact/provenance/security gates complete.
-- [ ] Required accountable-human release approval recorded.
 
-**Fail-closed:** this manual remains parallel pre-stage work until full substantive and technical review is complete.
+**Fail-closed:** Manual 51 remains one controlled stage behind Manual 50. Draft/concept/community sources retain their actual status and may not be promoted to final normative requirements.

@@ -1,0 +1,112 @@
+name: Manual 50 final publication transfer
+
+on:
+  push:
+    branches:
+      - publish/manual50-final-2026-09-01
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-exact-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out publication branch
+        uses: actions/checkout@v4
+        with:
+          ref: publish/manual50-final-2026-09-01
+          fetch-depth: 0
+
+      - name: Download frozen Manual 50 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/manual50
+          curl -L --fail --retry 3 \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/9824656967/zip" \
+            -o /tmp/manual50/candidate.zip
+          unzip -q /tmp/manual50/candidate.zip -d /tmp/manual50/unpacked
+
+      - name: Verify exact frozen hashes and bytes
+        run: |
+          set -euo pipefail
+          cd /tmp/manual50/unpacked/manual50-publication-candidate
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_EN.docx)" = "41952"
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_EN.pdf)" = "86863"
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_ES-419.docx)" = "41287"
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_ES-419.pdf)" = "70125"
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_PT-BR.docx)" = "41342"
+          test "$(stat -c%s Manual_50_Global_AI_Governance_Crosswalk_PT-BR.pdf)" = "71094"
+          echo '60950abfe278dc26dd36efef3d0395c3d5d99eca651b358fa3c3755229e4490f  Manual_50_Global_AI_Governance_Crosswalk_EN.docx' | sha256sum -c -
+          echo 'bea5d32f6749328e24a846e7f48488d4694f54f5c664eee97bdffa6fd85108ae  Manual_50_Global_AI_Governance_Crosswalk_EN.pdf' | sha256sum -c -
+          echo '4e1d075be446461a3c274f5a2509a87f74607cf2ed3333028decb400d6196dc9  Manual_50_Global_AI_Governance_Crosswalk_ES-419.docx' | sha256sum -c -
+          echo 'a1885b7b769625d6932193bd564bb68ec42ce5dfdb0c41ce15cf6aa77ffb6a54  Manual_50_Global_AI_Governance_Crosswalk_ES-419.pdf' | sha256sum -c -
+          echo 'cb4eb4261bd68d17ce1b24ce9d3baee3be248f1544d264c375fb7172b81a02b9  Manual_50_Global_AI_Governance_Crosswalk_PT-BR.docx' | sha256sum -c -
+          echo '1681b52b8dfdf25f1e3a463361e3a89665798d5cf7412fb5357ffd397c94be10  Manual_50_Global_AI_Governance_Crosswalk_PT-BR.pdf' | sha256sum -c -
+
+      - name: Stage exact bytes and reconcile publication registries
+        run: |
+          set -euo pipefail
+          target='10-ai-governance/Manual_50_Global_AI_Governance_Crosswalk'
+          src='/tmp/manual50/unpacked/manual50-publication-candidate'
+          mkdir -p "$target"
+          cp "$src"/*.docx "$target"/
+          cp "$src"/*.pdf "$target"/
+          cp "$src/MANUAL_50_CANDIDATE_MANIFEST.json" "$target/qa/MANUAL_50_CANDIDATE_MANIFEST.json"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          catalog=Path('.compliance/manual-catalog.json')
+          data=json.loads(catalog.read_text(encoding='utf-8'))
+          entry={
+            'id':'manual-50-global-ai-governance-crosswalk',
+            'title':'Manual 50 — Global AI Governance Crosswalk',
+            'path':'10-ai-governance/Manual_50_Global_AI_Governance_Crosswalk',
+            'layout':'controlled-build','series_order':50,
+            'status':'published','release_state':'published'
+          }
+          items=data['manuals']
+          for i,x in enumerate(items):
+              if x.get('series_order')==50 or x.get('id')==entry['id']:
+                  items[i]=entry; break
+          else: items.append(entry)
+          items.sort(key=lambda x:x.get('series_order',9999))
+          catalog.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+
+          reg=Path('.compliance/work-product-releases.json')
+          r=json.loads(reg.read_text(encoding='utf-8'))
+          ev=('Manual 50 exact frozen trilingual publication candidate from successful workflow run 33570204071 / artifact 9824656967 '
+              'was transferred without regeneration after byte-count and SHA-256 verification. Candidate artifact digest '
+              'sha256:0f9aeb68109367925203da09524d39b830b87ec1c4aaecd466bd9e7d90bf54c7; source head '
+              '1e72997b45ade5eb2ef6205483519d5f1ef52a62. Deterministic DOCX/PDF construction, visible-text checks, first-page raster '
+              'rendering, and trilingual parity anchors passed. Frozen hashes: EN DOCX/PDF 60950abfe278dc26dd36efef3d0395c3d5d99eca651b358fa3c3755229e4490f / '
+              'bea5d32f6749328e24a846e7f48488d4694f54f5c664eee97bdffa6fd85108ae; es-419 DOCX/PDF 4e1d075be446461a3c274f5a2509a87f74607cf2ed3333028decb400d6196dc9 / '
+              'a1885b7b769625d6932193bd564bb68ec42ce5dfdb0c41ce15cf6aa77ffb6a54; pt-BR DOCX/PDF cb4eb4261bd68d17ce1b24ce9d3baee3be248f1544d264c375fb7172b81a02b9 / '
+              '1681b52b8dfdf25f1e3a463361e3a89665798d5cf7412fb5357ffd397c94be10. Predecessor Manual 49 is published. The canonical '
+              'clean-candidate release rule applies because no unresolved substantive, source-currentness, localization, integrity, packaging, rendering, provenance, or workflow-security defect is documented.')
+          e={'id':'manual-50-global-ai-governance-crosswalk','type':'manual','release_state':'published','release_evidence':ev}
+          arr=r['released_work_products']
+          for i,x in enumerate(arr):
+              if x.get('id')==e['id']:
+                  arr[i]=e; break
+          else: arr.append(e)
+          r['last_updated']='2026-09-01'
+          reg.write_text(json.dumps(r,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          PY
+
+      - name: Remove temporary workflow and commit publication transaction
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/99-manual50-final-publication-transfer.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish Manual 50 exact frozen binaries and registry state'
+          git push origin HEAD:publish/manual50-final-2026-09-01

@@ -1,0 +1,3 @@
+# Manual 46 — Publication Reconciliation QA
+
+Manual 46 Universal AI Governance Foundation is reconciled as published on this branch only after the exact six staged publication binaries were verified against their frozen SHA-256 identities, predecessor Manual 45 was verified published in both authoritative registries, candidate and staged-head QA were green, and the shared `10-ai-governance/**` QA trigger coverage was verified through PR #488. This metadata-only marker changes no controlled source or publication binary. Under the canonical standing release authorization, no separate generic final approval gate applies.

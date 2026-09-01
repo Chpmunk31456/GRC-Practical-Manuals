@@ -295,6 +295,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 49 controlled candidate and source/currentness reconciliation were merged through PRs #498, #499 and #502. Exact six-binary candidate from workflow run 33550836644 / artifact 9817364772 / digest sha256:10d76771a4d9bbda36706b07708fafcd87cf0a4ca01723beb731b25d633e86ea was transferred without regeneration after fail-closed hash and byte-count verification. Frozen hashes: EN DOCX/PDF 9e9e1156f47691a7434466ca3eda4908971d6a3e3695f51b82f4ad9580f46594 / 189e89a75cba2d269d8325bfa69baec7ff1b6fd84202c8b47733cab7f98d706f; es-419 DOCX/PDF 29c8797eb3a4bed3803fa358fe8f76fd86efb5fbf990371e3ece20a49d01a8f8 / 7e3b9f2d9d8a10d64f4f4c0f27871f9144540a46b7c92c54e035336a7d13eec7; pt-BR DOCX/PDF 0101810fd1fbc386aab0ad58331f895a1f9a5160edfe1ba443d3cb3fe8c12966 / 6f65744ffa0a6dd97eda2730d6d0dffdd90b356380ad71bc1824fcee677885f0. Predecessor Manual 48 is published. Canonical clean-candidate automatic release rule applies; no unresolved substantive defect is documented."
+    },
+    {
+      "id": "manual-50-global-ai-governance-crosswalk",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 50 exact frozen trilingual publication candidate from successful workflow run 33570204071 / artifact 9824656967 was transferred without regeneration after byte-count and SHA-256 verification. Candidate artifact digest sha256:0f9aeb68109367925203da09524d39b830b87ec1c4aaecd466bd9e7d90bf54c7; source head 1e72997b45ade5eb2ef6205483519d5f1ef52a62. Deterministic DOCX/PDF construction, visible-text checks, first-page raster rendering, and trilingual parity anchors passed. Frozen hashes: EN DOCX/PDF 60950abfe278dc26dd36efef3d0395c3d5d99eca651b358fa3c3755229e4490f / bea5d32f6749328e24a846e7f48488d4694f54f5c664eee97bdffa6fd85108ae; es-419 DOCX/PDF 4e1d075be446461a3c274f5a2509a87f74607cf2ed3333028decb400d6196dc9 / a1885b7b769625d6932193bd564bb68ec42ce5dfdb0c41ce15cf6aa77ffb6a54; pt-BR DOCX/PDF cb4eb4261bd68d17ce1b24ce9d3baee3be248f1544d264c375fb7172b81a02b9 / 1681b52b8dfdf25f1e3a463361e3a89665798d5cf7412fb5357ffd397c94be10. Predecessor Manual 49 is published. The canonical clean-candidate release rule applies because no unresolved substantive, source-currentness, localization, integrity, packaging, rendering, provenance, or workflow-security defect is documented."
     }
   ]
 }

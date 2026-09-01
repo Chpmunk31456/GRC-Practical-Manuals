@@ -13,64 +13,6 @@
   ],
   "manuals": [
     {
-      "id": "cis-controls-v8-1",
-      "title": "CIS Critical Security Controls v8.1",
-      "path": "01-foundations/CIS_Controls_v8.1",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "nist-csf-2",
-      "title": "NIST Cybersecurity Framework 2.0",
-      "path": "01-foundations/NIST_CSF_2",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "nist-rmf-sp-800-53",
-      "title": "NIST RMF and SP 800-53",
-      "path": "01-foundations/NIST_RMF_SP_800-53",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "iso-27001-27002",
-      "title": "Manual 16 — ISO/IEC 27001/27002 Legacy-to-Controlled Migration",
-      "path": "02-management-systems/ISO_IEC_27001_27002",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 16
-    },
-    {
-      "id": "soc-2-audit-readiness",
-      "title": "SOC 2 Audit Readiness",
-      "path": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0",
-      "status": "published",
-      "layout": "language-directories"
-    },
-    {
-      "id": "gdpr",
-      "title": "GDPR",
-      "path": "04-regulatory-compliance/GDPR",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "hipaa",
-      "title": "HIPAA",
-      "path": "04-regulatory-compliance/HIPAA",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "pci-dss-4-0-1",
-      "title": "PCI DSS v4.0.1",
-      "path": "04-regulatory-compliance/PCI_DSS_v4.0.1",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
       "id": "eu-ai-act-grc",
       "title": "Manual 01 — EU AI Act Practical Implementation Guide",
       "path": "04-regulatory-compliance/EU_AI_Act_GRC",
@@ -80,25 +22,13 @@
       "series_order": 1
     },
     {
-      "id": "incident-response-bcdr",
-      "title": "Incident Response, Business Continuity, and Disaster Recovery",
-      "path": "05-operational-resilience/Incident_Response_BCDR",
+      "id": "iso-42001-aims",
+      "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
+      "path": "02-management-systems/ISO_IEC_42001_AIMS",
       "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "cloud-security-compliance",
-      "title": "Cloud Security and Compliance",
-      "path": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance",
-      "status": "published",
-      "layout": "standard"
-    },
-    {
-      "id": "third-party-risk-supply-chain",
-      "title": "Third-Party Risk and Cyber Supply Chain",
-      "path": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain",
-      "status": "published",
-      "layout": "standard"
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 2
     },
     {
       "id": "nist-ai-rmf-1-0",
@@ -117,15 +47,6 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 4
-    },
-    {
-      "id": "iso-42001-aims",
-      "title": "Manual 02 — ISO/IEC 42001 AI Management System Implementation",
-      "path": "02-management-systems/ISO_IEC_42001_AIMS",
-      "status": "published",
-      "release_state": "published",
-      "layout": "controlled-build",
-      "series_order": 2
     },
     {
       "id": "ai-auditing-assurance",
@@ -225,6 +146,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 15
+    },
+    {
+      "id": "iso-27001-27002",
+      "title": "Manual 16 — ISO/IEC 27001/27002 Legacy-to-Controlled Migration",
+      "path": "02-management-systems/ISO_IEC_27001_27002",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 16
     },
     {
       "id": "nist-privacy-framework-controlled",
@@ -398,13 +328,6 @@
       "series_order": 35
     },
     {
-      "id": "ai-governance-audit-toolkit",
-      "title": "AI Governance and Audit Toolkit",
-      "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
-      "status": "planned",
-      "layout": "toolkit"
-    },
-    {
       "id": "brazil-lgpd-controlled",
       "title": "Manual 36 — Brazil LGPD Controlled Implementation",
       "path": "04-regulatory-compliance/Brazil_LGPD_Controlled_Implementation",
@@ -529,6 +452,92 @@
       "series_order": 49,
       "status": "published",
       "release_state": "published"
+    },
+    {
+      "id": "manual-50-global-ai-governance-crosswalk",
+      "title": "Manual 50 — Global AI Governance Crosswalk",
+      "path": "10-ai-governance/Manual_50_Global_AI_Governance_Crosswalk",
+      "layout": "controlled-build",
+      "series_order": 50,
+      "status": "published",
+      "release_state": "published"
+    },
+    {
+      "id": "cis-controls-v8-1",
+      "title": "CIS Critical Security Controls v8.1",
+      "path": "01-foundations/CIS_Controls_v8.1",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "nist-csf-2",
+      "title": "NIST Cybersecurity Framework 2.0",
+      "path": "01-foundations/NIST_CSF_2",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "nist-rmf-sp-800-53",
+      "title": "NIST RMF and SP 800-53",
+      "path": "01-foundations/NIST_RMF_SP_800-53",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "soc-2-audit-readiness",
+      "title": "SOC 2 Audit Readiness",
+      "path": "03-assurance-and-audit/SOC2_Audit_Readiness_Bilingual_v1.0",
+      "status": "published",
+      "layout": "language-directories"
+    },
+    {
+      "id": "gdpr",
+      "title": "GDPR",
+      "path": "04-regulatory-compliance/GDPR",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "hipaa",
+      "title": "HIPAA",
+      "path": "04-regulatory-compliance/HIPAA",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "pci-dss-4-0-1",
+      "title": "PCI DSS v4.0.1",
+      "path": "04-regulatory-compliance/PCI_DSS_v4.0.1",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "incident-response-bcdr",
+      "title": "Incident Response, Business Continuity, and Disaster Recovery",
+      "path": "05-operational-resilience/Incident_Response_BCDR",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "cloud-security-compliance",
+      "title": "Cloud Security and Compliance",
+      "path": "06-cloud-and-technology-risk/Cloud_Security_and_Compliance",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "third-party-risk-supply-chain",
+      "title": "Third-Party Risk and Cyber Supply Chain",
+      "path": "07-third-party-risk/Third_Party_Risk_and_Supply_Chain",
+      "status": "published",
+      "layout": "standard"
+    },
+    {
+      "id": "ai-governance-audit-toolkit",
+      "title": "AI Governance and Audit Toolkit",
+      "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
+      "status": "planned",
+      "layout": "toolkit"
     }
   ]
 }

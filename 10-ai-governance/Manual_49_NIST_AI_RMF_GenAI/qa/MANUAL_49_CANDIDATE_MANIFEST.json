@@ -1,0 +1,43 @@
+{
+  "manual": 49,
+  "title": "NIST AI RMF 1.0 + NIST AI 600-1 GenAI",
+  "source_commit": "9e84e495c9258b7b73e638e3419fb912df3d86c4",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_EN.docx",
+      "sha256": "9e9e1156f47691a7434466ca3eda4908971d6a3e3695f51b82f4ad9580f46594",
+      "bytes": 44501
+    },
+    {
+      "locale": "en",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_EN.pdf",
+      "sha256": "189e89a75cba2d269d8325bfa69baec7ff1b6fd84202c8b47733cab7f98d706f",
+      "bytes": 166491
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_ES-419.docx",
+      "sha256": "29c8797eb3a4bed3803fa358fe8f76fd86efb5fbf990371e3ece20a49d01a8f8",
+      "bytes": 39181
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_ES-419.pdf",
+      "sha256": "7e3b9f2d9d8a10d64f4f4c0f27871f9144540a46b7c92c54e035336a7d13eec7",
+      "bytes": 67087
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_PT-BR.docx",
+      "sha256": "0101810fd1fbc386aab0ad58331f895a1f9a5160edfe1ba443d3cb3fe8c12966",
+      "bytes": 39179
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_49_NIST_AI_RMF_GenAI_PT-BR.pdf",
+      "sha256": "6f65744ffa0a6dd97eda2730d6d0dffdd90b356380ad71bc1824fcee677885f0",
+      "bytes": 67433
+    }
+  ]
+}

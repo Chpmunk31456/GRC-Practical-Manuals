@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "languages": [
     "en",
     "es-419",
@@ -502,6 +502,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 46
+    },
+    {
+      "id": "manual-47-eu-ai-act-training",
+      "title": "Manual 47 — EU AI Act Training & Operationalization",
+      "path": "10-ai-governance/Manual_47_EU_AI_Act_Training",
+      "layout": "controlled-build",
+      "series_order": 47,
+      "status": "published",
+      "release_state": "published"
     }
   ]
 }

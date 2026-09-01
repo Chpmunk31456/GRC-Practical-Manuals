@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-01",
   "released_work_products": [
     {
       "id": "eu-ai-act-grc",
@@ -277,6 +277,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 46 Universal AI Governance Foundation controlled EN/es-419/pt-BR source package merged through PR #486. Exact six-binary candidate from workflow run 33522796835 / artifact 9806432982 was bound to artifact digest sha256:46816942ec7d6143fda3f4ec36eb32319328068d6643a43bdb82c1581a388fb3. PR #485 bound all six immutable SHA-256/byte identities after independent artifact hashing and rendered DOCX/PDF inspection; candidate-head Workflow Security, Release Pipeline Meta QA, Release Package QA, and dedicated Manual 46 Candidate Build were green. PR #487 staged the exact six EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed hash verification; the exact staged head passed Manual Structure QA, Trilingual Publication Parity, Release Package QA, and dedicated Manual 46 Candidate Build. Shared AI-governance QA trigger coverage was added through green PR #488. Predecessor Manual 45 is published. No unresolved material source, localization, integrity, packaging, accessibility/rendering, provenance, workflow-security, or substantive defect is recorded."
+    },
+    {
+      "id": "manual-47-eu-ai-act-training",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 47 controlled trilingual package and clean-candidate release decision were reconciled through PRs #490, #491, #492, #496, #500, #503 and #504. The exact frozen six-binary candidate from workflow run 33529251541 / artifact 9809032518 / digest sha256:d3c668a9cd5330dbb56a0bd7d4af6b9d947eb14d69ee41d9000c412e187bc213 was transferred without regeneration after fail-closed SHA-256 verification. Durable publication files are EN DOCX/PDF e2a4b770952ebf67ead3a9806a29534b16fc052fb8f24221a790ca63c37b73f3 / eaf3aa6e7b5dea8ebe018393879e792c27dfc25ec964f7c52ca66aeaa48edc25; es-419 DOCX/PDF b867a54d28505fa6957c9a7c7d35a9e0b276535f4c78a2ebc25c00ebf760eaef / 2d92b5a168571f50c042a8c1a08b8659aef6b4c857f29f6ec9c7a52d9dbcff53; pt-BR DOCX/PDF 648f87ab3f78603b8ecd52fe009ed0d2eadb049f4587749e94f4d1ca3ec9a15d / 0c1cc67879558c5f36aff941c8103fdd180a14ab39114ea1145ce4883608e3ce. Standing repository-owner release authorization applies under the canonical clean-candidate automatic release rule because the exact candidate controls are green and no unresolved substantive defect is documented."
     }
   ]
 }

@@ -1,0 +1,42 @@
+{
+  "manual": 50,
+  "source_commit": "1e72997b45ade5eb2ef6205483519d5f1ef52a62",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_EN.docx",
+      "sha256": "60950abfe278dc26dd36efef3d0395c3d5d99eca651b358fa3c3755229e4490f",
+      "bytes": 41952
+    },
+    {
+      "locale": "en",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_EN.pdf",
+      "sha256": "bea5d32f6749328e24a846e7f48488d4694f54f5c664eee97bdffa6fd85108ae",
+      "bytes": 86863
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_ES-419.docx",
+      "sha256": "4e1d075be446461a3c274f5a2509a87f74607cf2ed3333028decb400d6196dc9",
+      "bytes": 41287
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_ES-419.pdf",
+      "sha256": "a1885b7b769625d6932193bd564bb68ec42ce5dfdb0c41ce15cf6aa77ffb6a54",
+      "bytes": 70125
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_PT-BR.docx",
+      "sha256": "cb4eb4261bd68d17ce1b24ce9d3baee3be248f1544d264c375fb7172b81a02b9",
+      "bytes": 41342
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_50_Global_AI_Governance_Crosswalk_PT-BR.pdf",
+      "sha256": "1681b52b8dfdf25f1e3a463361e3a89665798d5cf7412fb5357ffd397c94be10",
+      "bytes": 71094
+    }
+  ]
+}

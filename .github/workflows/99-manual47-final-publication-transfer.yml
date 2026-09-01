@@ -1,0 +1,73 @@
+name: Manual 47 final publication transfer
+
+on:
+  push:
+    branches:
+      - publish/manual47-final-binaries-2026-09-01
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-exact-frozen-binaries:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout publication branch
+        uses: actions/checkout@v4
+        with:
+          ref: publish/manual47-final-binaries-2026-09-01
+          fetch-depth: 0
+
+      - name: Download exact frozen candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/manual47
+          curl -fL \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/9809032518/zip" \
+            -o /tmp/manual47/candidate.zip
+          unzip -q /tmp/manual47/candidate.zip -d /tmp/manual47/candidate
+
+      - name: Verify exact frozen hashes
+        run: |
+          set -euo pipefail
+          cd /tmp/manual47/candidate
+          cat > /tmp/manual47/SHA256SUMS <<'EOF'
+          e2a4b770952ebf67ead3a9806a29534b16fc052fb8f24221a790ca63c37b73f3  Manual_47_EU_AI_Act_Training_Operationalization_EN.docx
+          eaf3aa6e7b5dea8ebe018393879e792c27dfc25ec964f7c52ca66aeaa48edc25  Manual_47_EU_AI_Act_Training_Operationalization_EN.pdf
+          b867a54d28505fa6957c9a7c7d35a9e0b276535f4c78a2ebc25c00ebf760eaef  Manual_47_EU_AI_Act_Training_Operationalization_ES-419.docx
+          2d92b5a168571f50c042a8c1a08b8659aef6b4c857f29f6ec9c7a52d9dbcff53  Manual_47_EU_AI_Act_Training_Operationalization_ES-419.pdf
+          648f87ab3f78603b8ecd52fe009ed0d2eadb049f4587749e94f4d1ca3ec9a15d  Manual_47_EU_AI_Act_Training_Operationalization_PT-BR.docx
+          0c1cc67879558c5f36aff941c8103fdd180a14ab39114ea1145ce4883608e3ce  Manual_47_EU_AI_Act_Training_Operationalization_PT-BR.pdf
+          EOF
+          sha256sum -c /tmp/manual47/SHA256SUMS
+
+      - name: Place exact publication binaries
+        run: |
+          set -euo pipefail
+          base="10-ai-governance/Manual_47_EU_AI_Act_Training"
+          mkdir -p "$base/English" "$base/Espanol" "$base/Portugues_BR" "$base/qa"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_EN.docx "$base/English/"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_EN.pdf "$base/English/"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_ES-419.docx "$base/Espanol/"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_ES-419.pdf "$base/Espanol/"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_PT-BR.docx "$base/Portugues_BR/"
+          install -m 0644 /tmp/manual47/candidate/Manual_47_EU_AI_Act_Training_Operationalization_PT-BR.pdf "$base/Portugues_BR/"
+          install -m 0644 /tmp/manual47/candidate/MANUAL_47_CANDIDATE_MANIFEST.json "$base/qa/MANUAL_47_CANDIDATE_MANIFEST.json"
+
+      - name: Remove one-shot transfer workflow and commit publication payload
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/99-manual47-final-publication-transfer.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --exit-code && { echo "No publication changes found"; exit 1; } || true
+          git commit -m "Publish Manual 47 exact frozen binaries"
+          git push origin HEAD:publish/manual47-final-binaries-2026-09-01

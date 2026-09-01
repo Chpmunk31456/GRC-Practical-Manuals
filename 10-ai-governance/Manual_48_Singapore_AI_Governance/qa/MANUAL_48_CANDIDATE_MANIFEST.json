@@ -1,0 +1,43 @@
+{
+  "manual": 48,
+  "title": "Singapore AI Governance: MGF, GenAI, AI Verify & Agentic AI",
+  "source_commit": "ea4ca6279b26570e8096b7e1c8c6a6d773e50678",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_48_Singapore_AI_Governance_EN.docx",
+      "sha256": "6cbde3b69a37e4220f41d41661e9e73b1b6bd2ce3f88a3119290f446f8f21857",
+      "bytes": 46914
+    },
+    {
+      "locale": "en",
+      "file": "Manual_48_Singapore_AI_Governance_EN.pdf",
+      "sha256": "2a0d6dd54435be259306fe71b78884fa80ef9ab67fd66f147507336eb2b43a84",
+      "bytes": 268762
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_48_Singapore_AI_Governance_ES-419.docx",
+      "sha256": "78639be77b77ab4c7d4083eb83c2dc1c1abe730c85797f71ce9222b1ec072b06",
+      "bytes": 40104
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_48_Singapore_AI_Governance_ES-419.pdf",
+      "sha256": "714f903a9c31bb358be97a07ec5150ee9903ac7e4b8f33eb8f3be4fdaf26e6f8",
+      "bytes": 89865
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_48_Singapore_AI_Governance_PT-BR.docx",
+      "sha256": "29062553b59dff1ad6d6958838cb5af6958754542c3119e911e385823abe68e0",
+      "bytes": 40082
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_48_Singapore_AI_Governance_PT-BR.pdf",
+      "sha256": "3c69d49ac910c754fc7541afdb2f3b3e44e891be46cca006d6eec75f5863c37f",
+      "bytes": 91101
+    }
+  ]
+}

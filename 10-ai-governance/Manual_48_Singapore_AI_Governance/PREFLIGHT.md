@@ -2,11 +2,11 @@
 
 **State:** ACTIVE / FAIL-CLOSED  
 **Reconciled:** 1 September 2026  
-**Canonical stage:** 3 — controlled English construction complete enough for review and downstream localization preparation
+**Canonical stage:** 4 — controlled trilingual candidate tooling and objective QA
 
 ## Predecessor / stagger control
 
-- [x] Manual 47 has advanced beyond controlled build and is in provenance/currentness release preparation.
+- [x] Manual 47 has advanced through controlled build, exact-candidate provenance/currentness reconciliation, and an exact-candidate genuine-human review packet.
 - [x] Manual 48 is permitted to advance one controlled stage behind Manual 47.
 - [x] Manual 49 remains one controlled stage behind Manual 48.
 
@@ -23,9 +23,9 @@
 - [ ] Reverify source versions immediately before release.
 - [ ] Central authoritative-source allowlist change, if required, must be separately reviewed; do not bypass validator.
 
-## Controlled English training controls
+## Controlled training controls
 
-- [x] Enterprise training modules drafted.
+- [x] Enterprise controlled-English training modules drafted.
 - [x] Practical scenarios drafted.
 - [x] Control/evidence workbook drafted.
 - [x] Guidance versus law/standard status distinctions explicit.
@@ -39,17 +39,19 @@
 
 ## Localization / artifact controls
 
-- [ ] Controlled es-419 semantic localization.
-- [ ] Controlled pt-BR semantic localization.
-- [ ] Reproducible DOCX/PDF candidate builder.
-- [ ] Six-binary candidate artifact.
-- [ ] Independent SHA-256 provenance.
-- [ ] PDF/DOCX rendered QA.
-- [ ] Accessibility review.
+- [x] Controlled es-419 localization source created.
+- [x] Controlled pt-BR localization source created.
+- [x] Reproducible DOCX/PDF candidate builder created.
+- [x] Read-only pinned Manual 48 candidate-build workflow created.
+- [ ] Six-binary candidate artifact produced on the current exact head.
+- [ ] Candidate SHA-256 provenance independently verified.
+- [ ] PDF/DOCX rendered QA completed on exact candidate.
+- [ ] Genuine-human semantic localization review where retained by policy.
+- [ ] Genuine-human accessibility/visual review where retained by policy.
 - [ ] Exact-byte staging.
 - [ ] Exact staged-head QA.
 - [ ] Catalog/release-registry reconciliation.
 
 ## Release disposition
 
-Manual 48 may continue automatically into localization architecture and reproducible candidate tooling when the rolling stagger permits. Any genuinely retained human technical, semantic, accessibility or mapping-review boundary remains fail-closed and must not be fabricated. Such a blocker applies to Manual 48 only and does not halt safe work on Manual 49 and later.
+Manual 48 is now at Stage 4 and should run its exact candidate build/objective QA. Any genuinely retained human technical, semantic, accessibility or mapping-review boundary remains fail-closed and must not be fabricated. Such a blocker applies to Manual 48 only and does not halt safe work on Manual 49 and later.

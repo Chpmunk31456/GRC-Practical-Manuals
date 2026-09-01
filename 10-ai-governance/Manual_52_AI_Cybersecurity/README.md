@@ -1,15 +1,15 @@
 # Manual 52 — AI Cybersecurity: Secure AI Lifecycle, OWASP GenAI & MITRE ATLAS
 
 **Status:** CONTROLLED DEVELOPMENT  
-**Version:** 0.2.0-draft  
-**Source verification date:** 31 August 2026  
-**Canonical stage:** 0 — source baseline and threat/control taxonomy
+**Version:** 0.3.0-draft  
+**Source verification date:** 1 September 2026  
+**Canonical stage:** 2 — full training architecture and detailed threat/control mapping
 
 ## Purpose
 
 Establish a practical security program for AI systems across design, development, integration, deployment, operation and retirement, with special treatment for generative and agentic AI.
 
-## Stage-0 controlled package
+## Stage-2 controlled package
 
 - OWASP GenAI LLM Top 10 2026 source anchor;
 - OWASP Agentic Applications 2026 source anchor;
@@ -17,7 +17,11 @@ Establish a practical security program for AI systems across design, development
 - MITRE ATLAS living threat-knowledge-base anchor;
 - NIST AI RMF / AI 600-1 dependencies;
 - AC-01 through AC-20 independently authored AI cybersecurity threat/control taxonomy;
-- explicit distinction between community security guidance, living threat intelligence, voluntary NIST framework material and legal requirements.
+- explicit distinction between community security guidance, living threat intelligence, voluntary NIST framework material and legal requirements;
+- full training-architecture construction;
+- detailed OWASP/ATLAS threat-to-control mapping preparation;
+- red-team scenario design and evidence-model construction;
+- crosswalk preparation to Manual 46 and Manual 51.
 
 ## Security operating model
 
@@ -54,12 +58,13 @@ Establish a practical security program for AI systems across design, development
 - [x] Stage-0 OWASP/ATLAS/NIST source anchors registered.
 - [x] GenAI/agentic threat taxonomy established.
 - [x] Secure-lifecycle control families established.
-- [ ] Reverify fast-moving OWASP and MITRE ATLAS source state at later controlled stages.
-- [ ] Full training architecture and red-team scenarios.
-- [ ] Detailed OWASP/ATLAS source-to-control mappings.
-- [ ] Crosswalk to Manual 46 and Manual 51.
-- [ ] Accountable-human technical review where genuinely required.
-- [ ] Accessibility/localization preparation.
-- [ ] Artifact/provenance/security gates.
+- [x] Stage-2 training/mapping construction initiated.
+- [ ] Reverify fast-moving OWASP and MITRE ATLAS source state before candidate freeze.
+- [ ] Finalize release-depth training modules and red-team scenarios.
+- [ ] Complete detailed OWASP/ATLAS source-to-control mappings.
+- [ ] Complete crosswalk to Manual 46 and Manual 51.
+- [ ] Accessibility/localization preparation complete.
+- [ ] Deterministic candidate/provenance/render/security gates complete.
+- [ ] Any retained substantive-review evidence genuinely recorded.
 
-**Fail-closed:** Manual 52 remains one controlled stage behind Manual 51. Community guidance and living knowledge-base material retain their actual status and do not become legal/certification requirements.
+**Fail-closed:** Manual 52 remains exactly one controlled stage behind Manual 51. Community guidance and living knowledge-base material retain their actual status and do not become legal/certification requirements.

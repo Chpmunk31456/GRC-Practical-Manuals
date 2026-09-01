@@ -13,6 +13,7 @@ on:
       - "06-cloud-and-technology-risk/**"
       - "07-third-party-risk/**"
       - "08-templates-and-tools/**"
+      - "10-ai-governance/**"
       - ".compliance/manual-catalog.json"
       - "scripts/compliance_qa.py"
       - "scripts/compliance_qa_controlled_build.py"

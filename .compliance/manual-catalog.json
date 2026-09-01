@@ -463,6 +463,15 @@
       "release_state": "published"
     },
     {
+      "id": "manual-51-agentic-ai-governance-security",
+      "title": "Manual 51 — Agentic AI Governance, Security & Human Accountability",
+      "path": "10-ai-governance/Manual_51_Agentic_AI_Governance_Security",
+      "layout": "controlled-build",
+      "series_order": 51,
+      "status": "published",
+      "release_state": "published"
+    },
+    {
       "id": "cis-controls-v8-1",
       "title": "CIS Critical Security Controls v8.1",
       "path": "01-foundations/CIS_Controls_v8.1",

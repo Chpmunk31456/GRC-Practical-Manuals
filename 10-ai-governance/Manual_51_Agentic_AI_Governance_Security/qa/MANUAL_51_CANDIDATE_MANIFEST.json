@@ -1,0 +1,42 @@
+{
+  "manual": 51,
+  "source_commit": "07471a6c92dd951df8cfdc5292a56bb84edcb7c3",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_51_Agentic_AI_Governance_Security_EN.docx",
+      "sha256": "869d249b287afd4609ec4ad3c834b34003f39bd21a16be5e5f3871fc9978035b",
+      "bytes": 41251
+    },
+    {
+      "locale": "en",
+      "file": "Manual_51_Agentic_AI_Governance_Security_EN.pdf",
+      "sha256": "adac9a4dc57febf7ba1d41ea647aff7705f1bcc6fe9f5ee1b5946952a241878d",
+      "bytes": 68309
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_51_Agentic_AI_Governance_Security_ES-419.docx",
+      "sha256": "7ba0c6bc964cb9b6ed22c314f636936c3c6acf894ffa94d855f659d1f10baca2",
+      "bytes": 40667
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_51_Agentic_AI_Governance_Security_ES-419.pdf",
+      "sha256": "4b0446dbbd70863d0f1324a28eafb674e66b5c5db09fbb38fa542c39eeec4fa4",
+      "bytes": 67177
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_51_Agentic_AI_Governance_Security_PT-BR.docx",
+      "sha256": "c55af256c46fa6e64eadb5f88a277c0bfebb9f45edd8f2e17aabb62a8da5f562",
+      "bytes": 40705
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_51_Agentic_AI_Governance_Security_PT-BR.pdf",
+      "sha256": "5c3b831fca6129392c89d73045e67499790c9a14c1b6a8dfe720482fdba1d10b",
+      "bytes": 68805
+    }
+  ]
+}

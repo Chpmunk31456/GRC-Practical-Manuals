@@ -1,0 +1,104 @@
+name: "91 - Manual 46 Publication Reconciliation Transaction"
+
+on:
+  push:
+    branches:
+      - "publish/manual46-universal-ai-governance-2026-09-01"
+    paths:
+      - ".github/workflows/91-manual46-publication-reconciliation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile-publication:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout publication branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: publish/manual46-universal-ai-governance-2026-09-01
+          fetch-depth: 0
+      - name: Verify staged Manual 46 identities and predecessor state
+        run: |
+          set -euo pipefail
+          BASE="10-ai-governance/Manual_46_Universal_AI_Governance"
+          echo "54e1e4a2c89b697b9a510810e551ed576543b62e1b0e405325295c0c091f1239  $BASE/English/Manual_46_Universal_AI_Governance_Foundation_EN.docx" | sha256sum -c -
+          echo "1c125e8e826ae66c0744a5ee0eba1872ff4cf20f722ddda958dd52a50b7017d1  $BASE/English/Manual_46_Universal_AI_Governance_Foundation_EN.pdf" | sha256sum -c -
+          echo "89cfecdda3130b52f405c366f0a4b53cf4bed9ece53795d01e33c1a08d3985eb  $BASE/Espanol/Manual_46_Universal_AI_Governance_Foundation_ES-419.docx" | sha256sum -c -
+          echo "ee076e0803dc0d7726655e4b1db5c9b74b5ffc45d0d9c3d6c4b83bb6cbe72dd4  $BASE/Espanol/Manual_46_Universal_AI_Governance_Foundation_ES-419.pdf" | sha256sum -c -
+          echo "2f007b67fa636b9cf63595e1c5d6d521a3e250ea4f75a60ec350e12018e23aec  $BASE/Portugues_BR/Manual_46_Universal_AI_Governance_Foundation_PT-BR.docx" | sha256sum -c -
+          echo "bc46f30de88d447353b4ebd7a25fc7dfe5498a7bed6fd7f5119dbe16a691ae4e  $BASE/Portugues_BR/Manual_46_Universal_AI_Governance_Foundation_PT-BR.pdf" | sha256sum -c -
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog=json.loads(Path('.compliance/manual-catalog.json').read_text())
+          releases=json.loads(Path('.compliance/work-product-releases.json').read_text())
+          assert any(m.get('series_order')==45 and m.get('status')=='published' and m.get('release_state')=='published' for m in catalog['manuals']), 'Manual 45 not published in catalog'
+          assert any(r.get('id')=='enterprise-compliance-training-capstone' and r.get('release_state')=='published' for r in releases['work_products']), 'Manual 45 not published in release registry'
+          PY
+      - name: Reconcile Manual 46 publication state
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog_path=Path('.compliance/manual-catalog.json')
+          release_path=Path('.compliance/work-product-releases.json')
+          catalog=json.loads(catalog_path.read_text())
+          manual_id='universal-ai-governance-foundation'
+          entry={
+            'id': manual_id,
+            'title': 'Manual 46 — Universal AI Governance Foundation',
+            'path': '10-ai-governance/Manual_46_Universal_AI_Governance',
+            'status': 'published',
+            'release_state': 'published',
+            'layout': 'controlled-build',
+            'series_order': 46,
+          }
+          existing=[m for m in catalog['manuals'] if m.get('id')==manual_id or m.get('series_order')==46]
+          if existing:
+            if existing != [entry]:
+              raise SystemExit(f'conflicting Manual 46 catalog entry: {existing}')
+          else:
+            catalog['manuals'].append(entry)
+          catalog_path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+
+          releases=json.loads(release_path.read_text())
+          evidence=(
+            'Manual 46 Universal AI Governance Foundation controlled EN/es-419/pt-BR source package merged through PR #486. '
+            'Exact six-binary candidate from workflow run 33522796835 / artifact 9806432982 was bound to artifact digest '
+            'sha256:46816942ec7d6143fda3f4ec36eb32319328068d6643a43bdb82c1581a388fb3. '
+            'PR #485 bound all six immutable SHA-256/byte identities after independent artifact hashing and rendered DOCX/PDF inspection; '
+            'candidate-head Workflow Security, Release Pipeline Meta QA, Release Package QA, and dedicated Manual 46 Candidate Build were green. '
+            'PR #487 staged the exact six EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed hash verification; '
+            'the exact staged head passed Manual Structure QA, Trilingual Publication Parity, Release Package QA, and dedicated Manual 46 Candidate Build. '
+            'Shared AI-governance QA trigger coverage was added through green PR #488. Predecessor Manual 45 is published. '
+            'No unresolved material source, localization, integrity, packaging, accessibility/rendering, provenance, workflow-security, or substantive defect is recorded.'
+          )
+          release_entry={'id': manual_id, 'type': 'manual', 'release_state': 'published', 'release_evidence': evidence}
+          products=releases['work_products']
+          existing=[r for r in products if r.get('id')==manual_id]
+          if existing:
+            if existing != [release_entry]:
+              raise SystemExit(f'conflicting Manual 46 release entry: {existing}')
+          else:
+            products.append(release_entry)
+          release_path.write_text(json.dumps(releases, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+
+          Path('.compliance/MANUAL_46_PUBLICATION_RECONCILIATION_QA_2026-09-01.md').write_text(
+            '# Manual 46 — Publication Reconciliation QA\n\n'
+            'Manual 46 Universal AI Governance Foundation is reconciled as published on this branch only after the exact six staged publication binaries were verified against their frozen SHA-256 identities, predecessor Manual 45 was verified published in both authoritative registries, candidate and staged-head QA were green, and the shared `10-ai-governance/**` QA trigger coverage was verified through PR #488. This metadata-only marker changes no controlled source or publication binary. Under the canonical standing release authorization, no separate generic final approval gate applies.\n',
+            encoding='utf-8'
+          )
+          PY
+      - name: Commit reconciliation and self-remove workflow
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/91-manual46-publication-reconciliation.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .compliance/MANUAL_46_PUBLICATION_RECONCILIATION_QA_2026-09-01.md .github/workflows/91-manual46-publication-reconciliation.yml
+          git commit -m "Reconcile Manual 46 publication state"
+          git push origin HEAD:publish/manual46-universal-ai-governance-2026-09-01

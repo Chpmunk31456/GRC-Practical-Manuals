@@ -1,56 +1,45 @@
-# Manual 49 — NIST AI RMF + GenAI Preflight
+# Manual 49 — Preflight
 
-**State:** ACTIVE / FAIL-CLOSED  
-**Started:** 31 August 2026  
-**Reconciled:** 1 September 2026  
-**Canonical stage:** 3 — controlled English training package
+**Manual:** NIST AI RMF 1.0 + NIST AI 600-1 GenAI
+**Current stage:** 5 — controlled localization and candidate-tooling preparation
+**Front-line dependency:** Manual 48 green under rolling one-stage stagger.
 
-## Stagger control
+## Source/currentness
 
-- [x] Manual 48 has advanced to Stage 4 controlled trilingual candidate tooling and objective QA.
-- [x] Manual 49 is permitted to advance to Stage 3 and remains one controlled stage behind Manual 48.
-- [x] Manual 50 remains one controlled stage behind Manual 49.
-
-## Source/currentness controls
-
-- [x] NIST AI RMF 1.0 verified as the currently published framework baseline on 1 September 2026.
-- [x] NIST currently states AI RMF 1.0 is being revised.
-- [x] NIST AI 600-1 verified as the current published Generative AI Profile.
-- [x] AIRC/Playbook dependencies verified; NIST notes Playbook update will follow AI RMF revision.
-- [x] Current revision-in-progress state distinguished from a final revised framework.
-- [ ] Reverify revision/publication status immediately before candidate freeze.
+- [x] Official NIST AI RMF 1.0 source baseline identified.
+- [x] Official NIST AI 600-1 Generative AI Profile source baseline identified.
+- [x] Repository source register records that AI RMF 1.0 is under revision.
+- [ ] Reverify NIST revision/publication status immediately before candidate freeze.
 - [ ] Reverify again immediately before publication.
-- [ ] If a revised AI RMF is published, stop and reconcile changed scope before candidate freeze/publication.
+- [ ] If a revised AI RMF is published before freeze, perform changed-scope reconciliation rather than silently carrying forward the 1.0 candidate.
 
-## Substantive controls
+## Controlled content
 
-- [x] GOVERN/MAP/MEASURE/MANAGE operating architecture established.
-- [x] Evidence model established.
-- [x] GenAI risk-extension architecture established.
-- [x] RAG/source-governance architecture established.
-- [x] Third-party/model-provider architecture established.
-- [x] TEVV independence model established.
-- [x] Cross-framework non-equivalence rule established.
-- [x] Controlled-English training modules drafted.
-- [x] Practical scenarios completed.
-- [x] Control/evidence workbook completed.
-- [ ] Full outcome-to-control mapping expanded to release depth.
-- [ ] Full GenAI risk/action mapping expanded to release depth.
-- [ ] Accountable-human technical/TEVV review where genuinely required.
+- [x] GOVERN / MAP / MEASURE / MANAGE control architecture committed.
+- [x] Controlled-English training modules committed.
+- [x] Practical scenarios committed.
+- [x] Control/evidence workbook committed.
+- [ ] Complete release-depth outcome/action mappings.
+- [ ] Complete controlled es-419 edition.
+- [ ] Complete controlled pt-BR edition.
 
-## Repository/artifact controls
+## Candidate and provenance
 
-- [x] Independent clean branch and draft PR.
-- [x] No write-enabled QA workflow introduced.
-- [x] Authoritative-source register added.
-- [x] Stage-2 control architecture added.
-- [x] Stage-3 controlled English training package added.
-- [ ] Controlled es-419 and pt-BR localizations.
-- [ ] Reproducible DOCX/PDF candidate build.
-- [ ] Visible-page/accessibility QA.
-- [ ] Provenance/checksums and exact-byte staging.
-- [ ] Final publication reconciliation.
+- [ ] Add deterministic six-binary candidate builder.
+- [ ] Add read-only pinned candidate workflow.
+- [ ] Generate exact EN / es-419 / pt-BR DOCX and PDF candidate set.
+- [ ] Bind artifact digest, SHA-256 identities and byte counts.
+- [ ] Perform independent exact-byte verification.
+- [ ] Perform rendered PDF/DOCX visual/content preflight.
 
-## Disposition
+## Retained review and release
 
-Manual 49 is now at Stage 3. Continue automatically into release-depth mappings and localization architecture when Manual 48 advances. NIST revision status remains a mandatory fail-closed currency gate for candidate freeze and publication; retained genuine-human technical judgment must not be fabricated.
+- [ ] Record any retained substantive review evidence required by repository policy.
+- [ ] Do not represent AI-generated review as a specifically required genuine-human attestation.
+- [ ] Stage only the exact verified candidate bytes.
+- [ ] Run staged-head QA.
+- [ ] Reconcile catalog/release state and publish automatically under standing final release authorization once all mandatory gates are green and no material defect remains.
+
+## Rolling anti-halt rule
+
+Manual 50 remains one safe controlled stage behind Manual 49. Manual 51 remains one behind Manual 50, propagating through Manual 54. An upstream blocker does not halt safe downstream source verification, architecture, localization or tooling work.

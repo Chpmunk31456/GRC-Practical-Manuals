@@ -271,6 +271,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 45 Enterprise Compliance Training Capstone controlled EN/es-419/pt-BR package merged through PR #467 as original project-authored integration and competency material with explicit no-equivalence/no-certification boundaries. Exact six-binary candidate workflow run 33454151001 / artifact 9780831264 is bound to artifact digest sha256:0537bf187fb56bff4c4e2d32ca6945198f6b1f0f9eaf9e85348bc84f786ef15b. PR #468 bound all six immutable SHA-256/byte identities after independent artifact hashing matched the generated manifest; the candidate transaction passed Workflow Security, Release Pipeline Meta QA, Manual Structure QA, Trilingual Publication Parity, Release Package QA, and the dedicated read-only Manual 45 Candidate Build. PR #472 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed verification of all six SHA-256 identities; cleaned exact staged-head QA passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 44 is published; no unresolved material applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, capstone-boundary, or substantive defect is recorded."
+    },
+    {
+      "id": "universal-ai-governance-foundation",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 46 Universal AI Governance Foundation controlled EN/es-419/pt-BR source package merged through PR #486. Exact six-binary candidate from workflow run 33522796835 / artifact 9806432982 was bound to artifact digest sha256:46816942ec7d6143fda3f4ec36eb32319328068d6643a43bdb82c1581a388fb3. PR #485 bound all six immutable SHA-256/byte identities after independent artifact hashing and rendered DOCX/PDF inspection; candidate-head Workflow Security, Release Pipeline Meta QA, Release Package QA, and dedicated Manual 46 Candidate Build were green. PR #487 staged the exact six EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed hash verification; the exact staged head passed Manual Structure QA, Trilingual Publication Parity, Release Package QA, and dedicated Manual 46 Candidate Build. Shared AI-governance QA trigger coverage was added through green PR #488. Predecessor Manual 45 is published. No unresolved material source, localization, integrity, packaging, accessibility/rendering, provenance, workflow-security, or substantive defect is recorded."
     }
   ]
 }

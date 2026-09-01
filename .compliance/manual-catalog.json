@@ -493,6 +493,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 45
+    },
+    {
+      "id": "universal-ai-governance-foundation",
+      "title": "Manual 46 — Universal AI Governance Foundation",
+      "path": "10-ai-governance/Manual_46_Universal_AI_Governance",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 46
     }
   ]
 }

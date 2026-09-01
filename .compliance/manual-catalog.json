@@ -475,6 +475,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 43
+    },
+    {
+      "id": "nist-ssdf-sp-800-218-controlled",
+      "title": "Manual 44 — NIST SSDF / SP 800-218 Controlled Implementation",
+      "path": "06-cloud-and-technology-risk/NIST_SSDF_SP_800-218_Controlled_Implementation",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 44
     }
   ]
 }

@@ -1,0 +1,58 @@
+name: "89 - Manual 46 Exact Staging Transaction"
+
+on:
+  push:
+    branches:
+      - "stage/manual46-universal-ai-governance-2026-09-01"
+    paths:
+      - ".github/workflows/89-manual46-exact-staging.yml"
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  stage-exact-candidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout staging branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: stage/manual46-universal-ai-governance-2026-09-01
+          fetch-depth: 0
+      - name: Download frozen Manual 46 candidate artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/manual46
+          gh api /repos/${GITHUB_REPOSITORY}/actions/artifacts/9806432982/zip > /tmp/manual46.zip
+          unzip -q /tmp/manual46.zip -d /tmp/manual46
+      - name: Verify immutable six-binary identities
+        run: |
+          set -euo pipefail
+          cd /tmp/manual46
+          echo "54e1e4a2c89b697b9a510810e551ed576543b62e1b0e405325295c0c091f1239  Manual_46_Universal_AI_Governance_Foundation_EN.docx" | sha256sum -c -
+          echo "1c125e8e826ae66c0744a5ee0eba1872ff4cf20f722ddda958dd52a50b7017d1  Manual_46_Universal_AI_Governance_Foundation_EN.pdf" | sha256sum -c -
+          echo "89cfecdda3130b52f405c366f0a4b53cf4bed9ece53795d01e33c1a08d3985eb  Manual_46_Universal_AI_Governance_Foundation_ES-419.docx" | sha256sum -c -
+          echo "ee076e0803dc0d7726655e4b1db5c9b74b5ffc45d0d9c3d6c4b83bb6cbe72dd4  Manual_46_Universal_AI_Governance_Foundation_ES-419.pdf" | sha256sum -c -
+          echo "2f007b67fa636b9cf63595e1c5d6d521a3e250ea4f75a60ec350e12018e23aec  Manual_46_Universal_AI_Governance_Foundation_PT-BR.docx" | sha256sum -c -
+          echo "bc46f30de88d447353b4ebd7a25fc7dfe5498a7bed6fd7f5119dbe16a691ae4e  Manual_46_Universal_AI_Governance_Foundation_PT-BR.pdf" | sha256sum -c -
+      - name: Stage exact publication bytes and self-remove workflow
+        run: |
+          set -euo pipefail
+          BASE="10-ai-governance/Manual_46_Universal_AI_Governance"
+          mkdir -p "$BASE/English" "$BASE/Espanol" "$BASE/Portugues_BR"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_EN.docx "$BASE/English/"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_EN.pdf "$BASE/English/"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_ES-419.docx "$BASE/Espanol/"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_ES-419.pdf "$BASE/Espanol/"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_PT-BR.docx "$BASE/Portugues_BR/"
+          cp /tmp/manual46/Manual_46_Universal_AI_Governance_Foundation_PT-BR.pdf "$BASE/Portugues_BR/"
+          rm -f .github/workflows/89-manual46-exact-staging.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$BASE/English" "$BASE/Espanol" "$BASE/Portugues_BR" .github/workflows/89-manual46-exact-staging.yml
+          git commit -m "Stage exact Manual 46 publication bytes"
+          git push origin HEAD:stage/manual46-universal-ai-governance-2026-09-01

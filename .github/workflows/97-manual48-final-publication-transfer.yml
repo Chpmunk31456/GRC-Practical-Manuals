@@ -1,0 +1,128 @@
+name: Manual 48 final publication transfer
+
+on:
+  push:
+    branches:
+      - publish/manual48-final-2026-09-01
+    paths:
+      - .github/workflows/97-manual48-final-publication-transfer.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-exact-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download frozen Manual 48 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl -fL \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/9814046725/zip" \
+            -o /tmp/manual48.zip
+          rm -rf /tmp/manual48 && mkdir -p /tmp/manual48
+          unzip -q /tmp/manual48.zip -d /tmp/manual48
+          find /tmp/manual48 -maxdepth 3 -type f -print
+
+      - name: Verify exact frozen hashes and bytes
+        run: |
+          set -euo pipefail
+          cd /tmp/manual48
+          find_one() { find . -type f -name "$1" -print -quit; }
+          check() {
+            f="$(find_one "$1")"
+            test -n "$f"
+            actual="$(sha256sum "$f" | awk '{print $1}')"
+            test "$actual" = "$2"
+            bytes="$(stat -c%s "$f")"
+            test "$bytes" = "$3"
+          }
+          check Manual_48_Singapore_AI_Governance_EN.docx 6cbde3b69a37e4220f41d41661e9e73b1b6bd2ce3f88a3119290f446f8f21857 46914
+          check Manual_48_Singapore_AI_Governance_EN.pdf 2a0d6dd54435be259306fe71b78884fa80ef9ab67fd66f147507336eb2b43a84 268762
+          check Manual_48_Singapore_AI_Governance_ES-419.docx 78639be77b77ab4c7d4083eb83c2dc1c1abe730c85797f71ce9222b1ec072b06 40104
+          check Manual_48_Singapore_AI_Governance_ES-419.pdf 714f903a9c31bb358be97a07ec5150ee9903ac7e4b8f33eb8f3be4fdaf26e6f8 89865
+          check Manual_48_Singapore_AI_Governance_PT-BR.docx 29062553b59dff1ad6d6958838cb5af6958754542c3119e911e385823abe68e0 40082
+          check Manual_48_Singapore_AI_Governance_PT-BR.pdf 3c69d49ac910c754fc7541afdb2f3b3e44e891be46cca006d6eec75f5863c37f 91101
+
+      - name: Stage exact bytes and reconcile publication registries
+        run: |
+          set -euo pipefail
+          ROOT="10-ai-governance/Manual_48_Singapore_AI_Governance"
+          mkdir -p "$ROOT/English" "$ROOT/Espanol" "$ROOT/Portugues_BR" "$ROOT/qa"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_EN.docx' -print -quit)" "$ROOT/English/"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_EN.pdf' -print -quit)" "$ROOT/English/"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_ES-419.docx' -print -quit)" "$ROOT/Espanol/"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_ES-419.pdf' -print -quit)" "$ROOT/Espanol/"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_PT-BR.docx' -print -quit)" "$ROOT/Portugues_BR/"
+          cp "$(find /tmp/manual48 -type f -name 'Manual_48_Singapore_AI_Governance_PT-BR.pdf' -print -quit)" "$ROOT/Portugues_BR/"
+          manifest="$(find /tmp/manual48 -type f -iname '*manifest*.json' -print -quit || true)"
+          if [ -n "$manifest" ]; then cp "$manifest" "$ROOT/qa/MANUAL_48_CANDIDATE_MANIFEST.json"; fi
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path = Path('.compliance/manual-catalog.json')
+          catalog = json.loads(catalog_path.read_text())
+          manuals = catalog.setdefault('manuals', [])
+          item = next((x for x in manuals if x.get('series_order') == 48 or x.get('path') == '10-ai-governance/Manual_48_Singapore_AI_Governance'), None)
+          if item is None:
+              item = {
+                  'id': 'manual-48-singapore-ai-governance',
+                  'title': 'Manual 48 — Singapore AI Governance: MGF, GenAI, AI Verify & Agentic AI',
+                  'path': '10-ai-governance/Manual_48_Singapore_AI_Governance',
+                  'layout': 'controlled-build',
+                  'series_order': 48,
+              }
+              manuals.append(item)
+          item['status'] = 'published'
+          item['release_state'] = 'published'
+          item['layout'] = 'controlled-build'
+          item['series_order'] = 48
+          catalog['last_updated'] = '2026-09-01'
+          catalog_path.write_text(json.dumps(catalog, indent=2) + '\n')
+
+          rel_path = Path('.compliance/work-product-releases.json')
+          rel = json.loads(rel_path.read_text())
+          products = rel.setdefault('released_work_products', [])
+          rid = item.get('id') or 'manual-48-singapore-ai-governance'
+          rec = next((x for x in products if x.get('id') == rid), None)
+          if rec is None:
+              rec = {'id': rid, 'type': 'manual'}
+              products.append(rec)
+          rec['release_state'] = 'published'
+          rec['release_evidence'] = (
+              'Manual 48 Singapore AI Governance controlled Stage-4 build merged through PR #493; exact candidate provenance through PR #494; '
+              'AI substantive review through PR #497 identified no material defect; exact-byte staging readiness through PR #501; and the canonical '
+              'clean-candidate release rule established through PR #503 applies without fabricating a human reviewer. Exact frozen candidate comes from '
+              'workflow run 33541996729 / artifact 9814046725 / digest sha256:61fea4a55fc4aee171088104ae2ee1d870824e8b0cdaf993f79931f8e1fa9ba7. '
+              'Durable EN DOCX/PDF SHA-256: 6cbde3b69a37e4220f41d41661e9e73b1b6bd2ce3f88a3119290f446f8f21857 / '
+              '2a0d6dd54435be259306fe71b78884fa80ef9ab67fd66f147507336eb2b43a84; es-419: '
+              '78639be77b77ab4c7d4083eb83c2dc1c1abe730c85797f71ce9222b1ec072b06 / 714f903a9c31bb358be97a07ec5150ee9903ac7e4b8f33eb8f3be4fdaf26e6f8; '
+              'pt-BR: 29062553b59dff1ad6d6958838cb5af6958754542c3119e911e385823abe68e0 / 3c69d49ac910c754fc7541afdb2f3b3e44e891be46cca006d6eec75f5863c37f. '
+              'Predecessor Manual 47 is published and no unresolved substantive, source, localization, integrity, packaging, rendering, provenance, or workflow-security defect is documented.'
+          )
+          rel['last_updated'] = '2026-09-01'
+          rel_path.write_text(json.dumps(rel, indent=2) + '\n')
+          PY
+
+      - name: Remove temporary write-enabled workflow and commit publication transaction
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/97-manual48-final-publication-transfer.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish Manual 48 exact frozen binaries and registry state"
+          git push origin HEAD:publish/manual48-final-2026-09-01

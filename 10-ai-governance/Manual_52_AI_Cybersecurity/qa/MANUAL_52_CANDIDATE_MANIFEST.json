@@ -1,0 +1,42 @@
+{
+  "manual": 52,
+  "source_commit": "92c33de440f0d043a80883308ca4cafb3e858453",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_52_AI_Cybersecurity_EN.docx",
+      "sha256": "8f96740b87be8e0a35cb5aa998f4b23ccd640a2fdc319e04c6a8f3ba363da602",
+      "bytes": 41052
+    },
+    {
+      "locale": "en",
+      "file": "Manual_52_AI_Cybersecurity_EN.pdf",
+      "sha256": "fc0db0fd978f13b8de1dc719af0a3417bee6e34370b0bf5da9c21bc6a2dfe7ba",
+      "bytes": 70738
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_52_AI_Cybersecurity_ES-419.docx",
+      "sha256": "3243d69ef87f2cd017f3e1a5afa4e23955c5893dc1727c12c43a14e09a5f2fdc",
+      "bytes": 39707
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_52_AI_Cybersecurity_ES-419.pdf",
+      "sha256": "903be0e25b8698fe7263578004db0534fba8101f9516bfcb81df00848cbfb0e2",
+      "bytes": 66239
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_52_AI_Cybersecurity_PT-BR.docx",
+      "sha256": "d56fea909c93884839cae8b5819c1d493f9a989b7d12a5cee0e5ddbd671fa720",
+      "bytes": 39715
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_52_AI_Cybersecurity_PT-BR.pdf",
+      "sha256": "849bc04c3fa223dff0114ebb74c533b5945b01d01bec81dc3b56d83547a24e6d",
+      "bytes": 66903
+    }
+  ]
+}

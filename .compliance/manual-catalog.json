@@ -472,6 +472,15 @@
       "release_state": "published"
     },
     {
+      "id": "manual-52-ai-cybersecurity",
+      "title": "Manual 52 — AI Cybersecurity: Secure AI Lifecycle, OWASP & MITRE ATLAS",
+      "path": "10-ai-governance/Manual_52_AI_Cybersecurity",
+      "layout": "controlled-build",
+      "series_order": 52,
+      "status": "published",
+      "release_state": "published"
+    },
+    {
       "id": "cis-controls-v8-1",
       "title": "CIS Critical Security Controls v8.1",
       "path": "01-foundations/CIS_Controls_v8.1",

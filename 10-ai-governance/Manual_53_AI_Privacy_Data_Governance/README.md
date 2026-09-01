@@ -1,11 +1,23 @@
 # Manual 53 — AI Privacy & Data Governance
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.2.0-draft  
+**Canonical stage:** 1 — jurisdiction/source matrix and data-control architecture
 
 ## Purpose
 
 Build a practical privacy and data-governance operating model for AI systems across training, fine-tuning, inference, retrieval, logging, monitoring, human review and retirement.
+
+## Stage-1 controlled work
+
+- jurisdiction/source-matrix construction;
+- data inventory, provenance and lineage architecture;
+- purpose, authorization, minimization and sensitive-data control taxonomy;
+- RAG/knowledge-base authorization and data-boundary mapping;
+- DPIA/impact-assessment integration design;
+- retention, deletion and cross-border processing control design;
+- provider/vendor privacy-governance and incident evidence architecture;
+- GenAI memorization/leakage and agentic data-access scenario planning.
 
 ## Architecture
 
@@ -46,14 +58,15 @@ Data that is technically accessible to an AI system is not automatically authori
 
 ## Publication gates
 
-- [ ] Current privacy-law source set identified by jurisdiction.
+- [x] Stage-1 jurisdiction/source and control-architecture work initiated.
+- [ ] Current privacy-law source set verified for retained target jurisdictions.
 - [ ] DPIA/impact-assessment integration reviewed.
 - [ ] Training/RAG/provider data flows reviewed.
 - [ ] Sensitive-data and retention controls reviewed.
 - [ ] GenAI privacy threat scenarios reviewed.
 - [ ] Crosswalk to Manual 46/47/49 complete.
 - [ ] Accessibility/localization preparation complete.
-- [ ] Artifact/provenance/security gates complete.
-- [ ] Required accountable-human release approval recorded.
+- [ ] Deterministic candidate/provenance/render/security gates complete.
+- [ ] Any retained substantive-review evidence genuinely recorded.
 
-**Fail-closed:** this manual remains parallel pre-stage work until jurisdictional and technical reviews are complete.
+**Fail-closed:** Manual 53 remains exactly one controlled stage behind Manual 52; jurisdiction-specific claims must be verified before release-depth construction.

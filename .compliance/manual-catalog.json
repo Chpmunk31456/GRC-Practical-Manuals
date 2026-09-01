@@ -484,6 +484,15 @@
       "release_state": "published",
       "layout": "controlled-build",
       "series_order": 44
+    },
+    {
+      "id": "enterprise-compliance-training-capstone",
+      "title": "Manual 45 — Enterprise Compliance Training Capstone",
+      "path": "08-templates-and-tools/Enterprise_Compliance_Training_Capstone",
+      "status": "published",
+      "release_state": "published",
+      "layout": "controlled-build",
+      "series_order": 45
     }
   ]
 }

@@ -265,6 +265,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 44 NIST SSDF / SP 800-218 controlled trilingual build merged through PR #459. Exact six-binary candidate from workflow run 33446019599 / artifact 9778053898 was bound to immutable SHA-256 provenance through PR #466 and staged without regeneration through PR #469 after fail-closed hash verification. The cleaned exact staged head passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 43 is published; this final transaction reconciles publication state only and changes no reviewed publication binary."
+    },
+    {
+      "id": "enterprise-compliance-training-capstone",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 45 Enterprise Compliance Training Capstone controlled EN/es-419/pt-BR package merged through PR #467 as original project-authored integration and competency material with explicit no-equivalence/no-certification boundaries. Exact six-binary candidate workflow run 33454151001 / artifact 9780831264 is bound to artifact digest sha256:0537bf187fb56bff4c4e2d32ca6945198f6b1f0f9eaf9e85348bc84f786ef15b. PR #468 bound all six immutable SHA-256/byte identities after independent artifact hashing matched the generated manifest; the candidate transaction passed Workflow Security, Release Pipeline Meta QA, Manual Structure QA, Trilingual Publication Parity, Release Package QA, and the dedicated read-only Manual 45 Candidate Build. PR #472 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed verification of all six SHA-256 identities; cleaned exact staged-head QA passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. Predecessor Manual 44 is published; no unresolved material applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, capstone-boundary, or substantive defect is recorded."
     }
   ]
 }

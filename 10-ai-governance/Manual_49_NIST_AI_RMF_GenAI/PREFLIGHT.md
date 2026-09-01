@@ -3,12 +3,12 @@
 **State:** ACTIVE / FAIL-CLOSED  
 **Started:** 31 August 2026  
 **Reconciled:** 1 September 2026  
-**Canonical stage:** 2 — controlled source and control architecture
+**Canonical stage:** 3 — controlled English training package
 
 ## Stagger control
 
-- [x] Manual 48 has advanced to Stage 3 controlled English training construction.
-- [x] Manual 49 is permitted to advance to Stage 2 and remains one controlled stage behind Manual 48.
+- [x] Manual 48 has advanced to Stage 4 controlled trilingual candidate tooling and objective QA.
+- [x] Manual 49 is permitted to advance to Stage 3 and remains one controlled stage behind Manual 48.
 - [x] Manual 50 remains one controlled stage behind Manual 49.
 
 ## Source/currentness controls
@@ -31,11 +31,12 @@
 - [x] Third-party/model-provider architecture established.
 - [x] TEVV independence model established.
 - [x] Cross-framework non-equivalence rule established.
-- [ ] Full training modules drafted at next eligible stage.
-- [ ] Full outcome-to-control mapping drafted.
-- [ ] Full GenAI risk/action mapping drafted.
-- [ ] Practical scenarios and control/evidence workbook completed.
-- [ ] Accountable-human technical review complete where genuinely required.
+- [x] Controlled-English training modules drafted.
+- [x] Practical scenarios completed.
+- [x] Control/evidence workbook completed.
+- [ ] Full outcome-to-control mapping expanded to release depth.
+- [ ] Full GenAI risk/action mapping expanded to release depth.
+- [ ] Accountable-human technical/TEVV review where genuinely required.
 
 ## Repository/artifact controls
 
@@ -43,8 +44,7 @@
 - [x] No write-enabled QA workflow introduced.
 - [x] Authoritative-source register added.
 - [x] Stage-2 control architecture added.
-- [ ] Catalog integration at controlled-build readiness.
-- [ ] Repository QA observed on release-capable candidate.
+- [x] Stage-3 controlled English training package added.
 - [ ] Controlled es-419 and pt-BR localizations.
 - [ ] Reproducible DOCX/PDF candidate build.
 - [ ] Visible-page/accessibility QA.
@@ -53,4 +53,4 @@
 
 ## Disposition
 
-Proceed automatically with controlled Stage-2 mapping and architecture work. Manual 49 may move to full controlled drafting when Manual 48 advances to the next permitted stage. NIST revision status remains a mandatory fail-closed currency gate for candidate freeze and publication.
+Manual 49 is now at Stage 3. Continue automatically into release-depth mappings and localization architecture when Manual 48 advances. NIST revision status remains a mandatory fail-closed currency gate for candidate freeze and publication; retained genuine-human technical judgment must not be fabricated.

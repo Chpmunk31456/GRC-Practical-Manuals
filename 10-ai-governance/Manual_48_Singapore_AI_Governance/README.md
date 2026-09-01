@@ -1,13 +1,23 @@
 # Manual 48 — Singapore AI Governance: MGF, GenAI, AI Verify & Agentic AI
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.2.0-draft  
-**Source verification date:** 31 August 2026  
-**Canonical stage:** 2 — controlled architecture / chapter and evidence model
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.3.0-draft  
+**Source verification date:** 1 September 2026  
+**Canonical stage:** 3 — controlled English training package
 
 ## Purpose
 
 Operationalize Singapore's practical AI-governance ecosystem for enterprise use, emphasizing governance design, assurance, testing, generative AI and agentic AI. Manual 48 remains one canonical stage behind Manual 47 and must not overtake it.
+
+## Controlled Stage-3 package
+
+The branch now contains:
+
+- refreshed authoritative-source register;
+- controlled English training modules;
+- practical scenarios;
+- control/evidence workbook; and
+- fail-closed preflight.
 
 ## Architecture
 
@@ -36,40 +46,34 @@ Operationalize Singapore's practical AI-governance ecosystem for enterprise use,
 
 ## Agentic AI operating emphasis
 
-The training will use four practical dimensions reflected in IMDA's 2026 agentic-AI framework:
+The training uses the four practical dimensions reflected in IMDA's current 2026 agentic-AI framework:
 
 - assess and bound risks and capabilities upfront;
 - make humans meaningfully accountable at significant checkpoints;
 - implement technical controls and processes throughout the lifecycle;
 - enable responsible end-user behavior through transparency and education.
 
-## Enterprise control questions
+The May 2026 update is reflected through added attention to multi-agent systems, third-party agents, case-based operationalization and automation-bias controls.
 
-- What is the intended agentic use case and why is autonomy justified?
-- What tools, systems and data can the agent access?
-- What actions are prohibited or require human authorization?
-- How are identity, authentication and least privilege enforced?
-- How are agent actions logged and reconstructed?
-- How can the organization contain or disable the agent?
-- What change triggers require revalidation?
+## Stage-3 evidence model
 
-## Stage-2 evidence model
+Every framework concept is translated using:
 
-The controlled architecture must map each framework principle or guidance concept to:
+**Source concept → organizational interpretation → risk/control objective → owner → implementation → evidence → test/assurance method → limitation/non-equivalence note**
 
-**Source concept → organizational interpretation → risk/control objective → owner → evidence → test/assurance method → limitation/non-equivalence note**
-
-Binding law, voluntary framework guidance, assurance tooling and explanatory material must remain clearly distinguished.
+Binding law, voluntary framework guidance, assurance tooling, implementation examples and proposed standardisation work remain clearly distinguished.
 
 ## Publication gates
 
-- [ ] Official IMDA source verification refreshed at Stage 3 entry.
-- [ ] Current MGF/GenAI/AI Verify/Agentic materials reconciled.
-- [ ] Controlled-English full draft complete only after Manual 47 advances beyond Stage 3.
-- [ ] Cross-framework mappings reviewed for false equivalence.
-- [ ] Technical agentic-AI controls reviewed.
-- [ ] Accessibility/localization preparation complete at later eligible stages.
-- [ ] Artifact/provenance/security gates complete.
-- [ ] Standing release authorization satisfied under the canonical equation; no separate generic final approval prompt.
+- [x] Official IMDA source verification refreshed at Stage 3 entry.
+- [x] Current MGF/GenAI/AI Verify/Agentic materials reconciled for controlled drafting.
+- [x] Controlled-English full training package drafted after Manual 47 advanced beyond Stage 3.
+- [x] Cross-framework false-equivalence rules embedded.
+- [x] Technical agentic-AI control architecture drafted.
+- [ ] Accountable-human technical/governance and source-mapping review where genuinely required.
+- [ ] es-419 and pt-BR controlled localization.
+- [ ] Reproducible candidate build and six-binary artifact.
+- [ ] Accessibility/rendered QA and provenance.
+- [ ] Exact-byte staging and final publication reconciliation.
 
-**Fail-closed:** this branch is controlled Stage-2 work and cannot advance to Stage 3 until Manual 47 advances beyond Stage 3.
+**Fail-closed:** retained genuine-human substantive review evidence may not be fabricated. Under the rolling anti-halt rule, a Manual 48 blocker does not halt safe work on Manual 49 and later.

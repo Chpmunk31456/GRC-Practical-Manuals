@@ -1,19 +1,33 @@
 # Manual 50 — Global AI Governance Crosswalk
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.2.0-draft  
+**Source verification date:** 1 September 2026  
+**Canonical stage:** 1 — source map and controlled mapping method
 
 ## Purpose
 
-Provide a disciplined crosswalk between the universal governance model in Manual 46 and major AI governance regimes without creating false equivalence between law, standards and voluntary frameworks.
+Provide a disciplined crosswalk between the universal governance model in Manual 46 and major AI governance regimes without creating false equivalence between law, standards, intergovernmental principles and voluntary frameworks.
 
-Initial scope:
+## Stage-1 controlled package
+
+- authoritative source-family map;
+- source hierarchy/conflict rule;
+- controlled crosswalk row schema;
+- relationship taxonomy: direct / partial / supporting / contextual / none;
+- shared-evidence model;
+- anti-false-equivalence tests;
+- ISO copyright boundary;
+- current OECD AI Principles baseline (2019, updated 2024) verified 1 September 2026.
+
+## Initial scope
 
 - EU AI Act;
 - ISO/IEC 42001;
 - NIST AI RMF 1.0 and NIST AI 600-1;
 - Singapore Model AI Governance Framework, AI Verify and Agentic AI materials;
-- OECD AI Principles.
+- OECD AI Principles;
+- Manual 46 universal operating model.
 
 ## Mapping domains
 
@@ -41,18 +55,20 @@ Initial scope:
 
 ## Controlled mapping rule
 
-Every mapping row will use:
+Every mapping row uses:
 
-**Common control objective → EU legal obligation/status → ISO management-system relationship → NIST AI RMF relationship → Singapore governance/assurance relationship → OECD principle relationship → evidence examples → gap/qualification note**
+**Common control objective → source status → Manual 46 anchor → EU legal relationship → ISO management-system relationship → NIST relationship → Singapore relationship → OECD relationship → relationship type → shared evidence → source-specific evidence → difference/qualification → rationale → review status**
 
 ## Anti-false-equivalence controls
 
 - A voluntary framework does not create a legal safe harbor unless law explicitly says so.
 - ISO alignment is not certification.
 - NIST AI RMF alignment is not EU AI Act compliance.
+- Singapore governance or AI Verify testing is not automatic certification or legal compliance.
+- OECD principles are not a substitute for jurisdiction-specific law.
 - Similar concepts are not assumed to have identical scope, actors, thresholds or evidence requirements.
 - A blank mapping cell is preferable to an unsupported equivalence.
-- Jurisdiction-specific legal interpretations remain in specialist manuals.
+- Copyrighted standards are mapped through independently authored relationships, not copied text.
 
 ## Deliverables
 
@@ -62,17 +78,19 @@ Every mapping row will use:
 - gap-analysis method;
 - common-control-library design;
 - audit testing guide;
-- scenario exercises showing how one enterprise control can satisfy multiple governance objectives while retaining framework-specific evidence.
+- scenario exercises showing how one enterprise control can support multiple governance objectives while retaining framework-specific evidence.
 
 ## Publication gates
 
-- [ ] All source frameworks current and verified.
-- [ ] Copyright controls verified for ISO material.
-- [ ] Legal-vs-voluntary status explicitly labeled.
-- [ ] Mapping rationale documented.
-- [ ] Independent crosswalk review complete.
+- [x] Stage-1 source families and mapping method established.
+- [x] Legal-vs-standard-vs-voluntary status taxonomy explicit.
+- [x] ISO copyright control embedded.
+- [x] OECD current principles baseline verified for Stage 1.
+- [ ] Full source-framework currentness refresh at later stages.
+- [ ] Substantive crosswalk rows drafted.
+- [ ] Mapping rationale and evidence harmonisation completed.
+- [ ] Independent crosswalk review completed where genuinely required.
 - [ ] Accessibility/localization preparation complete.
 - [ ] Artifact/provenance/security gates complete.
-- [ ] Required accountable-human release approval recorded.
 
-**Fail-closed:** crosswalk remains pre-stage until specialist source treatment is sufficiently mature.
+**Fail-closed:** Manual 50 remains one controlled stage behind Manual 49. Safe source and mapping-method work continues even if an upstream manual is waiting on retained human review.

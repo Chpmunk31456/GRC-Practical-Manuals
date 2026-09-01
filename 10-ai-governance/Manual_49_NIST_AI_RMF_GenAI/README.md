@@ -1,16 +1,28 @@
 # Manual 49 — NIST AI RMF 1.0 + NIST AI 600-1 GenAI Operational Guide
 
-**Status:** PRE-STAGE / CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft  
-**Source verification date:** 31 August 2026
+**Status:** CONTROLLED DEVELOPMENT  
+**Version:** 0.2.0-draft  
+**Source verification date:** 1 September 2026  
+**Canonical stage:** 2 — source/currentness and control architecture
 
 ## Purpose
 
-Turn NIST AI RMF 1.0 and the NIST AI 600-1 Generative AI Profile into a practical enterprise risk-management and assurance program that maps cleanly to Manual 46's universal governance spine.
+Turn NIST AI RMF 1.0 and NIST AI 600-1 into a practical enterprise risk-management and assurance program that maps cleanly to Manual 46's universal governance spine without treating voluntary NIST guidance as law or certification.
 
-## Currency note
+## Currency state
 
-NIST states that AI RMF 1.0 is being revised. Manual 49 therefore treats 1.0 as the currently published framework while requiring a source refresh before release.
+Official NIST and AIRC sources verified on 1 September 2026 still identify AI RMF 1.0 as the published baseline and explicitly state that it is being revised. NIST AI 600-1 remains the published Generative AI Profile. Candidate freeze and publication remain fail-closed on a fresh revision-status check.
+
+## Stage-2 controlled package
+
+- authoritative-source register with current NIST revision state;
+- GOVERN/MAP/MEASURE/MANAGE operating architecture;
+- GenAI risk-extension architecture;
+- RAG/source-governance architecture;
+- third-party/model-provider architecture;
+- TEVV independence model;
+- cross-framework non-equivalence rules;
+- updated fail-closed preflight.
 
 ## Architecture
 
@@ -49,25 +61,25 @@ Use the four NIST functions as a continuous system rather than a sequential chec
 **MEASURE** evaluates performance, risk, uncertainty and control effectiveness.  
 **MANAGE** prioritizes and treats risk, monitors outcomes and responds to change.
 
-Governance should inform every other function throughout the lifecycle.
+Governance informs every other function throughout the lifecycle.
 
 ## Evidence model
 
-For each relevant AI RMF outcome, capture:
+For each relevant AI RMF outcome or GenAI action, capture:
 
-**Outcome → organizational interpretation → control objective → control activity → owner → evidence → test procedure → finding/exception → remediation → residual risk**
+**Outcome/action → organizational interpretation → control objective → control activity → owner → evidence → test procedure → finding/exception → remediation → residual risk**
 
 ## Publication gates
 
-- [ ] Current NIST AI RMF revision status reverified.
-- [ ] AI RMF 1.0 source mapping complete.
-- [ ] AI 600-1 mapping complete.
-- [ ] Playbook/AIRC source review complete.
-- [ ] Controlled-English full draft complete.
-- [ ] TEVV and security technical review complete.
-- [ ] Cross-framework mapping review complete.
+- [x] Current NIST AI RMF revision status verified for Stage-2 drafting.
+- [x] AI RMF operating architecture established.
+- [x] NIST AI 600-1 GenAI risk-extension architecture established.
+- [x] Playbook/AIRC current-state review completed for Stage 2.
+- [ ] Reverify NIST revision status at candidate freeze and publication.
+- [ ] Controlled-English full training modules complete at next eligible stage.
+- [ ] Full outcome/action mappings and scenario/evidence work complete.
+- [ ] Technical/TEVV and cross-framework mapping review complete where genuinely required.
 - [ ] Accessibility/localization preparation complete.
 - [ ] Artifact/provenance/security gates complete.
-- [ ] Required accountable-human release approval recorded.
 
-**Fail-closed:** pre-stage work may proceed in parallel, but publication remains gated.
+**Fail-closed:** Manual 49 remains one controlled stage behind Manual 48. Upstream blockers do not halt safe architecture/source work, but a published NIST revision before candidate freeze requires changed-scope reconciliation.

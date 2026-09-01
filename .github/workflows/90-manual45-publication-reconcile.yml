@@ -1,0 +1,89 @@
+name: "90 - Manual 45 Publication Reconciliation"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/90-manual45-publication-reconcile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout publication branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: Verify exact staged publication bytes
+        run: |
+          ROOT='08-templates-and-tools/Enterprise_Compliance_Training_Capstone/publication'
+          echo "078c111730fdaa347a2dd61c9204737e0aa9c997bb1a070d044e37fc95f6dae7  $ROOT/en/Manual_45_Enterprise_Compliance_Training_Capstone_EN.docx" | sha256sum -c -
+          echo "804dba729a2e4211f9395aa083cfb4196d1dd1eacb4a6d9ff40b09e3c7e10946  $ROOT/en/Manual_45_Enterprise_Compliance_Training_Capstone_EN.pdf" | sha256sum -c -
+          echo "697add493368c8493f072a7820f88ac0488560a107029c4d0653cd7fac358601  $ROOT/es-419/Manual_45_Enterprise_Compliance_Training_Capstone_ES-419.docx" | sha256sum -c -
+          echo "b6e40afbe7269dbee35f07b7e17f693b2b7da843f0e226d02d7bfa3d2dfecb25  $ROOT/es-419/Manual_45_Enterprise_Compliance_Training_Capstone_ES-419.pdf" | sha256sum -c -
+          echo "5a9ab4a5b596e0ee7fdbdf09ea1dd2839e6db9130507f827d5301a7c1a0266d1  $ROOT/pt-BR/Manual_45_Enterprise_Compliance_Training_Capstone_PT-BR.docx" | sha256sum -c -
+          echo "44ea996171a6a8cf6cac06650cdf65837574ce08610017fd832454b8c10ac03f  $ROOT/pt-BR/Manual_45_Enterprise_Compliance_Training_Capstone_PT-BR.pdf" | sha256sum -c -
+      - name: Reconcile catalog and release registry
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          catalog_path = Path('.compliance/manual-catalog.json')
+          registry_path = Path('.compliance/work-product-releases.json')
+          catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+          registry = json.loads(registry_path.read_text(encoding='utf-8'))
+
+          pred = next((m for m in catalog['manuals'] if m.get('series_order') == 44), None)
+          assert pred and pred.get('status') == 'published' and pred.get('release_state') == 'published', 'Manual 44 predecessor is not published in catalog'
+          pred_r = next((m for m in registry['released_work_products'] if m.get('id') == 'nist-ssdf-sp-800-218-controlled'), None)
+          assert pred_r and pred_r.get('release_state') == 'published', 'Manual 44 predecessor is not published in registry'
+
+          manual_id = 'enterprise-compliance-training-capstone'
+          entry = {
+              'id': manual_id,
+              'title': 'Manual 45 — Enterprise Compliance Training Capstone',
+              'path': '08-templates-and-tools/Enterprise_Compliance_Training_Capstone',
+              'status': 'published',
+              'release_state': 'published',
+              'layout': 'controlled-build',
+              'series_order': 45,
+          }
+          existing = next((m for m in catalog['manuals'] if m.get('id') == manual_id), None)
+          if existing is None:
+              catalog['manuals'].append(entry)
+          else:
+              existing.update(entry)
+
+          evidence = (
+              'Manual 45 Enterprise Compliance Training Capstone controlled EN/es-419/pt-BR package merged through PR #467 as original project-authored integration and competency material with explicit no-equivalence/no-certification boundaries. '
+              'Exact six-binary candidate workflow run 33454151001 / artifact 9780831264 is bound to artifact digest sha256:0537bf187fb56bff4c4e2d32ca6945198f6b1f0f9eaf9e85348bc84f786ef15b. '
+              'PR #468 bound all six immutable SHA-256/byte identities after independent artifact hashing matched the generated manifest; the candidate transaction passed Workflow Security, Release Pipeline Meta QA, Manual Structure QA, Trilingual Publication Parity, Release Package QA, and the dedicated read-only Manual 45 Candidate Build. '
+              'PR #472 durably staged the exact EN/es-419/pt-BR DOCX/PDF bytes without regeneration after fail-closed verification of all six SHA-256 identities; cleaned exact staged-head QA passed Manual Structure QA, Trilingual Publication Parity, and Release Package QA. '
+              'Predecessor Manual 44 is published; no unresolved material applicability, localization, integrity, packaging, accessibility, provenance, workflow-security, capstone-boundary, or substantive defect is recorded.'
+          )
+          reg_entry = {'id': manual_id, 'type': 'manual', 'release_state': 'published', 'release_evidence': evidence}
+          existing_r = next((m for m in registry['released_work_products'] if m.get('id') == manual_id), None)
+          if existing_r is None:
+              registry['released_work_products'].append(reg_entry)
+          else:
+              existing_r.update(reg_entry)
+
+          catalog['last_updated'] = '2026-08-31'
+          registry['last_updated'] = '2026-08-31'
+          catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Commit reconciliation and self-remove workflow
+        run: |
+          rm .github/workflows/90-manual45-publication-reconcile.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .compliance/manual-catalog.json .compliance/work-product-releases.json .github/workflows/90-manual45-publication-reconcile.yml
+          git commit -m 'Publish Manual 45 — reconcile Enterprise Capstone publication state'
+          git push origin HEAD:${{ github.head_ref }}

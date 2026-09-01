@@ -1,9 +1,9 @@
 # Manual 51 — Agentic AI Governance, Security, Identity & Human Accountability
 
 **Status:** CONTROLLED DEVELOPMENT  
-**Version:** 0.2.0-draft  
+**Version:** 0.3.0-draft  
 **Source verification date:** 1 September 2026  
-**Canonical stage:** 0 — authoritative source baseline and control taxonomy
+**Canonical stage:** 1 — controlled training architecture
 
 ## Purpose
 
@@ -13,55 +13,13 @@ Provide a practical governance and security model for AI agents that can plan, i
 
 Agentic AI must be governed by the consequences of its actions, not only by the quality of its generated text.
 
-## Stage-0 controlled package
+## Stage-1 controlled package
 
 - current source register covering IMDA Agentic AI governance, NIST AI RMF/GenAI, NIST 2026 agent-security/identity material and OWASP 2026 agentic security guidance;
 - explicit status labels distinguishing government framework, RFI-analysis/concept draft and community security guidance;
-- AG-01 through AG-20 independently authored control taxonomy covering identity, authorization, tools, data/memory, human checkpoints, provenance, multi-agent boundaries, containment, incident response, testing and continuous assurance.
-
-## Core control questions
-
-1. Who or what is the agent and who owns it?
-2. What objective is it authorized to pursue?
-3. What data, tools, systems and credentials can it access?
-4. Which actions are explicitly prohibited?
-5. Which actions require human authorization?
-6. What limits apply to transactions, cost, time, recursion and resource use?
-7. Can every consequential action be reconstructed from logs?
-8. Can the organization contain, suspend or disable the agent quickly?
-9. What changes trigger revalidation?
-10. Who accepts residual risk?
-
-## Architecture
-
-1. Agentic AI concepts and system boundaries.
-2. Capability and autonomy classification.
-3. Intended, permitted and prohibited actions.
-4. Agent identity and authentication.
-5. Authorization and least privilege.
-6. Tool/API allowlisting and policy enforcement.
-7. Credential, token and secret isolation.
-8. Data access and privacy controls.
-9. Human approval checkpoints.
-10. Separation of duties and dual control.
-11. Transaction, cost, resource and rate limits.
-12. Memory, persistence and retention governance.
-13. Prompt/context integrity and indirect prompt injection.
-14. Agent-to-agent delegation and trust boundaries.
-15. Multi-agent coordination and emergent-risk controls.
-16. Baseline testing and red teaming.
-17. Runtime monitoring and anomaly detection.
-18. Complete action logging and provenance.
-19. Emergency stop, containment and rollback.
-20. Incident response and forensics.
-21. Change management and revalidation.
-22. Third-party agent and agent-platform risk.
-23. Singapore Agentic AI framework mapping.
-24. NIST AI RMF/GenAI mapping.
-25. ISO/IEC 42001 management-system relationship.
-26. EU AI Act applicability and role analysis.
-27. Executive/board risk reporting.
-28. Scenario exercises and tabletop testing.
+- AG-01 through AG-20 independently authored control taxonomy;
+- controlled training architecture covering autonomy/capabilities, identities, least privilege, tool/API boundaries, data/memory, prompt/context integrity, human checkpoints, provenance, multi-agent delegation, third-party agents, monitoring, containment, incident response, change/revalidation, adversarial testing, automation bias and continuous assurance;
+- controlled scenario architecture.
 
 ## Source/currentness caveats
 
@@ -72,11 +30,13 @@ Agentic AI must be governed by the consequences of its actions, not only by the 
 
 ## Publication gates
 
-- [x] Current Stage-0 agentic-governance/security sources verified.
-- [x] Initial identity/authorization and agent security source architecture established.
+- [x] Current agentic-governance/security source baseline established.
+- [x] Identity/authorization and agent-security source architecture established.
 - [x] AG-01 through AG-20 control taxonomy established.
-- [ ] Full controlled training architecture at next eligible stage.
-- [ ] Detailed threat/control mappings and scenarios.
+- [x] Controlled training architecture established.
+- [x] Scenario architecture established.
+- [ ] Full training modules and detailed threat/control mappings.
+- [ ] Practical scenarios and evidence workbook.
 - [ ] Accountable-human technical review where genuinely required.
 - [ ] Cross-framework mappings complete.
 - [ ] Accessibility/localization preparation complete.

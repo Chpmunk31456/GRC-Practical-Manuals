@@ -1,7 +1,7 @@
 # Manual 47 — EU AI Act Training & Operationalization
 
 **Status:** CONTROLLED DEVELOPMENT  
-**Version:** 0.1.0-draft  
+**Version:** 0.2.0-draft  
 **Role in series:** First specialist training after Manual 46 Universal AI Governance Foundation  
 **Source verification date:** 31 August 2026
 
@@ -28,132 +28,49 @@ Time-sensitive dates must be reverified immediately before publication.
 ## 3. Learning sequence
 
 ### Module 1 — Scope and applicability
-
-Learners should be able to determine:
-
-- whether an AI system or model falls within territorial and material scope;
-- which organizational entity is acting as provider, deployer, importer, distributor, authorized representative or other relevant value-chain actor;
-- whether exclusions or special regimes may apply;
-- whether multiple roles can apply to one organization.
+Learners should determine territorial/material scope, entity role, exclusions/special regimes and multiple-role situations.
 
 ### Module 2 — Risk classification
-
-Train the learner to distinguish:
-
-- prohibited practices;
-- high-risk AI;
-- transparency-risk systems subject to Article 50 duties;
-- GPAI model obligations;
-- minimal/no-risk uses with no dedicated AI Act obligation beyond otherwise applicable law.
-
-Classification should be documented and independently challengeable.
+Distinguish prohibited practices, high-risk AI, transparency-risk systems, GPAI obligations and lower-risk uses.
 
 ### Module 3 — Prohibited practices
-
-Operational training should cover a formal prohibited-use screening gate before approval. The organization should maintain:
-
-- prohibited-use criteria;
-- escalation to legal/compliance;
-- documented disposition;
-- controls preventing circumvention through vendors or downstream configuration.
+Maintain a prohibited-use screening gate, escalation criteria, documented disposition and anti-circumvention controls.
 
 ### Module 4 — AI literacy
-
-Training should address competence appropriate to organizational roles. AI literacy should be embedded into onboarding, role-based training, policy awareness and governance communications rather than treated as a one-time awareness course.
+Embed role-based competence into onboarding, governance communications, operations and policy awareness.
 
 ### Module 5 — High-risk AI requirements
-
-For high-risk AI, training should operationalize requirements around:
-
-- risk management;
-- data and data governance;
-- technical documentation;
-- recordkeeping/logging;
-- transparency and instructions for use;
-- human oversight;
-- accuracy, robustness and cybersecurity;
-- quality-management and conformity-related obligations where applicable;
-- post-market monitoring and incident processes.
+Operationalize risk management, data governance, technical documentation, logging, transparency/instructions, human oversight, accuracy, robustness, cybersecurity, quality management, conformity-related obligations where applicable, post-market monitoring and incident processes.
 
 ### Module 6 — Provider versus deployer controls
-
-Learners should build separate control matrices for provider and deployer obligations. A procurement decision does not remove deployer accountability, and a provider cannot assume every downstream use will remain within intended conditions.
+Build separate role-based control matrices. Procurement does not remove deployer accountability.
 
 ### Module 7 — General-purpose AI
-
-Training should cover governance of GPAI models, including documentation and transparency duties, downstream information, copyright-related obligations and additional safety/security responsibilities for models subject to systemic-risk provisions.
+Cover documentation, transparency, downstream information, copyright-related obligations and systemic-risk responsibilities where applicable.
 
 ### Module 8 — Transparency obligations
+Address human-AI interaction disclosure, machine-readable marking/detection where required, deepfake/public-interest content labeling and evidence that disclosures operate in production.
 
-Article 50 training should address, where applicable:
-
-- informing individuals when they are interacting with AI;
-- machine-readable marking/detection of AI-generated or manipulated content;
-- labeling deepfakes and certain AI-generated public-interest content;
-- documented applicability decisions and evidence that required disclosures operate in production.
-
-### Module 9 — Fundamental rights and impact assessment
-
-Where a fundamental-rights impact assessment or other impact assessment is required, it should be integrated with the enterprise risk process rather than treated as a detached legal form.
-
-Training should connect affected persons, foreseeable impacts, safeguards, human oversight, complaint/contestability mechanisms, residual risk and evidence.
+### Module 9 — Fundamental-rights and impact assessment
+Integrate required assessments with enterprise risk, affected persons, foreseeable impacts, safeguards, human oversight, complaint/contestability, residual risk and evidence.
 
 ### Module 10 — Human oversight
-
-Human oversight should specify:
-
-- accountable roles;
-- information available to the overseer;
-- ability to understand system limitations;
-- authority to override, stop or escalate;
-- safeguards against automation bias;
-- recordkeeping for consequential interventions.
+Define accountable roles, information, understanding of limitations, override/stop/escalation authority, automation-bias safeguards and records.
 
 ### Module 11 — Cybersecurity, robustness and accuracy
-
-AI Act compliance should be connected to existing secure-development, vulnerability-management, identity, logging, change-management and incident-response capabilities.
-
-Testing should be proportionate to intended purpose and reasonably foreseeable misuse.
+Connect AI Act obligations to secure development, vulnerability management, identity, logging, change management and incident response.
 
 ### Module 12 — Documentation and evidence
-
-Evidence should include, as applicable:
-
-- scope and role determination;
-- classification decision;
-- risk-management records;
-- data-governance evidence;
-- technical documentation references;
-- testing/validation evidence;
-- human-oversight design;
-- transparency notices;
-- approvals and exceptions;
-- provider/deployer instructions;
-- monitoring and incident records;
-- change and revalidation decisions.
+Maintain scope/role determination, classification, risk records, data-governance evidence, technical-document references, testing/validation, oversight design, notices, approvals, instructions, monitoring, incidents and change decisions.
 
 ### Module 13 — Third-party and value-chain governance
-
-Procurement should capture:
-
-- provider identity and role;
-- model/system documentation;
-- intended purpose and limitations;
-- data-use terms;
-- security/privacy commitments;
-- logging and evidence availability;
-- material-change notification;
-- incident notification;
-- cooperation with compliance and regulatory requests;
-- exit/transition provisions.
+Capture provider identity/role, documentation, limitations, data-use terms, security/privacy commitments, evidence access, material-change and incident notifications, regulatory cooperation and exit provisions.
 
 ### Module 14 — Post-market monitoring
-
-Governance continues after deployment. Monitoring should evaluate performance, misuse, incidents, changed context, changed models/providers, new jurisdictions and emerging regulatory guidance.
+Evaluate performance, misuse, incidents, context changes, model/provider changes, jurisdiction changes and emerging guidance.
 
 ### Module 15 — Enforcement and escalation
-
-The enterprise operating model should define who owns regulatory interaction, internal escalation, incident notification, evidence preservation and remediation.
+Define ownership for regulatory interaction, internal escalation, notifications, evidence preservation and remediation.
 
 ## 4. Operational decision flow
 
@@ -161,13 +78,9 @@ The enterprise operating model should define who owns regulatory interaction, in
 
 ## 5. Control design pattern
 
-For each applicable obligation use:
-
 **Legal requirement → organizational interpretation → risk → control objective → control activity → accountable owner → evidence → test method → exception/escalation → remediation**
 
 ## 6. Training scenarios
-
-The completed manual will include exercises for:
 
 1. employment-related AI;
 2. customer-service chatbot;
@@ -185,16 +98,16 @@ Manual 46 supplies the universal operating model. Manual 47 overlays EU legal ob
 ## 8. Publication gates
 
 - [ ] Primary-law verification complete.
-- [ ] Commission implementation timeline refreshed.
-- [ ] Current AI Omnibus amendments and effective dates reconciled.
-- [ ] Provider/deployer/GPAI role treatment legally reviewed.
-- [ ] High-risk classification examples reviewed.
+- [ ] Commission implementation timeline refreshed immediately before publication.
+- [ ] Current amendments and effective dates reconciled.
+- [ ] Provider/deployer/GPAI role treatment verified.
+- [ ] High-risk classification examples verified.
 - [ ] Article 50 transparency treatment verified.
 - [ ] Fundamental-rights impact assessment treatment verified.
-- [ ] Controlled-English review complete.
-- [ ] Accessibility/localization preparation complete.
-- [ ] DOCX/PDF visible-page validation complete if artifacts are generated.
+- [ ] Controlled-English master complete and frozen.
+- [ ] es-419 / pt-BR controlled localization complete when Manual 46 advances sufficiently to permit Stage 4.
+- [ ] DOCX/PDF candidate and visible-page validation complete when Manual 47 reaches Stage 5.
 - [ ] Provenance/checksums/security QA complete.
-- [ ] Required accountable-human release approval recorded.
+- [ ] Standing release authorization satisfied under the canonical equation; no separate generic final human approval prompt.
 
-**Fail-closed:** no publication claim until all applicable gates are green.
+**Fail-closed:** no publication claim until all applicable gates are green and predecessor Manual 46 is published.

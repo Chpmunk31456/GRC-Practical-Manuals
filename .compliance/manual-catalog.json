@@ -565,6 +565,15 @@
       "series_order": 53,
       "status": "published",
       "release_state": "published"
+    },
+    {
+      "id": "manual-54-ai-model-risk-validation",
+      "title": "Manual 54 — AI Model Risk Management & Independent Validation",
+      "path": "10-ai-governance/Manual_54_AI_Model_Risk_Validation",
+      "layout": "controlled-build",
+      "series_order": 54,
+      "status": "published",
+      "release_state": "published"
     }
   ]
 }

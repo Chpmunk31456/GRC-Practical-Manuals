@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-02",
   "released_work_products": [
     {
       "id": "eu-ai-act-grc",
@@ -319,6 +319,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 53 exact trilingual candidate: workflow 33573114591, artifact 9825670619, source head e15050e25f8625480ee30d86daf67004b14ce71e, archive digest sha256:02eedc9e8ea53f693694da20ea38aa874cf0db1340c5f38c97fa4f11d8e187da. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and PD-01 through PD-20 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 52 is published."
+    },
+    {
+      "id": "manual-54-ai-model-risk-validation",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 54 exact trilingual candidate: workflow 33573951471, artifact 9825953331, source head f4b0de7a66368a69a0133c6c15c1adcd9c6d3d69, archive digest sha256:8c6295fe257cc1ec64282ff73f1775b65606689272bd90e425b45c462769f0f6. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and MRM-01 through MRM-16 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 53 is published."
     }
   ]
 }

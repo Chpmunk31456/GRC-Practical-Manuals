@@ -1,0 +1,42 @@
+{
+  "manual": 54,
+  "source_commit": "f4b0de7a66368a69a0133c6c15c1adcd9c6d3d69",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_54_AI_Model_Risk_Validation_EN.docx",
+      "sha256": "9353e2a96cd08156c4c62ed11b33dd7779cbb29bbbac7e6e001103e27dda6cd2",
+      "bytes": 40875
+    },
+    {
+      "locale": "en",
+      "file": "Manual_54_AI_Model_Risk_Validation_EN.pdf",
+      "sha256": "57d6d0de581fd5a3e8c01bde103c95dd89446bd6878961ad0c7fd768fab09449",
+      "bytes": 71920
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_54_AI_Model_Risk_Validation_ES-419.docx",
+      "sha256": "6a9f83336db8582eb4d2f6aaa073ec716298ec5020a6fbd4275a0054ca057b99",
+      "bytes": 40541
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_54_AI_Model_Risk_Validation_ES-419.pdf",
+      "sha256": "553ce047f4c4332480664150c5fd4c316e582a2c9e30e3625d7aed8e0f93d302",
+      "bytes": 68584
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_54_AI_Model_Risk_Validation_PT-BR.docx",
+      "sha256": "870678cf48923ef0fa8af0f82e0b9f81e0f66245a2f6b63ad8325e78fd70ed40",
+      "bytes": 40574
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_54_AI_Model_Risk_Validation_PT-BR.pdf",
+      "sha256": "508a381708d6a308d0d4880532c8574ee6ff9c7f49cb183c52fc69909ad41a07",
+      "bytes": 69902
+    }
+  ]
+}

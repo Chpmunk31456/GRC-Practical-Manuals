@@ -325,6 +325,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 54 exact trilingual candidate: workflow 33573951471, artifact 9825953331, source head f4b0de7a66368a69a0133c6c15c1adcd9c6d3d69, archive digest sha256:8c6295fe257cc1ec64282ff73f1775b65606689272bd90e425b45c462769f0f6. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and MRM-01 through MRM-16 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 53 is published."
+    },
+    {
+      "id": "manual-55-ai-third-party-supply-chain-governance",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 55 exact trilingual candidate: workflow 33574544475, artifact 9826154211, source head b0e0f90d6d5916fb3cb06658ba872e9250e66431, archive digest sha256:74647927571d7d3d0fde1a4cb3de822b53c9c03412311c0ef93bf1bcd58d8e36. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and TP-01 through TP-18 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 54 is published."
     }
   ]
 }

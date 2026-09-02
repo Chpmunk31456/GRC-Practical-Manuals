@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-02",
   "languages": [
     "en",
     "es-419",
@@ -572,6 +572,15 @@
       "path": "10-ai-governance/Manual_54_AI_Model_Risk_Validation",
       "layout": "controlled-build",
       "series_order": 54,
+      "status": "published",
+      "release_state": "published"
+    },
+    {
+      "id": "manual-55-ai-third-party-supply-chain-governance",
+      "title": "Manual 55 — AI Third-Party, Vendor & Supply-Chain Governance",
+      "path": "10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance",
+      "layout": "controlled-build",
+      "series_order": 55,
       "status": "published",
       "release_state": "published"
     }

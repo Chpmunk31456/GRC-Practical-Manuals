@@ -1,0 +1,97 @@
+name: Manual 55 exact publication transfer
+
+on:
+  push:
+    branches:
+      - publish/manual55-final-2026-09-02
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-exact-candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out publication branch
+        uses: actions/checkout@v4
+        with:
+          ref: publish/manual55-final-2026-09-02
+      - name: Download frozen Manual 55 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/manual55
+          gh api repos/${{ github.repository }}/actions/artifacts/9826154211/zip > /tmp/manual55.zip
+          unzip -q /tmp/manual55.zip -d /tmp/manual55
+      - name: Verify exact frozen hashes and bytes
+        run: |
+          set -euo pipefail
+          d=/tmp/manual55/manual55-publication-candidate
+          check() { f="$1"; bytes="$2"; hash="$3"; test "$(stat -c%s "$d/$f")" = "$bytes"; echo "$hash  $d/$f" | sha256sum -c -; }
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_EN.docx 39166 b9ac03ffb84852e96eda3876a3a368d5be0c3ef89236dfd6a5175e930672f837
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_EN.pdf 46424 6ebab8d44fe6b325a6327e9c640a04708b05db0f40fc86c788ab7e8a5581e531
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_ES-419.docx 39107 ccbdbcc2312e0cc6628754f83236b4b9d04e96dc422e564cdaea941225bc5acd
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_ES-419.pdf 46747 687da64875bd11c2a73f9b85b09bc9ff2c325d2e86c1427ee244c07a08da54d6
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_PT-BR.docx 39204 8da82d2c1a1d8944a11ddeadcebafe474271b164d13bd1cc4198d2623233464e
+          check Manual_55_AI_Third_Party_Supply_Chain_Governance_PT-BR.pdf 48025 f4e623979ef38bd6a3b4aef129a911ffcdb47698b5ffca4118ed8457efe440f4
+      - name: Stage exact bytes, controlled sources and publication registries
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          target=10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance
+          mkdir -p "$target" "$target/controlled/en" "$target/controlled/es-419" "$target/controlled/pt-BR" "$target/qa"
+          cp /tmp/manual55/manual55-publication-candidate/*.docx "$target/"
+          cp /tmp/manual55/manual55-publication-candidate/*.pdf "$target/"
+          cp /tmp/manual55/manual55-publication-candidate/MANUAL_55_CANDIDATE_MANIFEST.json "$target/qa/"
+          curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/b0e0f90d6d5916fb3cb06658ba872e9250e66431/10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance/controlled/en/MANUAL_55_CONTROLLED_EN.md" -o "$target/controlled/en/MANUAL_55_CONTROLLED_EN.md"
+          curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/b0e0f90d6d5916fb3cb06658ba872e9250e66431/10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance/controlled/es-419/MANUAL_55_CONTROLLED_ES_419.md" -o "$target/controlled/es-419/MANUAL_55_CONTROLLED_ES_419.md"
+          curl -fsSL "https://raw.githubusercontent.com/${{ github.repository }}/b0e0f90d6d5916fb3cb06658ba872e9250e66431/10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance/controlled/pt-BR/MANUAL_55_CONTROLLED_PT_BR.md" -o "$target/controlled/pt-BR/MANUAL_55_CONTROLLED_PT_BR.md"
+          cat > "$target/README.md" <<'EOF'
+          # Manual 55 — AI Third-Party, Vendor & Supply-Chain Governance
+
+          **Status: published**
+
+          Controlled EN/es-419/pt-BR publication package covering TP-01 through TP-18 across AI provider inventory, due diligence, security/privacy, data use, model/version transparency, subprocessors, hosting/transfers, identity/delegation, supply-chain integrity, contracts/evidence, revalidation, incidents, concentration, continuity, monitoring, exceptions and exit assurance.
+          EOF
+          cat > "$target/RELEASE_DECISION.md" <<'EOF'
+          # Manual 55 release decision
+
+          Exact frozen trilingual candidate from workflow run 33574544475 / artifact 9826154211 / archive digest sha256:74647927571d7d3d0fde1a4cb3de822b53c9c03412311c0ef93bf1bcd58d8e36.
+
+          Candidate generation, visible-text/render validation and TP-01 through TP-18 parity checks completed successfully. Exact DOCX/PDF bytes are transferred without regeneration and verified by SHA-256 plus byte count. Predecessor Manual 54 is published. Canonical clean-candidate release rule applies; final merge remains fail-closed on retained exact-head QA.
+          EOF
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cat=Path('.compliance/manual-catalog.json')
+          d=json.loads(cat.read_text())
+          if not any(x.get('id')=='manual-55-ai-third-party-supply-chain-governance' for x in d['manuals']):
+              d['manuals'].append({
+                'id':'manual-55-ai-third-party-supply-chain-governance',
+                'title':'Manual 55 — AI Third-Party, Vendor & Supply-Chain Governance',
+                'path':'10-ai-governance/Manual_55_AI_Third_Party_Supply_Chain_Governance',
+                'layout':'controlled-build','series_order':55,'status':'published','release_state':'published'})
+          d['last_updated']='2026-09-02'
+          cat.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+          rel=Path('.compliance/work-product-releases.json')
+          r=json.loads(rel.read_text())
+          if not any(x.get('id')=='manual-55-ai-third-party-supply-chain-governance' for x in r['released_work_products']):
+              r['released_work_products'].append({
+                'id':'manual-55-ai-third-party-supply-chain-governance','type':'manual','release_state':'published',
+                'release_evidence':'Manual 55 exact trilingual candidate: workflow 33574544475, artifact 9826154211, source head b0e0f90d6d5916fb3cb06658ba872e9250e66431, archive digest sha256:74647927571d7d3d0fde1a4cb3de822b53c9c03412311c0ef93bf1bcd58d8e36. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and TP-01 through TP-18 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 54 is published.'})
+          r['last_updated']='2026-09-02'
+          rel.write_text(json.dumps(r,indent=2,ensure_ascii=False)+'\n')
+          PY
+      - name: Remove temporary workflow and commit publication transaction
+        run: |
+          set -euo pipefail
+          rm .github/workflows/109-manual55-final-publication-transfer.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish Manual 55 exact frozen binaries and registry state'
+          git push origin HEAD:publish/manual55-final-2026-09-02

@@ -1,0 +1,42 @@
+{
+  "manual": 55,
+  "source_commit": "b0e0f90d6d5916fb3cb06658ba872e9250e66431",
+  "artifacts": [
+    {
+      "locale": "en",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_EN.docx",
+      "sha256": "b9ac03ffb84852e96eda3876a3a368d5be0c3ef89236dfd6a5175e930672f837",
+      "bytes": 39166
+    },
+    {
+      "locale": "en",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_EN.pdf",
+      "sha256": "6ebab8d44fe6b325a6327e9c640a04708b05db0f40fc86c788ab7e8a5581e531",
+      "bytes": 46424
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_ES-419.docx",
+      "sha256": "ccbdbcc2312e0cc6628754f83236b4b9d04e96dc422e564cdaea941225bc5acd",
+      "bytes": 39107
+    },
+    {
+      "locale": "es-419",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_ES-419.pdf",
+      "sha256": "687da64875bd11c2a73f9b85b09bc9ff2c325d2e86c1427ee244c07a08da54d6",
+      "bytes": 46747
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_PT-BR.docx",
+      "sha256": "8da82d2c1a1d8944a11ddeadcebafe474271b164d13bd1cc4198d2623233464e",
+      "bytes": 39204
+    },
+    {
+      "locale": "pt-BR",
+      "file": "Manual_55_AI_Third_Party_Supply_Chain_Governance_PT-BR.pdf",
+      "sha256": "f4e623979ef38bd6a3b4aef129a911ffcdb47698b5ffca4118ed8457efe440f4",
+      "bytes": 48025
+    }
+  ]
+}

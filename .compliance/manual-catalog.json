@@ -556,6 +556,15 @@
       "path": "08-templates-and-tools/AI_Governance_and_Audit_Toolkit",
       "status": "planned",
       "layout": "toolkit"
+    },
+    {
+      "id": "manual-53-ai-privacy-data-governance",
+      "title": "Manual 53 — AI Privacy & Data Governance",
+      "path": "10-ai-governance/Manual_53_AI_Privacy_Data_Governance",
+      "layout": "controlled-build",
+      "series_order": 53,
+      "status": "published",
+      "release_state": "published"
     }
   ]
 }

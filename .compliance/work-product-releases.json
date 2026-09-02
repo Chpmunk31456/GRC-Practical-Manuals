@@ -313,6 +313,12 @@
       "type": "manual",
       "release_state": "published",
       "release_evidence": "Manual 52 exact trilingual candidate was produced by successful workflow run 33572657882 / artifact 9825508927 at source head 92c33de440f0d043a80883308ca4cafb3e858453. The six EN/es-419/pt-BR DOCX/PDF binaries passed deterministic build, visible-text, raster-render and AC-01 through AC-20 trilingual parity checks; artifact archive digest sha256:ffad71cdb140b41108c73e247a58c8c575367b4bfa874ac9722fa7473f7b55db. Exact bytes were fail-closed hash/size verified before durable staging. OWASP is preserved as community guidance, MITRE ATLAS as a living knowledge base, and NIST AI RMF / AI 600-1 as voluntary guidance. Predecessor Manual 51 is published. The temporary write-enabled transfer workflow removes itself before the final publication tree; publication merge remains subject to retained exact-head CI."
+    },
+    {
+      "id": "manual-53-ai-privacy-data-governance",
+      "type": "manual",
+      "release_state": "published",
+      "release_evidence": "Manual 53 exact trilingual candidate: workflow 33573114591, artifact 9825670619, source head e15050e25f8625480ee30d86daf67004b14ce71e, archive digest sha256:02eedc9e8ea53f693694da20ea38aa874cf0db1340c5f38c97fa4f11d8e187da. Six DOCX/PDF binaries passed deterministic build, visible-text, raster-render and PD-01 through PD-20 parity checks; exact bytes were hash/size verified before durable staging. Predecessor Manual 52 is published."
     }
   ]
 }

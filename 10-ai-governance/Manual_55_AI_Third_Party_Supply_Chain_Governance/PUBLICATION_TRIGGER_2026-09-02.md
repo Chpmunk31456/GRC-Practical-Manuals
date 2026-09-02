@@ -1,0 +1,1 @@
+Controlled trigger for the Manual 55 exact frozen publication-transfer transaction. No publication binary is generated or modified by this trigger.

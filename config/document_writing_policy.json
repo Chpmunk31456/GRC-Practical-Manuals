@@ -83,7 +83,6 @@
   },
   "languagetool": {
     "blocking_issue_types": [
-      "misspelling",
       "grammar",
       "typographical",
       "duplication",
@@ -91,11 +90,13 @@
       "locale-violation"
     ],
     "advisory_issue_types": [
+      "misspelling",
       "style",
       "register",
       "uncategorized"
     ],
-    "disabled_rule_ids": []
+    "disabled_rule_ids": [],
+    "spelling_rationale": "Domain-heavy manuals contain acronyms, standards, legal names, framework names, identifiers, and specialized terminology. Spelling findings require review but do not block automatically until the controlled vocabulary is mature."
   },
   "repository_scan": {
     "exclude_path_parts": [

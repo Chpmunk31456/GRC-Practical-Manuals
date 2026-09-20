@@ -6,13 +6,19 @@
 
 **Author / Autor:** Alberto “Al” Leiva  
 **Repository version / Versión / Versão:** 2.0.0  
-**Last updated / Última actualización / Última atualização:** 2 September 2026
+**Last updated / Última actualización / Última atualização:** 20 September 2026
 
 This repository publishes practical manuals in three controlled language editions: **English**, **Latin American Spanish (es-419)**, and **Brazilian Portuguese (pt-BR)**. Within each language, publications are separated into **GRC**, **Compliance**, and **Training**.
 
 Este repositorio publica manuales prácticos en tres ediciones lingüísticas controladas: **inglés**, **español de América Latina (es-419)** y **portugués de Brasil (pt-BR)**. Dentro de cada idioma, las publicaciones están separadas en **GRC**, **Cumplimiento** y **Capacitación**.
 
 Este repositório publica manuais práticos em três edições linguísticas controladas: **inglês**, **espanhol da América Latina (es-419)** e **português do Brasil (pt-BR)**. Em cada idioma, as publicações estão separadas em **GRC**, **Conformidade** e **Treinamento**.
+
+## Writing and editorial quality
+
+All manuals and future professional documents are governed by the [Controlled Document Writing Standard](./DOCUMENT_WRITING_STANDARD.md). The repository now uses local-first multilingual writing QA for English, neutral Latin American Spanish (`es-419`), and Brazilian Portuguese (`pt-BR`). Automated tools improve grammar, readability, and consistency but do not have authority to change legal, regulatory, technical, audit, security, privacy, standards, or evidence meaning.
+
+Existing manuals are improved in controlled editorial batches rather than by mass automatic rewriting. Changed source documents are checked before merge, and a whole-repository audit mode is available for planned editorial review.
 
 ---
 

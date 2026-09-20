@@ -1,0 +1,9 @@
+extends: existence
+message: "Review editorial placeholder '%s' before publication."
+level: warning
+ignorecase: false
+tokens:
+  - '\bTODO\b'
+  - '\bTBD\b'
+  - '\bFIXME\b'
+  - '\bLorem ipsum\b'

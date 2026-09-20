@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-09-20T13:00:00Z",
+  "standard": "DOCUMENT_WRITING_STANDARD.md",
+  "objective": "Improve grammar, readability, consistency, and human professional tone without changing controlled technical, legal, regulatory, audit, security, privacy, risk, standards, or evidence meaning.",
+  "supported_source_extensions": [
+    ".md",
+    ".txt",
+    ".rst",
+    ".docx"
+  ],
+  "default_language": "en-US",
+  "languages": {
+    "en-US": {
+      "label": "Professional U.S. English",
+      "path_markers": [
+        "/english/",
+        "_english_"
+      ]
+    },
+    "es": {
+      "label": "Neutral Latin American Spanish (es-419)",
+      "path_markers": [
+        "/translations/es-419/",
+        "/spanish_es-419/",
+        "/es-419/"
+      ]
+    },
+    "pt-BR": {
+      "label": "Brazilian Portuguese (pt-BR)",
+      "path_markers": [
+        "/translations/pt-br/",
+        "/portuguese_pt-br/",
+        "/pt-br/"
+      ]
+    }
+  },
+  "mixed_language_markers": [
+    "## English",
+    "## Español",
+    "## Português"
+  ],
+  "privacy": {
+    "languagetool_mode": "local_only_by_default",
+    "default_endpoint": "http://127.0.0.1:8010/v2/check",
+    "remote_endpoint_requires_explicit_opt_in": true
+  },
+  "human_style": {
+    "max_sentence_words": 55,
+    "flag_consecutive_duplicate_words": true,
+    "avoid_phrases": [
+      "results-driven professional",
+      "seasoned professional",
+      "dynamic leader",
+      "proven track record",
+      "game-changer",
+      "cutting-edge",
+      "world-class",
+      "best-in-class",
+      "uniquely positioned",
+      "passionate about leveraging"
+    ]
+  },
+  "protected_content": {
+    "never_auto_rewrite": [
+      "authoritative quotations",
+      "regulation and statute identifiers",
+      "article, annex, section, control, requirement, and clause identifiers",
+      "official standard and framework names",
+      "agency and regulator names",
+      "certification names",
+      "source titles",
+      "DOIs",
+      "URLs",
+      "hashes",
+      "versions",
+      "file names",
+      "code and commands",
+      "schemas and machine-readable data",
+      "approved defined terms"
+    ],
+    "principle": "Automated suggestions are review signals and never override controlled terminology or evidence."
+  },
+  "languagetool": {
+    "blocking_issue_types": [
+      "grammar",
+      "typographical",
+      "duplication",
+      "inconsistency",
+      "locale-violation"
+    ],
+    "advisory_issue_types": [
+      "misspelling",
+      "style",
+      "register",
+      "uncategorized"
+    ],
+    "disabled_rule_ids": [],
+    "spelling_rationale": "Domain-heavy manuals contain acronyms, standards, legal names, framework names, identifiers, and specialized terminology. Spelling findings require review but do not block automatically until the controlled vocabulary is mature.",
+    "advisory_rule_ids": [
+      "UPPERCASE_SENTENCE_START"
+    ]
+  },
+  "repository_scan": {
+    "exclude_path_parts": [
+      "/.git/",
+      "/node_modules/",
+      "/vendor/"
+    ],
+    "generated_path_markers": [
+      "/publication/",
+      "/dist/",
+      "/build/",
+      "/generated/"
+    ],
+    "generated_artifacts_are_source_first": true
+  },
+  "editorial_process": {
+    "existing_manuals": "Audit and correct in controlled batches; do not mass auto-rewrite.",
+    "future_documents": "Run writing QA on every changed source document before merge.",
+    "localized_editions": "Apply locale-appropriate grammar checks and preserve semantic parity with the controlled source."
+  },
+  "mixed_language_heading_patterns": [
+    "^## .*English",
+    "^## .*Español",
+    "^## .*Português"
+  ]
+}

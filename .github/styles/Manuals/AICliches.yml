@@ -1,0 +1,15 @@
+extends: existence
+message: "Replace generic or promotional phrase '%s' with specific, evidence-based professional wording."
+level: warning
+ignorecase: true
+tokens:
+  - '\bresults[- ]driven professional\b'
+  - '\bseasoned professional\b'
+  - '\bdynamic leader\b'
+  - '\bproven track record\b'
+  - '\bgame[- ]changer\b'
+  - '\bcutting[- ]edge\b'
+  - '\bworld[- ]class\b'
+  - '\bbest[- ]in[- ]class\b'
+  - '\buniquely positioned\b'
+  - '\bpassionate about leveraging\b'

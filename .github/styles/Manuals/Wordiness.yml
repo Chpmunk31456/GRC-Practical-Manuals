@@ -1,0 +1,15 @@
+extends: substitution
+message: "Consider '%s' for clearer professional prose when technical meaning is unchanged."
+level: suggestion
+ignorecase: true
+swap:
+  'in order to': 'to'
+  'due to the fact that': 'because'
+  'at this point in time': 'now'
+  'has the ability to': 'can'
+  'is able to': 'can'
+  'utilize': 'use'
+  'utilized': 'used'
+  'utilizing': 'using'
+  'with regard to': 'about'
+  'for the purpose of': 'to'

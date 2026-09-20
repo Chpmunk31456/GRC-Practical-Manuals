@@ -1,0 +1,139 @@
+name: Document Writing Quality
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.txt"
+      - "**/*.rst"
+      - "**/*.docx"
+      - ".vale.ini"
+      - ".vale-editorial.ini"
+      - ".github/styles/**"
+      - ".github/workflows/document-writing-quality.yml"
+      - "config/document_writing_policy.json"
+      - "scripts/document_writing_qa.py"
+      - "tests/test_document_writing_qa.py"
+      - "DOCUMENT_WRITING_STANDARD.md"
+      - "AGENTS.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: document-writing-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  document-writing-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Test document writing QA
+        run: |
+          python -m unittest tests.test_document_writing_qa -v
+          python -m py_compile scripts/document_writing_qa.py
+
+      - name: Select documents
+        id: documents
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            FILES="$(python scripts/document_writing_qa.py --changed-from "$BASE_SHA" --list-only --format json)"
+            VALE_FILES="$(python scripts/document_writing_qa.py --changed-from "$BASE_SHA" --vale-files-only --list-only --format json)"
+          else
+            FILES="$(python scripts/document_writing_qa.py --all --list-only --format json)"
+            VALE_FILES="$(python scripts/document_writing_qa.py --all --vale-files-only --list-only --format json)"
+          fi
+
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "vale_files=$VALE_FILES" >> "$GITHUB_OUTPUT"
+
+          python - "$VALE_FILES" >> "$GITHUB_OUTPUT" <<'PY'
+          import json
+          import sys
+          values = json.loads(sys.argv[1])
+          print("has_vale_files=" + ("true" if values else "false"))
+          PY
+
+      - name: Run markup-aware Vale checks
+        if: steps.documents.outputs.has_vale_files == 'true'
+        uses: vale-cli/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3
+        with:
+          files: ${{ steps.documents.outputs.vale_files }}
+          fail_level: error
+          filter_mode: nofilter
+
+      - name: Set up Java 17
+        uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install checksum-verified local LanguageTool
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --silent --location --proto '=https' --tlsv1.2 \
+            https://languagetool.org/download/LanguageTool-6.6.zip \
+            --output /tmp/LanguageTool-6.6.zip
+          echo "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631  /tmp/LanguageTool-6.6.zip" | sha256sum --check --strict
+          unzip -q /tmp/LanguageTool-6.6.zip -d /tmp/languagetool
+          LT_DIR="/tmp/languagetool/LanguageTool-6.6"
+          test -f "$LT_DIR/languagetool-server.jar"
+          touch "$LT_DIR/server.properties"
+          echo "LT_DIR=$LT_DIR" >> "$GITHUB_ENV"
+
+      - name: Start local LanguageTool
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$LT_DIR"
+          nohup java -cp languagetool-server.jar org.languagetool.server.HTTPServer \
+            --config server.properties --port 8010 > /tmp/languagetool.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS -X POST http://127.0.0.1:8010/v2/check \
+              --data-urlencode "language=en-US" \
+              --data-urlencode "text=This is a grammar test." >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/languagetool.log
+          exit 1
+
+      - name: Check changed or controlled-source documents
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            python scripts/document_writing_qa.py \
+              --changed-from "$BASE_SHA" \
+              --require-languagetool \
+              --fail-level error
+          else
+            python scripts/document_writing_qa.py \
+              --all \
+              --require-languagetool \
+              --fail-level error \
+              --output /tmp/document-writing-audit.txt
+          fi

@@ -96,7 +96,10 @@
       "uncategorized"
     ],
     "disabled_rule_ids": [],
-    "spelling_rationale": "Domain-heavy manuals contain acronyms, standards, legal names, framework names, identifiers, and specialized terminology. Spelling findings require review but do not block automatically until the controlled vocabulary is mature."
+    "spelling_rationale": "Domain-heavy manuals contain acronyms, standards, legal names, framework names, identifiers, and specialized terminology. Spelling findings require review but do not block automatically until the controlled vocabulary is mature.",
+    "advisory_rule_ids": [
+      "UPPERCASE_SENTENCE_START"
+    ]
   },
   "repository_scan": {
     "exclude_path_parts": [
@@ -116,5 +119,10 @@
     "existing_manuals": "Audit and correct in controlled batches; do not mass auto-rewrite.",
     "future_documents": "Run writing QA on every changed source document before merge.",
     "localized_editions": "Apply locale-appropriate grammar checks and preserve semantic parity with the controlled source."
-  }
+  },
+  "mixed_language_heading_patterns": [
+    "^## .*English",
+    "^## .*Español",
+    "^## .*Português"
+  ]
 }

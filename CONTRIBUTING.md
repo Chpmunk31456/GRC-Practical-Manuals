@@ -55,6 +55,8 @@ Please do not submit unsupported claims, copied commercial material, or confiden
 
 ## Writing Style
 
+All documentation changes must follow [DOCUMENT_WRITING_STANDARD.md](./DOCUMENT_WRITING_STANDARD.md). Editorial improvements must preserve authoritative wording, controlled terminology, source meaning, citations, legal and regulatory distinctions, control mappings, and localization semantics.
+
 Contributions should be:
 
 - Clear
@@ -62,9 +64,13 @@ Contributions should be:
 - Respectful
 - Beginner-friendly
 - Professionally written
+- Grammatically correct for the controlled locale
 - Free from unnecessary jargon
 - Accurate and responsibly sourced
+- Natural rather than formulaic or promotional
 - Safe, ethical, and legally appropriate
+
+Do not accept an automated grammar, style, or humanization suggestion when it changes a defined technical or legal term, weakens or strengthens a requirement without source support, or changes the factual meaning of the controlled source.
 
 ## Security and Ethics
 
@@ -121,6 +127,7 @@ When submitting a pull request:
 5. Keep unrelated changes separate.
 6. Confirm that links and filenames work.
 7. Review spelling, grammar, formatting, and readability.
+8. Run the applicable document-writing QA for changed source documents and review warnings in context.
 
 ## Review Process
 

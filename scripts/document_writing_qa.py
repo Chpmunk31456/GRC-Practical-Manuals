@@ -71,6 +71,14 @@ def detect_language(path: Path, text: str, policy: dict) -> str:
     if len(markers) >= 2 and sum(1 for marker in markers if marker in text) >= 2:
         return "mixed"
 
+    heading_patterns = policy.get("mixed_language_heading_patterns", [])
+    heading_hits = sum(
+        1 for pattern in heading_patterns
+        if re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+    )
+    if heading_hits >= 2:
+        return "mixed"
+
     lower_text = text[:5000].lower()
     if "controlled language:** english" in lower_text or "controlled language: english" in lower_text:
         return "en-US"
@@ -310,6 +318,7 @@ def languagetool_findings(
         raise ValueError("Remote LanguageTool endpoint blocked; use local LanguageTool or --allow-remote.")
 
     blocking = set(policy["languagetool"].get("blocking_issue_types", []))
+    advisory_rules = set(policy["languagetool"].get("advisory_rule_ids", []))
     disabled = ",".join(policy["languagetool"].get("disabled_rule_ids", []))
     findings: list[dict] = []
 
@@ -331,10 +340,11 @@ def languagetool_findings(
             issue_type = rule.get("issueType", "uncategorized")
             offset = int(match.get("offset", 0))
             context = match.get("context", {})
+            rule_id = rule.get("id", "LANGUAGETOOL")
             findings.append({
                 "source": "languagetool",
-                "severity": "error" if issue_type in blocking else "warning",
-                "code": rule.get("id", "LANGUAGETOOL"),
+                "severity": "error" if issue_type in blocking and rule_id not in advisory_rules else "warning",
+                "code": rule_id,
                 "issue_type": issue_type,
                 "message": match.get("message", "LanguageTool finding"),
                 "location": location_for_offset(chunk["spans"], offset),

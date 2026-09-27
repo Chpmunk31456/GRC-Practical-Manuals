@@ -25,3 +25,27 @@ lanes, never marks a human decision approved, and never authorizes publication.
 
 The first campaign candidate is only the next item to review. It is not a release
 recommendation or publication approval.
+
+
+## Improvement 59 — authoritative-source baseline review packets
+
+Run:
+
+`python scripts/phase10_source_review_packets.py --output phase10-source-review-packets.json`
+
+Each registered authoritative source receives a deterministic review packet with
+its current registry metadata, any existing approved baseline, current
+source-to-manual mappings, and explicit blockers.
+
+A source remains `REVIEW_REQUIRED` when either an approved baseline is missing
+or no source-to-manual mapping exists.
+
+The packet lists the required human-approved baseline fields:
+
+- exact SHA-256;
+- publication date;
+- revision;
+- approval evidence.
+
+Automation applies zero baseline updates and cannot convert an observation into
+approval.

@@ -104,7 +104,9 @@
     "config/phase10_review_campaign_policy.json",
     "scripts/phase10_review_campaign.py",
     "tests/test_phase10_review_campaign.py",
-    "docs/PHASE10_HUMAN_REVIEW_AND_RELEASE.md"
+    "docs/PHASE10_HUMAN_REVIEW_AND_RELEASE.md",
+    "scripts/phase10_source_review_packets.py",
+    "tests/test_phase10_source_review_packets.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -167,7 +169,8 @@
     "scripts/production_environment_certification.py",
     "scripts/pdf_toolchain_certification.py",
     "scripts/phase9_release_drill.py",
-    "scripts/phase10_review_campaign.py"
+    "scripts/phase10_review_campaign.py",
+    "scripts/phase10_source_review_packets.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -280,13 +283,16 @@
   "phase10": {
     "human_review_completion": true,
     "completed_improvements": [
-      58
+      58,
+      59
     ],
     "deterministic_review_campaign": true,
     "one_candidate_at_a_time": true,
     "human_approval_inference_prohibited": true,
     "publication_authorized_by_phase10_automation": false,
     "technical_phase_complete": false,
-    "first_controlled_candidate_release_complete": false
+    "first_controlled_candidate_release_complete": false,
+    "authoritative_source_review_packets": true,
+    "baseline_updates_applied_by_automation": 0
   }
 }

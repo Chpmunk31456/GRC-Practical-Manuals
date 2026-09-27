@@ -44,3 +44,27 @@ that same file records, eliminating a self-referential certification loop.
 The environment image uses `SOURCE_DATE_EPOCH=0` during certification so its
 content-addressed ID depends on the environment definition, not the source commit
 timestamp.
+
+
+## Improvement 55 — immutable PDF inspection toolchain
+
+The PDF inspection environment is isolated from the Python runtime image and
+pinned independently. Its contract uses:
+
+- Ubuntu 24.04 linux/amd64 at exact manifest
+  `sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4`;
+- Ubuntu Snapshot ID `20260927T120000Z`;
+- `poppler-utils=24.02.0-1ubuntu9.9`;
+- expected `pdftotext` and `pdfinfo` version 24.02.0.
+
+`Dockerfile.pdf-tools` installs only from that snapshot, verifies the exact
+package and tool versions, and removes mutable apt indexes, caches, and logs
+before export.
+
+The Phase 9 certification workflow builds the PDF image independently on two
+isolated BuildKit runners and compares their OCI manifest digests. Until both
+builds reproduce and the resulting digest is pinned into
+`config/production_toolchain.json`, the PDF toolchain remains blocked and the
+overall production toolchain remains `REVIEW_REQUIRED`.
+
+No PDF-toolchain certification authorizes publication.

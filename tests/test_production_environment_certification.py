@@ -16,12 +16,14 @@ class ProductionEnvironmentCertificationTests(unittest.TestCase):
         self.assertEqual(result["errors"], [])
         self.assertRegex(result["dependency_lock_sha256"], r"^[0-9a-f]{64}$")
         self.assertRegex(result["base_image_manifest_digest"], r"^sha256:[0-9a-f]{64}$")
+        self.assertTrue(result["immutable_build_image_verified"])
+        self.assertRegex(result["configured_build_container_digest"], r"^sha256:[0-9a-f]{64}$")
 
     def test_absent_runtime_remains_blocked_not_verified(self):
         with mock.patch.object(cert, "docker_available", return_value=False):
             result = cert.run()
         self.assertEqual(result["status"], "BLOCKED")
-        self.assertFalse(result["immutable_build_image_verified"])
+        self.assertTrue(result["immutable_build_image_verified"])
         self.assertFalse(result["immutable_pdf_toolchain_verified"])
         self.assertFalse(result["publication_authorized"])
 
@@ -29,7 +31,8 @@ class ProductionEnvironmentCertificationTests(unittest.TestCase):
         with mock.patch.object(cert, "docker_available", return_value=True):
             result = cert.run()
         self.assertEqual(result["status"], "BLOCKED")
-        self.assertIn("digest_evidence_required", result["reason"])
+        self.assertEqual(result["reason"], "immutable_pdf_toolchain_digest_evidence_required")
+        self.assertTrue(result["immutable_build_image_verified"])
         self.assertFalse(result["publication_authorized"])
 
     def test_phase9_never_infers_pdf_toolchain_verification(self):

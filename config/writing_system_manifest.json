@@ -255,10 +255,11 @@
     "immutable_build_contract": true,
     "independent_build_certification_required": true,
     "immutable_build_image_verified": true,
-    "immutable_pdf_toolchain_verified": false,
+    "immutable_pdf_toolchain_verified": true,
     "publication_authorized_by_phase9_automation": false,
     "immutable_pdf_toolchain_contract": true,
     "canonical_pdf_runtime_digest": true,
-    "pdf_execution_closure_certification": true
+    "pdf_execution_closure_certification": true,
+    "production_toolchain_verified": true
   }
 }

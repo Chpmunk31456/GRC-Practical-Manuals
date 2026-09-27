@@ -101,6 +101,9 @@ def verify(candidate, first, second):
         for relative,digest in candidate[field].items():
             if sha256(contained(ROOT,relative))!=digest:
                 raise ValueError('reviewed evidence hash mismatch')
+    toolchain=read_json(ROOT/'config/production_toolchain.json')
+    if toolchain.get('status')!='VERIFIED' or not all(toolchain.get('pdf_toolchain',{}).values()) or not all(toolchain.get('build_environment',{}).values()):
+        raise ValueError('production toolchain has not been verified')
     if not re.fullmatch('[0-9a-f]{64}',candidate['toolchain_sha256']) or sha256(ROOT/'config/production_toolchain.json')!=candidate['toolchain_sha256']:
         raise ValueError('pinned toolchain evidence missing or changed')
     import translation_lifecycle

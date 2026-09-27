@@ -38,7 +38,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
-          python-version: "3.12"
+          python-version: "3.12.14"
 
       - name: Provision and verify PDF inspection tools
         run: |
@@ -83,3 +83,6 @@ jobs:
 
       - name: Report independent accessibility requirements
         run: python scripts/accessibility_validation.py --output /tmp/accessibility-review.json
+
+      - name: Verify backup restoration and recovered tests
+        run: python scripts/production_recovery.py --output /tmp/production-recovery.json

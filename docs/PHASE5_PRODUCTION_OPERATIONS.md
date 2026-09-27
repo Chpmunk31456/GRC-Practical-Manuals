@@ -147,3 +147,30 @@ The controlled release verifier blocks on unresolved structural findings or
 missing independent review. Passing automatic checks never establishes that a
 document is fully accessible. Existing approved binaries remain unchanged;
 remediation that changes them requires regeneration and renewed approval.
+
+## Maintenance and disaster recovery (improvement 39)
+
+The weekly publication workflow runs regression tests, lifecycle reports and an
+isolated recovery exercise. The existing source-watch schedule performs network
+observations. Dependabot proposes weekly GitHub Actions dependency reviews;
+updates require review and are never merged automatically.
+The governance modules use only the Python standard library. CI pins Python
+3.12.14, the version verified by the preceding successful runs.
+
+`config/production_toolchain.json` records the production environment contract.
+PDF-tool and generator-environment locks are intentionally unresolved, with
+status `REVIEW_REQUIRED`. Adding this file does not enable release: the release
+verifier requires verified status and completed environment fields as well as
+its exact hash. The empty reviewer allowlist remains unchanged.
+
+Run `python scripts/production_recovery.py --output recovery.json` after committing.
+It archives only committed public repository files from permitted paths,
+excluding local files and credential/private-file patterns. It hashes the archive
+and each member, verifies both inventories and bytes, and restores into a fresh
+temporary directory. Recovery rejects duplicates, path escapes, symbolic links,
+oversized archives and existing destinations. It runs integrity and regression
+checks from the restored tree. The production checkout is never overwritten.
+Only counts, digests, durations and exit codes enter the report; document content
+and test output are not uploaded. Temporary backup and restored files are removed
+when the exercise ends. This tests recovery; durable off-host backup storage and
+retention still require an operator-owned deployment decision.

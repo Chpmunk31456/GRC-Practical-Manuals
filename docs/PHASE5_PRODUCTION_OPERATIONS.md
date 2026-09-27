@@ -103,9 +103,9 @@ publication authorization, even when every category has passing evidence.
 
 Release verification is explicit and read-only:
 `python scripts/controlled_release.py candidate.json --first-build BUILD1 --second-build BUILD2 --output release-check.json`.
-The command blocks unless the checkout is clean and at the exact candidate SHA,
-the manual is active, both independent build directories reproduce every declared
-DOCX/PDF hash, and source, translation, accessibility and visual evidence match.
+Release verification requires a clean checkout at the exact candidate SHA.
+The manual must be active. Both independent builds must reproduce every declared
+DOCX/PDF hash. Source, translation, accessibility and visual evidence must match.
 It reruns publication and lifecycle controls. No command publishes or merges.
 
 A candidate records `manual_id`, semantic `version`, `source_revision`,

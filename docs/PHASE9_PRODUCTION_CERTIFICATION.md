@@ -44,3 +44,83 @@ that same file records, eliminating a self-referential certification loop.
 The environment image uses `SOURCE_DATE_EPOCH=0` during certification so its
 content-addressed ID depends on the environment definition, not the source commit
 timestamp.
+
+
+## Improvement 55 — immutable PDF inspection toolchain
+
+The PDF inspection environment is isolated from the Python runtime image and
+pinned independently. Its contract uses:
+
+- Ubuntu 24.04 linux/amd64 at exact manifest
+  `sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4`;
+- Ubuntu Snapshot ID `20260927T120000Z`;
+- `poppler-utils=24.02.0-1ubuntu9.9`;
+- expected `pdftotext` and `pdfinfo` version 24.02.0.
+
+`Dockerfile.pdf-tools` installs only from that snapshot, verifies the exact
+package and tool versions, and removes mutable apt indexes, caches, and logs
+before export.
+
+The Phase 9 certification workflow builds the PDF image independently on two
+isolated BuildKit runners and compares their OCI manifest digests. Until both
+builds reproduce and the resulting digest is pinned into
+`config/production_toolchain.json`, the PDF toolchain remains blocked and the
+overall production toolchain remains `REVIEW_REQUIRED`.
+
+No PDF-toolchain certification authorizes publication.
+
+
+## Improvement 55 — immutable PDF inspection runtime
+
+The PDF runtime is separately pinned to the exact Ubuntu 24.04 amd64 base
+manifest, Ubuntu snapshot `20260927T120000Z`, and
+`poppler-utils=24.02.0-1ubuntu9.9`.
+
+BuildKit may vary OCI creation/history metadata between otherwise identical
+builds. Phase 9 therefore certifies a canonical runtime digest that retains the
+runtime architecture, OS, executable OCI config, and a canonical inventory of
+runtime filesystem paths, file bytes, symlink targets, permissions, and
+ownership. It intentionally excludes volatile OCI `created`/history timestamps,
+tar mtimes, and compressed-layer transport metadata.
+
+Two isolated BuildKit jobs must independently produce the same canonical runtime
+digest. Raw OCI manifest digests remain recorded as diagnostic evidence but are
+not treated as equivalent when only volatile metadata differs.
+
+This certification remains non-authorizing and does not satisfy any human
+publication approval.
+
+
+### Executable-closure certification
+
+The production release gate needs an immutable PDF inspection capability, not a
+bit-for-bit reproduction of unrelated Ubuntu package-manager caches. Improvement
+55 therefore independently builds the exact snapshot-pinned PDF runtime twice
+and hashes the executable closure for `pdftotext` and `pdfinfo`: the two
+executables plus every dynamically linked library resolved by `ldd`.
+
+Each closure record contains absolute runtime paths and SHA-256 file hashes. The
+canonical closure digest is order-independent and must match across two isolated
+BuildKit jobs. The exact Ubuntu base manifest, snapshot identifier, Poppler
+package version, PDF lock hash, and tool version checks remain mandatory.
+
+This is narrower than hashing the whole OS filesystem and stronger for the
+release purpose: generated apt/font/cache state cannot mask or alter the exact
+binaries and libraries used for PDF inspection.
+
+
+## Improvement 55 acceptance
+
+Two isolated BuildKit jobs independently produced the same canonical PDF
+execution-closure digest:
+
+`sha256:c26d953efaf33a237621fb92519180b3e04a7b46a0bfe3e3de49fac3f6b74e4a`
+
+Evidence is bound to Phase 9 certification workflow run `36338542682`,
+certification job `108674100887`, from source head
+`08f9418175342589a7e09e7337fbc7fbc25f4116`.
+
+The production toolchain can therefore be marked `VERIFIED`: both the
+reproducible Python build runtime and the exact snapshot-pinned PDF execution
+closure have independent cryptographic evidence. This verification does not
+authorize publication or replace any human review.

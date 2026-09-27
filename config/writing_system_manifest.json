@@ -41,7 +41,10 @@
     "config/translation_lifecycle.json",
     "tests/test_translation_lifecycle.py",
     "scripts/publication_dashboard.py",
-    "tests/test_publication_dashboard.py"
+    "tests/test_publication_dashboard.py",
+    "scripts/controlled_release.py",
+    "config/release_policy.json",
+    "tests/test_controlled_release.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -56,7 +59,8 @@
     "config/writing_observability_policy.json",
     "qa/writing-observability/HISTORY.json",
     "config/source_monitoring.json",
-    "config/translation_lifecycle.json"
+    "config/translation_lifecycle.json",
+    "config/release_policy.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -74,7 +78,8 @@
     "scripts/repository_publication_qa.py",
     "scripts/source_monitoring.py",
     "scripts/translation_lifecycle.py",
-    "scripts/publication_dashboard.py"
+    "scripts/publication_dashboard.py",
+    "scripts/controlled_release.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

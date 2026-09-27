@@ -98,3 +98,34 @@ stale, failed and pending categories block readiness. Approval history is shown
 as supplied evidence, not authenticated by the dashboard. The release gate must
 independently verify approvals before publication. The dashboard never grants
 publication authorization, even when every category has passing evidence.
+
+## Controlled releases (improvement 37)
+
+Release verification is explicit and read-only:
+`python scripts/controlled_release.py candidate.json --first-build BUILD1 --second-build BUILD2 --output release-check.json`.
+The command blocks unless the checkout is clean and at the exact candidate SHA,
+the manual is active, both independent build directories reproduce every declared
+DOCX/PDF hash, and source, translation, accessibility and visual evidence match.
+It reruns publication and lifecycle controls. No command publishes or merges.
+
+A candidate records `manual_id`, semantic `version`, `source_revision`,
+`pull_request`, `toolchain_sha256`, and path-to-SHA-256 maps named `artifacts`,
+`source_provenance`, `translation_evidence`, `accessibility_evidence` and
+`visual_evidence`. Every locale's DOCX and PDF must be present. Each build directory
+contains `build-receipt.json` with the same revision and toolchain hash and a
+unique `build_id`. Build execution and receipt provenance require review; byte
+comparison alone does not prove that an independent build actually occurred.
+
+Two authorized human reviewers must independently approve the exact PR head.
+Their GitHub approval bodies must include `Publication approval: SHA256=DIGEST`,
+where DIGEST is the canonical candidate fingerprint produced by
+`controlled_release.fingerprint`. The PR author and bots cannot satisfy this gate.
+Dismissed or superseded approvals, changed hashes and missing CI checks block it.
+The approver policy is fetched from `main`, never from the candidate branch.
+The initial reviewer allowlist is empty and must be configured through governance.
+No human identity or approval has been invented. The required toolchain manifest
+is supplied by the maintenance improvement; until then release remains blocked.
+
+A successful verification is evidence for the controlled publication process.
+It is not a standalone publication command. Existing release-manifest governance
+and final human publication approval continue to apply.

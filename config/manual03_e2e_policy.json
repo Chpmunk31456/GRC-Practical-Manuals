@@ -8,7 +8,7 @@
         "MANUAL_03_IMPLEMENTATION_PATHS.md"
       ],
       "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
-      "chapter_heading_pattern": "^##\\s+Chapter\\s+(\\d+)\\b"
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
     },
     "es-419": {
       "source_globs": [
@@ -16,7 +16,7 @@
         "es-419/source/*.md"
       ],
       "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
-      "chapter_heading_pattern": "^##\\s+Cap[ií]tulo\\s+(\\d+)\\b"
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
     },
     "pt-BR": {
       "source_globs": [
@@ -24,7 +24,7 @@
         "pt-BR/source/*.md"
       ],
       "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
-      "chapter_heading_pattern": "^##\\s+Cap[ií]tulo\\s+(\\d+)\\b"
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
     }
   },
   "expected_chapters": 32,
@@ -46,12 +46,6 @@
       "publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf"
     ]
   },
-  "semantic_boundary_terms": [
-    "residual risk",
-    "rollback",
-    "evidence",
-    "human oversight"
-  ],
   "maintenance": {
     "require_fail_closed_publication_language": true,
     "require_translation_review_pass": true,

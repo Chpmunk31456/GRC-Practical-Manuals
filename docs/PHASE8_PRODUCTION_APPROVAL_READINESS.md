@@ -24,3 +24,34 @@ not an immutable production environment. The repository therefore retains
 environment or equivalent production verification is supplied.
 
 No toolchain attestation authorizes publication.
+
+
+## Improvement 50 — exact human approval evidence intake
+
+Phase 8 uses two explicit registries:
+
+- `config/human_approval_requirements.json` defines the required decision types
+  for each candidate manual.
+- `config/human_approval_evidence.json` contains only human-authored evidence
+  records. It intentionally begins empty.
+
+Every evidence record must identify the manual and decision type, carry a human
+reviewer identifier and decision, bind to the exact current reviewer-readiness
+packet hash, and bind to the exact SHA-256 of an evidence file.
+
+The validator also reconciles evidence against the existing source-monitoring,
+translation-lifecycle, accessibility-review, release-reviewer, and production
+toolchain controls. An evidence record cannot bypass an incomplete subsystem.
+
+Run:
+
+`python scripts/human_approval_evidence.py --output human-approval-status.json`
+
+The validator may report `CURRENT_APPROVED`, `INCOMPLETE`, `STALE`, or
+`REJECTED` for a required decision. It never creates an approval and always
+keeps `publication_authorized` false.
+
+All six candidate manuals explicitly require authoritative-source,
+localization/semantic, accessibility, and release-authorization decisions.
+HIPAA additionally requires legal/semantic review; GDPR additionally requires
+privacy/legal review.

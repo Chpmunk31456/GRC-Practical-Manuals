@@ -1,16 +1,20 @@
 FROM python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a
 
 ARG POPPLER_VERSION=22.12.0-2+deb12u3
+ARG SOURCE_DATE_EPOCH=0
 ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=C.UTF-8 \
-    LANG=C.UTF-8
+    LANG=C.UTF-8 \
+    TZ=UTC
 
 RUN apt-get update \
     && apt-get install --no-install-recommends -y "poppler-utils=${POPPLER_VERSION}" \
     && test "$(dpkg-query -W -f='${Version}' poppler-utils)" = "${POPPLER_VERSION}" \
     && pdftotext -v 2>&1 | head -n 1 | grep -F "pdftotext version 22.12.0" \
     && pdfinfo -v 2>&1 | head -n 1 | grep -F "pdfinfo version 22.12.0" \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /var/log/apt/* \
+    && rm -f /var/log/dpkg.log /var/cache/ldconfig/aux-cache \
+    && find / -xdev -exec touch -h -d "@${SOURCE_DATE_EPOCH}" {} +
 
 WORKDIR /workspace
 ENTRYPOINT ["pdftotext"]

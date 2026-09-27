@@ -241,7 +241,7 @@
     ],
     "immutable_build_contract": true,
     "independent_build_certification_required": true,
-    "immutable_build_image_verified": false,
+    "immutable_build_image_verified": true,
     "immutable_pdf_toolchain_verified": false,
     "publication_authorized_by_phase9_automation": false
   }

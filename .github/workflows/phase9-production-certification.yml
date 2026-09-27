@@ -145,74 +145,80 @@ jobs:
   pdf-a:
     runs-on: ubuntu-24.04
     outputs:
-      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
-      runtime_digest: ${{ steps.build.outputs.runtime_digest }}
+      closure_digest: ${{ steps.build.outputs.closure_digest }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
       - name: Checkout exact candidate
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Set up isolated BuildKit
         uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
-      - name: Build immutable PDF toolchain A
+      - name: Build and hash immutable PDF execution closure A
         id: build
         shell: bash
         run: |
           set -euo pipefail
           export SOURCE_DATE_EPOCH=0
+          image="phase9-pdf-a:$GITHUB_RUN_ID"
           docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64 \
             --build-arg SOURCE_DATE_EPOCH=0 \
-            --output type=oci,dest=/tmp/pdf-a.oci \
+            --load -t "$image" \
             -f Dockerfile.pdf-tools .
-          manifest_digest="$(python - <<'PY'
-          import json, tarfile
-          with tarfile.open('/tmp/pdf-a.oci', 'r') as tf:
-              index=json.load(tf.extractfile('index.json'))
-          print(index['manifests'][0]['digest'])
-          PY
-          )"
-          runtime_digest="$(python scripts/oci_runtime_digest.py /tmp/pdf-a.oci)"
+          docker run --rm --entrypoint /bin/bash "$image" -lc '
+            set -euo pipefail
+            {
+              printf "%s\n" /usr/bin/pdftotext /usr/bin/pdfinfo
+              ldd /usr/bin/pdftotext
+              ldd /usr/bin/pdfinfo
+            } | awk '"'"'$2 == "=>" && $3 ~ /^\// {print $3} $1 ~ /^\// {print $1}'"'"' | sort -u |
+              while IFS= read -r path; do sha256sum "$path"; done |
+              sort -k2
+          ' > /tmp/pdf-closure-a.txt
+          test -s /tmp/pdf-closure-a.txt
+          closure_digest="$(python scripts/pdf_execution_closure.py /tmp/pdf-closure-a.txt)"
           lock_sha256="$(sha256sum config/pdf_toolchain_lock.json | awk '{print $1}')"
-          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
-          [[ "$runtime_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
-          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
-          echo "runtime_digest=$runtime_digest" >> "$GITHUB_OUTPUT"
+          [[ "$closure_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "closure_digest=$closure_digest" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
+          cat /tmp/pdf-closure-a.txt
 
   pdf-b:
     runs-on: ubuntu-24.04
     outputs:
-      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
-      runtime_digest: ${{ steps.build.outputs.runtime_digest }}
+      closure_digest: ${{ steps.build.outputs.closure_digest }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
       - name: Checkout exact candidate
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Set up isolated BuildKit
         uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
-      - name: Build immutable PDF toolchain B
+      - name: Build and hash immutable PDF execution closure B
         id: build
         shell: bash
         run: |
           set -euo pipefail
           export SOURCE_DATE_EPOCH=0
+          image="phase9-pdf-b:$GITHUB_RUN_ID"
           docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64 \
             --build-arg SOURCE_DATE_EPOCH=0 \
-            --output type=oci,dest=/tmp/pdf-b.oci \
+            --load -t "$image" \
             -f Dockerfile.pdf-tools .
-          manifest_digest="$(python - <<'PY'
-          import json, tarfile
-          with tarfile.open('/tmp/pdf-b.oci', 'r') as tf:
-              index=json.load(tf.extractfile('index.json'))
-          print(index['manifests'][0]['digest'])
-          PY
-          )"
-          runtime_digest="$(python scripts/oci_runtime_digest.py /tmp/pdf-b.oci)"
+          docker run --rm --entrypoint /bin/bash "$image" -lc '
+            set -euo pipefail
+            {
+              printf "%s\n" /usr/bin/pdftotext /usr/bin/pdfinfo
+              ldd /usr/bin/pdftotext
+              ldd /usr/bin/pdfinfo
+            } | awk '"'"'$2 == "=>" && $3 ~ /^\// {print $3} $1 ~ /^\// {print $1}'"'"' | sort -u |
+              while IFS= read -r path; do sha256sum "$path"; done |
+              sort -k2
+          ' > /tmp/pdf-closure-b.txt
+          test -s /tmp/pdf-closure-b.txt
+          closure_digest="$(python scripts/pdf_execution_closure.py /tmp/pdf-closure-b.txt)"
           lock_sha256="$(sha256sum config/pdf_toolchain_lock.json | awk '{print $1}')"
-          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
-          [[ "$runtime_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
-          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
-          echo "runtime_digest=$runtime_digest" >> "$GITHUB_OUTPUT"
+          [[ "$closure_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "closure_digest=$closure_digest" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
+          cat /tmp/pdf-closure-b.txt
 
   certify-pdf:
     runs-on: ubuntu-24.04
@@ -220,42 +226,37 @@ jobs:
     steps:
       - name: Checkout exact candidate
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Verify independent PDF toolchain reproducibility
+      - name: Verify independent PDF execution-closure reproducibility
         shell: bash
         env:
-          MANIFEST_A: ${{ needs.pdf-a.outputs.manifest_digest }}
-          MANIFEST_B: ${{ needs.pdf-b.outputs.manifest_digest }}
-          RUNTIME_A: ${{ needs.pdf-a.outputs.runtime_digest }}
-          RUNTIME_B: ${{ needs.pdf-b.outputs.runtime_digest }}
+          CLOSURE_A: ${{ needs.pdf-a.outputs.closure_digest }}
+          CLOSURE_B: ${{ needs.pdf-b.outputs.closure_digest }}
           LOCK_A: ${{ needs.pdf-a.outputs.lock_sha256 }}
           LOCK_B: ${{ needs.pdf-b.outputs.lock_sha256 }}
         run: |
           set -euo pipefail
-          test "$RUNTIME_A" = "$RUNTIME_B"
+          test "$CLOSURE_A" = "$CLOSURE_B"
           test "$LOCK_A" = "$LOCK_B"
           test "$LOCK_A" = "6bdd819b77d42d3b48b7e70280cc73775f9344a39acd64cb1457581850359024"
           EXPECTED="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["pdf_toolchain"].get("container_digest") or "")')"
-          if [ -n "$EXPECTED" ]; then test "$RUNTIME_A" = "$EXPECTED"; fi
+          if [ -n "$EXPECTED" ]; then test "$CLOSURE_A" = "$EXPECTED"; fi
           python scripts/pdf_toolchain_certification.py --output /tmp/phase9-pdf-contract.json
-          python - "$RUNTIME_A" "$MANIFEST_A" "$MANIFEST_B" "$LOCK_A" > /tmp/phase9-pdf-certification.json <<'PY'
+          python - "$CLOSURE_A" "$LOCK_A" > /tmp/phase9-pdf-certification.json <<'PY'
           import json, os, sys
           print(json.dumps({
-              "schema_version":1,
-              "kind":"phase9-independent-pdf-toolchain-certification",
-              "source_revision":os.environ.get("GITHUB_SHA"),
-              "independent_build_count":2,
-              "canonical_runtime_digest_a":sys.argv[1],
-              "canonical_runtime_digest_b":sys.argv[1],
-              "canonical_runtime_digests_match":True,
-              "oci_manifest_digest_a":sys.argv[2],
-              "oci_manifest_digest_b":sys.argv[3],
-              "oci_manifest_digests_match":sys.argv[2] == sys.argv[3],
-              "pdf_lock_sha256":sys.argv[4],
-              "poppler_package_version":"24.02.0-1ubuntu9.9",
-              "pdftotext_version":"24.02.0",
-              "pdfinfo_version":"24.02.0",
-              "publication_authorized":False
-          },indent=2))
+              "schema_version": 1,
+              "kind": "phase9-independent-pdf-execution-closure-certification",
+              "source_revision": os.environ.get("GITHUB_SHA"),
+              "independent_build_count": 2,
+              "execution_closure_digest_a": sys.argv[1],
+              "execution_closure_digest_b": sys.argv[1],
+              "execution_closure_digests_match": True,
+              "pdf_lock_sha256": sys.argv[2],
+              "poppler_package_version": "24.02.0-1ubuntu9.9",
+              "pdftotext_version": "24.02.0",
+              "pdfinfo_version": "24.02.0",
+              "publication_authorized": False
+          }, indent=2))
           PY
       - name: Retain PDF toolchain certification evidence
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2

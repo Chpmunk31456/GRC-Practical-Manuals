@@ -143,7 +143,7 @@ def run(root: Path = ROOT, index_path: str = INDEX, policy_path: str = POLICY) -
     if type(minimum) is not int or minimum < 1:
         raise ValueError("invalid reviewer threshold")
     for manual_id, scopes in required_map.items():
-        missing = [scope for scope, reviewers in scopes.items() if len(coverage[manual_id][scope]) < minimum]
+        missing = [scope for scope in scopes if len(coverage[manual_id][scope]) < minimum]
         manuals.append({
             "manual_id": manual_id,
             "status": "CURRENT" if not missing else "REVIEW_REQUIRED",

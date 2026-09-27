@@ -32,7 +32,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git archive --format=tar HEAD | docker build --no-cache -f Dockerfile.production -t phase9-production:a -
+          epoch="$(git log -1 --pretty=%ct)"
+          export SOURCE_DATE_EPOCH="$epoch"
+          git archive --format=tar HEAD | docker build --no-cache --build-arg SOURCE_DATE_EPOCH="$epoch" -f Dockerfile.production -t phase9-production:a -
           image_id="$(docker image inspect phase9-production:a --format '{{.Id}}')"
           python_version="$(docker run --rm phase9-production:a --version 2>&1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
@@ -58,7 +60,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git archive --format=tar HEAD | docker build --no-cache -f Dockerfile.production -t phase9-production:b -
+          epoch="$(git log -1 --pretty=%ct)"
+          export SOURCE_DATE_EPOCH="$epoch"
+          git archive --format=tar HEAD | docker build --no-cache --build-arg SOURCE_DATE_EPOCH="$epoch" -f Dockerfile.production -t phase9-production:b -
           image_id="$(docker image inspect phase9-production:b --format '{{.Id}}')"
           python_version="$(docker run --rm phase9-production:b --version 2>&1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"

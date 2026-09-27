@@ -19,7 +19,7 @@ jobs:
   build-a:
     runs-on: ubuntu-24.04
     outputs:
-      image_id: ${{ steps.build.outputs.image_id }}
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
       python_version: ${{ steps.build.outputs.python_version }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
@@ -33,20 +33,26 @@ jobs:
         run: |
           set -euo pipefail
           export SOURCE_DATE_EPOCH=0
-          docker build --no-cache --build-arg SOURCE_DATE_EPOCH=0 -f Dockerfile.production -t phase9-production:a .
-          image_id="$(docker image inspect phase9-production:a --format '{{.Id}}')"
-          python_version="$(docker run --rm phase9-production:a --version 2>&1)"
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/phase9-a.oci             -f Dockerfile.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/phase9-a.oci', 'r') as tf:
+              index = json.load(tf.extractfile('index.json'))
+          print(index['manifests'][0]['digest'])
+          PY
+          )"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a --version 2>&1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
           test "$python_version" = "Python 3.12.14"
-          [[ "$image_id" =~ ^sha256:[0-9a-f]{64}$ ]]
-          echo "image_id=$image_id" >> "$GITHUB_OUTPUT"
+          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
           echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
 
   build-b:
     runs-on: ubuntu-24.04
     outputs:
-      image_id: ${{ steps.build.outputs.image_id }}
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
       python_version: ${{ steps.build.outputs.python_version }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
@@ -60,13 +66,19 @@ jobs:
         run: |
           set -euo pipefail
           export SOURCE_DATE_EPOCH=0
-          docker build --no-cache --build-arg SOURCE_DATE_EPOCH=0 -f Dockerfile.production -t phase9-production:b .
-          image_id="$(docker image inspect phase9-production:b --format '{{.Id}}')"
-          python_version="$(docker run --rm phase9-production:b --version 2>&1)"
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/phase9-b.oci             -f Dockerfile.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/phase9-b.oci', 'r') as tf:
+              index = json.load(tf.extractfile('index.json'))
+          print(index['manifests'][0]['digest'])
+          PY
+          )"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a --version 2>&1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
           test "$python_version" = "Python 3.12.14"
-          [[ "$image_id" =~ ^sha256:[0-9a-f]{64}$ ]]
-          echo "image_id=$image_id" >> "$GITHUB_OUTPUT"
+          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
           echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
 
@@ -79,30 +91,30 @@ jobs:
       - name: Verify independent build reproducibility
         shell: bash
         env:
-          IMAGE_A: ${{ needs.build-a.outputs.image_id }}
-          IMAGE_B: ${{ needs.build-b.outputs.image_id }}
+          MANIFEST_A: ${{ needs.build-a.outputs.manifest_digest }}
+          MANIFEST_B: ${{ needs.build-b.outputs.manifest_digest }}
           PYTHON_A: ${{ needs.build-a.outputs.python_version }}
           PYTHON_B: ${{ needs.build-b.outputs.python_version }}
           LOCK_A: ${{ needs.build-a.outputs.lock_sha256 }}
           LOCK_B: ${{ needs.build-b.outputs.lock_sha256 }}
         run: |
           set -euo pipefail
-          test "$IMAGE_A" = "$IMAGE_B"
+          test "$MANIFEST_A" = "$MANIFEST_B"
           test "$PYTHON_A" = "Python 3.12.14"
           test "$PYTHON_B" = "Python 3.12.14"
           test "$LOCK_A" = "$LOCK_B"
           test "$LOCK_A" = "de09ea78579a73a8236914019c13d3e7b7a8b83829209e770bf8dc424cd7e656"
           python scripts/production_environment_certification.py --output /tmp/phase9-production-contract.json
-          python - "$IMAGE_A" "$LOCK_A" > /tmp/phase9-build-certification.json <<'PY'
+          python - "$MANIFEST_A" "$LOCK_A" > /tmp/phase9-build-certification.json <<'PY'
           import json, os, sys
           print(json.dumps({
               "schema_version": 1,
               "kind": "phase9-independent-build-certification",
               "source_revision": os.environ.get("GITHUB_SHA"),
               "independent_build_count": 2,
-              "image_id_a": sys.argv[1],
-              "image_id_b": sys.argv[1],
-              "image_ids_match": True,
+              "oci_manifest_digest_a": sys.argv[1],
+              "oci_manifest_digest_b": sys.argv[1],
+              "oci_manifest_digests_match": True,
               "python": "3.12.14",
               "dependency_lock_sha256": sys.argv[2],
               "immutable_build_image_verified": True,

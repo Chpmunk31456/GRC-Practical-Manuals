@@ -10,8 +10,9 @@ import production_recovery as recovery
 from controlled_release import verify_toolchain_record
 
 class ProductionRecoveryTests(unittest.TestCase):
-    def test_production_dockerfile_is_backed_up(self):
+    def test_production_dockerfiles_are_backed_up(self):
         self.assertTrue(recovery.allowed("Dockerfile.production"))
+        self.assertTrue(recovery.allowed("Dockerfile.pdf.production"))
 
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)

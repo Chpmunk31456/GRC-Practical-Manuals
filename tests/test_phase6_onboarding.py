@@ -8,6 +8,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import controlled_publication_qa as controlled
 import repository_publication_qa as repository
+import publication_roundtrip_qa as roundtrip
 
 
 class Phase6OnboardingTests(unittest.TestCase):
@@ -159,6 +160,10 @@ class Phase6Manual05OnboardingTests(unittest.TestCase):
         manifests, _ = repository.discover()
         match = next(m for _, m in manifests if m["manual_id"] == "manual05-ai-auditing-assurance")
         self.assertEqual(match["rollout_lane"], "candidate")
+
+    def test_manual05_roundtrip_gate_passes(self):
+        result = roundtrip.run(self.manifest)
+        self.assertEqual(result["status"], "PASS", json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":

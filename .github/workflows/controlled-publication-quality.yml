@@ -1,4 +1,5 @@
 name: Controlled Publication Quality
+# Phase 7 closure requires this workflow change to exercise the complete five-gate acceptance set.
 
 on:
   pull_request:

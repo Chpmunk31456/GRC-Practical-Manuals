@@ -49,3 +49,18 @@ Unsafe or missing evidence paths also fail closed.
 `REVIEW_REQUIRED`. Human source, translation, accessibility, legal-readiness,
 and release decisions remain outside automation and must still satisfy the
 controlled-release gate.
+
+
+## Improvement 48 — integration acceptance and final CI
+
+Phase 7 closes with a repository-level acceptance record at
+`qa/PHASE7_INTEGRATION_ACCEPTANCE_2026-09-27.md`.
+
+The closure acceptance is implementation-only. It verifies that exact-revision
+reviewer packets, stale/incomplete evidence visibility, recovery compatibility,
+and all five required CI gates remain intact together. It does not substitute
+for any human source, translation, accessibility, legal-readiness, or release
+decision.
+
+After the closure PR passes the five exact-head checks and merges, Phase 7 is
+technically complete.

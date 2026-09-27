@@ -223,7 +223,7 @@ jobs:
           set -euo pipefail
           test "$MANIFEST_A" = "$MANIFEST_B"
           test "$LOCK_A" = "$LOCK_B"
-          test "$LOCK_A" = "eaf214ee184cb9e26bd390a2bc18e9286478619d8d07e4ba69d1afa12179f402"
+          test "$LOCK_A" = "6bdd819b77d42d3b48b7e70280cc73775f9344a39acd64cb1457581850359024"
           EXPECTED="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["pdf_toolchain"].get("container_digest") or "")')"
           if [ -n "$EXPECTED" ]; then test "$MANIFEST_A" = "$EXPECTED"; fi
           python scripts/pdf_toolchain_certification.py --output /tmp/phase9-pdf-contract.json

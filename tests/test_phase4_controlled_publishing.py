@@ -12,10 +12,11 @@ from writing_system_recovery_exercise import run as recovery_run
 from semantic_writing_qa import compare,load_policy
 
 class Phase4ControlledPublishingTests(unittest.TestCase):
-    def test_manifest_index_has_two_initial_manuals(self):
+    def test_manifest_index_preserves_phase4_reference_manuals(self):
         index=json.loads((ROOT/"config/controlled_publications/index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(index["manifests"]),1)
-        self.assertEqual(len(index.get("candidate_manifests",[])),1)
+        self.assertEqual(index["manifests"], ["config/controlled_publications/manual03.json"])
+        self.assertIn("config/controlled_publications/manual04.json", index.get("candidate_manifests", []))
+        self.assertGreaterEqual(len(index.get("candidate_manifests", [])), 1)
 
     def test_manifests_have_required_shape(self):
         index=json.loads((ROOT/"config/controlled_publications/index.json").read_text(encoding="utf-8"))

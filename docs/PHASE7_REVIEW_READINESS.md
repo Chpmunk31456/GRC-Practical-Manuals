@@ -27,3 +27,27 @@ verified, or the authorized release-reviewer allowlist is insufficient.
 The queue is retained as CI evidence. It is a work-organizing artifact only; the
 controlled-release verifier remains authoritative for exact-candidate release
 verification.
+
+
+## Improvement 47 — exact human review evidence contract
+
+`config/review_evidence.schema.json` defines a machine-verifiable review record.
+`config/review_evidence/index.json` is intentionally empty until real reviewers
+supply evidence. `config/review_readiness_policy.json` maps each candidate to
+its required human review scopes.
+
+A review record must bind the exact Phase 7 packet SHA-256, source revision,
+complete publication-artifact hash map, controlled review-record hash map, and
+one or more independently hashed evidence files. Reviewer and preparer identities
+must differ. Unknown scopes, malformed timestamps, tampered evidence, stale
+revision/hash bindings, and self-review fail closed.
+
+Missing reviews produce `REVIEW_REQUIRED` without fabricating approval.
+Submitted stale or invalid review records make CI fail. Historical or standing
+approval prose is never inferred as current evidence; only exact JSON records
+registered in the review evidence index are evaluated.
+
+A fully covered review registry can establish only review readiness. The Phase 5
+controlled-release verifier still independently requires an active manual,
+verified production toolchain, exact-revision GitHub checks, and authorized
+independent release approvals before it can report `VERIFIED`.

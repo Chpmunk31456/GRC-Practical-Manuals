@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "linux/amd64",
+  "base_image": {
+    "name": "python:3.12.14-slim-bookworm",
+    "manifest_digest": "sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a"
+  },
+  "poppler": {
+    "package": "poppler-utils",
+    "package_version": "22.12.0-2+deb12u3",
+    "pdftotext_version": "pdftotext version 22.12.0",
+    "pdfinfo_version": "pdfinfo version 22.12.0"
+  },
+  "build_policy": {
+    "exact_package_version_required": true,
+    "independent_builds_required": 2,
+    "resulting_oci_manifest_must_match": true,
+    "network_installation_scope": "Debian package installation during image build only; resulting OCI manifest is independently reproduced and pinned before VERIFIED status."
+  }
+}

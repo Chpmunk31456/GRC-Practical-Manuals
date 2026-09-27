@@ -44,3 +44,34 @@ that same file records, eliminating a self-referential certification loop.
 The environment image uses `SOURCE_DATE_EPOCH=0` during certification so its
 content-addressed ID depends on the environment definition, not the source commit
 timestamp.
+
+
+## Improvement 55 — immutable PDF toolchain certification
+
+The production PDF inspection environment is now isolated from the runtime image
+and independently reproduced.
+
+The contract pins:
+
+- linux/amd64;
+- the same exact Python 3.12.14 Bookworm base manifest used by the runtime;
+- Debian Bookworm `poppler-utils 22.12.0-2+deb12u3`;
+- `pdftotext 22.12.0`;
+- `pdfinfo 22.12.0`.
+
+Two isolated BuildKit jobs reproduced the same OCI manifest:
+
+`sha256:9f922bcc7e1b2bd81f309821a89ff8a5f148f07dd38f729940985eef81d48c8b`
+
+The PDF dependency contract SHA-256 is:
+
+`12efcb06b4f31629c4bdcb97e99b280873fde34462d6d3e9854dea874a077faf`
+
+The first unnormalized attempt produced different manifests and was rejected.
+Timestamp/log normalization was then corrected and reproducibility was rerun
+until both independent builds matched. No mismatching digest was promoted.
+
+With both the runtime image and PDF-toolchain image independently reproduced,
+`config/production_toolchain.json` may now be `VERIFIED`. This is technical
+production-environment certification only; it does not satisfy human review or
+authorize publication.

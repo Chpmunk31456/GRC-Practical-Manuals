@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "evidence": [],
+  "policy": "Only human-authored evidence may be registered here. Each record must bind a named decision type to the exact current reviewer-readiness packet and exact SHA-256 of an evidence file. Empty evidence is valid and means INCOMPLETE, never approved."
+}

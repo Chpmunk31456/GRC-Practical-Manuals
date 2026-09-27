@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "python": "3.12.14",
+  "python_dependencies": [],
+  "base_image": {
+    "name": "python:3.12.14-slim-bookworm",
+    "platform": "linux/amd64",
+    "manifest_digest": "sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a",
+    "index_digest": "sha256:392307d22300de8b5986851a12d9176dfc0fc073e65bf6523ebd7dcbeb23564e"
+  },
+  "networked_package_installation_allowed": false,
+  "policy": "The immutable build contract may not install unpinned network packages. PDF inspection remains a separate production toolchain contract until independently pinned and verified."
+}

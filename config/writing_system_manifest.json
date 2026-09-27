@@ -83,7 +83,13 @@
     "scripts/phase8_human_handoff.py",
     "tests/test_phase8_human_handoff.py",
     "qa/PHASE8_INTEGRATION_ACCEPTANCE_2026-09-27.md",
-    "tests/test_phase8_integration.py"
+    "tests/test_phase8_integration.py",
+    "Dockerfile.production",
+    "config/production_dependency_lock.json",
+    "scripts/production_environment_certification.py",
+    "tests/test_production_environment_certification.py",
+    "docs/PHASE9_PRODUCTION_CERTIFICATION.md",
+    ".github/workflows/phase9-production-certification.yml"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -110,7 +116,8 @@
     "config/review_evidence_bindings.json",
     "config/human_approval_requirements.json",
     "config/human_approval_evidence.json",
-    "config/phase8_release_queue_policy.json"
+    "config/phase8_release_queue_policy.json",
+    "config/production_dependency_lock.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -138,7 +145,8 @@
     "scripts/toolchain_attestation.py",
     "scripts/human_approval_evidence.py",
     "scripts/phase8_release_queue.py",
-    "scripts/phase8_human_handoff.py"
+    "scripts/phase8_human_handoff.py",
+    "scripts/production_environment_certification.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -225,5 +233,16 @@
     "acceptance_record": "qa/PHASE8_INTEGRATION_ACCEPTANCE_2026-09-27.md",
     "technical_phase_complete": true,
     "external_human_and_production_prerequisites_complete": false
+  },
+  "phase9": {
+    "production_certification": true,
+    "completed_improvements": [
+      54
+    ],
+    "immutable_build_contract": true,
+    "independent_build_certification_required": true,
+    "immutable_build_image_verified": false,
+    "immutable_pdf_toolchain_verified": false,
+    "publication_authorized_by_phase9_automation": false
   }
 }

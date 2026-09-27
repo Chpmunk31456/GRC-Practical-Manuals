@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "REVIEW_REQUIRED",
+  "python": "3.12.14",
+  "python_dependencies": [],
+  "validation_environment": "ubuntu-24.04",
+  "pdf_toolchain": {
+    "poppler_package_version": null,
+    "container_digest": null
+  },
+  "build_environment": {
+    "generator_dependency_lock_sha256": null,
+    "container_digest": null
+  },
+  "review_note": "Standard-library governance tools add no Python dependencies. Exact PDF and generation environment locks still require production verification. This record does not authorize VERIFIED release status."
+}

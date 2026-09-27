@@ -38,7 +38,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
-          python-version: "3.12"
+          python-version: "3.12.14"
 
       - name: Provision and verify PDF inspection tools
         run: |
@@ -73,3 +73,31 @@ jobs:
       - name: Exercise disaster recovery
         run: |
           python scripts/writing_system_recovery_exercise.py             --require-pdf-tools             --output /tmp/recovery-exercise.json
+
+      - name: Report translation dependencies
+        run: python scripts/translation_lifecycle.py --output /tmp/translation-lifecycle.json
+
+      - name: Produce publication quality summary
+        if: always()
+        run: python scripts/publication_dashboard.py --output /tmp/publication-dashboard.json --summary /tmp/publication-dashboard.md
+
+      - name: Report independent accessibility requirements
+        run: python scripts/accessibility_validation.py --output /tmp/accessibility-review.json
+
+      - name: Verify backup restoration and recovered tests
+        run: python scripts/production_recovery.py --output /tmp/production-recovery.json
+
+      - name: Measure publication performance and verify gate equivalence
+        run: python scripts/publication_performance.py --output /tmp/publication-performance.json
+      - name: Retain sanitized production evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: production-control-evidence
+          path: |
+            /tmp/publication-performance.json
+            /tmp/production-recovery.json
+            /tmp/publication-dashboard.json
+            /tmp/publication-dashboard.md
+            /tmp/accessibility-review.json
+          retention-days: 30

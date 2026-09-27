@@ -53,6 +53,17 @@ class OCIRuntimeDigestTests(unittest.TestCase):
             build_fixture(b, "2026-09-27T00:00:00Z", "2026-09-27T00:00:00Z")
             self.assertEqual(oci.runtime_digest(a), oci.runtime_digest(b))
 
+    def test_rootfs_diff_id_change_changes_digest(self):
+        with tempfile.TemporaryDirectory() as td:
+            a = Path(td) / "a.oci"
+            build_fixture(a, "2026-01-01T00:00:00Z", "2026-01-01T00:00:00Z")
+            original = oci.runtime_digest(a)
+            contract = oci.runtime_contract(a)
+            contract["rootfs"]["diff_ids"] = ["sha256:" + "3" * 64]
+            payload = json.dumps(contract, sort_keys=True, separators=(",", ":")).encode()
+            changed = "sha256:" + hashlib.sha256(payload).hexdigest()
+            self.assertNotEqual(original, changed)
+
     def test_runtime_config_change_changes_digest(self):
         with tempfile.TemporaryDirectory() as td:
             a = Path(td) / "a.oci"

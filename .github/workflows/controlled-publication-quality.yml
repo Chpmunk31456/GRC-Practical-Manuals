@@ -97,6 +97,9 @@ jobs:
       - name: Report exact human approval evidence status
         run: python scripts/human_approval_evidence.py --output /tmp/human-approval-status.json
 
+      - name: Build one-at-a-time controlled release queue
+        run: python scripts/phase8_release_queue.py --output /tmp/phase8-release-queue.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -118,4 +121,5 @@ jobs:
             /tmp/review-evidence-status.json
             /tmp/toolchain-attestation.json
             /tmp/human-approval-status.json
+            /tmp/phase8-release-queue.json
           retention-days: 30

@@ -123,6 +123,9 @@ jobs:
       - name: Build Phase 10 authoritative source review packets
         run: python scripts/phase10_source_review_packets.py --output /tmp/phase10-source-review-packets.json
 
+      - name: Validate Phase 10 reviewer and human evidence intake
+        run: python scripts/phase10_human_intake.py --output /tmp/phase10-human-intake.json
+
       - name: Measure publication performance and verify gate equivalence
         run: python scripts/publication_performance.py --output /tmp/publication-performance.json
       - name: Retain sanitized production evidence
@@ -148,4 +151,5 @@ jobs:
             /tmp/phase9-release-drill.json
             /tmp/phase10-review-campaign.json
             /tmp/phase10-source-review-packets.json
+            /tmp/phase10-human-intake.json
           retention-days: 30

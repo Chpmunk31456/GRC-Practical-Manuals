@@ -27,3 +27,25 @@ verified, or the authorized release-reviewer allowlist is insufficient.
 The queue is retained as CI evidence. It is a work-organizing artifact only; the
 controlled-release verifier remains authoritative for exact-candidate release
 verification.
+
+
+## Improvement 47 — stale and incomplete review-evidence visibility
+
+Run:
+
+`python scripts/review_evidence_status.py --output review-evidence-status.json`
+
+The evidence-status report consumes the exact reviewer-readiness packets from
+Improvement 46. Every required human review record is checked against an explicit
+binding in `config/review_evidence_bindings.json`.
+
+A binding is `CURRENT` only when it references the exact current packet hash and
+the exact SHA-256 of an existing evidence file. Missing bindings are
+`INCOMPLETE`; bindings to an older packet or changed evidence file are `STALE`.
+Unsafe or missing evidence paths also fail closed.
+
+`CURRENT` is deliberately not an approval state. The report always keeps
+`publication_authorized` false and keeps candidate manuals at
+`REVIEW_REQUIRED`. Human source, translation, accessibility, legal-readiness,
+and release decisions remain outside automation and must still satisfy the
+controlled-release gate.

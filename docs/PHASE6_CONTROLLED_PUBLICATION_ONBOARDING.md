@@ -33,3 +33,22 @@ or a new release.
 Future Phase 6 onboarding must follow the same rule: enroll technically complete
 manuals as candidates first, preserve existing human-review boundaries, and move
 a manual to the active lane only through separately reviewed governance evidence.
+
+
+## Improvement 42 — Manual 10 candidate enrollment
+
+Manual 10 — NIST RMF and SP 800-53 Controlled Implementation — is enrolled as
+the second Phase 6 candidate. Its English, `es-419`, and `pt-BR` controlled
+sources cover all 32 chapters, and retained publication evidence includes
+DOCX/PDF artifacts, report hashes, checksums, page QA, source verification,
+localization review, accessibility review, and release-readiness pre-stage
+records.
+
+The retained governance evidence remains explicitly fail-closed. Localization
+drafts are complete but human semantic review is open; accessibility remains
+pre-staged; and final release approval remains mandatory. The candidate manifest
+therefore cannot authorize publication or move Manual 10 into the active lane.
+
+Manual 10 also preserves the repository's sequencing boundary: it follows
+Manual 09 in the candidate list and must not bypass Manual 09 in controlled
+publication progression.

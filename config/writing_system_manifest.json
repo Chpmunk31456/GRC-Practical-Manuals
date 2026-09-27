@@ -95,7 +95,9 @@
     "scripts/pdf_toolchain_certification.py",
     "tests/test_pdf_toolchain_certification.py",
     "scripts/oci_runtime_digest.py",
-    "tests/test_oci_runtime_digest.py"
+    "tests/test_oci_runtime_digest.py",
+    "scripts/pdf_execution_closure.py",
+    "tests/test_pdf_execution_closure.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -155,7 +157,8 @@
     "scripts/phase8_human_handoff.py",
     "scripts/production_environment_certification.py",
     "scripts/pdf_toolchain_certification.py",
-    "scripts/oci_runtime_digest.py"
+    "scripts/oci_runtime_digest.py",
+    "scripts/pdf_execution_closure.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -255,6 +258,7 @@
     "immutable_pdf_toolchain_verified": false,
     "publication_authorized_by_phase9_automation": false,
     "immutable_pdf_toolchain_contract": true,
-    "canonical_pdf_runtime_digest": true
+    "canonical_pdf_runtime_digest": true,
+    "pdf_execution_closure_certification": true
   }
 }

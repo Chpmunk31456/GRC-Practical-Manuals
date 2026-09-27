@@ -104,6 +104,8 @@ jobs:
         run: |
           set -euo pipefail
           test "$MANIFEST_A" = "$MANIFEST_B"
+          EXPECTED_MANIFEST="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["build_environment"]["container_digest"])')"
+          test "$MANIFEST_A" = "$EXPECTED_MANIFEST"
           test "$PYTHON_A" = "Python 3.12.14"
           test "$PYTHON_B" = "Python 3.12.14"
           test "$LOCK_A" = "$LOCK_B"

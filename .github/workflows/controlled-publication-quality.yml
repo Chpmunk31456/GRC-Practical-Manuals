@@ -73,3 +73,6 @@ jobs:
       - name: Exercise disaster recovery
         run: |
           python scripts/writing_system_recovery_exercise.py             --require-pdf-tools             --output /tmp/recovery-exercise.json
+
+      - name: Report translation dependencies
+        run: python scripts/translation_lifecycle.py --output /tmp/translation-lifecycle.json

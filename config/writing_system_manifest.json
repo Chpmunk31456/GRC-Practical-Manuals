@@ -36,7 +36,10 @@
     "docs/PHASE5_PRODUCTION_OPERATIONS.md",
     "scripts/source_monitoring.py",
     "config/source_monitoring.json",
-    "tests/test_source_monitoring.py"
+    "tests/test_source_monitoring.py",
+    "scripts/translation_lifecycle.py",
+    "config/translation_lifecycle.json",
+    "tests/test_translation_lifecycle.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -50,7 +53,8 @@
     "config/controlled_publications/manual04.json",
     "config/writing_observability_policy.json",
     "qa/writing-observability/HISTORY.json",
-    "config/source_monitoring.json"
+    "config/source_monitoring.json",
+    "config/translation_lifecycle.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -66,7 +70,8 @@
     "scripts/writing_observability_history.py",
     "scripts/writing_system_recovery_exercise.py",
     "scripts/repository_publication_qa.py",
-    "scripts/source_monitoring.py"
+    "scripts/source_monitoring.py",
+    "scripts/translation_lifecycle.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

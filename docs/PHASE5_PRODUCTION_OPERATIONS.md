@@ -65,3 +65,19 @@ No observation rewrites a manual or replaces a baseline. Whole-manual mappings
 for the initial two manuals are conservative; other mappings remain outstanding.
 The scheduled workflow retains metadata for 30 days. Durable review decisions
 belong in repository-controlled evidence through a reviewed pull request.
+
+## Translation lifecycle (improvement 35)
+
+Run `python scripts/translation_lifecycle.py --output translation-lifecycle.json`.
+The report binds each controlled Spanish and Portuguese source inventory to the
+English inventory and terminology policy. Added, removed or changed files reopen
+review. Impact mapping conservatively includes every chapter of the manual.
+Regional locales and existing protected terms remain unchanged.
+
+`config/translation_lifecycle.json` contains dependency snapshots and review
+records. An observation is not approval. Review records require the reviewer,
+date, decision, exact source and translation hash maps, terminology hash, and an
+existing evidence file with its SHA-256. Changed evidence invalidates the record.
+The initial records are empty because existing reviews have not been migrated
+and verified against this exact contract. The report therefore requires review.
+Even current translation evidence is not independent publication approval.

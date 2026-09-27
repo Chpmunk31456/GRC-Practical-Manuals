@@ -218,5 +218,60 @@ class Phase6GDPROnboardingTests(unittest.TestCase):
         self.assertEqual(match["rollout_lane"], "candidate")
 
 
+class Phase6HIPAAOnboardingTests(unittest.TestCase):
+    def setUp(self):
+        self.index = json.loads((ROOT / "config/controlled_publications/index.json").read_text(encoding="utf-8"))
+        self.path = ROOT / "config/controlled_publications/manual06.json"
+        self.manifest = json.loads(self.path.read_text(encoding="utf-8"))
+
+    def test_hipaa_is_candidate_not_active(self):
+        relative = "config/controlled_publications/manual06.json"
+        self.assertIn(relative, self.index["candidate_manifests"])
+        self.assertNotIn(relative, self.index["manifests"])
+        self.assertEqual(
+            self.manifest["readiness_status"],
+            "candidate-blocked-human-legal-localization-accessibility-review",
+        )
+
+    def test_hipaa_removed_from_next_candidate_queue(self):
+        self.assertNotIn(
+            "04-regulatory-compliance/HIPAA_Implementation_Series",
+            self.index["next_candidates"],
+        )
+
+    def test_hipaa_all_locales_have_32_chapters(self):
+        root = ROOT / self.manifest["manual_root"]
+        for locale, cfg in self.manifest["languages"].items():
+            sources = controlled.collect(root, cfg["source_globs"])
+            text = "\\n".join(p.read_text(encoding="utf-8", errors="replace") for p in sources)
+            with self.subTest(locale=locale):
+                self.assertEqual(
+                    controlled.chapter_numbers(text, cfg["chapter_heading_pattern"]),
+                    list(range(1, 33)),
+                )
+
+    def test_hipaa_retains_substantive_human_review_blocks(self):
+        root = ROOT / self.manifest["manual_root"]
+        localization = (root / "qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md").read_text(encoding="utf-8").casefold()
+        accessibility = (root / "qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md").read_text(encoding="utf-8").casefold()
+        packet = (root / "qa/HUMAN_REVIEW_PACKET_2026-08-29.md").read_text(encoding="utf-8").casefold()
+        self.assertIn("fail-closed", localization)
+        self.assertIn("fail-closed", accessibility)
+        self.assertIn("does not itself make manual 06 publication-eligible", packet)
+
+    def test_hipaa_current_law_proposed_rule_boundary_is_retained(self):
+        root = ROOT / self.manifest["manual_root"]
+        text = (root / "qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md").read_text(encoding="utf-8").casefold()
+        self.assertIn("proposed-not-current-law", text)
+
+    def test_repository_discovery_reports_hipaa_as_candidate(self):
+        manifests, _ = repository.discover()
+        match = next(m for _, m in manifests if m["manual_id"] == "manual06-hipaa-implementation-audit")
+        self.assertEqual(match["rollout_lane"], "candidate")
+
+    def test_phase6_next_candidate_queue_is_empty(self):
+        self.assertEqual(self.index["next_candidates"], [])
+
+
 if __name__ == "__main__":
     unittest.main()

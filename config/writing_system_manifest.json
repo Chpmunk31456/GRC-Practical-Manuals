@@ -15,14 +15,34 @@
     "tests/test_document_writing_qa.py",
     "tests/test_phase3_writing_system.py",
     ".github/workflows/document-writing-quality.yml",
-    "WRITING_SYSTEM_RECOVERY.md"
+    "WRITING_SYSTEM_RECOVERY.md",
+    "config/controlled_publication_manifest.schema.json",
+    "config/controlled_publications/index.json",
+    "config/controlled_publications/manual03.json",
+    "config/controlled_publications/manual04.json",
+    "config/writing_observability_policy.json",
+    "qa/writing-observability/HISTORY.json",
+    "scripts/controlled_publication_qa.py",
+    "scripts/publication_roundtrip_qa.py",
+    "scripts/publication_layout_qa.py",
+    "scripts/publication_accessibility_qa.py",
+    "scripts/writing_observability_history.py",
+    "scripts/writing_system_recovery_exercise.py",
+    "tests/test_phase4_controlled_publishing.py",
+    ".github/workflows/controlled-publication-quality.yml"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
     "config/writing_context_profiles.json",
     "config/writing_semantic_policy.json",
     "config/approved_writing_feedback.json",
-    "config/writing_system_manifest.json"
+    "config/writing_system_manifest.json",
+    "config/controlled_publication_manifest.schema.json",
+    "config/controlled_publications/index.json",
+    "config/controlled_publications/manual03.json",
+    "config/controlled_publications/manual04.json",
+    "config/writing_observability_policy.json",
+    "qa/writing-observability/HISTORY.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -30,7 +50,13 @@
     "scripts/unified_writing_engine.py",
     "scripts/writing_observability.py",
     "scripts/writing_system_integrity.py",
-    "scripts/manual03_end_to_end_qa.py"
+    "scripts/manual03_end_to_end_qa.py",
+    "scripts/controlled_publication_qa.py",
+    "scripts/publication_roundtrip_qa.py",
+    "scripts/publication_layout_qa.py",
+    "scripts/publication_accessibility_qa.py",
+    "scripts/writing_observability_history.py",
+    "scripts/writing_system_recovery_exercise.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -44,6 +70,20 @@
     "rollback_uses_git_commit_or_tag": true,
     "generated_artifacts_are_never_the_only_source": true,
     "post_restore_integrity_command": "python scripts/writing_system_integrity.py",
-    "post_restore_test_command": "python -m unittest tests.test_document_writing_qa tests.test_manual03_end_to_end_qa tests.test_phase3_writing_system -v"
+    "post_restore_test_command": "python -m unittest tests.test_document_writing_qa tests.test_manual03_end_to_end_qa tests.test_phase3_writing_system tests.test_phase4_controlled_publishing -v"
+  },
+  "phase4": {
+    "repository_wide_publication_engine": true,
+    "initial_manifests": [
+      "manual03",
+      "manual04"
+    ],
+    "roundtrip_semantic_validation": true,
+    "rendered_layout_regression": true,
+    "structural_accessibility_validation": true,
+    "enhanced_semantic_drift_detection": true,
+    "versioned_observability_baseline": true,
+    "executable_recovery_exercise": true,
+    "rollout": "incremental_fail_closed"
   }
 }

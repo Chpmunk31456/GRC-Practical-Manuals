@@ -17,7 +17,10 @@ class Phase7IntegrationTests(unittest.TestCase):
         self.assertFalse(result["publication_authorized"])
         for packet in result["packets"]:
             self.assertFalse(packet["publication_authorized"])
-            self.assertEqual(packet["readiness_status"], "REVIEW_REQUIRED")
+            self.assertEqual(packet["rollout_lane"], "candidate")
+            self.assertTrue(packet["review_records"])
+            for record in packet["review_records"]:
+                self.assertEqual(record["status"], "REVIEW_REQUIRED")
 
     def test_evidence_status_never_converts_freshness_into_approval(self):
         result = evidence.run()
@@ -43,13 +46,14 @@ class Phase7IntegrationTests(unittest.TestCase):
 
     def test_acceptance_record_preserves_human_boundaries(self):
         text = (ROOT / "qa/PHASE7_INTEGRATION_ACCEPTANCE_2026-09-27.md").read_text(encoding="utf-8")
+        normalized = " ".join(text.split())
         for phrase in (
             "does not approve publication",
-            "CURRENT is metadata freshness only",
+            "`CURRENT` is metadata freshness only",
             "production-toolchain verification",
             "controlled release verification",
         ):
-            self.assertIn(phrase, text)
+            self.assertIn(phrase, normalized)
 
 
 if __name__ == "__main__":

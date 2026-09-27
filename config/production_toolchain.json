@@ -5,12 +5,23 @@
   "python_dependencies": [],
   "validation_environment": "ubuntu-24.04",
   "pdf_toolchain": {
-    "poppler_package_version": null,
+    "poppler_package_version": "24.02.0-1ubuntu9.9",
+    "pdftotext_version": "pdftotext version 24.02.0",
+    "pdfinfo_version": "pdfinfo version 24.02.0",
     "container_digest": null
   },
   "build_environment": {
     "generator_dependency_lock_sha256": null,
     "container_digest": null
   },
-  "review_note": "Standard-library governance tools add no Python dependencies. Exact PDF and generation environment locks still require production verification. This record does not authorize VERIFIED release status."
+  "review_note": "Hosted CI is now hash-independent operationally attested to the recorded runner and Poppler versions, but GitHub-hosted runners are not immutable. Exact production/build environment locking remains REVIEW_REQUIRED and no release authorization is implied.",
+  "hosted_ci_attestation": {
+    "status": "ATTESTED_NOT_IMMUTABLE",
+    "runner_image": "ubuntu-24.04",
+    "runner_image_version": "20260920.314.1",
+    "runner_image_release": "ubuntu24/20260920.314",
+    "evidence_workflow_run": 36327126917,
+    "evidence_job": 108641962448,
+    "observed_at": "2026-09-27T14:46:40Z"
+  }
 }

@@ -67,7 +67,9 @@
     "docs/PHASE7_REVIEW_READINESS.md",
     "config/review_evidence_bindings.json",
     "scripts/review_evidence_status.py",
-    "tests/test_review_evidence_status.py"
+    "tests/test_review_evidence_status.py",
+    "tests/test_phase7_integration.py",
+    "qa/PHASE7_INTEGRATION_ACCEPTANCE_2026-09-27.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -171,11 +173,13 @@
     "review_readiness_operationalization": true,
     "completed_improvements": [
       46,
-      47
+      47,
+      48
     ],
     "exact_revision_packets": true,
     "stale_incomplete_evidence_visibility": true,
     "approval_inference_prohibited": true,
-    "publication_authorized_by_phase7_automation": false
+    "publication_authorized_by_phase7_automation": false,
+    "acceptance_record": "qa/PHASE7_INTEGRATION_ACCEPTANCE_2026-09-27.md"
   }
 }

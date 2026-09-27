@@ -44,7 +44,10 @@
     "tests/test_publication_dashboard.py",
     "scripts/controlled_release.py",
     "config/release_policy.json",
-    "tests/test_controlled_release.py"
+    "tests/test_controlled_release.py",
+    "scripts/accessibility_validation.py",
+    "config/accessibility_reviews.json",
+    "tests/test_accessibility_validation.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -60,7 +63,8 @@
     "qa/writing-observability/HISTORY.json",
     "config/source_monitoring.json",
     "config/translation_lifecycle.json",
-    "config/release_policy.json"
+    "config/release_policy.json",
+    "config/accessibility_reviews.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -79,7 +83,8 @@
     "scripts/source_monitoring.py",
     "scripts/translation_lifecycle.py",
     "scripts/publication_dashboard.py",
-    "scripts/controlled_release.py"
+    "scripts/controlled_release.py",
+    "scripts/accessibility_validation.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

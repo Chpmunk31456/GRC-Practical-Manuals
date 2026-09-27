@@ -129,3 +129,21 @@ is supplied by the maintenance improvement; until then release remains blocked.
 A successful verification is evidence for the controlled publication process.
 It is not a standalone publication command. Existing release-manifest governance
 and final human publication approval continue to apply.
+
+## Accessibility validation (improvement 38)
+
+Run `python scripts/accessibility_validation.py --output accessibility-review.json`.
+DOCX checks cover heading hierarchy, locale, header-row structure, alternative
+text, declared font compatibility and title metadata. PDF checks use `pdfinfo`
+and `pdffonts` for tagging, title, encryption, embedding and Unicode mappings.
+Uncertain structures remain review requirements rather than automatic passes.
+
+Independent review must cover reading order, screen-reader behavior, table
+relationships, alternative-text meaning, font compatibility and visual layout.
+Records in `config/accessibility_reviews.json` require distinct producer and
+reviewer identities, exact artifact hashes, date, decision, all review scopes,
+and a hashed evidence file. The initial review map is empty.
+The controlled release verifier blocks on unresolved structural findings or
+missing independent review. Passing automatic checks never establishes that a
+document is fully accessible. Existing approved binaries remain unchanged;
+remediation that changes them requires regeneration and renewed approval.

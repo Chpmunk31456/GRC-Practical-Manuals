@@ -107,6 +107,9 @@ def verify(candidate, first, second):
     import source_monitoring
     if translation_lifecycle.run()['status']!='CURRENT' or source_monitoring.run(True)['status']!='CURRENT':
         raise ValueError('source or translation review remains unresolved')
+    import accessibility_validation
+    if accessibility_validation.run()['status']!='PASS':
+        raise ValueError('accessibility defects or independent reviews unresolved')
     import repository_publication_qa
     if repository_publication_qa.run()['status']!='PASS':
         raise ValueError('mandatory publication validation failed')

@@ -80,3 +80,6 @@ jobs:
       - name: Produce publication quality summary
         if: always()
         run: python scripts/publication_dashboard.py --output /tmp/publication-dashboard.json --summary /tmp/publication-dashboard.md
+
+      - name: Report independent accessibility requirements
+        run: python scripts/accessibility_validation.py --output /tmp/accessibility-review.json

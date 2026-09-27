@@ -30,11 +30,10 @@ class Phase8HumanHandoffTests(unittest.TestCase):
         self.assertEqual(reviewer["status"], "HUMAN_AUTHORIZATION_REQUIRED")
         self.assertGreaterEqual(reviewer["minimum_independent_reviewers"], 2)
 
-    def test_immutable_toolchain_backlog_is_visible(self):
+    def test_production_toolchain_backlog_is_resolved_by_phase9(self):
         result = handoff.run()
-        self.assertIn("status=VERIFIED", result["production_toolchain"]["missing"])
-        self.assertIn("pdf_toolchain.container_digest", result["production_toolchain"]["missing"])
-        self.assertNotIn("build_environment.container_digest", result["production_toolchain"]["missing"])
+        self.assertEqual(result["production_toolchain"]["status"], "VERIFIED")
+        self.assertEqual(result["production_toolchain"]["missing"], [])
 
     def test_all_six_candidates_have_handoff_rows(self):
         result = handoff.run()

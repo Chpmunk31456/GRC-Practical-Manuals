@@ -78,3 +78,24 @@ never authorizes publication. Promotion mode is explicitly
 At Phase 8 implementation time all six candidates remain blocked because the
 human approval registries and immutable production environment are intentionally
 not fabricated.
+
+
+## Improvement 52 — deterministic human handoff packet
+
+Phase 8 now produces a single non-authorizing handoff packet for the remaining
+human and production-owner work.
+
+Run:
+
+`python scripts/phase8_human_handoff.py --output phase8-human-handoff.json`
+
+The packet reports:
+
+- authoritative sources still missing an approved baseline and/or chapter mapping;
+- the minimum independent release-reviewer requirement and current allowlist state;
+- immutable production-toolchain fields still missing;
+- the exact human decisions still required for each candidate packet.
+
+The handoff performs no policy mutation, creates no approvals, and records
+`automation_completed_human_actions: 0`. It exists to make the remaining
+manual work explicit and auditable.

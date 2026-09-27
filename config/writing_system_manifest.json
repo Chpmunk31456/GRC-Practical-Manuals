@@ -79,7 +79,9 @@
     "tests/test_human_approval_evidence.py",
     "config/phase8_release_queue_policy.json",
     "scripts/phase8_release_queue.py",
-    "tests/test_phase8_release_queue.py"
+    "tests/test_phase8_release_queue.py",
+    "scripts/phase8_human_handoff.py",
+    "tests/test_phase8_human_handoff.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -133,7 +135,8 @@
     "scripts/review_evidence_status.py",
     "scripts/toolchain_attestation.py",
     "scripts/human_approval_evidence.py",
-    "scripts/phase8_release_queue.py"
+    "scripts/phase8_release_queue.py",
+    "scripts/phase8_human_handoff.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -203,7 +206,8 @@
     "completed_improvements": [
       49,
       50,
-      51
+      51,
+      52
     ],
     "hosted_ci_toolchain_attestation": true,
     "immutable_production_environment_verified": false,
@@ -212,6 +216,8 @@
     "explicit_human_approval_requirements": true,
     "exact_human_evidence_binding": true,
     "one_candidate_at_a_time_release_queue": true,
-    "bulk_promotion_allowed": false
+    "bulk_promotion_allowed": false,
+    "deterministic_human_handoff": true,
+    "automation_completed_human_actions": 0
   }
 }

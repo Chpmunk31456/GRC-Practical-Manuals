@@ -72,7 +72,11 @@
     "qa/PHASE7_INTEGRATION_ACCEPTANCE_2026-09-27.md",
     "scripts/toolchain_attestation.py",
     "tests/test_toolchain_attestation.py",
-    "docs/PHASE8_PRODUCTION_APPROVAL_READINESS.md"
+    "docs/PHASE8_PRODUCTION_APPROVAL_READINESS.md",
+    "config/human_approval_requirements.json",
+    "config/human_approval_evidence.json",
+    "scripts/human_approval_evidence.py",
+    "tests/test_human_approval_evidence.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -96,7 +100,9 @@
     "config/controlled_publications/manual05.json",
     "config/controlled_publications/manual11.json",
     "config/controlled_publications/manual06.json",
-    "config/review_evidence_bindings.json"
+    "config/review_evidence_bindings.json",
+    "config/human_approval_requirements.json",
+    "config/human_approval_evidence.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -121,7 +127,8 @@
     "scripts/publication_performance.py",
     "scripts/review_readiness_packets.py",
     "scripts/review_evidence_status.py",
-    "scripts/toolchain_attestation.py"
+    "scripts/toolchain_attestation.py",
+    "scripts/human_approval_evidence.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -189,11 +196,14 @@
   "phase8": {
     "production_approval_readiness": true,
     "completed_improvements": [
-      49
+      49,
+      50
     ],
     "hosted_ci_toolchain_attestation": true,
     "immutable_production_environment_verified": false,
     "human_approval_inference_prohibited": true,
-    "publication_authorized_by_phase8_automation": false
+    "publication_authorized_by_phase8_automation": false,
+    "explicit_human_approval_requirements": true,
+    "exact_human_evidence_binding": true
   }
 }

@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "submissions": [],
+  "policy": "Human evidence submissions are human-authored proposals. Automation validates structure and exact hashes only; an authorized governance action must update human_approval_evidence.json and any subsystem-specific review registry."
+}

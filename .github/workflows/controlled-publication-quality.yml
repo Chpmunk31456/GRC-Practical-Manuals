@@ -91,6 +91,9 @@ jobs:
       - name: Report stale or incomplete review evidence
         run: python scripts/review_evidence_status.py --output /tmp/review-evidence-status.json
 
+      - name: Attest hosted CI toolchain baseline
+        run: python scripts/toolchain_attestation.py --output /tmp/toolchain-attestation.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -110,4 +113,5 @@ jobs:
             /tmp/review-readiness-queue.json
             /tmp/review-readiness-packets/*.json
             /tmp/review-evidence-status.json
+            /tmp/toolchain-attestation.json
           retention-days: 30

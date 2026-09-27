@@ -50,7 +50,9 @@
     "tests/test_accessibility_validation.py",
     "scripts/production_recovery.py",
     "config/production_toolchain.json",
-    "tests/test_production_recovery.py"
+    "tests/test_production_recovery.py",
+    "scripts/publication_performance.py",
+    "tests/test_publication_performance.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -89,7 +91,8 @@
     "scripts/publication_dashboard.py",
     "scripts/controlled_release.py",
     "scripts/accessibility_validation.py",
-    "scripts/production_recovery.py"
+    "scripts/production_recovery.py",
+    "scripts/publication_performance.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

@@ -174,3 +174,23 @@ Only counts, digests, durations and exit codes enter the report; document conten
 and test output are not uploaded. Temporary backup and restored files are removed
 when the exercise ends. This tests recovery; durable off-host backup storage and
 retention still require an operator-owned deployment decision.
+
+## Publication performance (improvement 40)
+
+The repository validator runs up to four independent manuals concurrently, with
+two workers by default. It retains index order and executes every mandatory gate
+for every registered manual. Errors in one worker do not skip other gates.
+Use `--workers 1` for sequential diagnosis. Validation results are never cached.
+
+Run `python scripts/publication_performance.py --output performance.json` to
+compare sequential and concurrent validation, verify equal control outcomes,
+and time the regression suite. Linux CI retains the sanitized performance,
+recovery, accessibility and dashboard reports for 30 days. Timing records are
+measurements from that environment, not universal performance guarantees.
+
+The governance modules add no Python package installation. Full artifact-build
+and installation timings remain unmeasured until the production toolchain is
+verified. Incremental artifact reuse remains disabled until reproducibility is
+proven. This prevents optimization from bypassing quality or approval controls.
+Regression tests prove that a previous successful run cannot hide a changed
+round-trip result and that every gate still executes after worker failures.

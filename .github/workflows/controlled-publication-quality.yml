@@ -86,3 +86,18 @@ jobs:
 
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
+
+      - name: Measure publication performance and verify gate equivalence
+        run: python scripts/publication_performance.py --output /tmp/publication-performance.json
+      - name: Retain sanitized production evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: production-control-evidence
+          path: |
+            /tmp/publication-performance.json
+            /tmp/production-recovery.json
+            /tmp/publication-dashboard.json
+            /tmp/publication-dashboard.md
+            /tmp/accessibility-review.json
+          retention-days: 30

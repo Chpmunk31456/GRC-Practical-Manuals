@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "explicit_approval_required": true,
+    "unapproved_entries_must_not_influence_output": true,
+    "provenance_required": true,
+    "notes": "Only corrections explicitly approved by the human owner may become durable writing rules or voice examples."
+  },
+  "approved_rules": [],
+  "approved_examples": []
+}

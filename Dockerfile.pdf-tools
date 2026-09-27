@@ -27,7 +27,9 @@ RUN set -eux; \
     pdftotext -v 2>&1 | grep -F "pdftotext version 24.02.0"; \
     pdfinfo -v 2>&1 | grep -F "pdfinfo version 24.02.0"; \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt/* /var/log/dpkg.log; \
-    find / -xdev -exec touch -h -d "@$SOURCE_DATE_EPOCH" {} +
+    find /etc /usr /var /bin /sbin /lib /lib64 -xdev \
+      ! -path /etc/hosts ! -path /etc/hostname ! -path /etc/resolv.conf \
+      -exec touch -h -d "@$SOURCE_DATE_EPOCH" {} +
 
 ENTRYPOINT ["/bin/bash","-lc"]
 CMD ["pdftotext -v && pdfinfo -v"]

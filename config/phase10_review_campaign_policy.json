@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "campaign_mode": "one_candidate_at_a_time",
+  "priority_rule": "fewest_unresolved_human_decisions_then_manual_id",
+  "approval_creation_by_automation": false,
+  "publication_authorized_by_campaign": false,
+  "required_evidence_fields": [
+    "manual_id",
+    "decision_type",
+    "decision",
+    "reviewer_id",
+    "packet_sha256",
+    "evidence_path",
+    "evidence_sha256",
+    "reviewed_at"
+  ],
+  "policy": "Phase 10 campaign automation organizes human work only. It never authors evidence, selects a reviewer identity, changes rollout lanes, or authorizes publication."
+}

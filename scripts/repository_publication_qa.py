@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path, PurePosixPath
 import re
@@ -142,33 +143,45 @@ def execute_gate(name: str, path: Path, manifest: dict) -> dict:
             "accessibility": accessibility.run}[name](manifest)
 
 
-def run(root: Path = ROOT, index: str = INDEX) -> dict:
+def validate_manual(item) -> dict:
+    path, manifest = item
+    gates = {}
+    for name in GATES:
+        start = time.perf_counter()
+        try:
+            result = execute_gate(name, path, manifest)
+            status = "PASS" if result.get("status") == "PASS" else "FAIL"
+            record = {"status": status}
+        except Exception as exc:
+            record = {"status": "FAIL", "error_type": type(exc).__name__}
+        record["seconds"] = round(time.perf_counter() - start, 6)
+        gates[name] = record
+    return {"manual_id": manifest["manual_id"], "rollout_lane": manifest["rollout_lane"], "gates": gates,
+            "status": "PASS" if all(x["status"] == "PASS" for x in gates.values()) else "FAIL"}
+
+
+def run(root: Path = ROOT, index: str = INDEX, workers: int = 2) -> dict:
+    if type(workers) is not int or not 1 <= workers <= 4:
+        raise ValueError("worker count must be between 1 and 4")
+    started = time.perf_counter()
     manifests, inventory = discover(root, index)
-    results = []
-    for path, manifest in manifests:
-        gates = {}
-        for name in GATES:
-            start = time.perf_counter()
-            try:
-                result = execute_gate(name, path, manifest)
-                status = "PASS" if result.get("status") == "PASS" else "FAIL"
-                # Summaries deliberately exclude extracted prose and exception contents.
-                record = {"status": status}
-            except Exception as exc:
-                record = {"status": "FAIL", "error_type": type(exc).__name__}
-            record["seconds"] = round(time.perf_counter() - start, 6)
-            gates[name] = record
-        results.append({"manual_id": manifest["manual_id"], "rollout_lane": manifest["rollout_lane"], "gates": gates,
-                        "status": "PASS" if all(x["status"] == "PASS" for x in gates.values()) else "FAIL"})
+    if workers == 1:
+        results = [validate_manual(item) for item in manifests]
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            results = list(pool.map(validate_manual, manifests))
     return {"schema_version": 1, "kind": "publication", "inventory": inventory,
             "status": "PASS" if all(x["status"] == "PASS" for x in results) else "FAIL",
-            "human_publication_approval": "NOT_EVALUATED", "results": results}
+            "human_publication_approval": "NOT_EVALUATED", "results": results,
+            "seconds": round(time.perf_counter() - started, 6), "workers": workers,
+            "validation_cache_used": False}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--index", default=INDEX)
     parser.add_argument("--discover", action="store_true")
+    parser.add_argument("--workers", type=int, choices=(1, 2, 3, 4), default=2)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
@@ -176,7 +189,7 @@ def main() -> int:
             _, inventory = discover(ROOT, args.index)
             result = {"schema_version": 1, "status": "PASS", "inventory": inventory}
         else:
-            result = run(ROOT, args.index)
+            result = run(ROOT, args.index, args.workers)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         result = {"schema_version": 1, "status": "FAIL", "error_type": type(exc).__name__}
     if args.output:

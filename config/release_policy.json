@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "minimum_independent_reviewers": 2,
+  "reviewers": [],
+  "required_checks": [
+    "controlled-publication-quality",
+    "document-writing-quality",
+    "validate-workflow-security",
+    "meta-qa",
+    "release-readiness"
+  ]
+}

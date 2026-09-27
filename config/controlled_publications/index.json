@@ -4,14 +4,13 @@
   "manifests": [
     "config/controlled_publications/manual03.json"
   ],
-  "next_candidates": [
-    "04-regulatory-compliance/HIPAA_Implementation_Series"
-  ],
+  "next_candidates": [],
   "candidate_manifests": [
     "config/controlled_publications/manual04.json",
     "config/controlled_publications/manual09.json",
     "config/controlled_publications/manual10.json",
     "config/controlled_publications/manual05.json",
-    "config/controlled_publications/manual11.json"
+    "config/controlled_publications/manual11.json",
+    "config/controlled_publications/manual06.json"
   ]
 }

@@ -1,3 +1,5 @@
+FROM python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a AS cert-source
+
 FROM ubuntu:24.04@sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4
 
 ARG UBUNTU_SNAPSHOT_ID=20260927T120000Z
@@ -5,9 +7,20 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=C.UTF-8 \
     LANG=C.UTF-8
 
+# Bootstrap TLS trust from a separately pinned immutable image; do not install
+# ca-certificates from a moving repository before the snapshot is active.
+COPY --from=cert-source /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+
 RUN set -eux; \
-    apt-get update --snapshot "$UBUNTU_SNAPSHOT_ID"; \
-    apt-get install --yes --no-install-recommends --snapshot "$UBUNTU_SNAPSHOT_ID" \
+    rm -f /etc/apt/sources.list /etc/apt/sources.list.d/*; \
+    printf '%s\n' \
+      "deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://snapshot.ubuntu.com/ubuntu/$UBUNTU_SNAPSHOT_ID noble main universe restricted multiverse" \
+      "deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://snapshot.ubuntu.com/ubuntu/$UBUNTU_SNAPSHOT_ID noble-updates main universe restricted multiverse" \
+      "deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://snapshot.ubuntu.com/ubuntu/$UBUNTU_SNAPSHOT_ID noble-security main universe restricted multiverse" \
+      "deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] https://snapshot.ubuntu.com/ubuntu/$UBUNTU_SNAPSHOT_ID noble-backports main universe restricted multiverse" \
+      > /etc/apt/sources.list; \
+    apt-get update; \
+    apt-get install --yes --no-install-recommends \
       poppler-utils=24.02.0-1ubuntu9.9; \
     test "$(dpkg-query -W -f='${Version}' poppler-utils)" = "24.02.0-1ubuntu9.9"; \
     pdftotext -v 2>&1 | grep -F "pdftotext version 24.02.0"; \

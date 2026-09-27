@@ -124,11 +124,39 @@ The repository writing-quality layer uses:
 - local deterministic checks for repeated words, generic phrasing, and readability signals;
 - local LanguageTool for grammar, spelling, punctuation, and usage;
 - Vale for markup-aware style checks;
-- an optional English editorial profile based on pinned Microsoft and proselint Vale packages.
+- an optional English editorial profile based on pinned Microsoft and proselint Vale packages;
+- manual-specific end-to-end gates for source/localization/publication parity where a controlled publication package exists.
 
 LanguageTool is local-first. Controlled manual text must not be sent to a public grammar API by repository automation.
 
 Automated findings are triage signals. A tool suggestion does not override authoritative wording, technical terminology, citations, controlled translations, or professional judgment.
+
+## End-to-end controlled publication validation
+
+A controlled publication gate must validate the complete chain rather than only the source Markdown. For each supported locale it should verify, at minimum:
+
+1. controlled source inventory and expected chapter/section structure;
+2. protected framework identifiers and terminology;
+3. localization-review evidence and semantic parity controls;
+4. generated DOCX package integrity;
+5. generated PDF file integrity;
+6. publication-report and checksum agreement with the exact artifacts;
+7. fail-closed release language and human-approval boundaries.
+
+The gate must be non-destructive. It reports drift or stale artifacts; it does not silently regenerate or rewrite a controlled publication package.
+
+## Ongoing maintenance
+
+Writing and publication QA is maintained as a production control, not a one-time cleanup. The repository should:
+
+- run the end-to-end gate on relevant pull requests;
+- run a scheduled full maintenance check even when no writing pull request is open;
+- pin external CI actions and downloaded tooling;
+- checksum downloaded grammar tooling;
+- compile-test publication generators and QA scripts;
+- keep locale policies and terminology under version control;
+- treat new false positives, terminology exceptions, and localization defects as controlled policy changes;
+- require regenerated artifacts and refreshed hashes after approved source changes.
 
 ## Existing manuals
 
@@ -141,7 +169,8 @@ Existing manuals are improved in controlled batches rather than by repository-wi
 5. propagate approved changes to controlled localizations;
 6. regenerate derived documents;
 7. complete semantic and visual review where required;
-8. merge through the repository's normal controlled process.
+8. run the applicable source-to-publication integrity gate;
+9. merge through the repository's normal controlled process.
 
 This prevents an editorial cleanup from becoming an uncontrolled substantive revision.
 
@@ -155,6 +184,8 @@ New professional documents should use this standard from the first draft. Before
 - verify sources and factual claims;
 - confirm terminology and localization;
 - run document-specific QA;
-- visually review final rendered artifacts.
+- regenerate and verify final DOCX/PDF artifacts where applicable;
+- visually review final rendered artifacts;
+- preserve the exact release evidence and hashes used for approval.
 
-The target is not "perfectly polished AI text." The target is accurate, useful, human professional writing that can withstand technical, regulatory, and editorial review.
+The target is not "perfectly polished AI text." The target is accurate, useful, human professional writing that can withstand technical, regulatory, editorial, localization, and publication review.

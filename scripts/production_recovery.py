@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import re
 import stat
@@ -82,7 +83,8 @@ def exercise():
         checks=[]
         for command in ([sys.executable,'scripts/writing_system_integrity.py'],
                         [sys.executable,'-m','unittest','discover','-s','tests','-q']):
-            run=subprocess.run(command,cwd=root/'restored',capture_output=True,timeout=180)
+            env=dict(os.environ, CONTROLLED_SOURCE_REVISION=receipt['source_revision'])
+            run=subprocess.run(command,cwd=root/'restored',capture_output=True,timeout=180,env=env)
             checks.append({'check':'integrity' if 'scripts/writing_system_integrity.py' in command else 'regression',
                            'exit_code':run.returncode})
     return {'schema_version':1,'status':'PASS' if all(c['exit_code']==0 for c in checks) else 'FAIL',

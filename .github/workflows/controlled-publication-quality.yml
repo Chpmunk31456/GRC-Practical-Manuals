@@ -107,6 +107,9 @@ jobs:
       - name: Validate Phase 9 immutable production contract
         run: python scripts/production_environment_certification.py --output /tmp/phase9-production-contract.json
 
+      - name: Validate Phase 9 immutable PDF toolchain
+        run: python scripts/pdf_toolchain_certification.py --output /tmp/phase9-pdf-toolchain.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -131,4 +134,5 @@ jobs:
             /tmp/phase8-release-queue.json
             /tmp/phase8-human-handoff.json
             /tmp/phase9-production-contract.json
+            /tmp/phase9-pdf-toolchain.json
           retention-days: 30

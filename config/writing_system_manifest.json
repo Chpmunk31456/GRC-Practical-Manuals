@@ -111,7 +111,9 @@
     "config/reviewer_authorization_requests.json",
     "config/human_evidence_submissions.json",
     "scripts/phase10_human_intake.py",
-    "tests/test_phase10_human_intake.py"
+    "tests/test_phase10_human_intake.py",
+    "scripts/phase10_specialist_review_packets.py",
+    "tests/test_phase10_specialist_review_packets.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -179,7 +181,8 @@
     "scripts/phase9_release_drill.py",
     "scripts/phase10_review_campaign.py",
     "scripts/phase10_source_review_packets.py",
-    "scripts/phase10_human_intake.py"
+    "scripts/phase10_human_intake.py",
+    "scripts/phase10_specialist_review_packets.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -294,7 +297,8 @@
     "completed_improvements": [
       58,
       59,
-      60
+      60,
+      61
     ],
     "deterministic_review_campaign": true,
     "one_candidate_at_a_time": true,
@@ -306,6 +310,8 @@
     "baseline_updates_applied_by_automation": 0,
     "reviewer_authorization_intake": true,
     "human_evidence_submission_intake": true,
-    "governance_mutations_applied_by_automation": 0
+    "governance_mutations_applied_by_automation": 0,
+    "specialist_review_packets": true,
+    "automation_authored_specialist_decisions": 0
   }
 }

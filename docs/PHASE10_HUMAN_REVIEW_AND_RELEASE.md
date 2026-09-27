@@ -74,3 +74,27 @@ Valid proposals remain proposals. Automation does not add reviewer identities to
 accessibility, source, legal/privacy, or publication approval state.
 
 Stale packet hashes and changed evidence hashes fail closed.
+
+
+## Improvement 61 — specialist review packets
+
+Phase 10 now generates decision-specific review packets for:
+
+- localization/semantic review;
+- accessibility review;
+- HIPAA legal/semantic review;
+- GDPR privacy/legal review.
+
+Run:
+
+`python scripts/phase10_specialist_review_packets.py --output phase10-specialist-review-packets.json`
+
+Each packet binds the exact current candidate packet hash and source revision to
+all six controlled artifacts: DOCX and PDF for English, Spanish (es-419), and
+Brazilian Portuguese.
+
+Each decision type also receives an explicit human review scope and the exact
+submission fields required by the Phase 10 human-evidence intake contract.
+
+Automation supplies the work package only. It does not write a specialist
+conclusion, choose the reviewer, or authorize publication.

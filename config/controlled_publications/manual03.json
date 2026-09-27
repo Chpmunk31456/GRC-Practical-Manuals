@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "manual_id": "manual03-nist-ai-rmf",
+  "manual_root": "01-foundations/NIST_AI_RMF_1.0",
+  "expected_chapters": 32,
+  "languages": {
+    "en": {
+      "source_globs": ["English/source/*.md","MANUAL_03_IMPLEMENTATION_PATHS.md"],
+      "required_terms": ["NIST AI RMF 1.0","GOVERN","MAP","MEASURE","MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "artifacts": {
+        "docx": "publication/Manual_03_NIST_AI_RMF_Implementation_EN.docx",
+        "pdf": "publication/Manual_03_NIST_AI_RMF_Implementation_EN.pdf"
+      }
+    },
+    "es-419": {
+      "source_globs": ["translations/es-419/source/*.md","es-419/source/*.md"],
+      "required_terms": ["NIST AI RMF 1.0","GOVERN","MAP","MEASURE","MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "artifacts": {
+        "docx": "publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.docx",
+        "pdf": "publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.pdf"
+      }
+    },
+    "pt-BR": {
+      "source_globs": ["translations/pt-BR/source/*.md","pt-BR/source/*.md"],
+      "required_terms": ["NIST AI RMF 1.0","GOVERN","MAP","MEASURE","MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "artifacts": {
+        "docx": "publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx",
+        "pdf": "publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf"
+      }
+    }
+  },
+  "publication_report": "publication/qa/MANUAL_03_PUBLICATION_REPORT.json",
+  "checksum_manifest": "publication/qa/MANUAL_03_SHA256SUMS.txt",
+  "page_qa": "publication/qa/MANUAL_03_PAGE_QA.csv",
+  "review_records": [
+    {"path":"translations/CONTROLLED_TRANSLATION_REVIEW_01.md","required_markers":["PASS AFTER REMEDIATION"]},
+    {"path":"publication/README.md","required_markers":["fail-closed"]}
+  ],
+  "release_controls": {
+    "require_report_hash_match": true,
+    "require_checksum_match": true,
+    "require_docx_integrity": true,
+    "require_pdf_integrity": true,
+    "require_page_qa_pass": true,
+    "require_stale_artifact_check": true,
+    "require_roundtrip": true,
+    "require_accessibility": true
+  }
+}

@@ -33,7 +33,10 @@
     "qa/writing-system-recovery/PHASE4_RECOVERY_EXERCISE_2026-09-27.md",
     "scripts/repository_publication_qa.py",
     "tests/test_repository_publication.py",
-    "docs/PHASE5_PRODUCTION_OPERATIONS.md"
+    "docs/PHASE5_PRODUCTION_OPERATIONS.md",
+    "scripts/source_monitoring.py",
+    "config/source_monitoring.json",
+    "tests/test_source_monitoring.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -46,7 +49,8 @@
     "config/controlled_publications/manual03.json",
     "config/controlled_publications/manual04.json",
     "config/writing_observability_policy.json",
-    "qa/writing-observability/HISTORY.json"
+    "qa/writing-observability/HISTORY.json",
+    "config/source_monitoring.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -61,7 +65,8 @@
     "scripts/publication_accessibility_qa.py",
     "scripts/writing_observability_history.py",
     "scripts/writing_system_recovery_exercise.py",
-    "scripts/repository_publication_qa.py"
+    "scripts/repository_publication_qa.py",
+    "scripts/source_monitoring.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

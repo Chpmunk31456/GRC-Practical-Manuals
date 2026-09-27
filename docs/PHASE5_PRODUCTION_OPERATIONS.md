@@ -47,3 +47,21 @@ This change generalizes validation; it does not regenerate approved documents
 or certify their accessibility. Source monitoring, lifecycle, release,
 accessibility, maintenance and optimization extensions follow in improvements
 34 through 40 with separate review evidence.
+
+## Authoritative source monitoring (improvement 34)
+
+The existing scheduled Source Watch checks registry deadlines and URLs, then runs
+`python scripts/source_monitoring.py --network --output source-review-queue.json`.
+The queue contains source identifiers, revision metadata, content hashes,
+review reasons and affected chapters. Response bodies are not retained.
+Redirects must remain on the existing authoritative-domain allowlist.
+
+`config/source_monitoring.json` supplements the canonical source registry.
+Baselines begin empty: existing URL verification is not content-hash approval.
+A human must review and commit the publication date, revision, exact SHA-256
+and approval evidence before a source can be reported current. Changed content,
+missing observations, overdue dates and missing mappings produce review items.
+No observation rewrites a manual or replaces a baseline. Whole-manual mappings
+for the initial two manuals are conservative; other mappings remain outstanding.
+The scheduled workflow retains metadata for 30 days. Durable review decisions
+belong in repository-controlled evidence through a reviewed pull request.

@@ -52,7 +52,8 @@
     "config/production_toolchain.json",
     "tests/test_production_recovery.py",
     "scripts/publication_performance.py",
-    "tests/test_publication_performance.py"
+    "tests/test_publication_performance.py",
+    "qa/PHASE5_INTEGRATION_ACCEPTANCE_2026-09-27.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",

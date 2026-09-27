@@ -47,11 +47,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Verify PDF inspection tools
+      - name: Provision and verify PDF inspection tools
         run: |
           set -euo pipefail
+          if ! command -v pdftotext >/dev/null || ! command -v pdfinfo >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --no-install-recommends -y poppler-utils
+          fi
           command -v pdftotext
           command -v pdfinfo
+          pdftotext -v 2>&1 | head -n 1
+          pdfinfo -v 2>&1 | head -n 1
 
       - name: Test Phase 4 controls
         run: |

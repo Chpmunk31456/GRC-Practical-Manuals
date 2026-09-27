@@ -64,7 +64,10 @@
     "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md",
     "scripts/review_readiness_packets.py",
     "tests/test_review_readiness_packets.py",
-    "docs/PHASE7_REVIEW_READINESS.md"
+    "docs/PHASE7_REVIEW_READINESS.md",
+    "config/review_evidence_bindings.json",
+    "scripts/review_evidence_status.py",
+    "tests/test_review_evidence_status.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -87,7 +90,8 @@
     "config/controlled_publications/manual10.json",
     "config/controlled_publications/manual05.json",
     "config/controlled_publications/manual11.json",
-    "config/controlled_publications/manual06.json"
+    "config/controlled_publications/manual06.json",
+    "config/review_evidence_bindings.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -110,7 +114,8 @@
     "scripts/accessibility_validation.py",
     "scripts/production_recovery.py",
     "scripts/publication_performance.py",
-    "scripts/review_readiness_packets.py"
+    "scripts/review_readiness_packets.py",
+    "scripts/review_evidence_status.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -161,5 +166,16 @@
     ],
     "candidate_status_is_not_approval": true,
     "acceptance_record": "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md"
+  },
+  "phase7": {
+    "review_readiness_operationalization": true,
+    "completed_improvements": [
+      46,
+      47
+    ],
+    "exact_revision_packets": true,
+    "stale_incomplete_evidence_visibility": true,
+    "approval_inference_prohibited": true,
+    "publication_authorized_by_phase7_automation": false
   }
 }

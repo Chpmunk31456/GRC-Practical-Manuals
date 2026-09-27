@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "bindings": {},
+  "policy": "Evidence bindings must reference the exact current reviewer-readiness packet and exact evidence file hash. Bindings organize review evidence only and never authorize publication."
+}

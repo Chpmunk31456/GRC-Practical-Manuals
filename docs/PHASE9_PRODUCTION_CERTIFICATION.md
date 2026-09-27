@@ -89,3 +89,21 @@ not treated as equivalent when only volatile metadata differs.
 
 This certification remains non-authorizing and does not satisfy any human
 publication approval.
+
+
+### Executable-closure certification
+
+The production release gate needs an immutable PDF inspection capability, not a
+bit-for-bit reproduction of unrelated Ubuntu package-manager caches. Improvement
+55 therefore independently builds the exact snapshot-pinned PDF runtime twice
+and hashes the executable closure for `pdftotext` and `pdfinfo`: the two
+executables plus every dynamically linked library resolved by `ldd`.
+
+Each closure record contains absolute runtime paths and SHA-256 file hashes. The
+canonical closure digest is order-independent and must match across two isolated
+BuildKit jobs. The exact Ubuntu base manifest, snapshot identifier, Poppler
+package version, PDF lock hash, and tool version checks remain mandatory.
+
+This is narrower than hashing the whole OS filesystem and stronger for the
+release purpose: generated apt/font/cache state cannot mask or alter the exact
+binaries and libraries used for PDF inspection.

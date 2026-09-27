@@ -18,8 +18,8 @@ its accessibility/publication record remains PRE-STAGED / FAIL-CLOSED. Automated
 validation may establish technical consistency but cannot convert those records
 into approval.
 
-The candidate manifest requires all 32 chapters in English, Spanish `es-419`,
-and Brazilian Portuguese `pt-BR`, all six NIST CSF 2.0 Functions in the English
+The candidate manifest requires all 32 chapters in English, Spanish (es-419),
+and Brazilian Portuguese (pt-BR), plus all six NIST CSF 2.0 Functions in the English
 controlled source, exact publication-report and checksum agreement, DOCX/PDF
 integrity, page-QA PASS evidence, stale-artifact checks, semantic round-trip
 validation, and structural accessibility validation.
@@ -38,8 +38,8 @@ a manual to the active lane only through separately reviewed governance evidence
 ## Improvement 42 — Manual 10 candidate enrollment
 
 Manual 10 — NIST RMF and SP 800-53 Controlled Implementation — is enrolled as
-the second Phase 6 candidate. Its English, `es-419`, and `pt-BR` controlled
-sources cover all 32 chapters, and retained publication evidence includes
+the second Phase 6 candidate. Its controlled English, Spanish (es-419), and
+Brazilian Portuguese (pt-BR) sources cover all 32 chapters. Retained publication evidence includes
 DOCX/PDF artifacts, report hashes, checksums, page QA, source verification,
 localization review, accessibility review, and release-readiness pre-stage
 records.

@@ -28,7 +28,7 @@ A recoverable revision contains:
 3. Revert only the defective writing-system change when practical; do not overwrite unrelated manual content.
 4. Run:
    - `python scripts/writing_system_integrity.py`
-   - `python -m unittest tests.test_document_writing_qa tests.test_manual03_end_to_end_qa tests.test_phase3_writing_system -v`
+   - `python -m unittest tests.test_document_writing_qa tests.test_manual03_end_to_end_qa tests.test_phase3_writing_system tests.test_phase4_controlled_publishing -v`
 5. Run the Document Writing Quality workflow.
 6. For any affected controlled manual, rerun its source-to-publication gate.
 7. Do not release regenerated artifacts until their hashes, manifests, semantic/localization checks, and human release requirements are satisfied.
@@ -59,3 +59,24 @@ At least quarterly, or after a material writing-system change:
 6. document any non-reproducible dependency or recovery gap as a blocking maintenance defect.
 
 A successful restore means the system can reproduce its validation behavior. It does not by itself re-approve old publication artifacts or replace required human review.
+
+
+## Phase 4 repository-wide recovery
+
+The controlled publication engine is manifest-driven. Recovery therefore also requires:
+
+- `config/controlled_publication_manifest.schema.json`;
+- `config/controlled_publications/index.json`;
+- every onboarded per-manual manifest;
+- round-trip, layout, accessibility, semantic, and observability QA scripts;
+- the versioned observability baseline and history record.
+
+Run the executable exercise with:
+
+`python scripts/writing_system_recovery_exercise.py --require-pdf-tools`
+
+Then run repository-wide publication validation:
+
+`python scripts/controlled_publication_qa.py --index config/controlled_publications/index.json`
+
+For every onboarded manual, run round-trip, layout, and accessibility QA before declaring recovery successful. A recovered environment that cannot reproduce those checks is not production-ready.

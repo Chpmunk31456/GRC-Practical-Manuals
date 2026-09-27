@@ -96,3 +96,26 @@ active publication decision.
 Automated validation can establish technical consistency only. It cannot provide
 organization-specific legal advice, determine GDPR applicability or lawful basis,
 approve transfers or breach decisions, or authorize publication.
+
+
+## Improvement 45 — HIPAA candidate enrollment
+
+Manual 06 — HIPAA Implementation and Audit — is enrolled as the final candidate
+from the Phase 4 rollout queue. The repository contains 32 controlled chapters
+for English, Spanish (es-419), and Brazilian Portuguese (pt-BR), plus durable
+DOCX/PDF artifacts, hashes, page QA, legal/technical/editorial review records,
+source accessibility evidence, and a human-review packet.
+
+The substantive human gates remain open. Localization review is fail-closed,
+publication-artifact accessibility remains fail-closed, and the human-review
+packet explicitly states that it does not itself make Manual 06 publication-
+eligible. Any standing series-level approval language remains non-substitutive
+for exact-candidate, hash-bound Phase 5 release verification.
+
+The current-law versus proposed-rule boundary is also preserved. Proposed HIPAA
+Security Rule material remains readiness-only unless HHS issues a final rule and
+the controlled legal baseline is deliberately updated and reviewed.
+
+With this enrollment, the Phase 6 `next_candidates` queue is empty. Empty queue
+means all identified targets are represented by controlled manifests; it does
+not mean the candidate manuals are approved or active.

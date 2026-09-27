@@ -49,3 +49,28 @@ The packet lists the required human-approved baseline fields:
 
 Automation applies zero baseline updates and cannot convert an observation into
 approval.
+
+
+## Improvement 60 — reviewer authorization and human-evidence intake
+
+Phase 10 now has explicit proposal queues for:
+
+- reviewer authorization requests;
+- human decision evidence submissions.
+
+Run:
+
+`python scripts/phase10_human_intake.py --output phase10-human-intake.json`
+
+Reviewer authorization proposals must contain a reviewer identifier, human
+authorizer, authorization timestamp, evidence path, and exact evidence SHA-256.
+
+Human evidence submissions must contain the exact current candidate packet hash
+and exact evidence-file SHA-256 in addition to the existing decision fields.
+
+Valid proposals remain proposals. Automation does not add reviewer identities to
+`config/release_policy.json`, does not copy records into
+`config/human_approval_evidence.json`, and does not mutate translation,
+accessibility, source, legal/privacy, or publication approval state.
+
+Stale packet hashes and changed evidence hashes fail closed.

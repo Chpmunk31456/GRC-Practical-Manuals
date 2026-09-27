@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "requests": [],
+  "policy": "Reviewer authorization requests are human-authored proposals. Automation validates structure and evidence only; an authorized governance action must update release_policy.json."
+}

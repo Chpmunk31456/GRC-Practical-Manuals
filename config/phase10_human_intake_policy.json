@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "reviewer_authorization": {
+    "minimum_independent_reviewers": 2,
+    "required_fields": [
+      "reviewer_id",
+      "authorized_by",
+      "authorized_at",
+      "authorization_evidence_path",
+      "authorization_evidence_sha256"
+    ],
+    "automation_may_modify_release_policy": false
+  },
+  "human_evidence_submission": {
+    "required_fields": [
+      "manual_id",
+      "decision_type",
+      "decision",
+      "reviewer_id",
+      "packet_sha256",
+      "evidence_path",
+      "evidence_sha256",
+      "reviewed_at"
+    ],
+    "decisions": [
+      "APPROVED",
+      "REJECTED"
+    ],
+    "automation_may_modify_human_evidence_registry": false
+  },
+  "policy": "Phase 10 intake validates proposed human governance records only. It does not choose identities, authorize reviewers, author evidence, or mutate governance registries."
+}

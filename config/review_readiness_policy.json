@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "required_scopes": {
+    "manual04-nist-ai-600-1": [
+      "localization_semantic",
+      "accessibility_visual"
+    ],
+    "manual09-nist-csf-2": [
+      "localization_semantic",
+      "accessibility_visual"
+    ],
+    "manual10-nist-rmf-sp-800-53": [
+      "localization_semantic",
+      "accessibility_visual",
+      "release_readiness"
+    ],
+    "manual05-ai-auditing-assurance": [
+      "localization_semantic",
+      "accessibility_visual"
+    ],
+    "manual11-gdpr-controlled-implementation": [
+      "legal_regulatory",
+      "localization_semantic",
+      "accessibility_visual",
+      "changed_scope",
+      "readiness_reconciliation"
+    ],
+    "manual06-hipaa-implementation-audit": [
+      "legal_regulatory",
+      "localization_semantic",
+      "accessibility_visual",
+      "changed_scope"
+    ]
+  },
+  "allowed_decisions": [
+    "APPROVED",
+    "APPROVED_WITH_REMEDIATION",
+    "REJECTED"
+  ],
+  "current_decisions": [
+    "APPROVED"
+  ],
+  "minimum_reviewers_per_scope": 1,
+  "policy": "Review evidence must bind the exact Phase 7 packet, source revision, artifact hashes, review-record hashes and evidence-file hashes. Historical or standing approval language is never substituted for an exact record."
+}

@@ -17,6 +17,7 @@ on:
       - "scripts/writing_system_recovery_exercise.py"
       - "tests/test_phase4_controlled_publishing.py"
       - "qa/writing-observability/**"
+      - "qa/writing-system-recovery/**"
       - "WRITING_SYSTEM_RECOVERY.md"
       - "01-foundations/NIST_AI_RMF_1.0/**"
       - "01-foundations/NIST_AI_600-1_Generative_AI_Profile/**"

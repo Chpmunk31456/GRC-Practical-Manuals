@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Chpmunk31456/GRC-Practical-Manuals/config/review_evidence.schema.json",
+  "title": "Exact Human Review Evidence",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manual_id",
+    "source_revision",
+    "packet_sha256",
+    "reviewer",
+    "prepared_by",
+    "decision",
+    "scopes",
+    "artifacts",
+    "review_records",
+    "evidence_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "manual_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "packet_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prepared_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "APPROVED",
+        "APPROVED_WITH_REMEDIATION",
+        "REJECTED"
+      ]
+    },
+    "scopes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "review_records": {
+      "type": "object"
+    },
+    "evidence_files": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "reviewed_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

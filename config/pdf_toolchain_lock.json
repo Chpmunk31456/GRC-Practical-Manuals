@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "base_image": {
+    "name": "ubuntu:24.04",
+    "platform": "linux/amd64",
+    "manifest_digest": "sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4",
+    "index_digest": "sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3"
+  },
+  "ubuntu_snapshot_id": "20260927T120000Z",
+  "packages": {"poppler-utils": "24.02.0-1ubuntu9.9"},
+  "expected_tools": {
+    "pdftotext": "pdftotext version 24.02.0",
+    "pdfinfo": "pdfinfo version 24.02.0"
+  },
+  "policy": "The PDF inspection image must install only from the pinned Ubuntu snapshot and exact package version, then remove apt indexes/caches/logs before export."
+}

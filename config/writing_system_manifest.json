@@ -93,7 +93,9 @@
     "Dockerfile.pdf-tools",
     "config/pdf_toolchain_lock.json",
     "scripts/pdf_toolchain_certification.py",
-    "tests/test_pdf_toolchain_certification.py"
+    "tests/test_pdf_toolchain_certification.py",
+    "scripts/oci_runtime_digest.py",
+    "tests/test_oci_runtime_digest.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -152,7 +154,8 @@
     "scripts/phase8_release_queue.py",
     "scripts/phase8_human_handoff.py",
     "scripts/production_environment_certification.py",
-    "scripts/pdf_toolchain_certification.py"
+    "scripts/pdf_toolchain_certification.py",
+    "scripts/oci_runtime_digest.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -251,6 +254,7 @@
     "immutable_build_image_verified": true,
     "immutable_pdf_toolchain_verified": false,
     "publication_authorized_by_phase9_automation": false,
-    "immutable_pdf_toolchain_contract": true
+    "immutable_pdf_toolchain_contract": true,
+    "canonical_pdf_runtime_digest": true
   }
 }

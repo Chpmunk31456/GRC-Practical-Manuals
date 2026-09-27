@@ -14,7 +14,8 @@ RUN apt-get update \
     && pdfinfo -v 2>&1 | head -n 1 | grep -F "pdfinfo version 22.12.0" \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/* /var/log/apt/* \
     && rm -f /var/log/dpkg.log /var/cache/ldconfig/aux-cache \
-    && find / -xdev -exec touch -h -d "@${SOURCE_DATE_EPOCH}" {} +
+    && find /usr /var -xdev -exec touch -h -d "@${SOURCE_DATE_EPOCH}" {} + \\
+    && find /etc -xdev ! -path /etc/hosts ! -path /etc/resolv.conf ! -path /etc/hostname -exec touch -h -d "@${SOURCE_DATE_EPOCH}" {} +
 
 WORKDIR /workspace
 ENTRYPOINT ["pdftotext"]

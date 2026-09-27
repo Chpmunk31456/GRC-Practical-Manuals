@@ -11,8 +11,8 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 WORD_NS="{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
-MATERIAL_NUM_RE=re.compile(r"(?<![A-Za-z])(?:\d{4}|\d+[.,]\d+|\d+%)(?![A-Za-z])")
-ID_RE=re.compile(r"\b(?:NIST(?:\s+AI)?\s+[A-Z][A-Z0-9.-]*(?:\s+[0-9.-]+)?|ISO(?:/IEC)?\s+[0-9-]+(?::[0-9]{4})?|CVE-[0-9]{4}-[0-9]{4,})\b",re.I)
+MATERIAL_NUM_RE=re.compile(r"(?<![A-Za-z])(?:\d+[.,]\d+|\d+%)(?![A-Za-z])")
+ID_RE=re.compile(r"\b(?:NIST(?:\s+AI)?\s+[A-Z][A-Z0-9.-]*(?:\s+[0-9.-]+)?|ISO(?:/IEC)?\s+[0-9-]+(?::[0-9]{4})?|CVE-[0-9]{4}-[0-9]{4,})\b")
 
 def normalize(text:str)->str:
     return re.sub(r"\s+"," ",text.replace("‑","-").replace("–","-").replace("—","-")).strip()

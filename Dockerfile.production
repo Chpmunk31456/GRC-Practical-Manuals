@@ -7,14 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /workspace
 
+# Immutable runtime/toolchain image only.
+# Repository content is mounted at execution time so the environment digest
+# cannot become self-referential through config/production_toolchain.json.
 # No network package installation is permitted in this image.
-# The repository uses only Python standard-library governance tooling.
-COPY scripts /workspace/scripts
-COPY config /workspace/config
-COPY .compliance /workspace/.compliance
-COPY governance /workspace/governance
-COPY qa /workspace/qa
-COPY tests /workspace/tests
-
 ENTRYPOINT ["python"]
-CMD ["-m", "unittest", "discover", "-s", "tests", "-v"]
+CMD ["--version"]

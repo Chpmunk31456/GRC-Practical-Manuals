@@ -75,3 +75,19 @@ With both the runtime image and PDF-toolchain image independently reproduced,
 `config/production_toolchain.json` may now be `VERIFIED`. This is technical
 production-environment certification only; it does not satisfy human review or
 authorize publication.
+
+
+## Improvement 56 — controlled-release drill and operational handoff
+
+The repository now executes a non-authorizing controlled-release drill after an
+isolated backup/restore exercise. The drill records exact candidate artifact
+fingerprints, verifies the one-at-a-time queue, and requires the fully verified
+production toolchain.
+
+A successful technical drill reports
+`TECHNICAL_READY_HUMAN_APPROVALS_REQUIRED`. This status deliberately preserves
+human source, localization, accessibility, legal/privacy, and independent
+release-review requirements.
+
+Operational cadence and handoff procedures are documented in
+`docs/PHASE9_OPERATIONAL_HANDOFF.md`.

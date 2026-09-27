@@ -94,7 +94,11 @@
     "config/production_pdf_dependency_lock.json",
     "scripts/pdf_toolchain_certification.py",
     "tests/test_pdf_toolchain_certification.py",
-    ".github/workflows/phase9-pdf-toolchain-certification.yml"
+    ".github/workflows/phase9-pdf-toolchain-certification.yml",
+    "config/phase9_operations_policy.json",
+    "scripts/phase9_release_drill.py",
+    "tests/test_phase9_release_drill.py",
+    "docs/PHASE9_OPERATIONAL_HANDOFF.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -123,7 +127,8 @@
     "config/human_approval_evidence.json",
     "config/phase8_release_queue_policy.json",
     "config/production_dependency_lock.json",
-    "config/production_pdf_dependency_lock.json"
+    "config/production_pdf_dependency_lock.json",
+    "config/phase9_operations_policy.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -153,7 +158,8 @@
     "scripts/phase8_release_queue.py",
     "scripts/phase8_human_handoff.py",
     "scripts/production_environment_certification.py",
-    "scripts/pdf_toolchain_certification.py"
+    "scripts/pdf_toolchain_certification.py",
+    "scripts/phase9_release_drill.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -245,13 +251,18 @@
     "production_certification": true,
     "completed_improvements": [
       54,
-      55
+      55,
+      56
     ],
     "immutable_build_contract": true,
     "independent_build_certification_required": true,
     "immutable_build_image_verified": true,
     "immutable_pdf_toolchain_verified": true,
     "publication_authorized_by_phase9_automation": false,
-    "production_toolchain_verified": true
+    "production_toolchain_verified": true,
+    "controlled_release_drill": true,
+    "candidate_artifact_fingerprints": true,
+    "operational_handoff": true,
+    "bulk_release_allowed": false
   }
 }

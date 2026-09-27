@@ -113,6 +113,9 @@ jobs:
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
+      - name: Run Phase 9 controlled release drill
+        run: python scripts/phase9_release_drill.py --recovery /tmp/production-recovery.json --output /tmp/phase9-release-drill.json
+
       - name: Measure publication performance and verify gate equivalence
         run: python scripts/publication_performance.py --output /tmp/publication-performance.json
       - name: Retain sanitized production evidence
@@ -135,4 +138,5 @@ jobs:
             /tmp/phase8-human-handoff.json
             /tmp/phase9-production-contract.json
             /tmp/phase9-pdf-toolchain.json
+            /tmp/phase9-release-drill.json
           retention-days: 30

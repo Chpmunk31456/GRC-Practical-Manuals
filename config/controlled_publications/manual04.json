@@ -5,27 +5,40 @@
   "expected_chapters": 32,
   "languages": {
     "en": {
-      "source_globs": ["English/source/*.md","MANUAL_04_IMPLEMENTATION_PATHS.md"],
-      "required_terms": ["NIST AI 600-1"],
-      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "source_globs": [
+        "English/source/*.md",
+        "MANUAL_04_IMPLEMENTATION_PATHS.md"
+      ],
+      "required_terms": [
+        "NIST AI 600-1"
+      ],
+      "chapter_heading_pattern": "^##\\s+Chapter\\s+(\\d+)\\s+",
       "artifacts": {
         "docx": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.docx",
         "pdf": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_EN.pdf"
       }
     },
     "es-419": {
-      "source_globs": ["es-419/source/*.md"],
-      "required_terms": ["NIST AI 600-1"],
-      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "source_globs": [
+        "es-419/source/*.md"
+      ],
+      "required_terms": [
+        "NIST AI 600-1"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+(\\d+)\\s+",
       "artifacts": {
         "docx": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.docx",
         "pdf": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_ES-419.pdf"
       }
     },
     "pt-BR": {
-      "source_globs": ["pt-BR/source/*.md"],
-      "required_terms": ["NIST AI 600-1"],
-      "chapter_heading_pattern": "^#\\s+(\\d+)\\.",
+      "source_globs": [
+        "pt-BR/source/*.md"
+      ],
+      "required_terms": [
+        "NIST AI 600-1"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+(\\d+)\\s+",
       "artifacts": {
         "docx": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.docx",
         "pdf": "publication/Manual_04_NIST_AI_600-1_Generative_AI_Profile_PT-BR.pdf"
@@ -36,8 +49,18 @@
   "checksum_manifest": "publication/qa/MANUAL_04_SHA256SUMS.txt",
   "page_qa": "publication/qa/MANUAL_04_PAGE_QA.csv",
   "review_records": [
-    {"path":"qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md","required_markers":["PASS"]},
-    {"path":"qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md","required_markers":["PASS"]}
+    {
+      "path": "qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    },
+    {
+      "path": "qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    }
   ],
   "release_controls": {
     "require_report_hash_match": true,
@@ -48,5 +71,6 @@
     "require_stale_artifact_check": true,
     "require_roundtrip": true,
     "require_accessibility": true
-  }
+  },
+  "readiness_status": "candidate-blocked-human-semantic-review"
 }

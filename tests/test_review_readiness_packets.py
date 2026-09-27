@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 import sys
 import unittest
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -65,6 +66,16 @@ class ReviewReadinessPacketTests(unittest.TestCase):
         for row in result["queue"]:
             self.assertEqual(row["status"], "REVIEW_REQUIRED")
             self.assertTrue(row["required_review_records"])
+
+    def test_verified_revision_can_be_injected_for_isolated_recovery(self):
+        revision = "a" * 40
+        with mock.patch.dict("os.environ", {"CONTROLLED_SOURCE_REVISION": revision}, clear=False):
+            self.assertEqual(readiness.git_revision(), revision)
+
+    def test_invalid_injected_revision_fails_closed(self):
+        with mock.patch.dict("os.environ", {"CONTROLLED_SOURCE_REVISION": "not-a-sha"}, clear=False):
+            with self.assertRaises(ValueError):
+                readiness.git_revision()
 
 
 if __name__ == "__main__":

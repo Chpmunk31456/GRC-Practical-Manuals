@@ -27,21 +27,16 @@ def runtime_contract(path: Path) -> dict:
 
     normalized_config = config.get("config") or {}
     rootfs = config.get("rootfs") or {}
-    layers = [
-        {
-            "mediaType": layer.get("mediaType"),
-            "digest": layer.get("digest"),
-            "size": layer.get("size"),
-        }
-        for layer in manifest.get("layers", [])
-    ]
+    # Bind executable semantics to uncompressed rootfs diff IDs rather than
+    # compressed layer transport digests. Compression metadata may vary across
+    # independent BuildKit exporters even when the runtime filesystem is
+    # byte-identical.
     return {
         "schema_version": 1,
         "architecture": config.get("architecture"),
         "os": config.get("os"),
         "config": normalized_config,
         "rootfs": rootfs,
-        "layers": layers,
     }
 
 

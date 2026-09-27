@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "system": "controlled-writing-quality",
+  "required_files": [
+    "DOCUMENT_WRITING_STANDARD.md",
+    "config/document_writing_policy.json",
+    "config/writing_context_profiles.json",
+    "config/writing_semantic_policy.json",
+    "config/approved_writing_feedback.json",
+    "scripts/document_writing_qa.py",
+    "scripts/semantic_writing_qa.py",
+    "scripts/unified_writing_engine.py",
+    "scripts/writing_observability.py",
+    "scripts/writing_system_integrity.py",
+    "tests/test_document_writing_qa.py",
+    "tests/test_phase3_writing_system.py",
+    ".github/workflows/document-writing-quality.yml",
+    "WRITING_SYSTEM_RECOVERY.md"
+  ],
+  "json_configs": [
+    "config/document_writing_policy.json",
+    "config/writing_context_profiles.json",
+    "config/writing_semantic_policy.json",
+    "config/approved_writing_feedback.json",
+    "config/writing_system_manifest.json"
+  ],
+  "python_modules": [
+    "scripts/document_writing_qa.py",
+    "scripts/semantic_writing_qa.py",
+    "scripts/unified_writing_engine.py",
+    "scripts/writing_observability.py",
+    "scripts/writing_system_integrity.py",
+    "scripts/manual03_end_to_end_qa.py"
+  ],
+  "pinned_runtime": {
+    "python": "3.12",
+    "java": "17",
+    "languagetool": "6.6",
+    "vale_action": "518a9136acc6e6668ce7c00d367051e0941e87ff",
+    "checkout_action": "3d3c42e5aac5ba805825da76410c181273ba90b1"
+  },
+  "recovery_policy": {
+    "configuration_is_versioned": true,
+    "rollback_uses_git_commit_or_tag": true,
+    "generated_artifacts_are_never_the_only_source": true,
+    "post_restore_integrity_command": "python scripts/writing_system_integrity.py",
+    "post_restore_test_command": "python -m unittest tests.test_document_writing_qa tests.test_manual03_end_to_end_qa tests.test_phase3_writing_system -v"
+  }
+}

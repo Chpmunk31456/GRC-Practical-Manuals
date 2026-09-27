@@ -3,6 +3,7 @@ FROM python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e2
 FROM ubuntu:24.04@sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4
 
 ARG UBUNTU_SNAPSHOT_ID=20260927T120000Z
+ARG SOURCE_DATE_EPOCH=0
 ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=C.UTF-8 \
     LANG=C.UTF-8
@@ -25,7 +26,8 @@ RUN set -eux; \
     test "$(dpkg-query -W -f='${Version}' poppler-utils)" = "24.02.0-1ubuntu9.9"; \
     pdftotext -v 2>&1 | grep -F "pdftotext version 24.02.0"; \
     pdfinfo -v 2>&1 | grep -F "pdfinfo version 24.02.0"; \
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt/* /var/log/dpkg.log
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt/* /var/log/dpkg.log; \
+    find / -xdev -exec touch -h -d "@$SOURCE_DATE_EPOCH" {} +
 
 ENTRYPOINT ["/bin/bash","-lc"]
 CMD ["pdftotext -v && pdfinfo -v"]

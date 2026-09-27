@@ -30,7 +30,7 @@ def allowed(name):
          '05-operational-resilience','06-cloud-and-technology-risk','07-third-party-risk','08-templates-and-tools',
          '09-enterprise-grc','10-ai-governance'} or (
              len(path.parts)==1 and (
-                 path.suffix.lower() in {'.md','.json','.ini'} or name == 'Dockerfile.production'
+                 path.suffix.lower() in {'.md','.json','.ini'} or name in {'Dockerfile.production','Dockerfile.pdf-tools'}
              )
          )
 

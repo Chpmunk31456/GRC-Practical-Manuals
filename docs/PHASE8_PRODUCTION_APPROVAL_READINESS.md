@@ -99,3 +99,15 @@ The packet reports:
 The handoff performs no policy mutation, creates no approvals, and records
 `automation_completed_human_actions: 0`. It exists to make the remaining
 manual work explicit and auditable.
+
+
+## Improvement 53 — integration acceptance and final CI
+
+Phase 8 closes with
+`qa/PHASE8_INTEGRATION_ACCEPTANCE_2026-09-27.md`.
+
+The closure accepts the production-approval readiness machinery only. It does not
+approve any candidate or satisfy any human/immutable-production prerequisite.
+
+After the closure PR passes the five required exact-head checks and merges,
+Phase 8 is technically complete.

@@ -70,14 +70,14 @@ class RepositoryPublicationTests(unittest.TestCase):
         self.write(path, catalog)
         with patch.object(rollout, "execute_gate", return_value={"status": "PASS"}) as gate:
             result = rollout.run(self.root)
-        self.assertEqual(len(result["results"]), 3)
-        self.assertEqual(gate.call_count, 12)
+        self.assertEqual(len(result["results"]), len(self.manifests) + 1)
+        self.assertEqual(gate.call_count, (len(self.manifests) + 1) * len(rollout.GATES))
 
     def test_failure_never_skips_remaining_gates(self):
         with patch.object(rollout, "execute_gate", return_value={"status": "FAIL"}) as gate:
             result = rollout.run(self.root)
         self.assertEqual(result["status"], "FAIL")
-        self.assertEqual(gate.call_count, 8)
+        self.assertEqual(gate.call_count, len(self.manifests) * len(rollout.GATES))
 
     def test_execution_errors_fail_closed_without_prose_logging(self):
         with patch.object(rollout, "execute_gate", side_effect=RuntimeError("PRIVATE SAMPLE")):

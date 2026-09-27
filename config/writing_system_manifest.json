@@ -81,7 +81,9 @@
     "scripts/phase8_release_queue.py",
     "tests/test_phase8_release_queue.py",
     "scripts/phase8_human_handoff.py",
-    "tests/test_phase8_human_handoff.py"
+    "tests/test_phase8_human_handoff.py",
+    "qa/PHASE8_INTEGRATION_ACCEPTANCE_2026-09-27.md",
+    "tests/test_phase8_integration.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -207,7 +209,8 @@
       49,
       50,
       51,
-      52
+      52,
+      53
     ],
     "hosted_ci_toolchain_attestation": true,
     "immutable_production_environment_verified": false,
@@ -218,6 +221,9 @@
     "one_candidate_at_a_time_release_queue": true,
     "bulk_promotion_allowed": false,
     "deterministic_human_handoff": true,
-    "automation_completed_human_actions": 0
+    "automation_completed_human_actions": 0,
+    "acceptance_record": "qa/PHASE8_INTEGRATION_ACCEPTANCE_2026-09-27.md",
+    "technical_phase_complete": true,
+    "external_human_and_production_prerequisites_complete": false
   }
 }

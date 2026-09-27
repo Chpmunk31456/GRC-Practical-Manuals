@@ -68,3 +68,22 @@ builds reproduce and the resulting digest is pinned into
 overall production toolchain remains `REVIEW_REQUIRED`.
 
 No PDF-toolchain certification authorizes publication.
+
+
+## Improvement 55 — immutable PDF inspection runtime
+
+The PDF runtime is separately pinned to the exact Ubuntu 24.04 amd64 base
+manifest, Ubuntu snapshot `20260927T120000Z`, and
+`poppler-utils=24.02.0-1ubuntu9.9`.
+
+BuildKit may vary OCI creation/history metadata between otherwise identical
+builds. Phase 9 therefore certifies a canonical runtime digest that retains the
+runtime architecture, OS, executable OCI config, rootfs diff IDs, and layer
+descriptors while excluding only volatile OCI `created` and history timestamps.
+
+Two isolated BuildKit jobs must independently produce the same canonical runtime
+digest. Raw OCI manifest digests remain recorded as diagnostic evidence but are
+not treated as equivalent when only volatile metadata differs.
+
+This certification remains non-authorizing and does not satisfy any human
+publication approval.

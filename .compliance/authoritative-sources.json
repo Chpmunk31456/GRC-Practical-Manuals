@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-09-27",
   "sources": [
     {
       "id": "nist-csf-2",
@@ -179,7 +179,7 @@
       "version": "AI RMF 1.0",
       "status": "final-under-revision",
       "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -189,7 +189,7 @@
       "version": "NIST AI 600-1",
       "status": "final",
       "url": "https://www.nist.gov/itl/ai-risk-management-framework/ai-risk-management-framework-resources",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -289,7 +289,7 @@
       "version": "ISO/IEC 17021-1:2015",
       "status": "final-under-revision",
       "url": "https://www.iso.org/standard/61651.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -306,10 +306,10 @@
       "id": "iso-iec-27090",
       "family": "ISO AI",
       "title": "Cybersecurity — Artificial Intelligence — Addressing security threats and compromises to artificial intelligence systems",
-      "version": "ISO/IEC 27090 (stage 60.00)",
-      "status": "under-development",
-      "url": "https://www.iso.org/standard/56581.html",
-      "last_verified": "2026-08-26",
+      "version": "ISO/IEC 27090 (stage 60.00 — under publication)",
+      "status": "under-publication",
+      "url": "https://www.iso.org/standard/27090",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -329,7 +329,7 @@
       "version": "current rule",
       "status": "final",
       "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -339,7 +339,7 @@
       "version": "current rule",
       "status": "final",
       "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -349,7 +349,7 @@
       "version": "current rule",
       "status": "final",
       "url": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -359,7 +359,7 @@
       "version": "current guidance",
       "status": "final",
       "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -389,7 +389,7 @@
       "version": "Regulation (EU) 2026/1744",
       "status": "final",
       "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {
@@ -419,7 +419,7 @@
       "version": "2026 final voluntary code",
       "status": "voluntary-code-non-binding",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-27",
       "review_interval_days": 30
     },
     {

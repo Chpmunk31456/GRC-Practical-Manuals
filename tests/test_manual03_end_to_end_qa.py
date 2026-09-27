@@ -1,4 +1,3 @@
-import json
 import sys
 import tempfile
 import unittest
@@ -14,7 +13,6 @@ from manual03_end_to_end_qa import (  # noqa: E402
     check_pdf,
     load_policy,
     run,
-    sha256,
 )
 
 
@@ -24,9 +22,9 @@ class Manual03EndToEndQATests(unittest.TestCase):
         self.assertEqual(set(policy["languages"]), {"en", "es-419", "pt-BR"})
         self.assertEqual(policy["expected_chapters"], 32)
 
-    def test_chapter_number_extraction(self):
-        text = "## Chapter 1 - A\n## Chapter 2 - B\n## Chapter 2 - duplicate"
-        self.assertEqual(chapter_numbers(text, r"^##\s+Chapter\s+(\d+)\b"), [1, 2])
+    def test_chapter_number_extraction_matches_manual_convention(self):
+        text = "# 1. First chapter\n## 1.1 Detail\n# 2. Second chapter\n# 2. Duplicate"
+        self.assertEqual(chapter_numbers(text, r"^#\s+(\d+)\."), [1, 2])
 
     def test_docx_integrity_rejects_invalid_zip(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -55,14 +53,18 @@ class Manual03EndToEndQATests(unittest.TestCase):
             ok, _ = check_pdf(path)
             self.assertTrue(ok)
 
-    def test_current_manual03_package_passes_or_reports_precise_failures(self):
+    def test_current_manual03_package_has_complete_language_evidence(self):
         policy = load_policy(ROOT / "config" / "manual03_e2e_policy.json")
         result = run(policy)
-        self.assertIn(result["status"], {"PASS", "FAIL"})
-        self.assertIn("evidence", result)
         self.assertEqual(set(result["evidence"]["languages"]), {"en", "es-419", "pt-BR"})
-        if result["status"] == "FAIL":
-            self.assertTrue(result["failures"])
+        for locale in ("en", "es-419", "pt-BR"):
+            self.assertEqual(result["evidence"]["languages"][locale]["chapter_count"], 32)
+            self.assertTrue(result["evidence"]["languages"][locale]["required_terms_present"])
+
+    def test_current_manual03_package_passes_end_to_end_gate(self):
+        policy = load_policy(ROOT / "config" / "manual03_e2e_policy.json")
+        result = run(policy)
+        self.assertEqual(result["status"], "PASS", "\n".join(result["failures"]))
 
 
 if __name__ == "__main__":

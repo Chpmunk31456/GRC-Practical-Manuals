@@ -146,6 +146,7 @@ jobs:
     runs-on: ubuntu-24.04
     outputs:
       manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+      runtime_digest: ${{ steps.build.outputs.runtime_digest }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
       - name: Checkout exact candidate
@@ -169,15 +170,19 @@ jobs:
           print(index['manifests'][0]['digest'])
           PY
           )"
+          runtime_digest="$(python scripts/oci_runtime_digest.py /tmp/pdf-a.oci)"
           lock_sha256="$(sha256sum config/pdf_toolchain_lock.json | awk '{print $1}')"
           [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          [[ "$runtime_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
           echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+          echo "runtime_digest=$runtime_digest" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
 
   pdf-b:
     runs-on: ubuntu-24.04
     outputs:
       manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+      runtime_digest: ${{ steps.build.outputs.runtime_digest }}
       lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
     steps:
       - name: Checkout exact candidate
@@ -201,9 +206,12 @@ jobs:
           print(index['manifests'][0]['digest'])
           PY
           )"
+          runtime_digest="$(python scripts/oci_runtime_digest.py /tmp/pdf-b.oci)"
           lock_sha256="$(sha256sum config/pdf_toolchain_lock.json | awk '{print $1}')"
           [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          [[ "$runtime_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
           echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+          echo "runtime_digest=$runtime_digest" >> "$GITHUB_OUTPUT"
           echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
 
   certify-pdf:
@@ -217,27 +225,32 @@ jobs:
         env:
           MANIFEST_A: ${{ needs.pdf-a.outputs.manifest_digest }}
           MANIFEST_B: ${{ needs.pdf-b.outputs.manifest_digest }}
+          RUNTIME_A: ${{ needs.pdf-a.outputs.runtime_digest }}
+          RUNTIME_B: ${{ needs.pdf-b.outputs.runtime_digest }}
           LOCK_A: ${{ needs.pdf-a.outputs.lock_sha256 }}
           LOCK_B: ${{ needs.pdf-b.outputs.lock_sha256 }}
         run: |
           set -euo pipefail
-          test "$MANIFEST_A" = "$MANIFEST_B"
+          test "$RUNTIME_A" = "$RUNTIME_B"
           test "$LOCK_A" = "$LOCK_B"
           test "$LOCK_A" = "6bdd819b77d42d3b48b7e70280cc73775f9344a39acd64cb1457581850359024"
           EXPECTED="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["pdf_toolchain"].get("container_digest") or "")')"
-          if [ -n "$EXPECTED" ]; then test "$MANIFEST_A" = "$EXPECTED"; fi
+          if [ -n "$EXPECTED" ]; then test "$RUNTIME_A" = "$EXPECTED"; fi
           python scripts/pdf_toolchain_certification.py --output /tmp/phase9-pdf-contract.json
-          python - "$MANIFEST_A" "$LOCK_A" > /tmp/phase9-pdf-certification.json <<'PY'
+          python - "$RUNTIME_A" "$MANIFEST_A" "$MANIFEST_B" "$LOCK_A" > /tmp/phase9-pdf-certification.json <<'PY'
           import json, os, sys
           print(json.dumps({
               "schema_version":1,
               "kind":"phase9-independent-pdf-toolchain-certification",
               "source_revision":os.environ.get("GITHUB_SHA"),
               "independent_build_count":2,
-              "oci_manifest_digest_a":sys.argv[1],
-              "oci_manifest_digest_b":sys.argv[1],
-              "oci_manifest_digests_match":True,
-              "pdf_lock_sha256":sys.argv[2],
+              "canonical_runtime_digest_a":sys.argv[1],
+              "canonical_runtime_digest_b":sys.argv[1],
+              "canonical_runtime_digests_match":True,
+              "oci_manifest_digest_a":sys.argv[2],
+              "oci_manifest_digest_b":sys.argv[3],
+              "oci_manifest_digests_match":sys.argv[2] == sys.argv[3],
+              "pdf_lock_sha256":sys.argv[4],
               "poppler_package_version":"24.02.0-1ubuntu9.9",
               "pdftotext_version":"24.02.0",
               "pdfinfo_version":"24.02.0",

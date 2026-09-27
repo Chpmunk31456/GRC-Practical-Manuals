@@ -1,0 +1,18 @@
+FROM ubuntu:24.04@sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4
+
+ARG UBUNTU_SNAPSHOT_ID=20260927T120000Z
+ENV DEBIAN_FRONTEND=noninteractive \
+    LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
+
+RUN set -eux; \
+    apt-get update --snapshot "$UBUNTU_SNAPSHOT_ID"; \
+    apt-get install --yes --no-install-recommends --snapshot "$UBUNTU_SNAPSHOT_ID" \
+      poppler-utils=24.02.0-1ubuntu9.9; \
+    test "$(dpkg-query -W -f='${Version}' poppler-utils)" = "24.02.0-1ubuntu9.9"; \
+    pdftotext -v 2>&1 | grep -F "pdftotext version 24.02.0"; \
+    pdfinfo -v 2>&1 | grep -F "pdfinfo version 24.02.0"; \
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/* /var/log/apt/* /var/log/dpkg.log
+
+ENTRYPOINT ["/bin/bash","-lc"]
+CMD ["pdftotext -v && pdfinfo -v"]

@@ -8,7 +8,11 @@
     "poppler_package_version": "24.02.0-1ubuntu9.9",
     "pdftotext_version": "pdftotext version 24.02.0",
     "pdfinfo_version": "pdfinfo version 24.02.0",
-    "container_digest": null
+    "container_digest": null,
+    "lock_sha256": "eaf214ee184cb9e26bd390a2bc18e9286478619d8d07e4ba69d1afa12179f402",
+    "base_image_manifest_digest": "sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4",
+    "ubuntu_snapshot_id": "20260927T120000Z",
+    "certification_status": "PENDING_INDEPENDENT_BUILD"
   },
   "build_environment": {
     "generator_dependency_lock_sha256": "de09ea78579a73a8236914019c13d3e7b7a8b83829209e770bf8dc424cd7e656",
@@ -22,7 +26,7 @@
       "source_head": "41a7826c6665b60632a3c999883981d3a265d425"
     }
   },
-  "review_note": "Phase 9 independently reproduced the pinned production runtime on two isolated BuildKit runners and recorded the matching OCI manifest digest. Overall toolchain status remains REVIEW_REQUIRED because the immutable PDF inspection toolchain is not yet verified.",
+  "review_note": "Phase 9 has verified the reproducible Python runtime. The PDF toolchain is now locked to an exact Ubuntu base manifest, Ubuntu Snapshot ID, and Poppler package version, pending independent OCI reproduction.",
   "hosted_ci_attestation": {
     "status": "ATTESTED_NOT_IMMUTABLE",
     "runner_image": "ubuntu-24.04",

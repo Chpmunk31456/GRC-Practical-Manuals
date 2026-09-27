@@ -30,6 +30,7 @@ class Phase4ControlledPublishingTests(unittest.TestCase):
 
     def test_identifier_parser_rejects_truncated_nist_suffix(self):
         self.assertIn("nist sp 800-53a", signals(ID_RE, "NIST SP 800-53A"))
+        self.assertIn("nist sp 800-53a", signals(ID_RE, "NIST SP 800- 53A"))
         self.assertNotIn("nist sp 800-", signals(ID_RE, "NIST SP 800-"))
 
     def test_observability_threshold_blocks_regression(self):

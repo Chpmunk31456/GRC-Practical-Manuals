@@ -14,11 +14,11 @@ from semantic_writing_qa import compare,load_policy
 class Phase4ControlledPublishingTests(unittest.TestCase):
     def test_manifest_index_has_two_initial_manuals(self):
         index=json.loads((ROOT/"config/controlled_publications/index.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(index["manifests"]),2)
+        self.assertEqual(len(index["manifests"]),1)\n        self.assertEqual(len(index.get("candidate_manifests",[])),1)
 
     def test_manifests_have_required_shape(self):
         index=json.loads((ROOT/"config/controlled_publications/index.json").read_text(encoding="utf-8"))
-        for rel in index["manifests"]:
+        for rel in index["manifests"] + index.get("candidate_manifests",[]):
             m=json.loads((ROOT/rel).read_text(encoding="utf-8"))
             self.assertEqual(validate_manifest_shape(m),[])
 

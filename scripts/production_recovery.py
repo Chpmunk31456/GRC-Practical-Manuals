@@ -78,6 +78,16 @@ def restore(archive,receipt,target):
     return len(members)
 
 
+def safe_failure_summary(stdout,stderr):
+    text=(stdout+b'\n'+stderr).decode('utf-8',errors='replace')
+    selected=[]
+    for line in text.splitlines():
+        stripped=line.strip()
+        if stripped.startswith(('FAIL:','ERROR:','FAILED (')) or 'AssertionError:' in stripped:
+            selected.append(stripped)
+    return selected[-20:]
+
+
 def exercise():
     start=time.perf_counter()
     with tempfile.TemporaryDirectory() as td:
@@ -90,7 +100,8 @@ def exercise():
             env=dict(os.environ, CONTROLLED_SOURCE_REVISION=receipt['source_revision'])
             run=subprocess.run(command,cwd=root/'restored',capture_output=True,timeout=180,env=env)
             checks.append({'check':'integrity' if 'scripts/writing_system_integrity.py' in command else 'regression',
-                           'exit_code':run.returncode})
+                           'exit_code':run.returncode,
+                           'failure_summary': safe_failure_summary(run.stdout,run.stderr) if run.returncode else []})
     return {'schema_version':1,'status':'PASS' if all(c['exit_code']==0 for c in checks) else 'FAIL',
             'source_revision':receipt['source_revision'],'archive_sha256':receipt['archive_sha256'],
             'restored_files':count,'checks':checks,'seconds':round(time.perf_counter()-start,3),
@@ -103,5 +114,9 @@ def main():
     args=parser.parse_args();result=exercise()
     args.output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('Isolated backup recovery: '+result['status'])
+    if result['status'] != 'PASS':
+        for check in result['checks']:
+            for line in check.get('failure_summary', []):
+                print(check['check']+': '+line)
     return 0 if result['status']=='PASS' else 1
 if __name__=='__main__':raise SystemExit(main())

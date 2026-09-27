@@ -94,6 +94,9 @@ jobs:
       - name: Attest hosted CI toolchain baseline
         run: python scripts/toolchain_attestation.py --output /tmp/toolchain-attestation.json
 
+      - name: Report exact human approval evidence status
+        run: python scripts/human_approval_evidence.py --output /tmp/human-approval-status.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -114,4 +117,5 @@ jobs:
             /tmp/review-readiness-packets/*.json
             /tmp/review-evidence-status.json
             /tmp/toolchain-attestation.json
+            /tmp/human-approval-status.json
           retention-days: 30

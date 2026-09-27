@@ -107,3 +107,20 @@ package version, PDF lock hash, and tool version checks remain mandatory.
 This is narrower than hashing the whole OS filesystem and stronger for the
 release purpose: generated apt/font/cache state cannot mask or alter the exact
 binaries and libraries used for PDF inspection.
+
+
+## Improvement 55 acceptance
+
+Two isolated BuildKit jobs independently produced the same canonical PDF
+execution-closure digest:
+
+`sha256:c26d953efaf33a237621fb92519180b3e04a7b46a0bfe3e3de49fac3f6b74e4a`
+
+Evidence is bound to Phase 9 certification workflow run `36338542682`,
+certification job `108674100887`, from source head
+`08f9418175342589a7e09e7337fbc7fbc25f4116`.
+
+The production toolchain can therefore be marked `VERIFIED`: both the
+reproducible Python build runtime and the exact snapshot-pinned PDF execution
+closure have independent cryptographic evidence. This verification does not
+authorize publication or replace any human review.

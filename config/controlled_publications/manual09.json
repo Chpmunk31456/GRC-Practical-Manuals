@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "manual_id": "manual09-nist-csf-2",
+  "manual_root": "01-foundations/NIST_CSF_2_Controlled_Implementation",
+  "expected_chapters": 32,
+  "languages": {
+    "en": {
+      "source_globs": [
+        "English/source/*.md",
+        "MANUAL_09_IMPLEMENTATION_PATHS.md"
+      ],
+      "required_terms": [
+        "NIST CSF 2.0",
+        "GOVERN",
+        "IDENTIFY",
+        "PROTECT",
+        "DETECT",
+        "RESPOND",
+        "RECOVER"
+      ],
+      "chapter_heading_pattern": "^##\\s+Chapter\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_EN.docx",
+        "pdf": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_EN.pdf"
+      }
+    },
+    "es-419": {
+      "source_globs": [
+        "Spanish_es-419/source/*.md"
+      ],
+      "required_terms": [
+        "NIST CSF 2.0"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_ES-419.docx",
+        "pdf": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_ES-419.pdf"
+      }
+    },
+    "pt-BR": {
+      "source_globs": [
+        "Portuguese_pt-BR/source/*.md"
+      ],
+      "required_terms": [
+        "NIST CSF 2.0"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_PT-BR.docx",
+        "pdf": "publication/Manual_09_NIST_CSF_2_Controlled_Implementation_PT-BR.pdf"
+      }
+    }
+  },
+  "publication_report": "publication/qa/MANUAL_09_PUBLICATION_REPORT.json",
+  "checksum_manifest": "publication/qa/MANUAL_09_SHA256SUMS.txt",
+  "page_qa": "publication/qa/MANUAL_09_PAGE_QA.csv",
+  "review_records": [
+    {
+      "path": "qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    },
+    {
+      "path": "qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    }
+  ],
+  "release_controls": {
+    "require_report_hash_match": true,
+    "require_checksum_match": true,
+    "require_docx_integrity": true,
+    "require_pdf_integrity": true,
+    "require_page_qa_pass": true,
+    "require_stale_artifact_check": true,
+    "require_roundtrip": true,
+    "require_accessibility": true
+  },
+  "readiness_status": "candidate-blocked-human-localization-accessibility-review"
+}

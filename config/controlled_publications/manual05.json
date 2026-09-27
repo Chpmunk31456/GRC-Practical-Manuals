@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "manual_id": "manual05-ai-auditing-assurance",
+  "manual_root": "03-assurance-and-audit/AI_Auditing_and_Assurance",
+  "expected_chapters": 32,
+  "languages": {
+    "en": {
+      "source_globs": [
+        "English/source/*.md",
+        "MANUAL_05_IMPLEMENTATION_PATHS.md"
+      ],
+      "required_terms": [
+        "AAIA",
+        "audit",
+        "assurance"
+      ],
+      "chapter_heading_pattern": "^##\\s+Chapter\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_05_AI_Auditing_and_Assurance_EN.docx",
+        "pdf": "publication/Manual_05_AI_Auditing_and_Assurance_EN.pdf"
+      }
+    },
+    "es-419": {
+      "source_globs": [
+        "Spanish_es-419/source/*.md"
+      ],
+      "required_terms": [
+        "AAIA"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_05_AI_Auditing_and_Assurance_ES-419.docx",
+        "pdf": "publication/Manual_05_AI_Auditing_and_Assurance_ES-419.pdf"
+      }
+    },
+    "pt-BR": {
+      "source_globs": [
+        "Portuguese_pt-BR/source/*.md"
+      ],
+      "required_terms": [
+        "AAIA"
+      ],
+      "chapter_heading_pattern": "^##\\s+Capítulo\\s+0?(\\d+)\\s+",
+      "artifacts": {
+        "docx": "publication/Manual_05_AI_Auditing_and_Assurance_PT-BR.docx",
+        "pdf": "publication/Manual_05_AI_Auditing_and_Assurance_PT-BR.pdf"
+      }
+    }
+  },
+  "publication_report": "publication/qa/MANUAL_05_PUBLICATION_REPORT.json",
+  "checksum_manifest": "publication/qa/MANUAL_05_SHA256SUMS.txt",
+  "page_qa": "publication/qa/MANUAL_05_PAGE_QA.csv",
+  "review_records": [
+    {
+      "path": "qa/LOCALIZATION_SEMANTIC_REVIEW_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    },
+    {
+      "path": "qa/DOCUMENT_ACCESSIBILITY_PUBLICATION_QA_GATE.md",
+      "required_markers": [
+        "FAIL-CLOSED"
+      ]
+    },
+    {
+      "path": "qa/RELEASE_READINESS_PRESTAGE.md",
+      "required_markers": [
+        "Fail-closed rule"
+      ]
+    }
+  ],
+  "release_controls": {
+    "require_report_hash_match": true,
+    "require_checksum_match": true,
+    "require_docx_integrity": true,
+    "require_pdf_integrity": true,
+    "require_page_qa_pass": true,
+    "require_stale_artifact_check": true,
+    "require_roundtrip": true,
+    "require_accessibility": true
+  },
+  "readiness_status": "candidate-blocked-substantive-human-localization-accessibility-review"
+}

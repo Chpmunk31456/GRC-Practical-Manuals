@@ -52,3 +52,23 @@ therefore cannot authorize publication or move Manual 10 into the active lane.
 Manual 10 also preserves the repository's sequencing boundary: it follows
 Manual 09 in the candidate list and must not bypass Manual 09 in controlled
 publication progression.
+
+
+## Improvement 43 — Manual 05 candidate enrollment
+
+Manual 05 — AI Auditing and Assurance — is enrolled as the third Phase 6
+candidate after Manuals 09 and 10. Its controlled English, Spanish (es-419), and
+Brazilian Portuguese (pt-BR) sources cover all 32 chapters, and its durable
+publication package includes DOCX/PDF artifacts, checksums, publication reports,
+page QA, source verification, technical/editorial review, and a human-review
+packet.
+
+The substantive human gates remain open. The localization and accessibility
+review records are fail-closed, and the retained human-review packet explicitly
+states that it does not itself make Manual 05 publication-eligible. Older
+series-level or standing approval language therefore does not substitute for the
+Phase 5 controlled-release requirement for exact-candidate, hash-bound evidence
+and authorized independent reviewers.
+
+This onboarding changes validation coverage only. It does not activate Manual 05,
+approve its translations, certify accessibility, or authorize publication.

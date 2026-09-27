@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 WORD_NS="{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 MATERIAL_NUM_RE=re.compile(r"(?<![A-Za-z])(?:\d+[.,]\d+|\d+%)(?![A-Za-z])")
-ID_RE=re.compile(r"\b(?:NIST(?:\s+AI)?\s+[A-Z][A-Z0-9.-]*(?:\s+[0-9.-]+)?|ISO(?:/IEC)?\s+[0-9-]+(?::[0-9]{4})?|CVE-[0-9]{4}-[0-9]{4,})\b")
+ID_RE=re.compile(r"\b(?:NIST(?:\s+AI)?\s+[A-Z][A-Z0-9.-]*(?:\s+[0-9]+(?:[.-][0-9A-Z]+)*)?|ISO(?:/IEC)?\s+[0-9-]+(?::[0-9]{4})?|CVE-[0-9]{4}-[0-9]{4,})\b")
 
 def normalize(text:str)->str:
     return re.sub(r"\s+"," ",text.replace("‑","-").replace("–","-").replace("—","-")).strip()
@@ -38,6 +38,10 @@ def pdf_text(path:Path)->str:
     return normalize(r.stdout)
 
 def signals(rx:re.Pattern,text:str)->set[str]:
+    # pdftotext -layout may introduce whitespace after a hyphen at a line wrap,
+    # for example "NIST SP 800- 53A". Rejoin only alphanumeric identifier
+    # components; do not broadly dehyphenate prose.
+    text=re.sub(r"(?<=[0-9A-Z])-\s+(?=[0-9A-Z])","-",text,flags=re.I)
     return {normalize(m.group(0)).casefold() for m in rx.finditer(text)}
 
 def compare_text(source:str,docx:str,pdf:str)->dict:

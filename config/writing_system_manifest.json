@@ -98,7 +98,9 @@
     "config/phase9_operations_policy.json",
     "scripts/phase9_release_drill.py",
     "tests/test_phase9_release_drill.py",
-    "docs/PHASE9_OPERATIONAL_HANDOFF.md"
+    "docs/PHASE9_OPERATIONAL_HANDOFF.md",
+    "qa/PHASE9_INTEGRATION_ACCEPTANCE_2026-09-27.md",
+    "tests/test_phase9_integration.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -252,7 +254,8 @@
     "completed_improvements": [
       54,
       55,
-      56
+      56,
+      57
     ],
     "immutable_build_contract": true,
     "independent_build_certification_required": true,
@@ -263,6 +266,9 @@
     "controlled_release_drill": true,
     "candidate_artifact_fingerprints": true,
     "operational_handoff": true,
-    "bulk_release_allowed": false
+    "bulk_release_allowed": false,
+    "acceptance_record": "qa/PHASE9_INTEGRATION_ACCEPTANCE_2026-09-27.md",
+    "technical_phase_complete": true,
+    "external_human_approval_prerequisites_complete": false
   }
 }

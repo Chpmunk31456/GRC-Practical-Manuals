@@ -76,7 +76,10 @@
     "config/human_approval_requirements.json",
     "config/human_approval_evidence.json",
     "scripts/human_approval_evidence.py",
-    "tests/test_human_approval_evidence.py"
+    "tests/test_human_approval_evidence.py",
+    "config/phase8_release_queue_policy.json",
+    "scripts/phase8_release_queue.py",
+    "tests/test_phase8_release_queue.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -102,7 +105,8 @@
     "config/controlled_publications/manual06.json",
     "config/review_evidence_bindings.json",
     "config/human_approval_requirements.json",
-    "config/human_approval_evidence.json"
+    "config/human_approval_evidence.json",
+    "config/phase8_release_queue_policy.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -128,7 +132,8 @@
     "scripts/review_readiness_packets.py",
     "scripts/review_evidence_status.py",
     "scripts/toolchain_attestation.py",
-    "scripts/human_approval_evidence.py"
+    "scripts/human_approval_evidence.py",
+    "scripts/phase8_release_queue.py"
   ],
   "pinned_runtime": {
     "python": "3.12",
@@ -197,13 +202,16 @@
     "production_approval_readiness": true,
     "completed_improvements": [
       49,
-      50
+      50,
+      51
     ],
     "hosted_ci_toolchain_attestation": true,
     "immutable_production_environment_verified": false,
     "human_approval_inference_prohibited": true,
     "publication_authorized_by_phase8_automation": false,
     "explicit_human_approval_requirements": true,
-    "exact_human_evidence_binding": true
+    "exact_human_evidence_binding": true,
+    "one_candidate_at_a_time_release_queue": true,
+    "bulk_promotion_allowed": false
   }
 }

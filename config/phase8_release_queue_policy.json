@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "promotion_mode": "one_candidate_at_a_time",
+  "bulk_promotion_allowed": false,
+  "required_candidate_state": "READY_FOR_CONTROLLED_RELEASE_REVIEW",
+  "production_toolchain_must_be_verified": true,
+  "publication_authorized_by_queue": false,
+  "policy": "The queue may identify a candidate as eligible for controlled release review only after exact human evidence and global production prerequisites are complete. Eligibility is not publication authorization and never changes rollout_lane."
+}

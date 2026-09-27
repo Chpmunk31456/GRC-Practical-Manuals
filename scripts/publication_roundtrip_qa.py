@@ -38,6 +38,10 @@ def pdf_text(path:Path)->str:
     return normalize(r.stdout)
 
 def signals(rx:re.Pattern,text:str)->set[str]:
+    # pdftotext -layout may introduce whitespace after a hyphen at a line wrap,
+    # for example "NIST SP 800- 53A". Rejoin only alphanumeric identifier
+    # components; do not broadly dehyphenate prose.
+    text=re.sub(r"(?<=[0-9A-Z])-\s+(?=[0-9A-Z])","-",text,flags=re.I)
     return {normalize(m.group(0)).casefold() for m in rx.finditer(text)}
 
 def compare_text(source:str,docx:str,pdf:str)->dict:

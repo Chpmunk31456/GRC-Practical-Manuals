@@ -13,6 +13,9 @@ class ProductionRecoveryTests(unittest.TestCase):
     def test_production_dockerfile_is_backed_up(self):
         self.assertTrue(recovery.allowed("Dockerfile.production"))
 
+    def test_pdf_dockerfile_is_backed_up(self):
+        self.assertTrue(recovery.allowed("Dockerfile.pdf-tools"))
+
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
     def fixture(self,name='docs/example.md'):

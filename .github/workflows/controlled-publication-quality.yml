@@ -104,6 +104,9 @@ jobs:
       - name: Generate Phase 8 human handoff packet
         run: python scripts/phase8_human_handoff.py --output /tmp/phase8-human-handoff.json
 
+      - name: Validate Phase 9 immutable production contract
+        run: python scripts/production_environment_certification.py --output /tmp/phase9-production-contract.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -127,4 +130,5 @@ jobs:
             /tmp/human-approval-status.json
             /tmp/phase8-release-queue.json
             /tmp/phase8-human-handoff.json
+            /tmp/phase9-production-contract.json
           retention-days: 30

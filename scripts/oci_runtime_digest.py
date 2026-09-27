@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
+import io
 import json
 from pathlib import Path
 import tarfile
@@ -16,6 +18,30 @@ def blob_name(digest: str) -> str:
     return f"blobs/sha256/{value}"
 
 
+def _layer_records(raw: bytes) -> list[dict]:
+    if raw[:2] == b"\x1f\x8b":
+        raw = gzip.decompress(raw)
+    records = []
+    with tarfile.open(fileobj=io.BytesIO(raw), mode="r:") as layer:
+        members = sorted(layer.getmembers(), key=lambda m: m.name)
+        for member in members:
+            record = {
+                "path": member.name,
+                "type": member.type.decode("latin1") if isinstance(member.type, bytes) else str(member.type),
+                "mode": member.mode,
+                "uid": member.uid,
+                "gid": member.gid,
+                "linkname": member.linkname or "",
+            }
+            if member.isfile():
+                extracted = layer.extractfile(member)
+                data = extracted.read() if extracted is not None else b""
+                record["size"] = len(data)
+                record["content_sha256"] = hashlib.sha256(data).hexdigest()
+            records.append(record)
+    return records
+
+
 def runtime_contract(path: Path) -> dict:
     with tarfile.open(path, "r") as tf:
         index = json.load(tf.extractfile("index.json"))
@@ -24,19 +50,20 @@ def runtime_contract(path: Path) -> dict:
         manifest_desc = index["manifests"][0]
         manifest = json.load(tf.extractfile(blob_name(manifest_desc["digest"])))
         config = json.load(tf.extractfile(blob_name(manifest["config"]["digest"])))
+        filesystem = []
+        for layer_desc in manifest.get("layers", []):
+            layer_raw = tf.extractfile(blob_name(layer_desc["digest"])).read()
+            filesystem.extend(_layer_records(layer_raw))
 
-    normalized_config = config.get("config") or {}
-    rootfs = config.get("rootfs") or {}
-    # Bind executable semantics to uncompressed rootfs diff IDs rather than
-    # compressed layer transport digests. Compression metadata may vary across
-    # independent BuildKit exporters even when the runtime filesystem is
-    # byte-identical.
+    # Docker/BuildKit may emit different created/history timestamps and tar
+    # mtimes/compression metadata for an otherwise identical runtime. Bind the
+    # certification to executable config plus canonical filesystem semantics.
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "architecture": config.get("architecture"),
         "os": config.get("os"),
-        "config": normalized_config,
-        "rootfs": rootfs,
+        "config": config.get("config") or {},
+        "filesystem": filesystem,
     }
 
 

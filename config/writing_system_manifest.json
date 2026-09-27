@@ -61,7 +61,10 @@
     "config/controlled_publications/manual05.json",
     "config/controlled_publications/manual11.json",
     "config/controlled_publications/manual06.json",
-    "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md"
+    "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md",
+    "scripts/review_readiness_packets.py",
+    "tests/test_review_readiness_packets.py",
+    "docs/PHASE7_REVIEW_READINESS.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -106,7 +109,8 @@
     "scripts/controlled_release.py",
     "scripts/accessibility_validation.py",
     "scripts/production_recovery.py",
-    "scripts/publication_performance.py"
+    "scripts/publication_performance.py",
+    "scripts/review_readiness_packets.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

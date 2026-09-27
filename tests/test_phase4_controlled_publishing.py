@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 
 from controlled_publication_qa import run_manifest,validate_manifest_shape
-from publication_roundtrip_qa import compare_text
+from publication_roundtrip_qa import compare_text, signals, ID_RE
 from publication_accessibility_qa import docx_checks,pdf_checks
 from writing_observability_history import check
 from writing_system_recovery_exercise import run as recovery_run
@@ -27,6 +27,10 @@ class Phase4ControlledPublishingTests(unittest.TestCase):
     def test_roundtrip_detects_numeric_loss(self):
         r=compare_text("Threshold 95%. Control 7.","Threshold 95%. Control 7.","Threshold 90%. Control 7.")
         self.assertEqual(r["status"],"FAIL")
+
+    def test_identifier_parser_rejects_truncated_nist_suffix(self):
+        self.assertIn("nist sp 800-53a", signals(ID_RE, "NIST SP 800-53A"))
+        self.assertNotIn("nist sp 800-", signals(ID_RE, "NIST SP 800-"))
 
     def test_observability_threshold_blocks_regression(self):
         failures=check({"metrics":{"publication_failures":1}},{"thresholds":{"publication_failures":0}})

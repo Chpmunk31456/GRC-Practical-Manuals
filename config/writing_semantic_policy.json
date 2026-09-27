@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "blocking": {
+    "altered_numbers": true,
+    "introduced_numbers": true,
+    "removed_identifiers": true,
+    "introduced_identifiers": true,
+    "modal_strength_change": true,
+    "missing_critical_concepts": true
+  },
+  "identifier_patterns": [
+    "\\bNIST(?:\\s+AI)?\\s+[A-Z0-9.-]+(?:\\s+[0-9.-]+)?\\b",
+    "\\bISO(?:/IEC)?\\s+[0-9-]+(?::[0-9]{4})?\\b",
+    "\\bCVE-[0-9]{4}-[0-9]{4,}\\b"
+  ],
+  "modal_groups": {
+    "mandatory": ["must", "shall", "requires", "required"],
+    "recommended": ["should", "recommended"],
+    "permissive": ["may", "can", "optional"]
+  },
+  "critical_concepts": {
+    "residual_risk": {
+      "en": ["residual risk"],
+      "es-419": ["riesgo residual"],
+      "pt-BR": ["risco residual"]
+    },
+    "human_oversight": {
+      "en": ["human oversight"],
+      "es-419": ["supervisión humana"],
+      "pt-BR": ["supervisão humana"]
+    },
+    "evidence": {
+      "en": ["evidence"],
+      "es-419": ["evidencia"],
+      "pt-BR": ["evidência", "evidências"]
+    },
+    "rollback": {
+      "en": ["rollback"],
+      "es-419": ["rollback", "reversión"],
+      "pt-BR": ["rollback", "reversão"]
+    },
+    "corrective_action": {
+      "en": ["corrective action"],
+      "es-419": ["acción correctiva"],
+      "pt-BR": ["ação corretiva"]
+    }
+  }
+}

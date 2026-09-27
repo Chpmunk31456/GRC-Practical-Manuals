@@ -60,7 +60,8 @@
     "config/controlled_publications/manual10.json",
     "config/controlled_publications/manual05.json",
     "config/controlled_publications/manual11.json",
-    "config/controlled_publications/manual06.json"
+    "config/controlled_publications/manual06.json",
+    "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -134,5 +135,27 @@
     "versioned_observability_baseline": true,
     "executable_recovery_exercise": true,
     "rollout": "incremental_fail_closed"
+  },
+  "phase6": {
+    "repository_wide_candidate_onboarding": true,
+    "completed_improvements": [
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "onboarding_queue_empty": true,
+    "active_manifest": "manual03",
+    "candidate_manifests": [
+      "manual04",
+      "manual09",
+      "manual10",
+      "manual05",
+      "manual11",
+      "manual06"
+    ],
+    "candidate_status_is_not_approval": true,
+    "acceptance_record": "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md"
   }
 }

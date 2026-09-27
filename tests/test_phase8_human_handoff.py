@@ -34,7 +34,7 @@ class Phase8HumanHandoffTests(unittest.TestCase):
         result = handoff.run()
         self.assertIn("status=VERIFIED", result["production_toolchain"]["missing"])
         self.assertIn("pdf_toolchain.container_digest", result["production_toolchain"]["missing"])
-        self.assertIn("build_environment.container_digest", result["production_toolchain"]["missing"])
+        self.assertNotIn("build_environment.container_digest", result["production_toolchain"]["missing"])
 
     def test_all_six_candidates_have_handoff_rows(self):
         result = handoff.run()

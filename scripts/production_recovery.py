@@ -28,7 +28,11 @@ def allowed(name):
     return path.parts[0] in {'scripts','tests','config','.compliance','.github','governance','docs','qa',
          '01-foundations','02-management-systems','03-assurance-and-audit','04-regulatory-compliance',
          '05-operational-resilience','06-cloud-and-technology-risk','07-third-party-risk','08-templates-and-tools',
-         '09-enterprise-grc','10-ai-governance'} or len(path.parts)==1 and path.suffix.lower() in {'.md','.json','.ini'}
+         '09-enterprise-grc','10-ai-governance'} or (
+             len(path.parts)==1 and (
+                 path.suffix.lower() in {'.md','.json','.ini'} or name == 'Dockerfile.production'
+             )
+         )
 
 
 def backup(destination):

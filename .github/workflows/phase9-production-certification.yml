@@ -1,0 +1,138 @@
+name: Phase 9 Production Certification
+
+on:
+  pull_request:
+    paths:
+      - "Dockerfile.production"
+      - "config/production_dependency_lock.json"
+      - "config/production_toolchain.json"
+      - "scripts/production_environment_certification.py"
+      - "tests/test_production_environment_certification.py"
+      - "docs/PHASE9_PRODUCTION_CERTIFICATION.md"
+      - ".github/workflows/phase9-production-certification.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-a:
+    runs-on: ubuntu-24.04
+    outputs:
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+      python_version: ${{ steps.build.outputs.python_version }}
+      lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up isolated BuildKit
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - name: Build immutable production image A
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SOURCE_DATE_EPOCH=0
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/phase9-a.oci             -f Dockerfile.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/phase9-a.oci', 'r') as tf:
+              index = json.load(tf.extractfile('index.json'))
+          print(index['manifests'][0]['digest'])
+          PY
+          )"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1 | tail -n 1)"
+          lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
+          test "$python_version" = "Python 3.12.14"
+          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+          echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
+          echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
+
+  build-b:
+    runs-on: ubuntu-24.04
+    outputs:
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+      python_version: ${{ steps.build.outputs.python_version }}
+      lock_sha256: ${{ steps.build.outputs.lock_sha256 }}
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up isolated BuildKit
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - name: Build immutable production image B
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SOURCE_DATE_EPOCH=0
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/phase9-b.oci             -f Dockerfile.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/phase9-b.oci', 'r') as tf:
+              index = json.load(tf.extractfile('index.json'))
+          print(index['manifests'][0]['digest'])
+          PY
+          )"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1 | tail -n 1)"
+          lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
+          test "$python_version" = "Python 3.12.14"
+          [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+          echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
+          echo "lock_sha256=$lock_sha256" >> "$GITHUB_OUTPUT"
+
+  certify:
+    runs-on: ubuntu-24.04
+    needs: [build-a, build-b]
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Verify independent build reproducibility
+        shell: bash
+        env:
+          MANIFEST_A: ${{ needs.build-a.outputs.manifest_digest }}
+          MANIFEST_B: ${{ needs.build-b.outputs.manifest_digest }}
+          PYTHON_A: ${{ needs.build-a.outputs.python_version }}
+          PYTHON_B: ${{ needs.build-b.outputs.python_version }}
+          LOCK_A: ${{ needs.build-a.outputs.lock_sha256 }}
+          LOCK_B: ${{ needs.build-b.outputs.lock_sha256 }}
+        run: |
+          set -euo pipefail
+          test "$MANIFEST_A" = "$MANIFEST_B"
+          EXPECTED_MANIFEST="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["build_environment"]["container_digest"])')"
+          test "$MANIFEST_A" = "$EXPECTED_MANIFEST"
+          test "$PYTHON_A" = "Python 3.12.14"
+          test "$PYTHON_B" = "Python 3.12.14"
+          test "$LOCK_A" = "$LOCK_B"
+          test "$LOCK_A" = "de09ea78579a73a8236914019c13d3e7b7a8b83829209e770bf8dc424cd7e656"
+          python scripts/production_environment_certification.py --output /tmp/phase9-production-contract.json
+          python - "$MANIFEST_A" "$LOCK_A" > /tmp/phase9-build-certification.json <<'PY'
+          import json, os, sys
+          print(json.dumps({
+              "schema_version": 1,
+              "kind": "phase9-independent-build-certification",
+              "source_revision": os.environ.get("GITHUB_SHA"),
+              "independent_build_count": 2,
+              "oci_manifest_digest_a": sys.argv[1],
+              "oci_manifest_digest_b": sys.argv[1],
+              "oci_manifest_digests_match": True,
+              "python": "3.12.14",
+              "dependency_lock_sha256": sys.argv[2],
+              "immutable_build_image_verified": True,
+              "immutable_pdf_toolchain_verified": False,
+              "publication_authorized": False
+          }, indent=2))
+          PY
+      - name: Retain Phase 9 certification evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: phase9-production-certification
+          path: |
+            /tmp/phase9-production-contract.json
+            /tmp/phase9-build-certification.json
+          retention-days: 30

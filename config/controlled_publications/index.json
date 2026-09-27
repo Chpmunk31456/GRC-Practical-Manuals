@@ -5,13 +5,13 @@
     "config/controlled_publications/manual03.json"
   ],
   "next_candidates": [
-    "01-foundations/NIST_CSF_2_Controlled_Implementation",
     "01-foundations/NIST_RMF_SP_800-53_Controlled_Implementation",
     "03-assurance-and-audit/AI_Auditing_and_Assurance",
     "04-regulatory-compliance/GDPR_Controlled_Implementation",
     "04-regulatory-compliance/HIPAA_Implementation_Series"
   ],
   "candidate_manifests": [
-    "config/controlled_publications/manual04.json"
+    "config/controlled_publications/manual04.json",
+    "config/controlled_publications/manual09.json"
   ]
 }

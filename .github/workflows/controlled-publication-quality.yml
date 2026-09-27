@@ -87,6 +87,9 @@ jobs:
       - name: Generate exact reviewer-readiness packets
         run: python scripts/review_readiness_packets.py --queue /tmp/review-readiness-queue.json --packet-dir /tmp/review-readiness-packets
 
+      - name: Report stale or incomplete review evidence
+        run: python scripts/review_evidence_status.py --output /tmp/review-evidence-status.json
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -105,4 +108,5 @@ jobs:
             /tmp/accessibility-review.json
             /tmp/review-readiness-queue.json
             /tmp/review-readiness-packets/*.json
+            /tmp/review-evidence-status.json
           retention-days: 30

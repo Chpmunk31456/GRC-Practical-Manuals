@@ -79,6 +79,20 @@ def pages(endpoint):
     raise ValueError('approval pagination limit exceeded')
 
 
+def verify_toolchain_record(toolchain):
+    if toolchain.get('status') != 'VERIFIED' or not re.fullmatch(r'\d+\.\d+\.\d+', toolchain.get('python','')):
+        raise ValueError('production toolchain has not been verified')
+    pdf = toolchain.get('pdf_toolchain', {})
+    build = toolchain.get('build_environment', {})
+    if not isinstance(pdf.get('poppler_package_version'),str) or not pdf['poppler_package_version'].strip():
+        raise ValueError('exact PDF package version missing')
+    for record in (pdf,build):
+        if not re.fullmatch(r'sha256:[0-9a-f]{64}',record.get('container_digest') or ''):
+            raise ValueError('immutable environment digest missing')
+    if not re.fullmatch(r'[0-9a-f]{64}',build.get('generator_dependency_lock_sha256') or ''):
+        raise ValueError('generator dependency lock missing')
+
+
 def verify(candidate, first, second):
     revision=candidate['source_revision']
     if not re.fullmatch('[0-9a-f]{40}',revision) or not SEMVER.fullmatch(candidate['version']):
@@ -102,8 +116,7 @@ def verify(candidate, first, second):
             if sha256(contained(ROOT,relative))!=digest:
                 raise ValueError('reviewed evidence hash mismatch')
     toolchain=read_json(ROOT/'config/production_toolchain.json')
-    if toolchain.get('status')!='VERIFIED' or not all(toolchain.get('pdf_toolchain',{}).values()) or not all(toolchain.get('build_environment',{}).values()):
-        raise ValueError('production toolchain has not been verified')
+    verify_toolchain_record(toolchain)
     if not re.fullmatch('[0-9a-f]{64}',candidate['toolchain_sha256']) or sha256(ROOT/'config/production_toolchain.json')!=candidate['toolchain_sha256']:
         raise ValueError('pinned toolchain evidence missing or changed')
     import translation_lifecycle

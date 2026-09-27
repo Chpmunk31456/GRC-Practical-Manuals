@@ -42,7 +42,7 @@ def run(root: Path = ROOT) -> dict:
     evidence = pdf.get("certification_evidence") or {}
     verified = (
         bool(SHA256.fullmatch(digest or ""))
-        and pdf.get("certification_status") == "VERIFIED_REPRODUCIBLE_OCI_MANIFEST"
+        and pdf.get("certification_status") == "VERIFIED_REPRODUCIBLE_CANONICAL_RUNTIME"
         and evidence.get("independent_build_count", 0) >= 2
         and isinstance(evidence.get("workflow_run"), int)
         and isinstance(evidence.get("certification_job"), int)

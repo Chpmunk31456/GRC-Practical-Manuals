@@ -39,7 +39,9 @@
     "tests/test_source_monitoring.py",
     "scripts/translation_lifecycle.py",
     "config/translation_lifecycle.json",
-    "tests/test_translation_lifecycle.py"
+    "tests/test_translation_lifecycle.py",
+    "scripts/publication_dashboard.py",
+    "tests/test_publication_dashboard.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -71,7 +73,8 @@
     "scripts/writing_system_recovery_exercise.py",
     "scripts/repository_publication_qa.py",
     "scripts/source_monitoring.py",
-    "scripts/translation_lifecycle.py"
+    "scripts/translation_lifecycle.py",
+    "scripts/publication_dashboard.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

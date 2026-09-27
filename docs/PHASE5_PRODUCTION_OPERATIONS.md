@@ -81,3 +81,20 @@ existing evidence file with its SHA-256. Changed evidence invalidates the record
 The initial records are empty because existing reviews have not been migrated
 and verified against this exact contract. The report therefore requires review.
 Even current translation evidence is not independent publication approval.
+
+## Publication quality dashboard (improvement 36)
+
+Run `python scripts/publication_dashboard.py --output dashboard.json --summary dashboard.md`.
+Both outputs cover source currency, translation review, writing and regression
+results, DOCX/PDF validation, accessibility, visual review and release approval.
+Collection checks the available publication and lifecycle controls. Evidence
+that was not supplied remains missing; structural accessibility checks alone
+cannot complete the independent accessibility review.
+
+For a consolidated evidence package, pass `--evidence evidence.json --revision SHA`.
+Each category requires a status, exact source revision, timezone-aware observation
+time and unresolved-defect list. Evidence expires after 24 hours. Missing,
+stale, failed and pending categories block readiness. Approval history is shown
+as supplied evidence, not authenticated by the dashboard. The release gate must
+independently verify approvals before publication. The dashboard never grants
+publication authorization, even when every category has passing evidence.

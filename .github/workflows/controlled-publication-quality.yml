@@ -76,3 +76,7 @@ jobs:
 
       - name: Report translation dependencies
         run: python scripts/translation_lifecycle.py --output /tmp/translation-lifecycle.json
+
+      - name: Produce publication quality summary
+        if: always()
+        run: python scripts/publication_dashboard.py --output /tmp/publication-dashboard.json --summary /tmp/publication-dashboard.md

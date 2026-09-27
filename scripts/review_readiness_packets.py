@@ -5,7 +5,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
+import re
 import subprocess
 
 from repository_publication_qa import ROOT, discover, read_json, contained
@@ -17,7 +19,15 @@ def canonical_hash(value: dict) -> str:
 
 
 def git_revision(root: Path = ROOT) -> str:
-    return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+    supplied = os.environ.get("CONTROLLED_SOURCE_REVISION")
+    if supplied is not None:
+        if not re.fullmatch(r"[0-9a-f]{40}", supplied):
+            raise ValueError("invalid controlled source revision")
+        return supplied
+    revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+    if not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise ValueError("invalid git source revision")
+    return revision
 
 
 def source_inventory(manifest: dict, root: Path = ROOT) -> dict:

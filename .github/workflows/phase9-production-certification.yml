@@ -43,7 +43,7 @@ jobs:
           print(index['manifests'][0]['digest'])
           PY
           )"
-          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1)"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1 | tail -n 1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
           test "$python_version" = "Python 3.12.14"
           [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
@@ -78,7 +78,7 @@ jobs:
           print(index['manifests'][0]['digest'])
           PY
           )"
-          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1)"
+          python_version="$(docker run --rm python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a python --version 2>&1 | tail -n 1)"
           lock_sha256="$(sha256sum config/production_dependency_lock.json | awk '{print $1}')"
           test "$python_version" = "Python 3.12.14"
           [[ "$manifest_digest" =~ ^sha256:[0-9a-f]{64}$ ]]

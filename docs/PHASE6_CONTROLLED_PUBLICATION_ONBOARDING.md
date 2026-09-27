@@ -72,3 +72,27 @@ and authorized independent reviewers.
 
 This onboarding changes validation coverage only. It does not activate Manual 05,
 approve its translations, certify accessibility, or authorize publication.
+
+
+## Improvement 44 — GDPR candidate enrollment
+
+Manual 11 — GDPR Privacy and Data Protection Controlled Implementation — is
+enrolled as a Phase 6 candidate. The repository contains 32 controlled chapters
+for English, Spanish (es-419), and Brazilian Portuguese (pt-BR), together with
+DOCX/PDF artifacts, checksums, a publication report, page QA, source verification,
+and explicit localization and accessibility review gates.
+
+The onboarding remains fail-closed. Competent privacy/legal review, localization
+semantic approval, rendered-document accessibility review, changed-scope review,
+and exact-final release approval remain mandatory.
+
+The retained release-readiness pre-stage record also still describes some
+localization and publication work as pending even though corresponding artifacts
+exist in the repository. Phase 6 does not silently rewrite that historical
+evidence. The inconsistency is preserved as a readiness-record reconciliation
+blocker that must be resolved through reviewed governance evidence before any
+active publication decision.
+
+Automated validation can establish technical consistency only. It cannot provide
+organization-specific legal advice, determine GDPR applicability or lawful basis,
+approve transfers or breach decisions, or authorize publication.

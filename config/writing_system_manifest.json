@@ -58,7 +58,8 @@
     "tests/test_phase6_onboarding.py",
     "docs/PHASE6_CONTROLLED_PUBLICATION_ONBOARDING.md",
     "config/controlled_publications/manual10.json",
-    "config/controlled_publications/manual05.json"
+    "config/controlled_publications/manual05.json",
+    "config/controlled_publications/manual11.json"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -79,7 +80,8 @@
     "config/production_toolchain.json",
     "config/controlled_publications/manual09.json",
     "config/controlled_publications/manual10.json",
-    "config/controlled_publications/manual05.json"
+    "config/controlled_publications/manual05.json",
+    "config/controlled_publications/manual11.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",

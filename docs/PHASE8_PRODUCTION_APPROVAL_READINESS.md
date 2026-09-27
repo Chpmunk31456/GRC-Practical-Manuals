@@ -55,3 +55,26 @@ All six candidate manuals explicitly require authoritative-source,
 localization/semantic, accessibility, and release-authorization decisions.
 HIPAA additionally requires legal/semantic review; GDPR additionally requires
 privacy/legal review.
+
+
+## Improvement 51 — one-at-a-time controlled-release readiness queue
+
+Phase 8 adds a repository-level release queue that consumes the exact human
+evidence status from Improvement 50 and the global production prerequisites.
+
+Run:
+
+`python scripts/phase8_release_queue.py --output phase8-release-queue.json`
+
+A candidate can become `ELIGIBLE_FOR_CONTROLLED_RELEASE_REVIEW` only when every
+explicit human decision is current and approved and every global requirement is
+complete. Even then, queue eligibility permits only a subsequent exact-candidate
+controlled-release review.
+
+The queue never changes `rollout_lane`, never bulk-promotes candidates, and
+never authorizes publication. Promotion mode is explicitly
+`one_candidate_at_a_time`.
+
+At Phase 8 implementation time all six candidates remain blocked because the
+human approval registries and immutable production environment are intentionally
+not fabricated.

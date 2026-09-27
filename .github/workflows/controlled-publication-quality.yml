@@ -84,6 +84,9 @@ jobs:
       - name: Report independent accessibility requirements
         run: python scripts/accessibility_validation.py --output /tmp/accessibility-review.json
 
+      - name: Generate exact reviewer-readiness packets
+        run: python scripts/review_readiness_packets.py --queue /tmp/review-readiness-queue.json --packet-dir /tmp/review-readiness-packets
+
       - name: Verify backup restoration and recovered tests
         run: python scripts/production_recovery.py --output /tmp/production-recovery.json
 
@@ -100,4 +103,6 @@ jobs:
             /tmp/publication-dashboard.json
             /tmp/publication-dashboard.md
             /tmp/accessibility-review.json
+            /tmp/review-readiness-queue.json
+            /tmp/review-readiness-packets/*.json
           retention-days: 30

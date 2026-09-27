@@ -78,10 +78,10 @@ manifest, Ubuntu snapshot `20260927T120000Z`, and
 
 BuildKit may vary OCI creation/history metadata between otherwise identical
 builds. Phase 9 therefore certifies a canonical runtime digest that retains the
-runtime architecture, OS, executable OCI config, and uncompressed rootfs diff
-IDs. It intentionally excludes volatile OCI `created`/history timestamps and
-compressed layer transport digests, because gzip/export metadata may vary while
-the uncompressed runtime filesystem remains identical.
+runtime architecture, OS, executable OCI config, and a canonical inventory of
+runtime filesystem paths, file bytes, symlink targets, permissions, and
+ownership. It intentionally excludes volatile OCI `created`/history timestamps,
+tar mtimes, and compressed-layer transport metadata.
 
 Two isolated BuildKit jobs must independently produce the same canonical runtime
 digest. Raw OCI manifest digests remain recorded as diagnostic evidence but are

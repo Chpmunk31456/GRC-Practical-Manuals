@@ -91,3 +91,18 @@ release-review requirements.
 
 Operational cadence and handoff procedures are documented in
 `docs/PHASE9_OPERATIONAL_HANDOFF.md`.
+
+
+## Improvement 57 — integration acceptance and final CI
+
+Phase 9 closes with
+`qa/PHASE9_INTEGRATION_ACCEPTANCE_2026-09-27.md`.
+
+The closure accepts the independently reproduced production runtime/PDF
+toolchains, recovery-tested release operations, exact candidate artifact
+fingerprints, and the non-authorizing controlled-release drill.
+
+It does not approve any candidate or satisfy any human approval prerequisite.
+
+After the closure PR passes the complete seven-gate exact-head set and merges,
+Phase 9 is technically complete.

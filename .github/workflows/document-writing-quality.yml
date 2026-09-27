@@ -13,13 +13,13 @@ on:
       - ".github/styles/**"
       - ".github/workflows/document-writing-quality.yml"
       - "config/document_writing_policy.json"
-      - "config/manual03_e2e_policy.json"
+      - "config/manual03_e2e_policy.json"\n      - "config/writing_context_profiles.json"\n      - "config/writing_semantic_policy.json"\n      - "config/approved_writing_feedback.json"\n      - "config/writing_system_manifest.json"
       - "scripts/document_writing_qa.py"
-      - "scripts/manual03_end_to_end_qa.py"
+      - "scripts/manual03_end_to_end_qa.py"\n      - "scripts/semantic_writing_qa.py"\n      - "scripts/unified_writing_engine.py"\n      - "scripts/writing_observability.py"\n      - "scripts/writing_system_integrity.py"
       - "scripts/generate_nist_ai_rmf_manual_03_publication_v3.py"
       - "tests/test_document_writing_qa.py"
-      - "tests/test_manual03_end_to_end_qa.py"
-      - "DOCUMENT_WRITING_STANDARD.md"
+      - "tests/test_manual03_end_to_end_qa.py"\n      - "tests/test_phase3_writing_system.py"
+      - "DOCUMENT_WRITING_STANDARD.md"\n      - "WRITING_SYSTEM_RECOVERY.md"
       - "AGENTS.md"
       - "01-foundations/NIST_AI_RMF_1.0/**"
   schedule:
@@ -55,6 +55,17 @@ jobs:
           python -m py_compile scripts/document_writing_qa.py
           python -m py_compile scripts/manual03_end_to_end_qa.py
           python -m py_compile scripts/generate_nist_ai_rmf_manual_03_publication_v3.py
+
+      - name: Smoke test unified writing engine and observability
+        run: |
+          python scripts/unified_writing_engine.py DOCUMENT_WRITING_STANDARD.md \
+            --context technical_documentation \
+            --output /tmp/unified-writing-report.json
+          python scripts/semantic_writing_qa.py DOCUMENT_WRITING_STANDARD.md DOCUMENT_WRITING_STANDARD.md \
+            --source-locale en --target-locale en \
+            --output /tmp/semantic-self-check.json
+          python scripts/writing_observability.py /tmp/unified-writing-report.json \
+            --output /tmp/writing-observability.json
 
       - name: Validate Manual 03 source-to-publication chain
         run: |

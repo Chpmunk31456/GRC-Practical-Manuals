@@ -1,0 +1,94 @@
+name: Controlled Publication Quality
+
+on:
+  pull_request:
+    paths:
+      - "config/controlled_publication_manifest.schema.json"
+      - "config/controlled_publications/**"
+      - "config/writing_semantic_policy.json"
+      - "config/writing_observability_policy.json"
+      - "config/writing_system_manifest.json"
+      - "scripts/controlled_publication_qa.py"
+      - "scripts/publication_roundtrip_qa.py"
+      - "scripts/publication_layout_qa.py"
+      - "scripts/publication_accessibility_qa.py"
+      - "scripts/semantic_writing_qa.py"
+      - "scripts/writing_observability_history.py"
+      - "scripts/writing_system_recovery_exercise.py"
+      - "tests/test_phase4_controlled_publishing.py"
+      - "qa/writing-observability/**"
+      - "qa/writing-system-recovery/**"
+      - "WRITING_SYSTEM_RECOVERY.md"
+      - "01-foundations/NIST_AI_RMF_1.0/**"
+      - "01-foundations/NIST_AI_600-1_Generative_AI_Profile/**"
+      - ".github/workflows/controlled-publication-quality.yml"
+  schedule:
+    - cron: "41 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: controlled-publication-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  controlled-publication-quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Provision and verify PDF inspection tools
+        run: |
+          set -euo pipefail
+          if ! command -v pdftotext >/dev/null || ! command -v pdfinfo >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install --no-install-recommends -y poppler-utils
+          fi
+          command -v pdftotext
+          command -v pdfinfo
+          pdftotext -v 2>&1 | head -n 1
+          pdfinfo -v 2>&1 | head -n 1
+
+      - name: Test Phase 4 controls
+        run: |
+          python -m unittest tests.test_phase4_controlled_publishing -v
+          python -m py_compile scripts/controlled_publication_qa.py
+          python -m py_compile scripts/publication_roundtrip_qa.py
+          python -m py_compile scripts/publication_layout_qa.py
+          python -m py_compile scripts/publication_accessibility_qa.py
+          python -m py_compile scripts/semantic_writing_qa.py
+          python -m py_compile scripts/writing_observability_history.py
+          python -m py_compile scripts/writing_system_recovery_exercise.py
+
+      - name: Validate reusable controlled publication manifests
+        run: |
+          python scripts/controlled_publication_qa.py             --index config/controlled_publications/index.json             --output /tmp/publication-e2e.json
+
+      - name: Validate round-trip, layout and accessibility
+        run: |
+          set -euo pipefail
+          for manifest in config/controlled_publications/manual03.json config/controlled_publications/manual04.json; do
+            stem="$(basename "$manifest" .json)"
+            python scripts/publication_roundtrip_qa.py "$manifest" --output "/tmp/${stem}-roundtrip.json"
+            python scripts/publication_layout_qa.py "$manifest" --output "/tmp/${stem}-layout.json"
+            python scripts/publication_accessibility_qa.py "$manifest" --output "/tmp/${stem}-accessibility.json"
+          done
+
+      - name: Enforce observability baseline
+        run: |
+          python scripts/writing_observability_history.py             /tmp/publication-e2e.json             /tmp/manual03-roundtrip.json /tmp/manual03-layout.json /tmp/manual03-accessibility.json             /tmp/manual04-roundtrip.json /tmp/manual04-layout.json /tmp/manual04-accessibility.json             --output /tmp/phase4-observability.json
+
+      - name: Exercise disaster recovery
+        run: |
+          python scripts/writing_system_recovery_exercise.py             --require-pdf-tools             --output /tmp/recovery-exercise.json

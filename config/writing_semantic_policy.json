@@ -1,48 +1,152 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "blocking": {
     "altered_numbers": true,
     "introduced_numbers": true,
     "removed_identifiers": true,
     "introduced_identifiers": true,
     "modal_strength_change": true,
-    "missing_critical_concepts": true
+    "missing_critical_concepts": true,
+    "negation_change": true,
+    "date_drift": true,
+    "currency_drift": true,
+    "citation_loss": true,
+    "list_item_loss": true
   },
   "identifier_patterns": [
     "\\bNIST(?:\\s+AI)?\\s+[A-Z0-9.-]+(?:\\s+[0-9.-]+)?\\b",
     "\\bISO(?:/IEC)?\\s+[0-9-]+(?::[0-9]{4})?\\b",
-    "\\bCVE-[0-9]{4}-[0-9]{4,}\\b"
+    "\\bCVE-[0-9]{4}-[0-9]{4,}\\b",
+    "\\b(?:Article|Section|Annex|Control|Clause)\\s+[A-Z0-9.-]+\\b"
+  ],
+  "date_patterns": [
+    "\\b\\d{4}-\\d{2}-\\d{2}\\b",
+    "\\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+\\d{1,2},\\s+\\d{4}\\b"
+  ],
+  "currency_patterns": [
+    "(?:USD|COP|EUR|BRL)\\s*\\d[\\d,]*(?:\\.\\d+)?",
+    "[$€£]\\s*\\d[\\d,]*(?:\\.\\d+)?"
+  ],
+  "negation_terms": [
+    "not",
+    "no",
+    "never",
+    "without",
+    "prohibited",
+    "shall not",
+    "must not"
   ],
   "modal_groups": {
-    "mandatory": ["must", "shall", "requires", "required"],
-    "recommended": ["should", "recommended"],
-    "permissive": ["may", "can", "optional"]
+    "mandatory": [
+      "must",
+      "shall",
+      "requires",
+      "required"
+    ],
+    "recommended": [
+      "should",
+      "recommended"
+    ],
+    "permissive": [
+      "may",
+      "can",
+      "optional"
+    ]
   },
   "critical_concepts": {
     "residual_risk": {
-      "en": ["residual risk"],
-      "es-419": ["riesgo residual"],
-      "pt-BR": ["risco residual"]
+      "en": [
+        "residual risk"
+      ],
+      "es-419": [
+        "riesgo residual"
+      ],
+      "pt-BR": [
+        "risco residual"
+      ]
     },
     "human_oversight": {
-      "en": ["human oversight"],
-      "es-419": ["supervisión humana"],
-      "pt-BR": ["supervisão humana"]
+      "en": [
+        "human oversight"
+      ],
+      "es-419": [
+        "supervisión humana"
+      ],
+      "pt-BR": [
+        "supervisão humana"
+      ]
     },
     "evidence": {
-      "en": ["evidence"],
-      "es-419": ["evidencia"],
-      "pt-BR": ["evidência", "evidências"]
+      "en": [
+        "evidence"
+      ],
+      "es-419": [
+        "evidencia"
+      ],
+      "pt-BR": [
+        "evidência",
+        "evidências"
+      ]
     },
     "rollback": {
-      "en": ["rollback"],
-      "es-419": ["rollback", "reversión"],
-      "pt-BR": ["rollback", "reversão"]
+      "en": [
+        "rollback"
+      ],
+      "es-419": [
+        "rollback",
+        "reversión"
+      ],
+      "pt-BR": [
+        "rollback",
+        "reversão"
+      ]
     },
     "corrective_action": {
-      "en": ["corrective action"],
-      "es-419": ["acción correctiva"],
-      "pt-BR": ["ação corretiva"]
+      "en": [
+        "corrective action"
+      ],
+      "es-419": [
+        "acción correctiva"
+      ],
+      "pt-BR": [
+        "ação corretiva"
+      ]
+    },
+    "authorization": {
+      "en": [
+        "authorization"
+      ],
+      "es-419": [
+        "autorización"
+      ],
+      "pt-BR": [
+        "autorização"
+      ]
+    },
+    "incident": {
+      "en": [
+        "incident"
+      ],
+      "es-419": [
+        "incidente"
+      ],
+      "pt-BR": [
+        "incidente"
+      ]
+    },
+    "assurance_limitations": {
+      "en": [
+        "assurance limitation",
+        "limitations of assurance"
+      ],
+      "es-419": [
+        "limitación de aseguramiento",
+        "limitaciones del aseguramiento"
+      ],
+      "pt-BR": [
+        "limitação de asseguração",
+        "limitações da asseguração"
+      ]
     }
   }
 }

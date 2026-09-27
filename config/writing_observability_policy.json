@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "baseline_id": "phase4-initial-production-baseline",
+  "baseline_date": "2026-09-27",
+  "thresholds": {
+    "failed_reports": 0,
+    "semantic_failures": 0,
+    "publication_failures": 0,
+    "roundtrip_failures": 0,
+    "layout_failures": 0,
+    "accessibility_failures": 0
+  },
+  "retention": {
+    "versioned_baseline": true,
+    "github_actions_run_history": true,
+    "baseline_changes_require_review": true
+  }
+}

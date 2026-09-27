@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "history": [
+    {
+      "date": "2026-09-27",
+      "event": "phase4_baseline_initialized",
+      "source_commit": "0e718358c8c16645c0432e91ffc690378f9a0d56",
+      "notes": "Initial repository-wide controlled publishing observability baseline. Phase 3 was fully green before this baseline was created."
+    },
+    {
+      "date": "2026-09-27",
+      "event": "phase4_production_validation_passed",
+      "source_commit": "a88d3d91e1004ab77025ca1e33a2034e288ca7d1",
+      "workflow_run_id": 36321799863,
+      "active_manuals": [
+        "manual03-nist-ai-rmf"
+      ],
+      "candidate_manuals": [
+        "manual04-nist-ai-600-1"
+      ],
+      "results": {
+        "reusable_publication_validation": "PASS",
+        "semantic_roundtrip": "PASS",
+        "layout_regression": "PASS",
+        "structural_accessibility": "PASS",
+        "observability_baseline": "PASS",
+        "recovery_exercise": "PASS"
+      },
+      "notes": "Manual 04 remains fail-closed in the candidate lane pending the human semantic approval required by its retained review record."
+    }
+  ]
+}

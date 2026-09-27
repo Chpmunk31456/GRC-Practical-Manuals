@@ -189,3 +189,23 @@ New professional documents should use this standard from the first draft. Before
 - preserve the exact release evidence and hashes used for approval.
 
 The target is not "perfectly polished AI text." The target is accurate, useful, human professional writing that can withstand technical, regulatory, editorial, localization, and publication review.
+
+
+## Repository-wide controlled publishing
+
+Controlled publications use a reusable manifest-driven QA engine. Each onboarded manual declares its controlled source globs, locales, expected chapter structure, release artifacts, publication report, checksum manifest, page-level QA evidence, review records, and required release controls.
+
+The repository-wide publication pipeline verifies:
+
+- controlled source structure and required terminology;
+- stale-artifact state using repository history;
+- DOCX and PDF integrity;
+- publication-report and checksum agreement;
+- source → DOCX → PDF semantic round-trip signals;
+- rendered-page regression evidence, including page counts, dimensions, per-page text presence, and retained PASS state;
+- structural accessibility signals for headings, document language, alternative text, PDF language/tag-tree/outline markers;
+- semantic drift involving numbers, identifiers, dates, currency, requirement strength, negation, citations, list items, URLs, and critical concepts;
+- versioned quality-observability thresholds;
+- reproducible recovery preflight.
+
+Onboarding remains incremental and fail closed. A new manual is added to the controlled-publication index only after its manifest and existing release evidence pass the reusable engine. Manual-specific validators may remain temporarily as compatibility controls while migration proceeds.

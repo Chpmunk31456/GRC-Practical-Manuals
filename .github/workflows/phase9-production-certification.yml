@@ -1,4 +1,5 @@
 name: Phase 9 Production Certification
+# Phase 9 closure exercises this certification workflow on the exact acceptance head.
 
 on:
   pull_request:

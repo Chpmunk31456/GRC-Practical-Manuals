@@ -64,7 +64,12 @@
     "qa/PHASE6_INTEGRATION_ACCEPTANCE_2026-09-27.md",
     "scripts/review_readiness_packets.py",
     "tests/test_review_readiness_packets.py",
-    "docs/PHASE7_REVIEW_READINESS.md"
+    "docs/PHASE7_REVIEW_READINESS.md",
+    "config/review_readiness_policy.json",
+    "config/review_evidence/index.json",
+    "config/review_evidence.schema.json",
+    "scripts/review_evidence_validation.py",
+    "tests/test_review_evidence_validation.py"
   ],
   "json_configs": [
     "config/document_writing_policy.json",
@@ -87,7 +92,10 @@
     "config/controlled_publications/manual10.json",
     "config/controlled_publications/manual05.json",
     "config/controlled_publications/manual11.json",
-    "config/controlled_publications/manual06.json"
+    "config/controlled_publications/manual06.json",
+    "config/review_readiness_policy.json",
+    "config/review_evidence/index.json",
+    "config/review_evidence.schema.json"
   ],
   "python_modules": [
     "scripts/document_writing_qa.py",
@@ -110,7 +118,8 @@
     "scripts/accessibility_validation.py",
     "scripts/production_recovery.py",
     "scripts/publication_performance.py",
-    "scripts/review_readiness_packets.py"
+    "scripts/review_readiness_packets.py",
+    "scripts/review_evidence_validation.py"
   ],
   "pinned_runtime": {
     "python": "3.12",

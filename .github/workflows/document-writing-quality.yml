@@ -7,15 +7,33 @@ on:
       - "**/*.txt"
       - "**/*.rst"
       - "**/*.docx"
+      - "**/*.pdf"
       - ".vale.ini"
       - ".vale-editorial.ini"
       - ".github/styles/**"
       - ".github/workflows/document-writing-quality.yml"
       - "config/document_writing_policy.json"
+      - "config/manual03_e2e_policy.json"
+      - "config/writing_context_profiles.json"
+      - "config/writing_semantic_policy.json"
+      - "config/approved_writing_feedback.json"
+      - "config/writing_system_manifest.json"
       - "scripts/document_writing_qa.py"
+      - "scripts/manual03_end_to_end_qa.py"
+      - "scripts/semantic_writing_qa.py"
+      - "scripts/unified_writing_engine.py"
+      - "scripts/writing_observability.py"
+      - "scripts/writing_system_integrity.py"
+      - "scripts/generate_nist_ai_rmf_manual_03_publication_v3.py"
       - "tests/test_document_writing_qa.py"
+      - "tests/test_manual03_end_to_end_qa.py"
+      - "tests/test_phase3_writing_system.py"
       - "DOCUMENT_WRITING_STANDARD.md"
+      - "WRITING_SYSTEM_RECOVERY.md"
       - "AGENTS.md"
+      - "01-foundations/NIST_AI_RMF_1.0/**"
+  schedule:
+    - cron: "17 8 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -41,10 +59,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Test document writing QA
+      - name: Test complete writing system
         run: |
-          python -m unittest tests.test_document_writing_qa -v
+          python scripts/writing_system_integrity.py --output /tmp/writing-system-integrity.json
+          python -m unittest             tests.test_document_writing_qa             tests.test_manual03_end_to_end_qa             tests.test_phase3_writing_system -v
           python -m py_compile scripts/document_writing_qa.py
+          python -m py_compile scripts/manual03_end_to_end_qa.py
+          python -m py_compile scripts/semantic_writing_qa.py
+          python -m py_compile scripts/unified_writing_engine.py
+          python -m py_compile scripts/writing_observability.py
+          python -m py_compile scripts/writing_system_integrity.py
+          python -m py_compile scripts/generate_nist_ai_rmf_manual_03_publication_v3.py
+
+      - name: Smoke test unified writing engine and observability
+        run: |
+          python scripts/unified_writing_engine.py DOCUMENT_WRITING_STANDARD.md             --context technical_documentation             --output /tmp/unified-writing-report.json
+          python scripts/semantic_writing_qa.py DOCUMENT_WRITING_STANDARD.md DOCUMENT_WRITING_STANDARD.md             --source-locale en --target-locale en             --output /tmp/semantic-self-check.json
+          python scripts/writing_observability.py /tmp/unified-writing-report.json             --output /tmp/writing-observability.json
+
+      - name: Validate Manual 03 source-to-publication chain
+        run: |
+          python scripts/manual03_end_to_end_qa.py             --format json             --output /tmp/manual03-e2e-report.json
 
       - name: Select documents
         id: documents
@@ -90,9 +125,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --show-error --silent --location --proto '=https' --tlsv1.2 \
-            https://languagetool.org/download/LanguageTool-6.6.zip \
-            --output /tmp/LanguageTool-6.6.zip
+          curl --fail --show-error --silent --location --proto '=https' --tlsv1.2             https://languagetool.org/download/LanguageTool-6.6.zip             --output /tmp/LanguageTool-6.6.zip
           echo "53600506b399bb5ffe1e4c8dec794fd378212f14aaf38ccef9b6f89314d11631  /tmp/LanguageTool-6.6.zip" | sha256sum --check --strict
           unzip -q /tmp/LanguageTool-6.6.zip -d /tmp/languagetool
           LT_DIR="/tmp/languagetool/LanguageTool-6.6"
@@ -105,12 +138,9 @@ jobs:
         run: |
           set -euo pipefail
           cd "$LT_DIR"
-          nohup java -cp languagetool-server.jar org.languagetool.server.HTTPServer \
-            --config server.properties --port 8010 > /tmp/languagetool.log 2>&1 &
+          nohup java -cp languagetool-server.jar org.languagetool.server.HTTPServer             --config server.properties --port 8010 > /tmp/languagetool.log 2>&1 &
           for attempt in {1..30}; do
-            if curl -fsS -X POST http://127.0.0.1:8010/v2/check \
-              --data-urlencode "language=en-US" \
-              --data-urlencode "text=This is a grammar test." >/dev/null; then
+            if curl -fsS -X POST http://127.0.0.1:8010/v2/check               --data-urlencode "language=en-US"               --data-urlencode "text=This is a grammar test." >/dev/null; then
               exit 0
             fi
             sleep 2
@@ -126,14 +156,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "pull_request" ]; then
-            python scripts/document_writing_qa.py \
-              --changed-from "$BASE_SHA" \
-              --require-languagetool \
-              --fail-level error
+            python scripts/document_writing_qa.py               --changed-from "$BASE_SHA"               --require-languagetool               --fail-level error
           else
-            python scripts/document_writing_qa.py \
-              --all \
-              --require-languagetool \
-              --fail-level error \
-              --output /tmp/document-writing-audit.txt
+            python scripts/document_writing_qa.py               --all               --require-languagetool               --fail-level error               --output /tmp/document-writing-audit.txt
           fi

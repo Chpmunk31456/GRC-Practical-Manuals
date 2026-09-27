@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "manual_root": "01-foundations/NIST_AI_RMF_1.0",
+  "languages": {
+    "en": {
+      "source_globs": [
+        "English/source/*.md",
+        "MANUAL_03_IMPLEMENTATION_PATHS.md"
+      ],
+      "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
+    },
+    "es-419": {
+      "source_globs": [
+        "translations/es-419/source/*.md",
+        "es-419/source/*.md"
+      ],
+      "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
+    },
+    "pt-BR": {
+      "source_globs": [
+        "translations/pt-BR/source/*.md",
+        "pt-BR/source/*.md"
+      ],
+      "required_terms": ["NIST AI RMF 1.0", "GOVERN", "MAP", "MEASURE", "MANAGE"],
+      "chapter_heading_pattern": "^#\\s+(\\d+)\\."
+    }
+  },
+  "expected_chapters": 32,
+  "publication_report": "publication/qa/MANUAL_03_PUBLICATION_REPORT.json",
+  "publication_readme": "publication/README.md",
+  "translation_review": "translations/CONTROLLED_TRANSLATION_REVIEW_01.md",
+  "checksum_manifest": "publication/qa/MANUAL_03_SHA256SUMS.txt",
+  "required_publication_artifacts": {
+    "en": [
+      "publication/Manual_03_NIST_AI_RMF_Implementation_EN.docx",
+      "publication/Manual_03_NIST_AI_RMF_Implementation_EN.pdf"
+    ],
+    "es-419": [
+      "publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.docx",
+      "publication/Manual_03_NIST_AI_RMF_Implementation_ES-419.pdf"
+    ],
+    "pt-BR": [
+      "publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.docx",
+      "publication/Manual_03_NIST_AI_RMF_Implementation_PT-BR.pdf"
+    ]
+  },
+  "maintenance": {
+    "require_fail_closed_publication_language": true,
+    "require_translation_review_pass": true,
+    "require_report_hash_match": true,
+    "require_docx_integrity": true,
+    "require_pdf_signature": true
+  }
+}

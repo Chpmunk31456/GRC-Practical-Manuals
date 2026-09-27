@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "default_context": "technical_documentation",
+  "profiles": {
+    "technical_documentation": {
+      "tone": "clear, precise, evidence-oriented professional",
+      "format_priorities": ["headings", "tables", "procedures", "citations", "defined terms"],
+      "preserve": ["technical meaning", "identifiers", "numbers", "citations", "controlled terminology"],
+      "avoid": ["marketing language", "unsupported certainty", "unnecessary synonym substitution"]
+    },
+    "executive_report": {
+      "tone": "concise executive professional",
+      "format_priorities": ["decision", "risk", "impact", "owner", "next action"],
+      "preserve": ["material facts", "numbers", "risk boundaries", "decisions"],
+      "avoid": ["implementation detail without decision value", "inflated claims"]
+    },
+    "resume": {
+      "tone": "human, concise, evidence-based professional",
+      "format_priorities": ["role relevance", "measurable impact", "ATS readability"],
+      "preserve": ["truthful scope", "dates", "metrics", "technologies", "employers"],
+      "avoid": ["invented metrics", "keyword stuffing", "generic AI phrasing"]
+    },
+    "cover_letter": {
+      "tone": "natural, professionally friendly",
+      "format_priorities": ["role fit", "specific evidence", "concise close"],
+      "preserve": ["truthful experience", "role facts", "company facts"],
+      "avoid": ["flattery", "unsupported claims", "resume repetition"]
+    },
+    "recruiter_reply": {
+      "tone": "brief, warm, professionally direct",
+      "format_priorities": ["answer the request", "availability", "constraints", "next step"],
+      "preserve": ["compensation", "location", "work authorization", "availability"],
+      "avoid": ["oversharing", "long background summaries", "ambiguous commitments"]
+    },
+    "general_professional": {
+      "tone": "natural, clear professional",
+      "format_priorities": ["purpose", "clarity", "action"],
+      "preserve": ["facts", "numbers", "names", "commitments"],
+      "avoid": ["generic filler", "needless formality"]
+    }
+  }
+}

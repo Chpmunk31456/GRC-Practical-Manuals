@@ -1,0 +1,105 @@
+name: Phase 9 PDF Toolchain Certification
+
+on:
+  pull_request:
+    paths:
+      - "Dockerfile.pdf.production"
+      - "config/production_pdf_dependency_lock.json"
+      - "config/production_toolchain.json"
+      - "scripts/pdf_toolchain_certification.py"
+      - "tests/test_pdf_toolchain_certification.py"
+      - ".github/workflows/phase9-pdf-toolchain-certification.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pdf-a:
+    runs-on: ubuntu-24.04
+    outputs:
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+      package_version: ${{ steps.build.outputs.package_version }}
+      pdftotext_version: ${{ steps.build.outputs.pdftotext_version }}
+      pdfinfo_version: ${{ steps.build.outputs.pdfinfo_version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - name: Build PDF image A
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SOURCE_DATE_EPOCH=0
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/pdf-a.oci             -f Dockerfile.pdf.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/pdf-a.oci', 'r') as tf:
+              print(json.load(tf.extractfile('index.json'))['manifests'][0]['digest'])
+          PY
+          )"
+          docker build --no-cache -t phase9-pdf-a -f Dockerfile.pdf.production .
+          package_version="$(docker run --rm --entrypoint dpkg-query phase9-pdf-a -W -f='${Version}' poppler-utils)"
+          pdftotext_version="$(docker run --rm --entrypoint sh phase9-pdf-a -c 'pdftotext -v 2>&1 | head -n 1')"
+          pdfinfo_version="$(docker run --rm --entrypoint sh phase9-pdf-a -c 'pdfinfo -v 2>&1 | head -n 1')"
+          echo "DISCOVERED_PDF_MANIFEST=$manifest_digest"
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+          echo "package_version=$package_version" >> "$GITHUB_OUTPUT"
+          echo "pdftotext_version=$pdftotext_version" >> "$GITHUB_OUTPUT"
+          echo "pdfinfo_version=$pdfinfo_version" >> "$GITHUB_OUTPUT"
+
+  pdf-b:
+    runs-on: ubuntu-24.04
+    outputs:
+      manifest_digest: ${{ steps.build.outputs.manifest_digest }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4.4.1
+      - name: Build PDF image B
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          export SOURCE_DATE_EPOCH=0
+          docker buildx build --no-cache --provenance=false --sbom=false --platform linux/amd64             --build-arg SOURCE_DATE_EPOCH=0             --output type=oci,dest=/tmp/pdf-b.oci             -f Dockerfile.pdf.production .
+          manifest_digest="$(python - <<'PY'
+          import json, tarfile
+          with tarfile.open('/tmp/pdf-b.oci', 'r') as tf:
+              print(json.load(tf.extractfile('index.json'))['manifests'][0]['digest'])
+          PY
+          )"
+          echo "DISCOVERED_PDF_MANIFEST=$manifest_digest"
+          echo "manifest_digest=$manifest_digest" >> "$GITHUB_OUTPUT"
+
+  certify:
+    runs-on: ubuntu-24.04
+    needs: [pdf-a, pdf-b]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Verify independent PDF image reproducibility
+        shell: bash
+        env:
+          MANIFEST_A: ${{ needs.pdf-a.outputs.manifest_digest }}
+          MANIFEST_B: ${{ needs.pdf-b.outputs.manifest_digest }}
+          PACKAGE_VERSION: ${{ needs.pdf-a.outputs.package_version }}
+          PDFTOTEXT_VERSION: ${{ needs.pdf-a.outputs.pdftotext_version }}
+          PDFINFO_VERSION: ${{ needs.pdf-a.outputs.pdfinfo_version }}
+        run: |
+          set -euo pipefail
+          test "$MANIFEST_A" = "$MANIFEST_B"
+          test "$PACKAGE_VERSION" = "22.12.0-2+deb12u3"
+          test "$PDFTOTEXT_VERSION" = "pdftotext version 22.12.0"
+          test "$PDFINFO_VERSION" = "pdfinfo version 22.12.0"
+          EXPECTED="$(python -c 'import json; print(json.load(open("config/production_toolchain.json"))["pdf_toolchain"]["container_digest"])')"
+          if [ "$EXPECTED" != "None" ] && [ "$EXPECTED" != "null" ] && [ -n "$EXPECTED" ]; then
+            test "$MANIFEST_A" = "$EXPECTED"
+          else
+            echo "DISCOVERY_MODE_PDF_MANIFEST=$MANIFEST_A"
+          fi
+          python scripts/pdf_toolchain_certification.py --output /tmp/phase9-pdf-toolchain.json
+      - name: Retain PDF certification evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: phase9-pdf-toolchain-certification
+          path: /tmp/phase9-pdf-toolchain.json
+          retention-days: 30

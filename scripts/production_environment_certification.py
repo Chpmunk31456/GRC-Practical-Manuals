@@ -63,12 +63,26 @@ def validate_contract(root: Path = ROOT) -> dict:
         and isinstance(evidence.get("certification_job"), int)
     )
 
+    pdf = toolchain.get("pdf_toolchain", {})
+    pdf_evidence = pdf.get("certification_evidence") or {}
+    pdf_verified = (
+        bool(SHA256.fullmatch(pdf.get("container_digest") or ""))
+        and pdf.get("certification_status") == "VERIFIED_REPRODUCIBLE_OCI_MANIFEST"
+        and pdf_evidence.get("independent_build_count", 0) >= 2
+        and isinstance(pdf_evidence.get("workflow_run"), int)
+        and isinstance(pdf_evidence.get("certification_job"), int)
+    )
+
     return {
         "errors": sorted(set(errors)),
         "dependency_lock_sha256": lock_sha,
         "base_image_manifest_digest": digest,
         "configured_build_container_digest": configured_container,
         "immutable_build_image_verified": build_verified,
+        "immutable_pdf_toolchain_verified": pdf_verified,
+        "production_toolchain_verified": (
+            build_verified and pdf_verified and toolchain.get("status") == "VERIFIED"
+        ),
         "contract_status": "PASS" if not errors else "FAIL",
     }
 
@@ -110,8 +124,8 @@ def run(root: Path = ROOT, require_docker: bool = False) -> dict:
         **contract,
         "docker_available": available,
         "immutable_build_image_verified": contract["immutable_build_image_verified"],
-        "immutable_pdf_toolchain_verified": False,
-        "status": "BLOCKED",
+        "immutable_pdf_toolchain_verified": contract["immutable_pdf_toolchain_verified"],
+        "status": "VERIFIED" if contract["production_toolchain_verified"] else "BLOCKED",
         "publication_authorized": False,
     }
     if contract["contract_status"] != "PASS":
@@ -121,12 +135,16 @@ def run(root: Path = ROOT, require_docker: bool = False) -> dict:
         result["reason"] = "docker_runtime_unavailable"
         return result
     result["reason"] = (
-        "immutable_pdf_toolchain_digest_evidence_required"
-        if contract["immutable_build_image_verified"]
+        "production_toolchain_verified"
+        if contract["production_toolchain_verified"]
         else (
-            "production_image_build_and_pdf_toolchain_digest_evidence_required"
-            if available
-            else "docker_runtime_and_production_digest_evidence_required"
+            "immutable_pdf_toolchain_digest_evidence_required"
+            if contract["immutable_build_image_verified"]
+            else (
+                "production_image_build_and_pdf_toolchain_digest_evidence_required"
+                if available
+                else "docker_runtime_and_production_digest_evidence_required"
+            )
         )
     )
     return result

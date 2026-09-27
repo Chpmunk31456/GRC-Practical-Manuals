@@ -37,11 +37,11 @@ def verify(config: dict, observed: dict) -> list[str]:
     errors = []
     if observed["python"] != config["python"]:
         errors.append("python_version_mismatch")
-    expected = config["pdf_toolchain"]["poppler_package_version"]
+    expected = config["hosted_ci_attestation"]["poppler_package_version"]
     if observed["poppler_package_version"] != expected:
         errors.append("poppler_package_version_mismatch")
     for key in ("pdftotext_version", "pdfinfo_version"):
-        expected_tool = config["pdf_toolchain"][key]
+        expected_tool = config["hosted_ci_attestation"][key]
         if observed[key] != expected_tool:
             errors.append(key + "_mismatch")
     baseline_image = config["hosted_ci_attestation"]["runner_image_version"]
@@ -61,9 +61,9 @@ def run(root: Path = ROOT) -> dict:
         "observed": observed,
         "errors": errors,
         "production_status": config["status"],
-        "immutable_production_environment": False,
+        "immutable_production_environment": config.get("status") == "VERIFIED",
         "publication_authorized": False,
-        "boundary": "A matching hosted-CI baseline is operational evidence only. It is not an immutable production environment and does not authorize release.",
+        "boundary": "A matching hosted-CI baseline is operational evidence only. Production immutability is established separately by Phase 9 certification, and neither control authorizes release.",
     }
 
 

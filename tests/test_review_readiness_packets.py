@@ -56,7 +56,7 @@ class ReviewReadinessPacketTests(unittest.TestCase):
         self.assertIn("approved_source_baselines_missing", blockers)
         self.assertIn("hash_bound_translation_reviews_missing", blockers)
         self.assertIn("independent_accessibility_reviews_missing", blockers)
-        self.assertIn("production_toolchain_not_verified", blockers)
+        self.assertNotIn("production_toolchain_not_verified", blockers)
         self.assertIn("authorized_release_reviewers_missing", blockers)
 
     def test_queue_never_authorizes_publication(self):

@@ -14,11 +14,16 @@ class ToolchainAttestationTests(unittest.TestCase):
         self.config = {
             "python": "3.12.14",
             "pdf_toolchain": {
+                "poppler_package_version": "22.12.0-2+deb12u3",
+                "pdftotext_version": "pdftotext version 22.12.0",
+                "pdfinfo_version": "pdfinfo version 22.12.0",
+            },
+            "hosted_ci_attestation": {
+                "runner_image_version": "20260920.314.1",
                 "poppler_package_version": "24.02.0-1ubuntu9.9",
                 "pdftotext_version": "pdftotext version 24.02.0",
                 "pdfinfo_version": "pdfinfo version 24.02.0",
             },
-            "hosted_ci_attestation": {"runner_image_version": "20260920.314.1"},
         }
         self.observed = {
             "python": "3.12.14",

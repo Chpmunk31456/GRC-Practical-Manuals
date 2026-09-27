@@ -1,14 +1,23 @@
 {
   "schema_version": 1,
-  "status": "REVIEW_REQUIRED",
+  "status": "VERIFIED",
   "python": "3.12.14",
   "python_dependencies": [],
   "validation_environment": "ubuntu-24.04",
   "pdf_toolchain": {
-    "poppler_package_version": "24.02.0-1ubuntu9.9",
-    "pdftotext_version": "pdftotext version 24.02.0",
-    "pdfinfo_version": "pdfinfo version 24.02.0",
-    "container_digest": null
+    "poppler_package_version": "22.12.0-2+deb12u3",
+    "pdftotext_version": "pdftotext version 22.12.0",
+    "pdfinfo_version": "pdfinfo version 22.12.0",
+    "dependency_lock_sha256": "12efcb06b4f31629c4bdcb97e99b280873fde34462d6d3e9854dea874a077faf",
+    "container_digest": "sha256:9f922bcc7e1b2bd81f309821a89ff8a5f148f07dd38f729940985eef81d48c8b",
+    "base_image_manifest_digest": "sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a",
+    "certification_status": "VERIFIED_REPRODUCIBLE_OCI_MANIFEST",
+    "certification_evidence": {
+      "workflow_run": 36340063727,
+      "certification_job": 108678400727,
+      "independent_build_count": 2,
+      "source_head": "c5c3e2a7f117db1fb78b8e12a032e97a882aa56a"
+    }
   },
   "build_environment": {
     "generator_dependency_lock_sha256": "de09ea78579a73a8236914019c13d3e7b7a8b83829209e770bf8dc424cd7e656",
@@ -22,7 +31,7 @@
       "source_head": "41a7826c6665b60632a3c999883981d3a265d425"
     }
   },
-  "review_note": "Phase 9 independently reproduced the pinned production runtime on two isolated BuildKit runners and recorded the matching OCI manifest digest. Overall toolchain status remains REVIEW_REQUIRED because the immutable PDF inspection toolchain is not yet verified.",
+  "review_note": "Phase 9 independently reproduced both the pinned production runtime and the pinned PDF inspection image on two isolated BuildKit runners each. The production toolchain is VERIFIED. This technical verification does not supply human source, translation, accessibility, legal/privacy, or release approvals.",
   "hosted_ci_attestation": {
     "status": "ATTESTED_NOT_IMMUTABLE",
     "runner_image": "ubuntu-24.04",
@@ -30,6 +39,9 @@
     "runner_image_release": "ubuntu24/20260920.314",
     "evidence_workflow_run": 36327126917,
     "evidence_job": 108641962448,
-    "observed_at": "2026-09-27T14:46:40Z"
+    "observed_at": "2026-09-27T14:46:40Z",
+    "poppler_package_version": "24.02.0-1ubuntu9.9",
+    "pdftotext_version": "pdftotext version 24.02.0",
+    "pdfinfo_version": "pdfinfo version 24.02.0"
   }
 }

@@ -32,3 +32,15 @@ builds/inspects the production image and separately supplies the immutable PDF
 toolchain digest and reproducibility evidence. The script never changes
 `production_toolchain.json` to `VERIFIED` by itself and never authorizes
 publication.
+
+
+### Runtime/source separation
+
+The immutable production container contains the runtime/toolchain only. Repository
+content is mounted into `/workspace` at execution time. This prevents
+`config/production_toolchain.json` from being copied into the image whose digest
+that same file records, eliminating a self-referential certification loop.
+
+The environment image uses `SOURCE_DATE_EPOCH=0` during certification so its
+content-addressed ID depends on the environment definition, not the source commit
+timestamp.

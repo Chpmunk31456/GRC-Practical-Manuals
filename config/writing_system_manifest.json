@@ -29,7 +29,8 @@
     "scripts/writing_observability_history.py",
     "scripts/writing_system_recovery_exercise.py",
     "tests/test_phase4_controlled_publishing.py",
-    ".github/workflows/controlled-publication-quality.yml"
+    ".github/workflows/controlled-publication-quality.yml",
+    "qa/writing-system-recovery/PHASE4_RECOVERY_EXERCISE_2026-09-27.md"
   ],
   "json_configs": [
     "config/document_writing_policy.json",

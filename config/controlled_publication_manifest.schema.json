@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Chpmunk31456/GRC-Practical-Manuals/config/controlled_publication_manifest.schema.json",
+  "title": "Controlled Publication Manifest",
+  "type": "object",
+  "required": ["schema_version","manual_id","manual_root","expected_chapters","languages","publication_report","checksum_manifest","page_qa","release_controls"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "manual_id": {"type":"string","minLength":1},
+    "manual_root": {"type":"string","minLength":1},
+    "expected_chapters": {"type":"integer","minimum":1},
+    "languages": {
+      "type":"object",
+      "minProperties":1,
+      "additionalProperties":{
+        "type":"object",
+        "required":["source_globs","chapter_heading_pattern","artifacts"],
+        "properties":{
+          "source_globs":{"type":"array","minItems":1,"items":{"type":"string"}},
+          "required_terms":{"type":"array","items":{"type":"string"}},
+          "chapter_heading_pattern":{"type":"string"},
+          "artifacts":{
+            "type":"object",
+            "required":["docx","pdf"],
+            "properties":{"docx":{"type":"string"},"pdf":{"type":"string"}}
+          }
+        }
+      }
+    },
+    "publication_report":{"type":"string"},
+    "checksum_manifest":{"type":"string"},
+    "page_qa":{"type":"string"},
+    "review_records":{"type":"array","items":{"type":"object","required":["path","required_markers"]}},
+    "release_controls":{"type":"object"}
+  }
+}

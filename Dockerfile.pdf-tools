@@ -1,6 +1,6 @@
 FROM python:3.12.14-slim-bookworm@sha256:1aaa65a85fda306ffb8b910824d4e93bdce61e212c7e87168123ea3073b41a1a AS cert-source
 
-FROM ubuntu:24.04@sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4
+FROM ubuntu:24.04@sha256:496754492fb28b4d3049432f2ca787449331e23fb14f0dd3fffea86bf5a93eb4 AS pdf-runtime
 
 ARG UBUNTU_SNAPSHOT_ID=20260927T120000Z
 ARG SOURCE_DATE_EPOCH=0
@@ -31,5 +31,9 @@ RUN set -eux; \
       ! -path /etc/hosts ! -path /etc/hostname ! -path /etc/resolv.conf \
       -exec touch -h -d "@$SOURCE_DATE_EPOCH" {} +
 
+FROM scratch
+COPY --from=pdf-runtime / /
+ENV LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
 ENTRYPOINT ["/bin/bash","-lc"]
 CMD ["pdftotext -v && pdfinfo -v"]

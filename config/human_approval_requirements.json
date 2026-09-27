@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "required_by_candidate": {
+    "manual04-nist-ai-600-1": [
+      "authoritative_source",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ],
+    "manual05-ai-auditing-assurance": [
+      "authoritative_source",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ],
+    "manual06-hipaa-implementation-audit": [
+      "authoritative_source",
+      "legal_semantic",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ],
+    "manual09-nist-csf-2": [
+      "authoritative_source",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ],
+    "manual10-nist-rmf-sp-800-53": [
+      "authoritative_source",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ],
+    "manual11-gdpr-controlled-implementation": [
+      "authoritative_source",
+      "privacy_legal",
+      "localization_semantic",
+      "accessibility",
+      "release_authorization"
+    ]
+  },
+  "global_requirements": [
+    "immutable_production_toolchain"
+  ],
+  "policy": "Requirements are explicit and fail closed. Automation may validate evidence freshness and authorization but never create a human approval."
+}

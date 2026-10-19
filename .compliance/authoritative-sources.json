@@ -369,7 +369,7 @@
       "version": "NPRM",
       "status": "proposed-not-current-law",
       "url": "https://www.hhs.gov/hipaa/for-professionals/security/hipaa-security-rule-nprm/index.html",
-      "last_verified": "2026-09-20",
+      "last_verified": "2026-10-19",
       "review_interval_days": 14
     },
     {
@@ -399,7 +399,7 @@
       "version": "current official guidance",
       "status": "official-guidance-non-binding",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
-      "last_verified": "2026-09-20",
+      "last_verified": "2026-10-19",
       "review_interval_days": 14
     },
     {
@@ -409,7 +409,7 @@
       "version": "current official guidance",
       "status": "official-guidance-non-binding",
       "url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act",
-      "last_verified": "2026-09-20",
+      "last_verified": "2026-10-19",
       "review_interval_days": 14
     },
     {

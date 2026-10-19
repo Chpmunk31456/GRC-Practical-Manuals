@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "last_updated": "2026-09-27",
+  "last_updated": "2026-10-19",
   "sources": [
     {
       "id": "nist-csf-2",
@@ -379,7 +379,7 @@
       "version": "consolidated on 2026-07-27",
       "status": "final",
       "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
-      "last_verified": "2026-09-20",
+      "last_verified": "2026-10-19",
       "review_interval_days": 14
     },
     {
